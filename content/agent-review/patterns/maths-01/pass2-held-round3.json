@@ -1,0 +1,55 @@
+{
+ "door": "patterns/maths-01",
+ "mode": "APPLIED",
+ "landed": [
+  "MC02-CALC-04",
+  "MC03-CALC-08",
+  "MC04-GEOM-01",
+  "MC05-CALC-02",
+  "MC04-NPV-02",
+  "MC05-NPV-02",
+  "MC05-NPV-03",
+  "MC03-MEAS-06",
+  "MC05-MEAS-04",
+  "MC03-CALC-04",
+  "MC04-MEAS-07",
+  "MC03-MEAS-07",
+  "MC02-GEOM-03",
+  "MC02-MEAS-07",
+  "MC03-MEAS-05"
+ ],
+ "held": [
+  {
+   "itemId": "MC01-FDP-02",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmteo81xe000ttmmjkjar2ch5",
+     "verdict": "REFUSE",
+     "reason": "12 × 3 = 36 is right, but no real child's mistake is shown. #75 names two forms: numerator only (12 × 2 = 24, already on this row) and dividing by the denominator only (12 ÷ 3 = 4, the very value being removed). Multiplying by the denominator is neither form, and it is not a known answer to '2/3 of 12'. The seat swaps the entry's own commonest form for a story fitted to put a value above the key. As it would stand, 8 would also be the only option smaller than 12, so 'a fraction of 12 is less than 12' finds the key with no fraction work."
+    }
+   ],
+   "row": {
+    "itemId": "MC01-FDP-02",
+    "verdict": "HOLD",
+    "reason": "The only change is refused: 36 is not a shown child's mistake, and it would leave 8 as the only option below 12. The row stays as LIVE now."
+   }
+  },
+  {
+   "itemId": "MC03-NPV-07",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmteo82fj00bftmmjj7l25fcz",
+     "verdict": "REFUSE",
+     "reason": "2,800 × 100 = 280,000 is right, but a child is not shown to produce it. Asked how many hundreds are in 2,800, a child who confuses the operation does not plausibly scale the number UP a hundredfold to six digits. And 280,000 is the only option larger than 2,800 itself, which cannot hold more hundreds than it has ones, so it is eliminated on sight and tests nothing. It also replaces 2, a real diagnosis: the thousands digit taken for the answer."
+    }
+   ],
+   "row": {
+    "itemId": "MC03-NPV-07",
+    "verdict": "HOLD",
+    "reason": "The seat to 280000 is refused as implausible and non-functional. Without it the row cannot reach its new rank. Its two redrafts are attested and can be re-proposed with a different value."
+   }
+  }
+ ]
+}

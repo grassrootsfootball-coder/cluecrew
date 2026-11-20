@@ -1,0 +1,608 @@
+{
+  "door": "patterns/maths-01",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:cmteo81y9001btmmjchv7coe1",
+      "verdict": "ATTEST",
+      "reason": "15 ÷ 3/4 = 15 × 4 ÷ 3 = 20 (key). The child divides by 1 instead of 3/4, treating each 3/4 kg bag as a whole kilogram: 15 bags. That is #79's 'treating a [fraction] as one whole when dividing'. 15 is below 20, differs from 20, 11.25 and 5, and is no rounding or other form of 20. Replaced tag #75 occurs 15 times. Execution arithmetic checked."
+    },
+    {
+      "ref": "redraft:cmteo81y90019tmmj24um9kyk",
+      "verdict": "ATTEST",
+      "reason": "15 × 3 ÷ 4 = 45 ÷ 4 = 11.25, which uses 3/4 where 4/3 is needed, so the fraction is the wrong way up (#24). 15 × 4 ÷ 3 = 20 is correct."
+    },
+    {
+      "ref": "redraft:cmteo81y9001atmmj24uav0ro",
+      "verdict": "ATTEST",
+      "reason": "15 ÷ 3 = 5, using only the top number 3. #75's own description gives exactly this case (15 ÷ 3/4 = 5). The working 15 ÷ 3 × 4 = 20 is correct."
+    },
+    {
+      "ref": "seat:cmteo82ix00ditmmjytg5m68n",
+      "verdict": "ATTEST",
+      "reason": "3/5 of 40 = 24 used, so 16 are left. A quarter of 16 = 4 is used on Tuesday, leaving 12 (key). 4 is a correct intermediate result given as the answer (proc-01). It is below 12 and differs from 12, 6 and 8. The replaced tag proc-01 occurs 29 times. Execution arithmetic checked."
+    },
+    {
+      "ref": "redraft:cmteo82ix00dhtmmjpw997o8m",
+      "verdict": "ATTEST",
+      "reason": "40 ÷ 4 = 10 (a quarter of the starting 40, not of the 16 left), and 16 - 10 = 6: this is #82, a fraction of the wrong whole. 16 - 4 = 12 is correct."
+    },
+    {
+      "ref": "redraft:cmteo82ix00djtmmjeffdr6bx",
+      "verdict": "REFUSE",
+      "reason": "The arithmetic is right (16 ÷ 2 = 8) but the tag does not name the mistake. #78 is percentage-fraction confusion: its only description is 25% read as a half, and its hint teaches 50% and 25%. This row has no percentage; it says 'one quarter' in words. 'Treats one quarter as one half' is a story fitted to a percentage tag, and the child would get a hint about percentages. The LIVE option already carries this tag mismatch, so it needs a retag (or another derivation of 8, e.g. 40 ÷ 5), not an execution written around it."
+    },
+    {
+      "ref": "seat:cmteo826h006dtmmj6nhlmfyi",
+      "verdict": "ATTEST",
+      "reason": "£4.35 - £2.50 = £1.85: subtracting where the question says 'total cost' is #72, wrong operation. The key is £4.35 + £2.50 = £6.85. £1.85 is below the key, differs from £2.85 and £6.00, and is no other form of £6.85. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo826h006ctmmjr950spp4",
+      "verdict": "ATTEST",
+      "reason": "35p + £2.50 = £2.85: the £4 of £4.35 is dropped and only part of one number is set down (#98). £4.35 + £2.50 = £6.85 is correct."
+    },
+    {
+      "ref": "redraft:cmteo826h006etmmjpv6ety7w",
+      "verdict": "ATTEST",
+      "reason": "Adding pounds only, £4 + £2 = £6.00, drops the pence (#83). 35p + 50p = 85p, which gives £6.85. Correct."
+    },
+    {
+      "ref": "seat:cmteo820n002qtmmjdlveifgw",
+      "verdict": "ATTEST",
+      "reason": "4,970 - 100 = 4,870, taking away where the question says 'more' (#72). The door already uses #72 for this on MC03-NPV-03 (3840). 4,870 is below 5,070 and differs from every option. Replaced tag #63 occurs 11 times."
+    },
+    {
+      "ref": "redraft:cmteo820n002ptmmj069wrqyf",
+      "verdict": "REFUSE",
+      "reason": "The value follows (4,970 + 10 = 4,980), but #63 is 'adding or losing a CARRIED number into the wrong column', and its hint is about where to carry. No carry is involved here: the stated mistake is writing the 1 of 100 under the tens, a misplaced addend. Rows MC04-CALC-03 and MC05-CALC-03 in this same proposal use #63 for a real misplaced carry, which shows what the entry means. The tag does not name this mistake, and a child choosing 4,980 would get a hint about carrying. It needs a retag ruling."
+    },
+    {
+      "ref": "redraft:cmteo820n002rtmmjimurvrcf",
+      "verdict": "REFUSE",
+      "reason": "The value follows (9 + 1 = 10 in the hundreds, the 1 never moves on, giving 4,070), but #12 is a SUBTRACTION mistake: 'leaving the column as a zero ... when the top number is smaller', with an exchange-from-the-next-column hint. This is an addition with a dropped carry. The identical mistake on the sibling rows MC04-NPV-02 (6070) and MC05-NPV-02 (5060) is tagged #69. The tag does not name the mistake."
+    },
+    {
+      "ref": "seat:cmteo82lb00f2tmmjd1il61gp",
+      "verdict": "REFUSE",
+      "reason": "6,970 + 1 = 6,971 is right, but the story is fitted. #62 is giving a digit's face value when asked its value; all 10 uses on the door are 'what is the value of the digit' questions. Here no digit is read in isolation: the stem gives 100 as a whole number. Answering '100 more' with '+1' is not shown to be a real child's answer; it reaches a value below the key. The natural below-key mistake, 6,870 (#72, as used on MC01-NPV-02 and MC05-NPV-03), was available."
+    },
+    {
+      "ref": "redraft:cmteo82lb00f1tmmjhfxzg4sd",
+      "verdict": "REFUSE",
+      "reason": "The value follows (6,970 + 10), but the tag fails: #63 is a carried number put in the wrong column, and the stated mistake is a misplaced addend with no carry. Same fault as MC01-NPV-02's 4980."
+    },
+    {
+      "ref": "redraft:cmteo82lc00f3tmmjlyn7o7jj",
+      "verdict": "ATTEST",
+      "reason": "9 + 1 = 10 in the hundreds: the 0 is written and the carried 1 dropped, so the thousands stay 6 and the answer is 6,070. That is #69, a dropped carry. 7,070 is correct."
+    },
+    {
+      "ref": "seat:cmteo82rg00iytmmjo5g83zax",
+      "verdict": "REFUSE",
+      "reason": "5,960 + 1 = 5,961 is right, but this is the same fitted face-value story as MC04-NPV-02. No digit is read; the stem gives '100' as a number, and '+1 for 100 more' is not shown to be a child's answer to this question."
+    },
+    {
+      "ref": "redraft:cmteo82rg00ixtmmjn4i7tqmf",
+      "verdict": "REFUSE",
+      "reason": "The value follows (5,960 + 10 = 5,970), but #63 names a misplaced CARRY, and no carry is involved; the mistake is a misplaced addend. The tag does not name the mistake."
+    },
+    {
+      "ref": "redraft:cmteo82rg00iztmmjkshrh0zn",
+      "verdict": "ATTEST",
+      "reason": "9 + 1 = 10 in the hundreds with the carried 1 dropped gives 5,060 (#69). 6,060 is correct."
+    },
+    {
+      "ref": "seat:cmteo82li00f6tmmjies79c06",
+      "verdict": "REFUSE",
+      "reason": "9,400 + 1 = 9,401 is right, but the story is fitted. #62 (a digit's face value) is not the mistake: the stem gives 1,000 as a number and no digit is read. '+1 for 1,000 more' is not shown to be a real child's answer. 8,400 (#72) was the natural below-key mistake."
+    },
+    {
+      "ref": "redraft:cmteo82li00f5tmmjraxjjor0",
+      "verdict": "REFUSE",
+      "reason": "The value follows (9,400 + 100 = 9,500), but #63 names a misplaced CARRY, and the stated mistake (the 1 of 1,000 written under the hundreds) has no carry. The tag does not name the mistake."
+    },
+    {
+      "ref": "redraft:cmteo82li00f7tmmjf14y60iy",
+      "verdict": "ATTEST",
+      "reason": "9 + 1 = 10 in the thousands with the carried 1 dropped: 0 is written and no ten-thousands digit appears, so the answer reads 400 (#69). 10,400 is correct."
+    },
+    {
+      "ref": "seat:cmteo82rm00j2tmmjnyjv6p3v",
+      "verdict": "ATTEST",
+      "reason": "9,500 - 1,000 = 8,500, taking away for 'more' (#72). It is below 10,500 and differs from 9,600 and 500. Replaced tag #63 occurs 11 times."
+    },
+    {
+      "ref": "redraft:cmteo82rm00j1tmmjq78asvi4",
+      "verdict": "REFUSE",
+      "reason": "The value follows (9,500 + 100 = 9,600), but #63 names a misplaced CARRY, and the stated mistake is a misplaced addend with no carry. The tag does not name the mistake."
+    },
+    {
+      "ref": "redraft:cmteo82rm00j3tmmjjjh1l3pg",
+      "verdict": "ATTEST",
+      "reason": "9 + 1 = 10 in the thousands with the carry dropped leaves 500 (#69). 10,500 is correct."
+    },
+    {
+      "ref": "seat:cmteo82830077tmmj5f9r6woc",
+      "verdict": "ATTEST",
+      "reason": "The child answers the general 'smallest 4-digit number', 1,000, and never uses the digits 4, 0, 0 and 7 the question gives. That is #71's 'a number the question gives is never used at all', and its hint (use every number given) fits. 1,000 cannot be made from those digits, so it is wrong under every reading. It is below 4,007 and differs from 47 and 407. Replaced tag #61 occurs 21 times."
+    },
+    {
+      "ref": "redraft:cmteo82830075tmmjv7m62q1u",
+      "verdict": "ATTEST",
+      "reason": "Zeros first gives 0047, which is 47, a leading-zero slip (#64). 4,007 is the smallest that starts with a non-zero digit. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82830076tmmj65w263ca",
+      "verdict": "ATTEST",
+      "reason": "4007 written as 407 with one placeholder zero dropped is a classic placeholder error (#67). Both zeros hold the hundreds and the tens. Correct."
+    },
+    {
+      "ref": "seat:cmteo829d007utmmj4tz71cg0",
+      "verdict": "ATTEST",
+      "reason": "356 - 287 = 69 (checked: 356 - 287 = 69). Subtracting where the sign asks for addition is #72, adding instead of subtracting or vice versa. 69 is below 643 and differs from 543 and 443. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo829c007ttmmjn62l3vj4",
+      "verdict": "ATTEST",
+      "reason": "Ones 6 + 7 = 13 (write 3, carry 1); tens 5 + 8 + 1 = 14 (write 4, carry 1); with that carry dropped, the hundreds give 3 + 2 = 5, so 543 (#69). Correct."
+    },
+    {
+      "ref": "redraft:cmteo829d007vtmmjdc63bjxj",
+      "verdict": "ATTEST",
+      "reason": "356 + 87 = 443, with the 2 hundreds of 287 dropped (#98). Correct."
+    },
+    {
+      "ref": "seat:cmteo82n100g3tmmjrqrihba1",
+      "verdict": "ATTEST",
+      "reason": "465 - 218 = 247 (checked), subtracting instead of adding (#72). It is below 683 and differs from 673 and 283. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo82n100g1tmmjsawab88q",
+      "verdict": "ATTEST",
+      "reason": "5 + 8 = 13: 3 is written and the carry dropped, so the tens give 6 + 1 = 7 and the hundreds 4 + 2 = 6, giving 673 (#69). Correct."
+    },
+    {
+      "ref": "redraft:cmteo82n100g2tmmjlsqj4zcz",
+      "verdict": "ATTEST",
+      "reason": "65 + 218 = 283, with the 4 hundreds of 465 dropped (#98). Correct."
+    },
+    {
+      "ref": "seat:cmteo82ag008jtmmj4j2k5ddd",
+      "verdict": "ATTEST",
+      "reason": "Whole pounds only: 3 × £6 = £18 and 2 × £2 = £4, giving £22.00. The pence dropped are 3 × 50p + 2 × 25p = £1.50 + 50p = £2.00. That is #83, dropping the pence. The key is £19.50 + £4.50 = £24.00. £22.00 is below the key and differs from £19.50 and £17.50. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo82ag008htmmj6cizemrx",
+      "verdict": "ATTEST",
+      "reason": "3 × £6.50 = £19.50 with the 2 bottles never used (#71). Adding 2 × £2.25 = £4.50 gives £24.00. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82ag008itmmj9m76zm09",
+      "verdict": "ATTEST",
+      "reason": "One football too few: 2 × £6.50 = £13.00, plus £4.50 = £17.50. That is #85, multiplying by one fewer item. Correct."
+    },
+    {
+      "ref": "seat:cmteo82o200gqtmmjfqy76vny",
+      "verdict": "ATTEST",
+      "reason": "5 × 24: 5 × 4 = 20 (write 0, carry 2); with the carry dropped, 5 × 2 = 10, so the product is 100 instead of 120 (#69). Then 100 + 18 - 96 = 22. The key is 120 + 18 - 96 = 42. 22 is below 42 and differs from 24 and 38. Replaced tag proc-01 occurs 29 times."
+    },
+    {
+      "ref": "redraft:cmteo82o200gptmmj9b8rrln8",
+      "verdict": "ATTEST",
+      "reason": "120 - 96 = 24, with the 18 already held never used (#71). 120 + 18 - 96 = 42. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82o200grtmmjcbdelo6t",
+      "verdict": "ATTEST",
+      "reason": "138 - 100 = 38, with 96 rounded to 100 and the 4 never added back (#99). 38 + 4 = 42. Correct."
+    },
+    {
+      "ref": "seat:cmteo82q800i2tmmj4beh0kpt",
+      "verdict": "ATTEST",
+      "reason": "180° - 140° = 40°, then 40° + 30° = 70°, an intermediate result given as the answer (proc-01). The third angle is 180° - 70° = 110°. 70° is below 110°, differs from 40° and 10°, and is not the angle asked for under any reading. Replaced tag #89 occurs 12 times."
+    },
+    {
+      "ref": "redraft:cmteo82q800i1tmmj51b2hdxr",
+      "verdict": "ATTEST",
+      "reason": "180° - 140° = 40° is the triangle's angle on the line, given as the answer (proc-01). 180° - 40° - 30° = 110°. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82q800i3tmmjwi104s7d",
+      "verdict": "REFUSE",
+      "reason": "180° - 140° - 30° = 10° is right, but the story is fitted. The child is not doing the steps OUT OF ORDER: there is no order of the two correct steps that gives 10°. The child treats the 140° angle on the line as if it were an angle of the triangle and skips the line step. #100 ('halving 180 before taking away the 40') names a reordering of correct operations, and this mistake is not one."
+    },
+    {
+      "ref": "seat:cmteo82hb00chtmmjanoyx8rp",
+      "verdict": "ATTEST",
+      "reason": "4,002 rounds to 4,000 and 1,375 to 1,380 (both to the nearest ten); 4,000 - 1,380 = 2,620 (#99). Putting back 2 + 5 = 7 gives 2,627 (key). 2,620 is not a rounding of the key (2,627 is 2,630 to the nearest ten), is below the key, and differs from 2,007 and 2,600. Replaced tag #11 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo82hb00citmmjowgbvnr8",
+      "verdict": "ATTEST",
+      "reason": "Exchanging across zeros: one thousand is taken from the 4 straight into the ones, 12 - 5 = 7. The tens and hundreds have 0 on top of 7 and 3 and are written as 0 instead of exchanged (#12). The thousands give 3 - 1 = 2, so 2,007. This is a documented mistake with zeros. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82hb00cjtmmjubziyq4c",
+      "verdict": "ATTEST",
+      "reason": "4,000 - 1,400 = 2,600, both rounded to the nearest hundred (#99). 2 + 25 = 27 to put back, and 2,600 + 27 = 2,627. Correct."
+    },
+    {
+      "ref": "seat:cmteo823n004jtmmjrprlzviu",
+      "verdict": "ATTEST",
+      "reason": "12 × 30 = 360, and 360 - 48 = 312, an intermediate result given as the answer (proc-01). 312 ÷ 6 = 52 (key). 312 is above 52 and differs from 60 and 68. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo823n004htmmjy551z1lz",
+      "verdict": "ATTEST",
+      "reason": "360 ÷ 6 = 60, with the 48 broken eggs never used (#71). 312 ÷ 6 = 52. Correct."
+    },
+    {
+      "ref": "redraft:cmteo823n004itmmjnq29rvej",
+      "verdict": "ATTEST",
+      "reason": "360 + 48 = 408, adding instead of subtracting (#72), and 408 ÷ 6 = 68. Correct."
+    },
+    {
+      "ref": "seat:cmteo829j007ztmmjauekyay6",
+      "verdict": "ATTEST",
+      "reason": "483 + 176 = 659, adding where the sign asks for subtraction (#72). The key is 483 - 176 = 307. 659 is above the key and differs from 313 and 407. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo829j007xtmmjzswfh1hq",
+      "verdict": "ATTEST",
+      "reason": "Smaller digit from larger in each column: 6 - 3 = 3, 8 - 7 = 1, 4 - 1 = 3, so 313 (#11). Correct."
+    },
+    {
+      "ref": "redraft:cmteo829j007ytmmjxqgbwci9",
+      "verdict": "ATTEST",
+      "reason": "483 - 76 = 407, with the 1 hundred of 176 dropped (#98). Correct."
+    },
+    {
+      "ref": "seat:cmteo829u0087tmmj7v2vroi2",
+      "verdict": "ATTEST",
+      "reason": "Tenths 7 + 6 = 13: 3 is written and the carried pound dropped, so £8.75 + £3.60 comes to £11.35, not £12.35 (#69). £20 - £11.35 = £8.65, where the key is £7.65. £8.65 is above the key and differs from £11.25 and £16.40. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "seat:cmteo82gr00c5tmmjbdj1c5ty",
+      "verdict": "ATTEST",
+      "reason": "6 × 8 = 48 (write 8, carry 4), but the 4 is put in the hundreds. 6 × 4 = 24 gives 4 tens and 2 hundreds, and the hundreds become 2 + 4 = 6, so 648. That is #63, a carried number in the wrong column, which is what #63 names. 648 is above 288 and differs from 2448 and 328. Replaced tag #69 occurs 19 times."
+    },
+    {
+      "ref": "redraft:cmteo82gr00c6tmmjpkg2v53z",
+      "verdict": "ATTEST",
+      "reason": "24 and 48 written side by side make 2448, a full two-digit column total (#70). 240 + 48 = 288. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82gr00c7tmmjn10j9vh6",
+      "verdict": "ATTEST",
+      "reason": "24 + 4 + 4 = 32, with the carried 4 added twice (#13), giving 328. Correct."
+    },
+    {
+      "ref": "seat:cmteo82ne00g9tmmj5c0ukba4",
+      "verdict": "ATTEST",
+      "reason": "4 × 7 = 28 (write 8, carry 2), with the 2 put in the hundreds. 4 × 5 = 20 gives 0 tens and 2 hundreds, and 2 + 2 = 4 hundreds, so 408 (#63, a misplaced carry). 408 is above 228 and differs from 2028 and 248. Replaced tag #69 occurs 19 times."
+    },
+    {
+      "ref": "redraft:cmteo82ne00gatmmjhrvof4qy",
+      "verdict": "ATTEST",
+      "reason": "20 and 28 written side by side make 2028 (#70). 200 + 28 = 228. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82ne00gbtmmjx1nhcqom",
+      "verdict": "ATTEST",
+      "reason": "20 + 2 + 2 = 24, with the carry added twice (#13), giving 248. Correct."
+    },
+    {
+      "ref": "seat:cmteo8250005etmmja0qizhw4",
+      "verdict": "ATTEST",
+      "reason": "3/8 of 40 = 15 blue, an intermediate result given as the answer (proc-01). 2/5 of 25 = 10 (key). 15 is above 10 and differs from 16 and 25. Replaced tag #75 occurs 15 times."
+    },
+    {
+      "ref": "redraft:cmteo8250005ctmmjdbzm3gtr",
+      "verdict": "ATTEST",
+      "reason": "40 ÷ 5 × 2 = 16 is two fifths of the whole 40, not of the 25 left (#82). Correct."
+    },
+    {
+      "ref": "redraft:cmteo8250005ftmmjyrv9tssf",
+      "verdict": "ATTEST",
+      "reason": "40 - 15 = 25, with the two fifths never used (#71). 25 ÷ 5 × 2 = 10. Correct."
+    },
+    {
+      "ref": "seat:cmteo82bc008ztmmjpqdgjfde",
+      "verdict": "ATTEST",
+      "reason": "44 × 25 = 1,100 without dividing by 100 (percentage-never-divided-by-hundred: it occurs once on the door, so this tag is rare, as preferred). 44 × 25 ÷ 100 = 11 (key). £1,100 is above the key and differs from £22 and £19. Replaced tag #99 occurs 35 times. Note: the comma passes the notation gate, but the sibling MC01-FDP-03 writes £2000 without one."
+    },
+    {
+      "ref": "redraft:cmteo82bc008xtmmj60oiplsn",
+      "verdict": "ATTEST",
+      "reason": "25% taken as a half: £44 ÷ 2 = £22, exactly #78's described mistake. £44 ÷ 4 = £11. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82bc008ytmmj8v2khcy0",
+      "verdict": "ATTEST",
+      "reason": "£44 - £25 = £19, the 25 taken off as pounds (#77). Correct."
+    },
+    {
+      "ref": "seat:cmteo82ce009jtmmjfh5xs5ar",
+      "verdict": "ATTEST",
+      "reason": "180 - 118: in the ones 0 is less than 8, so 0 is written instead of exchanging (#12). Tens 8 - 1 = 7, hundreds 1 - 1 = 0, so 70°. The key is 62°. 70° is above the key and differs from 242° and 78°. Replaced tag #99 occurs 35 times; #12 is rare (9)."
+    },
+    {
+      "ref": "redraft:cmteo82ce009htmmjiz79p16c",
+      "verdict": "ATTEST",
+      "reason": "360° - 118° = 242°, using 360° for a straight line (#89). Correct."
+    },
+    {
+      "ref": "redraft:cmteo82ce009itmmjqolu3exg",
+      "verdict": "ATTEST",
+      "reason": "8 - 0 = 8 in the ones, smaller from larger (#11), and 8 - 1 = 7 in the tens, so 78°. Correct."
+    },
+    {
+      "ref": "seat:cmteo82pq00hrtmmjy5qfka7p",
+      "verdict": "ATTEST",
+      "reason": "180 - 137: 0 is less than 7 in the ones, so 0 is written (#12). Tens 8 - 3 = 5, hundreds 1 - 1 = 0, so 50°. The key is 43°. 50° is above the key and differs from 223° and 57°. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo82pq00hptmmj5k1oz7hf",
+      "verdict": "ATTEST",
+      "reason": "360° - 137° = 223° (#89). Correct."
+    },
+    {
+      "ref": "redraft:cmteo82pq00hqtmmjzl42feqa",
+      "verdict": "ATTEST",
+      "reason": "7 - 0 = 7 in the ones (#11) and 8 - 3 = 5 in the tens, so 57°. Correct."
+    },
+    {
+      "ref": "seat:cmteo82650064tmmjr20vtbf6",
+      "verdict": "ATTEST",
+      "reason": "£8.00 - £2.60: tenths 6 - 0 = 6, smaller from larger (#11); pounds 8 - 2 = 6, so £6.60. The key is £5.40. £6.60 is above the key and differs from £6.00 and £10.60. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo82650065tmmje9thd537",
+      "verdict": "ATTEST",
+      "reason": "£8 - £2 = £6.00, with the 60p dropped (#83). Correct."
+    },
+    {
+      "ref": "redraft:cmteo82660067tmmjsfsuo6tg",
+      "verdict": "ATTEST",
+      "reason": "£8 + £2.60 = £10.60, adding when asked for change (#84). Correct."
+    },
+    {
+      "ref": "seat:cmteo827e006vtmmjsdyy46ih",
+      "verdict": "ATTEST",
+      "reason": "3 × 65p = £1.95, one apple too few (#85). £1.95 + £2.30 = £4.25, and £10 - £4.25 = £5.75. The key is £10 - £4.90 = £5.10. £5.75 is above the key and differs from £7.40 and £7.10. Replaced tag proc-01 occurs 29 times."
+    },
+    {
+      "ref": "seat:cmteo82dc00a3tmmjnb8n4fne",
+      "verdict": "ATTEST",
+      "reason": "£8 + £5.60 = £13.60, adding when asked for change (#84). The key is £2.40. £13.60 is above the key and differs from £3.00 and £3.60. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "redraft:cmteo82dc00a1tmmj0mkrjfwd",
+      "verdict": "ATTEST",
+      "reason": "£8 - £5 = £3.00, with the 60p dropped (#83). Correct."
+    },
+    {
+      "ref": "redraft:cmteo82dc00a2tmmjmzn9d03d",
+      "verdict": "ATTEST",
+      "reason": "Tenths 6 - 0 = 6, smaller from larger (#11), and pounds 8 - 5 = 3, so £3.60. Correct."
+    },
+    {
+      "ref": "seat:cmteo82e000aitmmjiutqewr1",
+      "verdict": "ATTEST",
+      "reason": "£2.65 + £1.75 = £4.40, then £10 + £4.40 = £14.40 (#84). The key is £5.60. £14.40 is above the key and differs from £7.60 and £8.25. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "seat:cmteo82ec00aptmmjgu4j9mb6",
+      "verdict": "ATTEST",
+      "reason": "7 × 35p: 7 × 5 = 35 (write 5, carry 3); with the carry dropped, 7 × 3 = 21, so 215p = £2.15, not £2.45 (#69). £2.15 + £1.80 = £3.95, and £10 - £3.95 = £6.05. The key is £5.75. £6.05 is above the key and differs from £6.10 and £7.55. Replaced tag #99 occurs 35 times."
+    },
+    {
+      "ref": "seat:cmteo82fa00bbtmmj82adxvft",
+      "verdict": "ATTEST",
+      "reason": "Reading the decimal part 284 as a whole number puts the 8 in its tens, so 80. That is #07, decimals read as two separate whole numbers, the documented 'whole-number thinking' about decimals. The key is 0.08. 80 is above the key and differs from 8 and 0.8. Replaced tag #61 occurs 21 times; #07 is rare (1)."
+    },
+    {
+      "ref": "redraft:cmteo82fa00b9tmmjr8nmlq8f",
+      "verdict": "ATTEST",
+      "reason": "Face value 8 (#62). The 8 in 5.284 is in the hundredths. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82fa00batmmj9gc19rpa",
+      "verdict": "ATTEST",
+      "reason": "0.8 is one column to the left (#61). The tenths digit of 5.284 is 2, as stated. Correct."
+    },
+    {
+      "ref": "seat:cmteo82lw00fftmmjdv96280j",
+      "verdict": "ATTEST",
+      "reason": "351 read as a whole number puts the 5 in its tens, so 50 (#07). The key is 0.05. 50 is above the key and differs from 5 and 0.5. Replaced tag #61 occurs 21 times."
+    },
+    {
+      "ref": "redraft:cmteo82lw00fdtmmjzowwtxwv",
+      "verdict": "ATTEST",
+      "reason": "Face value 5 (#62). The 5 in 6.351 is in the hundredths. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82lw00fetmmjtbks5107",
+      "verdict": "ATTEST",
+      "reason": "0.5 is one column to the left (#61). The tenths digit of 6.351 is 3, as stated. Correct."
+    },
+    {
+      "ref": "seat:cmteo82rw00jbtmmj66jyds6w",
+      "verdict": "ATTEST",
+      "reason": "482 read as a whole number puts the 8 in its tens, so 80 (#07). The key is 0.08. 80 is above the key and differs from 8 and 0.8. Replaced tag #61 occurs 21 times."
+    },
+    {
+      "ref": "redraft:cmteo82rw00j9tmmjmy929qcx",
+      "verdict": "ATTEST",
+      "reason": "Face value 8 (#62). The 8 in 7.482 is in the hundredths. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82rw00jatmmjh6686jms",
+      "verdict": "ATTEST",
+      "reason": "0.8 is one column to the left (#61). The tenths digit of 7.482 is 4, as stated. Correct."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC01-FDP-08",
+      "verdict": "SIGN",
+      "reason": "As it will be: 20 (key), 11.25, 5, 15. 15 ÷ 3/4 = 20 is the only correct option. Each distractor is an attested mistake and the key is now the largest."
+    },
+    {
+      "itemId": "MC04-FDP-08",
+      "verdict": "HOLD",
+      "reason": "The redraft of distractor 8 is refused: #78 is a percentage tag and the row has no percentage. Every distractor must carry an attested execution, so the row cannot land. It stays as LIVE now."
+    },
+    {
+      "itemId": "MC02-MEAS-03",
+      "verdict": "SIGN",
+      "reason": "As it will be: £6.85 (key), £2.85, £1.85, £6.00. £4.35 + £2.50 = £6.85 is the only correct option, all in £ house form, with the key largest."
+    },
+    {
+      "itemId": "MC01-NPV-02",
+      "verdict": "HOLD",
+      "reason": "The redrafts of 4980 (#63 names a carry, and there is none) and 4070 (#12 is a subtraction tag on an addition) are refused. The row cannot land. The seat to 4,870 is sound on its own."
+    },
+    {
+      "itemId": "MC04-NPV-02",
+      "verdict": "HOLD",
+      "reason": "The seat to 6,971 is refused (a fitted face-value story) and so is the 6980 redraft (#63 names a carry, and there is none). The row stays as LIVE now."
+    },
+    {
+      "itemId": "MC05-NPV-02",
+      "verdict": "HOLD",
+      "reason": "The seat to 5,961 is refused (a fitted face-value story) and so is the 5970 redraft (#63 names a carry, and there is none). The row stays as LIVE now."
+    },
+    {
+      "itemId": "MC04-NPV-03",
+      "verdict": "HOLD",
+      "reason": "The seat to 9,401 is refused (a fitted face-value story) and so is the 9500 redraft (#63 names a carry, and there is none). The row stays as LIVE now."
+    },
+    {
+      "itemId": "MC05-NPV-03",
+      "verdict": "HOLD",
+      "reason": "The 9600 redraft is refused (#63 names a carry, and there is none). Every distractor must carry an attested execution, so the row cannot land, although the seat to 8,500 is sound."
+    },
+    {
+      "itemId": "MC02-NPV-04",
+      "verdict": "SIGN",
+      "reason": "As it will be: 4007 (key), 47, 407, 1000. Only 4,007 is a 4-digit number made from 4, 0, 0, 7 that is the smallest. 1000 cannot be made from those digits. The key is the largest."
+    },
+    {
+      "itemId": "MC03-CALC-01",
+      "verdict": "SIGN",
+      "reason": "As it will be: 643 (key), 543, 443, 69. 356 + 287 = 643 is the only correct option. Each distractor is an attested mistake and the key is the largest."
+    },
+    {
+      "itemId": "MC05-CALC-01",
+      "verdict": "SIGN",
+      "reason": "As it will be: 683 (key), 673, 283, 247. 465 + 218 = 683 is the only correct option and the key is the largest."
+    },
+    {
+      "itemId": "MC03-CALC-07",
+      "verdict": "SIGN",
+      "reason": "As it will be: £24.00 (key), £19.50, £17.50, £22.00. 3 × £6.50 + 2 × £2.25 = £24.00 is the only correct option, in £ house form, with the key largest."
+    },
+    {
+      "itemId": "MC05-CALC-07",
+      "verdict": "SIGN",
+      "reason": "As it will be: 42 (key), 24, 38, 22. 5 × 24 + 18 - 96 = 42 is the only correct option and the key is the largest."
+    },
+    {
+      "itemId": "MC05-GEOM-06",
+      "verdict": "HOLD",
+      "reason": "The 10° redraft is refused: #100 (steps out of order) does not produce 180° - 140° - 30°, and the story is fitted. The row cannot land. The seat to 70° is sound on its own."
+    },
+    {
+      "itemId": "MC04-CALC-06",
+      "verdict": "SIGN",
+      "reason": "As it will be: 2627 (key), 2007, 2600, 2620. 4,002 - 1,375 = 2,627 is the only correct option. Two rounding distractors (nearest hundred and nearest ten) are both real mistakes and neither is a rounding of the key. The key is the largest."
+    },
+    {
+      "itemId": "MC02-CALC-08",
+      "verdict": "SIGN",
+      "reason": "As it will be: 52 (key), 60, 68, 312. (360 - 48) ÷ 6 = 52 is the only correct option and the key is the smallest."
+    },
+    {
+      "itemId": "MC03-CALC-02",
+      "verdict": "SIGN",
+      "reason": "As it will be: 307 (key), 313, 407, 659. 483 - 176 = 307 is the only correct option and the key is the smallest."
+    },
+    {
+      "itemId": "MC03-CALC-04",
+      "verdict": "SIGN",
+      "reason": "As it will be: £7.65 (key), £11.25, £16.40, £8.65. £20 - £12.35 = £7.65 is the only correct option. All three distractors have attested executions of 40 characters or more, and the key is the smallest."
+    },
+    {
+      "itemId": "MC04-CALC-03",
+      "verdict": "SIGN",
+      "reason": "As it will be: 288 (key), 648, 2448, 328. 48 × 6 = 288 is the only correct option and the key is the smallest."
+    },
+    {
+      "itemId": "MC05-CALC-03",
+      "verdict": "SIGN",
+      "reason": "As it will be: 228 (key), 408, 2028, 248. 57 × 4 = 228 is the only correct option and the key is the smallest."
+    },
+    {
+      "itemId": "MC02-FDP-08",
+      "verdict": "SIGN",
+      "reason": "As it will be: 10 (key), 16, 15, 25. 2/5 of (40 - 15) = 10 is the only correct option and the key is the smallest."
+    },
+    {
+      "itemId": "MC03-FDP-03",
+      "verdict": "SIGN",
+      "reason": "As it will be: £11 (key), £22, £19, £1,100. 25% of £44 = £11 is the only correct option and the key is the smallest. £1,100 passes the notation gate; its comma differs from the sibling £2000."
+    },
+    {
+      "itemId": "MC03-GEOM-01",
+      "verdict": "SIGN",
+      "reason": "As it will be: 62° (key), 242°, 78°, 70°. 180° - 118° = 62° is the only correct option, with degree signs present, and the key is the smallest."
+    },
+    {
+      "itemId": "MC05-GEOM-02",
+      "verdict": "SIGN",
+      "reason": "As it will be: 43° (key), 223°, 57°, 50°. 180° - 137° = 43° is the only correct option and the key is the smallest."
+    },
+    {
+      "itemId": "MC02-MEAS-01",
+      "verdict": "SIGN",
+      "reason": "As it will be: £5.40 (key), £6.60, £6.00, £10.60. £8 - £2.60 = £5.40 is the only correct option and the key is the smallest."
+    },
+    {
+      "itemId": "MC02-MEAS-07",
+      "verdict": "SIGN",
+      "reason": "As it will be: £5.10 (key), £7.40, £7.10, £5.75. £10 - (4 × 65p + £2.30) = £5.10 is the only correct option. The existing executions are checked, and the key is the smallest."
+    },
+    {
+      "itemId": "MC03-MEAS-01",
+      "verdict": "SIGN",
+      "reason": "As it will be: £2.40 (key), £3.00, £3.60, £13.60. £8 - £5.60 = £2.40 is the only correct option and the key is the smallest."
+    },
+    {
+      "itemId": "MC03-MEAS-05",
+      "verdict": "SIGN",
+      "reason": "As it will be: £5.60 (key), £7.60, £8.25, £14.40. £10 - £4.40 = £5.60 is the only correct option. The existing executions are checked, and the key is the smallest."
+    },
+    {
+      "itemId": "MC03-MEAS-07",
+      "verdict": "SIGN",
+      "reason": "As it will be: £5.75 (key), £6.10, £7.55, £6.05. £10 - (7 × 35p + £1.80) = £5.75 is the only correct option. The existing executions are checked, and the key is the smallest."
+    },
+    {
+      "itemId": "MC03-NPV-06",
+      "verdict": "SIGN",
+      "reason": "As it will be: 0.08 (key), 8, 0.8, 80. The 8 in 5.284 is worth 0.08, the only correct option, and the key is the smallest."
+    },
+    {
+      "itemId": "MC04-NPV-05",
+      "verdict": "SIGN",
+      "reason": "As it will be: 0.05 (key), 5, 0.5, 50. The 5 in 6.351 is worth 0.05, the only correct option, and the key is the smallest."
+    },
+    {
+      "itemId": "MC05-NPV-05",
+      "verdict": "SIGN",
+      "reason": "As it will be: 0.08 (key), 8, 0.8, 80. The 8 in 7.482 is worth 0.08, the only correct option, and the key is the smallest."
+    }
+  ]
+}

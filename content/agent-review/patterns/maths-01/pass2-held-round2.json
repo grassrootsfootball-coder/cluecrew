@@ -1,0 +1,59 @@
+{
+ "door": "patterns/maths-01",
+ "mode": "APPLIED",
+ "landed": [
+  "MC01-CALC-08",
+  "MC04-CALC-07",
+  "MC03-NPV-03",
+  "MC01-NPV-02",
+  "MC04-NPV-03"
+ ],
+ "held": [
+  {
+   "itemId": "MC04-FDP-08",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmteo82ix00djtmmjeffdr6bx",
+     "verdict": "REFUSE",
+     "reason": "The arithmetic is right: a quarter of the 24 used is 6, and 16 - 6 = 10 (#82). But the replaced distractor's tag #78 occurs only 8 times on the door, below the minimum of 10. The value 8 is 16 ÷ 2, 'halved instead of quartered': the same genuine diagnosis the coordinator kept on MC04-FDP-02 and MC04-FDP-07 because replacing it 'drops a real diagnosis'. The same reasoning applies here. The fix for 8 is a library entry that names halving instead of quartering, not a new value. The row would also then carry #82 twice."
+    }
+   ],
+   "row": {
+    "itemId": "MC04-FDP-08",
+    "verdict": "HOLD",
+    "reason": "The seat of 8 -> 10 is refused: #78 occurs 8 times, under 10, and 8 is the real halved-instead-of-quartered diagnosis. 8 therefore stays without an attested execution and the row cannot land. It stays as LIVE now."
+   }
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "MC04-NPV-02",
+    "verdict": "HOLD",
+    "reason": "Every change on this row is attested, but the row is held for a pattern across rows. The door has six 'What number is N more than X?' rows (MC01/03/04/05-NPV-02/03). The LIVE template already puts the key second-largest on 5 of 6, with the +1000 lure always on top. Signing all five re-proposed rows would put the key LARGEST on 6 of 6, so 'pick the biggest' scores every time. That is the shortcut this repair exists to remove, moved to a single question template where the door measure cannot see it. I signed two (MC01-NPV-02 and MC04-NPV-03), leaving 3 of 6 largest and 3 of 6 second-largest. This row can be re-proposed as a retag only, as MC03-NPV-03 was: 63 -> 61 on the -10/-100 option; the +1000 or +10,000 option is genuinely #61 too, one column LEFT. That would correct its tags without moving its rank."
+   }
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "MC05-NPV-02",
+    "verdict": "HOLD",
+    "reason": "Every change on this row is attested, but the row is held for a pattern across rows. The door has six 'What number is N more than X?' rows (MC01/03/04/05-NPV-02/03). The LIVE template already puts the key second-largest on 5 of 6, with the +1000 lure always on top. Signing all five re-proposed rows would put the key LARGEST on 6 of 6, so 'pick the biggest' scores every time. That is the shortcut this repair exists to remove, moved to a single question template where the door measure cannot see it. I signed two (MC01-NPV-02 and MC04-NPV-03), leaving 3 of 6 largest and 3 of 6 second-largest. This row can be re-proposed as a retag only, as MC03-NPV-03 was: 63 -> 61 on the -10/-100 option; the +1000 or +10,000 option is genuinely #61 too, one column LEFT. That would correct its tags without moving its rank."
+   }
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "MC05-NPV-03",
+    "verdict": "HOLD",
+    "reason": "Every change on this row is attested, but the row is held for a pattern across rows. The door has six 'What number is N more than X?' rows (MC01/03/04/05-NPV-02/03). The LIVE template already puts the key second-largest on 5 of 6, with the +1000 lure always on top. Signing all five re-proposed rows would put the key LARGEST on 6 of 6, so 'pick the biggest' scores every time. That is the shortcut this repair exists to remove, moved to a single question template where the door measure cannot see it. I signed two (MC01-NPV-02 and MC04-NPV-03), leaving 3 of 6 largest and 3 of 6 second-largest. This row can be re-proposed as a retag only, as MC03-NPV-03 was: 63 -> 61 on the -10/-100 option; the +1000 or +10,000 option is genuinely #61 too, one column LEFT. That would correct its tags without moving its rank."
+   }
+  }
+ ]
+}

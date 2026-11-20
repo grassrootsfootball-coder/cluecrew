@@ -1,0 +1,657 @@
+{
+ "door": "patterns/maths-01",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmteo81y9001btmmjchv7coe1",
+   "itemId": "MC01-FDP-08",
+   "oldValue": "60",
+   "tag": "maths-79-dividing-by-a-fraction-error",
+   "newValue": "15",
+   "execution": "The child treats each 3/4 kg bag as if it held a whole kilogram, so 15 kg fills 15 bags. Each bag holds less than 1 kg, so more bags are needed: 15 ÷ 3/4 = 15 × 4 ÷ 3 = 20."
+  },
+  {
+   "optionId": "cmteo82ix00ditmmjytg5m68n",
+   "itemId": "MC04-FDP-08",
+   "oldValue": "16",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "newValue": "4",
+   "execution": "The child works out Monday correctly, 3/5 of 40 = 24 litres used, leaving 16, then finds Tuesday's quarter, 16 ÷ 4 = 4, and gives that. The 4 litres are what Tuesday uses; the step still to do is 16 - 4 = 12 litres left."
+  },
+  {
+   "optionId": "cmteo826h006dtmmj6nhlmfyi",
+   "itemId": "MC02-MEAS-03",
+   "oldValue": "£7.00",
+   "tag": "maths-72-wrong-operation-chosen",
+   "newValue": "£1.85",
+   "execution": "The child takes the pen's price away from the book's instead of adding them: £4.35 - £2.50 = £1.85. The question asks for the total cost, £4.35 + £2.50 = £6.85."
+  },
+  {
+   "optionId": "cmteo820n002qtmmjdlveifgw",
+   "itemId": "MC01-NPV-02",
+   "oldValue": "5970",
+   "tag": "maths-72-wrong-operation-chosen",
+   "newValue": "4870",
+   "execution": "The child takes 100 away instead of adding it, working out 4,970 - 100 = 4,870. The question asks for 100 more, so the answer is 4,970 + 100 = 5,070."
+  },
+  {
+   "optionId": "cmteo82lb00f2tmmjd1il61gp",
+   "itemId": "MC04-NPV-02",
+   "oldValue": "7970",
+   "tag": "maths-62-reading-a-digit-at-face-value",
+   "newValue": "6971",
+   "execution": "The child reads the 1 in 100 at face value as one and adds it to the ones: 6,970 + 1 = 6,971. That 1 stands for one hundred, so the answer is 6,970 + 100 = 7,070."
+  },
+  {
+   "optionId": "cmteo82rg00iytmmjo5g83zax",
+   "itemId": "MC05-NPV-02",
+   "oldValue": "6960",
+   "tag": "maths-62-reading-a-digit-at-face-value",
+   "newValue": "5961",
+   "execution": "The child reads the 1 in 100 at face value as one and adds it to the ones: 5,960 + 1 = 5,961. That 1 stands for one hundred, so the answer is 5,960 + 100 = 6,060."
+  },
+  {
+   "optionId": "cmteo82li00f6tmmjies79c06",
+   "itemId": "MC04-NPV-03",
+   "oldValue": "19400",
+   "tag": "maths-62-reading-a-digit-at-face-value",
+   "newValue": "9401",
+   "execution": "The child reads the 1 in 1,000 at face value as one and adds it to the ones: 9,400 + 1 = 9,401. That 1 stands for one thousand, so the answer is 9,400 + 1,000 = 10,400."
+  },
+  {
+   "optionId": "cmteo82rm00j2tmmjnyjv6p3v",
+   "itemId": "MC05-NPV-03",
+   "oldValue": "19500",
+   "tag": "maths-72-wrong-operation-chosen",
+   "newValue": "8500",
+   "execution": "The child takes 1,000 away instead of adding it, working out 9,500 - 1,000 = 8,500. The question asks for 1,000 more, so the answer is 9,500 + 1,000 = 10,500."
+  },
+  {
+   "optionId": "cmteo82830077tmmj5f9r6woc",
+   "itemId": "MC02-NPV-04",
+   "oldValue": "4070",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "newValue": "1000",
+   "execution": "The child gives 1,000, the smallest 4-digit number of all, and never uses the digits 4, 0, 0 and 7 the question gives. With those digits the 4 must lead and the two zeros come next, making 4,007."
+  },
+  {
+   "optionId": "cmteo829d007utmmj4tz71cg0",
+   "itemId": "MC03-CALC-01",
+   "oldValue": "650",
+   "tag": "maths-72-wrong-operation-chosen",
+   "newValue": "69",
+   "execution": "The child subtracts instead of adding, working out 356 - 287 = 69. The sign asks for a total: 356 + 287 = 643."
+  },
+  {
+   "optionId": "cmteo82n100g3tmmjrqrihba1",
+   "itemId": "MC05-CALC-01",
+   "oldValue": "690",
+   "tag": "maths-72-wrong-operation-chosen",
+   "newValue": "247",
+   "execution": "The child subtracts instead of adding, working out 465 - 218 = 247. The sign asks for a total: 465 + 218 = 683."
+  },
+  {
+   "optionId": "cmteo82ag008jtmmj4j2k5ddd",
+   "itemId": "MC03-CALC-07",
+   "oldValue": "£25.00",
+   "tag": "maths-83-money-place-value-slip",
+   "newValue": "£22.00",
+   "execution": "The child drops the pence and multiplies whole pounds only: 3 × £6 = £18 and 2 × £2 = £4, giving £22.00. The 3 × 50p and 2 × 25p add £2.00 more, so the total is £24.00."
+  },
+  {
+   "optionId": "cmteo82o200gqtmmjfqy76vny",
+   "itemId": "MC05-CALC-07",
+   "oldValue": "138",
+   "tag": "maths-69-dropped-calculation-carry",
+   "newValue": "22",
+   "execution": "In 5 × 24 the child works 5 × 4 = 20, writes 0 and drops the carried 2, then 5 × 2 = 10, giving 100 instead of 120. Then 100 + 18 - 96 = 22, where 120 + 18 - 96 is 42."
+  },
+  {
+   "optionId": "cmteo82q800i2tmmj4beh0kpt",
+   "itemId": "MC05-GEOM-06",
+   "oldValue": "290°",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "newValue": "70°",
+   "execution": "The child finds the triangle's angle on the line, 180° - 140° = 40°, adds the other known angle, 40° + 30° = 70°, and gives that total. The step still to do is 180° - 70° = 110°."
+  },
+  {
+   "optionId": "cmteo82hb00chtmmjanoyx8rp",
+   "itemId": "MC04-CALC-06",
+   "oldValue": "3373",
+   "tag": "maths-99-rounded-without-compensating",
+   "newValue": "2620",
+   "execution": "The child rounds 4,002 to 4,000 and 1,375 to 1,380, both to the nearest ten, and gives 4,000 - 1,380 = 2,620. Rounding 4,002 down took 2 off and rounding 1,375 up took 5 more away, so 7 has to be put back to reach 2,627; the child never does."
+  },
+  {
+   "optionId": "cmteo823n004jtmmjrprlzviu",
+   "itemId": "MC02-CALC-08",
+   "oldValue": "50",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "newValue": "312",
+   "execution": "The child works out the eggs correctly, 12 × 30 = 360, takes away the 48 broken to get 312, and gives that. The question asks for boxes of 6, so 312 ÷ 6 = 52 is still to do."
+  },
+  {
+   "optionId": "cmteo829j007ztmmjauekyay6",
+   "itemId": "MC03-CALC-02",
+   "oldValue": "300",
+   "tag": "maths-72-wrong-operation-chosen",
+   "newValue": "659",
+   "execution": "The child adds instead of subtracting, working out 483 + 176 = 659. The sign asks for the difference: 483 - 176 = 307."
+  },
+  {
+   "optionId": "cmteo829u0087tmmj7v2vroi2",
+   "itemId": "MC03-CALC-04",
+   "oldValue": "£7.00",
+   "tag": "maths-69-dropped-calculation-carry",
+   "newValue": "£8.65",
+   "execution": "Adding the prices, the child works 7 + 6 = 13 in the tenths column, writes 3 and drops the carried pound, so £8.75 + £3.60 comes to £11.35 instead of £12.35. Taking £11.35 from £20 gives £8.65 instead of £7.65."
+  },
+  {
+   "optionId": "cmteo82gr00c5tmmjbdj1c5ty",
+   "itemId": "MC04-CALC-03",
+   "oldValue": "248",
+   "tag": "maths-63-misaligned-addition-carry",
+   "newValue": "648",
+   "execution": "6 × 8 = 48, so the child writes 8 and carries 4, but adds the 4 into the hundreds instead of the tens. The tens give 6 × 4 = 24, written as 4 tens and 2 hundreds, and the hundreds become 2 + 4 = 6, so the answer reads 648 instead of 288."
+  },
+  {
+   "optionId": "cmteo82ne00g9tmmj5c0ukba4",
+   "itemId": "MC05-CALC-03",
+   "oldValue": "208",
+   "tag": "maths-63-misaligned-addition-carry",
+   "newValue": "408",
+   "execution": "4 × 7 = 28, so the child writes 8 and carries 2, but adds the 2 into the hundreds instead of the tens. The tens give 4 × 5 = 20, written as 0 tens and 2 hundreds, and the hundreds become 2 + 2 = 4, so the answer reads 408 instead of 228."
+  },
+  {
+   "optionId": "cmteo8250005etmmja0qizhw4",
+   "itemId": "MC02-FDP-08",
+   "oldValue": "5",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "newValue": "15",
+   "execution": "The child works out the blue marbles correctly, 3/8 of 40 = 15, and gives that. The question asks for the green ones, so two fifths of the 25 left, which is 10, is still to find."
+  },
+  {
+   "optionId": "cmteo82bc008ztmmjpqdgjfde",
+   "itemId": "MC03-FDP-03",
+   "oldValue": "£10",
+   "tag": "percentage-never-divided-by-hundred",
+   "newValue": "£1,100",
+   "execution": "The child multiplies £44 by 25 and never divides by 100, giving £1,100. 25% is 25 out of every 100, so the answer is 44 × 25 ÷ 100 = £11."
+  },
+  {
+   "optionId": "cmteo82ce009jtmmjfh5xs5ar",
+   "itemId": "MC03-GEOM-01",
+   "oldValue": "60°",
+   "tag": "maths-12-forgetting-to-exchange",
+   "newValue": "70°",
+   "execution": "Working out 180 - 118, the top digit 0 in the ones is smaller than 8, so the child writes 0 there instead of exchanging a ten. The tens give 8 - 1 = 7 and the hundreds 1 - 1 = 0, so the answer reads 70° where 180° - 118° is 62°."
+  },
+  {
+   "optionId": "cmteo82pq00hrtmmjy5qfka7p",
+   "itemId": "MC05-GEOM-02",
+   "oldValue": "40°",
+   "tag": "maths-12-forgetting-to-exchange",
+   "newValue": "50°",
+   "execution": "Working out 180 - 137, the top digit 0 in the ones is smaller than 7, so the child writes 0 there instead of exchanging a ten. The tens give 8 - 3 = 5 and the hundreds 1 - 1 = 0, so the answer reads 50° where 180° - 137° is 43°."
+  },
+  {
+   "optionId": "cmteo82650064tmmjr20vtbf6",
+   "itemId": "MC02-MEAS-01",
+   "oldValue": "£5.00",
+   "tag": "maths-11-commutative-subtraction",
+   "newValue": "£6.60",
+   "execution": "Working out £8.00 - £2.60, the child sees 0 above 6 in the tenths column and takes the smaller from the larger, 6 - 0 = 6, instead of exchanging a pound. The pounds give 8 - 2 = 6, so the answer reads £6.60 where the change is £5.40."
+  },
+  {
+   "optionId": "cmteo827e006vtmmjsdyy46ih",
+   "itemId": "MC02-MEAS-07",
+   "oldValue": "£4.90",
+   "tag": "maths-85-miscount-or-rounding-in-measures",
+   "newValue": "£5.75",
+   "execution": "The child multiplies 65p by one fewer apple, 3 × 65p = £1.95, and adds the £2.30 juice to get £4.25. Taking £4.25 from £10 gives £5.75 instead of £10 - £4.90 = £5.10."
+  },
+  {
+   "optionId": "cmteo82dc00a3tmmjnb8n4fne",
+   "itemId": "MC03-MEAS-01",
+   "oldValue": "£2.00",
+   "tag": "maths-84-adding-instead-of-finding-the-difference",
+   "newValue": "£13.60",
+   "execution": "The child adds the toy's price to the £8 instead of taking it away: £8 + £5.60 = £13.60. Change is what is left, so £8 - £5.60 = £2.40."
+  },
+  {
+   "optionId": "cmteo82e000aitmmjiutqewr1",
+   "itemId": "MC03-MEAS-05",
+   "oldValue": "£5.00",
+   "tag": "maths-84-adding-instead-of-finding-the-difference",
+   "newValue": "£14.40",
+   "execution": "The child works out the total spent correctly, £2.65 + £1.75 = £4.40, then adds it to the £10 instead of taking it away, giving £14.40. Change is what is left, so £10 - £4.40 = £5.60."
+  },
+  {
+   "optionId": "cmteo82ec00aptmmjgu4j9mb6",
+   "itemId": "MC03-MEAS-07",
+   "oldValue": "£5.40",
+   "tag": "maths-69-dropped-calculation-carry",
+   "newValue": "£6.05",
+   "execution": "In 7 × 35p the child works 7 × 5 = 35, writes 5 and drops the carried 3, then 7 × 3 = 21, giving £2.15 instead of £2.45. With the £1.80 notebook that is £3.95, and £10 - £3.95 = £6.05 instead of £5.75."
+  },
+  {
+   "optionId": "cmteo82fa00bbtmmj82adxvft",
+   "itemId": "MC03-NPV-06",
+   "oldValue": "0.008",
+   "tag": "maths-07-decimals-as-two-separate-whole-numbers",
+   "newValue": "80",
+   "execution": "The child reads the digits after the point, 284, as a separate whole number, so the 8 sits in its tens and is worth 80. In 5.284 the 8 is in the hundredths column, so its value is 0.08."
+  },
+  {
+   "optionId": "cmteo82lw00fftmmjdv96280j",
+   "itemId": "MC04-NPV-05",
+   "oldValue": "0.005",
+   "tag": "maths-07-decimals-as-two-separate-whole-numbers",
+   "newValue": "50",
+   "execution": "The child reads the digits after the point, 351, as a separate whole number, so the 5 sits in its tens and is worth 50. In 6.351 the 5 is in the hundredths column, so its value is 0.05."
+  },
+  {
+   "optionId": "cmteo82rw00jbtmmj66jyds6w",
+   "itemId": "MC05-NPV-05",
+   "oldValue": "0.008",
+   "tag": "maths-07-decimals-as-two-separate-whole-numbers",
+   "newValue": "80",
+   "execution": "The child reads the digits after the point, 482, as a separate whole number, so the 8 sits in its tens and is worth 80. In 7.482 the 8 is in the hundredths column, so its value is 0.08."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmteo81y90019tmmj24um9kyk",
+   "itemId": "MC01-FDP-08",
+   "value": "11.25",
+   "tag": "maths-24-inverted-fraction-of-an-amount",
+   "execution": "Dividing by 3/4 means multiplying by 4/3, but the child uses the fraction the wrong way up and works out 15 × 3 ÷ 4 = 11.25. The answer is 15 × 4 ÷ 3 = 20 bags."
+  },
+  {
+   "optionId": "cmteo81y9001atmmj24uav0ro",
+   "itemId": "MC01-FDP-08",
+   "value": "5",
+   "tag": "maths-75-incomplete-fraction-of-an-amount",
+   "execution": "The child divides 15 by the top number 3 and stops there, giving 5. Only one number of the fraction is used; dividing by 3/4 gives 15 ÷ 3 × 4 = 20."
+  },
+  {
+   "optionId": "cmteo82ix00dhtmmjpw997o8m",
+   "itemId": "MC04-FDP-08",
+   "value": "6",
+   "tag": "maths-82-fraction-of-the-wrong-whole",
+   "execution": "The child takes Tuesday's quarter of the whole 40 litres, 40 ÷ 4 = 10, instead of a quarter of the 16 litres left after Monday. That gives 16 - 10 = 6 where 16 - 4 is 12."
+  },
+  {
+   "optionId": "cmteo82ix00djtmmjeffdr6bx",
+   "itemId": "MC04-FDP-08",
+   "value": "8",
+   "tag": "maths-78-percentage-fraction-confusion",
+   "execution": "The child treats one quarter as one half, so takes 16 ÷ 2 = 8 litres away on Tuesday and gives the 8 left. A quarter of 16 is 4, so 12 litres are left."
+  },
+  {
+   "optionId": "cmteo826h006ctmmjr950spp4",
+   "itemId": "MC02-MEAS-03",
+   "value": "£2.85",
+   "tag": "maths-98-digit-dropped-in-column-work",
+   "execution": "The child adds the £2.50 to only the 35p of the £4.35, dropping the £4, and gets £2.85. The full total is £4.35 + £2.50 = £6.85."
+  },
+  {
+   "optionId": "cmteo826h006etmmjpv6ety7w",
+   "itemId": "MC02-MEAS-03",
+   "value": "£6.00",
+   "tag": "maths-83-money-place-value-slip",
+   "execution": "The child drops the pence and adds whole pounds only: £4 + £2 = £6.00. The 35p and 50p add another 85p, so the total is £6.85."
+  },
+  {
+   "optionId": "cmteo820n002ptmmj069wrqyf",
+   "itemId": "MC01-NPV-02",
+   "value": "4980",
+   "tag": "maths-63-misaligned-addition-carry",
+   "execution": "The child lines the 1 of 100 up under the tens digit instead of the hundreds, so adds 10: 4,970 + 10 = 4,980. Adding 100 makes the 9 hundreds into 10, giving 5,070."
+  },
+  {
+   "optionId": "cmteo820n002rtmmjimurvrcf",
+   "itemId": "MC01-NPV-02",
+   "value": "4070",
+   "tag": "maths-12-forgetting-to-exchange",
+   "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 there and never exchanges the ten hundreds for a thousand. The thousands digit stays 4, so the answer reads 4,070 instead of 5,070."
+  },
+  {
+   "optionId": "cmteo82lb00f1tmmjhfxzg4sd",
+   "itemId": "MC04-NPV-02",
+   "value": "6980",
+   "tag": "maths-63-misaligned-addition-carry",
+   "execution": "The child lines the 1 of 100 up under the tens digit instead of the hundreds, so adds 10: 6,970 + 10 = 6,980. Adding 100 makes the 9 hundreds into 10, giving 7,070."
+  },
+  {
+   "optionId": "cmteo82lc00f3tmmjlyn7o7jj",
+   "itemId": "MC04-NPV-02",
+   "value": "6070",
+   "tag": "maths-69-dropped-calculation-carry",
+   "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 but drops the carried 1. The thousands digit stays 6, so the answer reads 6,070 instead of 7,070."
+  },
+  {
+   "optionId": "cmteo82rg00ixtmmjn4i7tqmf",
+   "itemId": "MC05-NPV-02",
+   "value": "5970",
+   "tag": "maths-63-misaligned-addition-carry",
+   "execution": "The child lines the 1 of 100 up under the tens digit instead of the hundreds, so adds 10: 5,960 + 10 = 5,970. Adding 100 makes the 9 hundreds into 10, giving 6,060."
+  },
+  {
+   "optionId": "cmteo82rg00iztmmjkshrh0zn",
+   "itemId": "MC05-NPV-02",
+   "value": "5060",
+   "tag": "maths-69-dropped-calculation-carry",
+   "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 but drops the carried 1. The thousands digit stays 5, so the answer reads 5,060 instead of 6,060."
+  },
+  {
+   "optionId": "cmteo82li00f5tmmjraxjjor0",
+   "itemId": "MC04-NPV-03",
+   "value": "9500",
+   "tag": "maths-63-misaligned-addition-carry",
+   "execution": "The child lines the 1 of 1,000 up under the hundreds digit instead of the thousands, so adds 100: 9,400 + 100 = 9,500. Adding 1,000 makes the 9 thousands into 10, giving 10,400."
+  },
+  {
+   "optionId": "cmteo82li00f7tmmjf14y60iy",
+   "itemId": "MC04-NPV-03",
+   "value": "400",
+   "tag": "maths-69-dropped-calculation-carry",
+   "execution": "In the thousands column 9 + 1 makes 10; the child writes 0 but drops the carried 1, so no ten-thousands digit is written. That leaves 400 where the answer is 10,400."
+  },
+  {
+   "optionId": "cmteo82rm00j1tmmjq78asvi4",
+   "itemId": "MC05-NPV-03",
+   "value": "9600",
+   "tag": "maths-63-misaligned-addition-carry",
+   "execution": "The child lines the 1 of 1,000 up under the hundreds digit instead of the thousands, so adds 100: 9,500 + 100 = 9,600. Adding 1,000 makes the 9 thousands into 10, giving 10,500."
+  },
+  {
+   "optionId": "cmteo82rm00j3tmmjjjh1l3pg",
+   "itemId": "MC05-NPV-03",
+   "value": "500",
+   "tag": "maths-69-dropped-calculation-carry",
+   "execution": "In the thousands column 9 + 1 makes 10; the child writes 0 but drops the carried 1, so no ten-thousands digit is written. That leaves 500 where the answer is 10,500."
+  },
+  {
+   "optionId": "cmteo82830075tmmjv7m62q1u",
+   "itemId": "MC02-NPV-04",
+   "value": "47",
+   "tag": "maths-64-leading-zero-ordering-slip",
+   "execution": "The child puts both zeros first to make the number as small as possible, writing 0047, which is really the 2-digit number 47. A 4-digit number cannot start with zero, so the 4 leads and the answer is 4,007."
+  },
+  {
+   "optionId": "cmteo82830076tmmj65w263ca",
+   "itemId": "MC02-NPV-04",
+   "value": "407",
+   "tag": "maths-67-dropped-internal-placeholder",
+   "execution": "The child writes the 4, one zero and the 7, dropping the second zero, and gives 407. Both zeros are needed to hold the hundreds and tens, so the number is 4,007."
+  },
+  {
+   "optionId": "cmteo829c007ttmmjn62l3vj4",
+   "itemId": "MC03-CALC-01",
+   "value": "543",
+   "tag": "maths-69-dropped-calculation-carry",
+   "execution": "In the ones 6 + 7 = 13, so 3 is written and 1 carried; in the tens 5 + 8 + 1 = 14, so 4 is written and 1 carried. The child drops that carried hundred, so the hundreds give 3 + 2 = 5 and the answer reads 543 instead of 643."
+  },
+  {
+   "optionId": "cmteo829d007vtmmjdc63bjxj",
+   "itemId": "MC03-CALC-01",
+   "value": "443",
+   "tag": "maths-98-digit-dropped-in-column-work",
+   "execution": "The child drops the 2 hundreds of 287 and adds only 87: 356 + 87 = 443. Every digit of 287 must be added, giving 643."
+  },
+  {
+   "optionId": "cmteo82n100g1tmmjsawab88q",
+   "itemId": "MC05-CALC-01",
+   "value": "673",
+   "tag": "maths-69-dropped-calculation-carry",
+   "execution": "In the ones 5 + 8 = 13, so the child writes 3 but drops the carried ten. The tens then give 6 + 1 = 7 instead of 8, so the answer reads 673 instead of 683."
+  },
+  {
+   "optionId": "cmteo82n100g2tmmjlsqj4zcz",
+   "itemId": "MC05-CALC-01",
+   "value": "283",
+   "tag": "maths-98-digit-dropped-in-column-work",
+   "execution": "The child drops the 4 hundreds of 465 and adds only 65: 65 + 218 = 283. Every digit of 465 must be added, giving 683."
+  },
+  {
+   "optionId": "cmteo82ag008htmmj6cizemrx",
+   "itemId": "MC03-CALC-07",
+   "value": "£19.50",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child works out the footballs, 3 × £6.50 = £19.50, and never uses the 2 water bottles at £2.25 each. Adding 2 × £2.25 = £4.50 gives £24.00."
+  },
+  {
+   "optionId": "cmteo82ag008itmmj9m76zm09",
+   "itemId": "MC03-CALC-07",
+   "value": "£17.50",
+   "tag": "maths-85-miscount-or-rounding-in-measures",
+   "execution": "The child multiplies the football price by one fewer, 2 × £6.50 = £13.00, then adds 2 × £2.25 = £4.50 to get £17.50. There are 3 footballs, so the total is £19.50 + £4.50 = £24.00."
+  },
+  {
+   "optionId": "cmteo82o200gptmmj9b8rrln8",
+   "itemId": "MC05-CALC-07",
+   "value": "24",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child works out the 5 trays, 5 × 24 = 120, and takes away the 96 sold, but never uses the 18 muffins she already had. That gives 120 - 96 = 24, where 120 + 18 - 96 is 42."
+  },
+  {
+   "optionId": "cmteo82o200grtmmjcbdelo6t",
+   "itemId": "MC05-CALC-07",
+   "value": "38",
+   "tag": "maths-99-rounded-without-compensating",
+   "execution": "The child finds 120 + 18 = 138, then rounds the 96 sold up to 100 to make the take-away easy: 138 - 100 = 38. Rounding took 4 too many away and the child never adds them back, so the answer is 42."
+  },
+  {
+   "optionId": "cmteo82q800i1tmmj51b2hdxr",
+   "itemId": "MC05-GEOM-06",
+   "value": "40°",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child takes the 140° from 180° correctly to get 40°, the triangle's angle next to the line, and gives that as the answer. The question asks for the third angle, so 180° - 40° - 30° = 110° is still to do."
+  },
+  {
+   "optionId": "cmteo82q800i3tmmjwi104s7d",
+   "itemId": "MC05-GEOM-06",
+   "value": "10°",
+   "tag": "maths-100-steps-out-of-order",
+   "execution": "The child does the triangle step before the line step, taking both the 140° and the 30° straight off 180°: 180° - 140° - 30° = 10°. The 140° first has to give the triangle's own angle, 180° - 140° = 40°, and then 180° - 40° - 30° = 110°."
+  },
+  {
+   "optionId": "cmteo82hb00citmmjowgbvnr8",
+   "itemId": "MC04-CALC-06",
+   "value": "2007",
+   "tag": "maths-12-forgetting-to-exchange",
+   "execution": "The child takes one thousand from the 4 and puts ten straight into the ones, so 12 - 5 = 7 and the thousands become 3. In the tens and hundreds the top digit 0 is smaller, so the child writes 0 in each instead of exchanging, and 3 - 1 = 2 gives 2,007 where 4,002 - 1,375 is 2,627."
+  },
+  {
+   "optionId": "cmteo82hb00cjtmmjubziyq4c",
+   "itemId": "MC04-CALC-06",
+   "value": "2600",
+   "tag": "maths-99-rounded-without-compensating",
+   "execution": "The child rounds 4,002 to 4,000 and 1,375 to 1,400, both to the nearest hundred, and gives 4,000 - 1,400 = 2,600. Rounding 4,002 down took 2 off and rounding 1,375 up took 25 more away, so 27 has to be put back to reach 2,627; the child never does."
+  },
+  {
+   "optionId": "cmteo823n004htmmjy551z1lz",
+   "itemId": "MC02-CALC-08",
+   "value": "60",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child never uses the 48 broken eggs and packs them all: 12 × 30 = 360 and 360 ÷ 6 = 60. Taking the 48 away first leaves 312, and 312 ÷ 6 = 52."
+  },
+  {
+   "optionId": "cmteo823n004itmmjnq29rvej",
+   "itemId": "MC02-CALC-08",
+   "value": "68",
+   "tag": "maths-72-wrong-operation-chosen",
+   "execution": "The child adds the 48 broken eggs instead of taking them away: 360 + 48 = 408, and 408 ÷ 6 = 68. Broken eggs cannot be packed, so 360 - 48 = 312 and 312 ÷ 6 = 52."
+  },
+  {
+   "optionId": "cmteo829j007xtmmjzswfh1hq",
+   "itemId": "MC03-CALC-02",
+   "value": "313",
+   "tag": "maths-11-commutative-subtraction",
+   "execution": "In each column the child takes the smaller digit from the larger: 6 - 3 = 3 in the ones, 8 - 7 = 1 in the tens and 4 - 1 = 3 in the hundreds. That gives 313 where exchanging a ten gives 307."
+  },
+  {
+   "optionId": "cmteo829j007ytmmjxqgbwci9",
+   "itemId": "MC03-CALC-02",
+   "value": "407",
+   "tag": "maths-98-digit-dropped-in-column-work",
+   "execution": "The child drops the 1 hundred of 176 and takes away only 76: 483 - 76 = 407. All of 176 must come off, giving 307."
+  },
+  {
+   "optionId": "cmteo82gr00c6tmmjpkg2v53z",
+   "itemId": "MC04-CALC-03",
+   "value": "2448",
+   "tag": "maths-70-two-digit-column-totals",
+   "execution": "The child writes each column's full product side by side: 6 × 4 = 24 and 6 × 8 = 48 make 2448. The 4 tens of 48 must carry into the 24 tens, giving 240 + 48 = 288."
+  },
+  {
+   "optionId": "cmteo82gr00c7tmmjn10j9vh6",
+   "itemId": "MC04-CALC-03",
+   "value": "328",
+   "tag": "maths-13-adding-the-exchange-twice",
+   "execution": "The child carries the 4 from 6 × 8 = 48 but adds it twice: 6 × 4 = 24, then 24 + 4 + 4 = 32. That gives 328 instead of 288."
+  },
+  {
+   "optionId": "cmteo82ne00gatmmjhrvof4qy",
+   "itemId": "MC05-CALC-03",
+   "value": "2028",
+   "tag": "maths-70-two-digit-column-totals",
+   "execution": "The child writes each column's full product side by side: 4 × 5 = 20 and 4 × 7 = 28 make 2028. The 2 tens of 28 must carry into the 20 tens, giving 200 + 28 = 228."
+  },
+  {
+   "optionId": "cmteo82ne00gbtmmjx1nhcqom",
+   "itemId": "MC05-CALC-03",
+   "value": "248",
+   "tag": "maths-13-adding-the-exchange-twice",
+   "execution": "The child carries the 2 from 4 × 7 = 28 but adds it twice: 4 × 5 = 20, then 20 + 2 + 2 = 24. That gives 248 instead of 228."
+  },
+  {
+   "optionId": "cmteo8250005ctmmjdbzm3gtr",
+   "itemId": "MC02-FDP-08",
+   "value": "16",
+   "tag": "maths-82-fraction-of-the-wrong-whole",
+   "execution": "The child takes two fifths of all 40 marbles, 40 ÷ 5 × 2 = 16, instead of two fifths of the 25 left after the blue ones. Two fifths of 25 is 10."
+  },
+  {
+   "optionId": "cmteo8250005ftmmjyrv9tssf",
+   "itemId": "MC02-FDP-08",
+   "value": "25",
+   "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+   "execution": "The child finds the marbles left after the blue ones, 40 - 15 = 25, and never uses the two fifths. Only two fifths of those 25 are green, which is 10."
+  },
+  {
+   "optionId": "cmteo82bc008xtmmj60oiplsn",
+   "itemId": "MC03-FDP-03",
+   "value": "£22",
+   "tag": "maths-78-percentage-fraction-confusion",
+   "execution": "The child treats 25% as a half rather than a quarter and works out £44 ÷ 2 = £22. 25% is one quarter, so the answer is £44 ÷ 4 = £11."
+  },
+  {
+   "optionId": "cmteo82bc008ytmmj8v2khcy0",
+   "itemId": "MC03-FDP-03",
+   "value": "£19",
+   "tag": "maths-77-treating-a-percentage-as-money",
+   "execution": "The child takes the 25 straight off the amount as pounds, working out £44 - £25 = £19. 25% is a share of the £44, so the answer is £44 ÷ 4 = £11."
+  },
+  {
+   "optionId": "cmteo82ce009htmmjiz79p16c",
+   "itemId": "MC03-GEOM-01",
+   "value": "242°",
+   "tag": "maths-89-wrong-angle-total",
+   "execution": "The child uses 360° as the angle total for a straight line instead of 180°, working out 360° - 118° = 242°. Angles on a straight line add to 180°, so the other angle is 62°."
+  },
+  {
+   "optionId": "cmteo82ce009itmmjqolu3exg",
+   "itemId": "MC03-GEOM-01",
+   "value": "78°",
+   "tag": "maths-11-commutative-subtraction",
+   "execution": "In the ones the child takes the smaller digit from the larger, 8 - 0 = 8, instead of exchanging a ten. The tens give 8 - 1 = 7, so the answer reads 78° where 180° - 118° is 62°."
+  },
+  {
+   "optionId": "cmteo82pq00hptmmj5k1oz7hf",
+   "itemId": "MC05-GEOM-02",
+   "value": "223°",
+   "tag": "maths-89-wrong-angle-total",
+   "execution": "The child uses 360° as the angle total for a straight line instead of 180°, working out 360° - 137° = 223°. Angles on a straight line add to 180°, so the other angle is 43°."
+  },
+  {
+   "optionId": "cmteo82pq00hqtmmjzl42feqa",
+   "itemId": "MC05-GEOM-02",
+   "value": "57°",
+   "tag": "maths-11-commutative-subtraction",
+   "execution": "In the ones the child takes the smaller digit from the larger, 7 - 0 = 7, instead of exchanging a ten. The tens give 8 - 3 = 5, so the answer reads 57° where 180° - 137° is 43°."
+  },
+  {
+   "optionId": "cmteo82650065tmmje9thd537",
+   "itemId": "MC02-MEAS-01",
+   "value": "£6.00",
+   "tag": "maths-83-money-place-value-slip",
+   "execution": "The child drops the 60p and subtracts whole pounds only: £8 - £2 = £6.00. The toy costs £2.60, so the 60p must come off too, leaving £5.40."
+  },
+  {
+   "optionId": "cmteo82660067tmmjsfsuo6tg",
+   "itemId": "MC02-MEAS-01",
+   "value": "£10.60",
+   "tag": "maths-84-adding-instead-of-finding-the-difference",
+   "execution": "The child adds the toy's price to the £8 instead of taking it away: £8 + £2.60 = £10.60. Change is what is left, so £8 - £2.60 = £5.40."
+  },
+  {
+   "optionId": "cmteo82dc00a1tmmj0mkrjfwd",
+   "itemId": "MC03-MEAS-01",
+   "value": "£3.00",
+   "tag": "maths-83-money-place-value-slip",
+   "execution": "The child drops the 60p and subtracts whole pounds only: £8 - £5 = £3.00. The toy costs £5.60, so the 60p must come off too, leaving £2.40."
+  },
+  {
+   "optionId": "cmteo82dc00a2tmmjmzn9d03d",
+   "itemId": "MC03-MEAS-01",
+   "value": "£3.60",
+   "tag": "maths-11-commutative-subtraction",
+   "execution": "Working out £8.00 - £5.60, the child sees 0 above 6 in the tenths column and takes the smaller from the larger, 6 - 0 = 6, instead of exchanging a pound. The pounds give 8 - 5 = 3, so the answer reads £3.60 where the change is £2.40."
+  },
+  {
+   "optionId": "cmteo82fa00b9tmmjr8nmlq8f",
+   "itemId": "MC03-NPV-06",
+   "value": "8",
+   "tag": "maths-62-reading-a-digit-at-face-value",
+   "execution": "The child gives the digit's face value, 8, ignoring where it sits. In 5.284 the 8 is in the hundredths column, so its value is 0.08."
+  },
+  {
+   "optionId": "cmteo82fa00batmmj9gc19rpa",
+   "itemId": "MC03-NPV-06",
+   "value": "0.8",
+   "tag": "maths-61-reading-the-wrong-place-value-column",
+   "execution": "The child reads the 8 one column to the left, in the tenths, and gives 0.8. The tenths digit of 5.284 is 2; the 8 is in the hundredths, worth 0.08."
+  },
+  {
+   "optionId": "cmteo82lw00fdtmmjzowwtxwv",
+   "itemId": "MC04-NPV-05",
+   "value": "5",
+   "tag": "maths-62-reading-a-digit-at-face-value",
+   "execution": "The child gives the digit's face value, 5, ignoring where it sits. In 6.351 the 5 is in the hundredths column, so its value is 0.05."
+  },
+  {
+   "optionId": "cmteo82lw00fetmmjtbks5107",
+   "itemId": "MC04-NPV-05",
+   "value": "0.5",
+   "tag": "maths-61-reading-the-wrong-place-value-column",
+   "execution": "The child reads the 5 one column to the left, in the tenths, and gives 0.5. The tenths digit of 6.351 is 3; the 5 is in the hundredths, worth 0.05."
+  },
+  {
+   "optionId": "cmteo82rw00j9tmmjmy929qcx",
+   "itemId": "MC05-NPV-05",
+   "value": "8",
+   "tag": "maths-62-reading-a-digit-at-face-value",
+   "execution": "The child gives the digit's face value, 8, ignoring where it sits. In 7.482 the 8 is in the hundredths column, so its value is 0.08."
+  },
+  {
+   "optionId": "cmteo82rw00jatmmjh6686jms",
+   "itemId": "MC05-NPV-05",
+   "value": "0.8",
+   "tag": "maths-61-reading-the-wrong-place-value-column",
+   "execution": "The child reads the 8 one column to the left, in the tenths, and gives 0.8. The tenths digit of 7.482 is 4; the 8 is in the hundredths, worth 0.08."
+  }
+ ],
+ "rebuilds": []
+}

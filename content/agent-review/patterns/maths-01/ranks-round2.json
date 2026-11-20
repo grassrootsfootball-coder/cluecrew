@@ -1,0 +1,1887 @@
+{
+ "measuredAt": "2026-11-20T18:10:47.464Z",
+ "after": null,
+ "rankable": 161,
+ "unrankable": [
+  "MC01-FDP-01",
+  "MC01-GEOM-04",
+  "MC02-FDP-01",
+  "MC02-FDP-06",
+  "MC02-GEOM-04",
+  "MC03-FDP-01",
+  "MC03-FDP-06",
+  "MC03-GEOM-02",
+  "MC03-GEOM-05",
+  "MC03-MEAS-04",
+  "MC04-FDP-01",
+  "MC04-GEOM-02",
+  "MC05-FDP-01",
+  "MC05-FDP-03",
+  "MC05-GEOM-01",
+  "MC05-GEOM-03",
+  "MC05-GEOM-04",
+  "MC05-GEOM-05"
+ ],
+ "ranks": {
+  "0": 46,
+  "1": 52,
+  "2": 42,
+  "3": 21
+ },
+ "tagCount": {
+  "maths-11-commutative-subtraction": 35,
+  "maths-99-rounded-without-compensating": 22,
+  "maths-12-forgetting-to-exchange": 11,
+  "maths-71-forgetting-part-of-a-multi-step-problem": 40,
+  "maths-proc-01-stopped-at-the-first-answer": 29,
+  "maths-72-wrong-operation-chosen": 19,
+  "maths-21-larger-denominator-means-larger-fraction": 8,
+  "maths-29-comparing-without-common-denominators": 5,
+  "maths-74-comparing-fractions-incorrectly": 3,
+  "maths-75-incomplete-fraction-of-an-amount": 13,
+  "maths-24-inverted-fraction-of-an-amount": 8,
+  "maths-77-treating-a-percentage-as-money": 8,
+  "percentage-never-divided-by-hundred": 2,
+  "maths-78-percentage-fraction-confusion": 8,
+  "maths-79-dividing-by-a-fraction-error": 4,
+  "maths-82-fraction-of-the-wrong-whole": 7,
+  "maths-39-perimeter-vs-area-multiplying": 5,
+  "maths-88-incomplete-perimeter": 7,
+  "maths-89-wrong-angle-total": 12,
+  "maths-46-reversed-coordinates": 6,
+  "side-recounted-from-a-reached-corner": 1,
+  "maths-90-composite-shape-area-slip": 5,
+  "maths-38-perimeter-vs-area-adding": 5,
+  "maths-100-steps-out-of-order": 7,
+  "maths-83-money-place-value-slip": 15,
+  "maths-61-reading-the-wrong-place-value-column": 17,
+  "maths-62-reading-a-digit-at-face-value": 10,
+  "maths-63-misaligned-addition-carry": 13,
+  "maths-64-leading-zero-ordering-slip": 2,
+  "ordering-goal-reversed": 1,
+  "leading-zero-repaired-ordering-not": 1,
+  "maths-09-rounding-misdirection": 5,
+  "maths-65-incorrect-rounding-place": 14,
+  "maths-68-wrong-power-of-ten-scaling": 5,
+  "maths-94-incomplete-statistical-total": 5,
+  "maths-95-reading-the-wrong-statistical-quantity": 5,
+  "maximum-given-for-a-sum": 1,
+  "maths-56-incomplete-mean": 1,
+  "maths-96-mean-calculation-slip": 4,
+  "maths-104-gave-a-different-average": 3,
+  "maths-97-missing-value-mean-slip": 3,
+  "maths-110-missing-value-equals-the-average": 1,
+  "maths-98-digit-dropped-in-column-work": 18,
+  "maths-69-dropped-calculation-carry": 20,
+  "maths-70-two-digit-column-totals": 3,
+  "maths-13-adding-the-exchange-twice": 8,
+  "maths-73-digit-by-digit-division": 2,
+  "maths-101-unlike-denominators-cannot-be-compared": 7,
+  "maths-22-adding-numerators-and-denominators": 3,
+  "maths-23-additive-equivalent-fractions": 4,
+  "maths-25-confusing-thirds-and-tenths": 3,
+  "maths-28-fractions-as-two-separate-numbers": 3,
+  "maths-81-forgetting-to-subtract-the-discount": 4,
+  "maths-47-translation-by-gap": 3,
+  "maths-84-adding-instead-of-finding-the-difference": 13,
+  "maths-37-metric-prefix-confusion": 4,
+  "maths-36-multiplying-to-convert-to-a-larger-unit": 2,
+  "maths-32-base-100-time": 4,
+  "maths-85-miscount-or-rounding-in-measures": 10,
+  "maths-67-dropped-internal-placeholder": 3,
+  "maths-02-zero-placeholder-added-incorrectly": 3,
+  "maths-07-decimals-as-two-separate-whole-numbers": 4,
+  "maths-04-longer-decimals-are-larger": 1,
+  "maths-92-unitary-proportion-slip": 6,
+  "maths-51-additive-scaling": 2,
+  "maths-93-comparing-prices-ignoring-quantity": 5,
+  "maths-58-restrictive-mean": 2,
+  "maths-17-decimal-remainders": 1,
+  "maths-26-percentage-symbol-as-a-unit": 1,
+  "maths-06-multiplying-by-10-adds-a-zero": 1,
+  "maths-33-12-24-hour-confusion": 1,
+  "maths-16-reversing-division": 3,
+  "maths-108-multiplied-instead-of-dividing-by-a-fraction": 2,
+  "maths-31-dropping-the-zero-in-money": 2,
+  "maths-66-negative-number-miscount": 2,
+  "maths-107-miscounted-across-zero": 2,
+  "maths-10-rounding-exact-halves": 2,
+  "maths-102-scaled-by-the-difference": 2,
+  "maths-103-scaled-by-the-original-count": 2,
+  "maths-105-divided-by-the-other-quantity": 2,
+  "maths-52-ratio-to-fraction-confusion": 1
+ },
+ "rows": [
+  {
+   "itemId": "MC01-CALC-02",
+   "type": "maths-calc",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmtereveq0007tmfzaoh3jahc": "above",
+    "cmtereveq0008tmfzflc0zzw2": "below",
+    "cmtereveq0009tmfzymqid2t9": "above"
+   }
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "type": "maths-calc",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmterevf5000jtmfzee70si4w": "below",
+    "cmterevf5000ktmfzyh1czb1a": "above",
+    "cmterevf5000ltmfz7ahl8wcc": "above"
+   }
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "type": "maths-calc",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmterevfa000ptmfz0xxb5mvo": "above",
+    "cmterevfa000qtmfz0b8dvk0f": "below",
+    "cmterevfa000rtmfzsvduiend": "above"
+   }
+  },
+  {
+   "itemId": "MC01-FDP-02",
+   "type": "maths-fdp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo81xe000ttmmjkjar2ch5": "below",
+    "cmteo81xe000utmmjpwp1trs2": "above",
+    "cmteo81xe000vtmmjkv7zjme2": "above"
+   }
+  },
+  {
+   "itemId": "MC01-FDP-03",
+   "type": "maths-fdp",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo81xn000xtmmjokqqes2i": "above",
+    "cmteo81xo000ytmmjygeyxy3k": "above",
+    "cmteo81xo000ztmmjf7mlrqn4": "above"
+   }
+  },
+  {
+   "itemId": "MC01-FDP-04",
+   "type": "maths-fdp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmtes2g5o0001tmkkkp83tx39": "above",
+    "cmtes2g5o0002tmkkwib6e8jw": "below",
+    "cmtes2g5o0003tmkklvtx9f1l": "below"
+   }
+  },
+  {
+   "itemId": "MC01-FDP-07",
+   "type": "maths-fdp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo81y10015tmmjzlg2ftw5": "above",
+    "cmteo81y10016tmmjo1imtrps": "below",
+    "cmteo81y10017tmmj4asmmkwy": "above"
+   }
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "type": "maths-fdp",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo81y90019tmmj24um9kyk": "below",
+    "cmteo81y9001atmmj24uav0ro": "below",
+    "cmteo81y9001btmmjchv7coe1": "below"
+   }
+  },
+  {
+   "itemId": "MC01-GEOM-01",
+   "type": "maths-geom",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo81yf001dtmmj725usu7d": "above",
+    "cmteo81yf001etmmjp3ca0m97": "below",
+    "cmteo81yf001ftmmjz759yuh6": "below"
+   }
+  },
+  {
+   "itemId": "MC01-GEOM-02",
+   "type": "maths-geom",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo81yq001gtmmjeak7uu0m": "above",
+    "cmteo81yq001itmmj7pk4fvw8": "below",
+    "cmteo81yq001jtmmj9mszuju7": "above"
+   }
+  },
+  {
+   "itemId": "MC01-GEOM-05",
+   "type": "maths-geom",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmterevfh000utmfzj2w7nx9k": "above",
+    "cmterevfh000vtmfzlxyu7wsu": "below",
+    "cmterevfh000wtmfzl5t8jjpl": "below"
+   }
+  },
+  {
+   "itemId": "MC01-GEOM-06",
+   "type": "maths-geom",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo81z7001otmmjnlemtn35": "above",
+    "cmteo81z7001qtmmjmqditme6": "above",
+    "cmteo81z7001rtmmjm4kxs4y3": "below"
+   }
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmterevfn000ytmfzekrq2d7d": "above",
+    "cmterevfn000ztmfzy4d2a2sl": "below",
+    "cmterevfn0011tmfzjmhchidf": "above"
+   }
+  },
+  {
+   "itemId": "MC01-MEAS-02",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmterevfs0013tmfz911hgw71": "above",
+    "cmterevfs0014tmfzy9gcfchv": "below",
+    "cmterevfs0015tmfz2d20fzvf": "above"
+   }
+  },
+  {
+   "itemId": "MC01-MEAS-05",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo81zz0029tmmjc14t0olq": "above",
+    "cmteo81zz002atmmjeajkt8ih": "above",
+    "cmteo81zz002btmmj1p5c9may": "above"
+   }
+  },
+  {
+   "itemId": "MC01-NPV-01",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo820g002ltmmj2cqlpe5t": "below",
+    "cmteo820g002mtmmjxr344zk5": "below",
+    "cmteo820g002ntmmjlds5nqr5": "above"
+   }
+  },
+  {
+   "itemId": "MC01-NPV-02",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo820n002ptmmj069wrqyf": "below",
+    "cmteo820n002qtmmjdlveifgw": "above",
+    "cmteo820n002rtmmjimurvrcf": "below"
+   }
+  },
+  {
+   "itemId": "MC01-NPV-03",
+   "type": "maths-npv",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo820u002ttmmjmn8dl6qx": "below",
+    "cmteo820u002utmmjku6za3lu": "above",
+    "cmteo820u002vtmmj24sgix0b": "above"
+   }
+  },
+  {
+   "itemId": "MC01-NPV-04",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo8210002xtmmjtiwyc2t0": "below",
+    "cmteo8210002ytmmjs8vt28u5": "below",
+    "cmteo8210002ztmmj2dww2eg9": "above"
+   }
+  },
+  {
+   "itemId": "MC01-NPV-07",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo821d0035tmmjkvtfi71u": "below",
+    "cmteo821d0036tmmjykpmbmyx": "above",
+    "cmteo821d0037tmmje6noshea": "below"
+   }
+  },
+  {
+   "itemId": "MC01-STATS-01",
+   "type": "maths-stats",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo821j0038tmmj1slai1sa": "below",
+    "cmteo821j0039tmmjvb3va88v": "below",
+    "cmteo821j003btmmj8chml5oq": "below"
+   }
+  },
+  {
+   "itemId": "MC01-STATS-03",
+   "type": "maths-stats",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo821v003gtmmj3sxmwtag": "above",
+    "cmteo821v003htmmjoia9o817": "above",
+    "cmteo821v003itmmjqk086trw": "below"
+   }
+  },
+  {
+   "itemId": "MC01-STATS-04",
+   "type": "maths-stats",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo822f003ktmmjk1iucg0e": "above",
+    "cmteo822f003mtmmjm1g8m299": "above",
+    "cmteo822f003ntmmjbdik8a73": "above"
+   }
+  },
+  {
+   "itemId": "MC02-CALC-01",
+   "type": "maths-calc",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo822k003ptmmjwfbcobfz": "below",
+    "cmteo822k003qtmmjp4j8bxc6": "below",
+    "cmteo822k003rtmmjx5x8alj0": "above"
+   }
+  },
+  {
+   "itemId": "MC02-CALC-02",
+   "type": "maths-calc",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo822q003ttmmj5cvqzi0y": "below",
+    "cmteo822q003utmmj0xck9rta": "above",
+    "cmteo822q003vtmmjlnwoxb5v": "above"
+   }
+  },
+  {
+   "itemId": "MC02-CALC-03",
+   "type": "maths-calc",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo822v003xtmmjvzi08lro": "below",
+    "cmteo822v003ytmmjdlm4pz20": "below",
+    "cmteo822v003ztmmjb9yoxxci": "above"
+   }
+  },
+  {
+   "itemId": "MC02-CALC-04",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82310041tmmj8oy561hc": "above",
+    "cmteo82310042tmmjl01lolmy": "above",
+    "cmteo82310043tmmjemqehuw9": "above"
+   }
+  },
+  {
+   "itemId": "MC02-CALC-05",
+   "type": "maths-calc",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82360045tmmj4gfh8ma8": "below",
+    "cmteo82360046tmmjawx6ktx0": "below",
+    "cmteo82360047tmmjjwu52rgp": "below"
+   }
+  },
+  {
+   "itemId": "MC02-CALC-06",
+   "type": "maths-calc",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo823c0049tmmj0rj691v8": "below",
+    "cmteo823c004atmmjbdf9qo9a": "below",
+    "cmteo823c004btmmjkccw5b44": "above"
+   }
+  },
+  {
+   "itemId": "MC02-CALC-07",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo823h004dtmmjgmgfw06c": "above",
+    "cmteo823h004etmmjmhasfbfb": "above",
+    "cmteo823i004ftmmj6blizb4a": "above"
+   }
+  },
+  {
+   "itemId": "MC02-CALC-08",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo823n004htmmjy551z1lz": "above",
+    "cmteo823n004itmmjnq29rvej": "above",
+    "cmteo823n004jtmmjrprlzviu": "above"
+   }
+  },
+  {
+   "itemId": "MC02-FDP-02",
+   "type": "maths-fdp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo823z004ptmmj6m72i30q": "below",
+    "cmteo823z004qtmmjynjpnb3c": "above",
+    "cmteo823z004rtmmj7lti23g0": "above"
+   }
+  },
+  {
+   "itemId": "MC02-FDP-03",
+   "type": "maths-fdp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo8244004stmmjdjiuy3so": "below",
+    "cmteo8244004utmmj1zscio7e": "below",
+    "cmteo8244004vtmmjjf2b976n": "above"
+   }
+  },
+  {
+   "itemId": "MC02-FDP-04",
+   "type": "maths-fdp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo824a004xtmmjlyr84z1h": "below",
+    "cmteo824a004ytmmj5i2gtitc": "above",
+    "cmteo824a004ztmmjna84qm4h": "below"
+   }
+  },
+  {
+   "itemId": "MC02-FDP-05",
+   "type": "maths-fdp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo824e0051tmmjd8ip6h1q": "above",
+    "cmteo824e0052tmmjjah5witn": "below",
+    "cmteo824e0053tmmjvykrb9d0": "above"
+   }
+  },
+  {
+   "itemId": "MC02-FDP-07",
+   "type": "maths-fdp",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo824q0058tmmjups4tcar": "below",
+    "cmteo824q0059tmmjelzxyybr": "below",
+    "cmteo824q005atmmjblpwlghh": "below"
+   }
+  },
+  {
+   "itemId": "MC02-FDP-08",
+   "type": "maths-fdp",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo8250005ctmmjdbzm3gtr": "above",
+    "cmteo8250005etmmja0qizhw4": "above",
+    "cmteo8250005ftmmjyrv9tssf": "above"
+   }
+  },
+  {
+   "itemId": "MC02-GEOM-01",
+   "type": "maths-geom",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo8255005htmmjbjdyoz77": "above",
+    "cmteo8255005itmmjb7kddygf": "below",
+    "cmteo8255005jtmmj4yza7c7z": "below"
+   }
+  },
+  {
+   "itemId": "MC02-GEOM-02",
+   "type": "maths-geom",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo825a005ltmmjdd4rwa8x": "above",
+    "cmteo825a005mtmmj2i0x6fr8": "above",
+    "cmteo825a005ntmmjz72vxqy0": "above"
+   }
+  },
+  {
+   "itemId": "MC02-GEOM-03",
+   "type": "maths-geom",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo825h005ptmmjy1m7d9pt": "below",
+    "cmteo825h005qtmmjlbp9dbha": "above",
+    "cmteo825h005rtmmj3gnnjsrv": "above"
+   }
+  },
+  {
+   "itemId": "MC02-GEOM-05",
+   "type": "maths-geom",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo825t005xtmmjg2dr6cmj": "below",
+    "cmteo825u005ytmmj2qbbmhn1": "above",
+    "cmteo825u005ztmmj7yky40tn": "below"
+   }
+  },
+  {
+   "itemId": "MC02-GEOM-06",
+   "type": "maths-geom",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82600061tmmjs8d3qc2t": "below",
+    "cmteo82600062tmmjmiw2y7wm": "above",
+    "cmteo82600063tmmjz95n410x": "below"
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-01",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82650064tmmjr20vtbf6": "above",
+    "cmteo82650065tmmje9thd537": "above",
+    "cmteo82660067tmmjsfsuo6tg": "above"
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-02",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo826c0069tmmj30f5qkpt": "above",
+    "cmteo826c006atmmjk6ldl72q": "above",
+    "cmteo826c006btmmjmn91g1z3": "above"
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-03",
+   "type": "maths-meas",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo826h006ctmmjr950spp4": "below",
+    "cmteo826h006dtmmj6nhlmfyi": "below",
+    "cmteo826h006etmmjpv6ety7w": "below"
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-04",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo826p006htmmj6wm7bsnm": "above",
+    "cmteo826p006itmmj3wk9h5d8": "above",
+    "cmteo826p006jtmmjn0533zxk": "below"
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-05",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo8273006ktmmjmakz95hv": "above",
+    "cmteo8273006mtmmj37pwr96s": "above",
+    "cmteo8273006ntmmjs7q9f8v7": "below"
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-06",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo8279006ptmmjfxnj2368": "above",
+    "cmteo8279006qtmmjx8o7prot": "above",
+    "cmteo8279006rtmmj7l3fsnh8": "above"
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-07",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo827e006stmmjtov7wwt8": "above",
+    "cmteo827e006ttmmj9km1xf7h": "above",
+    "cmteo827e006vtmmjsdyy46ih": "above"
+   }
+  },
+  {
+   "itemId": "MC02-NPV-01",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo827j006xtmmjqwvh5lk8": "below",
+    "cmteo827k006ytmmjdqxnty6c": "below",
+    "cmteo827k006ztmmjslm5ix6m": "above"
+   }
+  },
+  {
+   "itemId": "MC02-NPV-02",
+   "type": "maths-npv",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo827x0071tmmj9mkkp8zc": "below",
+    "cmteo827x0072tmmj90huhmvl": "above",
+    "cmteo827x0073tmmjutdc6577": "above"
+   }
+  },
+  {
+   "itemId": "MC02-NPV-04",
+   "type": "maths-npv",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82830075tmmjv7m62q1u": "below",
+    "cmteo82830076tmmj65w263ca": "below",
+    "cmteo82830077tmmj5f9r6woc": "below"
+   }
+  },
+  {
+   "itemId": "MC02-NPV-06",
+   "type": "maths-npv",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo828b0079tmmj4dvs4s8d": "below",
+    "cmteo828b007atmmjokvn53oc": "below",
+    "cmteo828b007btmmjgmu1tj5z": "below"
+   }
+  },
+  {
+   "itemId": "MC02-NPV-07",
+   "type": "maths-npv",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmtes2g6d0007tmkk6abf87gt": "below",
+    "cmtes2g6d0008tmkkm6xjhgyh": "below",
+    "cmtes2g6d0009tmkktvxor9bu": "below"
+   }
+  },
+  {
+   "itemId": "MC02-RP-01",
+   "type": "maths-rp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo828m007dtmmjms1fhqha": "above",
+    "cmteo828m007etmmjvdur8b5i": "below",
+    "cmteo828m007ftmmjvwv9248a": "below"
+   }
+  },
+  {
+   "itemId": "MC02-RP-02",
+   "type": "maths-rp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo828t007htmmj0w3zr85b": "above",
+    "cmteo828t007itmmjxoootvl4": "below",
+    "cmteo828t007jtmmj8nw6mssp": "above"
+   }
+  },
+  {
+   "itemId": "MC02-STATS-01",
+   "type": "maths-stats",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo828y007ltmmj236hny85": "below",
+    "cmteo828y007mtmmjgep8yxt1": "above",
+    "cmteo828y007ntmmju6de8a5y": "above"
+   }
+  },
+  {
+   "itemId": "MC02-STATS-02",
+   "type": "maths-stats",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo8295007ptmmjb6lfc0jw": "below",
+    "cmteo8295007qtmmjmfn01xqu": "below",
+    "cmteo8295007rtmmjl6blf555": "below"
+   }
+  },
+  {
+   "itemId": "MC03-CALC-01",
+   "type": "maths-calc",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo829c007ttmmjn62l3vj4": "below",
+    "cmteo829d007utmmj4tz71cg0": "below",
+    "cmteo829d007vtmmjdc63bjxj": "below"
+   }
+  },
+  {
+   "itemId": "MC03-CALC-02",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo829j007xtmmjzswfh1hq": "above",
+    "cmteo829j007ytmmjxqgbwci9": "above",
+    "cmteo829j007ztmmjauekyay6": "above"
+   }
+  },
+  {
+   "itemId": "MC03-CALC-03",
+   "type": "maths-calc",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo829o0081tmmjen9fco36": "below",
+    "cmteo829o0082tmmjdedfvd25": "below",
+    "cmteo829o0083tmmjk9biv9io": "above"
+   }
+  },
+  {
+   "itemId": "MC03-CALC-04",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo829u0085tmmjtkpg1si2": "above",
+    "cmteo829u0086tmmjcksixs2i": "above",
+    "cmteo829u0087tmmj7v2vroi2": "above"
+   }
+  },
+  {
+   "itemId": "MC03-CALC-05",
+   "type": "maths-calc",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82a10089tmmj8ix0ihxx": "below",
+    "cmteo82a1008atmmj46bgqu4a": "below",
+    "cmteo82a1008btmmjuv7omg8o": "above"
+   }
+  },
+  {
+   "itemId": "MC03-CALC-06",
+   "type": "maths-calc",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82a9008dtmmjpneiedyc": "below",
+    "cmteo82a9008etmmj7j4wy9mx": "above",
+    "cmteo82a9008ftmmjrrdquamk": "above"
+   }
+  },
+  {
+   "itemId": "MC03-CALC-07",
+   "type": "maths-calc",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82ag008htmmj6cizemrx": "below",
+    "cmteo82ag008itmmj9m76zm09": "below",
+    "cmteo82ag008jtmmj4j2k5ddd": "below"
+   }
+  },
+  {
+   "itemId": "MC03-CALC-08",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82an008ltmmjoxun40dq": "above",
+    "cmteo82an008mtmmj76gsl38l": "above",
+    "cmteo82an008ntmmj8q4rma7y": "above"
+   }
+  },
+  {
+   "itemId": "MC03-FDP-02",
+   "type": "maths-fdp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82b5008ttmmj6bod41h7": "below",
+    "cmteo82b5008utmmj42w7yabk": "above",
+    "cmteo82b5008vtmmj5jc76tzn": "above"
+   }
+  },
+  {
+   "itemId": "MC03-FDP-03",
+   "type": "maths-fdp",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82bc008xtmmj60oiplsn": "above",
+    "cmteo82bc008ytmmj8v2khcy0": "above",
+    "cmteo82bc008ztmmjpqdgjfde": "above"
+   }
+  },
+  {
+   "itemId": "MC03-FDP-04",
+   "type": "maths-fdp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82bk0091tmmjwn9w5qet": "below",
+    "cmteo82bk0092tmmj6lxyure5": "below",
+    "cmteo82bk0093tmmj1yhk5p6o": "above"
+   }
+  },
+  {
+   "itemId": "MC03-FDP-07",
+   "type": "maths-fdp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82c10099tmmj5i5jisb6": "above",
+    "cmteo82c1009atmmj31e1ab59": "below",
+    "cmteo82c1009btmmjo88wmbdd": "above"
+   }
+  },
+  {
+   "itemId": "MC03-FDP-08",
+   "type": "maths-fdp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82c8009dtmmjp2zaunyo": "above",
+    "cmteo82c8009etmmjqqhsc7lj": "below",
+    "cmteo82c8009ftmmjbg4u6auq": "above"
+   }
+  },
+  {
+   "itemId": "MC03-GEOM-01",
+   "type": "maths-geom",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82ce009htmmjiz79p16c": "above",
+    "cmteo82ce009itmmjqolu3exg": "above",
+    "cmteo82ce009jtmmjfh5xs5ar": "above"
+   }
+  },
+  {
+   "itemId": "MC03-GEOM-03",
+   "type": "maths-geom",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82ct009ptmmj0v0nxs99": "above",
+    "cmteo82cu009qtmmjmn4tnt3s": "above",
+    "cmteo82cu009rtmmjcuhlp66l": "above"
+   }
+  },
+  {
+   "itemId": "MC03-GEOM-04",
+   "type": "maths-geom",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteorehi0007tm2cdljru5ec": "above",
+    "cmteorehi0008tm2c6s6uc8a8": "below",
+    "cmteorehi0009tm2cgpj7oz8w": "above"
+   }
+  },
+  {
+   "itemId": "MC03-GEOM-06",
+   "type": "maths-geom",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82d7009xtmmjt146kcja": "above",
+    "cmteo82d7009ytmmju88x8ty2": "above",
+    "cmteo82d7009ztmmj08zom323": "above"
+   }
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82dc00a1tmmj0mkrjfwd": "above",
+    "cmteo82dc00a2tmmjmzn9d03d": "above",
+    "cmteo82dc00a3tmmjnb8n4fne": "above"
+   }
+  },
+  {
+   "itemId": "MC03-MEAS-02",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82dj00a5tmmj0swxmfus": "above",
+    "cmteo82dj00a6tmmjn7e04a6b": "above",
+    "cmteo82dj00a7tmmjrr0en9z1": "below"
+   }
+  },
+  {
+   "itemId": "MC03-MEAS-03",
+   "type": "maths-meas",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82dp00a9tmmjdtdcxrl4": "below",
+    "cmteo82dp00aatmmjjun4jxmc": "below",
+    "cmteo82dp00abtmmjyag464q7": "above"
+   }
+  },
+  {
+   "itemId": "MC03-MEAS-05",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82e000ahtmmjnspvlcme": "above",
+    "cmteo82e000aitmmjiutqewr1": "above",
+    "cmteo82e000ajtmmj4j6kp40f": "above"
+   }
+  },
+  {
+   "itemId": "MC03-MEAS-06",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82e600altmmjx1u331wv": "above",
+    "cmteo82e600amtmmj3kqzpjlp": "above",
+    "cmteo82e600antmmjcs691nel": "below"
+   }
+  },
+  {
+   "itemId": "MC03-MEAS-07",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82ec00aptmmjgu4j9mb6": "above",
+    "cmteo82ec00aqtmmjlihkmp6i": "above",
+    "cmteo82ed00artmmjvxpulhcf": "above"
+   }
+  },
+  {
+   "itemId": "MC03-NPV-01",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82ej00attmmj07lxhegn": "below",
+    "cmteo82ej00autmmjabw1hq0y": "below",
+    "cmteo82ej00avtmmjb407wspc": "above"
+   }
+  },
+  {
+   "itemId": "MC03-NPV-02",
+   "type": "maths-npv",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82eq00axtmmj01d9vhdh": "below",
+    "cmteo82eq00aytmmjmtp3lswv": "above",
+    "cmteo82eq00aztmmjjub6jmvn": "above"
+   }
+  },
+  {
+   "itemId": "MC03-NPV-03",
+   "type": "maths-npv",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82ew00b1tmmjrb1dml9f": "below",
+    "cmteo82ew00b2tmmjbvhlgosc": "below",
+    "cmteo82ew00b3tmmj33wgf98v": "below"
+   }
+  },
+  {
+   "itemId": "MC03-NPV-04",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82f200b5tmmj59vmcsdt": "below",
+    "cmteo82f200b6tmmjillk2kzq": "below",
+    "cmteo82f200b7tmmj6bv6uxv2": "above"
+   }
+  },
+  {
+   "itemId": "MC03-NPV-06",
+   "type": "maths-npv",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82fa00b9tmmjr8nmlq8f": "above",
+    "cmteo82fa00batmmj9gc19rpa": "above",
+    "cmteo82fa00bbtmmj82adxvft": "above"
+   }
+  },
+  {
+   "itemId": "MC03-NPV-07",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82fj00bdtmmjlqjzmijj": "below",
+    "cmteo82fj00betmmjlkb1hn8a": "above",
+    "cmteo82fj00bftmmjj7l25fcz": "below"
+   }
+  },
+  {
+   "itemId": "MC03-RP-01",
+   "type": "maths-rp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82fp00bhtmmjse5pv4xc": "above",
+    "cmteo82fp00bitmmjqdd4zt1l": "below",
+    "cmteo82fq00bjtmmjvanlc6ny": "below"
+   }
+  },
+  {
+   "itemId": "MC03-RP-02",
+   "type": "maths-rp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82fw00bltmmjfeod0ji2": "below",
+    "cmteo82fw00bmtmmji7dmjoyz": "above",
+    "cmteo82fw00bntmmj6lvcju0i": "above"
+   }
+  },
+  {
+   "itemId": "MC03-STATS-01",
+   "type": "maths-stats",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82g200bptmmjmexhecr8": "above",
+    "cmteo82g200bqtmmj01a8nmb4": "below",
+    "cmteo82g200brtmmjknto1ezd": "above"
+   }
+  },
+  {
+   "itemId": "MC03-STATS-02",
+   "type": "maths-stats",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82g800bttmmjnbu8doq0": "above",
+    "cmteo82g800butmmjhddw0t97": "above",
+    "cmteo82g800bvtmmjow4enjrv": "above"
+   }
+  },
+  {
+   "itemId": "MC04-CALC-01",
+   "type": "maths-calc",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82ge00bxtmmjf0l80lyw": "below",
+    "cmteo82ge00bytmmjneqssn0d": "below",
+    "cmteo82ge00bztmmjqqnq12mj": "above"
+   }
+  },
+  {
+   "itemId": "MC04-CALC-02",
+   "type": "maths-calc",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82gk00c1tmmj1y83c4td": "above",
+    "cmteo82gk00c2tmmjeq297wt4": "below",
+    "cmteo82gk00c3tmmjfeg2uxro": "above"
+   }
+  },
+  {
+   "itemId": "MC04-CALC-03",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82gr00c5tmmjbdj1c5ty": "above",
+    "cmteo82gr00c6tmmjpkg2v53z": "above",
+    "cmteo82gr00c7tmmjn10j9vh6": "above"
+   }
+  },
+  {
+   "itemId": "MC04-CALC-04",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82gx00c9tmmj33cm5cpw": "above",
+    "cmteo82gx00catmmjoqvk6659": "above",
+    "cmteo82gx00cbtmmj5d3s5cu4": "above"
+   }
+  },
+  {
+   "itemId": "MC04-CALC-05",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82h300cdtmmjr7v9anb3": "above",
+    "cmteo82h400cetmmjra6vkmx9": "above",
+    "cmteo82h400cftmmjizpbes41": "above"
+   }
+  },
+  {
+   "itemId": "MC04-CALC-06",
+   "type": "maths-calc",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82hb00chtmmjanoyx8rp": "below",
+    "cmteo82hb00citmmjowgbvnr8": "below",
+    "cmteo82hb00cjtmmjubziyq4c": "below"
+   }
+  },
+  {
+   "itemId": "MC04-CALC-07",
+   "type": "maths-calc",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82hi00cltmmjzq97vuyr": "below",
+    "cmteo82hi00cmtmmjm9uyxv12": "above",
+    "cmteo82hi00cntmmjrxxi5vsd": "above"
+   }
+  },
+  {
+   "itemId": "MC04-CALC-08",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteorehr000dtm2c3wuzinr9": "above",
+    "cmteorehr000etm2c4y7o6dgs": "above",
+    "cmteorehr000ftm2c0kv1tp39": "above"
+   }
+  },
+  {
+   "itemId": "MC04-FDP-02",
+   "type": "maths-fdp",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82hw00cttmmjvquoywhh": "above",
+    "cmteo82hw00cutmmjmezh558x": "above",
+    "cmteo82hw00cvtmmjjmeeknsg": "above"
+   }
+  },
+  {
+   "itemId": "MC04-FDP-03",
+   "type": "maths-fdp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82i200cxtmmjl3iem75p": "below",
+    "cmteo82i200cytmmjt8rsrrs6": "above",
+    "cmteo82i200cztmmjglf8h621": "above"
+   }
+  },
+  {
+   "itemId": "MC04-FDP-04",
+   "type": "maths-fdp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteru8ru0001tm6imqbhe13t": "below",
+    "cmteru8ru0002tm6i65q68jiv": "above",
+    "cmteru8ru0003tm6ig5t4f1n6": "below"
+   }
+  },
+  {
+   "itemId": "MC04-FDP-05",
+   "type": "maths-fdp",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82ie00d5tmmj03ef161v": "below",
+    "cmteo82ie00d6tmmjflkrfxvh": "below",
+    "cmteo82ie00d7tmmje387rrvl": "below"
+   }
+  },
+  {
+   "itemId": "MC04-FDP-07",
+   "type": "maths-fdp",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82ir00ddtmmjjepsjkxt": "above",
+    "cmteo82ir00detmmj3jez6ch8": "above",
+    "cmteo82ir00dftmmjrlsnqnej": "above"
+   }
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "type": "maths-fdp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82ix00dhtmmjpw997o8m": "below",
+    "cmteo82ix00ditmmjytg5m68n": "above",
+    "cmteo82ix00djtmmjeffdr6bx": "below"
+   }
+  },
+  {
+   "itemId": "MC04-GEOM-01",
+   "type": "maths-geom",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82j200dktmmjbzd500b6": "above",
+    "cmteo82j200dltmmjg9j9c1zb": "below",
+    "cmteo82j200dntmmjn1n0zgmi": "below"
+   }
+  },
+  {
+   "itemId": "MC04-GEOM-03",
+   "type": "maths-geom",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82jf00dstmmjwn84a5m1": "above",
+    "cmteo82jf00dttmmj0mqz7nsr": "above",
+    "cmteo82jf00dutmmjyiqbd1c3": "above"
+   }
+  },
+  {
+   "itemId": "MC04-GEOM-05",
+   "type": "maths-geom",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteorehz000itm2c46596hzm": "above",
+    "cmteorehz000jtm2cxnd9co3e": "below",
+    "cmteorehz000ltm2cocyghqps": "above"
+   }
+  },
+  {
+   "itemId": "MC04-GEOM-06",
+   "type": "maths-geom",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82ju00e0tmmjakbtwykl": "above",
+    "cmteo82ju00e2tmmjv76fs2bo": "above",
+    "cmteo82ju00e3tmmjoaagfbo4": "below"
+   }
+  },
+  {
+   "itemId": "MC04-MEAS-01",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82k000e5tmmjjwzaxxxf": "above",
+    "cmteo82k000e6tmmjgcfzp8do": "above",
+    "cmteo82k000e7tmmjygn6w41w": "above"
+   }
+  },
+  {
+   "itemId": "MC04-MEAS-02",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82k700e9tmmjq5e5j3a3": "above",
+    "cmteo82k700eatmmjghfk2k12": "above",
+    "cmteo82k700ebtmmj1t4z1tev": "below"
+   }
+  },
+  {
+   "itemId": "MC04-MEAS-03",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82kd00edtmmjhgnx0plv": "equal",
+    "cmteo82kd00eetmmj7l59yf6u": "above",
+    "cmteo82kd00eftmmjlajj66cw": "below"
+   }
+  },
+  {
+   "itemId": "MC04-MEAS-04",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82kj00ehtmmjcrj6d6wl": "above",
+    "cmteo82kj00eitmmjhsz1rna9": "below",
+    "cmteo82kj00ejtmmjsl43w9gn": "above"
+   }
+  },
+  {
+   "itemId": "MC04-MEAS-05",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82kp00eltmmj9pikoxxk": "below",
+    "cmteo82kp00emtmmjoe712bau": "above",
+    "cmteo82kp00entmmj8an5f9n3": "above"
+   }
+  },
+  {
+   "itemId": "MC04-MEAS-06",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82kw00eptmmjntv4e61x": "above",
+    "cmteo82kw00eqtmmj33fukxk3": "above",
+    "cmteo82kw00ertmmjheqbglmc": "above"
+   }
+  },
+  {
+   "itemId": "MC04-MEAS-07",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82l000ettmmjb09nczyi": "above",
+    "cmteo82l000eutmmjja17nu7u": "above",
+    "cmteo82l000evtmmj86bl6sjl": "above"
+   }
+  },
+  {
+   "itemId": "MC04-NPV-01",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82l500extmmj2zgtu5ky": "below",
+    "cmteo82l500eytmmjbvu2um9l": "below",
+    "cmteo82l500eztmmj3wqtqvrb": "above"
+   }
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82lb00f1tmmjhfxzg4sd": "below",
+    "cmteo82lb00f2tmmjd1il61gp": "above",
+    "cmteo82lc00f3tmmjlyn7o7jj": "below"
+   }
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82li00f5tmmjraxjjor0": "below",
+    "cmteo82li00f6tmmjies79c06": "above",
+    "cmteo82li00f7tmmjf14y60iy": "below"
+   }
+  },
+  {
+   "itemId": "MC04-NPV-04",
+   "type": "maths-npv",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82lq00f9tmmjpuslvty9": "below",
+    "cmteo82lq00fatmmj7ehhnrxu": "below",
+    "cmteo82lq00fbtmmj7jr5c3qj": "below"
+   }
+  },
+  {
+   "itemId": "MC04-NPV-05",
+   "type": "maths-npv",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82lw00fdtmmjzowwtxwv": "above",
+    "cmteo82lw00fetmmjtbks5107": "above",
+    "cmteo82lw00fftmmjdv96280j": "above"
+   }
+  },
+  {
+   "itemId": "MC04-NPV-06",
+   "type": "maths-npv",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteorei7000ptm2c5h6bar7w": "above",
+    "cmteorei7000qtm2coanpyddp": "above",
+    "cmteorei7000rtm2cei3dj4ft": "below"
+   }
+  },
+  {
+   "itemId": "MC04-NPV-07",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82m300fhtmmjbkujae7v": "below",
+    "cmteo82m300fitmmj5jdse8fh": "below",
+    "cmteo82m300fjtmmj3z1lcgln": "above"
+   }
+  },
+  {
+   "itemId": "MC04-RP-01",
+   "type": "maths-rp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82ma00fktmmjdv3dxt66": "above",
+    "cmteo82ma00fltmmj18dpqm3m": "above",
+    "cmteo82ma00fntmmjq97upbdi": "below"
+   }
+  },
+  {
+   "itemId": "MC04-RP-02",
+   "type": "maths-rp",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82mg00fotmmj98z4ntty": "above",
+    "cmteo82mg00fptmmjryene8vn": "above",
+    "cmteo82mg00fqtmmjl37ek4ax": "above"
+   }
+  },
+  {
+   "itemId": "MC04-STATS-01",
+   "type": "maths-stats",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82mn00fstmmjjr0nxycv": "below",
+    "cmteo82mn00fttmmjjqot5cz3": "below",
+    "cmteo82mn00futmmjr1crqs6p": "below"
+   }
+  },
+  {
+   "itemId": "MC04-STATS-02",
+   "type": "maths-stats",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82mu00fxtmmjdgus2p01": "above",
+    "cmteo82mu00fytmmjp04k7cyj": "above",
+    "cmteo82mu00fztmmjq009tu1g": "below"
+   }
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "type": "maths-calc",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82n100g1tmmjsawab88q": "below",
+    "cmteo82n100g2tmmjlsqj4zcz": "below",
+    "cmteo82n100g3tmmjrqrihba1": "below"
+   }
+  },
+  {
+   "itemId": "MC05-CALC-02",
+   "type": "maths-calc",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82n800g5tmmjxr1jtbuy": "above",
+    "cmteo82n800g6tmmj8mp5c9eu": "below",
+    "cmteo82n800g7tmmjpagk2ker": "above"
+   }
+  },
+  {
+   "itemId": "MC05-CALC-03",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82ne00g9tmmj5c0ukba4": "above",
+    "cmteo82ne00gatmmjhrvof4qy": "above",
+    "cmteo82ne00gbtmmjx1nhcqom": "above"
+   }
+  },
+  {
+   "itemId": "MC05-CALC-04",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82nk00gdtmmjak4kdrg5": "above",
+    "cmteo82nk00getmmj0kagu4ys": "above",
+    "cmteo82nk00gftmmjfhdo9bz5": "above"
+   }
+  },
+  {
+   "itemId": "MC05-CALC-05",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82nq00ghtmmjhtpg9jb7": "above",
+    "cmteo82nq00gitmmj87usbtoy": "above",
+    "cmteo82nq00gjtmmjygvl0cwq": "above"
+   }
+  },
+  {
+   "itemId": "MC05-CALC-06",
+   "type": "maths-calc",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82nw00gltmmjsuaia9dv": "above",
+    "cmteo82nw00gmtmmjaca1dwwd": "below",
+    "cmteo82nw00gntmmjiura9bjl": "above"
+   }
+  },
+  {
+   "itemId": "MC05-CALC-07",
+   "type": "maths-calc",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82o200gptmmj9b8rrln8": "below",
+    "cmteo82o200gqtmmjfqy76vny": "below",
+    "cmteo82o200grtmmjcbdelo6t": "below"
+   }
+  },
+  {
+   "itemId": "MC05-CALC-08",
+   "type": "maths-calc",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteoreif000vtm2cf1d7j1qo": "above",
+    "cmteoreif000wtm2c0emuhjnx": "above",
+    "cmteoreif000xtm2ck05l79o7": "above"
+   }
+  },
+  {
+   "itemId": "MC05-FDP-02",
+   "type": "maths-fdp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82og00gxtmmj54ouhgln": "below",
+    "cmteo82og00gytmmj6yihqbxz": "above",
+    "cmteo82og00gztmmjzn2g9yt5": "above"
+   }
+  },
+  {
+   "itemId": "MC05-FDP-04",
+   "type": "maths-fdp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82ot00h5tmmjy5ejs6xq": "above",
+    "cmteo82ot00h6tmmjuemi1tkc": "below",
+    "cmteo82ot00h7tmmjmlcduav8": "below"
+   }
+  },
+  {
+   "itemId": "MC05-FDP-05",
+   "type": "maths-fdp",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82p300h9tmmj58xeja74": "below",
+    "cmteo82p300hatmmj25wzh7be": "below",
+    "cmteo82p300hbtmmj4akdfi7v": "below"
+   }
+  },
+  {
+   "itemId": "MC05-FDP-06",
+   "type": "maths-fdp",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmteo82p900hdtmmjyxy061x1": "below",
+    "cmteo82p900hetmmjyjojk6z1": "below",
+    "cmteo82p900hftmmjd9e3ko1y": "below"
+   }
+  },
+  {
+   "itemId": "MC05-FDP-07",
+   "type": "maths-fdp",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82pf00hhtmmjo312vbfo": "below",
+    "cmteo82pf00hitmmjomzm5nk9": "above",
+    "cmteo82pf00hjtmmj3k3zqncj": "below"
+   }
+  },
+  {
+   "itemId": "MC05-FDP-08",
+   "type": "maths-fdp",
+   "rank": 3,
+   "options": 4,
+   "sides": {
+    "cmtes2g6q000dtmkkuewpzgkm": "below",
+    "cmtes2g6q000etmkk8mwktavf": "below",
+    "cmtes2g6q000ftmkkegyzh7ec": "below"
+   }
+  },
+  {
+   "itemId": "MC05-GEOM-02",
+   "type": "maths-geom",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82pq00hptmmj5k1oz7hf": "above",
+    "cmteo82pq00hqtmmjzl42feqa": "above",
+    "cmteo82pq00hrtmmjy5qfka7p": "above"
+   }
+  },
+  {
+   "itemId": "MC05-GEOM-06",
+   "type": "maths-geom",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82q800i1tmmj51b2hdxr": "below",
+    "cmteo82q800i2tmmj4beh0kpt": "above",
+    "cmteo82q800i3tmmjwi104s7d": "below"
+   }
+  },
+  {
+   "itemId": "MC05-MEAS-01",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82qd00i5tmmjbpbcc7a8": "above",
+    "cmteo82qd00i6tmmju7v9uw4g": "above",
+    "cmteo82qd00i7tmmjq84d5vdt": "above"
+   }
+  },
+  {
+   "itemId": "MC05-MEAS-02",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmtes2g72000jtmkkp5ep2agg": "above",
+    "cmtes2g72000ktmkkuc6gbvpf": "above",
+    "cmtes2g72000ltmkkul4irt6n": "above"
+   }
+  },
+  {
+   "itemId": "MC05-MEAS-03",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82qi00i9tmmje5damk3o": "equal",
+    "cmteo82qi00iatmmj77jhbtfy": "below",
+    "cmteo82qi00ibtmmjsx4lya9v": "above"
+   }
+  },
+  {
+   "itemId": "MC05-MEAS-04",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82qn00idtmmj8die4q7v": "above",
+    "cmteo82qn00ietmmjjld5nlhp": "above",
+    "cmteo82qn00iftmmj1vvdk9nl": "below"
+   }
+  },
+  {
+   "itemId": "MC05-MEAS-05",
+   "type": "maths-meas",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82qs00ihtmmjmtew0eqr": "equal",
+    "cmteo82qs00iitmmjfw2wgeq0": "below",
+    "cmteo82qs00ijtmmj0f1phqhv": "above"
+   }
+  },
+  {
+   "itemId": "MC05-MEAS-06",
+   "type": "maths-meas",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82qy00iltmmjm3qqt3of": "below",
+    "cmteo82qy00imtmmj5cp0appa": "below",
+    "cmteo82qy00intmmjcpe3fmvj": "above"
+   }
+  },
+  {
+   "itemId": "MC05-MEAS-07",
+   "type": "maths-meas",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82r500iptmmjdjmast20": "above",
+    "cmteo82r500iqtmmjffonsoly": "above",
+    "cmteo82r500irtmmjx0jufunr": "above"
+   }
+  },
+  {
+   "itemId": "MC05-NPV-01",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82ra00ittmmj070beim2": "below",
+    "cmteo82ra00iutmmjlcdxtzzf": "below",
+    "cmteo82ra00ivtmmjqf0xz8js": "above"
+   }
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82rg00ixtmmjn4i7tqmf": "below",
+    "cmteo82rg00iytmmjo5g83zax": "above",
+    "cmteo82rg00iztmmjkshrh0zn": "below"
+   }
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82rm00j1tmmjq78asvi4": "below",
+    "cmteo82rm00j2tmmjnyjv6p3v": "above",
+    "cmteo82rm00j3tmmjjjh1l3pg": "below"
+   }
+  },
+  {
+   "itemId": "MC05-NPV-04",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82rr00j5tmmjl8s12m49": "below",
+    "cmteo82rr00j6tmmjx6vb1idr": "above",
+    "cmteo82rr00j7tmmj571z3j1j": "below"
+   }
+  },
+  {
+   "itemId": "MC05-NPV-05",
+   "type": "maths-npv",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82rw00j9tmmjmy929qcx": "above",
+    "cmteo82rw00jatmmjh6686jms": "above",
+    "cmteo82rw00jbtmmj66jyds6w": "above"
+   }
+  },
+  {
+   "itemId": "MC05-NPV-06",
+   "type": "maths-npv",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteoreiv0017tm2cz1g3o3m5": "above",
+    "cmteoreiv0018tm2chdbtcxna": "above",
+    "cmteoreiv0019tm2ca7e7hbc3": "below"
+   }
+  },
+  {
+   "itemId": "MC05-NPV-07",
+   "type": "maths-npv",
+   "rank": 2,
+   "options": 4,
+   "sides": {
+    "cmteo82s200jdtmmjtmuv16ax": "below",
+    "cmteo82s200jetmmji8u1za9b": "below",
+    "cmteo82s200jftmmjyzc68qyv": "above"
+   }
+  },
+  {
+   "itemId": "MC05-RP-01",
+   "type": "maths-rp",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82s700jhtmmjrt4g8tqe": "above",
+    "cmteo82s700jitmmjmvoxctey": "above",
+    "cmteo82s700jjtmmju2ae9p83": "below"
+   }
+  },
+  {
+   "itemId": "MC05-RP-02",
+   "type": "maths-rp",
+   "rank": 0,
+   "options": 4,
+   "sides": {
+    "cmteo82se00jltmmjilfyd89x": "above",
+    "cmteo82se00jmtmmjdh28yq6s": "above",
+    "cmteo82se00jntmmjpoh4w1c6": "above"
+   }
+  },
+  {
+   "itemId": "MC05-STATS-01",
+   "type": "maths-stats",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteorej2001dtm2cdbgyxwu4": "above",
+    "cmteorej2001etm2clrjdvz3d": "below",
+    "cmteorej2001ftm2cig6737of": "above"
+   }
+  },
+  {
+   "itemId": "MC05-STATS-02",
+   "type": "maths-stats",
+   "rank": 1,
+   "options": 4,
+   "sides": {
+    "cmteo82sj00jptmmjj27xgkh6": "above",
+    "cmteo82sj00jqtmmjsybaps7p": "above",
+    "cmteo82sj00jrtmmjvbaiqnq8": "below"
+   }
+  }
+ ]
+}

@@ -19,19 +19,28 @@ const OUT = pjoin(__dirname, '..', '..', 'content', 'agent-review');
  * that land out of service, in the landing transaction.
  */
 const LIVE = process.argv.includes('--live');
+// `--district-entries`: offer every ACTIVE, ATTESTED library entry of the door's district, not only the tags its rows already
+// carry — a pattern repair that must move a value to the other side of the key may need a mistake the door does not yet use.
+const DISTRICT_ENTRIES = process.argv.includes('--district-entries');
 const DOORS = (process.argv.find((a) => a.startsWith('--doors='))?.slice(8) ?? 'vr-05,vr-08,vr-13,vr-16,vr-17,vr-18,vr-20,vr-21').split(',');
 const val = (c: unknown) => { const x = (c as { value?: unknown })?.value; return Array.isArray(x) ? x.join(',') : String(x); };
 
 async function main() {
   const lib = new Map((await prisma.misconception.findMany({ select: { id: true, description: true, childHint: true } })).map((m) => [m.id, m]));
   for (const d of DOORS) {
-    const c = await prisma.case.findUniqueOrThrow({ where: { id: `case-${d}` }, select: { id: true, title: true, questionTypeId: true } });
-    const rows = await prisma.item.findMany({ where: { questionTypeId: c.questionTypeId, status: LIVE ? 'LIVE' : 'DRAFT', pool: 'PRACTICE' }, orderBy: { id: 'asc' },
-      select: { id: true, stem: true, solution: true, explanation: true,
+    const c = await prisma.case.findUniqueOrThrow({ where: { id: `case-${d}` }, select: { id: true, title: true, questionTypeId: true, mappedQuestionTypeIds: true } });
+    // A case may serve several types (maths-01 maps seven); packet them all, as publish-door does.
+    const rows = await prisma.item.findMany({ where: { questionTypeId: { in: [c.questionTypeId, ...c.mappedQuestionTypeIds] }, status: LIVE ? 'LIVE' : 'DRAFT', pool: 'PRACTICE' }, orderBy: { id: 'asc' },
+      select: { id: true, questionTypeId: true, stem: true, solution: true, explanation: true,
         options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true }, orderBy: { id: 'asc' } } } });
     requirePopulation(`packet:${d}`, { [LIVE ? 'live row(s)' : 'draft row(s)']: rows.length });
     const signed = new Set((await prisma.attributionEvent.findMany({ where: { recordId: { in: rows.map((r) => r.id) }, action: 'SIGNED', subjectHash: { not: null } }, select: { recordId: true } })).map((e) => e.recordId));
-    const tags = [...new Set(rows.flatMap((r) => r.options.map((o) => o.misconceptionId).filter(Boolean)))] as string[];
+    let tags = [...new Set(rows.flatMap((r) => r.options.map((o) => o.misconceptionId).filter(Boolean)))] as string[];
+    if (DISTRICT_ENTRIES) {
+      const qt = await prisma.questionType.findUniqueOrThrow({ where: { id: c.questionTypeId }, select: { district: true } });
+      const extra = await prisma.misconception.findMany({ where: { district: qt.district, status: 'ACTIVE', approvedBy: { in: ['reviewer:rev-0001', 'reviewer:rev-agent-01'] } }, select: { id: true } });
+      tags = [...new Set([...tags, ...extra.map((m) => m.id)])];
+    }
     const exemplars: Record<string, Array<{ itemId: string; option: string; execution: string }>> = {};
     for (const r of rows) for (const o of r.options) {
       if (!o.misconceptionId || !(o.misconceptionExecution ?? '').trim()) continue;
@@ -42,7 +51,7 @@ async function main() {
       entries: Object.fromEntries(tags.map((t) => [t, { description: lib.get(t)?.description ?? null, childHint: lib.get(t)?.childHint ?? null }])),
       houseFormExemplars: exemplars,
       rows: rows.map((r) => ({
-        itemId: r.id, signed: signed.has(r.id), stem: r.stem, solution: r.solution ?? null,
+        itemId: r.id, questionType: r.questionTypeId, signed: signed.has(r.id), stem: r.stem, solution: r.solution ?? null,
         key: val(r.options.find((o) => o.isCorrect)?.content),
         options: r.options.map((o) => ({ optionId: o.id, value: val(o.content), isKey: o.isCorrect, tag: o.misconceptionId,
           execution: (o.misconceptionExecution ?? '').trim() || null })),

@@ -1,0 +1,165 @@
+{
+ "door": "patterns/maths-01",
+ "mode": "APPLIED",
+ "landed": [
+  "MC05-GEOM-02",
+  "MC02-FDP-08",
+  "MC05-CALC-03",
+  "MC03-CALC-02",
+  "MC03-CALC-04",
+  "MC03-CALC-07",
+  "MC05-CALC-01",
+  "MC04-CALC-03",
+  "MC04-CALC-06",
+  "MC03-CALC-01",
+  "MC05-CALC-07",
+  "MC01-FDP-08",
+  "MC03-FDP-03",
+  "MC03-NPV-06",
+  "MC05-NPV-05",
+  "MC02-CALC-08",
+  "MC02-NPV-04",
+  "MC04-NPV-05",
+  "MC02-MEAS-01",
+  "MC02-MEAS-03",
+  "MC03-MEAS-01",
+  "MC03-MEAS-07",
+  "MC02-MEAS-07",
+  "MC03-MEAS-05",
+  "MC03-GEOM-01"
+ ],
+ "held": [
+  {
+   "itemId": "MC05-GEOM-06",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "redraft:cmteo82q800i3tmmjwi104s7d",
+     "verdict": "REFUSE",
+     "reason": "180° - 140° - 30° = 10° is right, but the story is fitted. The child is not doing the steps OUT OF ORDER: there is no order of the two correct steps that gives 10°. The child treats the 140° angle on the line as if it were an angle of the triangle and skips the line step. #100 ('halving 180 before taking away the 40') names a reordering of correct operations, and this mistake is not one."
+    }
+   ],
+   "row": {
+    "itemId": "MC05-GEOM-06",
+    "verdict": "HOLD",
+    "reason": "The 10° redraft is refused: #100 (steps out of order) does not produce 180° - 140° - 30°, and the story is fitted. The row cannot land. The seat to 70° is sound on its own."
+   }
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "redraft:cmteo82ix00djtmmjeffdr6bx",
+     "verdict": "REFUSE",
+     "reason": "The arithmetic is right (16 ÷ 2 = 8) but the tag does not name the mistake. #78 is percentage-fraction confusion: its only description is 25% read as a half, and its hint teaches 50% and 25%. This row has no percentage; it says 'one quarter' in words. 'Treats one quarter as one half' is a story fitted to a percentage tag, and the child would get a hint about percentages. The LIVE option already carries this tag mismatch, so it needs a retag (or another derivation of 8, e.g. 40 ÷ 5), not an execution written around it."
+    }
+   ],
+   "row": {
+    "itemId": "MC04-FDP-08",
+    "verdict": "HOLD",
+    "reason": "The redraft of distractor 8 is refused: #78 is a percentage tag and the row has no percentage. Every distractor must carry an attested execution, so the row cannot land. It stays as LIVE now."
+   }
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmteo82lb00f2tmmjd1il61gp",
+     "verdict": "REFUSE",
+     "reason": "6,970 + 1 = 6,971 is right, but the story is fitted. #62 is giving a digit's face value when asked its value; all 10 uses on the door are 'what is the value of the digit' questions. Here no digit is read in isolation: the stem gives 100 as a whole number. Answering '100 more' with '+1' is not shown to be a real child's answer; it reaches a value below the key. The natural below-key mistake, 6,870 (#72, as used on MC01-NPV-02 and MC05-NPV-03), was available."
+    },
+    {
+     "ref": "redraft:cmteo82lb00f1tmmjhfxzg4sd",
+     "verdict": "REFUSE",
+     "reason": "The value follows (6,970 + 10), but the tag fails: #63 is a carried number put in the wrong column, and the stated mistake is a misplaced addend with no carry. Same fault as MC01-NPV-02's 4980."
+    }
+   ],
+   "row": {
+    "itemId": "MC04-NPV-02",
+    "verdict": "HOLD",
+    "reason": "The seat to 6,971 is refused (a fitted face-value story) and so is the 6980 redraft (#63 names a carry, and there is none). The row stays as LIVE now."
+   }
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmteo82rg00iytmmjo5g83zax",
+     "verdict": "REFUSE",
+     "reason": "5,960 + 1 = 5,961 is right, but this is the same fitted face-value story as MC04-NPV-02. No digit is read; the stem gives '100' as a number, and '+1 for 100 more' is not shown to be a child's answer to this question."
+    },
+    {
+     "ref": "redraft:cmteo82rg00ixtmmjn4i7tqmf",
+     "verdict": "REFUSE",
+     "reason": "The value follows (5,960 + 10 = 5,970), but #63 names a misplaced CARRY, and no carry is involved; the mistake is a misplaced addend. The tag does not name the mistake."
+    }
+   ],
+   "row": {
+    "itemId": "MC05-NPV-02",
+    "verdict": "HOLD",
+    "reason": "The seat to 5,961 is refused (a fitted face-value story) and so is the 5970 redraft (#63 names a carry, and there is none). The row stays as LIVE now."
+   }
+  },
+  {
+   "itemId": "MC01-NPV-02",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "redraft:cmteo820n002ptmmj069wrqyf",
+     "verdict": "REFUSE",
+     "reason": "The value follows (4,970 + 10 = 4,980), but #63 is 'adding or losing a CARRIED number into the wrong column', and its hint is about where to carry. No carry is involved here: the stated mistake is writing the 1 of 100 under the tens, a misplaced addend. Rows MC04-CALC-03 and MC05-CALC-03 in this same proposal use #63 for a real misplaced carry, which shows what the entry means. The tag does not name this mistake, and a child choosing 4,980 would get a hint about carrying. It needs a retag ruling."
+    },
+    {
+     "ref": "redraft:cmteo820n002rtmmjimurvrcf",
+     "verdict": "REFUSE",
+     "reason": "The value follows (9 + 1 = 10 in the hundreds, the 1 never moves on, giving 4,070), but #12 is a SUBTRACTION mistake: 'leaving the column as a zero ... when the top number is smaller', with an exchange-from-the-next-column hint. This is an addition with a dropped carry. The identical mistake on the sibling rows MC04-NPV-02 (6070) and MC05-NPV-02 (5060) is tagged #69. The tag does not name the mistake."
+    }
+   ],
+   "row": {
+    "itemId": "MC01-NPV-02",
+    "verdict": "HOLD",
+    "reason": "The redrafts of 4980 (#63 names a carry, and there is none) and 4070 (#12 is a subtraction tag on an addition) are refused. The row cannot land. The seat to 4,870 is sound on its own."
+   }
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmteo82li00f6tmmjies79c06",
+     "verdict": "REFUSE",
+     "reason": "9,400 + 1 = 9,401 is right, but the story is fitted. #62 (a digit's face value) is not the mistake: the stem gives 1,000 as a number and no digit is read. '+1 for 1,000 more' is not shown to be a real child's answer. 8,400 (#72) was the natural below-key mistake."
+    },
+    {
+     "ref": "redraft:cmteo82li00f5tmmjraxjjor0",
+     "verdict": "REFUSE",
+     "reason": "The value follows (9,400 + 100 = 9,500), but #63 names a misplaced CARRY, and the stated mistake (the 1 of 1,000 written under the hundreds) has no carry. The tag does not name the mistake."
+    }
+   ],
+   "row": {
+    "itemId": "MC04-NPV-03",
+    "verdict": "HOLD",
+    "reason": "The seat to 9,401 is refused (a fitted face-value story) and so is the 9500 redraft (#63 names a carry, and there is none). The row stays as LIVE now."
+   }
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "redraft:cmteo82rm00j1tmmjq78asvi4",
+     "verdict": "REFUSE",
+     "reason": "The value follows (9,500 + 100 = 9,600), but #63 names a misplaced CARRY, and the stated mistake is a misplaced addend with no carry. The tag does not name the mistake."
+    }
+   ],
+   "row": {
+    "itemId": "MC05-NPV-03",
+    "verdict": "HOLD",
+    "reason": "The 9600 redraft is refused (#63 names a carry, and there is none). Every distractor must carry an attested execution, so the row cannot land, although the seat to 8,500 is sound."
+   }
+  }
+ ]
+}

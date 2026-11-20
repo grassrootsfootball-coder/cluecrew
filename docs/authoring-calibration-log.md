@@ -28704,3 +28704,50 @@ worth doing, as a review of its own. The safe default stays in place until then.
 - **Addendum 36:** 800 staff-only attractor/defeater pairs fail "both or neither", mostly
   `attractorLine` with no `defeaterLine`. This is incomplete staff data, not something a child meets,
   and the gate's message overstates it (R591).
+
+## R1025 — The maths answer-rank shortcut, and a door total that hid it inside templates (2026-11-20)
+
+**THE SHORTCUT.** On maths-01 (179 LIVE rows, seven types, four options), option ORDER is shuffled per
+child, but VALUE rank is not. Across the 161 rows whose options compare in one unit, the key was the
+second-smallest on 69 (43%) and the largest on 13 (8%). "Never the biggest, usually second-smallest"
+beat 25% by a wide margin. The cause is in the diagnosis itself: the commonest mistakes (rounding without
+compensating, a step dropped, subtracting the wrong way) land just either side of the key. Roundness was
+checked as a second tell and is clean: on 0 rows is the key the only non-round option.
+
+**THE REPAIR, under R1021**, in three rounds (proposer, independent reviewer, `land-proposals
+--from-live`). The rule: a distractor is replaced only if its tag occurs at least 10 times on the door,
+with a value that tag's mistake really produces. Any re-tag keeps the value. **41 rows changed** (37
+values, 4 re-tag only). The reviewer attested 143 changes and refused 14. **Door ranks 29/69/50/13 →
+41/50/42/28** (smallest/second-smallest/second-largest/largest; target 28–52 each). Replacing rounded
+distractors also removed several that were the key rounded (60 on a key of 62, £7.00 on £6.85, £5.00
+on £4.75), the "nearly right" answers a marker might accept.
+
+**THE FINDING THAT MATTERS: A DOOR TOTAL CAN BE FAIR WHILE EVERY TEMPLATE IS A GIFT.** The five mock
+papers repeat each template (MCnn-<slot>). Round 1 met its door-level target, and the reviewer then
+found it had made the key the SMALLEST on 12 of 13 "how much change" rows. It had moved the
+shortcut, not removed it. The door total could not see this. **An instrument that measures a
+population can be satisfied by moving the fault into a sub-population it does not measure.** That is
+R595's shape (a subset indistinguishable from the whole), arriving through a repair. So
+`measure-maths-key-rank.ts` now FLAGS any template or stem shape of 3+ rows where one rank holds three
+quarters or more, and exits non-zero while any is flagged. Round 3 cleared seven groups (CALC-02,
+CALC-04, CALC-08, GEOM-01, MEAS-04, MEAS-07, a rectangle shape). The "how much change" rows now spread
+7/4/2/0.
+
+**STILL FLAGGED (5 templates), with why:**
+- **NPV-01**, value of a digit, second-largest 5 of 5. The only real mistakes are face value and one
+  column either way, so the key sits second-largest BY CONSTRUCTION. It needs a different distractor
+  kind or a different template.
+- **FDP-04**, second-largest 5 of 5, and **MEAS-01**, one-price change, smallest 4 of 5. The only honest
+  below-key mistakes have no library entry ("bridging to the pound"), or land exactly on the key rounded.
+- **FDP-02** and **NPV-07** (4 of 5). The proposed values were refused: 280000 for "hundreds in 2,800",
+  and a fitted 36 that would also have left "less than 12" as a tell. They need different values.
+
+**THREE LIBRARY ENTRIES WOULD UNLOCK REAL DIAGNOSES** that are currently mis-tagged or unrepairable:
+"halved instead of quartered" (MC04-FDP-02/07/08 carry it as #78 with no percentage present);
+"used the angle on the line as an angle of the triangle" (MC05-GEOM-06's 10°, MC02-GEOM-06's 45°);
+"bridging to the pound" (MEAS-01). Re-tags this pass fixed every #63 used where no carry is involved
+(→ #61) and #12 used on an addition (→ #69).
+
+**ALSO NOTED.** 324 LIVE maths distractors still have no execution (staff-facing). The lander writes one on
+every row it touches. MC02-GEOM-03's stem says "46 degrees" in words, which is not house notation, and
+the notation gate did not report it.

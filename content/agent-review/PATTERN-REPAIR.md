@@ -28,6 +28,29 @@ which word truly reverses the card word. Hard limits:
 - If the card word has two senses with two opposites, the row must be rebuilt on a different card word.
   It cannot be repaired.
 
+**maths-01 (all seven maths types, four options each).** Children learn where the right answer sits
+among the VALUES (option order is shuffled, so position gives nothing away). On 161 rows whose options
+can be compared, the key is the second-smallest on 69 (43%) and the largest on only 13 (8%). "Never the
+biggest, usually second-smallest" beats chance by a wide margin. Target, measured by
+`scripts/agent-review/measure-maths-key-rank.ts --after=<proposals>`: every rank (smallest,
+second-smallest, second-largest, largest) on at least 28 and at most 52 of the rankable rows.
+`content/agent-review/patterns/maths-01/ranks.json` gives each row's key rank, which side of the key
+each distractor sits on, and how many times each tag occurs on the door (`tagCount`).
+- The moves: on a rank-1 row (one distractor below the key), replace that distractor with one ABOVE the
+  key, and the row becomes rank 0. On a rank-2 row (one distractor above), replace that one with one
+  BELOW, and the row becomes rank 3. Use `seats`, one per row.
+- **Never drop a scarce diagnosis to top up an abundant one** (house rule for every generated door).
+  Replace only a distractor whose tag occurs at least 10 times on the door (`tagCount`). The new value
+  must come from a mistake a real child makes on THIS question, tagged with an entry from `entries` that
+  produces exactly that value. Prefer a tag that is rare on the door.
+- The new value must be wrong, must differ from every other option, and must not be a "nearly right"
+  answer that a marker could accept (a rounding of the key, an equivalent fraction, the same amount in
+  other units).
+- Many maths distractors have no execution. The lander refuses a touched row unless EVERY distractor
+  has one of at least 40 characters, so on each row you touch, add a `redrafts` entry (value and tag
+  unchanged) for every other distractor without one. Every fact and every calculation in it must be
+  right.
+
 ## For the proposer
 - Choose which rows to rebuild. Prefer the fewest that reach the target, and do not touch a row the
   target does not need.

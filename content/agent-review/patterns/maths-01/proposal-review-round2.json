@@ -1,0 +1,184 @@
+{
+  "door": "patterns/maths-01",
+  "reviewer": "rev-agent-01",
+  "round": 2,
+  "changes": [
+    {
+      "ref": "seat:cmteo820n002qtmmjdlveifgw",
+      "verdict": "ATTEST",
+      "reason": "4,970 - 100 = 4,870 (#72, taking away for 'more'). It is below 5,070 and differs from 4,980 and 4,070. Replaced tag #63 occurs 13 times."
+    },
+    {
+      "ref": "seat:cmteo820n002ptmmj069wrqyf",
+      "verdict": "ATTEST",
+      "reason": "Retag #63 -> #61, value 4980 unchanged. 4,970 + 10 = 4,980: the 1 of 100 is treated as sitting in the tens, one column right, so it is worth 10. #61 is a digit read one column off (its own example: 60 for the 6 in 4,652, read one column to the right), and its hint asks which column the digit really sits in. That names this mistake, and no carry is involved. Execution checked: 9 hundreds + 1 = 10 hundreds, giving 5,070."
+    },
+    {
+      "ref": "seat:cmteo820n002rtmmjimurvrcf",
+      "verdict": "ATTEST",
+      "reason": "Retag #12 -> #69, value 4070 unchanged. Hundreds 9 + 1 = 10: 0 is written and the carried 1 dropped, so the thousands stay 4 and the answer is 4,070. That is #69, a dropped carry in an addition, the tag the sibling rows already use. #12 (subtraction exchange) did not fit. Replaced tag #12 occurs 11 times."
+    },
+    {
+      "ref": "seat:cmteo82lb00f2tmmjd1il61gp",
+      "verdict": "ATTEST",
+      "reason": "6,970 - 100 = 6,870 (#72). It is below 7,070 and differs from 6,980 and 6,070. Replaced tag #63 occurs 13 times."
+    },
+    {
+      "ref": "seat:cmteo82lb00f1tmmjhfxzg4sd",
+      "verdict": "ATTEST",
+      "reason": "Retag #63 -> #61, value 6980 unchanged. 6,970 + 10 = 6,980, the 1 of 100 placed one column right (#61). Execution checked."
+    },
+    {
+      "ref": "redraft:cmteo82lc00f3tmmjlyn7o7jj",
+      "verdict": "ATTEST",
+      "reason": "Hundreds 9 + 1 = 10 with the carry dropped, so the thousands stay 6: 6,070 (#69). Correct."
+    },
+    {
+      "ref": "seat:cmteo82rg00iytmmjo5g83zax",
+      "verdict": "ATTEST",
+      "reason": "5,960 - 100 = 5,860 (#72). It is below 6,060 and differs from 5,970 and 5,060. Replaced tag #63 occurs 13 times."
+    },
+    {
+      "ref": "seat:cmteo82rg00ixtmmjn4i7tqmf",
+      "verdict": "ATTEST",
+      "reason": "Retag #63 -> #61, value 5970 unchanged. 5,960 + 10 = 5,970, the 1 of 100 one column right (#61). Execution checked."
+    },
+    {
+      "ref": "redraft:cmteo82rg00iztmmjkshrh0zn",
+      "verdict": "ATTEST",
+      "reason": "Hundreds 9 + 1 = 10 with the carry dropped, so the thousands stay 5: 5,060 (#69). Correct."
+    },
+    {
+      "ref": "seat:cmteo82li00f6tmmjies79c06",
+      "verdict": "ATTEST",
+      "reason": "9,400 - 1,000 = 8,400 (#72). It is below 10,400 and differs from 9,500 and 400. Replaced tag #63 occurs 13 times."
+    },
+    {
+      "ref": "seat:cmteo82li00f5tmmjraxjjor0",
+      "verdict": "ATTEST",
+      "reason": "Retag #63 -> #61, value 9500 unchanged. 9,400 + 100 = 9,500: the 1 of 1,000 is placed under the hundreds, one column right (#61). Execution checked: 9 thousands + 1 = 10 thousands, giving 10,400."
+    },
+    {
+      "ref": "redraft:cmteo82li00f7tmmjf14y60iy",
+      "verdict": "ATTEST",
+      "reason": "Thousands 9 + 1 = 10: 0 is written, the carry dropped, and no ten-thousands digit appears, leaving 400 (#69). Correct."
+    },
+    {
+      "ref": "seat:cmteo82rm00j2tmmjnyjv6p3v",
+      "verdict": "ATTEST",
+      "reason": "9,500 - 1,000 = 8,500 (#72). It is below 10,500 and differs from 9,600 and 500. Replaced tag #63 occurs 13 times."
+    },
+    {
+      "ref": "seat:cmteo82rm00j1tmmjq78asvi4",
+      "verdict": "ATTEST",
+      "reason": "Retag #63 -> #61, value 9600 unchanged. 9,500 + 100 = 9,600, the 1 of 1,000 one column right (#61). Execution checked."
+    },
+    {
+      "ref": "redraft:cmteo82rm00j3tmmjjjh1l3pg",
+      "verdict": "ATTEST",
+      "reason": "Thousands 9 + 1 = 10 with the carry dropped, leaving 500 (#69). Correct."
+    },
+    {
+      "ref": "seat:cmteo82ew00b1tmmjrb1dml9f",
+      "verdict": "ATTEST",
+      "reason": "Retag #63 -> #61, value 3950 unchanged. 3,940 + 10 = 3,950, the 1 of 100 one column right (#61). 9 hundreds + 1 = 10 hundreds, giving 4,040. Correct."
+    },
+    {
+      "ref": "seat:cmteo82ew00b2tmmjbvhlgosc",
+      "verdict": "ATTEST",
+      "reason": "Retag #12 -> #69, value 3040 unchanged. Hundreds 9 + 1 = 10 with the carry dropped, so the thousands stay 3: 3,040. That is a dropped carry in an addition. Replaced tag #12 occurs 11 times."
+    },
+    {
+      "ref": "redraft:cmteo82ew00b3tmmj33wgf98v",
+      "verdict": "ATTEST",
+      "reason": "3,940 - 100 = 3,840 (#72, taking away for 'more'). Correct."
+    },
+    {
+      "ref": "seat:cmteo82ix00ditmmjytg5m68n",
+      "verdict": "ATTEST",
+      "reason": "3/5 of 40 = 24 used, 16 left. A quarter of 16 = 4 is used on Tuesday, which is an intermediate result given as the answer (proc-01). 16 - 4 = 12 (key). 4 is below the key and differs from every option. Replaced tag proc-01 occurs 29 times."
+    },
+    {
+      "ref": "seat:cmteo82ix00djtmmjeffdr6bx",
+      "verdict": "REFUSE",
+      "reason": "The arithmetic is right: a quarter of the 24 used is 6, and 16 - 6 = 10 (#82). But the replaced distractor's tag #78 occurs only 8 times on the door, below the minimum of 10. The value 8 is 16 ÷ 2, 'halved instead of quartered': the same genuine diagnosis the coordinator kept on MC04-FDP-02 and MC04-FDP-07 because replacing it 'drops a real diagnosis'. The same reasoning applies here. The fix for 8 is a library entry that names halving instead of quartering, not a new value. The row would also then carry #82 twice."
+    },
+    {
+      "ref": "redraft:cmteo82ix00dhtmmjpw997o8m",
+      "verdict": "ATTEST",
+      "reason": "A quarter of the whole 40 is 10, and 16 - 10 = 6 (#82, a fraction of the wrong whole). 16 - 4 = 12. Correct."
+    },
+    {
+      "ref": "seat:cmteo82hi00cmtmmjm9uyxv12",
+      "verdict": "ATTEST",
+      "reason": "4 × 25: 4 × 5 = 20 (write 0, carry 2); with the carry dropped, 4 × 2 = 8, giving 80, not 100 (#69). 80 + 30 - 62 = 48. The key is 100 + 30 - 62 = 68. 48 is below the key and differs from 38 and 43. Replaced tag proc-01 occurs 29 times."
+    },
+    {
+      "ref": "seat:cmteo82hi00cntmmjrxxi5vsd",
+      "verdict": "ATTEST",
+      "reason": "One pack too few: 3 × 25 = 75, and 75 + 30 - 62 = 43 (#85, multiplying by one fewer item). It is below 68 and differs from 38 and 48. Replaced tag #99 occurs 22 times."
+    },
+    {
+      "ref": "redraft:cmteo82hi00cltmmjzq97vuyr",
+      "verdict": "ATTEST",
+      "reason": "100 - 62 = 38, with the 30 already held never used (#71). 100 + 30 - 62 = 68. Correct."
+    },
+    {
+      "ref": "seat:cmterevfa000rtmfzsvduiend",
+      "verdict": "ATTEST",
+      "reason": "Exchanging across zeros: one thousand is taken from the 8 straight into the ones, 16 - 8 = 8. The tens (0 above 7) and hundreds (0 above 4) are written as 0 instead of exchanged (#12). The thousands give 7 - 3 = 4, so 4,008. This is the same documented mechanism attested on MC04-CALC-06 (2007), and it keeps #12 on the row. 4,008 is below 4,528 and differs from every option."
+    },
+    {
+      "ref": "seat:cmterevfa000ptmfz0xxb5mvo",
+      "verdict": "ATTEST",
+      "reason": "8,006 rounded down to 8,000, then 8,000 - 3,478 = 4,522 exactly, with the 6 never put back (#99). This is a real compensation method left unfinished, the one #99's hint addresses. On closeness: 4,522 is 6 from the key and differs only in the ones digit, but it is not a rounding, truncation or other form of 4,528, so a marker cannot accept it. The difference is precisely the 6 in 8,006 that the child dropped, so it tests the step in question rather than punishing a near miss. It is fair. Replaced tag #11 occurs 35 times."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC01-NPV-02",
+      "verdict": "SIGN",
+      "reason": "As it will be: 5070 (key), 4980 (#61), 4870 (#72), 4070 (#69). 4,970 + 100 = 5,070 is the only correct option and every tag now names its mistake. The key is the largest; across the template it is the largest on 3 of 6 rows."
+    },
+    {
+      "itemId": "MC04-NPV-03",
+      "verdict": "SIGN",
+      "reason": "As it will be: 10400 (key), 9500 (#61), 8400 (#72), 400 (#69). 9,400 + 1,000 = 10,400 is the only correct option and every tag names its mistake. The key is the largest."
+    },
+    {
+      "itemId": "MC04-NPV-02",
+      "verdict": "HOLD",
+      "reason": "Every change on this row is attested, but the row is held for a pattern across rows. The door has six 'What number is N more than X?' rows (MC01/03/04/05-NPV-02/03). The LIVE template already puts the key second-largest on 5 of 6, with the +1000 lure always on top. Signing all five re-proposed rows would put the key LARGEST on 6 of 6, so 'pick the biggest' scores every time. That is the shortcut this repair exists to remove, moved to a single question template where the door measure cannot see it. I signed two (MC01-NPV-02 and MC04-NPV-03), leaving 3 of 6 largest and 3 of 6 second-largest. This row can be re-proposed as a retag only, as MC03-NPV-03 was: 63 -> 61 on the -10/-100 option; the +1000 or +10,000 option is genuinely #61 too, one column LEFT. That would correct its tags without moving its rank."
+    },
+    {
+      "itemId": "MC05-NPV-02",
+      "verdict": "HOLD",
+      "reason": "Every change on this row is attested, but the row is held for a pattern across rows. The door has six 'What number is N more than X?' rows (MC01/03/04/05-NPV-02/03). The LIVE template already puts the key second-largest on 5 of 6, with the +1000 lure always on top. Signing all five re-proposed rows would put the key LARGEST on 6 of 6, so 'pick the biggest' scores every time. That is the shortcut this repair exists to remove, moved to a single question template where the door measure cannot see it. I signed two (MC01-NPV-02 and MC04-NPV-03), leaving 3 of 6 largest and 3 of 6 second-largest. This row can be re-proposed as a retag only, as MC03-NPV-03 was: 63 -> 61 on the -10/-100 option; the +1000 or +10,000 option is genuinely #61 too, one column LEFT. That would correct its tags without moving its rank."
+    },
+    {
+      "itemId": "MC05-NPV-03",
+      "verdict": "HOLD",
+      "reason": "Every change on this row is attested, but the row is held for a pattern across rows. The door has six 'What number is N more than X?' rows (MC01/03/04/05-NPV-02/03). The LIVE template already puts the key second-largest on 5 of 6, with the +1000 lure always on top. Signing all five re-proposed rows would put the key LARGEST on 6 of 6, so 'pick the biggest' scores every time. That is the shortcut this repair exists to remove, moved to a single question template where the door measure cannot see it. I signed two (MC01-NPV-02 and MC04-NPV-03), leaving 3 of 6 largest and 3 of 6 second-largest. This row can be re-proposed as a retag only, as MC03-NPV-03 was: 63 -> 61 on the -10/-100 option; the +1000 or +10,000 option is genuinely #61 too, one column LEFT. That would correct its tags without moving its rank."
+    },
+    {
+      "itemId": "MC03-NPV-03",
+      "verdict": "SIGN",
+      "reason": "Retag only; the values are unchanged: 4040 (key), 3950 (#61), 3040 (#69), 3840 (#72). 3,940 + 100 = 4,040 is the only correct option and every tag now names its mistake. The key rank (largest) is unchanged."
+    },
+    {
+      "itemId": "MC04-FDP-08",
+      "verdict": "HOLD",
+      "reason": "The seat of 8 -> 10 is refused: #78 occurs 8 times, under 10, and 8 is the real halved-instead-of-quartered diagnosis. 8 therefore stays without an attested execution and the row cannot land. It stays as LIVE now."
+    },
+    {
+      "itemId": "MC04-CALC-07",
+      "verdict": "SIGN",
+      "reason": "As it will be: 68 (key), 38, 48, 43. 4 × 25 + 30 - 62 = 68 is the only correct option and each distractor is an attested, distinct mistake. The key is the largest. Note: 38, 43 and 48 are evenly spaced with the key set apart; this is a coincidence on one row, not a rule across rows."
+    },
+    {
+      "itemId": "MC01-CALC-08",
+      "verdict": "SIGN",
+      "reason": "As it will be: 4528 (key), 4500 (#99, nearest hundred), 4008 (#12), 4522 (#99, one number rounded). 8,006 - 3,478 = 4,528 is the only correct option. The existing 4500 execution is checked: 4,500 + 6 + 22 = 4,528. The key is the largest, which breaks the CALC-08 slot's 5/5 smallest-key run."
+    }
+  ]
+}

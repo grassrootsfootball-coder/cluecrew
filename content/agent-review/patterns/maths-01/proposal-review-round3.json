@@ -1,0 +1,309 @@
+{
+  "door": "patterns/maths-01",
+  "reviewer": "rev-agent-01",
+  "round": 3,
+  "changes": [
+    {
+      "ref": "seat:cmteo82n800g6tmmj8mp5c9eu",
+      "verdict": "ATTEST",
+      "reason": "83 + 46 = 129, adding where the sign asks for subtraction (#72). The key is 83 - 46 = 37. 129 is above the key and differs from 43 and 77. Replaced tag #99 occurs 22 times."
+    },
+    {
+      "ref": "redraft:cmteo82n800g5tmmjxr1jtbuy",
+      "verdict": "ATTEST",
+      "reason": "Ones: smaller from larger, 6 - 3 = 3. Tens: 8 - 4 = 4. That gives 43 (#11). Correct."
+    },
+    {
+      "ref": "redraft:cmteo82n800g7tmmjpagk2ker",
+      "verdict": "ATTEST",
+      "reason": "83 - 6 = 77, with the 4 tens of 46 dropped (#98). Correct."
+    },
+    {
+      "ref": "seat:cmteo82an008mtmmj76gsl38l",
+      "verdict": "ATTEST",
+      "reason": "320 × 15 by long multiplication: 320 × 5 = 1,600. The tens row is written 320 with no placeholder zero, so the products add to 1,600 + 320 = 1,920, not 4,800 (#18, 'forgetting the zero when multiplying the tens digit'). £1,920 - £1,200 = £720. This is a common long-multiplication error and the tag names it exactly. A child who does not sanity-check the size will produce it, so it is plausible. It differs from every option and is below the key £3600. Replaced tag #98 occurs 18 times."
+    },
+    {
+      "ref": "seat:cmteo82an008ntmmj8q4rma7y",
+      "verdict": "ATTEST",
+      "reason": "320 tickets rounded to 300: 300 × £15 = £4,500, and £4,500 - £1,200 = £3,300. The 20 × £15 = £300 is never added back (#99). It is below the key and is not a rounding of £3600. Replaced tag #72 occurs 21 times."
+    },
+    {
+      "ref": "redraft:cmteo82an008ltmmjoxun40dq",
+      "verdict": "ATTEST",
+      "reason": "320 × £15 = £4,800, with the £1,200 cost never used (#71). £4,800 - £1,200 = £3,600. Correct."
+    },
+    {
+      "ref": "seat:cmteo81xe000ttmmjkjar2ch5",
+      "verdict": "REFUSE",
+      "reason": "12 × 3 = 36 is right, but no real child's mistake is shown. #75 names two forms: numerator only (12 × 2 = 24, already on this row) and dividing by the denominator only (12 ÷ 3 = 4, the very value being removed). Multiplying by the denominator is neither form, and it is not a known answer to '2/3 of 12'. The seat swaps the entry's own commonest form for a story fitted to put a value above the key. As it would stand, 8 would also be the only option smaller than 12, so 'a fraction of 12 is less than 12' finds the key with no fraction work."
+    },
+    {
+      "ref": "seat:cmteo82j200dntmmjn1n0zgmi",
+      "verdict": "ATTEST",
+      "reason": "18 + 7 + 18 + 7 in columns: the ones give 8 + 7 + 8 + 7 = 30, so 0 is written and 3 carried. The 3 is added twice in the tens: 1 + 1 + 3 + 3 = 8, giving 80 cm (#13, adding the carry twice). The key is 50 cm. 80 cm is above the key and differs from 126 cm and 43 cm. Replaced tag #69 occurs 23 times."
+    },
+    {
+      "ref": "seat:cmteo82qn00iftmmj1vvdk9nl",
+      "verdict": "ATTEST",
+      "reason": "74 - 9 = 65, with the 2 tens of 29 dropped (#98). The key is 45 cm. 65 cm is above the key and differs from 103 cm and 55 cm. Replaced tag #99 occurs 22 times."
+    },
+    {
+      "ref": "redraft:cmteo82qn00idtmmj8die4q7v",
+      "verdict": "ATTEST",
+      "reason": "74 + 29 = 103, adding where 'how much longer' asks for a difference (#84). Correct."
+    },
+    {
+      "ref": "redraft:cmteo82qn00ietmmjjld5nlhp",
+      "verdict": "ATTEST",
+      "reason": "Ones: smaller from larger, 9 - 4 = 5. Tens: 7 - 2 = 5. That gives 55 cm (#11). Correct."
+    },
+    {
+      "ref": "seat:cmteo82fj00bftmmjj7l25fcz",
+      "verdict": "REFUSE",
+      "reason": "2,800 × 100 = 280,000 is right, but a child is not shown to produce it. Asked how many hundreds are in 2,800, a child who confuses the operation does not plausibly scale the number UP a hundredfold to six digits. And 280,000 is the only option larger than 2,800 itself, which cannot hold more hundreds than it has ones, so it is eliminated on sight and tests nothing. It also replaces 2, a real diagnosis: the thousands digit taken for the answer."
+    },
+    {
+      "ref": "redraft:cmteo82fj00bdtmmjlqjzmijj",
+      "verdict": "ATTEST",
+      "reason": "8 is the hundreds digit at face value, with the 2 thousands (20 hundreds) missed (#62). 28 hundreds is correct."
+    },
+    {
+      "ref": "redraft:cmteo82fj00betmmjlkb1hn8a",
+      "verdict": "ATTEST",
+      "reason": "2,800 ÷ 10 = 280, dividing by 10 instead of 100. That is exactly #68's description. Correct."
+    },
+    {
+      "ref": "seat:cmteo827e006stmmjtov7wwt8",
+      "verdict": "ATTEST",
+      "reason": "4 × 65p = £2.60, and £2.60 + £2.30 = £4.90 spent, given as the answer (proc-01). The key is £10 - £4.90 = £5.10. £4.90 is below the key and differs from £7.10 and £5.75. Replaced tag #71 occurs 40 times."
+    },
+    {
+      "ref": "seat:cmteo82l000evtmmj86bl6sjl",
+      "verdict": "ATTEST",
+      "reason": "£2.35 rounded to £2.40 makes 3 × the price easy: 3 × £2.40 = £7.20, and £10 - £7.20 = £2.80. The 3 × 5p = 15p is never put back (#99). The key is £2.95. £2.80 is below the key, distinct, and not a rounding of it. Replaced tag #83 occurs 15 times."
+    },
+    {
+      "ref": "redraft:cmteo82l000ettmmjb09nczyi",
+      "verdict": "ATTEST",
+      "reason": "3 × £2.35 = £7.05, the cost given as the answer (proc-01). £10 - £7.05 = £2.95. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82l000eutmmjja17nu7u",
+      "verdict": "ATTEST",
+      "reason": "One notebook too few: 2 × £2.35 = £4.70, and £10 - £4.70 = £5.30 (#85). Correct."
+    },
+    {
+      "ref": "seat:cmteo82ed00artmmjvxpulhcf",
+      "verdict": "ATTEST",
+      "reason": "7 × 35p = £2.45, and £2.45 + £1.80 = £4.25 spent, given as the answer (proc-01). The key is £5.75. £4.25 is below the key and distinct. Replaced tag #71 occurs 40 times."
+    },
+    {
+      "ref": "seat:cmteo82ec00aptmmjgu4j9mb6",
+      "verdict": "ATTEST",
+      "reason": "35p rounded to 40p: 7 × 40p = £2.80, plus £1.80 = £4.60, and £10 - £4.60 = £5.40. The 7 × 5p = 35p is never put back (#99). This was the row's original LIVE distractor. It is below the key, distinct, and not a rounding of £5.75. Replaced tag #69 occurs 23 times."
+    },
+    {
+      "ref": "seat:cmteo82310041tmmj8oy561hc",
+      "verdict": "ATTEST",
+      "reason": "£3.45 + £1.80: tenths 4 + 8 = 12, so 2 is written and 1 carried. The carry is added twice in the pounds: 3 + 1 + 1 + 1 = 6, giving £6.25, not £5.25 (#13). £10 - £6.25 = £3.75. The key is £4.75. £3.75 is below the key and distinct. Replaced tag #99 occurs 22 times."
+    },
+    {
+      "ref": "redraft:cmteo82310042tmmjl01lolmy",
+      "verdict": "ATTEST",
+      "reason": "£10 - £3.45 = £6.55, with the £1.80 drink never used (#71). £3.45 + £1.80 = £5.25, giving £4.75 change. Correct."
+    },
+    {
+      "ref": "redraft:cmteo82310043tmmjemqehuw9",
+      "verdict": "ATTEST",
+      "reason": "Whole pounds only: £3 + £1 = £4, and £10 - £4 = £6.00 (#83, dropping the pence). 45p + 80p = £1.25. Correct."
+    },
+    {
+      "ref": "seat:cmteo829u0087tmmj7v2vroi2",
+      "verdict": "ATTEST",
+      "reason": "£8.75 rounded to £9 and £3.60 to £4: £20 - £13 = £7.00. The 25p + 40p = 65p is never given back (#99). The key is £7.65. £7.00 is below the key and distinct. Replaced tag #69 occurs 23 times."
+    },
+    {
+      "ref": "seat:cmteo829u0085tmmjtkpg1si2",
+      "verdict": "ATTEST",
+      "reason": "£8.75 + £3.60: tenths 7 + 6 = 13, so 3 is written and 1 carried. The carry is added twice: 8 + 3 + 1 + 1 = 13, giving £13.35 (#13). £20 - £13.35 = £6.65. It is below the key and distinct. Replaced tag #71 occurs 40 times."
+    },
+    {
+      "ref": "seat:cmteo82e000ahtmmjnspvlcme",
+      "verdict": "ATTEST",
+      "reason": "£2.65 + £1.75 = £4.40 spent, given as the answer (proc-01). The key is £10 - £4.40 = £5.60. £4.40 is below the key and distinct. Replaced tag #98 occurs 18 times."
+    },
+    {
+      "ref": "seat:cmteo82e000ajtmmj4j6kp40f",
+      "verdict": "ATTEST",
+      "reason": "£2.65 rounded to £2.70 and £1.75 to £1.80 (nearest 10p), which removes the 5p + 5p carry in the pence: £2.70 + £1.80 = £4.50, and £10 - £4.50 = £5.50. The 10p is never given back (#99). This is the same move as rounding 1,375 to 1,380 on MC04-CALC-06 (attested in round 1). £5.50 is 10p from the key, but it is not a rounding of £5.60, so a marker cannot accept it. Replaced tag #71 occurs 40 times."
+    },
+    {
+      "ref": "seat:cmteo82e000aitmmjiutqewr1",
+      "verdict": "ATTEST",
+      "reason": "£2.65 + £1.75: hundredths 5 + 5 = 10, so 0 is written and 1 carried; tenths 6 + 7 + 1 = 14, so 4 is written and 1 carried. That carry is added twice in the pounds: 2 + 1 + 1 + 1 = 5, giving £5.40 (#13). £10 - £5.40 = £4.60. It is below the key and distinct. Replaced tag #84 occurs 13 times."
+    },
+    {
+      "ref": "seat:cmteo82e600altmmjx1u331wv",
+      "verdict": "ATTEST",
+      "reason": "340 + 275: ones 0 + 5 = 5; tens 4 + 7 = 11, so 1 is written and 1 carried. The carry is added twice in the hundreds: 3 + 2 + 1 + 1 = 7, giving 715 (#13). 900 - 715 = 185 m. The key is 285 m. 185 m is below the key and distinct. Replaced tag #98 occurs 18 times."
+    },
+    {
+      "ref": "seat:cmteo82e600amtmmj3kqzpjlp",
+      "verdict": "ATTEST",
+      "reason": "275 rounded to 280: 900 - 340 - 280 = 280 m. The 5 m is never put back (#99). It is below 285 m, distinct, and not a rounding of the key (285 rounds to 290). Replaced tag #71 occurs 40 times."
+    },
+    {
+      "ref": "seat:cmteo82e600antmmjcs691nel",
+      "verdict": "ATTEST",
+      "reason": "Retag #85 -> #99, value 260 m unchanged. 275 rounded up to 300 (nearest hundred): 900 - 340 - 300 = 260, with 25 m never put back. That is a rounding with no compensation, which is what #99 names. #85 (one fewer item, or the count added to the price) did not describe it. #85 occurs 11 times."
+    },
+    {
+      "ref": "seat:cmteo825h005qtmmjlbp9dbha",
+      "verdict": "ATTEST",
+      "reason": "180 - 46 = 134. Halving 134 digit by digit and dropping the remainders: 1 ÷ 2 = 0 (remainder dropped), 3 ÷ 2 = 1 (remainder dropped), 4 ÷ 2 = 2, giving 12°. That is exactly #73's description, and it matches the door's other #73 uses (4,872 ÷ 4 -> 1210; 74 ÷ 3 -> 21). 12° is implausible as an angle, but it is a real, documented short-division error and the child is not checking size, so it is a plausible answer. The key is 67°. 12° is below the key and distinct. Replaced tag #89 occurs 12 times."
+    },
+    {
+      "ref": "seat:cmteo825h005rtmmj3gnnjsrv",
+      "verdict": "ATTEST",
+      "reason": "46° rounded to 50° to ease 180 - 46: (180 - 50) ÷ 2 = 65°. The 4° (2° on each angle) is never put back (#99). It is below the key 67°, distinct, and not a rounding of it. Replaced tag #11 occurs 34 times."
+    },
+    {
+      "ref": "redraft:cmteo825h005ptmmjy1m7d9pt",
+      "verdict": "ATTEST",
+      "reason": "180 halved first, 90°, then 90 - 46 = 44°. Halving before taking away is #100's own exemplar case. 134 ÷ 2 = 67. Correct."
+    },
+    {
+      "ref": "seat:cmteo82lb00f1tmmjhfxzg4sd",
+      "verdict": "ATTEST",
+      "reason": "6,970 + 10 = 6,980: the 1 of 100 is placed one column right (#61). Retag only; the value is unchanged, so no diagnosis is dropped and the 10-count rule (which governs replacing a value) does not apply. #63 now occurs 8 times; after these six retags it keeps only its 2 genuine misplaced-carry uses."
+    },
+    {
+      "ref": "seat:cmteo82lb00f2tmmjd1il61gp",
+      "verdict": "ATTEST",
+      "reason": "6,970 + 1,000 = 7,970: the 1 of 100 is placed one column LEFT. That is #61's other named direction. Retag only; the value is unchanged, so no diagnosis is dropped and the 10-count rule (which governs replacing a value) does not apply. #63 now occurs 8 times; after these six retags it keeps only its 2 genuine misplaced-carry uses."
+    },
+    {
+      "ref": "redraft:cmteo82lc00f3tmmjlyn7o7jj",
+      "verdict": "ATTEST",
+      "reason": "Hundreds 9 + 1 = 10 with the carry dropped, so the thousands stay 6: 6,070 (#69). Correct."
+    },
+    {
+      "ref": "seat:cmteo82rg00ixtmmjn4i7tqmf",
+      "verdict": "ATTEST",
+      "reason": "5,960 + 10 = 5,970 (#61, one column right). Retag only; the value is unchanged, so no diagnosis is dropped and the 10-count rule (which governs replacing a value) does not apply. #63 now occurs 8 times; after these six retags it keeps only its 2 genuine misplaced-carry uses."
+    },
+    {
+      "ref": "seat:cmteo82rg00iytmmjo5g83zax",
+      "verdict": "ATTEST",
+      "reason": "5,960 + 1,000 = 6,960 (#61, one column left). Retag only; the value is unchanged, so no diagnosis is dropped and the 10-count rule (which governs replacing a value) does not apply. #63 now occurs 8 times; after these six retags it keeps only its 2 genuine misplaced-carry uses."
+    },
+    {
+      "ref": "redraft:cmteo82rg00iztmmjkshrh0zn",
+      "verdict": "ATTEST",
+      "reason": "Hundreds 9 + 1 = 10 with the carry dropped: 5,060 (#69). Correct."
+    },
+    {
+      "ref": "seat:cmteo82rm00j1tmmjq78asvi4",
+      "verdict": "ATTEST",
+      "reason": "9,500 + 100 = 9,600: the 1 of 1,000 is placed one column right (#61). Retag only; the value is unchanged, so no diagnosis is dropped and the 10-count rule (which governs replacing a value) does not apply. #63 now occurs 8 times; after these six retags it keeps only its 2 genuine misplaced-carry uses."
+    },
+    {
+      "ref": "seat:cmteo82rm00j2tmmjnyjv6p3v",
+      "verdict": "ATTEST",
+      "reason": "9,500 + 10,000 = 19,500: the 1 of 1,000 is placed one column left (#61). Retag only; the value is unchanged, so no diagnosis is dropped and the 10-count rule (which governs replacing a value) does not apply. #63 now occurs 8 times; after these six retags it keeps only its 2 genuine misplaced-carry uses."
+    },
+    {
+      "ref": "redraft:cmteo82rm00j3tmmjjjh1l3pg",
+      "verdict": "ATTEST",
+      "reason": "Thousands 9 + 1 = 10 with the carry dropped, leaving 500 (#69). Correct."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC05-CALC-02",
+      "verdict": "SIGN",
+      "reason": "As it will be: 37 (key), 43, 77, 129. 83 - 46 = 37 is the only correct option. The key is the smallest. The CALC-02 template goes from 4/5 to 3/5 second-smallest."
+    },
+    {
+      "itemId": "MC03-CALC-08",
+      "verdict": "SIGN",
+      "reason": "As it will be: £3600 (key), £4800, £720, £3300. 320 × £15 - £1,200 = £3,600 is the only correct option. The key is second-largest. The CALC-08 template goes from 4/5 to 3/5 smallest."
+    },
+    {
+      "itemId": "MC01-FDP-02",
+      "verdict": "HOLD",
+      "reason": "The only change is refused: 36 is not a shown child's mistake, and it would leave 8 as the only option below 12. The row stays as LIVE now."
+    },
+    {
+      "itemId": "MC04-GEOM-01",
+      "verdict": "SIGN",
+      "reason": "As it will be: 50 cm (key), 126 cm, 43 cm, 80 cm. 18 + 7 + 18 + 7 = 50 cm is the only correct option. The key is second-smallest. The GEOM-01 template and the 'a rectangle is # long' shape both drop below the flag threshold."
+    },
+    {
+      "itemId": "MC05-MEAS-04",
+      "verdict": "SIGN",
+      "reason": "As it will be: 45 cm (key), 103 cm, 55 cm, 65 cm. 74 - 29 = 45 cm is the only correct option. The key is the smallest. MEAS-04 goes from 3/3 to 2/3."
+    },
+    {
+      "itemId": "MC03-NPV-07",
+      "verdict": "HOLD",
+      "reason": "The seat to 280000 is refused as implausible and non-functional. Without it the row cannot reach its new rank. Its two redrafts are attested and can be re-proposed with a different value."
+    },
+    {
+      "itemId": "MC02-MEAS-07",
+      "verdict": "SIGN",
+      "reason": "As it will be: £5.10 (key), £4.90, £7.10, £5.75. £10 - £4.90 = £5.10 is the only correct option. The key is second-smallest."
+    },
+    {
+      "itemId": "MC04-MEAS-07",
+      "verdict": "SIGN",
+      "reason": "As it will be: £2.95 (key), £7.05, £5.30, £2.80. £10 - 3 × £2.35 = £2.95 is the only correct option. The key is second-smallest."
+    },
+    {
+      "itemId": "MC03-MEAS-07",
+      "verdict": "SIGN",
+      "reason": "As it will be: £5.75 (key), £4.25, £5.40, £6.10. £10 - £4.25 = £5.75 is the only correct option. The key is second-largest. Both new values are below the key and attested."
+    },
+    {
+      "itemId": "MC02-CALC-04",
+      "verdict": "SIGN",
+      "reason": "As it will be: £4.75 (key), £3.75, £6.55, £6.00. £10 - £5.25 = £4.75 is the only correct option. The key is second-smallest."
+    },
+    {
+      "itemId": "MC03-CALC-04",
+      "verdict": "SIGN",
+      "reason": "As it will be: £7.65 (key), £7.00, £6.65, £16.40. £20 - £12.35 = £7.65 is the only correct option. The key is second-largest."
+    },
+    {
+      "itemId": "MC03-MEAS-05",
+      "verdict": "SIGN",
+      "reason": "As it will be: £5.60 (key), £4.40, £5.50, £4.60. £10 - £4.40 = £5.60 is the only correct option. The key is the largest. All three distractors are replaced; each is a separately attested mistake, and the distractors use three different tags."
+    },
+    {
+      "itemId": "MC03-MEAS-06",
+      "verdict": "SIGN",
+      "reason": "As it will be: 285 m (key), 185 m, 280 m, 260 m. 900 - 340 - 275 = 285 m is the only correct option. The key is the largest. 280 m and 260 m are both #99, from rounding 275 to the nearest ten and to the nearest hundred."
+    },
+    {
+      "itemId": "MC02-GEOM-03",
+      "verdict": "SIGN",
+      "reason": "As it will be: 67° (key), 44°, 12°, 65°. (180° - 46°) ÷ 2 = 67° is the only correct option. The key is the largest. Note: the unchanged stem says '46 degrees' in words where the options use °; this is not new, but it is not house form."
+    },
+    {
+      "itemId": "MC04-NPV-02",
+      "verdict": "SIGN",
+      "reason": "Retag only, values unchanged: 7070 (key), 6980 (#61), 7970 (#61), 6070 (#69). Every tag now names its mistake. The rank (second-largest) is unchanged, which keeps the 'N more than X' template mixed at 3/6 largest."
+    },
+    {
+      "itemId": "MC05-NPV-02",
+      "verdict": "SIGN",
+      "reason": "Retag only, values unchanged: 6060 (key), 5970 (#61), 6960 (#61), 5060 (#69). Every tag now names its mistake. The rank is unchanged."
+    },
+    {
+      "itemId": "MC05-NPV-03",
+      "verdict": "SIGN",
+      "reason": "Retag only, values unchanged: 10500 (key), 9600 (#61), 19500 (#61), 500 (#69). Every tag now names its mistake. The rank is unchanged."
+    }
+  ]
+}
