@@ -13,7 +13,7 @@
 import { prisma } from '../src/index';
 import { deductionTier, isCommon, vocabTier, vocabTierOfSet } from './difficulty';
 import { assertNoReviewedRewrite, classifyDerivedWrites } from './reviewed-guard';
-import { buildDerivedVrDistractors, checkVr04Row, flagNearSynonymHeadwords, selectVr04Distractors, type VrOperands, type Vr04Diagnosis, type Vr04Row } from '@cluecrew/core';
+import { buildDerivedVrDistractors, buildSpreadVrDistractors, checkVr04Row, flagNearSynonymHeadwords, selectVr04Distractors, type VrOperands, type Vr04Diagnosis, type Vr04Row } from '@cluecrew/core';
 
 /**
  * Derived distractors (reviewer audit, 2026-08-05): each is the value its
@@ -24,10 +24,34 @@ function derivedOptions(
   keyValue: string | number,
   operands: VrOperands,
   ids: string[],
+  forbidden: ReadonlySet<string> = new Set(),
 ): Array<{ content: object; isCorrect: boolean; mid?: string }> {
   return [
     { content: { value: keyValue }, isCorrect: true },
-    ...buildDerivedVrDistractors(keyValue, operands, ids).map((d) => ({
+    ...buildDerivedVrDistractors(keyValue, operands, ids, forbidden).map((d) => ({
+      content: { value: d.value },
+      isCorrect: false,
+      mid: d.misconceptionId,
+    })),
+  ];
+}
+
+/**
+ * R1030: the same, but choosing among every value the tags genuinely produce so the key's VALUE rank
+ * spreads across the door (`rankCounts` is the door's running tally). Used by the orderable doors whose
+ * legacy pick put the key at one rank on every row (vr-07, vr-09, vr-11, vr-14).
+ */
+function spreadOptions(
+  keyValue: string | number,
+  operands: VrOperands,
+  ids: string[],
+  count: number,
+  rankCounts: number[],
+  forbidden: ReadonlySet<string> = new Set(),
+): Array<{ content: object; isCorrect: boolean; mid?: string }> {
+  return [
+    { content: { value: keyValue }, isCorrect: true },
+    ...buildSpreadVrDistractors(keyValue, operands, ids, count, rankCounts, forbidden).map((d) => ({
       content: { value: d.value },
       isCorrect: false,
       mid: d.misconceptionId,
@@ -374,6 +398,7 @@ const COMPARATIVES: Array<[string, string, string]> = [
 // ---------- Item builders ----------
 function numberSeries(): GenItem[] {
   const items: GenItem[] = [];
+  const rankChanging: number[] = []; const rankConstant: number[] = []; // R1030: per option count
   for (let i = 0; i < 25; i++) {
     const tier = 1 + (i % 4);
     const a = 2 + (i % 9) + (tier - 1) * 3; // magnitude climbs with tier
@@ -405,7 +430,8 @@ function numberSeries(): GenItem[] {
       n: i + 1,
       tier,
       stem: { prompt: 'What number comes next in the series?', series: terms, operands },
-      options: derivedOptions(answer, operands, ids),
+      // Never offer a term the stem prints (Annie, 2026-08-06: a child eliminates it without reasoning).
+      options: spreadOptions(answer, operands, ids, changing ? 2 : 3, changing ? rankChanging : rankConstant, new Set(terms.map(String))),
     });
   }
   return items;
@@ -429,6 +455,11 @@ function letterSeries(): GenItem[] {
       n: i + 1,
       tier,
       stem: { prompt: 'Which letter comes next?', series: terms, operands },
+      // R1030 — NOT CHANGED, ON PURPOSE. 5 LIVE rows offer the last letter shown as "one short" and 2 offer a
+      // direction value that wraps past A (Y from B). Excluding those leaves 15 rows without three honest
+      // distractors (on a step-1 series, step-repeat and off-by-one collide), and spreading the key's rank
+      // gains nothing once they are excluded. The fix needs new genuine mistakes or series that start away
+      // from the alphabet's ends: a design ruling, recorded in R1030.
       options: derivedOptions(letterOf(answer), operands, [
         'vr-letter-series-step-repeat',
         'vr-letter-series-direction',
@@ -523,6 +554,8 @@ function lettersForNumbers(): GenItem[] {
           sum: expr,
           operands,
         },
+        // R1030: NOT spread. Rank-first piled value-slip onto one side of the key (a new tell) and variety-first
+        // left the key among the two smallest; the honest fix needs questions whose last term is sometimes +.
         options: derivedOptions(key, operands, ids),
       };
     }
@@ -1055,8 +1088,14 @@ function letterConnections(): GenItem[] {
     const step = 1 + (i % 4);
     const a = i % 8;
     const c = 8 + (i % 10);
+    /**
+     * R1030 — NOT CHANGED, ON PURPOSE. Backward questions would spread the key's RANK, but the row's real
+     * shortcut is that both step-size values (key ± 1) are always offered, so the key is the MIDDLE of three
+     * consecutive letters on every row — before and after. Fixing that needs a third genuine mistake (one was
+     * proposed and refused) or a design ruling, so this generator stays as the LIVE rows were made.
+     */
     const answer = c + step;
-    // Derived (reviewer audit): step applied backwards (step-direction), and the
+    // Derived (reviewer audit): step applied the wrong way (step-direction), and the
     // jump one short/long either way (two honest step-size distractors) — each
     // the value its tag produces, not a fixed slot.
     const operands: VrOperands = { kind: 'letter-analogy', first: c, step, answer };

@@ -28963,3 +28963,49 @@ warning about predictable distractor types, arriving through value instead of ty
 spread is near uniform. Because these rows are LIVE and reviewed, R62 applies: `content:generate`
 refuses to rewrite reviewed rows, so a generator change means re-deriving each door, re-reviewing,
 re-signing and republishing under R1021. Measure each door with this script before and after.
+
+**OUTCOME OF THE GENERATOR REPAIR (David: *"Fix the VR generator"*, 2026-11-20).**
+
+*What landed.* **vr-11** (12 rows, all signed): distractors are now chosen among every value the tags
+genuinely produce, least-used rank first. Before → after: middle of 3 on 12/12 → 6/6 middle/largest;
+smallest of 4 on 13/13 → 7/6 smallest/second-smallest. The generator and the LIVE rows agree on 25/25.
+
+*What the builder is.* `buildSpreadVrDistractors` (core): a value can be offered only if a tag produces it,
+so the gate is unchanged. It never offers a `forbidden` value (one printed in the stem, or a letter that
+wraps past A or Z). Then it scores, in order: least-used rank, the key not the middle of a run, the most
+distinct mistakes, least churn. `buildDerivedVrDistractors` gained the same optional `forbidden`, default
+none. Every door that passes nothing re-derives exactly as before, so R62's guard is undisturbed.
+`propose-from-generator.ts` turns a generator change into a reviewable proposal (R62's "take the change
+to review", made a tool), with executions written FROM the operands. The reviewer refused the generic
+vr-07 value-slip template ("for one of the letters") because a sentence that fits every row checks
+nothing (R569).
+
+*What did NOT land, and why. Each is a design call, not a tuning problem.*
+- **vr-14**: the real shortcut was never rank. Both step-size values (key ± 1) are always offered, so
+  **the key is the middle of three consecutive letters on 25 of 25 rows**, before and after any
+  rank fix. A third genuine mistake was proposed and REFUSED by the independent reviewer: "applied the
+  step twice" is a SERIES mistake, not an analogy one, and the code comment showed the value had come
+  before the story. Backward questions (the reviewer's alternative) spread the rank but not the
+  run. Needs: a real third mistake, or one step-size value per row (three options would raise a guess
+  to 33%), or a ruling.
+- **vr-07**: rank-first piled value-slip into 44 of 75 seats, all one side of the key, a new tell of its
+  own; variety-first left the key among the two smallest. It also offered code values printed in the
+  stem. The fix is in the QUESTIONS: an expression whose last term is sometimes "+" lets term-dropped land
+  on either side. Generator left as LIVE.
+- **vr-09**: 5 LIVE rows offer the last letter shown as "one short", and 2 offer a wrapped "direction"
+  letter (Y from B), both of which Annie's rule excludes. Excluding them leaves 15 rows without three
+  honest distractors (on a step-1 series, step-repeat and off-by-one collide), and the key can then only
+  sit in the middle two. Needs new genuine mistakes or series that start away from the alphabet's ends.
+- **vr-11 and vr-09 keep an adjacency tell**: an off-by-one distractor makes the key one of the only two
+  options one apart (vr-11: 23 of 25). That is inherent to offering off-by-one at all, and is
+  pre-existing.
+
+*A fault in the landing door, found by the guard.* `land-proposals` wrote option values as TEXT. Since
+R1021, vr-17 (25 rows), vr-18 (18) and vr-11 (12) held a numeric key beside "17", "21". The lander now
+keeps the stored type. `normalise-option-value-types.ts` converted all 55 rows: it asserted every
+option reads identically, acted only where the latest machine signature covered the row, and re-signed
+with a method saying nothing a child sees changed.
+
+*The measure grew too.* `measure-vr-key-rank.ts` now reports "key is the middle of a run" and "key in the
+only adjacent pair". The first version measured rank only and called vr-14 a rank problem. It was a run
+problem all along (R595: a measure can be satisfied while the fault sits where it does not look).

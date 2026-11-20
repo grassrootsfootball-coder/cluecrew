@@ -146,6 +146,9 @@ export const VR_EXECUTORS: Record<string, (op: VrOperands) => string[] | null> =
     op.answer === undefined ? null : [vrLetterOf(op.answer + 1), vrLetterOf(op.answer - 1)],
   'vr14-step-direction': (op) =>
     op.first === undefined || op.step === undefined ? null : [vrLetterOf(op.first - op.step)],
+  // (A 'vr14-step-applied-twice' executor was proposed for R1030 and REFUSED by the reviewer: not a mistake
+  // children are known to make on letter ANALOGIES, and the value came before the story. The key's rank is
+  // spread instead by BACKWARD questions, where step-direction lands above the key — see letterConnections.)
 };
 
 /** Is this misconception one the gate can execute (vs a semantic, review-only one)? */
@@ -163,8 +166,10 @@ export function buildDerivedVrDistractors(
   keyValue: string | number,
   operands: VrOperands,
   ids: string[],
+  /** Values never to offer (R1030): printed in the stem, or a letter that wraps past A or Z. Default none, so a door that passes nothing re-derives exactly as before. */
+  forbidden: ReadonlySet<string> = new Set(),
 ): Array<{ value: string | number; misconceptionId: string }> {
-  const used = new Set<string>([String(keyValue)]);
+  const used = new Set<string>([String(keyValue), ...forbidden]);
   const out: Array<{ value: string | number; misconceptionId: string }> = [];
   for (const id of ids) {
     const produced = VR_EXECUTORS[id]?.(operands) ?? null;
@@ -175,6 +180,69 @@ export function buildDerivedVrDistractors(
     out.push({ value: /^-?\d+$/.test(pick) ? Number(pick) : pick, misconceptionId: id });
   }
   return out;
+}
+
+/**
+ * SPREAD THE KEY (R1030, 2026-11-20). `buildDerivedVrDistractors` takes each executor's FIRST value, and
+ * the executors list their overshoot first (answer + 1 before answer − 1), so on vr-14 the key was the
+ * second-latest letter on 25 of 25 rows, on vr-11 the smallest of four on 13 of 13. A child learns the
+ * position, not the rule.
+ *
+ * This builder chooses among EVERY value the door's executors genuinely produce, so each distractor is
+ * still exactly what its tag produces, and the gate (`checkVrDistractors`) is unchanged. It picks the
+ * combination that puts the key at the rank used least so far on this door (`rankCounts`, mutated).
+ * Ties go to the combination covering more distinct mistakes, then to the one closest to the legacy
+ * pick (least churn). Values are compared as a child orders them: numbers by size, letters by
+ * alphabet position.
+ *
+ * REVISED AFTER REVIEW (R1030):
+ *   1. `forbidden` values never appear (printed in the stem, or a letter that wraps past A or Z). The
+ *      first version picked values the stem prints, which a child eliminates without reasoning.
+ *   2. the least-used rank;
+ *   3. then the key not the middle of a run (key - 1 and key + 1 both offered);
+ *   4. then as many different mistakes as possible; then the least churn from the legacy pick.
+ * Putting variety FIRST was measured and is worse on vr-07 and vr-09: one of each mistake drags the key
+ * back to one end. On vr-07, putting RANK first piled value-slip into 44 of 75 seats, all one side, a tell
+ * of its own. So vr-07 does not use this builder; its fix needs different QUESTIONS (R1030).
+ *
+ * Opt-in per door. The legacy builder is untouched, so a door that does not ask for spreading
+ * re-derives exactly as before, and reviewed rows stay unchanged under R62's guard.
+ */
+export function buildSpreadVrDistractors(
+  keyValue: string | number,
+  operands: VrOperands,
+  ids: string[],
+  count: number,
+  rankCounts: number[],
+  forbidden: ReadonlySet<string> = new Set(),
+): Array<{ value: string | number; misconceptionId: string }> {
+  const key = String(keyValue);
+  const mag = (v: string): number => (/^-?\d+$/.test(v) ? Number(v) : v.toUpperCase().charCodeAt(0) - A_CODE);
+  const menu: Array<{ value: string; id: string }> = [];
+  for (const id of [...new Set(ids)]) for (const v of VR_EXECUTORS[id]?.(operands) ?? []) {
+    if (v !== key && !forbidden.has(v) && !menu.some((m) => m.value === v)) menu.push({ value: v, id });
+  }
+  const legacy = new Set(buildDerivedVrDistractors(keyValue, operands, ids).map((d) => String(d.value)));
+  const distinctAvailable = Math.min(count, new Set(menu.map((m) => m.id)).size);
+  let best: { pick: typeof menu; score: number[] } | null = null;
+  const better = (a: number[], b: number[]) => { for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return a[i]! < b[i]!; return false; };
+  const choose = (start: number, acc: typeof menu): void => {
+    if (acc.length === count) {
+      const rank = acc.filter((m) => mag(m.value) < mag(key)).length;
+      const vals = new Set(acc.map((m) => mag(m.value)));
+      const middleOfRun = vals.has(mag(key) - 1) && vals.has(mag(key) + 1) ? 1 : 0;
+      const score = [rankCounts[rank] ?? 0, middleOfRun, distinctAvailable - new Set(acc.map((m) => m.id)).size, acc.filter((m) => !legacy.has(m.value)).length];
+      if (!best || better(score, best.score)) best = { pick: [...acc], score };
+      return;
+    }
+    for (let i = start; i < menu.length; i++) choose(i + 1, [...acc, menu[i]!]);
+  };
+  choose(0, []);
+  if (!best) return buildDerivedVrDistractors(keyValue, operands, ids); // too few values to choose from
+  const chosen = (best as { pick: typeof menu }).pick;
+  const rank = chosen.filter((m) => mag(m.value) < mag(key)).length;
+  rankCounts[rank] = (rankCounts[rank] ?? 0) + 1;
+  return chosen.map((m) => ({ value: /^-?\d+$/.test(m.value) ? Number(m.value) : m.value, misconceptionId: m.id }));
 }
 
 export interface VrDistractorFailure {

@@ -1,0 +1,168 @@
+{
+  "door": "patterns/vr-09",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:gen-vr-09-letter-series-04-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: D F H J goes up 2 each time, so the key is J + 2 = L; one letter short of that is K (J + 1). A real counting slip, step and letters in the execution are right, and K is not printed in the stem. It puts a distractor below the key on the adjacent pair."
+    },
+    {
+      "ref": "seat:gen-vr-09-letter-series-06-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: F I L O goes up 3 each time, so the key is O + 3 = R; one letter short of that is Q (O + 2). A real counting slip, step and letters in the execution are right, and Q is not printed in the stem. It puts a distractor below the key on the adjacent pair."
+    },
+    {
+      "ref": "seat:gen-vr-09-letter-series-08-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: B E H K goes up 3 each time, so the key is K + 3 = N; one letter short of that is M (K + 2). A real counting slip, step and letters in the execution are right, and M is not printed in the stem. It puts a distractor below the key on the adjacent pair."
+    },
+    {
+      "ref": "seat:gen-vr-09-letter-series-12-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: F J N R goes up 4 each time, so the key is R + 4 = V; one letter short of that is U (R + 3). A real counting slip, step and letters in the execution are right, and U is not printed in the stem. It puts a distractor below the key on the adjacent pair."
+    },
+    {
+      "ref": "seat:gen-vr-09-letter-series-16-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: D F H J goes up 2 each time, so the key is J + 2 = L; one letter short of that is K (J + 1). A real counting slip, step and letters in the execution are right, and K is not printed in the stem. It puts a distractor below the key on the adjacent pair."
+    },
+    {
+      "ref": "seat:gen-vr-09-letter-series-18-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: F I L O goes up 3 each time, so the key is O + 3 = R; one letter short of that is Q (O + 2). A real counting slip, step and letters in the execution are right, and Q is not printed in the stem. It puts a distractor below the key on the adjacent pair."
+    },
+    {
+      "ref": "seat:gen-vr-09-letter-series-20-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: B E H K goes up 3 each time, so the key is K + 3 = N; one letter short of that is M (K + 2). A real counting slip, step and letters in the execution are right, and M is not printed in the stem. It puts a distractor below the key on the adjacent pair."
+    },
+    {
+      "ref": "seat:gen-vr-09-letter-series-24-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: F J N R goes up 4 each time, so the key is R + 4 = V; one letter short of that is U (R + 3). A real counting slip, step and letters in the execution are right, and U is not printed in the stem. It puts a distractor below the key on the adjacent pair."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-04-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: two jumps of 2 from the last letter J give L then N, against the key L; no wrap past Z. Value and tag unchanged; the execution's step and letters are right."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-04-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: reading D F H J backwards and stepping 2 back from the first letter D gives B (position 3 − 2 = 1, no wrap), against the key L. Value and tag unchanged; the execution's step and letters are right, and B is not printed in the stem."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-06-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: two jumps of 3 from the last letter O give R then U, against the key R; no wrap past Z. Value and tag unchanged; the execution's step and letters are right."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-06-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: reading F I L O backwards and stepping 3 back from the first letter F gives C (position 5 − 3 = 2, no wrap), against the key R. Value and tag unchanged; the execution's step and letters are right, and C is not printed in the stem."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-08-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: two jumps of 3 from the last letter K give N then Q, against the key N; no wrap past Z. Value and tag unchanged; the execution's step and letters are right."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-08-opt3",
+      "verdict": "REFUSE",
+      "reason": "3 back from the first letter B runs off the front of the alphabet: B to A, @, ?. Y is reached only by wrapping past A to Z, a second move that neither the execution ('3 back from the first letter B, giving Y') nor the tag ('Moved backwards through the alphabet instead of forwards') names. No key on this door ever wraps, so nothing here teaches a child to wrap, and R1030's own vr-14 ruling holds that a letter reached only past the end of the alphabet is a different error (vr14-step-applied-twice yields nothing past Z). The value is LIVE already; this refusal is of the execution as a true account of it. Decide whether wrapped direction values belong on this door, then either write the wrap into the execution or replace the option."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-12-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: two jumps of 4 from the last letter R give V then Z, against the key V; no wrap past Z. Value and tag unchanged; the execution's step and letters are right."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-12-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: reading F J N R backwards and stepping 4 back from the first letter F gives B (position 5 − 4 = 1, no wrap), against the key V. Value and tag unchanged; the execution's step and letters are right, and B is not printed in the stem."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-16-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: two jumps of 2 from the last letter J give L then N, against the key L; no wrap past Z. Value and tag unchanged; the execution's step and letters are right."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-16-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: reading D F H J backwards and stepping 2 back from the first letter D gives B (position 3 − 2 = 1, no wrap), against the key L. Value and tag unchanged; the execution's step and letters are right, and B is not printed in the stem."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-18-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: two jumps of 3 from the last letter O give R then U, against the key R; no wrap past Z. Value and tag unchanged; the execution's step and letters are right."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-18-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: reading F I L O backwards and stepping 3 back from the first letter F gives C (position 5 − 3 = 2, no wrap), against the key R. Value and tag unchanged; the execution's step and letters are right, and C is not printed in the stem."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-20-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: two jumps of 3 from the last letter K give N then Q, against the key N; no wrap past Z. Value and tag unchanged; the execution's step and letters are right."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-20-opt3",
+      "verdict": "REFUSE",
+      "reason": "3 back from the first letter B runs off the front of the alphabet: B to A, @, ?. Y is reached only by wrapping past A to Z, a second move that neither the execution ('3 back from the first letter B, giving Y') nor the tag ('Moved backwards through the alphabet instead of forwards') names. No key on this door ever wraps, so nothing here teaches a child to wrap, and R1030's own vr-14 ruling holds that a letter reached only past the end of the alphabet is a different error (vr14-step-applied-twice yields nothing past Z). The value is LIVE already; this refusal is of the execution as a true account of it. Decide whether wrapped direction values belong on this door, then either write the wrap into the execution or replace the option."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-24-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: two jumps of 4 from the last letter R give V then Z, against the key V; no wrap past Z. Value and tag unchanged; the execution's step and letters are right."
+    },
+    {
+      "ref": "redraft:gen-vr-09-letter-series-24-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: reading F J N R backwards and stepping 4 back from the first letter F gives B (position 5 − 4 = 1, no wrap), against the key V. Value and tag unchanged; the execution's step and letters are right, and B is not printed in the stem."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-09-letter-series-04",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: D F H J, ? with options B, K, L, N. The step is constant, so L is the only correct letter; each distractor is a distinct wrong letter, none printed in the stem, none past the ends of the alphabet. The key moves from among the two earliest to second-latest, which is the spread R1030 asks for; no new pattern (off-by-one below the key now on 13 rows and above on 12)."
+    },
+    {
+      "itemId": "gen-vr-09-letter-series-06",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: F I L O, ? with options C, Q, R, U. The step is constant, so R is the only correct letter; each distractor is a distinct wrong letter, none printed in the stem, none past the ends of the alphabet. The key moves from among the two earliest to second-latest, which is the spread R1030 asks for; no new pattern (off-by-one below the key now on 13 rows and above on 12)."
+    },
+    {
+      "itemId": "gen-vr-09-letter-series-08",
+      "verdict": "HOLD",
+      "reason": "As it will stand (B E H K, ?; options M, N, Q, Y; key N): one correct answer and every distractor wrong, but the direction execution for Y is refused: it hides the wrap past A that produces Y. The off-by-one seat and step-repeat redraft on this row are sound."
+    },
+    {
+      "itemId": "gen-vr-09-letter-series-12",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: F J N R, ? with options B, U, V, Z. The step is constant, so V is the only correct letter; each distractor is a distinct wrong letter, none printed in the stem, none past the ends of the alphabet. The key moves from among the two earliest to second-latest, which is the spread R1030 asks for; no new pattern (off-by-one below the key now on 13 rows and above on 12)."
+    },
+    {
+      "itemId": "gen-vr-09-letter-series-16",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: D F H J, ? with options B, K, L, N. The step is constant, so L is the only correct letter; each distractor is a distinct wrong letter, none printed in the stem, none past the ends of the alphabet. The key moves from among the two earliest to second-latest, which is the spread R1030 asks for; no new pattern (off-by-one below the key now on 13 rows and above on 12)."
+    },
+    {
+      "itemId": "gen-vr-09-letter-series-18",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: F I L O, ? with options C, Q, R, U. The step is constant, so R is the only correct letter; each distractor is a distinct wrong letter, none printed in the stem, none past the ends of the alphabet. The key moves from among the two earliest to second-latest, which is the spread R1030 asks for; no new pattern (off-by-one below the key now on 13 rows and above on 12)."
+    },
+    {
+      "itemId": "gen-vr-09-letter-series-20",
+      "verdict": "HOLD",
+      "reason": "As it will stand (B E H K, ?; options M, N, Q, Y; key N): one correct answer and every distractor wrong, but the direction execution for Y is refused: it hides the wrap past A that produces Y. The off-by-one seat and step-repeat redraft on this row are sound."
+    },
+    {
+      "itemId": "gen-vr-09-letter-series-24",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: F J N R, ? with options B, U, V, Z. The step is constant, so V is the only correct letter; each distractor is a distinct wrong letter, none printed in the stem, none past the ends of the alphabet. The key moves from among the two earliest to second-latest, which is the spread R1030 asks for; no new pattern (off-by-one below the key now on 13 rows and above on 12)."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+ "batch": "V1",
+ "proposer": "agent",
+ "entries": [
+  {
+   "id": "vr14-step-applied-twice",
+   "district": "VR",
+   "category": null,
+   "description": "Made the first pair's jump twice from the new letter instead of once, so the answer overshoots the key by one more step. For C → F (three letters on) and K, the child gives Q instead of N: K to N is one jump of three, and N to Q is a second.",
+   "childHint": "Make the first pair's jump just once. Start at the new letter and stop after one jump.",
+   "why": "A real mistake on letter-analogy questions, though less common than counting the jump one short or long (vr14-step-size) or going the wrong way (vr14-step-direction), and I cannot cite a published frequency for it. Two routes lead to it. First, a series habit: letter-series questions ask the child to keep going, and a child who reads the pair and the new letter as one run keeps jumping past the answer. Second, a counting slip: the child counts the jump from the new letter, lands on the key, and then counts the jump again from there because the first pair showed two letters and so seemed to ask for two moves. No ACTIVE VR entry names it for this door. vr14-step-size gives the key plus or minus one, and vr14-step-direction gives the new letter minus the step, so both always sit at or below the key plus one. vr-letter-series-step-repeat names the same move for letter SERIES, but its hint ('Count the step from the last letter just once.') points at a 'last letter', which an analogy does not have: the move starts from the new letter given on its own. The vr14 entries already shadow their series siblings door by door (vr14-step-direction beside vr-letter-series-direction), so a separate vr14 entry follows house practice rather than stretching the series hint onto a shape it does not fit. The value is the new letter plus twice the step, which is the key plus the step. I recomputed it on all 25 LIVE rows from stemWord and operands.step. On the 18 rows with a step of 2, 3 or 4 it is a new letter, strictly above every current option: the current options are the key, the key plus one, the key minus one, and the new letter minus the step. On the 7 rows with a step of 1 (01, 05, 09, 13, 17, 21, 25) the value equals the key plus one, which is already the vr14-step-size option, so those rows are NOT proposed as carriers: the two mistakes cannot be told apart there. No current row wraps past Z. The highest value is Z, on row 20 (R, step 4). Wrapped values should be EXCLUDED, not wrapped: a child who overshoots past Z may stop at Z, wrap to A, or give up, so the move has no single value there. A generator meeting that case should drop this distractor rather than wrap it. The hint describes the move and is true on every vr-14 row, including the step-1 rows it does not carry on: on every row the key is the new letter moved by exactly one copy of the first pair's jump. 'The new letter' is the phrase vr14-step-size's hint already uses for the stem letter. The hint has no direction word, so it stays true if a row ever runs backwards. On the step-2 rows the value is two letters past the key, and a reviewer could call that a long count rather than a doubled jump. That is the weakest part of the case, and it is why the description's example uses a step of three.",
+   "carriers": [
+    "gen-vr-14-letter-connections-02",
+    "gen-vr-14-letter-connections-03",
+    "gen-vr-14-letter-connections-04",
+    "gen-vr-14-letter-connections-06",
+    "gen-vr-14-letter-connections-07",
+    "gen-vr-14-letter-connections-08",
+    "gen-vr-14-letter-connections-10",
+    "gen-vr-14-letter-connections-11",
+    "gen-vr-14-letter-connections-12",
+    "gen-vr-14-letter-connections-14",
+    "gen-vr-14-letter-connections-15",
+    "gen-vr-14-letter-connections-16",
+    "gen-vr-14-letter-connections-18",
+    "gen-vr-14-letter-connections-19",
+    "gen-vr-14-letter-connections-20",
+    "gen-vr-14-letter-connections-22",
+    "gen-vr-14-letter-connections-23",
+    "gen-vr-14-letter-connections-24"
+   ],
+   "valuesProduced": {
+    "gen-vr-14-letter-connections-02": "N",
+    "gen-vr-14-letter-connections-03": "Q",
+    "gen-vr-14-letter-connections-04": "T",
+    "gen-vr-14-letter-connections-06": "R",
+    "gen-vr-14-letter-connections-07": "U",
+    "gen-vr-14-letter-connections-08": "X",
+    "gen-vr-14-letter-connections-10": "V",
+    "gen-vr-14-letter-connections-11": "O",
+    "gen-vr-14-letter-connections-12": "R",
+    "gen-vr-14-letter-connections-14": "P",
+    "gen-vr-14-letter-connections-15": "S",
+    "gen-vr-14-letter-connections-16": "V",
+    "gen-vr-14-letter-connections-18": "T",
+    "gen-vr-14-letter-connections-19": "W",
+    "gen-vr-14-letter-connections-20": "Z",
+    "gen-vr-14-letter-connections-22": "N",
+    "gen-vr-14-letter-connections-23": "Q",
+    "gen-vr-14-letter-connections-24": "T"
+   }
+  }
+ ]
+}

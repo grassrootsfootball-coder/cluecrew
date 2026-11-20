@@ -1,0 +1,1323 @@
+{
+ "door": "vr-09",
+ "caseId": "case-vr-09",
+ "title": "The Alphabet Trail",
+ "questionType": "vr-09-letter-series",
+ "entries": {
+  "vr-letter-series-step-repeat": {
+   "description": "Applied the letter step twice, overshooting the target.",
+   "childHint": "One jump at a time! Count the step from the last letter just once."
+  },
+  "vr-letter-series-direction": {
+   "description": "Moved backwards through the alphabet instead of forwards.",
+   "childHint": "Which way is the series moving through the alphabet? Check the first two letters."
+  },
+  "vr-letter-series-off-by-one": {
+   "description": "Correct rule, but landed one letter short or long.",
+   "childHint": "Count along the alphabet again. Land one letter at a time."
+  }
+ },
+ "houseFormExemplars": {},
+ "rows": [
+  {
+   "itemId": "gen-vr-09-letter-series-01",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 0,
+     "answer": 4
+    }
+   },
+   "solution": null,
+   "key": "E",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt1",
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt2",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt3",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt4",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-02",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "B",
+     "D",
+     "F",
+     "H"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 1,
+     "answer": 9
+    }
+   },
+   "solution": null,
+   "key": "J",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt1",
+     "value": "J",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt3",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt4",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-03",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "G",
+     "K",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 2,
+     "answer": 18
+    }
+   },
+   "solution": null,
+   "key": "S",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt2",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt4",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-04",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "F",
+     "H",
+     "J"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 3,
+     "answer": 11
+    }
+   },
+   "solution": null,
+   "key": "L",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt2",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt3",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt4",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-05",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "G",
+     "I",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 4,
+     "answer": 12
+    }
+   },
+   "solution": null,
+   "key": "M",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt1",
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt4",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-06",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "I",
+     "L",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 5,
+     "answer": 17
+    }
+   },
+   "solution": null,
+   "key": "R",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt2",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt4",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-07",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "C",
+     "E",
+     "G"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 0,
+     "answer": 8
+    }
+   },
+   "solution": null,
+   "key": "I",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt2",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt4",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-08",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "B",
+     "E",
+     "H",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 1,
+     "answer": 13
+    }
+   },
+   "solution": null,
+   "key": "N",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt2",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt4",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-09",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "F",
+     "I",
+     "L"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 2,
+     "answer": 14
+    }
+   },
+   "solution": null,
+   "key": "O",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt1",
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt3",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt4",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-10",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 3,
+     "answer": 7
+    }
+   },
+   "solution": null,
+   "key": "H",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt1",
+     "value": "H",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt2",
+     "value": "I",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt4",
+     "value": "G",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-11",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "H",
+     "K",
+     "N"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 4,
+     "answer": 16
+    }
+   },
+   "solution": null,
+   "key": "Q",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt1",
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt3",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt4",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-12",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "J",
+     "N",
+     "R"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 5,
+     "answer": 21
+    }
+   },
+   "solution": null,
+   "key": "V",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt1",
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt2",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt3",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt4",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-13",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 0,
+     "answer": 4
+    }
+   },
+   "solution": null,
+   "key": "E",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt1",
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt2",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt3",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt4",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-14",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "B",
+     "D",
+     "F",
+     "H"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 1,
+     "answer": 9
+    }
+   },
+   "solution": null,
+   "key": "J",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt1",
+     "value": "J",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt3",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt4",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-15",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "G",
+     "K",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 2,
+     "answer": 18
+    }
+   },
+   "solution": null,
+   "key": "S",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt2",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt4",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-16",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "F",
+     "H",
+     "J"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 3,
+     "answer": 11
+    }
+   },
+   "solution": null,
+   "key": "L",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-16-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-16-opt2",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-16-opt3",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-16-opt4",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-17",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "G",
+     "I",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 4,
+     "answer": 12
+    }
+   },
+   "solution": null,
+   "key": "M",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt1",
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt4",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-18",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "I",
+     "L",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 5,
+     "answer": 17
+    }
+   },
+   "solution": null,
+   "key": "R",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt2",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt4",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-19",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "C",
+     "E",
+     "G"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 0,
+     "answer": 8
+    }
+   },
+   "solution": null,
+   "key": "I",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt2",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt4",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-20",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "B",
+     "E",
+     "H",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 1,
+     "answer": 13
+    }
+   },
+   "solution": null,
+   "key": "N",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt2",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt4",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-21",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "F",
+     "I",
+     "L"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 2,
+     "answer": 14
+    }
+   },
+   "solution": null,
+   "key": "O",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt1",
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt3",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt4",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-22",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "E",
+     "F",
+     "G"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 3,
+     "answer": 7
+    }
+   },
+   "solution": null,
+   "key": "H",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt1",
+     "value": "H",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt2",
+     "value": "I",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt4",
+     "value": "G",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-23",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "H",
+     "K",
+     "N"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 4,
+     "answer": 16
+    }
+   },
+   "solution": null,
+   "key": "Q",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt1",
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt3",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt4",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-24",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "J",
+     "N",
+     "R"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 5,
+     "answer": 21
+    }
+   },
+   "solution": null,
+   "key": "V",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt1",
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt2",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt3",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt4",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-25",
+   "questionType": "vr-09-letter-series",
+   "signed": false,
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 1,
+     "first": 0,
+     "answer": 4
+    }
+   },
+   "solution": null,
+   "key": "E",
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt1",
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt2",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt3",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt4",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

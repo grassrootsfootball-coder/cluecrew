@@ -33,7 +33,10 @@ async function main() {
   const out: Array<Record<string, unknown>> = [];
   for (const e of prop.entries) {
     const faults: string[] = [];
-    if (!/^[a-z]+-\d+-[a-z0-9-]+$/.test(e.id)) faults.push(`id "${e.id}" is not house form <district>-<n>-<slug>`);
+    // House form is the LIBRARY's, read from its own ids: maths-<n>-<slug>, vr<nn>-<slug> (vr14-step-size), or a
+    // family prefix with a slug (vr-series-off-by-one, en-…). The first version admitted only the maths shape, so
+    // the V1 drafter renamed vr14-step-applied-twice to pass it, breaking the naming of its siblings (R1030).
+    if (!/^(maths-\d+|vr\d{2}|vr|en|nvr)-[a-z0-9]+(-[a-z0-9]+)*$/.test(e.id)) faults.push(`id "${e.id}" is not house form (maths-<n>-<slug>, vr<nn>-<slug>, vr-/en-/nvr-<slug>)`);
     if (await prisma.misconception.findUnique({ where: { id: e.id } })) faults.push('id already exists');
     for (const f of checkMisconceptionProposal(e)) faults.push(`${f.rule}: ${f.detail}`);
     for (const f of checkChildFacingText({ role: 'hint', label: `${e.id}.childHint`, text: e.childHint }).filter(isBlocking)) faults.push(`${f.rule}: ${f.detail}`);

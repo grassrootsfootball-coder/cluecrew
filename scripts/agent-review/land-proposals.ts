@@ -249,7 +249,10 @@ async function main() {
         for (const o of r.options) {
           const b = before.options.find((x) => x.id === o.optionId)!;
           if (val(b.content) === o.value && b.isCorrect === o.isKey && b.misconceptionId === o.tag && (b.misconceptionExecution?.trim() || null) === o.execution) continue;
-          await tx.itemOption.update({ where: { id: o.optionId }, data: { content: { ...(b.content as object), value: o.value }, isCorrect: o.isKey, misconceptionId: o.isKey ? null : o.tag, misconceptionExecution: o.isKey ? null : o.execution } });
+          // Keep the stored TYPE: a numeric value written back as text left vr-11/17/18 rows mixing 18 with "17" (R1030).
+          const storedValue = (b.content as { value?: unknown })?.value;
+          const typed = typeof storedValue === 'number' && /^-?\d+(\.\d+)?$/.test(o.value) ? Number(o.value) : o.value;
+          await tx.itemOption.update({ where: { id: o.optionId }, data: { content: { ...(b.content as object), value: typed }, isCorrect: o.isKey, misconceptionId: o.isKey ? null : o.tag, misconceptionExecution: o.isKey ? null : o.execution } });
         }
         await tx.attributionEvent.create({ data: { recordType: 'item', recordId: id, action: 'AMENDED', reviewerId: REVIEWER,
           actor: HOLDS ? 'agent-drafter' : 'agent-reviewer', recordedBy: RECORDED_BY,

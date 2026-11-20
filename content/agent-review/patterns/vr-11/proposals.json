@@ -1,0 +1,232 @@
+{
+ "door": "patterns/vr-11",
+ "proposer": "generator (R1030) — executions to be written by a drafting agent",
+ "source": "GENERATORS['vr-11-number-series']",
+ "seats": [
+  {
+   "optionId": "gen-vr-11-number-series-02-opt2",
+   "itemId": "gen-vr-11-number-series-02",
+   "oldValue": "19",
+   "tag": "vr-series-off-by-one",
+   "newValue": "17",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 17 instead of 18."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-04-opt3",
+   "itemId": "gen-vr-11-number-series-04",
+   "oldValue": "53",
+   "tag": "vr-series-off-by-one",
+   "newValue": "51",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 51 instead of 52."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-06-opt2",
+   "itemId": "gen-vr-11-number-series-06",
+   "oldValue": "19",
+   "tag": "vr-series-off-by-one",
+   "newValue": "17",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 17 instead of 18."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-08-opt3",
+   "itemId": "gen-vr-11-number-series-08",
+   "oldValue": "53",
+   "tag": "vr-series-off-by-one",
+   "newValue": "51",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 51 instead of 52."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-10-opt2",
+   "itemId": "gen-vr-11-number-series-10",
+   "oldValue": "30",
+   "tag": "vr-series-off-by-one",
+   "newValue": "28",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-12-opt3",
+   "itemId": "gen-vr-11-number-series-12",
+   "oldValue": "44",
+   "tag": "vr-series-off-by-one",
+   "newValue": "42",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 42 instead of 43."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-14-opt2",
+   "itemId": "gen-vr-11-number-series-14",
+   "oldValue": "30",
+   "tag": "vr-series-off-by-one",
+   "newValue": "28",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-16-opt3",
+   "itemId": "gen-vr-11-number-series-16",
+   "oldValue": "44",
+   "tag": "vr-series-off-by-one",
+   "newValue": "42",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 42 instead of 43."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-18-opt2",
+   "itemId": "gen-vr-11-number-series-18",
+   "oldValue": "30",
+   "tag": "vr-series-off-by-one",
+   "newValue": "28",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-20-opt3",
+   "itemId": "gen-vr-11-number-series-20",
+   "oldValue": "55",
+   "tag": "vr-series-off-by-one",
+   "newValue": "53",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 53 instead of 54."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-22-opt2",
+   "itemId": "gen-vr-11-number-series-22",
+   "oldValue": "21",
+   "tag": "vr-series-off-by-one",
+   "newValue": "19",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 19 instead of 20."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-24-opt3",
+   "itemId": "gen-vr-11-number-series-24",
+   "oldValue": "55",
+   "tag": "vr-series-off-by-one",
+   "newValue": "53",
+   "execution": "Had the rule right but slipped by one on the last jump, giving 53 instead of 54."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "gen-vr-11-number-series-02-opt3",
+   "itemId": "gen-vr-11-number-series-02",
+   "value": "21",
+   "tag": "vr-series-step-applied-twice",
+   "execution": "Added the step of 3 twice from the last term, giving 21 instead of 18."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-02-opt4",
+   "itemId": "gen-vr-11-number-series-02",
+   "value": "27",
+   "tag": "vr-series-sum-of-last-two",
+   "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 27."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-04-opt2",
+   "itemId": "gen-vr-11-number-series-04",
+   "value": "49",
+   "tag": "vr-series-step-carryover",
+   "execution": "Reused the previous gap of 11 instead of letting it grow, giving 49 instead of 52."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-06-opt3",
+   "itemId": "gen-vr-11-number-series-06",
+   "value": "20",
+   "tag": "vr-series-step-applied-twice",
+   "execution": "Added the step of 2 twice from the last term, giving 20 instead of 18."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-06-opt4",
+   "itemId": "gen-vr-11-number-series-06",
+   "value": "30",
+   "tag": "vr-series-sum-of-last-two",
+   "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 30."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-08-opt2",
+   "itemId": "gen-vr-11-number-series-08",
+   "value": "49",
+   "tag": "vr-series-step-carryover",
+   "execution": "Reused the previous gap of 10 instead of letting it grow, giving 49 instead of 52."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-10-opt3",
+   "itemId": "gen-vr-11-number-series-10",
+   "value": "35",
+   "tag": "vr-series-step-applied-twice",
+   "execution": "Added the step of 6 twice from the last term, giving 35 instead of 29."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-10-opt4",
+   "itemId": "gen-vr-11-number-series-10",
+   "value": "40",
+   "tag": "vr-series-sum-of-last-two",
+   "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 40."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-12-opt2",
+   "itemId": "gen-vr-11-number-series-12",
+   "value": "40",
+   "tag": "vr-series-step-carryover",
+   "execution": "Reused the previous gap of 9 instead of letting it grow, giving 40 instead of 43."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-14-opt3",
+   "itemId": "gen-vr-11-number-series-14",
+   "value": "34",
+   "tag": "vr-series-step-applied-twice",
+   "execution": "Added the step of 5 twice from the last term, giving 34 instead of 29."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-14-opt4",
+   "itemId": "gen-vr-11-number-series-14",
+   "value": "43",
+   "tag": "vr-series-sum-of-last-two",
+   "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 43."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-16-opt2",
+   "itemId": "gen-vr-11-number-series-16",
+   "value": "40",
+   "tag": "vr-series-step-carryover",
+   "execution": "Reused the previous gap of 8 instead of letting it grow, giving 40 instead of 43."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-18-opt3",
+   "itemId": "gen-vr-11-number-series-18",
+   "value": "33",
+   "tag": "vr-series-step-applied-twice",
+   "execution": "Added the step of 4 twice from the last term, giving 33 instead of 29."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-18-opt4",
+   "itemId": "gen-vr-11-number-series-18",
+   "value": "46",
+   "tag": "vr-series-sum-of-last-two",
+   "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 46."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-20-opt2",
+   "itemId": "gen-vr-11-number-series-20",
+   "value": "51",
+   "tag": "vr-series-step-carryover",
+   "execution": "Reused the previous gap of 12 instead of letting it grow, giving 51 instead of 54."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-22-opt3",
+   "itemId": "gen-vr-11-number-series-22",
+   "value": "23",
+   "tag": "vr-series-step-applied-twice",
+   "execution": "Added the step of 3 twice from the last term, giving 23 instead of 20."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-22-opt4",
+   "itemId": "gen-vr-11-number-series-22",
+   "value": "31",
+   "tag": "vr-series-sum-of-last-two",
+   "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 31."
+  },
+  {
+   "optionId": "gen-vr-11-number-series-24-opt2",
+   "itemId": "gen-vr-11-number-series-24",
+   "value": "51",
+   "tag": "vr-series-step-carryover",
+   "execution": "Reused the previous gap of 11 instead of letting it grow, giving 51 instead of 54."
+  }
+ ],
+ "rebuilds": []
+}

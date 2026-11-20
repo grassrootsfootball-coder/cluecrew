@@ -27,11 +27,18 @@ async function main() {
     const rows = await prisma.item.findMany({ where: { questionTypeId: c.questionTypeId, status: 'LIVE', pool: 'PRACTICE' }, orderBy: { id: 'asc' },
       select: { id: true, options: { select: { content: true, isCorrect: true }, orderBy: { id: 'asc' } } } });
     requirePopulation(`vr-key-rank:${door}`, { 'LIVE practice rows': rows.length });
+    let middleOfRun = 0; let inAdjacentPair = 0;
     const byK: Record<number, Record<number, number>> = {}; const perRow: Array<{ itemId: string; k: number; rank: number }> = []; const unrankable: string[] = [];
     for (const r of rows) {
       const m = r.options.map((o) => ({ v: mag(val(o.content)), key: o.isCorrect }));
       if (m.some((x) => x.v === null) || new Set(m.map((x) => x.v)).size !== m.length) { unrankable.push(r.id); continue; }
       const sorted = [...m].sort((a, b) => a.v! - b.v!); const rank = sorted.findIndex((x) => x.key);
+      // R1030: rank alone missed the real vr-14 shortcut. When key - 1 and key + 1 are both offered, the key is
+      // the MIDDLE of a run of three; when exactly one adjacent pair exists and holds the key, it narrows to two.
+      const kv = m.find((x) => x.key)!.v!; const vs = new Set(m.map((x) => x.v!));
+      if (vs.has(kv - 1) && vs.has(kv + 1)) middleOfRun++;
+      const pairs = sorted.slice(1).map((x, i) => [sorted[i]!, x] as const).filter(([a, b]) => b.v! - a.v! === 1);
+      if (pairs.length === 1 && (pairs[0]![0].key || pairs[0]![1].key)) inAdjacentPair++;
       ((byK[m.length] ??= {})[rank] = (byK[m.length]![rank] ?? 0) + 1); perRow.push({ itemId: r.id, k: m.length, rank });
     }
     const flags: string[] = [];
@@ -40,6 +47,7 @@ async function main() {
       for (let r = 0; r < Number(k); r++) { const c2 = ranks[r] ?? 0; if (n >= 20 && (c2 > 1.5 * share || c2 < 0.5 * share)) flags.push(`k=${k} rank ${r}: ${c2} of ${n} (uniform ${share.toFixed(1)})`); }
       console.log(`${door.padEnd(6)} k=${k}: ${n} rankable — ${Array.from({ length: Number(k) }, (_, r) => `${r}:${ranks[r] ?? 0}`).join('  ')}${unrankable.length ? `  (${unrankable.length} unrankable)` : ''}`);
     }
+    console.log(`    key is the middle of a run of three: ${middleOfRun} of ${perRow.length}; key in the only adjacent pair: ${inAdjacentPair} of ${perRow.length}`);
     for (const f of flags) console.log(`    ✗ ${f}`);
     if (flags.length) flaggedAny = true;
     report[door] = { byK, unrankable, flags, perRow };

@@ -1,0 +1,218 @@
+{
+  "door": "patterns/vr-11",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:gen-vr-11-number-series-02-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 6, 9, 12, 15: gaps 3, 3, 3 are constant, so the key is 15 + 3 = 18; one less is 17, a real slip on the last jump. The execution's numbers are right, 17 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-04-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 14, 19, 27, 38: gaps 5, 8, 11 grow by 3, so the next gap is 14 and the key is 38 + 14 = 52; one less is 51, a real slip on the last jump. The execution's numbers are right, 51 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-06-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 10, 12, 14, 16: gaps 2, 2, 2 are constant, so the key is 16 + 2 = 18; one less is 17, a real slip on the last jump. The execution's numbers are right, 17 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-08-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 18, 22, 29, 39: gaps 4, 7, 10 grow by 3, so the next gap is 13 and the key is 39 + 13 = 52; one less is 51, a real slip on the last jump. The execution's numbers are right, 51 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-10-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 5, 11, 17, 23: gaps 6, 6, 6 are constant, so the key is 23 + 6 = 29; one less is 28, a real slip on the last jump. The execution's numbers are right, 28 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-12-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 13, 16, 22, 31: gaps 3, 6, 9 grow by 3, so the next gap is 12 and the key is 31 + 12 = 43; one less is 42, a real slip on the last jump. The execution's numbers are right, 42 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-14-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 9, 14, 19, 24: gaps 5, 5, 5 are constant, so the key is 24 + 5 = 29; one less is 28, a real slip on the last jump. The execution's numbers are right, 28 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-16-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 17, 19, 24, 32: gaps 2, 5, 8 grow by 3, so the next gap is 11 and the key is 32 + 11 = 43; one less is 42, a real slip on the last jump. The execution's numbers are right, 42 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-18-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 13, 17, 21, 25: gaps 4, 4, 4 are constant, so the key is 25 + 4 = 29; one less is 28, a real slip on the last jump. The execution's numbers are right, 28 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-20-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 12, 18, 27, 39: gaps 6, 9, 12 grow by 3, so the next gap is 15 and the key is 39 + 15 = 54; one less is 53, a real slip on the last jump. The execution's numbers are right, 53 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-22-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 8, 11, 14, 17: gaps 3, 3, 3 are constant, so the key is 17 + 3 = 20; one less is 19, a real slip on the last jump. The execution's numbers are right, 19 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "seat:gen-vr-11-number-series-24-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 16, 21, 29, 40: gaps 5, 8, 11 grow by 3, so the next gap is 14 and the key is 40 + 14 = 54; one less is 53, a real slip on the last jump. The execution's numbers are right, 53 is not printed in the stem, and it puts a distractor below the key."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-02-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 6, 9, 12, 15: gaps 3, 3, 3 are constant, so the key is 15 + 3 = 18; two jumps from 15 give 15 + 3 + 3 = 21. Value and tag unchanged; the execution names the step 3, 21 and 18 correctly."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-02-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 6, 9, 12, 15: adding the last two terms, 12 + 15 = 27, against the key 18. Value and tag unchanged; the execution is true and quotes only 27."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-04-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 14, 19, 27, 38: gaps 5, 8, 11 grow by 3, so the next gap is 14 and the key is 38 + 14 = 52; reusing the last gap 11 gives 38 + 11 = 49. Value and tag unchanged; the execution's gap of 11, 49 and 52 are right."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-06-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 10, 12, 14, 16: gaps 2, 2, 2 are constant, so the key is 16 + 2 = 18; two jumps from 16 give 16 + 2 + 2 = 20. Value and tag unchanged; the execution names the step 2, 20 and 18 correctly."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-06-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 10, 12, 14, 16: adding the last two terms, 14 + 16 = 30, against the key 18. Value and tag unchanged; the execution is true and quotes only 30."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-08-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 18, 22, 29, 39: gaps 4, 7, 10 grow by 3, so the next gap is 13 and the key is 39 + 13 = 52; reusing the last gap 10 gives 39 + 10 = 49. Value and tag unchanged; the execution's gap of 10, 49 and 52 are right."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-10-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 5, 11, 17, 23: gaps 6, 6, 6 are constant, so the key is 23 + 6 = 29; two jumps from 23 give 23 + 6 + 6 = 35. Value and tag unchanged; the execution names the step 6, 35 and 29 correctly."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-10-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 5, 11, 17, 23: adding the last two terms, 17 + 23 = 40, against the key 29. Value and tag unchanged; the execution is true and quotes only 40."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-12-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 13, 16, 22, 31: gaps 3, 6, 9 grow by 3, so the next gap is 12 and the key is 31 + 12 = 43; reusing the last gap 9 gives 31 + 9 = 40. Value and tag unchanged; the execution's gap of 9, 40 and 43 are right."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-14-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 9, 14, 19, 24: gaps 5, 5, 5 are constant, so the key is 24 + 5 = 29; two jumps from 24 give 24 + 5 + 5 = 34. Value and tag unchanged; the execution names the step 5, 34 and 29 correctly."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-14-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 9, 14, 19, 24: adding the last two terms, 19 + 24 = 43, against the key 29. Value and tag unchanged; the execution is true and quotes only 43."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-16-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 17, 19, 24, 32: gaps 2, 5, 8 grow by 3, so the next gap is 11 and the key is 32 + 11 = 43; reusing the last gap 8 gives 32 + 8 = 40. Value and tag unchanged; the execution's gap of 8, 40 and 43 are right."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-18-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 13, 17, 21, 25: gaps 4, 4, 4 are constant, so the key is 25 + 4 = 29; two jumps from 25 give 25 + 4 + 4 = 33. Value and tag unchanged; the execution names the step 4, 33 and 29 correctly."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-18-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 13, 17, 21, 25: adding the last two terms, 21 + 25 = 46, against the key 29. Value and tag unchanged; the execution is true and quotes only 46."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-20-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 12, 18, 27, 39: gaps 6, 9, 12 grow by 3, so the next gap is 15 and the key is 39 + 15 = 54; reusing the last gap 12 gives 39 + 12 = 51. Value and tag unchanged; the execution's gap of 12, 51 and 54 are right."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-22-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 8, 11, 14, 17: gaps 3, 3, 3 are constant, so the key is 17 + 3 = 20; two jumps from 17 give 17 + 3 + 3 = 23. Value and tag unchanged; the execution names the step 3, 23 and 20 correctly."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-22-opt4",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 8, 11, 14, 17: adding the last two terms, 14 + 17 = 31, against the key 20. Value and tag unchanged; the execution is true and quotes only 31."
+    },
+    {
+      "ref": "redraft:gen-vr-11-number-series-24-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed on 16, 21, 29, 40: gaps 5, 8, 11 grow by 3, so the next gap is 14 and the key is 40 + 14 = 54; reusing the last gap 11 gives 40 + 11 = 51. Value and tag unchanged; the execution's gap of 11, 51 and 54 are right."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-11-number-series-02",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 6, 9, 12, 15, ? with options 17, 18, 21, 27. The rule is unambiguous, so 18 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the smallest of four to second-smallest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-04",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 14, 19, 27, 38, ? with options 49, 51, 52. The rule is unambiguous, so 52 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the middle of three to the largest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-06",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 10, 12, 14, 16, ? with options 17, 18, 20, 30. The rule is unambiguous, so 18 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the smallest of four to second-smallest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-08",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 18, 22, 29, 39, ? with options 49, 51, 52. The rule is unambiguous, so 52 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the middle of three to the largest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-10",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 5, 11, 17, 23, ? with options 28, 29, 35, 40. The rule is unambiguous, so 29 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the smallest of four to second-smallest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-12",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 13, 16, 22, 31, ? with options 40, 42, 43. The rule is unambiguous, so 43 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the middle of three to the largest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-14",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 9, 14, 19, 24, ? with options 28, 29, 34, 43. The rule is unambiguous, so 29 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the smallest of four to second-smallest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-16",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 17, 19, 24, 32, ? with options 40, 42, 43. The rule is unambiguous, so 43 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the middle of three to the largest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-18",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 13, 17, 21, 25, ? with options 28, 29, 33, 46. The rule is unambiguous, so 29 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the smallest of four to second-smallest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-20",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 12, 18, 27, 39, ? with options 51, 53, 54. The rule is unambiguous, so 54 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the middle of three to the largest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-22",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 8, 11, 14, 17, ? with options 19, 20, 23, 31. The rule is unambiguous, so 20 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the smallest of four to second-smallest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    },
+    {
+      "itemId": "gen-vr-11-number-series-24",
+      "verdict": "SIGN",
+      "reason": "Read as it will stand: 16, 21, 29, 40, ? with options 51, 53, 54. The rule is unambiguous, so 54 is the only correct answer; every distractor is a distinct wrong number, none printed in the stem. The key moves from the middle of three to the largest; no new pattern (the off-by-one now sits below the key on 12 rows and above on 13). Residual door-level pattern noted in the report, not created here."
+    }
+  ]
+}
