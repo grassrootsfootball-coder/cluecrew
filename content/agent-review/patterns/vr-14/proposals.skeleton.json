@@ -6,170 +6,369 @@
  "redrafts": [],
  "rebuilds": [
   {
-   "itemId": "gen-vr-14-letter-connections-02",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
+   "itemId": "gen-vr-14-letter-connections-01",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
    "stem": {
     "pairA": [
-     "D",
-     "B"
+     "A",
+     "C"
     ],
     "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
     "operands": {
      "kind": "letter-analogy",
-     "first": 9,
-     "step": -2,
-     "answer": 7
+     "first": 8,
+     "step": 2,
+     "answer": 10
     },
-    "stemWord": "J"
+    "stemWord": "I"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-01-opt1",
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-01-opt2",
+     "value": "G",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 2 back from the new letter I instead of forward, as the first pair goes, giving G instead of K."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-01-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter long from the new letter I, landing on L instead of K."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter I moves 2 on to the letter K. The letter G goes the other way. The letter L is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-01-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-02",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "D",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 13,
+     "step": 3,
+     "answer": 16
+    },
+    "stemWord": "N"
    },
    "options": [
     {
      "optionId": "gen-vr-14-letter-connections-02-opt1",
-     "value": "H",
+     "value": "Q",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
      "optionId": "gen-vr-14-letter-connections-02-opt2",
-     "value": "L",
+     "value": "K",
      "isKey": false,
      "tag": "vr14-step-direction",
-     "execution": "Moved 2 forward from the new letter J instead of back, as the first pair goes, giving L instead of H."
+     "execution": "Moved 3 back from the new letter N instead of forward, as the first pair goes, giving K instead of Q."
     },
     {
      "optionId": "gen-vr-14-letter-connections-02-opt3",
-     "value": "I",
+     "value": "P",
      "isKey": false,
      "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter J, landing on I instead of H."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-02-opt4",
-     "value": "G",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter J, landing on G instead of H."
+     "execution": "Counted the jump one letter short from the new letter N, landing on P instead of Q."
     }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, D and G. That pair goes 3 on, so the letter N moves 3 on to the letter Q. The letter K goes the other way. The letter P is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-02-opt4"
    ]
   },
   {
-   "itemId": "gen-vr-14-letter-connections-04",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
+   "itemId": "gen-vr-14-letter-connections-03",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
    "stem": {
     "pairA": [
-     "H",
-     "D"
+     "K",
+     "G"
     ],
     "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
     "operands": {
      "kind": "letter-analogy",
-     "first": 11,
+     "first": 18,
      "step": -4,
-     "answer": 7
+     "answer": 14
     },
-    "stemWord": "L"
+    "stemWord": "S"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-03-opt1",
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-03-opt2",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 4 forward from the new letter S instead of back, as the first pair goes, giving W instead of O."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-03-opt3",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter S, landing on P instead of O."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, K and G. That pair goes 4 back, so the letter S moves 4 back to the letter O. The letter W goes the other way. The letter P is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-03-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-04",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "C",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 12,
+     "step": -2,
+     "answer": 10
+    },
+    "stemWord": "M"
    },
    "options": [
     {
      "optionId": "gen-vr-14-letter-connections-04-opt1",
-     "value": "H",
+     "value": "K",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
      "optionId": "gen-vr-14-letter-connections-04-opt2",
-     "value": "P",
+     "value": "O",
      "isKey": false,
      "tag": "vr14-step-direction",
-     "execution": "Moved 4 forward from the new letter L instead of back, as the first pair goes, giving P instead of H."
+     "execution": "Moved 2 forward from the new letter M instead of back, as the first pair goes, giving O instead of K."
     },
     {
      "optionId": "gen-vr-14-letter-connections-04-opt3",
-     "value": "I",
+     "value": "J",
      "isKey": false,
      "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter L, landing on I instead of H."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-04-opt4",
-     "value": "G",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter L, landing on G instead of H."
+     "execution": "Counted the jump one letter long from the new letter M, landing on J instead of K."
     }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, C and A. That pair goes 2 back, so the letter M moves 2 back to the letter K. The letter O goes the other way. The letter J is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-04-opt4"
    ]
   },
   {
-   "itemId": "gen-vr-14-letter-connections-06",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
+   "itemId": "gen-vr-14-letter-connections-05",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
    "stem": {
     "pairA": [
-     "H",
-     "F"
+     "D",
+     "G"
     ],
     "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
     "operands": {
      "kind": "letter-analogy",
-     "first": 13,
-     "step": -2,
-     "answer": 11
+     "first": 17,
+     "step": 3,
+     "answer": 20
     },
-    "stemWord": "N"
+    "stemWord": "R"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-05-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-05-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 3 back from the new letter R instead of forward, as the first pair goes, giving O instead of U."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-05-opt3",
+     "value": "V",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter long from the new letter R, landing on V instead of U."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, D and G. That pair goes 3 on, so the letter R moves 3 on to the letter U. The letter O goes the other way. The letter V is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-05-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-06",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "G",
+     "K"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 11,
+     "step": 4,
+     "answer": 15
+    },
+    "stemWord": "L"
    },
    "options": [
     {
      "optionId": "gen-vr-14-letter-connections-06-opt1",
-     "value": "L",
+     "value": "P",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
      "optionId": "gen-vr-14-letter-connections-06-opt2",
-     "value": "P",
+     "value": "H",
      "isKey": false,
      "tag": "vr14-step-direction",
-     "execution": "Moved 2 forward from the new letter N instead of back, as the first pair goes, giving P instead of L."
+     "execution": "Moved 4 back from the new letter L instead of forward, as the first pair goes, giving H instead of P."
     },
     {
      "optionId": "gen-vr-14-letter-connections-06-opt3",
-     "value": "M",
+     "value": "O",
      "isKey": false,
      "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter N, landing on M instead of L."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-06-opt4",
-     "value": "K",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter N, landing on K instead of L."
+     "execution": "Counted the jump one letter short from the new letter L, landing on O instead of P."
     }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, G and K. That pair goes 4 on, so the letter L moves 4 on to the letter P. The letter H goes the other way. The letter O is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-06-opt4"
    ]
   },
   {
-   "itemId": "gen-vr-14-letter-connections-08",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
+   "itemId": "gen-vr-14-letter-connections-07",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
    "stem": {
     "pairA": [
-     "L",
-     "H"
+     "C",
+     "A"
     ],
     "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
     "operands": {
      "kind": "letter-analogy",
-     "first": 15,
-     "step": -4,
-     "answer": 11
+     "first": 16,
+     "step": -2,
+     "answer": 14
     },
-    "stemWord": "P"
+    "stemWord": "Q"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-07-opt1",
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-07-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 2 forward from the new letter Q instead of back, as the first pair goes, giving S instead of O."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-07-opt3",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter Q, landing on P instead of O."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, C and A. That pair goes 2 back, so the letter Q moves 2 back to the letter O. The letter S goes the other way. The letter P is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-07-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-08",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "D",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 16,
+     "step": -3,
+     "answer": 13
+    },
+    "stemWord": "Q"
    },
    "options": [
     {
      "optionId": "gen-vr-14-letter-connections-08-opt1",
-     "value": "L",
+     "value": "N",
      "isKey": true,
      "tag": null,
      "execution": null
@@ -179,31 +378,375 @@
      "value": "T",
      "isKey": false,
      "tag": "vr14-step-direction",
-     "execution": "Moved 4 forward from the new letter P instead of back, as the first pair goes, giving T instead of L."
+     "execution": "Moved 3 forward from the new letter Q instead of back, as the first pair goes, giving T instead of N."
     },
     {
      "optionId": "gen-vr-14-letter-connections-08-opt3",
      "value": "M",
      "isKey": false,
      "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter P, landing on M instead of L."
+     "execution": "Counted the jump one letter long from the new letter Q, landing on M instead of N."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, D and A. That pair goes 3 back, so the letter Q moves 3 back to the letter N. The letter T goes the other way. The letter M is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-08-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-09",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "G",
+     "K"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 15,
+     "step": 4,
+     "answer": 19
+    },
+    "stemWord": "P"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-09-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "execution": null
     },
     {
-     "optionId": "gen-vr-14-letter-connections-08-opt4",
-     "value": "K",
+     "optionId": "gen-vr-14-letter-connections-09-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 4 back from the new letter P instead of forward, as the first pair goes, giving L instead of T."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-09-opt3",
+     "value": "U",
      "isKey": false,
      "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter P, landing on K instead of L."
+     "execution": "Counted the jump one letter long from the new letter P, landing on U instead of T."
     }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, G and K. That pair goes 4 on, so the letter P moves 4 on to the letter T. The letter L goes the other way. The letter U is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-09-opt4"
    ]
   },
   {
    "itemId": "gen-vr-14-letter-connections-10",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "A",
+     "C"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 9,
+     "step": 2,
+     "answer": 11
+    },
+    "stemWord": "J"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-10-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-10-opt2",
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 2 back from the new letter J instead of forward, as the first pair goes, giving H instead of L."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-10-opt3",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter J, landing on K instead of L."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter J moves 2 on to the letter L. The letter H goes the other way. The letter K is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-10-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-11",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "G",
+     "D"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 14,
+     "step": -3,
+     "answer": 11
+    },
+    "stemWord": "O"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-11-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-11-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 3 forward from the new letter O instead of back, as the first pair goes, giving R instead of L."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-11-opt3",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter O, landing on M instead of L."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, G and D. That pair goes 3 back, so the letter O moves 3 back to the letter L. The letter R goes the other way. The letter M is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-11-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-12",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "K",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 8,
+     "step": -4,
+     "answer": 4
+    },
+    "stemWord": "I"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-12-opt1",
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-12-opt2",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 4 forward from the new letter I instead of back, as the first pair goes, giving M instead of E."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-12-opt3",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter long from the new letter I, landing on D instead of E."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, K and G. That pair goes 4 back, so the letter I moves 4 back to the letter E. The letter M goes the other way. The letter D is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-12-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-13",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "A",
+     "C"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 13,
+     "step": 2,
+     "answer": 15
+    },
+    "stemWord": "N"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-13-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-13-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 2 back from the new letter N instead of forward, as the first pair goes, giving L instead of P."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-13-opt3",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter long from the new letter N, landing on Q instead of P."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter N moves 2 on to the letter P. The letter L goes the other way. The letter Q is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-13-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-14",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
    "stem": {
     "pairA": [
      "D",
-     "B"
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 18,
+     "step": 3,
+     "answer": 21
+    },
+    "stemWord": "S"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-14-opt1",
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-14-opt2",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 3 back from the new letter S instead of forward, as the first pair goes, giving P instead of V."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-14-opt3",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter S, landing on U instead of V."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, D and G. That pair goes 3 on, so the letter S moves 3 on to the letter V. The letter P goes the other way. The letter U is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-14-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-15",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "K",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 12,
+     "step": -4,
+     "answer": 8
+    },
+    "stemWord": "M"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-15-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-15-opt2",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 4 forward from the new letter M instead of back, as the first pair goes, giving Q instead of I."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-15-opt3",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter M, landing on J instead of I."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, K and G. That pair goes 4 back, so the letter M moves 4 back to the letter I. The letter Q goes the other way. The letter J is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-15-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-16",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "C",
+     "A"
     ],
     "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
     "operands": {
@@ -216,138 +759,386 @@
    },
    "options": [
     {
-     "optionId": "gen-vr-14-letter-connections-10-opt1",
+     "optionId": "gen-vr-14-letter-connections-16-opt1",
      "value": "P",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
-     "optionId": "gen-vr-14-letter-connections-10-opt2",
+     "optionId": "gen-vr-14-letter-connections-16-opt2",
      "value": "T",
      "isKey": false,
      "tag": "vr14-step-direction",
      "execution": "Moved 2 forward from the new letter R instead of back, as the first pair goes, giving T instead of P."
     },
     {
-     "optionId": "gen-vr-14-letter-connections-10-opt3",
-     "value": "Q",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter R, landing on Q instead of P."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-10-opt4",
+     "optionId": "gen-vr-14-letter-connections-16-opt3",
      "value": "O",
      "isKey": false,
      "tag": "vr14-step-size",
      "execution": "Counted the jump one letter long from the new letter R, landing on O instead of P."
     }
-   ]
-  },
-  {
-   "itemId": "gen-vr-14-letter-connections-12",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
-   "stem": {
-    "pairA": [
-     "H",
-     "D"
-    ],
-    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
-    "operands": {
-     "kind": "letter-analogy",
-     "first": 9,
-     "step": -4,
-     "answer": 5
-    },
-    "stemWord": "J"
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, C and A. That pair goes 2 back, so the letter R moves 2 back to the letter P. The letter T goes the other way. The letter O is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
    },
-   "options": [
-    {
-     "optionId": "gen-vr-14-letter-connections-12-opt1",
-     "value": "F",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-12-opt2",
-     "value": "N",
-     "isKey": false,
-     "tag": "vr14-step-direction",
-     "execution": "Moved 4 forward from the new letter J instead of back, as the first pair goes, giving N instead of F."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-12-opt3",
-     "value": "G",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter J, landing on G instead of F."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-12-opt4",
-     "value": "E",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter J, landing on E instead of F."
-    }
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-16-opt4"
    ]
   },
   {
-   "itemId": "gen-vr-14-letter-connections-14",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
+   "itemId": "gen-vr-14-letter-connections-17",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
    "stem": {
     "pairA": [
-     "H",
-     "F"
+     "D",
+     "G"
     ],
     "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
     "operands": {
      "kind": "letter-analogy",
      "first": 11,
-     "step": -2,
-     "answer": 9
+     "step": 3,
+     "answer": 14
     },
     "stemWord": "L"
    },
    "options": [
     {
-     "optionId": "gen-vr-14-letter-connections-14-opt1",
-     "value": "J",
+     "optionId": "gen-vr-14-letter-connections-17-opt1",
+     "value": "O",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
-     "optionId": "gen-vr-14-letter-connections-14-opt2",
-     "value": "N",
-     "isKey": false,
-     "tag": "vr14-step-direction",
-     "execution": "Moved 2 forward from the new letter L instead of back, as the first pair goes, giving N instead of J."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-14-opt3",
-     "value": "K",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter L, landing on K instead of J."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-14-opt4",
+     "optionId": "gen-vr-14-letter-connections-17-opt2",
      "value": "I",
      "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 3 back from the new letter L instead of forward, as the first pair goes, giving I instead of O."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-17-opt3",
+     "value": "P",
+     "isKey": false,
      "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter L, landing on I instead of J."
+     "execution": "Counted the jump one letter long from the new letter L, landing on P instead of O."
     }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, D and G. That pair goes 3 on, so the letter L moves 3 on to the letter O. The letter I goes the other way. The letter P is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-17-opt4"
    ]
   },
   {
-   "itemId": "gen-vr-14-letter-connections-16",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
+   "itemId": "gen-vr-14-letter-connections-18",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
    "stem": {
     "pairA": [
-     "L",
-     "H"
+     "G",
+     "K"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 16,
+     "step": 4,
+     "answer": 20
+    },
+    "stemWord": "Q"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-18-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-18-opt2",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 4 back from the new letter Q instead of forward, as the first pair goes, giving M instead of U."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-18-opt3",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter Q, landing on T instead of U."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, G and K. That pair goes 4 on, so the letter Q moves 4 on to the letter U. The letter M goes the other way. The letter T is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-18-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-19",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "C",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 10,
+     "step": -2,
+     "answer": 8
+    },
+    "stemWord": "K"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-19-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-19-opt2",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 2 forward from the new letter K instead of back, as the first pair goes, giving M instead of I."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-19-opt3",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter K, landing on J instead of I."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, C and A. That pair goes 2 back, so the letter K moves 2 back to the letter I. The letter M goes the other way. The letter J is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-19-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-20",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "G",
+     "D"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 15,
+     "step": -3,
+     "answer": 12
+    },
+    "stemWord": "P"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-20-opt1",
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-20-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 3 forward from the new letter P instead of back, as the first pair goes, giving S instead of M."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-20-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter long from the new letter P, landing on L instead of M."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, G and D. That pair goes 3 back, so the letter P moves 3 back to the letter M. The letter S goes the other way. The letter L is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-20-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-21",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "G",
+     "K"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 9,
+     "step": 4,
+     "answer": 13
+    },
+    "stemWord": "J"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-21-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-21-opt2",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 4 back from the new letter J instead of forward, as the first pair goes, giving F instead of N."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-21-opt3",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter long from the new letter J, landing on O instead of N."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, G and K. That pair goes 4 on, so the letter J moves 4 on to the letter N. The letter F goes the other way. The letter O is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-21-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-22",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "A",
+     "C"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 14,
+     "step": 2,
+     "answer": 16
+    },
+    "stemWord": "O"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-22-opt1",
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-22-opt2",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 2 back from the new letter O instead of forward, as the first pair goes, giving M instead of Q."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-22-opt3",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter O, landing on P instead of Q."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter O moves 2 on to the letter Q. The letter M goes the other way. The letter P is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-22-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-23",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "D",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "first": 14,
+     "step": -3,
+     "answer": 11
+    },
+    "stemWord": "O"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-14-letter-connections-23-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-23-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "execution": "Moved 3 forward from the new letter O instead of back, as the first pair goes, giving R instead of L."
+    },
+    {
+     "optionId": "gen-vr-14-letter-connections-23-opt3",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "execution": "Counted the jump one letter short from the new letter O, landing on M instead of L."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, D and A. That pair goes 3 back, so the letter O moves 3 back to the letter L. The letter R goes the other way. The letter M is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-23-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-24",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "pairA": [
+     "K",
+     "G"
     ],
     "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
     "operands": {
@@ -360,225 +1151,83 @@
    },
    "options": [
     {
-     "optionId": "gen-vr-14-letter-connections-16-opt1",
+     "optionId": "gen-vr-14-letter-connections-24-opt1",
      "value": "J",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
-     "optionId": "gen-vr-14-letter-connections-16-opt2",
+     "optionId": "gen-vr-14-letter-connections-24-opt2",
      "value": "R",
      "isKey": false,
      "tag": "vr14-step-direction",
      "execution": "Moved 4 forward from the new letter N instead of back, as the first pair goes, giving R instead of J."
     },
     {
-     "optionId": "gen-vr-14-letter-connections-16-opt3",
-     "value": "K",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter N, landing on K instead of J."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-16-opt4",
+     "optionId": "gen-vr-14-letter-connections-24-opt3",
      "value": "I",
      "isKey": false,
      "tag": "vr14-step-size",
      "execution": "Counted the jump one letter long from the new letter N, landing on I instead of J."
     }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, K and G. That pair goes 4 back, so the letter N moves 4 back to the letter J. The letter R goes the other way. The letter I is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-24-opt4"
    ]
   },
   {
-   "itemId": "gen-vr-14-letter-connections-18",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
+   "itemId": "gen-vr-14-letter-connections-25",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
    "stem": {
     "pairA": [
-     "D",
-     "B"
+     "A",
+     "C"
     ],
     "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
     "operands": {
      "kind": "letter-analogy",
-     "first": 15,
-     "step": -2,
-     "answer": 13
+     "first": 18,
+     "step": 2,
+     "answer": 20
     },
-    "stemWord": "P"
+    "stemWord": "S"
    },
    "options": [
     {
-     "optionId": "gen-vr-14-letter-connections-18-opt1",
-     "value": "N",
+     "optionId": "gen-vr-14-letter-connections-25-opt1",
+     "value": "U",
      "isKey": true,
      "tag": null,
      "execution": null
     },
     {
-     "optionId": "gen-vr-14-letter-connections-18-opt2",
-     "value": "R",
+     "optionId": "gen-vr-14-letter-connections-25-opt2",
+     "value": "Q",
      "isKey": false,
      "tag": "vr14-step-direction",
-     "execution": "Moved 2 forward from the new letter P instead of back, as the first pair goes, giving R instead of N."
+     "execution": "Moved 2 back from the new letter S instead of forward, as the first pair goes, giving Q instead of U."
     },
     {
-     "optionId": "gen-vr-14-letter-connections-18-opt3",
-     "value": "O",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter P, landing on O instead of N."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-18-opt4",
-     "value": "M",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter P, landing on M instead of N."
-    }
-   ]
-  },
-  {
-   "itemId": "gen-vr-14-letter-connections-20",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
-   "stem": {
-    "pairA": [
-     "H",
-     "D"
-    ],
-    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
-    "operands": {
-     "kind": "letter-analogy",
-     "first": 17,
-     "step": -4,
-     "answer": 13
-    },
-    "stemWord": "R"
-   },
-   "options": [
-    {
-     "optionId": "gen-vr-14-letter-connections-20-opt1",
-     "value": "N",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-20-opt2",
+     "optionId": "gen-vr-14-letter-connections-25-opt3",
      "value": "V",
      "isKey": false,
-     "tag": "vr14-step-direction",
-     "execution": "Moved 4 forward from the new letter R instead of back, as the first pair goes, giving V instead of N."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-20-opt3",
-     "value": "O",
-     "isKey": false,
      "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter R, landing on O instead of N."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-20-opt4",
-     "value": "M",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter R, landing on M instead of N."
+     "execution": "Counted the jump one letter long from the new letter S, landing on V instead of U."
     }
-   ]
-  },
-  {
-   "itemId": "gen-vr-14-letter-connections-22",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
-   "stem": {
-    "pairA": [
-     "H",
-     "F"
-    ],
-    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
-    "operands": {
-     "kind": "letter-analogy",
-     "first": 9,
-     "step": -2,
-     "answer": 7
-    },
-    "stemWord": "J"
+   ],
+   "explanationPatch": {
+    "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter S moves 2 on to the letter U. The letter Q goes the other way. The letter V is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
    },
-   "options": [
-    {
-     "optionId": "gen-vr-14-letter-connections-22-opt1",
-     "value": "H",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-22-opt2",
-     "value": "L",
-     "isKey": false,
-     "tag": "vr14-step-direction",
-     "execution": "Moved 2 forward from the new letter J instead of back, as the first pair goes, giving L instead of H."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-22-opt3",
-     "value": "I",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter J, landing on I instead of H."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-22-opt4",
-     "value": "G",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter J, landing on G instead of H."
-    }
-   ]
-  },
-  {
-   "itemId": "gen-vr-14-letter-connections-24",
-   "why": "R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.",
-   "stem": {
-    "pairA": [
-     "L",
-     "H"
-    ],
-    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
-    "operands": {
-     "kind": "letter-analogy",
-     "first": 11,
-     "step": -4,
-     "answer": 7
-    },
-    "stemWord": "L"
-   },
-   "options": [
-    {
-     "optionId": "gen-vr-14-letter-connections-24-opt1",
-     "value": "H",
-     "isKey": true,
-     "tag": null,
-     "execution": null
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-24-opt2",
-     "value": "P",
-     "isKey": false,
-     "tag": "vr14-step-direction",
-     "execution": "Moved 4 forward from the new letter L instead of back, as the first pair goes, giving P instead of H."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-24-opt3",
-     "value": "I",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter short from the new letter L, landing on I instead of H."
-    },
-    {
-     "optionId": "gen-vr-14-letter-connections-24-opt4",
-     "value": "G",
-     "isKey": false,
-     "tag": "vr14-step-size",
-     "execution": "Counted the jump one letter long from the new letter L, landing on G instead of H."
-    }
+   "dropOptionIds": [
+    "gen-vr-14-letter-connections-25-opt4"
    ]
   }
  ]

@@ -2,185 +2,1258 @@
  "door": "patterns/vr-09",
  "proposer": "generator (R1030) — executions to be written by a drafting agent",
  "source": "GENERATORS['vr-09-letter-series']",
- "seats": [
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
   {
-   "optionId": "gen-vr-09-letter-series-04-opt4",
+   "itemId": "gen-vr-09-letter-series-01",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "E",
+     "G",
+     "I"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 2,
+     "step": 2,
+     "answer": 10
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt1",
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt2",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on M instead of K."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter too far, on L instead of K."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter C to the letter E. You go up 2 letters each time. Count 2 on from the letter I to reach the letter K. The letter M takes the step twice. The letter L is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-01-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-02",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "J",
+     "L",
+     "N",
+     "P"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 9,
+     "step": 2,
+     "answer": 17
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on T instead of R."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt3",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter short, on Q instead of R."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter J to the letter L. You go up 2 letters each time. Count 2 on from the letter P to reach the letter R. The letter T takes the step twice. The letter Q is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-02-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-03",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "G",
+     "J",
+     "M"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 3,
+     "step": 3,
+     "answer": 15
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter D, giving A instead of P."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt3",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter too far, on Q instead of P."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter D to the letter G. You go up 3 letters each time. Count 3 on from the letter M to reach the letter P. The letter A runs backwards. The letter Q is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-03-opt4"
+   ]
+  },
+  {
    "itemId": "gen-vr-09-letter-series-04",
-   "oldValue": "M",
-   "tag": "vr-letter-series-off-by-one",
-   "newValue": "K",
-   "execution": "Had the step of 2 right but landed one letter short, on K instead of L."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "H",
+     "K",
+     "N"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 4,
+     "step": 3,
+     "answer": 16
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt1",
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt2",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter E, giving B instead of Q."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt3",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter short, on P instead of Q."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter E to the letter H. You go up 3 letters each time. Count 3 on from the letter N to reach the letter Q. The letter B runs backwards. The letter P is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-04-opt4"
+   ]
   },
   {
-   "optionId": "gen-vr-09-letter-series-06-opt4",
+   "itemId": "gen-vr-09-letter-series-05",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "I",
+     "K",
+     "M",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 8,
+     "step": 2,
+     "answer": 16
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt1",
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on S instead of Q."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter too far, on R instead of Q."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter I to the letter K. You go up 2 letters each time. Count 2 on from the letter O to reach the letter Q. The letter S takes the step twice. The letter R is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-05-opt4"
+   ]
+  },
+  {
    "itemId": "gen-vr-09-letter-series-06",
-   "oldValue": "S",
-   "tag": "vr-letter-series-off-by-one",
-   "newValue": "Q",
-   "execution": "Had the step of 3 right but landed one letter short, on Q instead of R."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "P",
+     "R",
+     "T",
+     "V"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 15,
+     "step": 2,
+     "answer": 23
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt1",
+     "value": "X",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt2",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on Z instead of X."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt3",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter short, on W instead of X."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter P to the letter R. You go up 2 letters each time. Count 2 on from the letter V to reach the letter X. The letter Z takes the step twice. The letter W is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-06-opt4"
+   ]
   },
   {
-   "optionId": "gen-vr-09-letter-series-08-opt4",
+   "itemId": "gen-vr-09-letter-series-07",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "I",
+     "L",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 5,
+     "step": 3,
+     "answer": 17
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt2",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter F, giving C instead of R."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter too far, on S instead of R."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter F to the letter I. You go up 3 letters each time. Count 3 on from the letter O to reach the letter R. The letter C runs backwards. The letter S is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-07-opt4"
+   ]
+  },
+  {
    "itemId": "gen-vr-09-letter-series-08",
-   "oldValue": "O",
-   "tag": "vr-letter-series-off-by-one",
-   "newValue": "M",
-   "execution": "Had the step of 3 right but landed one letter short, on M instead of N."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "I",
+     "L",
+     "O",
+     "R"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 8,
+     "step": 3,
+     "answer": 20
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt2",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter I, giving F instead of U."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt3",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter short, on T instead of U."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter I to the letter L. You go up 3 letters each time. Count 3 on from the letter R to reach the letter U. The letter F runs backwards. The letter T is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-08-opt4"
+   ]
   },
   {
-   "optionId": "gen-vr-09-letter-series-12-opt4",
+   "itemId": "gen-vr-09-letter-series-09",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "O",
+     "Q",
+     "S",
+     "U"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 14,
+     "step": 2,
+     "answer": 22
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt1",
+     "value": "W",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt2",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on Y instead of W."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt3",
+     "value": "X",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter too far, on X instead of W."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter O to the letter Q. You go up 2 letters each time. Count 2 on from the letter U to reach the letter W. The letter Y takes the step twice. The letter X is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-09-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-10",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "F",
+     "H",
+     "J"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 3,
+     "step": 2,
+     "answer": 11
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt2",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on N instead of L."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt3",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter short, on K instead of L."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter D to the letter F. You go up 2 letters each time. Count 2 on from the letter J to reach the letter L. The letter N takes the step twice. The letter K is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-10-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-11",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "H",
+     "K",
+     "N",
+     "Q"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 7,
+     "step": 3,
+     "answer": 19
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter H, giving E instead of T."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt3",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter too far, on U instead of T."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter H to the letter K. You go up 3 letters each time. Count 3 on from the letter Q to reach the letter T. The letter E runs backwards. The letter U is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-11-opt4"
+   ]
+  },
+  {
    "itemId": "gen-vr-09-letter-series-12",
-   "oldValue": "W",
-   "tag": "vr-letter-series-off-by-one",
-   "newValue": "U",
-   "execution": "Had the step of 4 right but landed one letter short, on U instead of V."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "G",
+     "J",
+     "M",
+     "P"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 6,
+     "step": 3,
+     "answer": 18
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt2",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter G, giving D instead of S."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter short, on R instead of S."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter G to the letter J. You go up 3 letters each time. Count 3 on from the letter P to reach the letter S. The letter D runs backwards. The letter R is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-12-opt4"
+   ]
   },
   {
-   "optionId": "gen-vr-09-letter-series-16-opt4",
+   "itemId": "gen-vr-09-letter-series-13",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "G",
+     "I",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 4,
+     "step": 2,
+     "answer": 12
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt1",
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on O instead of M."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter too far, on N instead of M."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter E to the letter G. You go up 2 letters each time. Count 2 on from the letter K to reach the letter M. The letter O takes the step twice. The letter N is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-13-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-14",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "H",
+     "J",
+     "L"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 5,
+     "step": 2,
+     "answer": 13
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt2",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on P instead of N."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt3",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter short, on M instead of N."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter F to the letter H. You go up 2 letters each time. Count 2 on from the letter L to reach the letter N. The letter P takes the step twice. The letter M is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-14-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-15",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "J",
+     "M",
+     "P",
+     "S"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 9,
+     "step": 3,
+     "answer": 21
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt1",
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt2",
+     "value": "G",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter J, giving G instead of V."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt3",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter too far, on W instead of V."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter J to the letter M. You go up 3 letters each time. Count 3 on from the letter S to reach the letter V. The letter G runs backwards. The letter W is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-15-opt4"
+   ]
+  },
+  {
    "itemId": "gen-vr-09-letter-series-16",
-   "oldValue": "M",
-   "tag": "vr-letter-series-off-by-one",
-   "newValue": "K",
-   "execution": "Had the step of 2 right but landed one letter short, on K instead of L."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "K",
+     "N",
+     "Q",
+     "T"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 10,
+     "step": 3,
+     "answer": 22
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-16-opt1",
+     "value": "W",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-16-opt2",
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter K, giving H instead of W."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-16-opt3",
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter short, on V instead of W."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter K to the letter N. You go up 3 letters each time. Count 3 on from the letter T to reach the letter W. The letter H runs backwards. The letter V is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-16-opt4"
+   ]
   },
   {
-   "optionId": "gen-vr-09-letter-series-18-opt4",
+   "itemId": "gen-vr-09-letter-series-17",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "G",
+     "I",
+     "K",
+     "M"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 6,
+     "step": 2,
+     "answer": 14
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt1",
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt2",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on Q instead of O."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt3",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter too far, on P instead of O."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter G to the letter I. You go up 2 letters each time. Count 2 on from the letter M to reach the letter O. The letter Q takes the step twice. The letter P is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-17-opt4"
+   ]
+  },
+  {
    "itemId": "gen-vr-09-letter-series-18",
-   "oldValue": "S",
-   "tag": "vr-letter-series-off-by-one",
-   "newValue": "Q",
-   "execution": "Had the step of 3 right but landed one letter short, on Q instead of R."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "L",
+     "N",
+     "P",
+     "R"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 11,
+     "step": 2,
+     "answer": 19
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt2",
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on V instead of T."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter short, on S instead of T."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter L to the letter N. You go up 2 letters each time. Count 2 on from the letter R to reach the letter T. The letter V takes the step twice. The letter S is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-18-opt4"
+   ]
   },
   {
-   "optionId": "gen-vr-09-letter-series-20-opt4",
+   "itemId": "gen-vr-09-letter-series-19",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "L",
+     "O",
+     "R",
+     "U"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 11,
+     "step": 3,
+     "answer": 23
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt1",
+     "value": "X",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt2",
+     "value": "I",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter L, giving I instead of X."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter too far, on Y instead of X."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter L to the letter O. You go up 3 letters each time. Count 3 on from the letter U to reach the letter X. The letter I runs backwards. The letter Y is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-19-opt4"
+   ]
+  },
+  {
    "itemId": "gen-vr-09-letter-series-20",
-   "oldValue": "O",
-   "tag": "vr-letter-series-off-by-one",
-   "newValue": "M",
-   "execution": "Had the step of 3 right but landed one letter short, on M instead of N."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "M",
+     "P",
+     "S",
+     "V"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 12,
+     "step": 3,
+     "answer": 24
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt1",
+     "value": "Y",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt2",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter M, giving J instead of Y."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt3",
+     "value": "X",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter short, on X instead of Y."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter M to the letter P. You go up 3 letters each time. Count 3 on from the letter V to reach the letter Y. The letter J runs backwards. The letter X is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-20-opt4"
+   ]
   },
   {
-   "optionId": "gen-vr-09-letter-series-24-opt4",
+   "itemId": "gen-vr-09-letter-series-21",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "K",
+     "M",
+     "O",
+     "Q"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 10,
+     "step": 2,
+     "answer": 18
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt2",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on U instead of S."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt3",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter too far, on T instead of S."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter K to the letter M. You go up 2 letters each time. Count 2 on from the letter Q to reach the letter S. The letter U takes the step twice. The letter T is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-21-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-22",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "H",
+     "J",
+     "L",
+     "N"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 7,
+     "step": 2,
+     "answer": 15
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on R instead of P."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt3",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter short, on O instead of P."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter H to the letter J. You go up 2 letters each time. Count 2 on from the letter N to reach the letter P. The letter R takes the step twice. The letter O is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-22-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-23",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "I",
+     "M",
+     "Q"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 4,
+     "step": 4,
+     "answer": 20
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 4 back from the first letter E, giving A instead of U."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt3",
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 4 right but landed one letter too far, on V instead of U."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter E to the letter I. You go up 4 letters each time. Count 4 on from the letter Q to reach the letter U. The letter A runs backwards. The letter V is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-23-opt4"
+   ]
+  },
+  {
    "itemId": "gen-vr-09-letter-series-24",
-   "oldValue": "W",
-   "tag": "vr-letter-series-off-by-one",
-   "newValue": "U",
-   "execution": "Had the step of 4 right but landed one letter short, on U instead of V."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "N",
+     "Q",
+     "T",
+     "W"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 13,
+     "step": 3,
+     "answer": 25
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt1",
+     "value": "Z",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt2",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "execution": "Ran the series backwards, 3 back from the first letter N, giving K instead of Z."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 3 right but landed one letter short, on Y instead of Z."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter N to the letter Q. You go up 3 letters each time. Count 3 on from the letter W to reach the letter Z. The letter K runs backwards. The letter Y is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-24-opt4"
+   ]
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-25",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "M",
+     "O",
+     "Q",
+     "S"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "first": 12,
+     "step": 2,
+     "answer": 20
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt2",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "execution": "Applied the step of 2 twice from the last letter, landing on W instead of U."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt3",
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "execution": "Had the step of 2 right but landed one letter too far, on V instead of U."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from the letter M to the letter O. You go up 2 letters each time. Count 2 on from the letter S to reach the letter U. The letter W takes the step twice. The letter V is one letter out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   },
+   "dropOptionIds": [
+    "gen-vr-09-letter-series-25-opt4"
+   ]
   }
- ],
- "redrafts": [
-  {
-   "optionId": "gen-vr-09-letter-series-04-opt2",
-   "itemId": "gen-vr-09-letter-series-04",
-   "value": "N",
-   "tag": "vr-letter-series-step-repeat",
-   "execution": "Applied the step of 2 twice from the last letter, landing on N instead of L."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-04-opt3",
-   "itemId": "gen-vr-09-letter-series-04",
-   "value": "B",
-   "tag": "vr-letter-series-direction",
-   "execution": "Ran the series backwards, 2 back from the first letter D, giving B instead of L."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-06-opt2",
-   "itemId": "gen-vr-09-letter-series-06",
-   "value": "U",
-   "tag": "vr-letter-series-step-repeat",
-   "execution": "Applied the step of 3 twice from the last letter, landing on U instead of R."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-06-opt3",
-   "itemId": "gen-vr-09-letter-series-06",
-   "value": "C",
-   "tag": "vr-letter-series-direction",
-   "execution": "Ran the series backwards, 3 back from the first letter F, giving C instead of R."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-08-opt2",
-   "itemId": "gen-vr-09-letter-series-08",
-   "value": "Q",
-   "tag": "vr-letter-series-step-repeat",
-   "execution": "Applied the step of 3 twice from the last letter, landing on Q instead of N."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-08-opt3",
-   "itemId": "gen-vr-09-letter-series-08",
-   "value": "Y",
-   "tag": "vr-letter-series-direction",
-   "execution": "Ran the series backwards, 3 back from the first letter B, giving Y instead of N."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-12-opt2",
-   "itemId": "gen-vr-09-letter-series-12",
-   "value": "Z",
-   "tag": "vr-letter-series-step-repeat",
-   "execution": "Applied the step of 4 twice from the last letter, landing on Z instead of V."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-12-opt3",
-   "itemId": "gen-vr-09-letter-series-12",
-   "value": "B",
-   "tag": "vr-letter-series-direction",
-   "execution": "Ran the series backwards, 4 back from the first letter F, giving B instead of V."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-16-opt2",
-   "itemId": "gen-vr-09-letter-series-16",
-   "value": "N",
-   "tag": "vr-letter-series-step-repeat",
-   "execution": "Applied the step of 2 twice from the last letter, landing on N instead of L."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-16-opt3",
-   "itemId": "gen-vr-09-letter-series-16",
-   "value": "B",
-   "tag": "vr-letter-series-direction",
-   "execution": "Ran the series backwards, 2 back from the first letter D, giving B instead of L."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-18-opt2",
-   "itemId": "gen-vr-09-letter-series-18",
-   "value": "U",
-   "tag": "vr-letter-series-step-repeat",
-   "execution": "Applied the step of 3 twice from the last letter, landing on U instead of R."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-18-opt3",
-   "itemId": "gen-vr-09-letter-series-18",
-   "value": "C",
-   "tag": "vr-letter-series-direction",
-   "execution": "Ran the series backwards, 3 back from the first letter F, giving C instead of R."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-20-opt2",
-   "itemId": "gen-vr-09-letter-series-20",
-   "value": "Q",
-   "tag": "vr-letter-series-step-repeat",
-   "execution": "Applied the step of 3 twice from the last letter, landing on Q instead of N."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-20-opt3",
-   "itemId": "gen-vr-09-letter-series-20",
-   "value": "Y",
-   "tag": "vr-letter-series-direction",
-   "execution": "Ran the series backwards, 3 back from the first letter B, giving Y instead of N."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-24-opt2",
-   "itemId": "gen-vr-09-letter-series-24",
-   "value": "Z",
-   "tag": "vr-letter-series-step-repeat",
-   "execution": "Applied the step of 4 twice from the last letter, landing on Z instead of V."
-  },
-  {
-   "optionId": "gen-vr-09-letter-series-24-opt3",
-   "itemId": "gen-vr-09-letter-series-24",
-   "value": "B",
-   "tag": "vr-letter-series-direction",
-   "execution": "Ran the series backwards, 4 back from the first letter F, giving B instead of V."
-  }
- ],
- "rebuilds": []
+ ]
 }

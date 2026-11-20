@@ -38,6 +38,10 @@ const PRECHECK = process.argv.includes('--precheck');
  * that actually land leave service, and `publish-door --ready` returns them once signed.
  */
 const FROM_LIVE = process.argv.includes('--from-live');
+// A from-live landing that would take EVERY live row of a type out of service empties its case: publish-door
+// --ready then refuses (a first publication is all-or-nothing) and the case serves nothing until a full
+// publish. It happened to vr-09 and vr-14 on dev (R1030). Refused unless this is said explicitly.
+const ALLOW_EMPTY_POOL = process.argv.includes('--allow-empty-pool');
 // Rows held back by name although signed — e.g. going round again for a fix the reviewer noted. Never the reverse.
 const HOLD = new Set((arg('hold') ?? '').split(',').filter(Boolean));
 const REVIEWER = 'rev-agent-01';
@@ -51,7 +55,11 @@ interface Proposals {
   redrafts?: Array<{ optionId: string; itemId: string; value: string; tag: string; execution: string }>;
   // `explanationPatch` merges into the stored explanation key by key (R1023: an English row's explanation
   // carries quotes, reading context and more that a rewrite must not drop by omission); `lineRefs` is item-level (R80).
-  rebuilds?: Array<{ itemId: string; stem: Record<string, unknown>; options: Opt[]; why: string; explanation?: Record<string, unknown>; explanationPatch?: Record<string, unknown>; lineRefs?: number[] }>;
+  // `dropOptionIds` (R1030): a rebuild may REMOVE options it names (vr-09/vr-14 move to three options). Never the
+  // key; the delete runs in the landing transaction, and Attempt.chosenOptionId's Restrict refuses it rather than
+  // strand a child's answer. The transaction spans the whole door, so one refused delete rolls back EVERY row of
+  // that run, not only its own: it fails safe, and the fix is to hold that row (--hold) and land again.
+  rebuilds?: Array<{ itemId: string; stem: Record<string, unknown>; options: Opt[]; why: string; explanation?: Record<string, unknown>; explanationPatch?: Record<string, unknown>; lineRefs?: number[]; dropOptionIds?: string[] }>;
 }
 interface Review { changes: Array<{ ref: string; verdict: string; reason?: string }>; rows: Array<{ itemId: string; verdict: string; reason?: string; holdFixed?: boolean }> }
 type Hold = { reason: string; faultField: string };
@@ -93,6 +101,7 @@ async function main() {
   type Row = { id: string; type: string; stem: Record<string, unknown>; explanation: unknown; lineRefs: number[]; options: Opt[]; refs: string[] };
   const after = new Map<string, Row>();
   const liveRebuilds = new Set<string>();
+  const dropped = new Map<string, string[]>();
   const faults = new Map<string, string[]>();
   const fault = (id: string, f: string) => faults.set(id, [...(faults.get(id) ?? []), f]);
   for (const r of live) {
@@ -111,7 +120,10 @@ async function main() {
   for (const b of prop.rebuilds ?? []) {
     const r = after.get(b.itemId); if (!r) continue;
     const ids = r.options.map((o) => o.optionId).sort().join();
-    if (b.options.map((o) => o.optionId).sort().join() !== ids) fault(b.itemId, 'a rebuild must keep the same option ids');
+    const drop = b.dropOptionIds ?? [];
+    if ([...b.options.map((o) => o.optionId), ...drop].sort().join() !== ids) fault(b.itemId, 'a rebuild must keep the same option ids, or name the ones it drops in dropOptionIds');
+    if (drop.some((d) => r.options.find((o) => o.optionId === d)?.isKey)) fault(b.itemId, 'a rebuild may not drop the key');
+    if (drop.length) dropped.set(b.itemId, drop);
     if (b.explanation && b.explanationPatch) fault(b.itemId, 'a rebuild gives explanation OR explanationPatch, not both');
     /**
      * A REBUILD NEVER DROPS WHAT IT WAS NOT SHOWN (R57, 2026-11-20). Packets hide `_`-prefixed stem keys
@@ -218,6 +230,7 @@ async function main() {
     const be = (b.explanation ?? {}) as Record<string, unknown>; const ae = (r.explanation ?? {}) as Record<string, unknown>;
     for (const k of new Set([...Object.keys(be), ...Object.keys(ae)])) cmp(`explanation.${k}`, be[k], ae[k]);
     cmp('lineRefs', b.lineRefs, r.lineRefs);
+    for (const d of dropped.get(id) ?? []) { const bo = b.options.find((x) => x.id === d)!; out.push({ field: `option ${d} (dropped)`, before: { value: val(bo.content), tag: bo.misconceptionId }, after: null }); }
     for (const o of r.options) {
       const bo = b.options.find((x) => x.id === o.optionId)!; const label = (bo.content as { label?: string })?.label ?? o.optionId;
       cmp(`option ${label} (${o.optionId}).value`, val(bo.content), o.value);
@@ -228,6 +241,15 @@ async function main() {
     return out;
   };
 
+  if (APPLY && FROM_LIVE && !ALLOW_EMPTY_POOL) {
+    const pulled = land.filter((id) => liveRebuilds.has(id));
+    const byType = new Map<string, number>();
+    for (const id of pulled) { const t = after.get(id)!.type; byType.set(t, (byType.get(t) ?? 0) + 1); }
+    for (const [t, n] of byType) {
+      const liveNow = await prisma.item.count({ where: { questionTypeId: t, status: 'LIVE', pool: 'PRACTICE' } });
+      if (liveNow - n <= 0) throw new Error(`${t}: landing would take all ${liveNow} LIVE rows out of service and empty the case. Land in two halves (--hold), or pass --allow-empty-pool and publish-door without --ready straight after.`);
+    }
+  }
   if (APPLY && land.length) {
     const method = HOLDS
       ? `English rewrite under R1023 (David, 2026-11-20: "Yes, agents rewrite"): the held fields were REWRITTEN BY A DRAFTING AGENT, not by Cowork and not by a person; ATTESTED change-by-change and the row SIGNED by the machine reviewer rev-agent-01, which re-read the original hold and found its fault fixed; every gate passed on the row as written. proposals ${sha(propText).slice(0, 16)}, review ${sha(reviewText).slice(0, 16)}. Not read by a person.`
@@ -246,6 +268,7 @@ async function main() {
         if (JSON.stringify(before.stem) !== JSON.stringify(r.stem)) await tx.item.update({ where: { id }, data: { stem: r.stem as object } });
         if (JSON.stringify(before.explanation) !== JSON.stringify(r.explanation)) await tx.item.update({ where: { id }, data: { explanation: r.explanation as object } });
         if (canonicalJson(before.lineRefs) !== canonicalJson(r.lineRefs)) await tx.item.update({ where: { id }, data: { lineRefs: r.lineRefs } });
+        for (const d of dropped.get(id) ?? []) await tx.itemOption.delete({ where: { id: d } });
         for (const o of r.options) {
           const b = before.options.find((x) => x.id === o.optionId)!;
           if (val(b.content) === o.value && b.isCorrect === o.isKey && b.misconceptionId === o.tag && (b.misconceptionExecution?.trim() || null) === o.execution) continue;

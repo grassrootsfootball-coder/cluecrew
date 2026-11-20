@@ -2,379 +2,830 @@
  "door": "patterns/vr-07",
  "proposer": "generator (R1030) — executions to be written by a drafting agent",
  "source": "GENERATORS['vr-07-letters-for-numbers']",
- "seats": [
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
   {
-   "optionId": "gen-vr-07-letters-for-numbers-02-opt2",
    "itemId": "gen-vr-07-letters-for-numbers-02",
-   "oldValue": "5",
-   "tag": "vr07-value-slip",
-   "newValue": "1",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 1 instead of 3."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "8",
+     "Q": "9",
+     "R": "4",
+     "S": "11"
+    },
+    "prompt": "If P = 8, Q = 9, R = 4, S = 11, what is P + Q + R − S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 8,
+      "Q": 9,
+      "R": 4,
+      "S": 11
+     },
+     "expr": "P + Q + R − S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-02-opt1",
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-02-opt2",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used R's value 4 for Q, its neighbour in the code, so P + Q + R − S comes to 5 instead of 10."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-02-opt3",
+     "value": "32",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 32 instead of 10."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-02-opt4",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q + R − S and never used it, so the total comes to 21 instead of 10."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 8 + 9 + 4 − 11, which makes 10. 5 uses R's number for Q. 32 adds every number. 21 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-03-opt3",
    "itemId": "gen-vr-07-letters-for-numbers-03",
-   "oldValue": "33",
-   "tag": "vr07-value-slip",
-   "newValue": "5",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 5 instead of 9."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "11",
+     "Q": "5",
+     "R": "4",
+     "S": "7"
+    },
+    "prompt": "If P = 11, Q = 5, R = 4, S = 7, what is P + Q + R − S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 11,
+      "Q": 5,
+      "R": 4,
+      "S": 7
+     },
+     "expr": "P + Q + R − S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-03-opt1",
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-03-opt2",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used P's value 11 for Q, its neighbour in the code, so P + Q + R − S comes to 19 instead of 13."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-03-opt3",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 27 instead of 13."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-03-opt4",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q + R − S and never used it, so the total comes to 20 instead of 13."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 11 + 5 + 4 − 7, which makes 13. 19 uses P's number for Q. 27 adds every number. 20 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-03-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-03",
-   "oldValue": "21",
-   "tag": "vr07-operation-slip",
-   "newValue": "33",
-   "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 33 instead of 9."
+   "itemId": "gen-vr-07-letters-for-numbers-06",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "5",
+     "Q": "6",
+     "R": "8",
+     "S": "9"
+    },
+    "prompt": "If P = 5, Q = 6, R = 8, S = 9, what is P + Q − R + S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 5,
+      "Q": 6,
+      "R": 8,
+      "S": 9
+     },
+     "expr": "P + Q − R + S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-06-opt1",
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-06-opt2",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used P's value 5 for Q, its neighbour in the code, so P + Q − R + S comes to 11 instead of 12."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-06-opt3",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 28 instead of 12."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-06-opt4",
+     "value": "3",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 3 instead of 12."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 5 + 6 − 8 + 9, which makes 12. 11 uses P's number for Q. 28 adds every number. 3 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-04-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-04",
-   "oldValue": "49",
-   "tag": "vr07-value-slip",
-   "newValue": "28",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 28 instead of 33."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-04-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-04",
-   "oldValue": "41",
-   "tag": "vr07-value-slip",
-   "newValue": "25",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 25 instead of 33."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-07-opt3",
    "itemId": "gen-vr-07-letters-for-numbers-07",
-   "oldValue": "37",
-   "tag": "vr07-value-slip",
-   "newValue": "22",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 22 instead of 25."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "12",
+     "Q": "8",
+     "R": "11",
+     "S": "6"
+    },
+    "prompt": "If P = 12, Q = 8, R = 11, S = 6, what is P + Q − R + S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 12,
+      "Q": 8,
+      "R": 11,
+      "S": 6
+     },
+     "expr": "P + Q − R + S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-07-opt1",
+     "value": "15",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-07-opt2",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used P's value 12 for Q, its neighbour in the code, so P + Q − R + S comes to 19 instead of 15."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-07-opt3",
+     "value": "37",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 37 instead of 15."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-07-opt4",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 9 instead of 15."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 12 + 8 − 11 + 6, which makes 15. 19 uses P's number for Q. 37 adds every number. 9 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-07-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-07",
-   "oldValue": "31",
-   "tag": "vr07-operation-slip",
-   "newValue": "37",
-   "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 37 instead of 25."
+   "itemId": "gen-vr-07-letters-for-numbers-08",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "18",
+     "Q": "7",
+     "R": "5",
+     "S": "12"
+    },
+    "prompt": "If P = 18, Q = 7, R = 5, S = 12, what is P + Q − R + S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 18,
+      "Q": 7,
+      "R": 5,
+      "S": 12
+     },
+     "expr": "P + Q − R + S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-08-opt1",
+     "value": "32",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-08-opt2",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used Q's value 7 for P, its neighbour in the code, so P + Q − R + S comes to 21 instead of 32."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-08-opt3",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 42 instead of 32."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-08-opt4",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 20 instead of 32."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 18 + 7 − 5 + 12, which makes 32. 21 uses Q's number for P. 42 adds every number. 20 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-10-opt3",
+   "itemId": "gen-vr-07-letters-for-numbers-09",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R",
+    "code": {
+     "P": "2",
+     "Q": "3",
+     "R": "4"
+    },
+    "prompt": "If P = 2, Q = 3, R = 4, what is P + Q − R?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 2,
+      "Q": 3,
+      "R": 4
+     },
+     "expr": "P + Q − R"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-09-opt1",
+     "value": "1",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-09-opt2",
+     "value": "0",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used P's value 2 for Q, its neighbour in the code, so P + Q − R comes to 0 instead of 1."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-09-opt3",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R, missing the minus sign, so the total comes to 9 instead of 1."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-09-opt4",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q − R and never used it, so the total comes to 5 instead of 1."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q and R first. Then work out 2 + 3 − 4, which makes 1. 0 uses P's number for Q. 9 adds every number. 5 leaves R out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
+  },
+  {
    "itemId": "gen-vr-07-letters-for-numbers-10",
-   "oldValue": "24",
-   "tag": "vr07-value-slip",
-   "newValue": "13",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 13 instead of 16."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "11",
+     "Q": "3",
+     "R": "6",
+     "S": "4"
+    },
+    "prompt": "If P = 11, Q = 3, R = 6, S = 4, what is P + Q + R − S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 11,
+      "Q": 3,
+      "R": 6,
+      "S": 4
+     },
+     "expr": "P + Q + R − S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-10-opt1",
+     "value": "16",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-10-opt2",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used Q's value 3 for P, its neighbour in the code, so P + Q + R − S comes to 8 instead of 16."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-10-opt3",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used Q's value 3 for R, its neighbour in the code, so P + Q + R − S comes to 13 instead of 16."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-10-opt4",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q + R − S and never used it, so the total comes to 20 instead of 16."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 11 + 3 + 6 − 4, which makes 16. 8 uses Q's number for P. 13 uses Q's number for R. 20 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-10-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-10",
-   "oldValue": "20",
-   "tag": "vr07-value-slip",
-   "newValue": "14",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 14 instead of 16."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-11-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-11",
-   "oldValue": "21",
-   "tag": "vr07-value-slip",
-   "newValue": "15",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 15 instead of 18."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-11-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-11",
-   "oldValue": "40",
-   "tag": "vr07-value-slip",
-   "newValue": "13",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 13 instead of 18."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-11-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-11",
-   "oldValue": "29",
-   "tag": "vr07-operation-slip",
-   "newValue": "40",
-   "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 40 instead of 18."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-12-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-12",
-   "oldValue": "36",
-   "tag": "vr07-value-slip",
-   "newValue": "26",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 26 instead of 31."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-12-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-12",
-   "oldValue": "43",
-   "tag": "vr07-value-slip",
-   "newValue": "28",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 28 instead of 31."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-12-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-12",
-   "oldValue": "37",
-   "tag": "vr07-value-slip",
-   "newValue": "21",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 21 instead of 31."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-13-opt3",
    "itemId": "gen-vr-07-letters-for-numbers-13",
-   "oldValue": "14",
-   "tag": "vr07-value-slip",
-   "newValue": "11",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q − R, so the total comes to 11 instead of 8."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R",
+    "code": {
+     "P": "7",
+     "Q": "4",
+     "R": "3"
+    },
+    "prompt": "If P = 7, Q = 4, R = 3, what is P + Q − R?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 7,
+      "Q": 4,
+      "R": 3
+     },
+     "expr": "P + Q − R"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-13-opt1",
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-13-opt2",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used Q's value 4 for P, its neighbour in the code, so P + Q − R comes to 5 instead of 8."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-13-opt3",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used P's value 7 for Q, its neighbour in the code, so P + Q − R comes to 11 instead of 8."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-13-opt4",
+     "value": "14",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R, missing the minus sign, so the total comes to 14 instead of 8."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q and R first. Then work out 7 + 4 − 3, which makes 8. 5 uses Q's number for P. 11 uses P's number for Q. 14 adds every number.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-13-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-13",
-   "oldValue": "11",
-   "tag": "vr07-operation-slip",
-   "newValue": "14",
-   "execution": "Added every term in P + Q − R, missing the minus sign, so the total comes to 14 instead of 8."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-14-opt2",
    "itemId": "gen-vr-07-letters-for-numbers-14",
-   "oldValue": "5",
-   "tag": "vr07-value-slip",
-   "newValue": "13",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 13 instead of 9."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "8",
+     "Q": "4",
+     "R": "6",
+     "S": "9"
+    },
+    "prompt": "If P = 8, Q = 4, R = 6, S = 9, what is P + Q − R + S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 8,
+      "Q": 4,
+      "R": 6,
+      "S": 9
+     },
+     "expr": "P + Q − R + S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-14-opt1",
+     "value": "15",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-14-opt2",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used Q's value 4 for P, its neighbour in the code, so P + Q − R + S comes to 11 instead of 15."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-14-opt3",
+     "value": "12",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used S's value 9 for R, its neighbour in the code, so P + Q − R + S comes to 12 instead of 15."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-14-opt4",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 27 instead of 15."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 8 + 4 − 6 + 9, which makes 15. 11 uses Q's number for P. 12 uses S's number for R. 27 adds every number.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-15-opt2",
    "itemId": "gen-vr-07-letters-for-numbers-15",
-   "oldValue": "21",
-   "tag": "vr07-value-slip",
-   "newValue": "11",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 11 instead of 16."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "7",
+     "Q": "12",
+     "R": "10",
+     "S": "13"
+    },
+    "prompt": "If P = 7, Q = 12, R = 10, S = 13, what is P + Q − R + S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 7,
+      "Q": 12,
+      "R": 10,
+      "S": 13
+     },
+     "expr": "P + Q − R + S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-15-opt1",
+     "value": "22",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-15-opt2",
+     "value": "17",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used P's value 7 for Q, its neighbour in the code, so P + Q − R + S comes to 17 instead of 22."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-15-opt3",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 42 instead of 22."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-15-opt4",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 9 instead of 22."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 7 + 12 − 10 + 13, which makes 22. 17 uses P's number for Q. 42 adds every number. 9 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-15-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-15",
-   "oldValue": "42",
-   "tag": "vr07-value-slip",
-   "newValue": "14",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 14 instead of 16."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-15-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-15",
-   "oldValue": "29",
-   "tag": "vr07-operation-slip",
-   "newValue": "42",
-   "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 42 instead of 16."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-16-opt3",
    "itemId": "gen-vr-07-letters-for-numbers-16",
-   "oldValue": "42",
-   "tag": "vr07-value-slip",
-   "newValue": "15",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 15 instead of 28."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "5",
+     "Q": "12",
+     "R": "10",
+     "S": "11"
+    },
+    "prompt": "If P = 5, Q = 12, R = 10, S = 11, what is P + Q − R + S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 5,
+      "Q": 12,
+      "R": 10,
+      "S": 11
+     },
+     "expr": "P + Q − R + S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-16-opt1",
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-16-opt2",
+     "value": "16",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used R's value 10 for Q, its neighbour in the code, so P + Q − R + S comes to 16 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-16-opt3",
+     "value": "38",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 38 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-16-opt4",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 7 instead of 18."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 5 + 12 − 10 + 11, which makes 18. 16 uses R's number for Q. 38 adds every number. 7 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-16-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-16",
-   "oldValue": "35",
-   "tag": "vr07-value-slip",
-   "newValue": "17",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 17 instead of 28."
+   "itemId": "gen-vr-07-letters-for-numbers-22",
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "11",
+     "Q": "4",
+     "R": "3",
+     "S": "9"
+    },
+    "prompt": "If P = 11, Q = 4, R = 3, S = 9, what is P + Q − R + S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 11,
+      "Q": 4,
+      "R": 3,
+      "S": 9
+     },
+     "expr": "P + Q − R + S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-22-opt1",
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-22-opt2",
+     "value": "14",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used Q's value 4 for P, its neighbour in the code, so P + Q − R + S comes to 14 instead of 21."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-22-opt3",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 27 instead of 21."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-22-opt4",
+     "value": "12",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 12 instead of 21."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 11 + 4 − 3 + 9, which makes 21. 14 uses Q's number for P. 27 adds every number. 12 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-18-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-18",
-   "oldValue": "17",
-   "tag": "vr07-value-slip",
-   "newValue": "7",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 7 instead of 12."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-19-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-19",
-   "oldValue": "26",
-   "tag": "vr07-value-slip",
-   "newValue": "22",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 22 instead of 24."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-19-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-19",
-   "oldValue": "46",
-   "tag": "vr07-value-slip",
-   "newValue": "23",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 23 instead of 24."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-19-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-19",
-   "oldValue": "35",
-   "tag": "vr07-operation-slip",
-   "newValue": "46",
-   "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 46 instead of 24."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-20-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-20",
-   "oldValue": "55",
-   "tag": "vr07-value-slip",
-   "newValue": "40",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 40 instead of 43."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-20-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-20",
-   "oldValue": "49",
-   "tag": "vr07-value-slip",
-   "newValue": "31",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 31 instead of 43."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-23-opt3",
    "itemId": "gen-vr-07-letters-for-numbers-23",
-   "oldValue": "37",
-   "tag": "vr07-value-slip",
-   "newValue": "13",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 13 instead of 17."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "13",
+     "Q": "5",
+     "R": "9",
+     "S": "10"
+    },
+    "prompt": "If P = 13, Q = 5, R = 9, S = 10, what is P + Q − R + S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 13,
+      "Q": 5,
+      "R": 9,
+      "S": 10
+     },
+     "expr": "P + Q − R + S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-23-opt1",
+     "value": "19",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-23-opt2",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used Q's value 5 for P, its neighbour in the code, so P + Q − R + S comes to 11 instead of 19."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-23-opt3",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used P's value 13 for Q, its neighbour in the code, so P + Q − R + S comes to 27 instead of 19."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-23-opt4",
+     "value": "37",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 37 instead of 19."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 13 + 5 − 9 + 10, which makes 19. 11 uses Q's number for P. 27 uses P's number for Q. 37 adds every number.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   },
   {
-   "optionId": "gen-vr-07-letters-for-numbers-23-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-23",
-   "oldValue": "27",
-   "tag": "vr07-operation-slip",
-   "newValue": "37",
-   "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 37 instead of 17."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-24-opt2",
    "itemId": "gen-vr-07-letters-for-numbers-24",
-   "oldValue": "23",
-   "tag": "vr07-value-slip",
-   "newValue": "21",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 21 instead of 22."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-24-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-24",
-   "oldValue": "40",
-   "tag": "vr07-value-slip",
-   "newValue": "11",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 11 instead of 22."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-24-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-24",
-   "oldValue": "31",
-   "tag": "vr07-value-slip",
-   "newValue": "13",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 13 instead of 22."
+   "why": "R1030: the generator now writes this row differently (question design or distractor choice) so the key's position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "13",
+     "Q": "14",
+     "R": "5",
+     "S": "12"
+    },
+    "prompt": "If P = 13, Q = 14, R = 5, S = 12, what is P + Q − R + S?",
+    "operands": {
+     "kind": "code",
+     "values": {
+      "P": 13,
+      "Q": 14,
+      "R": 5,
+      "S": 12
+     },
+     "expr": "P + Q − R + S"
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-24-opt1",
+     "value": "34",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-24-opt2",
+     "value": "33",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "execution": "Used P's value 13 for Q, its neighbour in the code, so P + Q − R + S comes to 33 instead of 34."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-24-opt3",
+     "value": "44",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 44 instead of 34."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-24-opt4",
+     "value": "22",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 22 instead of 34."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look up P, Q, R and S first. Then work out 13 + 14 − 5 + 12, which makes 34. 33 uses P's number for Q. 44 adds every number. 22 leaves S out.",
+    "walkScriptBatch": "R1030-TEMPLATE",
+    "walkScriptStatus": "DRAFT"
+   }
   }
- ],
- "redrafts": [
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-02-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-02",
-   "value": "25",
-   "tag": "vr07-operation-slip",
-   "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 25 instead of 3."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-02-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-02",
-   "value": "14",
-   "tag": "vr07-term-dropped",
-   "execution": "Stopped before the last term of P + Q + R − S and never used it, so the total comes to 14 instead of 3."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-03-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-03",
-   "value": "8",
-   "tag": "vr07-value-slip",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 8 instead of 9."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-04-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-04",
-   "value": "30",
-   "tag": "vr07-value-slip",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 30 instead of 33."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-07-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-07",
-   "value": "21",
-   "tag": "vr07-value-slip",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 21 instead of 25."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-10-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-10",
-   "value": "8",
-   "tag": "vr07-value-slip",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 8 instead of 16."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-13-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-13",
-   "value": "5",
-   "tag": "vr07-value-slip",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q − R, so the total comes to 5 instead of 8."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-14-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-14",
-   "value": "27",
-   "tag": "vr07-operation-slip",
-   "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 27 instead of 9."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-14-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-14",
-   "value": "18",
-   "tag": "vr07-term-dropped",
-   "execution": "Stopped before the last term of P + Q + R − S and never used it, so the total comes to 18 instead of 9."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-16-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-16",
-   "value": "21",
-   "tag": "vr07-value-slip",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 21 instead of 28."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-18-opt3",
-   "itemId": "gen-vr-07-letters-for-numbers-18",
-   "value": "30",
-   "tag": "vr07-operation-slip",
-   "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 30 instead of 12."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-18-opt4",
-   "itemId": "gen-vr-07-letters-for-numbers-18",
-   "value": "21",
-   "tag": "vr07-term-dropped",
-   "execution": "Stopped before the last term of P + Q + R − S and never used it, so the total comes to 21 instead of 12."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-20-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-20",
-   "value": "42",
-   "tag": "vr07-value-slip",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 42 instead of 43."
-  },
-  {
-   "optionId": "gen-vr-07-letters-for-numbers-23-opt2",
-   "itemId": "gen-vr-07-letters-for-numbers-23",
-   "value": "9",
-   "tag": "vr07-value-slip",
-   "execution": "Read a neighbouring row of the code table for one of the letters in P + Q + R − S, so the total comes to 9 instead of 17."
-  }
- ],
- "rebuilds": []
+ ]
 }

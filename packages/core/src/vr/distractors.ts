@@ -215,6 +215,8 @@ export function buildSpreadVrDistractors(
   count: number,
   rankCounts: number[],
   forbidden: ReadonlySet<string> = new Set(),
+  /** 'rank-first' (default) or 'variety-first': a door with one plentiful mistake (vr-07's value-slip) must put variety first or that mistake floods the seats. */
+  priority: 'rank-first' | 'variety-first' = 'rank-first',
 ): Array<{ value: string | number; misconceptionId: string }> {
   const key = String(keyValue);
   const mag = (v: string): number => (/^-?\d+$/.test(v) ? Number(v) : v.toUpperCase().charCodeAt(0) - A_CODE);
@@ -231,14 +233,17 @@ export function buildSpreadVrDistractors(
       const rank = acc.filter((m) => mag(m.value) < mag(key)).length;
       const vals = new Set(acc.map((m) => mag(m.value)));
       const middleOfRun = vals.has(mag(key) - 1) && vals.has(mag(key) + 1) ? 1 : 0;
-      const score = [rankCounts[rank] ?? 0, middleOfRun, distinctAvailable - new Set(acc.map((m) => m.id)).size, acc.filter((m) => !legacy.has(m.value)).length];
+      const variety = distinctAvailable - new Set(acc.map((m) => m.id)).size;
+      const score = priority === 'variety-first'
+        ? [variety, middleOfRun, rankCounts[rank] ?? 0, acc.filter((m) => !legacy.has(m.value)).length]
+        : [rankCounts[rank] ?? 0, middleOfRun, variety, acc.filter((m) => !legacy.has(m.value)).length];
       if (!best || better(score, best.score)) best = { pick: [...acc], score };
       return;
     }
     for (let i = start; i < menu.length; i++) choose(i + 1, [...acc, menu[i]!]);
   };
   choose(0, []);
-  if (!best) return buildDerivedVrDistractors(keyValue, operands, ids); // too few values to choose from
+  if (!best) return buildDerivedVrDistractors(keyValue, operands, ids, forbidden); // too few values to choose from
   const chosen = (best as { pick: typeof menu }).pick;
   const rank = chosen.filter((m) => mag(m.value) < mag(key)).length;
   rankCounts[rank] = (rankCounts[rank] ?? 0) + 1;

@@ -29009,3 +29009,59 @@ with a method saying nothing a child sees changed.
 *The measure grew too.* `measure-vr-key-rank.ts` now reports "key is the middle of a run" and "key in the
 only adjacent pair". The first version measured rank only and called vr-14 a rank problem. It was a run
 problem all along (R595: a measure can be satisfied while the fault sits where it does not look).
+
+**ROUNDS 2–3: vr-07, vr-09 and vr-14 redesigned and landed (David: *"All three"*, 2026-11-20).** 64 rebuilds
+over three review rounds. Round 2 refused all 67 rebuilds, and every refusal was right; round 3 attested
+and signed all 64.
+
+*The designs, as landed:*
+- **vr-14**: THREE options (step-direction and ONE step-size value), so there is no run of three around
+  the key. FOUR SHAPES are cycled evenly: forward or backward question (the reviewer's suggestion,
+  after refusing an invented mistake) times near miss one long or one short. Steps 2–4 only: on a step of
+  1 the near miss is the printed stem letter. Rejected if the key, the stem letter or any distractor is
+  printed in the pair, or the stem letter IS a pair letter.
+- **vr-09**: THREE options and FOUR SHAPES (step-repeat or direction, times off-by-one ±1). Steps 2–4,
+  nothing wraps, nothing printed, and 25 distinct series (round 2 had 7).
+- **vr-07**: four options, one of each mistake. Four-term expressions alternate the minus between the end
+  and the middle, so term-dropped lands on both sides. Tier 1 keeps "P + Q − R": in "P − Q + R" every
+  neighbouring pair has opposite signs, so a neighbour swap always cancels to a printed value (measured).
+  The key is never a printed code value, no running total or option is negative, and walk scripts and
+  executions name the swap.
+
+*Result, simple rules a child could learn, LIVE:*
+
+| door | before | after |
+|---|---|---|
+| vr-14 | middle of the run, 25/25 (certain) | best rule 52%, chance 33%; the one-in-two floor |
+| vr-09 | two earliest, 23/25 | best rule 48% |
+| vr-07 | two smallest, 25/25 | best simple rule 36%, chance 25% |
+| vr-11 | smallest 13/13, middle 12/12 | landed in round 1 |
+
+**THE ONE-IN-TWO FLOOR IS THE HONEST LIMIT, NAMED.** An off-by-one distractor sits next to the key by
+definition, so a child who learns "the answer is one of the two neighbouring letters" halves the choice.
+That is in the mistake itself, not in how it is placed. Balancing the four shapes guarantees no rule
+beats it. vr-07 has a subtler version: a child who reads WHERE the minus sign is narrows to two ranks
+(64%, against the 50% such a rule gets on random keys). The reviewer signed on that basis, and the way out
+(two value-slips on some rows) has its own cost.
+
+**WHAT THE REVIEW TAUGHT THE BUILDER.** Round 1 balanced the key's RANK and lost which SIDE the near
+miss fell on, so "the outer letter of the pair, else the middle" found the key on 25/25 (vr-09) and 22/25
+(vr-14). **Balancing one statistic moves the tell into the statistic next to it.** That is the third
+time today (English commas to near-twins, maths door totals to templates, VR rank to side), and the
+answer each time was to balance the SHAPE of the whole option set, not one number about it.
+
+*Process faults, fixed:*
+- Every rebuilt row's walk script was stale; the gate caught only the vr-09 rows where an old letter
+  vanished. Walk scripts are now written from the row, and "the letter X" stops bare A and I reading as
+  words.
+- Taking all 25 rows of vr-09 and vr-14 out of service emptied both cases, and `publish-door --ready`
+  then refused. Both were republished in full (25/25 each) minutes later, on dev only. `land-proposals
+  --from-live` now refuses a landing that would empty a case unless `--allow-empty-pool` is passed.
+- A refused option delete rolls back the whole door's transaction, not just the row (comment
+  corrected); it fails safe.
+
+*Not gated, but now prevented by the generator:* negative options, negative running totals, a question
+that answers itself, and a key that is the only printed option. The gates do not catch these, and a
+hand-authored row could still carry them.
+
+The generator and the LIVE rows agree on all four doors (25/25 unchanged each).

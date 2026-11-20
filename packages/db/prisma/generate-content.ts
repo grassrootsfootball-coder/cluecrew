@@ -13,7 +13,7 @@
 import { prisma } from '../src/index';
 import { deductionTier, isCommon, vocabTier, vocabTierOfSet } from './difficulty';
 import { assertNoReviewedRewrite, classifyDerivedWrites } from './reviewed-guard';
-import { buildDerivedVrDistractors, buildSpreadVrDistractors, checkVr04Row, flagNearSynonymHeadwords, selectVr04Distractors, type VrOperands, type Vr04Diagnosis, type Vr04Row } from '@cluecrew/core';
+import { VR_EXECUTORS, buildDerivedVrDistractors, buildSpreadVrDistractors, checkVr04Row, flagNearSynonymHeadwords, selectVr04Distractors, type VrOperands, type Vr04Diagnosis, type Vr04Row } from '@cluecrew/core';
 
 /**
  * Derived distractors (reviewer audit, 2026-08-05): each is the value its
@@ -48,10 +48,11 @@ function spreadOptions(
   count: number,
   rankCounts: number[],
   forbidden: ReadonlySet<string> = new Set(),
+  priority: 'rank-first' | 'variety-first' = 'rank-first',
 ): Array<{ content: object; isCorrect: boolean; mid?: string }> {
   return [
     { content: { value: keyValue }, isCorrect: true },
-    ...buildSpreadVrDistractors(keyValue, operands, ids, count, rankCounts, forbidden).map((d) => ({
+    ...buildSpreadVrDistractors(keyValue, operands, ids, count, rankCounts, forbidden, priority).map((d) => ({
       content: { value: d.value },
       isCorrect: false,
       mid: d.misconceptionId,
@@ -441,31 +442,43 @@ const A_CODE = 65;
 const letterOf = (position: number) => String.fromCharCode(A_CODE + ((position % 26) + 26) % 26);
 
 function letterSeries(): GenItem[] {
+  /**
+   * R1030 DESIGN, ROUND 2 (after review). Three options, and FOUR SHAPES cycled evenly: the far mistake is
+   * step-repeat (above the key) or direction (below), the near one is off-by-one one long or one short. Round 1
+   * balanced only the key's RANK and always put the near miss on the far side, so "the outer letter of the
+   * adjacent pair, else the middle one" found the key on 25 of 25 rows. With the four shapes equal, no rule
+   * a child can learn beats one in two, and one in two is the floor once an off-by-one is offered at all.
+   * Steps 2 to 4 (so "one short" is never a printed letter), every value inside A to Z (no wraps), every
+   * series distinct (round 1 had only 7 different questions).
+   */
+  const SHAPES = [['vr-letter-series-step-repeat', 1], ['vr-letter-series-step-repeat', -1], ['vr-letter-series-direction', 1], ['vr-letter-series-direction', -1]] as const;
+  const used = new Set<string>();
   return Array.from({ length: 25 }, (_, i) => {
     const tier = 1 + (i % 4);
-    const start = i % 6;
-    const step = 1 + (i % 3) + (tier >= 3 ? 1 : 0);
-    const terms = [0, 1, 2, 3].map((n) => letterOf(start + n * step));
-    const answer = start + 4 * step;
-    // Derived (reviewer audit): overshoot a step (step-repeat), extend backwards
-    // off the front (direction), land one letter out (off-by-one) — each the
-    // value its tag produces, not a fixed slot.
-    const operands: VrOperands = { kind: 'letter-series', first: start, step, answer };
-    return {
-      n: i + 1,
-      tier,
-      stem: { prompt: 'Which letter comes next?', series: terms, operands },
-      // R1030 — NOT CHANGED, ON PURPOSE. 5 LIVE rows offer the last letter shown as "one short" and 2 offer a
-      // direction value that wraps past A (Y from B). Excluding those leaves 15 rows without three honest
-      // distractors (on a step-1 series, step-repeat and off-by-one collide), and spreading the key's rank
-      // gains nothing once they are excluded. The fix needs new genuine mistakes or series that start away
-      // from the alphabet's ends: a design ruling, recorded in R1030.
-      options: derivedOptions(letterOf(answer), operands, [
-        'vr-letter-series-step-repeat',
-        'vr-letter-series-direction',
-        'vr-letter-series-off-by-one',
-      ]),
-    };
+    const [far, side] = SHAPES[i % 4]!;
+    for (const step of tier <= 2 ? [2, 3, 4] : [3, 4, 2]) for (let k = 0; k < 26; k += 1) {
+      const start = step + ((i * 7 + k) % 22);
+      const answer = start + 4 * step;
+      const farValue = far === 'vr-letter-series-step-repeat' ? answer + step : start - step;
+      const nearValue = answer + side;
+      if (answer > 25 || farValue < 0 || farValue > 25 || nearValue < 0 || nearValue > 25 || used.has(`${step},${start}`)) continue;
+      used.add(`${step},${start}`);
+      const terms = [0, 1, 2, 3].map((n) => letterOf(start + n * step));
+      const operands: VrOperands = { kind: 'letter-series', first: start, step, answer };
+      for (const [id, v] of [[far, farValue], ['vr-letter-series-off-by-one', nearValue]] as const)
+        if (!(VR_EXECUTORS[id]!(operands) ?? []).includes(letterOf(v))) throw new Error(`vr-09 ${i + 1}: ${id} does not produce ${letterOf(v)}`);
+      return {
+        n: i + 1,
+        tier,
+        stem: { prompt: 'Which letter comes next?', series: terms, operands },
+        options: [
+          { content: { value: letterOf(answer) }, isCorrect: true },
+          { content: { value: letterOf(farValue) }, isCorrect: false, mid: far },
+          { content: { value: letterOf(nearValue) }, isCorrect: false, mid: 'vr-letter-series-off-by-one' },
+        ],
+      };
+    }
+    throw new Error(`vr-09 item ${i + 1}: no distinct series fits shape ${far}/${side}`);
   });
 }
 
@@ -484,7 +497,17 @@ function letterSeries(): GenItem[] {
 // vr-07 helpers (rebuild 2026-08-06). evalCode in core is +/− only; this mirrors
 // it so the generator can score a candidate set without exporting it.
 const VR07_BAND: Record<number, [number, number]> = { 1: [2, 7], 2: [3, 11], 3: [4, 14], 4: [5, 18] };
-const vr07Expr = (tier: number): string => (tier === 1 ? 'P + Q − R' : 'P + Q + R − S');
+/**
+ * R1030 DESIGN. Every expression keeps a subtraction (the reviewer's 2026-08-06 ruling, so operation-slip
+ * always applies), but alternate items put it in the MIDDLE, so the last term is "+". Dropping a final "+"
+ * term lands BELOW the key; dropping a final "−" term lands above. Before, every expression ended in "−", so
+ * term-dropped and operation-slip both always overshot and the key was one of the two smallest on 25 of 25.
+ */
+// Alternate on the tier's OWN count (floor(i/4)). Tier 1 keeps "P + Q − R": in "P − Q + R" EVERY neighbouring
+// pair has opposite signs, so a neighbour-value swap always cancels to a printed value and value-slip has no
+// honest output (measured, R1030 round 2). The four-term form keeps a same-sign neighbour pair (P, Q).
+const vr07Expr = (tier: number, i = 0): string =>
+  tier === 1 ? 'P + Q − R' : (Math.floor(i / 4) % 2 === 1 ? 'P + Q − R + S' : 'P + Q + R − S');
 function vr07Eval(expr: string, v: Record<string, number>): number {
   let total = 0;
   let sign = 1;
@@ -524,11 +547,12 @@ function vr07Values(seed: number, lo: number, hi: number): Record<string, number
 // the fallback until the reviewer closes the pass (was: do-not-deploy).
 function lettersForNumbers(): GenItem[] {
   const ids = ['vr07-value-slip', 'vr07-operation-slip', 'vr07-term-dropped'];
+  const rank07: number[] = []; // R1030
   const usedSets = new Set<string>(); // no two items share a value set + expr
   return Array.from({ length: 25 }, (_, i) => {
     const tier = 1 + (i % 4);
     const [lo, hi] = VR07_BAND[tier]!;
-    const expr = vr07Expr(tier);
+    const expr = vr07Expr(tier, i);
     const shown = [...new Set((expr.match(/[A-Za-z]+/g) ?? []))]; // letters the stem uses
     for (let attempt = 0; attempt < 6000; attempt += 1) {
       const v = vr07Values(i * 100003 + attempt * 7 + 1, lo, hi);
@@ -540,10 +564,19 @@ function lettersForNumbers(): GenItem[] {
       if (usedSets.has(setKey)) continue; // per-item, not per-tier (was 8 distinct of 25)
       const key = vr07Eval(expr, v);
       if (key <= 0) continue; // no zero/negative answers
+      // R1030 round 2: the key must not be a printed code value (it was the ONLY printed option on one row),
+      // and the running total must never dip below zero working left to right (a row passed through −5).
+      if (nums.includes(key)) continue;
+      { let run = 0, sgn = 1, neg = false; for (const t of expr.replace(/[−–]/g, '-').match(/[A-Za-z]+|[+-]/g)!) { if (t === '+') sgn = 1; else if (t === '-') sgn = -1; else { run += sgn * v[t]!; if (run < 0) neg = true; } } if (neg) continue; }
       const operands: VrOperands = { kind: 'code', values: Object.fromEntries(shown.map((l) => [l, v[l]!])), expr };
       // no-collision: ALL THREE tags must resolve to distinct numbers, else the
       // builder drops one and the item falls short of four options.
       if (buildDerivedVrDistractors(key, operands, ids).length !== 3) continue;
+      // Build on a COPY of the rank tally, so a rejected candidate does not skew the door's balance.
+      const trial = [...rank07];
+      const opts = spreadOptions(key, operands, ids, 3, trial, new Set(shown.map((l) => String(v[l]))), 'variety-first');
+      if (opts.some((o) => Number((o.content as { value: unknown }).value) < 0) || opts.length !== 4) continue;
+      rank07.splice(0, rank07.length, ...trial);
       usedSets.add(setKey);
       return {
         n: i + 1,
@@ -554,9 +587,9 @@ function lettersForNumbers(): GenItem[] {
           sum: expr,
           operands,
         },
-        // R1030: NOT spread. Rank-first piled value-slip onto one side of the key (a new tell) and variety-first
-        // left the key among the two smallest; the honest fix needs questions whose last term is sometimes +.
-        options: derivedOptions(key, operands, ids),
+        // R1030: one of each mistake (variety first — value-slip is plentiful and floods the seats otherwise),
+        // never a code value the stem prints, the key's rank spread over what that allows.
+        options: opts,
       };
     }
     throw new Error(`vr-07 item ${i + 1}: no value set met distinct + mixed-parity + no-collision in 6000 tries`);
@@ -1083,33 +1116,53 @@ export function vr04NearSynonymFlags(): ReturnType<typeof flagNearSynonymHeadwor
 }
 
 function letterConnections(): GenItem[] {
+  /**
+   * R1030 DESIGN, ROUND 2 (after review). Three options (step-direction and one step-size value), and FOUR
+   * SHAPES cycled evenly: forward or backward question, times the near miss one long or one short. Round 1
+   * left the near miss "one short" on 15 of 18 rows and put step-1 rows' key in the middle by construction, so
+   * two rules found the key on 22 of 25. Steps 2 to 4 only (on step 1 the near miss is the printed stem letter).
+   * A question is rejected if its key, its stem letter or any distractor is printed in the first pair, or the
+   * stem letter IS a pair letter (round 1's row 24 answered itself).
+   */
+  const SHAPES = [[false, 1], [false, -1], [true, 1], [true, -1]] as const;
+  const used = new Set<string>();
   return Array.from({ length: 25 }, (_, i) => {
     const tier = 1 + (i % 4);
-    const step = 1 + (i % 4);
-    const a = i % 8;
-    const c = 8 + (i % 10);
-    /**
-     * R1030 — NOT CHANGED, ON PURPOSE. Backward questions would spread the key's RANK, but the row's real
-     * shortcut is that both step-size values (key ± 1) are always offered, so the key is the MIDDLE of three
-     * consecutive letters on every row — before and after. Fixing that needs a third genuine mistake (one was
-     * proposed and refused) or a design ruling, so this generator stays as the LIVE rows were made.
-     */
-    const answer = c + step;
-    // Derived (reviewer audit): step applied the wrong way (step-direction), and the
-    // jump one short/long either way (two honest step-size distractors) — each
-    // the value its tag produces, not a fixed slot.
-    const operands: VrOperands = { kind: 'letter-analogy', first: c, step, answer };
-    return {
-      n: i + 1,
-      tier,
-      stem: {
-        prompt: 'The second pair follows the same rule as the first. Which letter completes it?',
-        pairA: [letterOf(a), letterOf(a + step)],
-        stemWord: letterOf(c),
-        operands,
-      },
-      options: derivedOptions(letterOf(answer), operands, ['vr14-step-direction', 'vr14-step-size', 'vr14-step-size']),
-    };
+    const [backward, side] = SHAPES[i % 4]!;
+    const step = 2 + (i % 3);
+    for (let k = 0; k < 80; k += 1) {
+      const a = (i * 3 + k) % 9;
+      const c = 8 + ((i * 5 + k) % 11);
+      const signed = backward ? -step : step;
+      const answer = c + signed;
+      const dir = c - signed;
+      const near = answer + side;
+      const printed = [a, a + step];
+      const vals = [answer, dir, near, c];
+      if (vals.some((v) => v < 0 || v > 25) || printed.includes(c) || [answer, dir, near].some((v) => printed.includes(v) || v === c)) continue;
+      const qkey = `${a},${step},${c},${backward}`;
+      if (used.has(qkey)) continue;
+      used.add(qkey);
+      const operands: VrOperands = { kind: 'letter-analogy', first: c, step: signed, answer };
+      for (const [id, v] of [['vr14-step-direction', dir], ['vr14-step-size', near]] as const)
+        if (!(VR_EXECUTORS[id]!(operands) ?? []).includes(letterOf(v))) throw new Error(`vr-14 ${i + 1}: ${id} does not produce ${letterOf(v)}`);
+      return {
+        n: i + 1,
+        tier,
+        stem: {
+          prompt: 'The second pair follows the same rule as the first. Which letter completes it?',
+          pairA: backward ? [letterOf(a + step), letterOf(a)] : [letterOf(a), letterOf(a + step)],
+          stemWord: letterOf(c),
+          operands,
+        },
+        options: [
+          { content: { value: letterOf(answer) }, isCorrect: true },
+          { content: { value: letterOf(dir) }, isCorrect: false, mid: 'vr14-step-direction' },
+          { content: { value: letterOf(near) }, isCorrect: false, mid: 'vr14-step-size' },
+        ],
+      };
+    }
+    throw new Error(`vr-14 item ${i + 1}: no question fits shape ${backward ? 'backward' : 'forward'}/${side}`);
   });
 }
 

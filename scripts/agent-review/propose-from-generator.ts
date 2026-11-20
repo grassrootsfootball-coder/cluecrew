@@ -33,7 +33,20 @@ const L = (n: number) => String.fromCharCode(65 + (((n % 26) + 26) % 26));
 function executionFor(id: string, op: Record<string, any>, value: string, key: string): string | null {
   const step = op.step, first = op.first, ans = op.answer;
   switch (id) {
-    case 'vr07-value-slip': return `Read a neighbouring row of the code table for one of the letters in ${op.expr}, so the total comes to ${value} instead of ${key}.`;
+    case 'vr07-value-slip': {
+      // Name the swap (the reviewer refused the unnamed version: a sentence that fits every row checks nothing).
+      const rows = Object.keys(op.values ?? {}); const toks = String(op.expr).replace(/[−–]/g, '-').match(/[A-Za-z]+|[+-]/g) ?? [];
+      const evalWith = (vals: Record<string, number>) => { let t = 0, s = 1; for (const k of toks) { if (k === '+') s = 1; else if (k === '-') s = -1; else t += s * vals[k]!; } return t; };
+      for (const target of [...new Set(toks.filter((k) => /[A-Za-z]/.test(k)))]) {
+        const at = rows.indexOf(target);
+        for (const source of [rows[at - 1], rows[at + 1]]) {
+          if (!source) continue;
+          if (String(evalWith({ ...op.values, [target]: op.values[source] })) === value)
+            return `Used ${source}'s value ${op.values[source]} for ${target}, its neighbour in the code, so ${op.expr} comes to ${value} instead of ${key}.`;
+        }
+      }
+      return null;
+    }
     case 'vr07-operation-slip': return `Added every term in ${op.expr}, missing the minus sign, so the total comes to ${value} instead of ${key}.`;
     case 'vr07-term-dropped': return `Stopped before the last term of ${op.expr} and never used it, so the total comes to ${value} instead of ${key}.`;
     case 'vr-letter-series-step-repeat': return `Applied the step of ${step} twice from the last letter, landing on ${value} instead of ${key}.`;
@@ -50,6 +63,53 @@ function executionFor(id: string, op: Record<string, any>, value: string, key: s
   }
 }
 
+/**
+ * WALK SCRIPTS BY TEMPLATE (R1030). A walk script describes ONE question, so a rebuilt row's old script is
+ * wrong — the gate caught it only where a stale script named a letter no longer on the card (vr-09), not
+ * where it named letters still present (vr-14 row 02 said "J moves two on to L" of a question that now
+ * goes D → B, J → H). Every touched row gets a script written from its own stem and options.
+ */
+function swapOf(op: Record<string, any>, value: string): [string, string] | null {
+  const rows = Object.keys(op.values ?? {}); const toks = String(op.expr).replace(/[−–]/g, '-').match(/[A-Za-z]+|[+-]/g) ?? [];
+  const ev = (vals: Record<string, number>) => { let t = 0, s = 1; for (const k of toks) { if (k === '+') s = 1; else if (k === '-') s = -1; else t += s * vals[k]!; } return t; };
+  for (const target of [...new Set(toks.filter((k) => /[A-Za-z]/.test(k)))]) { const at = rows.indexOf(target);
+    for (const source of [rows[at - 1], rows[at + 1]]) if (source && String(ev({ ...op.values, [target]: op.values[source] })) === value) return [source, target]; }
+  return null;
+}
+function walkFor(type: string, stem: Record<string, any>, opts: Array<{ value: string; isKey: boolean; tag: string | null }>): string | null {
+  const key = opts.find((o) => o.isKey)!.value; const wrong = opts.filter((o) => !o.isKey);
+  // R1030 round 2: a bare capital letter reads as a word ("A runs backwards", "so I moves"), so letters are "the letter X".
+  const isLetter = /^[A-Z]$/.test(key); const L = (x: string) => (isLetter ? `the letter ${x}` : x); const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+  if (type === 'vr-07-letters-for-numbers') {
+    const code = stem.code as Record<string, string>; const letters = Object.keys(code);
+    const sum = String(stem.sum).replace(/[A-Z]/g, (l) => code[l] ?? l); const last = (String(stem.sum).match(/[A-Z]/g) ?? []).at(-1);
+    const lines = wrong.map((o) => {
+      if (o.tag === 'vr07-value-slip') { const sw = swapOf(stem.operands, o.value); return sw ? `${o.value} uses ${sw[0]}'s number for ${sw[1]}.` : null; }
+      if (o.tag === 'vr07-operation-slip') return `${o.value} adds every number.`;
+      if (o.tag === 'vr07-term-dropped') return `${o.value} leaves ${last} out.`;
+      return null;
+    });
+    if (lines.some((x) => x === null)) return null;
+    return `Look up ${letters.slice(0, -1).join(', ')} and ${letters.at(-1)} first. Then work out ${sum}, which makes ${key}. ${lines.join(' ')}`;
+  }
+  const why: Record<string, string> = {
+    'vr-letter-series-step-repeat': 'takes the step twice', 'vr-letter-series-direction': 'runs backwards', 'vr-letter-series-off-by-one': 'is one letter out',
+    'vr14-step-direction': 'goes the other way', 'vr14-step-size': 'is one letter out',
+  };
+  // One short sentence per wrong answer: the reading-age cap is 16 words, and a joined list broke it.
+  const end = wrong.map((o) => `${cap(L(o.value))} ${why[o.tag ?? ''] ?? 'is a slip'}.`).join(' ');
+  if (type === 'vr-09-letter-series') {
+    const s: string[] = stem.series; const step = Number(stem.operands.step);
+    return `Notice the space from ${L(s[0]!)} to ${L(s[1]!)}. You go up ${step} letters each time. Count ${step} on from ${L(s[3]!)} to reach ${L(key)}. ${end}`;
+  }
+  if (type === 'vr-14-letter-connections') {
+    const [p, q] = stem.pairA as string[]; const step = Number(stem.operands.step); const n = Math.abs(step); const dir = step > 0 ? 'on' : 'back';
+    return `Start with the first pair, ${p} and ${q}. That pair goes ${n} ${dir}, so ${L(stem.stemWord)} moves ${n} ${dir} to ${L(key)}. ${end}`;
+  }
+
+  return null;
+}
+
 async function main() {
   if (!TYPE || !DOOR || !GENERATORS[TYPE]) throw new Error('pass --type=<a generated question type> --door=<patterns/...>');
   const dir = pjoin(__dirname, '..', '..', 'content', 'agent-review', DOOR);
@@ -63,14 +123,20 @@ async function main() {
     const g = gen.find((x) => x.id === r.id);
     if (!g) { refused.push(`${r.id}: the generator does not produce this id`); continue; }
     // Order-insensitive: JSONB does not keep key order, so a raw stringify reports every row as different (CLAUDE.md).
-    if (canonicalJson((r.stem as { operands?: unknown }).operands) !== canonicalJson((g.it.stem as { operands?: unknown }).operands)) {
+    const touched = g.it.options.some((o, n) => { const s = r.options.find((x) => x.id === `${r.id}-opt${n + 1}`); return !s || val(s.content) !== val(o.content) || (o.isCorrect ? null : ((o as { mid?: string }).mid ?? null)) !== s.misconceptionId; });
+    if (canonicalJson((r.stem as { operands?: unknown }).operands) !== canonicalJson((g.it.stem as { operands?: unknown }).operands) || (ALLOW_REBUILD && (g.it.options.length !== r.options.length || touched))) {
       if (!ALLOW_REBUILD) { refused.push(`${r.id}: operands differ from the generator's — not the same question`); continue; }
-      if (g.it.options.length !== r.options.length) { refused.push(`${r.id}: ${r.options.length} options stored, generator makes ${g.it.options.length}`); continue; }
+      if (g.it.options.length > r.options.length) { refused.push(`${r.id}: ${r.options.length} options stored, generator makes ${g.it.options.length} — adding options is not supported`); continue; }
+      if (!r.options.find((x) => x.id === `${r.id}-opt1`)?.isCorrect || !g.it.options[0]!.isCorrect) { refused.push(`${r.id}: the key is not opt1 on both`); continue; }
       const genOps = (g.it.stem as { operands: Record<string, unknown> }).operands; const keyV = val(g.it.options.find((x) => x.isCorrect)!.content);
-      rebuilds.push({ itemId: r.id, why: 'R1030: the generator now writes this question differently (a backward letter connection), so its distractors spread the key; whole row rebuilt from the generator.',
-        stem: { ...(r.stem as Record<string, unknown>), ...(g.it.stem as Record<string, unknown>) },
-        options: g.it.options.map((o, n) => ({ optionId: `${r.id}-opt${n + 1}`, value: val(o.content), isKey: o.isCorrect, tag: o.isCorrect ? null : ((o as { mid?: string }).mid ?? null),
-          execution: o.isCorrect ? null : executionFor((o as { mid?: string }).mid ?? '', genOps, val(o.content), keyV) })) });
+      const newOptions = g.it.options.map((o, n) => ({ optionId: `${r.id}-opt${n + 1}`, value: val(o.content), isKey: o.isCorrect, tag: o.isCorrect ? null : ((o as { mid?: string }).mid ?? null),
+          execution: o.isCorrect ? null : executionFor((o as { mid?: string }).mid ?? '', genOps, val(o.content), keyV) }));
+      const newStem = { ...(r.stem as Record<string, unknown>), ...(g.it.stem as Record<string, unknown>) };
+      const walk = walkFor(TYPE!, newStem as Record<string, any>, newOptions);
+      rebuilds.push({ itemId: r.id, why: 'R1030: the generator now writes this row differently (question design or distractor choice) so the key\'s position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.',
+        stem: newStem, options: newOptions,
+        ...(walk ? { explanationPatch: { walkScript: walk, walkScriptBatch: 'R1030-TEMPLATE', walkScriptStatus: 'DRAFT' } } : {}),
+        ...(g.it.options.length < r.options.length ? { dropOptionIds: r.options.slice(g.it.options.length).map((x) => x.id) } : {}) });
       continue;
     }
     if (g.it.options.length !== r.options.length) { refused.push(`${r.id}: ${r.options.length} options stored, generator makes ${g.it.options.length}`); continue; }
