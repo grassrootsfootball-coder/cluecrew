@@ -28751,3 +28751,53 @@ CALC-04, CALC-08, GEOM-01, MEAS-04, MEAS-07, a rectangle shape). The "how much c
 **ALSO NOTED.** 324 LIVE maths distractors still have no execution (staff-facing). The lander writes one on
 every row it touches. MC02-GEOM-03's stem says "46 degrees" in words, which is not house notation, and
 the notation gate did not report it.
+
+## R1026 — Three maths entries created by the agent regime, and the rows they unlocked (David, 2026-11-20)
+
+**THE INSTRUCTION.** David, on R1025's open list: *"Yes, add them."* These are the three library entries
+whose absence left real mistakes mislabelled or unrepairable.
+
+**THE DOOR, NEW.** `scripts/agent-review/land-new-entries.ts`. A drafting agent proposes entries
+(`content/agent-review/library/new-entries-<batch>.json`), and a SEPARATE agent attests each one
+(`new-entries-review-<batch>.json`). An entry is created only if attested, its id is new and in house
+form, and it passes `checkMisconceptionProposal` plus the blocking child-facing checks on its hint.
+It is created ACTIVE with `approvedBy: reviewer:rev-agent-01`, `proposedBy: agent:drafter (R1021)`, and
+`textProvenance` marking BOTH author and approver as MACHINE (R94, R98). The approval note carries
+the drafter's reason AND the reviewer's. On the first batch the reviewer found more than the drafter
+claimed: maths-113 gives the same value as maths-99 on four MEAS-01 rows, not one. A note holding
+only the drafter's half would have been incomplete.
+
+**CREATED (batch M1, all attested):** `maths-111-halved-instead-of-quartered`,
+`maths-112-outside-angle-used-inside-the-triangle`, `maths-113-lost-the-bridge-to-the-pound`. Before
+drafting, the drafter checked that no existing ACTIVE entry names any of them. It also checked that
+the hint gate CAN fail (a 22-word hint was blocked), so the clean pass is not a blind one (R60).
+
+**ROWS (maths-01 rounds 4 and 5, 19 changes attested, 0 refused, 7 rows signed):** the halving
+distractor on MC04-FDP-02/07/08 moves from maths-78 (a percentage entry, on rows with no percentage)
+to maths-111. 10° on MC05-GEOM-06 and 45° on MC02-GEOM-06 move to maths-112 (they were on
+maths-100 and maths-71, neither of which produces them). MC02-GEOM-06's 70° moves to proc-01.
+MC05-MEAS-01 takes the maths-113 value £4.00, which only maths-113 explains on that row. MC02-FDP-02
+takes 8 (24 ÷ 3, maths-75's divide-by-the-top-number form). **Door ranks 40/50/43/28. Flagged
+templates: 6 → 3.** MEAS-01 and FDP-02 cleared.
+
+**STILL FLAGGED, and why it is not a seat swap:**
+- **NPV-01** "value of the digit", second-largest 5 of 5: a real shortcut. The only above-key
+  mistake the library names (one column left) is already there. A candidate entry ("reads the number
+  from that digit onward", 652 for the 6 in 4,652) would need the same draft-and-attest cycle.
+- **NPV-07**, 4 of 5: the honest below-key value replaces a tag that occurs 5 times (#68), so the
+  scarce-diagnosis rule bars it.
+- **FDP-04**, 5 of 5: five different kinds of question share the slot, so it is not a template a child
+  can learn. The reviewer judged it structural.
+
+**ALSO FIXED / FOUND.**
+- maths-75's description called 15 ÷ 3/4 = 5 "using only the denominator"; it divides by the
+  numerator. Corrected by a transform, independently checked (verdicts-J / transform-review-J).
+- MC02-FDP-02 and MC03-FDP-02 were the SAME question with the same options. They are the only
+  identical stems among the 179 LIVE maths rows, and they now differ in one option. Whether to keep
+  both is a question for whoever owns the mock-paper design.
+- Angles written in words ("110 degrees") appear in 5 LIVE maths stems and 8 options, while sibling
+  options use °. The notation gate covers temperatures only (`maths/notation.ts`), so this is an
+  inconsistency, not a gate breach.
+- `land-library.ts` passes the role `'misconception-hint'`, which is not a `ContentRole`.
+  `checkChildFacingText` treats an unknown role with the STRICTEST rules, so hints there were
+  over-gated, never under-gated. The new door uses `'hint'`.

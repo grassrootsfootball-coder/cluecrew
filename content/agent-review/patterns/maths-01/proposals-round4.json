@@ -1,0 +1,142 @@
+{
+ "door": "patterns/maths-01",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmteo82hw00cttmmjvquoywhh",
+   "itemId": "MC04-FDP-02",
+   "oldValue": "20",
+   "tag": "maths-111-halved-instead-of-quartered",
+   "newValue": "20",
+   "execution": "The child finds half of 40 instead of a quarter, splitting it into two equal parts: 40 ÷ 2 = 20. A quarter is one of four equal parts, so 1/4 of 40 is 40 ÷ 4 = 10."
+  },
+  {
+   "optionId": "cmteo82ir00detmmj3jez6ch8",
+   "itemId": "MC04-FDP-07",
+   "oldValue": "10",
+   "tag": "maths-111-halved-instead-of-quartered",
+   "newValue": "10",
+   "execution": "The child works out the dark chocolates correctly, 3/8 of 32 = 12, leaving 20, then takes half of the 20 instead of a quarter: 20 ÷ 2 = 10. A quarter of 20 is 20 ÷ 4 = 5 white chocolates."
+  },
+  {
+   "optionId": "cmteo82ix00djtmmjeffdr6bx",
+   "itemId": "MC04-FDP-08",
+   "oldValue": "8",
+   "tag": "maths-111-halved-instead-of-quartered",
+   "newValue": "8",
+   "execution": "Monday uses 3/5 of 40 = 24 litres, leaving 16. On Tuesday the child takes half of the 16 instead of a quarter, 16 ÷ 2 = 8 litres used, and gives the 16 - 8 = 8 left. A quarter of 16 is 4, so 12 litres are left."
+  },
+  {
+   "optionId": "cmteo82q800i3tmmjwi104s7d",
+   "itemId": "MC05-GEOM-06",
+   "oldValue": "10°",
+   "tag": "maths-112-outside-angle-used-inside-the-triangle",
+   "newValue": "10°",
+   "execution": "The child treats the 140° angle on the line as an angle of the triangle and takes both given angles straight off 180°: 180° - 140° - 30° = 10°. The triangle's own angle there is 180° - 140° = 40°, so the third angle is 180° - 40° - 30° = 110°."
+  },
+  {
+   "optionId": "cmteo82600063tmmjz95n410x",
+   "itemId": "MC02-GEOM-06",
+   "oldValue": "45°",
+   "tag": "maths-112-outside-angle-used-inside-the-triangle",
+   "newValue": "45°",
+   "execution": "The child treats the 110° angle on the line as an angle of the triangle and takes both given angles straight off 180°: 180° - 110° - 25° = 45°. The triangle's own angle there is 180° - 110° = 70°, so the third angle is 180° - 70° - 25° = 85°."
+  },
+  {
+   "optionId": "cmteo82600061tmmjs8d3qc2t",
+   "itemId": "MC02-GEOM-06",
+   "oldValue": "70°",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "newValue": "70°",
+   "execution": "The child takes the 110° from 180° correctly to get 70°, the triangle's angle next to the line, and gives that as the answer. The question asks for the third angle, so 180° - 70° - 25° = 85° is still to do."
+  },
+  {
+   "optionId": "cmteo82qd00i7tmmjq84d5vdt",
+   "itemId": "MC05-MEAS-01",
+   "oldValue": "£5.40",
+   "tag": "maths-113-lost-the-bridge-to-the-pound",
+   "newValue": "£4.00",
+   "execution": "The child counts on from £3.40 to the next pound, £4, a jump of 60p, then on from £4 to £8, a jump of £4, but keeps only the £4 and gives £4.00. The change is both jumps together: 60p + £4 = £4.60."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmteo82hw00cutmmjmezh558x",
+   "itemId": "MC04-FDP-02",
+   "value": "160",
+   "tag": "maths-24-inverted-fraction-of-an-amount",
+   "execution": "The child turns 1/4 upside down and finds four lots of 40, working out 40 × 4 ÷ 1 = 160. The answer is 40 ÷ 4 × 1 = 10."
+  },
+  {
+   "optionId": "cmteo82hw00cvtmmjjmeeknsg",
+   "itemId": "MC04-FDP-02",
+   "value": "40",
+   "tag": "maths-75-incomplete-fraction-of-an-amount",
+   "execution": "The child multiplies 40 by the top number 1 and never divides by the bottom number 4, giving 40 instead of 10. The fraction is treated as the single number 1."
+  },
+  {
+   "optionId": "cmteo82ir00ddtmmjjepsjkxt",
+   "itemId": "MC04-FDP-07",
+   "value": "8",
+   "tag": "maths-82-fraction-of-the-wrong-whole",
+   "execution": "The child takes one quarter of all 32 chocolates, 32 ÷ 4 = 8, instead of a quarter of the 20 left after the dark ones. A quarter of 20 is 5."
+  },
+  {
+   "optionId": "cmteo82ir00dftmmjrlsnqnej",
+   "itemId": "MC04-FDP-07",
+   "value": "20",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child works out the dark chocolates correctly, 3/8 of 32 = 12, finds the 32 - 12 = 20 left, and gives that. The question asks for the white ones, a quarter of those 20, which is 5."
+  },
+  {
+   "optionId": "cmteo82ix00dhtmmjpw997o8m",
+   "itemId": "MC04-FDP-08",
+   "value": "6",
+   "tag": "maths-82-fraction-of-the-wrong-whole",
+   "execution": "The child takes Tuesday's quarter of the whole 40 litres, 40 ÷ 4 = 10, instead of a quarter of the 16 litres left after Monday. That gives 16 - 10 = 6 where 16 - 4 is 12."
+  },
+  {
+   "optionId": "cmteo82ix00ditmmjytg5m68n",
+   "itemId": "MC04-FDP-08",
+   "value": "16",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child works out Monday correctly, 3/5 of 40 = 24 litres used, and gives the 40 - 24 = 16 litres left. Tuesday is still to do: a quarter of 16 is 4, so 16 - 4 = 12 litres are left."
+  },
+  {
+   "optionId": "cmteo82q800i1tmmj51b2hdxr",
+   "itemId": "MC05-GEOM-06",
+   "value": "40°",
+   "tag": "maths-proc-01-stopped-at-the-first-answer",
+   "execution": "The child takes the 140° from 180° correctly to get 40°, the triangle's angle next to the line, and gives that as the answer. The question asks for the third angle, so 180° - 40° - 30° = 110° is still to do."
+  },
+  {
+   "optionId": "cmteo82q800i2tmmj4beh0kpt",
+   "itemId": "MC05-GEOM-06",
+   "value": "290°",
+   "tag": "maths-89-wrong-angle-total",
+   "execution": "The child finds the triangle's angle on the line correctly, 180° - 140° = 40°, but uses 360° as the total for the triangle: 360° - 40° - 30° = 290°. The angles of a triangle add up to 180°, so the third angle is 110°."
+  },
+  {
+   "optionId": "cmteo82600062tmmjmiw2y7wm",
+   "itemId": "MC02-GEOM-06",
+   "value": "265°",
+   "tag": "maths-89-wrong-angle-total",
+   "execution": "The child finds the triangle's angle on the line correctly, 180° - 110° = 70°, but uses 360° as the total for the triangle: 360° - 70° - 25° = 265°. The angles of a triangle add up to 180°, so the third angle is 85°."
+  },
+  {
+   "optionId": "cmteo82qd00i5tmmjbpbcc7a8",
+   "itemId": "MC05-MEAS-01",
+   "value": "£5.00",
+   "tag": "maths-83-money-place-value-slip",
+   "execution": "The child drops the 40p and subtracts whole pounds only: £8 - £3 = £5.00. The book costs £3.40, so the 40p must come off too, leaving £4.60."
+  },
+  {
+   "optionId": "cmteo82qd00i6tmmju7v9uw4g",
+   "itemId": "MC05-MEAS-01",
+   "value": "£11.40",
+   "tag": "maths-84-adding-instead-of-finding-the-difference",
+   "execution": "The child adds the book's price to the £8 instead of taking it away: £8 + £3.40 = £11.40. Change is what is left, so £8 - £3.40 = £4.60."
+  }
+ ],
+ "rebuilds": []
+}

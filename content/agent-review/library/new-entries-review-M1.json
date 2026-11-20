@@ -1,0 +1,21 @@
+{
+  "batch": "M1",
+  "reviewer": "rev-agent-01",
+  "entries": [
+    {
+      "id": "maths-111-halved-instead-of-quartered",
+      "verdict": "ATTEST",
+      "reason": "Recomputed from the stems. MC04-FDP-02: 1/4 of 40 = 10, half = 20. MC04-FDP-07: 3/8 of 32 = 12, 20 left, a quarter = 5, half = 10. MC04-FDP-08: 3/5 of 40 = 24, 16 left, a quarter used (4) leaves 12, half used (8) leaves 8. All three values are present as options; the description's 20 for 1/4 of 40 (key 10) is right. Not a duplicate: maths-78 names 25% read as a half, a percentage-to-fraction conversion, and its hint (50%, 25%) speaks of percentages none of these stems contain, so it is untrue to the move on all three rows. maths-24, -75 and -82 hold the other values (160, 40, 8/6) and are different mistakes. The hint defines a quarter (true wherever a quarter is asked, not a claim about one item) and then describes the move; sentences of 12 and 9 words, plain British English. The id restricts it to a quarter halved, so it refuses halving where a third or other fraction is asked. Also fits MC03-FDP-07 (1/4 of 60) if ever tagged there."
+    },
+    {
+      "id": "maths-112-outside-angle-used-inside-the-triangle",
+      "verdict": "ATTEST",
+      "reason": "Recomputed. MC05-GEOM-06: triangle angle on the line = 180 - 140 = 40, third = 180 - 40 - 30 = 110; the mistake 180 - 140 - 30 = 10, present as an option. MC02-GEOM-06: 180 - 110 = 70, third = 180 - 70 - 25 = 85; the mistake 180 - 110 - 25 = 45, present. Every number in the description (10, 110, 140, 30, 40) is right. A real and common error: the angle on the straight line taken as an angle of the triangle. No ACTIVE entry names it: the current tags are wrong for these values (maths-100's halving of 180 gives neither 10 nor 45; maths-71 requires an unused number, and all three given numbers are used); maths-89 (290/265) and maths-proc-01 (40) are different mistakes. The hint describes a move (check the angle is inside before using it) and a general fact true on every row, since the entry only lands where a straight line is given; sentences of 12 and 8 words. Narrow: it names an angle beside a triangle on a straight line, so it refuses wrong angle totals and stopping early."
+    },
+    {
+      "id": "maths-113-lost-the-bridge-to-the-pound",
+      "verdict": "ATTEST",
+      "reason": "Recomputed every carrier. Counting on from the price to the next pound (the bridge) and then to the money given, keeping only the second jump: MC01 £5 - £3.50 bridge 50p, gives £1.00 (key £1.50); MC02 £8 - £2.60 bridge 40p, £5.00 (key £5.40); MC03 £8 - £5.60 bridge 40p, £2.00 (key £2.40); MC04 £7 - £2.80 bridge 20p, £4.00 (key £4.20); MC05 £8 - £3.40 bridge 60p, £4.00 (key £4.60). The description's MC03 figures are right, and each value is £1 below maths-83's on every row. FAIR DISTRACTOR: yes. The stem asks for the change, an exact calculation with no 'about' or 'estimate'; every option is written to the penny, so £5.00 against £5.40 is 40p of change not given, clearly wrong and not an acceptable approximation. Being close to the key is what makes it diagnostic, not unfair. DISTINCT FROM maths-99: yes as a mistake, but the overlap is wider than the drafter's 'why' states. This mistake equals the money given minus the price rounded UP to the next pound; maths-99 (rounding to the nearest and not compensating) rounds UP whenever the pence are 50p or more, so it gives the SAME value on MC01, MC02, MC03 and MC04 (£1.00, £5.00, £2.00, £4.00), not on MC01 alone. Only MC05 separates them: £3.40 rounds down, so maths-99 gives £5.00 (already maths-83's value) and this entry gives £4.00. The procedures differ (exact counting on with a dropped jump against estimating and not adjusting), MC05 shows the values can part, and neither existing entry's hint teaches the counting-on move, so the entry is warranted. But on MC01-MC04 the value alone cannot tell the two apart, and which tag any option there carries is a separate reviewer ruling that this attestation does not make. The hint describes the counting-on method and is true on every change row, including the multi-item and £10-note rows (e.g. MC04-MEAS-04, £6.05 to £7 then to £10); sentences of 12 and 7 words. Narrow: it applies only where a bridge to the next pound exists."
+    }
+  ]
+}

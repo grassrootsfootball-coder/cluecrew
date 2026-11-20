@@ -1,0 +1,5 @@
+{ "reviewer": "rev-agent-01", "group": "J",
+  "note": "Found by the maths-01 pattern-repair reviewer, round 5 (R1026): the entry's second example misnames the part of the fraction it uses.",
+  "entries": [ { "id": "maths-75-incomplete-fraction-of-an-amount", "verdict": "REFUSE",
+    "reason": "The description says 15 divided by 3/4 = 5 is 'using only the denominator'. 15 ÷ 3 = 5 divides by the 3, which is the NUMERATOR of 3/4. A drafter reading the entry would tag a denominator-only value (15 ÷ 4) to it on that strength.",
+    "transforms": [ { "field": "description", "from": "where the answer is 20, using only the denominator", "to": "where the answer is 20, dividing by the numerator alone" } ] } ] }

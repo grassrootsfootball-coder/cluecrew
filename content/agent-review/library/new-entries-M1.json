@@ -1,0 +1,49 @@
+{
+  "batch": "M1",
+  "proposer": "agent",
+  "entries": [
+    {
+      "id": "maths-111-halved-instead-of-quartered",
+      "district": "MATHS",
+      "category": "Fractions, Decimals & Percentages",
+      "description": "Child gives 20 for 1/4 of 40 where the answer is 10, finding half of the amount instead of a quarter of it.",
+      "childHint": "A quarter is one of four equal parts, not one of two. Split the amount into four equal parts first.",
+      "why": "No ACTIVE entry names halving where a quarter is asked. The three carriers are tagged maths-78-percentage-fraction-confusion, whose description is about 25% read as a half; none of these stems contains a percentage. MC04-FDP-02: 1/4 of 40 = 10, half gives 20. MC04-FDP-07: 32 - 3/8 of 32 (12) leaves 20, a quarter of 20 = 5, half of 20 gives 10. MC04-FDP-08: 40 - 3/5 of 40 (24) leaves 16, a quarter of 16 (4) used leaves 12, half of 16 (8) used leaves 8. maths-82 (wrong whole) and maths-proc-01 (stopped early) already hold the other wrong answers on FDP-07/08 and produce different values.",
+      "carriers": ["MC04-FDP-02", "MC04-FDP-07", "MC04-FDP-08"],
+      "valuesProduced": {
+        "MC04-FDP-02": "20",
+        "MC04-FDP-07": "10",
+        "MC04-FDP-08": "8"
+      }
+    },
+    {
+      "id": "maths-112-outside-angle-used-inside-the-triangle",
+      "district": "MATHS",
+      "category": "Geometry",
+      "description": "Child gives 10° where the answer is 110°, taking the 140° angle beside the triangle on the straight line and the 30° angle from 180° as if 140° were an angle of the triangle, instead of first finding the triangle's angle there, 180° - 140° = 40°.",
+      "childHint": "Check that an angle is inside the triangle before you use it. Angles on a straight line add up to 180°.",
+      "why": "No ACTIVE entry names using the angle on the straight line as an angle of the triangle. MC05-GEOM-06 (140° on the line, 30° in the triangle): the key is 180 - (180 - 140) - 30 = 110°, and 180 - 140 - 30 = 10° is this mistake; it is tagged maths-100-steps-out-of-order, whose description (halving 180 before taking away 40) does not produce 10. MC02-GEOM-06 (110° on the line, 25° in the triangle): the key is 180 - 70 - 25 = 85°, and 180 - 110 - 25 = 45° is this mistake; it is tagged maths-71-forgetting-part-of-a-multi-step-problem, but every given number is used. maths-89 (wrong angle total) holds 290°/265° on these rows and is a different mistake.",
+      "carriers": ["MC05-GEOM-06", "MC02-GEOM-06"],
+      "valuesProduced": {
+        "MC05-GEOM-06": "10°",
+        "MC02-GEOM-06": "45°"
+      }
+    },
+    {
+      "id": "maths-113-lost-the-bridge-to-the-pound",
+      "district": "MATHS",
+      "category": "Measurement",
+      "description": "Child gives £2.00 for the change from £8 for a £5.60 toy where the answer is £2.40, counting on from £5.60 to £6 and then to £8 but keeping only the £2 from £6 to £8 and losing the 40p bridge to the pound.",
+      "childHint": "Count on to the next pound, then on to the money given. Add both jumps to find the change.",
+      "why": "No ACTIVE entry names losing the pence bridge when counting on to find change. The mistake: count on from the price to the next whole pound (the bridge), then on to the amount paid, and give only the whole pounds of the second jump. It always lands exactly the bridge below the key, and exactly £1 below maths-83 (pence dropped, whole pounds subtracted). Values: MC01-MEAS-01 £5 - £3.50 (key £1.50): bridge 50p, gives £1.00. MC02-MEAS-01 £8 - £2.60 (key £5.40): bridge 40p, gives £5.00. MC03-MEAS-01 £8 - £5.60 (key £2.40): bridge 40p, gives £2.00. MC04-MEAS-01 £7 - £2.80 (key £4.20): bridge 20p, gives £4.00. MC05-MEAS-01 £8 - £3.40 (key £4.60): bridge 60p, gives £4.00. None of MC02-MC05 currently carries this value. On MC01 the £1.00 option already exists, tagged maths-99-rounded-without-compensating (rounding £3.50 to £4 gives the same £1.00); which tag that option should carry is for the reviewer, and this entry does not claim it.",
+      "carriers": ["MC01-MEAS-01", "MC02-MEAS-01", "MC03-MEAS-01", "MC04-MEAS-01", "MC05-MEAS-01"],
+      "valuesProduced": {
+        "MC01-MEAS-01": "£1.00",
+        "MC02-MEAS-01": "£5.00",
+        "MC03-MEAS-01": "£2.00",
+        "MC04-MEAS-01": "£4.00",
+        "MC05-MEAS-01": "£4.00"
+      }
+    }
+  ]
+}

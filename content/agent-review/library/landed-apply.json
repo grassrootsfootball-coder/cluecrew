@@ -237,14 +237,18 @@
  },
  {
   "id": "maths-99-rounded-without-compensating",
+  "outcome": "already attested"
+ },
+ {
+  "id": "maths-75-incomplete-fraction-of-an-amount",
   "outcome": "TRANSFORMED + ATTESTED",
   "before": {
-   "childHint": "Rounding helps you check an answer. Work the real numbers out too.",
-   "description": "Child gives 62 - 27 = 40 where the answer is 35, rounding both to the nearest ten and giving the rounded result."
+   "childHint": "A fraction is two numbers working together. Use both.",
+   "description": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, using only the denominator — treating the fraction as a single number."
   },
   "after": {
-   "description": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
-   "childHint": "Rounding helps you check an answer. Work the real numbers out too."
+   "description": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+   "childHint": "A fraction is two numbers working together. Use both."
   }
  }
 ]

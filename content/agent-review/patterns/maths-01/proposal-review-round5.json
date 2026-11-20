@@ -1,0 +1,19 @@
+{
+  "door": "patterns/maths-01",
+  "reviewer": "rev-agent-01",
+  "round": 5,
+  "changes": [
+    {
+      "ref": "seat:cmteo823z004rtmmj7lti23g0",
+      "verdict": "ATTEST",
+      "reason": "24 ÷ 3 = 8: the child divides by the top number 3 and stops, treating the fraction as the single number 3. That is #75's 'using only one number' (its own example, 15 ÷ 3/4 = 5, also divides by the 3). It is a real confusion of which number to divide by, the mirror of the 24 ÷ 4 = 6 already on the row. Execution checked: 24 ÷ 4 × 3 = 18. 8 is wrong, differs from 6, 18 and 32, and is no other form of 18. Replaced tag #75 occurs 13 times and the new value keeps #75, so the door loses no diagnosis: the multiply-by-the-numerator form survives on MC01 (24), MC03 (72), MC04 (40) and MC05 (36). Note: #75's description calls the 15 ÷ 3 case 'using only the denominator'; 3 is the numerator, which the execution states correctly. The library text should be corrected."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC02-FDP-02",
+      "verdict": "SIGN",
+      "reason": "As it will be: 18 (key), 6 (#75, ÷4), 8 (#75, ÷3), 32 (#24, inverted). 3/4 of 24 = 18 is the only correct option. The key moves from second-smallest to second-largest. No tell on the row: 6 and 8 come from two separate one-number slips, and 32 is the only option above the key. The FDP-02 template and its shape drop from 4/5 to 3/5 second-smallest, which clears both flags. MC02 and MC03 are still the same question; they now share 6, 18 and 32, so remembering one set of options does not single out the key on the other. Asking the same question in two sets is a separate content issue, not caused by this change."
+    }
+  ]
+}
