@@ -14,7 +14,7 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { checkItemChildFacing, normaliseMathsNotation, stemSchema } from '../packages/core/src/index';
+import { checkItemChildFacing, normaliseMathsNotation, stemSchema, MATHS_QUESTION_TYPES } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 import { assertFixture } from './lib/carried-fixture';
 import { beginCut, sealCut } from './lib/cut-stamp';
@@ -45,6 +45,11 @@ const TYPES = [
   { id: 'maths-rp', name: 'Ratio and proportion', group: 'RP', mechanic: 'workshop', mechanicBasis: 'DERIVED — 11 fits THE WORKSHOP (83) only.' },
 ];
 const TYPE_BY_GROUP = new Map(TYPES.map((t) => [t.group, t.id]));
+// The seed registers maths types from packages/core/src/question-types.ts; this script's own list must not drift from it (R42).
+for (const t of TYPES) {
+  const shared = MATHS_QUESTION_TYPES.find((s) => s.id === t.id);
+  if (!shared || shared.name !== t.name || shared.mechanic !== t.mechanic) throw new Error(`maths type ${t.id} differs from MATHS_QUESTION_TYPES — one of the two lists has drifted`);
+}
 
 interface Staged { itemId: string; group: string; tier: number; stem: string; explanation: Record<string, unknown>; options: Array<{ label: string; value: string; isKey?: boolean; misconceptionId?: string | null }>; approvedBy: unknown }
 

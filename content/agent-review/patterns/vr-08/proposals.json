@@ -1,0 +1,104 @@
+{
+  "door": "patterns/vr-08",
+  "proposer": "agent",
+  "seats": [],
+  "redrafts": [],
+  "rebuilds": [
+    {
+      "itemId": "gen-vr-08-move-letter-08",
+      "why": "Door-level pattern repair (vr-08), round 2: the key was the first letter of FEAT; rebuilt so the key is letter 3 of FOUND (FOUND -> FOND, SIT -> SUIT). Every letter of FOUND was tried at every position in SIT, counting +S/+ES/+D/+ED forms; only U works. Every 'not a word' in the executions was checked against /usr/share/dict/web2.",
+      "stem": {
+        "word1": "FOUND",
+        "word2": "SIT",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-08-opt1",
+          "value": "U",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-08-opt2",
+          "value": "F",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves F. SIT could take F to make SIFT, but taking F out of FOUND leaves OUND, which is not a word — the first word breaks. The answer is U: FOND and SUIT."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-08-opt3",
+          "value": "O",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves O. FOUND without O is FUND, a real word — but SIT cannot take O anywhere and make a word; the best try is SOIT. The second word breaks. The answer is U: FOND and SUIT."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-23",
+      "why": "Door-level pattern repair (vr-08), round 2: the key was the first letter of WHEAT; rebuilt so the key is letter 4 of LEARN (LEARN -> LEAN, TIP -> TRIP). Every letter of LEARN was tried at every position in TIP, counting +S/+ES/+D/+ED forms; only R works. Every 'not a word' in the executions was checked against /usr/share/dict/web2.",
+      "stem": {
+        "word1": "LEARN",
+        "word2": "TIP",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-23-opt1",
+          "value": "R",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-23-opt2",
+          "value": "L",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves L. LEARN without L is EARN, a real word — but TIP cannot take L anywhere and make a word; the best try is TLIP. The second word breaks. The answer is R: LEAN and TRIP."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-23-opt3",
+          "value": "E",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves E. Taking E out of LEARN leaves LARN, which is not a word — the first word breaks. The answer is R: LEAN and TRIP."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-14",
+      "why": "Round 2: PAINT/PLAN had a second solution (I: PANT + PLAIN); rebuilt with exactly one working letter, letter 5 of RANGE (RANGE -> RANG, PACE -> PEACE). Every letter of RANGE was tried at every position in PACE, counting +S/+ES/+D/+ED forms; only E works. Every 'not a word' in the executions was checked against /usr/share/dict/web2.",
+      "stem": {
+        "word1": "RANGE",
+        "word2": "PACE",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-14-opt1",
+          "value": "E",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-14-opt2",
+          "value": "N",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves N. RANGE without N is RAGE, a real word — but PACE cannot take N anywhere and make a word; the best try is PANCE. The second word breaks. The answer is E: RANG and PEACE."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-14-opt3",
+          "value": "A",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves A. Taking A out of RANGE leaves RNGE, which is not a word — the first word breaks. The answer is E: RANG and PEACE."
+        }
+      ]
+    }
+  ]
+}

@@ -28636,3 +28636,71 @@ was never run.
 a new question. The two one-line holds can go round once more. The 17 LIVE rows carrying the stock
 sentence. Separately, `check:line-refs` fails on LIVE `ENG-015-CC-10` (`attractorLine` set without
 `defeaterLine`). That was already there and is untouched here.
+
+## R1024 — "The best possible product": what was done under that instruction, and what was not (David, 2026-11-20)
+
+**THE INSTRUCTION.** David, after R1023: *"do whatever makes the most sense that ensures its the best
+possible product."* That delegates judgement. It does not suspend the rules. Everything below went
+through the R1021 regime: one agent drafts, a separate agent reviews under `rev-agent-01`, every gate
+runs, and every row lands all-or-nothing. The calls are ranked by what a child meets.
+
+**1. TWO DOOR-LEVEL SHORTCUTS BROKEN (R1021's open items).**
+- **vr-08:** the letter to move was word1's FIRST letter on 15 of 25 rows, so "always try the first
+  letter" scored 60% against about 20% by chance. 10 rows were rebuilt over two rounds. The key position
+  now spreads 6/5/5/5/3/1 (first to sixth letter). The reviewer refused two rebuilds: COAST/LONG, because
+  S also works (COAT + LONGS), and SOLID/FAR, whose notes called FARO and SOLI non-words, which they are
+  not. It also found a LIVE row with a second solution (PAINT/PLAN: I gives PANT + PLAIN), now rebuilt.
+- **vr-16:** on 23 of 25 rows the three distractors were near-synonyms, so the key was simply the odd one
+  out and the card could be ignored. 12 rows now carry a loosely-different word beside the twins: 14 of
+  25 rows no longer split three-alike, against a target of 15. The reviewer refused "hard" for SMOOTH
+  ("a smooth landing / a hard landing" is a real opposite pair). The shortfall is reported, not forced.
+- **Mechanism:** `export-packets --live` and `land-proposals --from-live`. A LIVE row leaves service
+  only if it lands, inside the same transaction as its rewrite, and `publish-door --ready` returns it.
+  Both doors stayed at 25 LIVE throughout.
+
+**2. A FRESH DATABASE COULD NOT BE SEEDED.** The 2026-11-19 CI run failed at `seed`. `case-en-01..05`
+(committed 2026-08-19) name English question types the seed never created. Only the scripts that
+imported English and maths content registered those types, each from its own private list. That is R42
+(two doors enumerating separately), between a script and the seed. There is now one list,
+`packages/core/src/question-types.ts`. The seed reads it, `import-english-items` reads it, and
+`build-maths-district` asserts its own list against it. Verified on a throwaway database: migrate, seed
+and `content:generate` all complete (35 types, 26 cases). The dev database was confirmed untouched. CI
+has later steps that already failed before this, e.g. `typecheck:scripts` reports 231 errors outside
+its known list. They are not addressed here.
+
+**3. AN INSTRUMENT SENDING A FALSE "WRONG PLACE".** `check:line-refs` located a quoted span at its FIRST
+occurrence only. ENG-006-TM-08 quotes "the rule", which is at line 11 and line 38, and correctly cites 38.
+It was reported as "sending the child to the wrong place". `findSpanLines` now finds every occurrence.
+R149 baseline before and after: exactly one finding moved, that one. A test pins both directions.
+
+**4. THE STOCK EXECUTION SENTENCE on LIVE English rows (R1023 finding 5):** 23 of 24 redrafts attested,
+and 19 of 22 rows landed (execution-only, so they never left service). Three rows keep it, each held for
+another fault in an older execution: pp-09, pp-12, and ED-05, whose redraft was refused.
+**ENG-018-RB-02 and ENG-026-AL-03 landed** in round 4. **ENG-022-GK-11 stays DRAFT.** Its round-4 question
+was sound, but it nearly duplicates its signed sibling ENG-022-GK-09: same lines, a paraphrased key and
+the same negation distractor. A child who has just answered GK-09 has GK-11's answer. It should be
+retired rather than rebuilt again. English: **379 LIVE, 1 DRAFT.**
+
+**5. maths-99's description said 62 − 27 rounds to 40.** It rounds to 30. A transform was independently
+attested and landed through `land-library`. The entry's 35 LIVE carriers were checked: their values are
+genuine round-and-forget answers, and MC01-CALC-02 (62 − 27) already uses 30, so no child saw the error.
+
+**DELIBERATELY NOT DONE: the 77 agent-written item hints stay unserved.** After a miss, the child is
+shown the LIBRARY hint for the wrong option they chose (`hintToServe`), unless a named reader approved
+the ITEM hint. The library hint answers the specific mistake. The item hint is a pointer to where to
+look. Annie's standard (PU-08, R601): *"An item hint earns its place by saying something the general one
+cannot"*, which is a per-item comparison against every wrong option's hint, not a blanket switch.
+Approving a hint also changes the signed projection, so every approved row must be re-signed. This is
+worth doing, as a review of its own. The safe default stays in place until then.
+
+**STILL OPEN (measured, not acted on):**
+- **maths-01:** the key is the second-smallest option on 68 of 171 LIVE rows (40%, against 25% by
+  chance), and one of the two middle values on 71%. It is a milder version of vr-08's shortcut. A repair
+  must change attested distractors without dropping any diagnosis, so it needs a design call first.
+- **vr-05:** 14 LIVE rows hide other real words at the joins. None is among the options (R1021).
+- **vr-16:** row 05 LIGHT has two senses with two opposites, so it should be rebuilt on another card
+  word. Row 11 is still three-alike.
+- **vr-21** (R323), and the vr-03/vr-04 distractor concentration (R1022).
+- **Addendum 36:** 800 staff-only attractor/defeater pairs fail "both or neither", mostly
+  `attractorLine` with no `defeaterLine`. This is incomplete staff data, not something a child meets,
+  and the gate's message overstates it (R591).

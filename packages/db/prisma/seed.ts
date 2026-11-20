@@ -10,7 +10,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { hash } from '@node-rs/argon2';
 import { assertNoReviewedRewrite, classifyDerivedWrites } from './reviewed-guard';
-import { FAMILY_BY_TYPE, buildDerivedVrDistractors, caseFileSchema, regionFileSchema, vrLetterOf, wordFileSchema, type VrOperands } from '@cluecrew/core';
+import { ENGLISH_QUESTION_TYPES, MATHS_QUESTION_TYPES, FAMILY_BY_TYPE, buildDerivedVrDistractors, caseFileSchema, regionFileSchema, vrLetterOf, wordFileSchema, type VrOperands } from '@cluecrew/core';
 import { prisma } from '../src/index';
 
 const CONTENT_ROOT = resolve(import.meta.dirname, '../../../content');
@@ -279,6 +279,17 @@ async function seedQuestionTypes(): Promise<void> {
       create: { id, district: 'VR', name: type.name, glCode: String(type.num), mechanic: type.mechanic },
       update: { name: type.name, glCode: String(type.num), mechanic: type.mechanic },
     });
+  }
+  // English and maths: one shared list (packages/core/src/question-types.ts). Without these a fresh
+  // database cannot seed the English cases (Case_questionTypeId_fkey — CI, 2026-11-19).
+  for (const [district, types] of [['ENGLISH', ENGLISH_QUESTION_TYPES], ['MATHS', MATHS_QUESTION_TYPES]] as const) {
+    for (const type of types) {
+      await prisma.questionType.upsert({
+        where: { id: type.id },
+        create: { id: type.id, district, name: type.name, mechanic: type.mechanic },
+        update: { name: type.name, mechanic: type.mechanic },
+      });
+    }
   }
 }
 

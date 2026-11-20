@@ -1,0 +1,42 @@
+{
+  "door": "patterns/vr-08",
+  "reviewer": "rev-agent-01",
+  "round": 2,
+  "changes": [
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-08",
+      "verdict": "ATTEST",
+      "reason": "Solved FOUND/SIT with all 5 letters at all 4 insert points. Only U works (FOND + SUIT). F: SIT can take F (SIFT), but FOUND without F leaves OUND, which is in no dictionary (first-word-invalid; true). O leaves FUND, but OSIT/SOIT/SIOT/SITO are not English words (second-word-invalid; true; SOIT appears only in the French motto). N leaves FOUD, which is obscure Scots, so N fails even though SIT + N gives SNIT; N is not an option. D leaves FOUN and gives no D-word. Key is now letter 3."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-23",
+      "verdict": "ATTEST",
+      "reason": "Solved LEARN/TIP exhaustively. Only R works (LEAN + TRIP). L leaves EARN, but LTIP/TLIP/TILP/TIPL are not words (second-word-invalid; true). E leaves LARN (first-word-invalid). LARN appears only in some dictionaries, as a dialect/facetious spelling of LEARN, not as a standard word, and E also makes no word with TIP. This is the same class as MANT, accepted on row 19 in round 1, so the claim stands. A leaves LERN and gives no A-word. N leaves LEAR, which is obscure, and gives no N-word. Key is now letter 4."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-14",
+      "verdict": "ATTEST",
+      "reason": "Fixes the round-1 second solution (I: PANT + PLAIN). Solved RANGE/PACE exhaustively. Only E works (RANG + PEACE). N leaves RAGE, but NPACE/PNACE/PANCE/PACNE/PACEN are not words (second-word-invalid; true). A gives APACE but leaves RNGE (first-word-invalid; true). R gives PACER but leaves ANGE. G leaves RANE, which is not a standard word, and gives no G-word. Key is letter 5, as before."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-08-move-letter-08",
+      "verdict": "SIGN",
+      "reason": "FOUND/SIT -> FOND/SUIT. Exhaustive solve: key U is unique and F and O fail as tagged. All words formed (FUND, SIFT, FOND, SUIT) are common and suitable."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-23",
+      "verdict": "SIGN",
+      "reason": "LEARN/TIP -> LEAN/TRIP. Exhaustive solve: key R is unique and L and E fail as tagged. All words (EARN, LEAN, TRIP) are common and suitable."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-14",
+      "verdict": "SIGN",
+      "reason": "RANGE/PACE -> RANG/PEACE. Exhaustive solve: key E is unique and N and A fail as tagged. All words (RAGE, RANG, PEACE) are suitable. The previous second solution is gone."
+    }
+  ],
+  "doorTarget": {
+    "asWillStand": "Key position in word1 across all 25 rows (21 LIVE as they are, plus the 3 rebuilds; row 14 stays at position 5): 1st: 6 (04, 09, 13, 15, 21, 25); 2nd: 5 (02, 03, 05, 06, 22); 3rd: 5 (08, 11, 12, 18, 20); 4th: 5 (07, 17, 19, 23, 24); 5th: 3 (01, 10, 14); 6th: 1 (16). Total 25. MET: no position is above 7 and the first letter is on 6. The key is the last letter of word1 on 5 rows."
+  }
+}

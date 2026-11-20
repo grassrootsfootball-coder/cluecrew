@@ -1,0 +1,296 @@
+{
+  "door": "patterns/vr-08",
+  "proposer": "agent",
+  "seats": [],
+  "redrafts": [],
+  "rebuilds": [
+    {
+      "itemId": "gen-vr-08-move-letter-02",
+      "why": "Door-level pattern repair (vr-08): the key was the first letter of BLEND; rebuilt so the key is letter 2 of STICK (STICK -> SICK, EACH -> TEACH). Both distractor letters occur in STICK and each fails.",
+      "stem": {
+        "word1": "STICK",
+        "word2": "EACH",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-02-opt1",
+          "value": "T",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-02-opt2",
+          "value": "S",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves S. STICK without S is TICK, a real word — but EACH cannot take S anywhere and make a word; the best try is SEACH. The second word breaks. The answer is T: SICK and TEACH."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-02-opt3",
+          "value": "C",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves C. Taking C out of STICK leaves STIK, which is not a word — the first word breaks. The answer is T: SICK and TEACH."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-05",
+      "why": "Door-level pattern repair (vr-08): the key was the first letter of CHEAP; rebuilt so the key is letter 2 of SPEND (SPEND -> SEND, SOON -> SPOON). Both distractor letters occur in SPEND and each fails.",
+      "stem": {
+        "word1": "SPEND",
+        "word2": "SOON",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-05-opt1",
+          "value": "P",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-05-opt2",
+          "value": "E",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves E. Taking E out of SPEND leaves SPND, which is not a word — the first word breaks. The answer is P: SEND and SPOON."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-05-opt3",
+          "value": "N",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves N. SPEND without N is SPED, a real word — but SOON cannot take N anywhere and make a word; the best try is SNOON. The second word breaks. The answer is P: SEND and SPOON."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-06",
+      "why": "Door-level pattern repair (vr-08): the key was the first letter of SPACE; rebuilt so the key is letter 2 of THANK (THANK -> TANK, SAME -> SHAME). Both distractor letters occur in THANK and each fails.",
+      "stem": {
+        "word1": "THANK",
+        "word2": "SAME",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-06-opt1",
+          "value": "H",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-06-opt2",
+          "value": "K",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves K. THANK without K is THAN, a real word — but SAME cannot take K anywhere and make a word; the best try is SAMEK. The second word breaks. The answer is H: TANK and SHAME."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-06-opt3",
+          "value": "N",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves N. Taking N out of THANK leaves THAK, which is not a word — the first word breaks. The answer is H: TANK and SHAME."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-08",
+      "why": "Door-level pattern repair (vr-08): the key was the first letter of FEAT; rebuilt so the key is letter 3 of COAST (COAST -> COST, LONG -> ALONG). Both distractor letters occur in COAST and each fails.",
+      "stem": {
+        "word1": "COAST",
+        "word2": "LONG",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-08-opt1",
+          "value": "A",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-08-opt2",
+          "value": "T",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves T. Taking T out of COAST leaves COAS, which is not a word — the first word breaks. The answer is A: COST and ALONG."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-08-opt3",
+          "value": "O",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves O. COAST without O is CAST, a real word — but LONG cannot take O anywhere and make a word; the best try is LONGO. The second word breaks. The answer is A: COST and ALONG."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-11",
+      "why": "Door-level pattern repair (vr-08): the key was the first letter of CRASH; rebuilt so the key is letter 3 of LIKED (LIKED -> LIED, MONEY -> MONKEY). Both distractor letters occur in LIKED and each fails.",
+      "stem": {
+        "word1": "LIKED",
+        "word2": "MONEY",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-11-opt1",
+          "value": "K",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-11-opt2",
+          "value": "D",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves D. LIKED without D is LIKE, a real word — but MONEY cannot take D anywhere and make a word; the best try is MONEYD. The second word breaks. The answer is K: LIED and MONKEY."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-11-opt3",
+          "value": "E",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves E. Taking E out of LIKED leaves LIKD, which is not a word — the first word breaks. The answer is K: LIED and MONKEY."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-18",
+      "why": "Door-level pattern repair (vr-08): the key was the first letter of CHEAT; rebuilt so the key is letter 3 of HEARD (HEARD -> HERD, ROUND -> AROUND). Both distractor letters occur in HEARD and each fails.",
+      "stem": {
+        "word1": "HEARD",
+        "word2": "ROUND",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-18-opt1",
+          "value": "A",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-18-opt2",
+          "value": "H",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves H. Taking H out of HEARD leaves EARD, which is not a word — the first word breaks. The answer is A: HERD and AROUND."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-18-opt3",
+          "value": "R",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves R. HEARD without R is HEAD, a real word — but ROUND cannot take R anywhere and make a word; the best try is ROUNDR. The second word breaks. The answer is A: HERD and AROUND."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-19",
+      "why": "Door-level pattern repair (vr-08): the key was the first letter of IDEAL; rebuilt so the key is letter 4 of MEANT (MEANT -> MEAT, BAD -> BAND). Both distractor letters occur in MEANT and each fails.",
+      "stem": {
+        "word1": "MEANT",
+        "word2": "BAD",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-19-opt1",
+          "value": "N",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-19-opt2",
+          "value": "E",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves E. BAD could take E to make BEAD, but taking E out of MEANT leaves MANT, which is not a word — the first word breaks. The answer is N: MEAT and BAND."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-19-opt3",
+          "value": "T",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves T. MEANT without T is MEAN, a real word — but BAD cannot take T anywhere and make a word; the best try is BADT. The second word breaks. The answer is N: MEAT and BAND."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-23",
+      "why": "Door-level pattern repair (vr-08): the key was the first letter of WHEAT; rebuilt so the key is letter 4 of SOLID (SOLID -> SOLD, FAR -> FAIR). Both distractor letters occur in SOLID and each fails.",
+      "stem": {
+        "word1": "SOLID",
+        "word2": "FAR",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-23-opt1",
+          "value": "I",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-23-opt2",
+          "value": "O",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves O. SOLID without O is SLID, a real word — but FAR cannot take O anywhere and make a word; the best try is FARO. The second word breaks. The answer is I: SOLD and FAIR."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-23-opt3",
+          "value": "D",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves D. Taking D out of SOLID leaves SOLI, which is not a word — the first word breaks. The answer is I: SOLD and FAIR."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-24",
+      "why": "Door-level pattern repair (vr-08): the key was the first letter of SLICK; rebuilt so the key is letter 4 of WITCH (WITCH -> WITH, HAIR -> CHAIR). Both distractor letters occur in WITCH and each fails.",
+      "stem": {
+        "word1": "WITCH",
+        "word2": "HAIR",
+        "prompt": "Move one letter from the first word to the second so both make new words."
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-08-move-letter-24-opt1",
+          "value": "C",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-24-opt2",
+          "value": "W",
+          "isKey": false,
+          "tag": "vr-move-letter-second-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves W. WITCH without W is ITCH, a real word — but HAIR cannot take W anywhere and make a word; the best try is HAIRW. The second word breaks. The answer is C: WITH and CHAIR."
+        },
+        {
+          "optionId": "gen-vr-08-move-letter-24-opt3",
+          "value": "T",
+          "isKey": false,
+          "tag": "vr-move-letter-first-word-invalid",
+          "execution": "Move one letter so both words are real. This option moves T. Taking T out of WITCH leaves WICH, which is not a word — the first word breaks. The answer is C: WITH and CHAIR."
+        }
+      ]
+    }
+  ]
+}

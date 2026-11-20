@@ -12,6 +12,13 @@ import { prisma } from '../../packages/db/src/index';
 import { requirePopulation } from '../lib/population';
 
 const OUT = pjoin(__dirname, '..', '..', 'content', 'agent-review');
+/**
+ * `--live` (2026-11-20): packet the door's LIVE rows instead of its drafts, into `patterns/<door>/`, for a
+ * DOOR-LEVEL repair — a pattern no single row is at fault for (vr-08's key letter is word1's first letter on
+ * 15 of 25 rows). The proposer picks which rows to rebuild; `land-proposals --from-live` takes only the rows
+ * that land out of service, in the landing transaction.
+ */
+const LIVE = process.argv.includes('--live');
 const DOORS = (process.argv.find((a) => a.startsWith('--doors='))?.slice(8) ?? 'vr-05,vr-08,vr-13,vr-16,vr-17,vr-18,vr-20,vr-21').split(',');
 const val = (c: unknown) => { const x = (c as { value?: unknown })?.value; return Array.isArray(x) ? x.join(',') : String(x); };
 
@@ -19,10 +26,10 @@ async function main() {
   const lib = new Map((await prisma.misconception.findMany({ select: { id: true, description: true, childHint: true } })).map((m) => [m.id, m]));
   for (const d of DOORS) {
     const c = await prisma.case.findUniqueOrThrow({ where: { id: `case-${d}` }, select: { id: true, title: true, questionTypeId: true } });
-    const rows = await prisma.item.findMany({ where: { questionTypeId: c.questionTypeId, status: 'DRAFT', pool: 'PRACTICE' }, orderBy: { id: 'asc' },
+    const rows = await prisma.item.findMany({ where: { questionTypeId: c.questionTypeId, status: LIVE ? 'LIVE' : 'DRAFT', pool: 'PRACTICE' }, orderBy: { id: 'asc' },
       select: { id: true, stem: true, solution: true, explanation: true,
         options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true }, orderBy: { id: 'asc' } } } });
-    requirePopulation(`packet:${d}`, { 'draft row(s)': rows.length });
+    requirePopulation(`packet:${d}`, { [LIVE ? 'live row(s)' : 'draft row(s)']: rows.length });
     const signed = new Set((await prisma.attributionEvent.findMany({ where: { recordId: { in: rows.map((r) => r.id) }, action: 'SIGNED', subjectHash: { not: null } }, select: { recordId: true } })).map((e) => e.recordId));
     const tags = [...new Set(rows.flatMap((r) => r.options.map((o) => o.misconceptionId).filter(Boolean)))] as string[];
     const exemplars: Record<string, Array<{ itemId: string; option: string; execution: string }>> = {};
@@ -41,7 +48,7 @@ async function main() {
           execution: (o.misconceptionExecution ?? '').trim() || null })),
       })),
     };
-    const dir = pjoin(OUT, d); mkdirSync(dir, { recursive: true });
+    const dir = pjoin(OUT, LIVE ? pjoin('patterns', d) : d); mkdirSync(dir, { recursive: true });
     const body = JSON.stringify(packet, null, 1);
     writeFileSync(pjoin(dir, 'packet.json'), body);
     const gaps = packet.rows.flatMap((r) => r.options.filter((o) => o.tag && !o.execution)).length;

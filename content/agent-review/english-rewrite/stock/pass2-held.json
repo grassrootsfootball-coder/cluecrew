@@ -1,0 +1,66 @@
+{
+ "door": "english-rewrite/stock",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-002-pp-01",
+  "ENG-005-BB-05",
+  "ENG-002-pp-04",
+  "ENG-017-CR-10",
+  "ENG-002-pp-03",
+  "ENG-002-pp-02",
+  "ENG-002-pp-10",
+  "ENG-018-RB-09",
+  "ENG-019-BV-01",
+  "ENG-021-ED-01",
+  "ENG-021-ED-09",
+  "ENG-022-GK-08",
+  "ENG-023-RT-01",
+  "ENG-026-AL-04",
+  "ENG-026-AL-10",
+  "ENG-002-pp-17",
+  "ENG-002-pp-05",
+  "ENG-006-TM-08",
+  "ENG-008-RC-01"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-002-pp-12",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-002-pp-12",
+    "verdict": "HOLD",
+    "reason": "The 'Every dance' redraft is attested, but the execution on 'Three: with Mrs Hurst, Miss Bingley and Miss Bennet' says 'she dances with Mr Bingley at line 63'. Line 63 is about Elizabeth sitting down behind Darcy. Mr Bingley's dance with the eldest Miss Bennet is at lines 60-61 ('You are dancing with the only handsome girl in the room ... the eldest Miss Bennet'). Fix: lines 60 and 61. The key and the other distractors check against lines 39-40.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-002-pp-09",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-002-pp-09",
+    "verdict": "HOLD",
+    "reason": "Both redrafts are attested, but an unredrafted execution on this row is false. On 'Because he spoke kindly to everyone he was introduced to' it reads 'line 40 has him decline being introduced to anyone'. Lines 40-41 say he 'declined being introduced to any other lady'. Line 42 also has him speaking occasionally to his own party. Fix: 'declined being introduced to any other lady'. Key, stem and the other distractors check against lines 26-30.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-021-ED-05",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "redraft:cmsw2f4yu00yntmbvf24ljk3t",
+     "verdict": "REFUSE",
+     "reason": "'Fogg answers it at line 23 with All included rather than correcting it' is false. At lines 20-22 Stuart claims the eighty days does not take bad weather into account. Fogg's 'All included' (line 23) flatly contradicts that, which is a correction. The out-of-window point is all the execution needs, and that is true: weather is at line 21, outside lines 16-19. Line 18 'three months' and line 19 'In eighty days' are quoted exactly. Fix: drop 'rather than correcting it' and say the correction about weather comes at line 23, outside the window."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-021-ED-05",
+    "verdict": "HOLD",
+    "reason": "Row as it will be carries the refused redraft on 'Whether bad weather has been taken into account'. The claim that Fogg answers it 'rather than correcting it' is false: line 23 'All included' contradicts Stuart's claim at lines 20-22. If the redraft does not land, the old stock sentence stays. The key (line 18 'three months', corrected at 19 'In eighty days') and the other distractors check.",
+    "faultField": "execution"
+   }
+  }
+ ]
+}

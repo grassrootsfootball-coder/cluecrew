@@ -2,6 +2,7 @@
 // states; it makes NO pedagogical decisions. That boundary is the anti-drift
 // line for the whole child app.
 export * from './config';
+export * from './question-types';
 export * from './serving-senses';
 export * from './frequency-signal';
 export * from './ban-list-scope';

@@ -1,0 +1,110 @@
+{
+ "door": "english-rewrite/r4/G5",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-018-RB-02",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "Execution for 'He tucks his hat down first, and then he pulls it over his eyes' says it reverses lines 6 and 63, but the option never pushes the hat back - it is not a reversal; and 'He lolls back, and later he clears his mental decks' is true at lines 5 and 64 and defensible as what happened to how he sits.",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Re-read whole from the passage. Original hold fixed: the hat 'reversal' option and the defensible 'lolls back ... mental decks' option are gone. Key: lolled back with a foot over the dashboard (5-6), hat over his eyes (6) and tobacco (7), all undone at 62-64. Distractors: 'more lazily at the end' is contradicted by 62-64; the quid (7) is one detail, not the change; boost and resume (51-52) is outside both windows. Every execution line checks. The hint 'The hat moves twice' is true (pulled over his eyes at 6, pushed back at 63) and does not coach. walkScript lines 5-6, 6, 7 and 62-64 are all right. lineRefs [5,6,7,62,63,64] match the stem.",
+   "landedAt": "2026-11-20T17:38:46.792Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 5 has him lolled back with his foot over the dashboard. Line 6 has the hat over his eyes and line 7 the tobacco in his cheek. Lines 62 to 64 take back the whip, the foot, the hat and the tobacco.",
+     "after": "Lines 5 and 6 have him lolled back with his foot over the dashboard. Line 6 has the hat over his eyes and line 7 the tobacco in his cheek. In lines 62 to 64 he takes his foot down and pushes his hat back. Then he blows the tobacco into the road."
+    },
+    {
+     "field": "option A (cmsw2f4xy00thtmbvcqqtc6gv).value",
+     "before": "He tucks his hat down first, and then he pulls it over his eyes.",
+     "after": "He sits more lazily at the end than he did at the start."
+    },
+    {
+     "field": "option A (cmsw2f4xy00thtmbvcqqtc6gv).tag",
+     "before": "en-chronology-collapse",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option A (cmsw2f4xy00thtmbvcqqtc6gv).execution",
+     "before": "Line 6 pulls the hat down before line 63 pushes it back, so this reverses them.",
+     "after": "Lines 5 and 6 have him lolled back with a foot over the dashboard at the start. Lines 62 to 64 have him take that foot down and push his hat back. The passage states the contrary of lazier at the end."
+    },
+    {
+     "field": "option C (cmsw2f4xy00tjtmbvkbi1vyuy).value",
+     "before": "He lolls back, and later he clears his mental decks.",
+     "after": "He revolves a quid of tobacco in his left cheek."
+    },
+    {
+     "field": "option C (cmsw2f4xy00tjtmbvkbi1vyuy).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-within-span-wrong-element"
+    },
+    {
+     "field": "option C (cmsw2f4xy00tjtmbvkbi1vyuy).execution",
+     "before": "Reuses lines 5 and 64, and quotes each end rather than saying what links them.",
+     "after": "True at line 7, inside the first window, but it is one detail of how he rides, not what has happened to the way he sits. The child takes a single element from the right lines and misses the change between the two windows."
+    },
+    {
+     "field": "option D (cmsw2f4xy00tktmbvvhwtotgg).execution",
+     "before": "True at line 51, outside both windows; neither window has her in it at all. In the window, line 5 answers the stem: 'in his hands as he lolled back in his'.",
+     "after": "Lines 51 and 52 have him boost her up and resume his own place, outside both windows. The child answers from that part instead of lines 5 to 7 and 62 to 64."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-026-AL-03",
+   "passageRef": "stream-b-05",
+   "hold": {
+    "reason": "'The key was under the brick, and after that it was in her hand' is wholly true (lines 12, 43-44) and as much a 'what these lines show' as the key, which is itself a literal pairing of two facts; no defensible distinction between them.",
+    "faultField": "options"
+   },
+   "reviewerNote": "Re-read whole from the passage. Original hold fixed: the wholly true pairing option is replaced by 'He put the key back under the brick when they locked up', which line 43's 'did not' falsifies. Key: belt loop (10), moved for Alan and under the brick (11-12), put into her hand to hang on to (43-45), Cass named at 27. It is the only defensible answer. The heavy brick is stated nowhere. The motive against Alan is unsupported; line 11 moved it FOR Alan. Every execution line checks (43; 43 and 45; 11 and 45). The hint 'Ask who the key is for, each time it moves' gives a method and does not coach. walkScript lines 10, 11, 12 and 43-45 are all right. lineRefs match the stem.",
+   "landedAt": "2026-11-20T17:38:46.792Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "The brick is not the point here.",
+     "after": "Ask who the key is for, each time it moves."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 11 says he had moved the key for Alan. Line 12 says it was under the brick. Line 43 says he put it into her hand.",
+     "after": "Line 10 says the key lives on his belt loop. Line 11 says he had moved it for Alan. Line 12 finds it under the brick. Lines 43 to 45 have him give it to her to keep. Bit by bit, he stops keeping the key himself."
+    },
+    {
+     "field": "option A (cmsw2f505016dtmbvdyiwrpv9).value",
+     "before": "The key was under the brick, and after that it was in her hand.",
+     "after": "He put the key back under the brick when they locked up."
+    },
+    {
+     "field": "option A (cmsw2f505016dtmbvdyiwrpv9).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-negation-dropped"
+    },
+    {
+     "field": "option A (cmsw2f505016dtmbvdyiwrpv9).execution",
+     "before": "Both spans handed back in order, with no relation named.",
+     "after": "Line 43 says that when they locked up he did not put the key back under the brick. The child keeps the content words of the line and drops the not."
+    },
+    {
+     "field": "option B (cmsw2f505016etmbvu0ashlwu).execution",
+     "before": "A reason the lines never give.",
+     "after": "Nothing in the lines says the brick is heavy. The child supplies a likely reason why he stops leaving the key under the brick at lock-up, on line 43. Line 45 gives the reason he gives: it would save him hunting about."
+    },
+    {
+     "field": "option C (cmsw2f505016ftmbvlkbek66l).value",
+     "before": "He moved it for Alan, and it is Cass who ends up with it.",
+     "after": "Grandad stops keeping the key, leaving it for Alan, then giving it to Cass."
+    },
+    {
+     "field": "option D (cmsw2f505016gtmbv7wsmun17).execution",
+     "before": "A plan the lines never give him.",
+     "after": "The child invents a motive for the gift. Line 11 has him move the key for Alan, and line 45 says only that it would save him hunting about."
+    }
+   ]
+  }
+ ]
+}

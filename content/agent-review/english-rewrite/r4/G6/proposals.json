@@ -1,0 +1,69 @@
+{
+  "door": "english-rewrite/r4/G6",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-022-GK-11",
+      "why": "Two drafters found no honest key for the stored question ('What happens each time he explains himself?'): only line 7 against line 38 goes against his case, so 'each time' cannot be shown, and the hint sent the child to a verdict line that does not exist. Under R1023 the question is rewritten on the same passage (stream-c-01), same questionType (en-comp-technique), same difficulty tier, keeping all four option ids. New question: the repeated word 'net' at lines 34 and 35 (three times), against line 33 ('Ours is two jumpers and the air between them') and lines 36 to 37 (nobody has ever said there isn't one). Key (option 0115): they all talk as if his team's end has a net, though it does not. Distractors: 0113 en-repetition-purpose (dismissive reading of the echo), 0114 en-attribute-transfer (line 31's netting moved to his end, contradicted by line 33), 0116 en-negation-dropped ('Nobody' at line 36 dropped). Every field is new: stem text, answerShape and techniqueKey (the old ones described the old question), all four option values, tags and executions, hintCore, walkScript, quotes (declares 'net'), lineRefs 31 to 37. orderAnchor and passageRef unchanged.",
+      "stem": {
+        "text": "Look at lines 31 to 37. Lines 34 and 35 use the word 'net' three times. What does the writer show by repeating it?",
+        "quotes": [],
+        "passageRef": "stream-c-01",
+        "answerShape": "what-they-all-say-against-what-is-really-there",
+        "orderAnchor": 9999,
+        "techniqueKey": "a-repeated-word-naming-something-that-is-not-there"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4z90113tmbvpzgwn37x",
+          "value": "It is just the usual word for a goal, and shows nothing more.",
+          "isKey": false,
+          "tag": "en-repetition-purpose",
+          "execution": "The child treats the repeated word as ordinary football talk and misses what the echo does. Line 33 says his team's end is two jumpers and the air between them, so each 'net' at lines 34 and 35 names something that is not there."
+        },
+        {
+          "optionId": "cmsw2f4z90114tmbv6hwvd5lk",
+          "value": "Both ends of the pitch have proper netting.",
+          "isKey": false,
+          "tag": "en-attribute-transfer",
+          "execution": "The proper netting at line 31 belongs to their end, and the child carries it across to his team's end. Line 33 says his team's end is only two jumpers and the air between them."
+        },
+        {
+          "optionId": "cmsw2f4z90115tmbvlu6f49wv",
+          "value": "They all talk as if his team's end has a net, though it does not.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4z90116tmbvp5kxbrrp",
+          "value": "Somebody once said that his team's end has no net.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Lines 36 and 37 say that nobody has ever once said there isn't one. The child keeps the content words and drops the 'Nobody', so the option has somebody saying it."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Find what his team's end is really made of. Then read the lines that follow.",
+        "walkScript": "Line 31 gives their end proper netting. Line 33 says his team's end is two jumpers and the air between them. Yet at line 34 they still say net, and line 35 uses it twice more. Lines 36 and 37 add that nobody has ever said there is not one. So they all talk as if there is a net, though there is not.",
+        "quotes": [
+          {
+            "rule": "quoted-from-passage",
+            "text": "net",
+            "passageRef": "stream-c-01"
+          }
+        ]
+      },
+      "lineRefs": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ]
+    }
+  ],
+  "cannotFix": []
+}

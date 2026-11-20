@@ -1,0 +1,96 @@
+{
+  "door": "english-rewrite/r4/G5",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "ENG-018-RB-02",
+      "why": "Round 4. Original hold (hat option not a reversal; 'lolls back ... clears his mental decks' defensible) stays fixed: round 3's proposal is kept unchanged except for the one wording the round-3 reviewer named. Round 3 review (walkScript): 'In lines 63 and 64 he takes his foot down' left out line 62, where 'took' stands (line 62 ends 'He put the whip back in its socket, took'; line 63 begins 'his foot from the dashboard'). Change: in walkScript, 'In lines 63 and 64 he takes his foot down and pushes his hat back.' becomes 'In lines 62 to 64 he takes his foot down and pushes his hat back.' The round-3 why misquoted line 63 as 'took his foot from the dashboard'; line 63 reads 'his foot from the dashboard, pushed his hat back, blew his quid of tobacco into the'. Nothing else changed: stem, options, tags, executions and hintCore are as in round 3.",
+      "stem": {
+        "text": "Look at lines 5 to 7 and 62 to 64. What has happened to the way Mr Cobb sits?",
+        "quotes": [],
+        "passageRef": "stream-a-21-rebecca-sunnybrook",
+        "orderAnchor": 4
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f4xy00thtmbvcqqtc6gv",
+          "value": "He sits more lazily at the end than he did at the start.",
+          "isKey": false,
+          "tag": "en-contradicted-by-the-text",
+          "execution": "Lines 5 and 6 have him lolled back with a foot over the dashboard at the start. Lines 62 to 64 have him take that foot down and push his hat back. The passage states the contrary of lazier at the end."
+        },
+        {
+          "optionId": "cmsw2f4xy00titmbviqgwjxut",
+          "value": "He settles in at the start, and he undoes it all at the end.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f4xy00tjtmbvkbi1vyuy",
+          "value": "He revolves a quid of tobacco in his left cheek.",
+          "isKey": false,
+          "tag": "en-within-span-wrong-element",
+          "execution": "True at line 7, inside the first window, but it is one detail of how he rides, not what has happened to the way he sits. The child takes a single element from the right lines and misses the change between the two windows."
+        },
+        {
+          "optionId": "cmsw2f4xy00tktmbvvhwtotgg",
+          "value": "He boosts her up to the seat, and then he resumes his own place.",
+          "isKey": false,
+          "tag": "en-wrong-scope-retrieval",
+          "execution": "Lines 51 and 52 have him boost her up and resume his own place, outside both windows. The child answers from that part instead of lines 5 to 7 and 62 to 64."
+        }
+      ],
+      "explanationPatch": {
+        "walkScript": "Lines 5 and 6 have him lolled back with his foot over the dashboard. Line 6 has the hat over his eyes and line 7 the tobacco in his cheek. In lines 62 to 64 he takes his foot down and pushes his hat back. Then he blows the tobacco into the road."
+      }
+    },
+    {
+      "itemId": "ENG-026-AL-03",
+      "why": "Round 4. Original hold (the true pairing 'The key was under the brick, and after that it was in her hand' was a second key) stays fixed: round 3's proposal is kept unchanged except for the one wording the round-3 reviewer named. Round 3 review (execution on 'The brick was too heavy for him to lift on his own'): 'Line 45 gives the real reason' asserts that Grandad's stated reason is the true one, which the passage leaves open. Change: in that execution, 'Line 45 gives the real reason: it would save him hunting about.' becomes 'Line 45 gives the reason he gives: it would save him hunting about.' Nothing else changed: stem, key, other options, tags, executions, hintCore and walkScript are as in round 3.",
+      "stem": {
+        "text": "Look at lines 11 and 12 and lines 43 to 47. What do these lines together show about the shed key?",
+        "quotes": [],
+        "passageRef": "stream-b-05",
+        "answerShape": "who-it-was-moved-for-against-who-ends-up-holding-it",
+        "orderAnchor": 3,
+        "techniqueKey": "a-key-moved-for-one-person-and-then-given-to-another"
+      },
+      "options": [
+        {
+          "optionId": "cmsw2f505016dtmbvdyiwrpv9",
+          "value": "He put the key back under the brick when they locked up.",
+          "isKey": false,
+          "tag": "en-negation-dropped",
+          "execution": "Line 43 says that when they locked up he did not put the key back under the brick. The child keeps the content words of the line and drops the not."
+        },
+        {
+          "optionId": "cmsw2f505016etmbvu0ashlwu",
+          "value": "The brick was too heavy for him to lift on his own.",
+          "isKey": false,
+          "tag": "en-plausible-not-stated",
+          "execution": "Nothing in the lines says the brick is heavy. The child supplies a likely reason why he stops leaving the key under the brick at lock-up, on line 43. Line 45 gives the reason he gives: it would save him hunting about."
+        },
+        {
+          "optionId": "cmsw2f505016ftmbvlkbek66l",
+          "value": "Grandad stops keeping the key, leaving it for Alan, then giving it to Cass.",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmsw2f505016gtmbv7wsmun17",
+          "value": "He gives it to her, so that Alan cannot get into the shed.",
+          "isKey": false,
+          "tag": "en-motive-invention",
+          "execution": "The child invents a motive for the gift. Line 11 has him move the key for Alan, and line 45 says only that it would save him hunting about."
+        }
+      ],
+      "explanationPatch": {
+        "hintCore": "Ask who the key is for, each time it moves.",
+        "walkScript": "Line 10 says the key lives on his belt loop. Line 11 says he had moved it for Alan. Line 12 finds it under the brick. Lines 43 to 45 have him give it to her to keep. Bit by bit, he stops keeping the key himself."
+      }
+    }
+  ],
+  "cannotFix": []
+}

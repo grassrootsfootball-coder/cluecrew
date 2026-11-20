@@ -1,0 +1,1104 @@
+{
+ "door": "vr-16",
+ "caseId": "case-vr-16",
+ "title": "The Mirror File",
+ "questionType": "vr-16-opposite-meaning",
+ "entries": {
+  "vr16-loose-opposite": {
+   "description": "Chose a loosely different word, not a true opposite.",
+   "childHint": "A true opposite flips the meaning exactly, like hot and cold."
+  },
+  "vr16-synonym-pull": {
+   "description": "Chose a word meaning the same instead of the opposite.",
+   "childHint": "You found a twin. Now find the reverse."
+  }
+ },
+ "houseFormExemplars": {
+  "vr16-loose-opposite": [
+   {
+    "itemId": "gen-vr-16-opposite-meaning-01",
+    "option": "warm",
+    "execution": "The card says hot and asks for its opposite, which is cold. This option is warm: warm is hot turned down, not hot turned round; the opposite is cold. It is a different word, but not the one that flips the meaning."
+   },
+   {
+    "itemId": "gen-vr-16-opposite-meaning-06",
+    "option": "give",
+    "execution": "The card says buy and asks for its OPPOSITE, which is sell. This option is give. Giving hands a thing over, the other way from buying. But no money comes back, so it is not the reverse; the opposite is sell."
+   },
+   {
+    "itemId": "gen-vr-16-opposite-meaning-16",
+    "option": "misplace",
+    "execution": "The card says remember and asks for its OPPOSITE, which is forget. This option is misplace. To misplace a thing is to lose it, often after forgetting where it went. It points away from remember, but it does not flip the meaning; the opposite is forget."
+   }
+  ],
+  "vr16-synonym-pull": [
+   {
+    "itemId": "gen-vr-16-opposite-meaning-01",
+    "option": "spicy",
+    "execution": "The card says hot and asks for its OPPOSITE. This option is spicy, which means the same as hot in one of its senses — a twin, not a reverse. The opposite is cold."
+   },
+   {
+    "itemId": "gen-vr-16-opposite-meaning-01",
+    "option": "boiling",
+    "execution": "The card says hot and asks for its OPPOSITE, which is cold. This option is boiling. A boiling day is a very hot day. That is a twin of hot, not its reverse."
+   },
+   {
+    "itemId": "gen-vr-16-opposite-meaning-02",
+    "option": "tall",
+    "execution": "The card says high and asks for its OPPOSITE, which is low. This option is tall — a tall thing is a high thing. That is a twin of high, not its reverse."
+   }
+  ]
+ },
+ "rows": [
+  {
+   "itemId": "gen-vr-16-opposite-meaning-01",
+   "signed": true,
+   "stem": {
+    "words": [
+     "hot"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "cold",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-01-opt1",
+     "value": "cold",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-01-opt2",
+     "value": "warm",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "execution": "The card says hot and asks for its opposite, which is cold. This option is warm: warm is hot turned down, not hot turned round; the opposite is cold. It is a different word, but not the one that flips the meaning."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-01-opt3",
+     "value": "spicy",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says hot and asks for its OPPOSITE. This option is spicy, which means the same as hot in one of its senses — a twin, not a reverse. The opposite is cold."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-01-opt4",
+     "value": "boiling",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says hot and asks for its OPPOSITE, which is cold. This option is boiling. A boiling day is a very hot day. That is a twin of hot, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-02",
+   "signed": true,
+   "stem": {
+    "words": [
+     "high"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "low",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-02-opt1",
+     "value": "low",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-02-opt2",
+     "value": "tall",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says high and asks for its OPPOSITE, which is low. This option is tall — a tall thing is a high thing. That is a twin of high, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-02-opt3",
+     "value": "steep",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says high and asks for its OPPOSITE, which is low. This option is steep. A steep price is a high price, so steep is high in one sense. That is a twin of high, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-02-opt4",
+     "value": "towering",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says high and asks for its OPPOSITE, which is low. This option is towering. A towering wall is a very high wall. That is a twin of high, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-03",
+   "signed": true,
+   "stem": {
+    "words": [
+     "early"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "late",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-03-opt1",
+     "value": "late",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-03-opt2",
+     "value": "soon",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says early and asks for its OPPOSITE, which is late. This option is soon — soon and early both mean not long from now. That is a twin of early, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-03-opt3",
+     "value": "initial",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says early and asks for its OPPOSITE, which is late. This option is initial. The initial stages are the early stages, near the start. That is a twin of early, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-03-opt4",
+     "value": "first",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says early and asks for its OPPOSITE, which is late. This option is first. The first pages are the early pages, near the start. That is a twin of early, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-04",
+   "signed": true,
+   "stem": {
+    "words": [
+     "empty"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "full",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-04-opt1",
+     "value": "full",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-04-opt2",
+     "value": "hollow",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says empty and asks for its OPPOSITE, which is full. This option is hollow — a hollow thing has nothing inside it, as an empty thing has nothing in it. That is a twin of empty, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-04-opt3",
+     "value": "blank",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says empty and asks for its OPPOSITE, which is full. This option is blank. A blank page is an empty page, with nothing on it. That is a twin of empty, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-04-opt4",
+     "value": "vacant",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says empty and asks for its OPPOSITE, which is full. This option is vacant. A vacant seat is an empty seat, with nobody in it. That is a twin of empty, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-05",
+   "signed": true,
+   "stem": {
+    "words": [
+     "light"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "heavy",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-05-opt1",
+     "value": "heavy",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-05-opt2",
+     "value": "bright",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says light and asks for its OPPOSITE, which is heavy. This option is bright — a bright thing is full of light. That is a twin of light, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-05-opt3",
+     "value": "pale",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says light and asks for its OPPOSITE, which is heavy. This option is pale — a pale colour is a light colour. That is a twin of light in its colour sense, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-05-opt4",
+     "value": "soft",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says light and asks for its OPPOSITE, which is heavy. This option is soft. A light tap is a soft tap, so soft is light in one sense. That is a twin of light, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-06",
+   "signed": true,
+   "stem": {
+    "words": [
+     "buy"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "sell",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-06-opt1",
+     "value": "sell",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-06-opt2",
+     "value": "spend",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says buy and asks for its OPPOSITE, which is sell. This option is spend — to spend money is what you do when you buy. That is a twin of buy, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-06-opt3",
+     "value": "purchase",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says buy and asks for its OPPOSITE, which is sell. This option is purchase. To purchase a ticket is to buy a ticket. That is a twin of buy, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-06-opt4",
+     "value": "give",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "execution": "The card says buy and asks for its OPPOSITE, which is sell. This option is give. Giving hands a thing over, the other way from buying. But no money comes back, so it is not the reverse; the opposite is sell."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-07",
+   "signed": true,
+   "stem": {
+    "words": [
+     "above"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "below",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-07-opt1",
+     "value": "below",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-07-opt2",
+     "value": "over",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says above and asks for its OPPOSITE, which is below. This option is over — over and above name the same place. That is a twin of above, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-07-opt3",
+     "value": "overhead",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says above and asks for its OPPOSITE, which is below. This option is overhead. The birds above us are the birds overhead. That is a twin of above, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-07-opt4",
+     "value": "upstairs",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says above and asks for its OPPOSITE, which is below. This option is upstairs. The room above is the room upstairs. That is a twin of above, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-08",
+   "signed": true,
+   "stem": {
+    "words": [
+     "push"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "pull",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-08-opt1",
+     "value": "pull",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-08-opt2",
+     "value": "shove",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says push and asks for its OPPOSITE, which is pull. This option is shove — a shove is a push, only rougher. That is a twin of push, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-08-opt3",
+     "value": "press",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says push and asks for its OPPOSITE, which is pull. This option is press. To push a button is to press a button. That is a twin of push, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-08-opt4",
+     "value": "nudge",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says push and asks for its OPPOSITE, which is pull. This option is nudge. A nudge is a small push, so it goes the same way. That is a twin of push, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-09",
+   "signed": true,
+   "stem": {
+    "words": [
+     "appear"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "vanish",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-09-opt1",
+     "value": "vanish",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-09-opt2",
+     "value": "arrive",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says appear and asks for its OPPOSITE, which is vanish. This option is arrive — to arrive is to appear on the scene. That is a twin of appear, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-09-opt3",
+     "value": "emerge",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says appear and asks for its OPPOSITE, which is vanish. This option is emerge. When a mole emerges from a hole, it appears. That is a twin of appear, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-09-opt4",
+     "value": "seem",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says appear and asks for its OPPOSITE, which is vanish. This option is seem. He appears tired means he seems tired, so seem is appear in one sense. That is a twin of appear, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-10",
+   "signed": true,
+   "stem": {
+    "words": [
+     "noisy"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "silent",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-10-opt1",
+     "value": "silent",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-10-opt2",
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says noisy and asks for its OPPOSITE, which is silent. This option is loud — loud is what a noisy thing is. That is a twin of noisy, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-10-opt3",
+     "value": "rowdy",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says noisy and asks for its OPPOSITE, which is silent. This option is rowdy. A rowdy crowd is a noisy crowd. That is a twin of noisy, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-10-opt4",
+     "value": "deafening",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says noisy and asks for its OPPOSITE, which is silent. This option is deafening. A deafening room is a very noisy room. That is a twin of noisy, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-11",
+   "signed": true,
+   "stem": {
+    "words": [
+     "smooth"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "rough",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-11-opt1",
+     "value": "rough",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-11-opt2",
+     "value": "flat",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says smooth and asks for its OPPOSITE, which is rough. This option is flat — a flat surface and a smooth one feel much alike. That is a twin of smooth, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-11-opt3",
+     "value": "silky",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says smooth and asks for its OPPOSITE, which is rough. This option is silky. Silky hair is smooth hair. That is a twin of smooth, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-11-opt4",
+     "value": "even",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says smooth and asks for its OPPOSITE, which is rough. This option is even. An even path is a smooth path, with no bumps. That is a twin of smooth, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-12",
+   "signed": true,
+   "stem": {
+    "words": [
+     "brave"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "timid",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-12-opt1",
+     "value": "timid",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-12-opt2",
+     "value": "bold",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says brave and asks for its OPPOSITE, which is timid. This option is bold — a bold act is a brave one. That is a twin of brave, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-12-opt3",
+     "value": "fearless",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says brave and asks for its OPPOSITE, which is timid. This option is fearless. A fearless knight is a brave knight. That is a twin of brave, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-12-opt4",
+     "value": "daring",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says brave and asks for its OPPOSITE, which is timid. This option is daring — a daring person is a brave person. That is a twin of brave, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-13",
+   "signed": true,
+   "stem": {
+    "words": [
+     "wide"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "narrow",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-13-opt1",
+     "value": "narrow",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-13-opt2",
+     "value": "broad",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says wide and asks for its OPPOSITE, which is narrow. This option is broad — a broad road is a wide road. That is a twin of wide, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-13-opt3",
+     "value": "vast",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says wide and asks for its OPPOSITE, which is narrow. This option is vast. A vast ocean is a wide ocean, stretching far across. That is a twin of wide, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-13-opt4",
+     "value": "baggy",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says wide and asks for its OPPOSITE, which is narrow. This option is baggy. Baggy trousers are wide trousers, so baggy is wide in one sense. That is a twin of wide, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-14",
+   "signed": true,
+   "stem": {
+    "words": [
+     "deep"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "shallow",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-14-opt1",
+     "value": "shallow",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-14-opt2",
+     "value": "low",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says deep and asks for its OPPOSITE, which is shallow. This option is low — deep and low both mean far down. That is a twin of deep, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-14-opt3",
+     "value": "dark",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says deep and asks for its OPPOSITE, which is shallow. This option is dark. A deep red is a dark red, so dark is deep in one sense. That is a twin of deep, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-14-opt4",
+     "value": "bottomless",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says deep and asks for its OPPOSITE, which is shallow. This option is bottomless. A bottomless pit is a very deep pit. That is a twin of deep, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-15",
+   "signed": true,
+   "stem": {
+    "words": [
+     "begin"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "finish",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-15-opt1",
+     "value": "finish",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-15-opt2",
+     "value": "start",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says begin and asks for its OPPOSITE, which is finish. This option is start — to start is to begin. That is a twin of begin, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-15-opt3",
+     "value": "launch",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says begin and asks for its OPPOSITE, which is finish. This option is launch. To launch a project is to begin it. That is a twin of begin, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-15-opt4",
+     "value": "open",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says begin and asks for its OPPOSITE, which is finish. This option is open. To open a meeting is to begin it. That is a twin of begin, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-16",
+   "signed": true,
+   "stem": {
+    "words": [
+     "remember"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "forget",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-16-opt1",
+     "value": "forget",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-16-opt2",
+     "value": "recall",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says remember and asks for its OPPOSITE, which is forget. This option is recall — to recall a thing is to remember it. That is a twin of remember, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-16-opt3",
+     "value": "recollect",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says remember and asks for its OPPOSITE, which is forget. This option is recollect. To recollect a day is to remember it. That is a twin of remember, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-16-opt4",
+     "value": "misplace",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "execution": "The card says remember and asks for its OPPOSITE, which is forget. This option is misplace. To misplace a thing is to lose it, often after forgetting where it went. It points away from remember, but it does not flip the meaning; the opposite is forget."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-17",
+   "signed": true,
+   "stem": {
+    "words": [
+     "sharp"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "blunt",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-17-opt1",
+     "value": "blunt",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-17-opt2",
+     "value": "pointed",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says sharp and asks for its OPPOSITE, which is blunt. This option is pointed — a pointed thing is a sharp one. That is a twin of sharp, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-17-opt3",
+     "value": "spiky",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says sharp and asks for its OPPOSITE, which is blunt. This option is spiky. A spiky leaf has sharp points. That is a twin of sharp, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-17-opt4",
+     "value": "keen",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says sharp and asks for its OPPOSITE, which is blunt. This option is keen. A keen blade is a sharp blade, so keen is sharp in one sense. That is a twin of sharp, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-18",
+   "signed": true,
+   "stem": {
+    "words": [
+     "tame"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "wild",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-18-opt1",
+     "value": "wild",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-18-opt2",
+     "value": "gentle",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says tame and asks for its OPPOSITE, which is wild. This option is gentle — a tame animal is a gentle one. That is a twin of tame, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-18-opt3",
+     "value": "trained",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says tame and asks for its OPPOSITE, which is wild. This option is trained. A trained horse is a tame horse that obeys. That is a twin of tame, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-18-opt4",
+     "value": "dull",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says tame and asks for its OPPOSITE, which is wild. This option is dull. A tame ending is a dull ending, so dull is tame in one sense. That is a twin of tame, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-19",
+   "signed": true,
+   "stem": {
+    "words": [
+     "victory"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "defeat",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-19-opt1",
+     "value": "defeat",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-19-opt2",
+     "value": "triumph",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says victory and asks for its OPPOSITE, which is defeat. This option is triumph — a triumph is a win, as a victory is. That is a twin of victory, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-19-opt3",
+     "value": "win",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says victory and asks for its OPPOSITE, which is defeat. This option is win. A win is a victory. That is a twin of victory, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-19-opt4",
+     "value": "success",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says victory and asks for its OPPOSITE, which is defeat. This option is success. A success in a match is a victory. That is a twin of victory, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-20",
+   "signed": true,
+   "stem": {
+    "words": [
+     "ancient"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "modern",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-20-opt1",
+     "value": "modern",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-20-opt2",
+     "value": "old",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says ancient and asks for its OPPOSITE, which is modern. This option is old — ancient is only very old. That is a twin of ancient, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-20-opt3",
+     "value": "antique",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says ancient and asks for its OPPOSITE, which is modern. This option is antique. An antique vase is a very old vase, like an ancient one. That is a twin of ancient, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-20-opt4",
+     "value": "aged",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says ancient and asks for its OPPOSITE, which is modern. This option is aged. An aged tree is a very old tree, like an ancient one. That is a twin of ancient, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-21",
+   "signed": true,
+   "stem": {
+    "words": [
+     "arrive"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "depart",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-21-opt1",
+     "value": "depart",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-21-opt2",
+     "value": "reach",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says arrive and asks for its OPPOSITE, which is depart. This option is reach — to reach a place is to arrive there. That is a twin of arrive, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-21-opt3",
+     "value": "land",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says arrive and asks for its OPPOSITE, which is depart. This option is land. When a plane lands, it arrives. That is a twin of arrive, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-21-opt4",
+     "value": "come",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says arrive and asks for its OPPOSITE, which is depart. This option is come. When guests come, they arrive. That is a twin of arrive, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-22",
+   "signed": true,
+   "stem": {
+    "words": [
+     "expand"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "shrink",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-22-opt1",
+     "value": "shrink",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-22-opt2",
+     "value": "stretch",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says expand and asks for its OPPOSITE, which is shrink. This option is stretch — to stretch something is to expand it. That is a twin of expand, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-22-opt3",
+     "value": "swell",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says expand and asks for its OPPOSITE, which is shrink. This option is swell — a thing that swells gets bigger, as a thing that expands does. That is a twin of expand, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-22-opt4",
+     "value": "grow",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says expand and asks for its OPPOSITE, which is shrink. This option is grow. To grow is to get bigger, which is what expand means. That is a twin of expand, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-23",
+   "signed": true,
+   "stem": {
+    "words": [
+     "rise"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "fall",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-23-opt1",
+     "value": "fall",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-23-opt2",
+     "value": "climb",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says rise and asks for its OPPOSITE, which is fall. This option is climb — to climb is to go up, as to rise is. That is a twin of rise, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-23-opt3",
+     "value": "soar",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says rise and asks for its OPPOSITE, which is fall. This option is soar. A kite that soars is a kite that rises high. That is a twin of rise, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-23-opt4",
+     "value": "lift",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says rise and asks for its OPPOSITE, which is fall. This option is lift. When the mist lifts, it rises, so lift is rise in one sense. That is a twin of rise, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-24",
+   "signed": true,
+   "stem": {
+    "words": [
+     "joy"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "sorrow",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-24-opt1",
+     "value": "sorrow",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-24-opt2",
+     "value": "delight",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says joy and asks for its OPPOSITE, which is sorrow. This option is delight — delight is great happiness, as joy is. That is a twin of joy, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-24-opt3",
+     "value": "happiness",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says joy and asks for its OPPOSITE, which is sorrow. This option is happiness. Happiness is joy. That is a twin of joy, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-24-opt4",
+     "value": "cheer",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says joy and asks for its OPPOSITE, which is sorrow. This option is cheer — cheer is a happy feeling, as joy is. That is a twin of joy, not its reverse."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-25",
+   "signed": true,
+   "stem": {
+    "words": [
+     "accept"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "solution": null,
+   "key": "refuse",
+   "options": [
+    {
+     "optionId": "gen-vr-16-opposite-meaning-25-opt1",
+     "value": "refuse",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-25-opt2",
+     "value": "receive",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says accept and asks for its OPPOSITE, which is refuse. This option is receive — to receive a thing is to accept it into your hands. That is a twin of accept, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-25-opt3",
+     "value": "take",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says accept and asks for its OPPOSITE, which is refuse. This option is take. To take an offer is to accept it. That is a twin of accept, not its reverse."
+    },
+    {
+     "optionId": "gen-vr-16-opposite-meaning-25-opt4",
+     "value": "agree",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "execution": "The card says accept and asks for its OPPOSITE, which is refuse. This option is agree. To agree to a plan is to accept it. That is a twin of accept, not its reverse."
+    }
+   ]
+  }
+ ]
+}

@@ -32,6 +32,12 @@ const arg = (k: string) => process.argv.find((a) => a.startsWith(`--${k}=`))?.sl
 const DOOR = arg('door');
 const APPLY = process.argv.includes('--apply');
 const PRECHECK = process.argv.includes('--precheck');
+/**
+ * `--from-live` (2026-11-20): a door-level pattern repair rebuilds LIVE rows. Such a row may be rebuilt, and
+ * on --apply it is moved LIVE -> DRAFT in the SAME transaction as its rewrite (an event each), so only rows
+ * that actually land leave service, and `publish-door --ready` returns them once signed.
+ */
+const FROM_LIVE = process.argv.includes('--from-live');
 // Rows held back by name although signed — e.g. going round again for a fix the reviewer noted. Never the reverse.
 const HOLD = new Set((arg('hold') ?? '').split(',').filter(Boolean));
 const REVIEWER = 'rev-agent-01';
@@ -86,6 +92,7 @@ async function main() {
     options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true }, orderBy: { id: 'asc' } } } });
   type Row = { id: string; type: string; stem: Record<string, unknown>; explanation: unknown; lineRefs: number[]; options: Opt[]; refs: string[] };
   const after = new Map<string, Row>();
+  const liveRebuilds = new Set<string>();
   const faults = new Map<string, string[]>();
   const fault = (id: string, f: string) => faults.set(id, [...(faults.get(id) ?? []), f]);
   for (const r of live) {
@@ -94,7 +101,8 @@ async function main() {
     // A RETAG (same value, new tag + execution) is outside the signed projection too, so it counts with the redrafts.
     const onlyRedrafts = !(prop.rebuilds ?? []).some((x) => x.itemId === r.id)
       && !(prop.seats ?? []).some((x) => x.itemId === r.id && x.newValue !== x.oldValue);
-    if (r.status !== 'DRAFT' && !(r.status === 'LIVE' && onlyRedrafts)) fault(r.id, `status ${r.status}`);
+    if (r.status !== 'DRAFT' && !(r.status === 'LIVE' && (onlyRedrafts || FROM_LIVE))) fault(r.id, `status ${r.status}`);
+    if (r.status === 'LIVE' && !onlyRedrafts) liveRebuilds.add(r.id);
     if (HOLDS && !HOLDS[r.id]) fault(r.id, 'not a held row — a rewrite door may touch only the rows its review held (R1023)');
     after.set(r.id, { id: r.id, type: r.questionTypeId, stem: r.stem as Record<string, unknown>, explanation: r.explanation, lineRefs: (r.lineRefs ?? []) as number[], refs: [],
       options: r.options.map((o) => ({ optionId: o.id, value: val(o.content), isKey: o.isCorrect, tag: o.misconceptionId, execution: o.misconceptionExecution?.trim() || null })) });
@@ -229,6 +237,12 @@ async function main() {
       for (const id of land) {
         const r = after.get(id)!;
         const before = live.find((x) => x.id === id)!;
+        if (FROM_LIVE && liveRebuilds.has(id)) {
+          const moved = await tx.item.updateMany({ where: { id, status: 'LIVE' }, data: { status: 'DRAFT' } });
+          if (moved.count !== 1) throw new Error(`${id}: expected to take a LIVE row out of service, moved ${moved.count}`);
+          await tx.attributionEvent.create({ data: { recordType: 'item', recordId: id, action: 'AMENDED', reviewerId: REVIEWER, actor: 'agent-reviewer', recordedBy: RECORDED_BY,
+            field: 'status', method: `LIVE -> DRAFT for a door-level pattern rebuild (${DOOR}); returns to service through publish-door --ready once its new signature recomputes.`, note: 'from-live' } });
+        }
         if (JSON.stringify(before.stem) !== JSON.stringify(r.stem)) await tx.item.update({ where: { id }, data: { stem: r.stem as object } });
         if (JSON.stringify(before.explanation) !== JSON.stringify(r.explanation)) await tx.item.update({ where: { id }, data: { explanation: r.explanation as object } });
         if (canonicalJson(before.lineRefs) !== canonicalJson(r.lineRefs)) await tx.item.update({ where: { id }, data: { lineRefs: r.lineRefs } });
@@ -249,15 +263,21 @@ async function main() {
         subjectHash: canonicalOrderHash(r), subjectKind: SIGNATURE_SUBJECTS.ROW_PROJECTION_CANONICAL_ORDER.kind,
         subjectSpec: SIGNATURE_SUBJECTS.ROW_PROJECTION_CANONICAL_ORDER.spec } as Parameters<typeof recordSignature>[1]);
     }
-    if (HOLDS) {
+    // Every English rewrite door carries its changes back to the authoring store (R1023 condition 5);
+    // only a door of HELD rows also clears holds.
+    const RETURNS = !!HOLDS || DOOR.startsWith('english-rewrite');
+    if (RETURNS) {
       // 1. The changeset, captured now — the only moment the before value is still in hand. Appended across rounds.
       const csPath = pjoin(dir, 'changeset.json');
       const prior = existsSync(csPath) ? (JSON.parse(readFileSync(csPath, 'utf8')) as { rows: RowChange[] }).rows : [];
       const landedAt = new Date().toISOString();
-      const fresh: RowChange[] = land.map((id) => ({ itemId: id, passageRef: (after.get(id)!.stem.passageRef as string) ?? null, hold: HOLDS[id]!,
+      const fresh: RowChange[] = land.map((id) => ({ itemId: id, passageRef: (after.get(id)!.stem.passageRef as string) ?? null, hold: HOLDS?.[id] ?? { reason: `not a held row: ${DOOR}`, faultField: 'execution' },
         reviewerNote: signs.get(id)?.reason ?? '', landedAt, changes: changes.get(id)! }));
       writeFileSync(csPath, JSON.stringify({ door: DOOR, ruling: 'R1023', rows: [...prior.filter((p) => !land.includes(p.itemId)), ...fresh] }, null, 1));
+    }
+    if (HOLDS) {
       // 2. Clear the hold — only for rows the review that placed it has now re-read and signed with the fault fixed.
+      const landedAt = new Date().toISOString();
       const holdPath = pjoin(DIR, 'english', 'held-for-authoring-store.json');
       const hf = JSON.parse(readFileSync(holdPath, 'utf8')) as { note: string; byField: Record<string, number>; held: Array<{ itemId: string; faultField?: string }>; clearedUnderR1023?: unknown[] };
       const clearing = hf.held.filter((h) => land.includes(h.itemId));
@@ -267,6 +287,8 @@ async function main() {
       writeFileSync(holdPath, JSON.stringify({ ...hf, byField, held, clearedUnderR1023: [...(hf.clearedUnderR1023 ?? []),
         ...clearing.map((h) => ({ ...h, clearedAt: landedAt, clearedBy: `${REVIEWER} re-read the held field after an agent rewrite (${DOOR})`, reviewerNote: signs.get(h.itemId)?.reason ?? '' }))] }, null, 1));
       console.log(`  holds cleared: ${clearing.length}; ${held.length} still standing`);
+    }
+    if (RETURNS) {
       // 3. The return leg follows the write automatically (CLAUDE.md: an applier re-exports as its final step).
       exportEnglishRewriteReturn();
     }

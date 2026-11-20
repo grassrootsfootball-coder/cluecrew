@@ -25,7 +25,7 @@
  */
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { checkItemChildFacing, stemSchema, type ContentFailure } from '@cluecrew/core';
+import { checkItemChildFacing, stemSchema, ENGLISH_QUESTION_TYPES, type ContentFailure } from '@cluecrew/core';
 import { Prisma } from '@prisma/client';
 
 /**
@@ -46,15 +46,8 @@ import { prisma } from '../packages/db/src/index';
  * honestly; NO engine binds to error-spot or cloze yet, which is recorded in
  * the report rather than papered over by calling everything select-one.
  */
-const QUESTION_TYPES: Array<{ id: string; name: string; mechanic: string }> = [
-  { id: 'en-comp-retrieval', name: 'Retrieval', mechanic: 'select-one' },
-  { id: 'en-comp-inference', name: 'Inference', mechanic: 'select-one' },
-  { id: 'en-comp-vocab', name: 'Vocabulary in Context', mechanic: 'select-one' },
-  { id: 'en-comp-technique', name: 'Writer’s Technique', mechanic: 'select-one' },
-  { id: 'en-spag-spelling-spot', name: 'Spelling: spot the slip', mechanic: 'error-spot' },
-  { id: 'en-spag-punct-spot', name: 'Punctuation: spot the slip', mechanic: 'error-spot' },
-  { id: 'en-spag-cloze', name: 'Grammar cloze', mechanic: 'cloze' },
-];
+// One list, shared with the seed (packages/core/src/question-types.ts) — R42: doors that enumerate separately drift.
+const QUESTION_TYPES = ENGLISH_QUESTION_TYPES;
 
 /**
  * **AN IMPORT DOOR VALIDATES AN OPTION; IT NEVER FILTERS ONE** (R758 — R57 reaching the path it

@@ -1,57 +1,9 @@
 {
  "note": "English rows the machine reviewer rev-agent-01 HELD. Item text is the authoring store's to change; each row names its fault and field.",
  "byField": {
-  "execution": 1,
-  "options": 1,
   "walkScript": 1
  },
  "held": [
-  {
-   "itemId": "ENG-018-RB-02",
-   "verdict": "HOLD",
-   "faultField": "execution",
-   "reason": "Execution for 'He tucks his hat down first, and then he pulls it over his eyes' says it reverses lines 6 and 63, but the option never pushes the hat back - it is not a reversal; and 'He lolls back, and later he clears his mental decks' is true at lines 5 and 64 and defensible as what happened to how he sits.",
-   "group": "verdicts-G5.json",
-   "latestUnderR1023": {
-    "round": "r3",
-    "door": "content/agent-review/english-rewrite/r3/G5",
-    "reviewOfRow": {
-     "itemId": "ENG-018-RB-02",
-     "verdict": "HOLD",
-     "holdFixed": true,
-     "faultField": "walkScript",
-     "reason": "Original hold fixed: the hat 'reversal' option and the defensible 'lolls back ... clears his mental decks' are both replaced. Every execution checks: lines 5-6 lolled back with a foot over the dashboard; 62-64 foot down and hat back; line 7 quid of tobacco; lines 51-52 boosted her up and resumed his own place. The key is the only defensible answer, and the hint 'The hat moves twice' is true (line 6 pulled over his eyes, line 63 pushed back) and does not coach. Held on the walkScript: 'In lines 63 and 64 he takes his foot down' leaves out line 62, where 'took' stands ('...in its socket, took' / 'his foot from the dashboard'). That is the same split-line fault this row was held for in round 2. Fix: cite 'Lines 62 to 64'."
-    },
-    "reviewOfChange": {
-     "ref": "rebuild:ENG-018-RB-02",
-     "verdict": "REFUSE",
-     "reason": "The change fixes both faults I named in round 2: the whip is dropped, and 'over the dashboard' is now placed on lines 5 and 6. But the new sentence 'In lines 63 and 64 he takes his foot down and pushes his hat back.' puts the foot-taking on lines 63-64, and 'took' is the last word of line 62 ('He put the whip back in its socket, took'). Line 63 starts 'his foot from the dashboard'. The why repeats the error: it quotes line 63 as 'took his foot from the dashboard'. In round 2 I held this row because a clause that runs over two lines was cited to one of them (line 5/6). This is the same fault at the other end of the row. 'Lines 62 to 64', the stem's own window, would be true."
-    }
-   }
-  },
-  {
-   "itemId": "ENG-026-AL-03",
-   "verdict": "HOLD",
-   "faultField": "options",
-   "reason": "'The key was under the brick, and after that it was in her hand' is wholly true (lines 12, 43-44) and as much a 'what these lines show' as the key, which is itself a literal pairing of two facts; no defensible distinction between them.",
-   "group": "verdicts-G5.json",
-   "latestUnderR1023": {
-    "round": "r3",
-    "door": "content/agent-review/english-rewrite/r3/G5",
-    "reviewOfRow": {
-     "itemId": "ENG-026-AL-03",
-     "verdict": "HOLD",
-     "holdFixed": true,
-     "faultField": "execution",
-     "reason": "Original hold fixed: the wholly true pairing option is replaced by 'He put the key back under the brick when they locked up', which line 43 'did not' falsifies. The key 'Grandad stops keeping the key, leaving it for Alan, then giving it to Cass' is true and the only defensible answer: belt loop at line 10, moved for Alan and under the brick at lines 11-12, put into her hand to hang on to at lines 43-45, Cass at line 27. The hint is true and does not coach. The walkScript is true at lines 10, 11, 12 and 43-45. The negation and motive executions are true at lines 43, 11 and 45. Held on the heavy-brick execution: 'Line 45 gives the real reason' asserts that Grandad's stated reason is the true one, and the passage leaves that open (lines 30-38 show his stated reasons covering what is happening). Fix: 'Line 45 gives the reason he gives'. The phrase came from my round 2 reason, which I withdraw."
-    },
-    "reviewOfChange": {
-     "ref": "rebuild:ENG-026-AL-03",
-     "verdict": "REFUSE",
-     "reason": "The change fixes the fault I named in round 2. The heavy-brick option is now read as a reason for not leaving the key under the brick at lock-up (line 43 'did not put the key back under the brick'), not as a reason for moving it for Alan. Line 45 has 'it would save him hunting about'. But 'Line 45 gives the real reason' claims something the passage does not settle. Line 45 gives the reason Grandad gives. This passage keeps showing what he says against what is happening: 'he had had an enormous breakfast' when he passes her half his sandwich (lines 35-36), 'it was nothing' about Thursday (line 38), his knee (lines 30-31), and his knots gone useless (line 33). The row's own key, 'Grandad stops keeping the key', is about a handing-over that 'save him hunting about' does not settle. The words 'the real reason' come from my own round 2 reason, and I withdraw them. 'Line 45 gives the reason he gives' would be true. The motive-invention execution already words it correctly: 'line 45 says only that it would save him hunting about'."
-    }
-   }
-  },
   {
    "itemId": "ENG-022-GK-11",
    "verdict": "HOLD",
@@ -59,9 +11,20 @@
    "faultField": "walkScript",
    "group": "verdicts-G6.json",
    "latestUnderR1023": {
-    "round": "r2",
-    "door": "content/agent-review/english-rewrite/r2/G6",
-    "drafterCannotFix": "Kept in cannotFix from round 1; the reviewer returned no verdict on it. The fault is in the question, not only the walk. The key says that EACH time he explains himself his own proof goes against his case, and the techniqueKey ('every claim of control undone by the detail offered to support it') makes that the item's point. The hold finds only one site where it holds: line 7 ('Nobody put me there') against line 38 (picked eighth out of eight). Lines 22 and 26 do not go against him. Other candidates need a reading the reviewer would rightly call open: lines 8 to 11 (Dan said 'anyone', 'So that's me choosing'), line 44 ('Somebody has to keep the goal'), lines 28 to 30 (his mum) and line 39 ('I laughed as well'). Round 2 also tested a narrower stem, 'What happens when he explains why he is in goal?', built on lines 7 to 11, 38 and 44. It fails twice: two of its three sites are interpretive, and under it the distractor 'He minds it early on, but he has made his peace' becomes defensible, since line 43 ('I'm not shifting out of there') and line 44 read as acceptance of goal, which its execution ('still refusing to move') cites against it. Repairing that means a new stem, new key and new distractors on a whole-text purpose item: new authoring, not a repair. Fixing only the hint (it sends the child to a verdict line that does not exist) and the walk would leave an unsupported key, so the row stays held."
+    "round": "r4",
+    "door": "content/agent-review/english-rewrite/r4/G6",
+    "reviewOfRow": {
+     "itemId": "ENG-022-GK-11",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "faultField": "stem",
+     "reason": "Original hold fixed: the walkScript's 'each time' evidence (lines 22, 26) and the hint pointing to a verdict line that does not exist are both gone with the old question. Read as a new item it is accurate. The key is supported by 33 against 34-37. 'Both ends ... proper netting' fails on 33. 'Somebody once said' drops 'Nobody' (36). 'Just the usual word for a goal, and shows nothing more' survives no reading. 'net' may be the ordinary football word, but 'shows nothing more' is refuted by 'still' (34) and by 'Nobody has ever once said there isn't one' (36-37), which make the writer's point. Its execution's 'each net names something that is not there' holds once line 35 is read as following 'We still say net'. The hint and walkScript are true and do not coach. Held on the stem: it duplicates the signed ENG-022-GK-09 (same lines, same point, key a paraphrase, the same negation distractor), so its sibling cues it and it tests nothing new."
+    },
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-022-GK-11",
+     "verdict": "REFUSE",
+     "reason": "Every line and quotation in the new question is true: 'net' three times at 34-35, netting at 31, jumpers and air at 33, 'Nobody has ever once said / there isn't one' at 36-37. But the rewrite turns this item into a near-copy of its signed sibling ENG-022-GK-09 on the same passage. GK-09 asks: 'Look at lines 34 to 37. What does he notice about the word they all use?' Its key is 'They keep using it although his end has none.' The new key, 'They all talk as if his team's end has a net, though it does not', is a paraphrase of that. The new negation-dropped distractor, 'Somebody once said that his team's end has no net', repeats GK-09's 'Somebody has pointed it out before now'. The new attribute-transfer distractor, 'Both ends of the pitch have proper netting', re-tests GK-08 (lines 31-33). A child who has just answered GK-09 is given GK-11's answer. This replaces a question with no honest key by one the set already asks. The rebuild needs a question about the poem that GK-01 to GK-10 do not already ask."
+    }
    }
   }
  ],
@@ -1865,6 +1828,58 @@
    "clearedAt": "2026-11-20T17:19:23.420Z",
    "clearedBy": "rev-agent-01 re-read the held field after an agent rewrite (english-rewrite/r3/G7)",
    "reviewerNote": "Whole row re-read against lines 40-42. The key (light going, line 40; hand moved despite both hands, lines 41-42) is the only defensible answer. Wind: nothing in 40-42, and the hand moved at line 42, so the execution is true. Camera: lines 40-41 give the light and the hands, nothing about the phone, so the execution is true. 'even then' is on line 41 and means despite, so the relation-word execution is true. The hint (lines 40 and 41, even then) is true and names no property only the key has, so the original coaching fault is gone. The walkScript is true (line 40 light, line 41 hands, even then). Note, not a hold: the passage never gives the narrator's sex. The row says 'his', which matches the sibling items on this passage."
+  },
+  {
+   "itemId": "ENG-018-RB-02",
+   "verdict": "HOLD",
+   "faultField": "execution",
+   "reason": "Execution for 'He tucks his hat down first, and then he pulls it over his eyes' says it reverses lines 6 and 63, but the option never pushes the hat back - it is not a reversal; and 'He lolls back, and later he clears his mental decks' is true at lines 5 and 64 and defensible as what happened to how he sits.",
+   "group": "verdicts-G5.json",
+   "latestUnderR1023": {
+    "round": "r3",
+    "door": "content/agent-review/english-rewrite/r3/G5",
+    "reviewOfRow": {
+     "itemId": "ENG-018-RB-02",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "faultField": "walkScript",
+     "reason": "Original hold fixed: the hat 'reversal' option and the defensible 'lolls back ... clears his mental decks' are both replaced. Every execution checks: lines 5-6 lolled back with a foot over the dashboard; 62-64 foot down and hat back; line 7 quid of tobacco; lines 51-52 boosted her up and resumed his own place. The key is the only defensible answer, and the hint 'The hat moves twice' is true (line 6 pulled over his eyes, line 63 pushed back) and does not coach. Held on the walkScript: 'In lines 63 and 64 he takes his foot down' leaves out line 62, where 'took' stands ('...in its socket, took' / 'his foot from the dashboard'). That is the same split-line fault this row was held for in round 2. Fix: cite 'Lines 62 to 64'."
+    },
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-018-RB-02",
+     "verdict": "REFUSE",
+     "reason": "The change fixes both faults I named in round 2: the whip is dropped, and 'over the dashboard' is now placed on lines 5 and 6. But the new sentence 'In lines 63 and 64 he takes his foot down and pushes his hat back.' puts the foot-taking on lines 63-64, and 'took' is the last word of line 62 ('He put the whip back in its socket, took'). Line 63 starts 'his foot from the dashboard'. The why repeats the error: it quotes line 63 as 'took his foot from the dashboard'. In round 2 I held this row because a clause that runs over two lines was cited to one of them (line 5/6). This is the same fault at the other end of the row. 'Lines 62 to 64', the stem's own window, would be true."
+    }
+   },
+   "clearedAt": "2026-11-20T17:38:46.792Z",
+   "clearedBy": "rev-agent-01 re-read the held field after an agent rewrite (english-rewrite/r4/G5)",
+   "reviewerNote": "Re-read whole from the passage. Original hold fixed: the hat 'reversal' option and the defensible 'lolls back ... mental decks' option are gone. Key: lolled back with a foot over the dashboard (5-6), hat over his eyes (6) and tobacco (7), all undone at 62-64. Distractors: 'more lazily at the end' is contradicted by 62-64; the quid (7) is one detail, not the change; boost and resume (51-52) is outside both windows. Every execution line checks. The hint 'The hat moves twice' is true (pulled over his eyes at 6, pushed back at 63) and does not coach. walkScript lines 5-6, 6, 7 and 62-64 are all right. lineRefs [5,6,7,62,63,64] match the stem."
+  },
+  {
+   "itemId": "ENG-026-AL-03",
+   "verdict": "HOLD",
+   "faultField": "options",
+   "reason": "'The key was under the brick, and after that it was in her hand' is wholly true (lines 12, 43-44) and as much a 'what these lines show' as the key, which is itself a literal pairing of two facts; no defensible distinction between them.",
+   "group": "verdicts-G5.json",
+   "latestUnderR1023": {
+    "round": "r3",
+    "door": "content/agent-review/english-rewrite/r3/G5",
+    "reviewOfRow": {
+     "itemId": "ENG-026-AL-03",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "faultField": "execution",
+     "reason": "Original hold fixed: the wholly true pairing option is replaced by 'He put the key back under the brick when they locked up', which line 43 'did not' falsifies. The key 'Grandad stops keeping the key, leaving it for Alan, then giving it to Cass' is true and the only defensible answer: belt loop at line 10, moved for Alan and under the brick at lines 11-12, put into her hand to hang on to at lines 43-45, Cass at line 27. The hint is true and does not coach. The walkScript is true at lines 10, 11, 12 and 43-45. The negation and motive executions are true at lines 43, 11 and 45. Held on the heavy-brick execution: 'Line 45 gives the real reason' asserts that Grandad's stated reason is the true one, and the passage leaves that open (lines 30-38 show his stated reasons covering what is happening). Fix: 'Line 45 gives the reason he gives'. The phrase came from my round 2 reason, which I withdraw."
+    },
+    "reviewOfChange": {
+     "ref": "rebuild:ENG-026-AL-03",
+     "verdict": "REFUSE",
+     "reason": "The change fixes the fault I named in round 2. The heavy-brick option is now read as a reason for not leaving the key under the brick at lock-up (line 43 'did not put the key back under the brick'), not as a reason for moving it for Alan. Line 45 has 'it would save him hunting about'. But 'Line 45 gives the real reason' claims something the passage does not settle. Line 45 gives the reason Grandad gives. This passage keeps showing what he says against what is happening: 'he had had an enormous breakfast' when he passes her half his sandwich (lines 35-36), 'it was nothing' about Thursday (line 38), his knee (lines 30-31), and his knots gone useless (line 33). The row's own key, 'Grandad stops keeping the key', is about a handing-over that 'save him hunting about' does not settle. The words 'the real reason' come from my own round 2 reason, and I withdraw them. 'Line 45 gives the reason he gives' would be true. The motive-invention execution already words it correctly: 'line 45 says only that it would save him hunting about'."
+    }
+   },
+   "clearedAt": "2026-11-20T17:38:46.792Z",
+   "clearedBy": "rev-agent-01 re-read the held field after an agent rewrite (english-rewrite/r4/G5)",
+   "reviewerNote": "Re-read whole from the passage. Original hold fixed: the wholly true pairing option is replaced by 'He put the key back under the brick when they locked up', which line 43's 'did not' falsifies. Key: belt loop (10), moved for Alan and under the brick (11-12), put into her hand to hang on to (43-45), Cass named at 27. It is the only defensible answer. The heavy brick is stated nowhere. The motive against Alan is unsupported; line 11 moved it FOR Alan. Every execution line checks (43; 43 and 45; 11 and 45). The hint 'Ask who the key is for, each time it moves' gives a method and does not coach. walkScript lines 10, 11, 12 and 43-45 are all right. lineRefs match the stem."
   }
  ]
 }

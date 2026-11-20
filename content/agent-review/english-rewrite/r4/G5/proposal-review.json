@@ -1,0 +1,32 @@
+{
+  "door": "english-rewrite/r4/G5",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-018-RB-02",
+      "verdict": "ATTEST",
+      "reason": "The only change from round 3 is in the walkScript: 'In lines 63 and 64' is now 'In lines 62 to 64'. That fixes the fault I named. 'took' ends line 62 and 'his foot from the dashboard, pushed his hat back' is on line 63. Nothing else moved; I diffed the proposal against round 3 field by field."
+    },
+    {
+      "ref": "rebuild:ENG-026-AL-03",
+      "verdict": "ATTEST",
+      "reason": "The only change from round 3 is in the heavy-brick execution: 'Line 45 gives the real reason' is now 'Line 45 gives the reason he gives'. That fixes the fault I named. Line 45 has 'it would save him hunting about', reported as what he said at line 44. Nothing else moved; I diffed the proposal against round 3 field by field."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-018-RB-02",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Re-read whole from the passage. Original hold fixed: the hat 'reversal' option and the defensible 'lolls back ... mental decks' option are gone. Key: lolled back with a foot over the dashboard (5-6), hat over his eyes (6) and tobacco (7), all undone at 62-64. Distractors: 'more lazily at the end' is contradicted by 62-64; the quid (7) is one detail, not the change; boost and resume (51-52) is outside both windows. Every execution line checks. The hint 'The hat moves twice' is true (pulled over his eyes at 6, pushed back at 63) and does not coach. walkScript lines 5-6, 6, 7 and 62-64 are all right. lineRefs [5,6,7,62,63,64] match the stem."
+    },
+    {
+      "itemId": "ENG-026-AL-03",
+      "verdict": "SIGN",
+      "holdFixed": true,
+      "faultField": null,
+      "reason": "Re-read whole from the passage. Original hold fixed: the wholly true pairing option is replaced by 'He put the key back under the brick when they locked up', which line 43's 'did not' falsifies. Key: belt loop (10), moved for Alan and under the brick (11-12), put into her hand to hang on to (43-45), Cass named at 27. It is the only defensible answer. The heavy brick is stated nowhere. The motive against Alan is unsupported; line 11 moved it FOR Alan. Every execution line checks (43; 43 and 45; 11 and 45). The hint 'Ask who the key is for, each time it moves' gives a method and does not coach. walkScript lines 10, 11, 12 and 43-45 are all right. lineRefs match the stem."
+    }
+  ]
+}

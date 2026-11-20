@@ -28,9 +28,13 @@ export interface RowChange { itemId: string; passageRef: string | null; hold: { 
 export function exportEnglishRewriteReturn(): string | null {
   if (!existsSync(DIR)) return null;
   const rows: RowChange[] = [];
-  // Round 1 lands in `<G>/`, later rounds in `r<N>/<G>/`; a row lands in exactly one of them.
-  const doors = [...readdirSync(DIR).filter((d) => /^G\d+$/.test(d)),
-    ...readdirSync(DIR).filter((d) => /^r\d+$/.test(d)).flatMap((r) => readdirSync(pjoin(DIR, r)).filter((d) => /^G\d+$/.test(d)).map((g) => pjoin(r, g)))].sort();
+  // EVERY door under english-rewrite/ that has landed anything: round 1 `<G>/`, later rounds `r<N>/<G>/`,
+  // and doors of LIVE rows such as `stock/`. Found by walking for changeset.json, never by a list of
+  // folder shapes — a shape list silently missed `stock/` when it was added (R57/R61).
+  const doors: string[] = [];
+  const walk = (rel: string) => { for (const e of readdirSync(pjoin(DIR, rel), { withFileTypes: true })) if (e.isDirectory()) { const r = rel ? pjoin(rel, e.name) : e.name; if (existsSync(pjoin(DIR, r, 'changeset.json'))) doors.push(r); walk(r); } };
+  walk('');
+  doors.sort();
   for (const g of doors) {
     const f = pjoin(DIR, g, 'changeset.json');
     if (!existsSync(f)) continue;
@@ -40,7 +44,9 @@ export function exportEnglishRewriteReturn(): string | null {
     console.log(`  ${FAMILY}: NOTHING TO RETURN — no group has landed a rewrite yet; no file delivered (an empty return must not supersede a real one).`);
     return null;
   }
-  rows.sort((a, b) => a.itemId.localeCompare(b.itemId));
+  // A LIVE row can land in more than one door (a rewrite, then a stock-sentence redraft). Each landing is
+  // its own entry, so the return lists changes in the order they happened rather than merging them.
+  rows.sort((a, b) => a.itemId.localeCompare(b.itemId) || a.landedAt.localeCompare(b.landedAt));
   const generatedAt = new Date().toISOString();
   const stamp = freshnessStamp(rows, generatedAt);
   const fieldCount = rows.reduce((n, r) => n + r.changes.length, 0);

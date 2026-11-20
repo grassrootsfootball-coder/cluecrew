@@ -1,0 +1,20 @@
+{
+  "door": "english-rewrite/r4/G6",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-022-GK-11",
+      "verdict": "REFUSE",
+      "reason": "Every line and quotation in the new question is true: 'net' three times at 34-35, netting at 31, jumpers and air at 33, 'Nobody has ever once said / there isn't one' at 36-37. But the rewrite turns this item into a near-copy of its signed sibling ENG-022-GK-09 on the same passage. GK-09 asks: 'Look at lines 34 to 37. What does he notice about the word they all use?' Its key is 'They keep using it although his end has none.' The new key, 'They all talk as if his team's end has a net, though it does not', is a paraphrase of that. The new negation-dropped distractor, 'Somebody once said that his team's end has no net', repeats GK-09's 'Somebody has pointed it out before now'. The new attribute-transfer distractor, 'Both ends of the pitch have proper netting', re-tests GK-08 (lines 31-33). A child who has just answered GK-09 is given GK-11's answer. This replaces a question with no honest key by one the set already asks. The rebuild needs a question about the poem that GK-01 to GK-10 do not already ask."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-022-GK-11",
+      "verdict": "HOLD",
+      "holdFixed": true,
+      "faultField": "stem",
+      "reason": "Original hold fixed: the walkScript's 'each time' evidence (lines 22, 26) and the hint pointing to a verdict line that does not exist are both gone with the old question. Read as a new item it is accurate. The key is supported by 33 against 34-37. 'Both ends ... proper netting' fails on 33. 'Somebody once said' drops 'Nobody' (36). 'Just the usual word for a goal, and shows nothing more' survives no reading. 'net' may be the ordinary football word, but 'shows nothing more' is refuted by 'still' (34) and by 'Nobody has ever once said there isn't one' (36-37), which make the writer's point. Its execution's 'each net names something that is not there' holds once line 35 is read as following 'We still say net'. The hint and walkScript are true and do not coach. Held on the stem: it duplicates the signed ENG-022-GK-09 (same lines, same point, key a paraphrase, the same negation distractor), so its sibling cues it and it tests nothing new."
+    }
+  ]
+}

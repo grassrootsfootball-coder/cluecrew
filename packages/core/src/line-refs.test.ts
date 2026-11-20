@@ -119,6 +119,17 @@ describe('anchoring a citation', () => {
     expect(failures).toEqual([]);
   });
 
+  it('anchors on a LATER occurrence of a quote that appears twice (ENG-006-TM-08)', () => {
+    // "the rule" is at lines 1 and 2. A citation to line 2 is anchored by the second occurrence; a
+    // span found ONLY at line 1 still fails, so the fix widens the search, not the tolerance.
+    const twice: CitablePassage = { id: 'twice', numberedLines: [
+      { n: 1, text: 'He fetched the rule from the shed.' },
+      { n: 2, text: 'Much later he took the rule and measured again.' },
+    ] };
+    expect(checkLineRefs({ label: 't', passageRef: 'twice', passage: twice, text: "Read line 2. He takes 'the rule' and measures." })).toEqual([]);
+    expect(checkLineRefs({ label: 't', passageRef: 'twice', passage: twice, text: "Read line 2. He 'fetched the rule'." })[0]!.rule).toBe('quote-not-at-cited-lines');
+  });
+
   it('fails when NO quote anchors the cited line', () => {
     const failures = checkLineRefs({
       label: 't',

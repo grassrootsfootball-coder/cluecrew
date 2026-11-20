@@ -113,15 +113,7 @@
  },
  {
   "id": "en-apostrophe-possession",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Ask whose it is. An owner needs an apostrophe. Try swapping in 'it is'.",
-   "description": "Misses possessive apostrophes; confuses its/it's."
-  },
-  "after": {
-   "description": "Misses possessive apostrophes; confuses its/it's.",
-   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "en-article-definiteness",
@@ -242,5 +234,17 @@
  {
   "id": "side-recounted-from-a-reached-corner",
   "outcome": "already attested"
+ },
+ {
+  "id": "maths-99-rounded-without-compensating",
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Rounding helps you check an answer. Work the real numbers out too.",
+   "description": "Child gives 62 - 27 = 40 where the answer is 35, rounding both to the nearest ten and giving the rounded result."
+  },
+  "after": {
+   "description": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+   "childHint": "Rounding helps you check an answer. Work the real numbers out too."
+  }
  }
 ]

@@ -1,0 +1,5 @@
+{ "reviewer": "rev-agent-01", "group": "I",
+  "note": "R1022 finding, landed under R1021: the entry's own worked example gives the wrong rounded result.",
+  "entries": [ { "id": "maths-99-rounded-without-compensating", "verdict": "REFUSE",
+    "reason": "The description's example is arithmetically wrong: rounding 62 and 27 to the nearest ten gives 60 - 30 = 30, not 40. Its own carrier MC01-CALC-02 (Work out 62 - 27; distractor 30) and that option's execution already say 30. A drafter reading the description would build distractors from a false example.",
+    "transforms": [ { "field": "description", "from": "62 - 27 = 40", "to": "62 - 27 = 30" } ] } ] }

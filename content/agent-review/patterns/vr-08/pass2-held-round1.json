@@ -1,0 +1,47 @@
+{
+ "door": "patterns/vr-08",
+ "mode": "APPLIED",
+ "landed": [
+  "gen-vr-08-move-letter-02",
+  "gen-vr-08-move-letter-06",
+  "gen-vr-08-move-letter-05",
+  "gen-vr-08-move-letter-19",
+  "gen-vr-08-move-letter-18",
+  "gen-vr-08-move-letter-11",
+  "gen-vr-08-move-letter-24"
+ ],
+ "held": [
+  {
+   "itemId": "gen-vr-08-move-letter-23",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:gen-vr-08-move-letter-23",
+     "verdict": "REFUSE",
+     "reason": "Key is correct and unique for a child (I: SOLD + FAIR; O leaves SLID; D leaves SOLI; S leaves OLID; L leaves SOID), but two execution facts are false as stated. Option O's execution says FAR 'cannot take O anywhere and make a word; the best try is FARO' - FARO is a word in every standard dictionary (a card game), so the explanation names a real word as its proof that none exists. Option D's execution says SOLI 'is not a word' - SOLI is the dictionary plural of SOLO in music. Neither is a word a child knows, so the row would still score correctly, but the executions assert facts a parent checking a dictionary will find untrue. Re-execute with a non-word as the best try (e.g. FOAR) and a claim about SOLI that is true, or choose a different pair."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-08-move-letter-23",
+    "verdict": "HOLD",
+    "reason": "Row is answerable and key I unique for a child, but the executions as they would land state that FARO and SOLI are not words; both are standard-dictionary words. Hold until the executions say only what is true."
+   }
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-08",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:gen-vr-08-move-letter-08",
+     "verdict": "REFUSE",
+     "reason": "A second legitimate move exists: S. Taking S out of COAST leaves COAT, and LONG + S makes LONGS (as in 'she longs to go home'), a common verb form a 9-11-year-old would accept. So the key A (COST + ALONG) is not the only letter that leaves two real words. S is not among the options, so no option is wrongly keyed, but a child who finds COAT/LONGS first meets a row whose stated answer is not the only answer. The executions themselves are true (T leaves COAS; O leaves CAST and LONG cannot take O). Rebuild on a word pair where no letter other than the key leaves two real words."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-08-move-letter-08",
+    "verdict": "HOLD",
+    "reason": "As rebuilt (COAST/LONG), S also leaves two real words: COAT + LONGS. The key A is not the only letter that solves the row, so it is not answerable with one stated answer. Needs a different pair."
+   }
+  }
+ ]
+}

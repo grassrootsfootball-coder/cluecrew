@@ -1,0 +1,102 @@
+{
+  "door": "patterns/vr-08",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-02",
+      "verdict": "ATTEST",
+      "reason": "Solved STICK/EACH by trying all 5 letters at all 5 insert points: only T works (SICK + TEACH). S leaves TICK but SEACH/ESACH/EASCH/EACSH/EACHS are not words (second-word-invalid, as tagged and as executed); C leaves STIK (first-word-invalid, as tagged and executed). I, K also fail. Key now letter 2 of word1; both distractor letters occur in STICK."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-05",
+      "verdict": "ATTEST",
+      "reason": "Solved SPEND/SOON exhaustively: only P works (SEND + SPOON). E leaves SPND (first-word-invalid, true); N leaves SPED, a real word, but NSOON/SNOON/SONON/SOONN are not words (second-word-invalid, true). S gives PEND but no S-word from SOON; D leaves SPEN. Key now letter 2."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-06",
+      "verdict": "ATTEST",
+      "reason": "Solved THANK/SAME exhaustively: only H works (TANK + SHAME). K leaves THAN, a real word, but KSAME/SKAME/SAKME/SAMKE/SAMEK are not words (second-word-invalid, true); N leaves THAK (first-word-invalid, true). T would leave HANK but no T-word from SAME; A leaves THNK. Key now letter 2."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-08",
+      "verdict": "REFUSE",
+      "reason": "A second legitimate move exists: S. Taking S out of COAST leaves COAT, and LONG + S makes LONGS (as in 'she longs to go home'), a common verb form a 9-11-year-old would accept. So the key A (COST + ALONG) is not the only letter that leaves two real words. S is not among the options, so no option is wrongly keyed, but a child who finds COAT/LONGS first meets a row whose stated answer is not the only answer. The executions themselves are true (T leaves COAS; O leaves CAST and LONG cannot take O). Rebuild on a word pair where no letter other than the key leaves two real words."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-11",
+      "verdict": "ATTEST",
+      "reason": "Solved LIKED/MONEY exhaustively: only K works (LIED + MONKEY). D leaves LIKE, a real word, but DMONEY/MDONEY/MODNEY/MONDEY/MONEDY/MONEYD are not words (second-word-invalid, true); E leaves LIKD (first-word-invalid, true). L leaves IKED, I leaves LKED. Key now letter 3."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-18",
+      "verdict": "ATTEST",
+      "reason": "Solved HEARD/ROUND exhaustively: only A works (HERD + AROUND). H leaves EARD (first-word-invalid, true); R leaves HEAD, a real word, but no placement of R in ROUND makes a word (second-word-invalid, true). E leaves HARD but EROUND/REOUND/ROEUND/ROUEND/ROUNED/ROUNDE are not words; D leaves HEAR but no D-word from ROUND. Key now letter 3."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-19",
+      "verdict": "ATTEST",
+      "reason": "Solved MEANT/BAD exhaustively: only N works (MEAT + BAND). E: BAD can take E (BEAD), but MEANT without E is MANT, not a word a child knows nor a standard-dictionary word (first-word-invalid; the execution says exactly this and is true). T leaves MEAN, but TBAD/BTAD/BATD/BADT are not words (second-word-invalid, true). M leaves EANT; A leaves MENT. Key now letter 4."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-23",
+      "verdict": "REFUSE",
+      "reason": "Key is correct and unique for a child (I: SOLD + FAIR; O leaves SLID; D leaves SOLI; S leaves OLID; L leaves SOID), but two execution facts are false as stated. Option O's execution says FAR 'cannot take O anywhere and make a word; the best try is FARO' - FARO is a word in every standard dictionary (a card game), so the explanation names a real word as its proof that none exists. Option D's execution says SOLI 'is not a word' - SOLI is the dictionary plural of SOLO in music. Neither is a word a child knows, so the row would still score correctly, but the executions assert facts a parent checking a dictionary will find untrue. Re-execute with a non-word as the best try (e.g. FOAR) and a claim about SOLI that is true, or choose a different pair."
+    },
+    {
+      "ref": "rebuild:gen-vr-08-move-letter-24",
+      "verdict": "ATTEST",
+      "reason": "Solved WITCH/HAIR exhaustively: only C works (WITH + CHAIR). W leaves ITCH, a real word, but WHAIR/HWAIR/HAWIR/HAIWR/HAIRW are not words (second-word-invalid, true); T leaves WICH (first-word-invalid, true). I leaves WTCH; H leaves WITC. Key now letter 4."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-08-move-letter-02",
+      "verdict": "SIGN",
+      "reason": "STICK/EACH -> SICK/TEACH: every letter tried at every position, key T unique, both distractors wrong as tagged, all words (incl. TICK) common and suitable."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-05",
+      "verdict": "SIGN",
+      "reason": "SPEND/SOON -> SEND/SPOON: exhaustive solve, key P unique, E and N fail as tagged, all words (incl. SPED) known to a 9-11-year-old."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-06",
+      "verdict": "SIGN",
+      "reason": "THANK/SAME -> TANK/SHAME: exhaustive solve, key H unique, K and N fail as tagged, all words (incl. THAN) suitable."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-08",
+      "verdict": "HOLD",
+      "reason": "As rebuilt (COAST/LONG), S also leaves two real words: COAT + LONGS. The key A is not the only letter that solves the row, so it is not answerable with one stated answer. Needs a different pair."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-11",
+      "verdict": "SIGN",
+      "reason": "LIKED/MONEY -> LIED/MONKEY: exhaustive solve, key K unique, D and E fail as tagged, all words suitable."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-18",
+      "verdict": "SIGN",
+      "reason": "HEARD/ROUND -> HERD/AROUND: exhaustive solve (E->HARD and D->HEAR leave real first words but no second word), key A unique, H and R fail as tagged."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-19",
+      "verdict": "SIGN",
+      "reason": "MEANT/BAD -> MEAT/BAND: exhaustive solve, key N unique, E fails on MANT and T fails on BAD as tagged, all words suitable."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-23",
+      "verdict": "HOLD",
+      "reason": "Row is answerable and key I unique for a child, but the executions as they would land state that FARO and SOLI are not words; both are standard-dictionary words. Hold until the executions say only what is true."
+    },
+    {
+      "itemId": "gen-vr-08-move-letter-24",
+      "verdict": "SIGN",
+      "reason": "WITCH/HAIR -> WITH/CHAIR: exhaustive solve, key C unique, W (ITCH, no W-word from HAIR) and T (WICH) fail as tagged, all words suitable."
+    }
+  ],
+  "doorTarget": {
+    "asProposed": "All 9 rebuilds landing: key position in word1 - 1st: 6, 2nd: 5, 3rd: 5, 4th: 5, 5th: 3, 6th: 1 (25). Met.",
+    "asWillStandUnderTheseVerdicts": "7 rebuilds landing, 08 (FEAT, F) and 23 (WHEAT, W) unchanged: 1st: 8, 2nd: 5, 3rd: 4, 4th: 4, 5th: 3, 6th: 1 (25). NOT met - first letter on 8 rows against a limit of 6; no position exceeds 7. Shortfall reported, not forced."
+  }
+}

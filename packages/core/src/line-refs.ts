@@ -325,6 +325,25 @@ export function findSpan(passage: CitablePassage, span: string): number | null {
 }
 
 /**
+ * EVERY line a span starts on, not only the first. A short quote ("the rule") often occurs more than
+ * once in a passage; `findSpan` returns the first, so a citation anchored by a LATER occurrence was
+ * reported as sending the child to the wrong place (ENG-006-TM-08: "the rule" at lines 11 and 38, item
+ * correctly at 38). The anchoring test asks whether ANY occurrence sits at a cited line.
+ */
+export function findSpanLines(passage: CitablePassage, span: string): number[] {
+  const { text, marks } = joined(passage);
+  const lineAt = (at: number) => { let line: number | null = null; for (const mark of marks) { if (mark.at <= at) line = mark.n; else break; } return line; };
+  const out = new Set<number>();
+  for (const raw of [span, span.replace(TERMINAL_PUNCTUATION, '')]) {
+    const needle = normaliseForMatch(raw);
+    if (!needle) continue;
+    for (let at = text.indexOf(needle); at >= 0; at = text.indexOf(needle, at + 1)) { const l = lineAt(at); if (l !== null) out.add(l); }
+    if (out.size) break;
+  }
+  return [...out].sort((a, b) => a - b);
+}
+
+/**
  * Line citations written in PROSE — "Go straight to line 1", "Look at lines 11
  * and 12", "Read to the end of line 8". A walk script has no structured
  * lineRefs field; the citation is a sentence, which is exactly why nobody
@@ -492,7 +511,7 @@ export function checkLineRefs(input: {
   // An unanchored citation is the failure David described: a child sent to a
   // line that does not carry the evidence.
   const real = located.filter((entry) => entry.at !== null);
-  if (inRange.length > 0 && real.length > 0 && !real.some((entry) => inRange.includes(entry.at!))) {
+  if (inRange.length > 0 && real.length > 0 && !real.some((entry) => findSpanLines(passage, entry.span).some((l) => inRange.includes(l)))) {
     const where = real.map((entry) => `"${entry.span}" is at line ${entry.at}`).join('; ');
     failures.push({
       where: label,
