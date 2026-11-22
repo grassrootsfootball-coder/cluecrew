@@ -1,0 +1,118 @@
+{
+ "door": "sweep-fix/english-05",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-12",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-05",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Execution now cites lines 60 and 61, which is correct. Key 'Two: one with Mrs Hurst and one with Miss Bingley.' matches lines 39 and 40, and every distractor is wrong. 'Every dance' is Bingley at line 37. Elizabeth sits down at lines 47 and 48. 'None at all' and the third dance with Miss Bennet are not stated. Hint and walk script are accurate.",
+   "landedAt": "2026-11-22T17:32:12.971Z",
+   "changes": [
+    {
+     "field": "option E (cmsw2f4tv005btmbv02jdmvfv).execution",
+     "before": "A third dance with Miss Bennet is supplied; she dances with Mr Bingley at line 63 and never with him.",
+     "after": "A third dance with Miss Bennet is supplied; she dances with Mr Bingley at lines 60 and 61 and never with Mr Darcy."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-08",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-05",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk script now reaches and states the key. Key 'the enjoyment she took in the taste' is the only sense line 43's 'considerable relish as well as rapidity' allows. The sauce sense (what she ate) and speed (the other conjunct) are both ruled out. The hint does not coach.",
+   "landedAt": "2026-11-22T17:32:12.971Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 43 and find the two words joined by as well as. One of them is rapidity, which is about speed. The other has to be about something else, and the puff is what she is eating.",
+     "after": "Read line 43 and find the two words joined by as well as. One of them is rapidity, which is about speed. Relish is the other way she ate it. So relish is about how much she enjoyed the taste."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Read line 43 and find the two words joined by as well as. One of them is rapidity, which is about speed. The other has to be about something else, and the puff is what she is eating."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-012-ML-01",
+   "passageRef": "stream-a-14-mill-on-floss",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-05",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The second answer is gone. The key 'The smells of cakes, jellies and gravy.' is the cause in lines 1 to 3. The visitors at line 1 are the reason for the baking, not for the mood. No school and no weather are mentioned anywhere in the passage. The new option is 9 words, so the key, at 7, does not stand out. Hint and walk script fit.",
+   "landedAt": "2026-11-22T17:32:12.971Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4wa00jrtmbv27qfrn85).value",
+     "before": "There was hope in the air that Wednesday.",
+     "after": "The sun was shining and the day was warm."
+    },
+    {
+     "field": "option D (cmsw2f4wa00jrtmbv27qfrn85).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-plausible-not-stated"
+    },
+    {
+     "field": "option D (cmsw2f4wa00jrtmbv27qfrn85).execution",
+     "before": "Reuses line 3, which says the same thing again rather than giving a cause.",
+     "after": "No sun or warm weather is mentioned anywhere in the passage. Lines 1 to 3 give the cause: the scents of plumcakes, jellies and gravy make it impossible to feel altogether gloomy."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-05",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-05",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole against lines 17 to 23. Key 'A group of people who arrive together.' is the only sense that fits 'entered the assembly-room' and 'only five altogether'. The birthday sense, the political sense, the Netherfield ball (line 38, outside the window) and everyone at the assembly are each ruled out by line 21. The walk script's five people are now inside the window and it states the key. The hint does not coach.",
+   "landedAt": "2026-11-22T17:32:12.971Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Read lines 17 to 21. Line 21 says: 'when the party entered the assembly-room'. What does 'party' mean here?",
+     "after": "Read lines 17 to 23. Line 21 says: 'when the party entered the assembly-room'. What does 'party' mean here?"
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      17,
+      18,
+      19,
+      20,
+      21
+     ],
+     "after": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+     ]
+    },
+    {
+     "field": "option E (cmsw5vr56000btm8el6a5gujj).tag",
+     "before": "en-attribute-transfer",
+     "after": "en-vocab-neighbouring-sense"
+    },
+    {
+     "field": "option E (cmsw5vr56000btm8el6a5gujj).execution",
+     "before": "The child has the right kind of meaning, a group of people, at the wrong size: everyone at the assembly. Lines 21 and 22 count the party that entered as five people who came in together.",
+     "after": "'Party' can also mean everyone at a social gathering, a real sense of the word, but too wide here. Line 21 fixes a smaller group: the party 'entered the assembly-room', and lines 21 to 23 count it as 'only five altogether'."
+    }
+   ]
+  }
+ ]
+}

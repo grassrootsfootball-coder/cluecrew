@@ -1,0 +1,333 @@
+{
+ "door": "sweep-fix/english-04",
+ "proposer": "agent",
+ "ruling": "R1037",
+ "seats": [
+  {
+   "optionId": "cmsw2f4ux00bjtmbvszhqnr73",
+   "itemId": "ENG-006-TM-10",
+   "oldValue": "Hide the hammer so he cannot start at all.",
+   "newValue": "Hide the hammer so he cannot start at all.",
+   "tag": "en-plausible-not-stated",
+   "execution": "Hiding the hammer is a sensible-sounding plan a child might invent for her, but no line gives it. Lines 49 to 51 have her hope to be told in time so she can go and spend a week with her mother."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-006-TM-08",
+   "why": "Sweep hold (R1037): the stem said he 're-measures', and the key was the only option with 'measuring', so a child could match the word. The stem now quotes only 'the rule'; the child must find 're-measure' in line 38.",
+   "stem": {
+    "text": "Read lines 38 and 39. On line 38 Uncle Podger takes 'the rule'. What is a 'rule' here?",
+    "quotes": [
+     "the rule"
+    ],
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 38
+   },
+   "options": [
+    {
+     "optionId": "cmsw5vr5e001htm8eox9228o1",
+     "value": "A law about how the job has to be done.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The commonest other sense of the word, which this sentence does not fix."
+    },
+    {
+     "optionId": "cmsw5vr5e001itm8edsvy5y87",
+     "value": "A line drawn on the wall to work from.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The child reuses the mark he made on the wall at lines 34 and 35, but the rule is a separate thing he takes up. At line 38 he takes the rule and re-measures with it, so it is a measuring tool, not a line on the wall."
+    },
+    {
+     "optionId": "cmsw5vr5e001jtm8ehwbao9ci",
+     "value": "A habit he always follows when working.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "A rule as a habit, as in 'as a rule', is a genuine sense of the word, but not the one line 38 fixes. He takes the rule and re-measures with it, so it is a tool for measuring."
+    },
+    {
+     "optionId": "cmsw5vr5e001ktm8elnvfxm9n",
+     "value": "A tool for measuring length.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "why": "Sweep hold (R1037): the stem asked about 'this day', asserting the single day the key denied, and the key shared an 'It is not one X, but Y' frame with one distractor. The stem now asks about 'these events'; all four options use one frame, 'They tell us ...'.",
+   "stem": {
+    "text": "The writer says 'would' again and again. He would shout, he would drop it, he would call us fools. What does that tell us about these events?",
+    "quotes": [],
+    "passageRef": "stream-a-10-three-men-boat",
+    "answerShape": "grammatical-split",
+    "orderAnchor": 9999,
+    "techniqueKey": "habitual-would-turns-one-scene-into-a-standing-pattern"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4uy00bqtmbvvad8ic2l",
+     "value": "They tell us the writer is only guessing at what happened.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "Takes the guessing sense of 'would', as in 'that would be him'. The repeated pattern does not fix that sense: from line 3 'would' gives what happened every time he took on a job."
+    },
+    {
+     "optionId": "cmsw2f4uy00brtmbvot7kr3yj",
+     "value": "They tell us the picture was never hung at all.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Stretches to never. Line 58 has the picture up by about midnight, very crooked and insecure, but up."
+    },
+    {
+     "optionId": "cmsw2f4uy00bstmbvhoy04uck",
+     "value": "They tell us Uncle Podger was cross with everyone all day.",
+     "isKey": false,
+     "tag": "en-technique-intent-as-character",
+     "execution": "The child reads the writer's choice as the character's state, so the repeated 'would' becomes Uncle Podger's mood. 'Would' marks what happened every time he took on a job, and he is not cross all day: at line 62 he surveys the mess with evident pride."
+    },
+    {
+     "optionId": "cmsw2f4uy00bttmbvsewigl8p",
+     "value": "They tell us this happened every time he took on a job.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-01",
+   "why": "Sweep hold (R1037): the hint 'Read what she sits on, not where it goes' steered away from the only detail separating the key from 'a stile that leads into a lane'. The hint now sends the child to the whole of line 2.",
+   "stem": {
+    "text": "Look at lines 1 and 2. Where does Jane sit down?",
+    "quotes": [],
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 1
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vq00getmbv2u7stla3",
+     "value": "On a stile that leads into a field.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4vq00gftmbvm28itq4l",
+     "value": "In the field on the other side of the stile.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 2 names the field, but only as the place the stile leads into. She sits on the stile and never goes into the field."
+    },
+    {
+     "optionId": "cmsw2f4vq00ggtmbv281ducz4",
+     "value": "On a low wall beside the frozen causeway.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No wall appears anywhere in the lane; line 2 gives a stile."
+    },
+    {
+     "optionId": "cmsw2f4vq00ghtmbvf6k4trf0",
+     "value": "On a stile that leads into a lane.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "One word out: line 2 says the stile led into a field."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read the whole of line 2 before you choose.",
+    "_previousHintCore": "Read what she sits on, not where it goes."
+   }
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "why": "Sweep hold (R1037): the key's second clause ('describes little beyond what it shows') was about the description, not what comes before it, was weak at lines 54 to 56, and made the key the long qualified option. The walk script never supported that clause and misread line 53 ('details are not apparent' is the cloak). Key and walk script rewritten.",
+   "stem": {
+    "text": "Look at lines 51 to 56 and lines 70 to 72. Jane does the same thing in both places before describing something. What is it?",
+    "quotes": [],
+    "passageRef": "stream-a-11-jane-eyre",
+    "answerShape": "observation-bounded-by-conditions",
+    "orderAnchor": 9999,
+    "techniqueKey": "the-light-is-reported-before-the-description"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vz00hwtmbvxmvvrbp4",
+     "value": "She tells us the sun sank down crimson and clear behind the trees.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 8, and one sunset is not a thing she does each time."
+    },
+    {
+     "optionId": "cmsw2f4vz00hxtmbvtwwwf8bn",
+     "value": "She describes each person in full first, but gives their actions later.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "The traveller rides past at line 26 and falls at line 28, but is not described until lines 51 to 56."
+    },
+    {
+     "optionId": "cmsw2f4w000hytmbvzreaacp9",
+     "value": "She never describes a person, but only the weather and the sky.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Lines 52 to 56 describe the traveller closely, from his cloak to his age."
+    },
+    {
+     "optionId": "cmsw2f4w000hztmbvdsoy6cjn",
+     "value": "She tells us about the light before she describes what she sees.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 51 gives the last daylight and the bright moon. Only then, from line 52, does she describe the man. Line 71 gives the moon's gleam on Thornfield. Only then is the house described. In both places she tells us about the light before she describes what she sees.",
+    "_previousWalkScript": "Line 51 gives the daylight and the moon before the man is described. Line 53 keeps the description to general points, since details are not apparent. Line 71 gives the moon again before Thornfield is described. The light comes first, then the description."
+   }
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "why": "Sweep hold (R1037): one distractor was the key's two facts in reverse order, a near-identical pair true but for the word 'first'. It is replaced with a change the text contradicts. The walk script listed lines but never stated the change; it now adds the eager face at line 6 and ends on the change.",
+   "stem": {
+    "text": "Look at lines 5 to 10 and 45 to 46. What has changed in Sir Henry?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 5
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xf00qatmbvgobhphrc",
+     "value": "His eyes were fixed upon it, and his face was eager to see it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 5 and 6, and both halves come from the first window alone."
+    },
+    {
+     "optionId": "cmsw2f4xf00qbtmbvbe4mhwbh",
+     "value": "He is a brave comrade at first, but the moor has silenced him.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xf00qctmbv1cf2jzpp",
+     "value": "He grows cheerful and chatty as the moor comes into view.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 45 says the opposite: as the moor spreads out in front of them, even Baskerville fell silent. At line 46 he pulls his overcoat closer. Neither window has him cheerful or talking."
+    },
+    {
+     "optionId": "cmsw2f4xf00qdtmbv5os75kel",
+     "value": "He talks of electric lamps, and then he says nothing more.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True at lines 69 to 71, outside both windows; neither window has him speak at all."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 6 shows his eager face as he first sees the moor. Line 9 has Watson call him a comrade worth taking a risk for. Line 45 says even Baskerville fell silent. Line 46 has him pull his overcoat more closely round him. So the brave comrade of the start has now been silenced by the moor.",
+    "_previousWalkScript": "Line 9 has Watson call him a comrade worth taking a risk for. Line 45 says even Baskerville fell silent as the moor opened out. Line 46 has him pull his overcoat more closely round him."
+   }
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "why": "Sweep hold (R1037): the key repeated the stem's word 'chilled' ('together chill him'), the only option to use it. It now gives the cause without the stem's word.",
+   "stem": {
+    "text": "Look at lines 40 to 46. Even Sir Henry falls silent. What has chilled him?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 40
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xj00qztmbvrgecxz0g",
+     "value": "He pulled his overcoat more closely round him.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 46 and names what he did rather than why he did it."
+    },
+    {
+     "optionId": "cmsw2f4xj00r0tmbvkb67v7p4",
+     "value": "The moor was mottled with gnarled and craggy cairns.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 41, and it is the look of the place rather than what chills him."
+    },
+    {
+     "optionId": "cmsw2f4xj00r1tmbvw3nx8s11",
+     "value": "The bleak moor, with a dangerous man hiding on it.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xj00r2tmbv1ycjfpic",
+     "value": "He is beginning to wish he had never come home.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plausible thought for him here; lines 40 to 46 never give it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "why": "Sweep hold (R1037): 'He writes a still moor' is not usual English and 'still' has three readings. The walk script's last evidence (line 27) is from the lanes, not the moor, and it never stated the conclusion. Key rewritten; walk uses moor evidence only (lines 4, 19, 20) and ends on the key.",
+   "stem": {
+    "text": "Think about the whole passage. How does Watson write about the moor?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "answerShape": "inert-land-set-against-a-mind-put-into-it",
+    "orderAnchor": 999,
+    "techniqueKey": "a-still-landscape-given-feelings-and-intentions-it-cannot-have"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xn00rotmbve306xibw",
+     "value": "He tells us the hills were jagged, and the wind was very cold.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 20 and 41 and reports two details rather than anything the telling does."
+    },
+    {
+     "optionId": "cmsw2f4xn00rptmbvws2x44v9",
+     "value": "The moor is calm by day, but it turns cruel after dark.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A tidy day-and-night shape the passage never carries. No line shows the moor calm: it is already a melancholy hill at line 4 and a forbidding moor at line 8."
+    },
+    {
+     "optionId": "cmsw2f4xn00rqtmbv4zfms514",
+     "value": "He is afraid of the moor, so he keeps his eyes on the road.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plausible reason to look away; nowhere does he say he looked away from it."
+    },
+    {
+     "optionId": "cmsw2f4xn00rrtmbvgvsxxs8k",
+     "value": "He writes as if the land itself had feelings.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "At line 4 the far-off hill of the moor is melancholy, which means sad. At line 19 the long curve of the moor is gloomy. At line 20 its hills are sinister, as if they meant harm. These are words for people, not for land. So Watson writes as if the land itself had feelings.",
+    "_previousWalkScript": "At line 4 the far-off hill is melancholy. At line 8 the moor is forbidding, and at line 20 the hills are sinister. At line 27 the rotting plants become sad gifts that Nature throws before the carriage."
+   }
+  }
+ ],
+ "notes": [
+  "ENG-006-TM-08: stem gave away 're-measures' (matching the key's 'measuring') -> stem now quotes only 'the rule'; options, hint and walk unchanged.",
+  "ENG-006-TM-10: 'Hide the hammer' tagged en-motive-invention, whose hint is about why, on a what question -> retagged en-plausible-not-stated with a new execution; value unchanged.",
+  "ENG-006-TM-12: stem asserted one day while the key denied it, and key/distractor shared a frame -> stem asks about 'these events'; all four options recast in one 'They tell us ...' frame, same tags; hint and walk unchanged.",
+  "ENG-010-JE-01: hint steered away from where the stile leads, the one detail separating key from the 'lane' distractor -> hint is now 'Read the whole of line 2 before you choose.'",
+  "ENG-010-JE-08: NOT FIXED. The card has 3 options and needs a 4th. land-proposals.ts allows only the existing option ids, or dropping some (dropOptionIds); it cannot add an option, so no seat, redraft or rebuild can supply one. It needs an option-creating path. A candidate 4th distractor, not proposed: 'jumped up on to the stile'.",
+  "ENG-010-JE-12: key's second clause was off-question and weak at lines 54 to 56, and the walk misread line 53 -> key is 'She tells us about the light before she describes what she sees.'; walk script rewritten on lines 51-52 and 71 and ends on the key.",
+  "ENG-016-HB-02: a distractor mirrored the key in reverse order, and the walk never stated the change -> distractor replaced with 'He grows cheerful and chatty as the moor comes into view.' (en-contradicted-by-the-text, line 45); walk adds line 6 and ends on the change.",
+  "ENG-016-HB-07: key echoed the stem's 'chilled' -> key is 'The bleak moor, with a dangerous man hiding on it.'; nothing else changed.",
+  "ENG-016-HB-12: key 'He writes a still moor' was unclear, and the walk used lane evidence (line 27) and never concluded -> key is 'He writes as if the land itself had feelings.'; walk uses lines 4, 19, 20 (moor only) and ends on the key."
+ ]
+}

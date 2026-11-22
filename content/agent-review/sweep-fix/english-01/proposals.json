@@ -1,0 +1,335 @@
+{
+ "door": "sweep-fix/english-01",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw2f4v600d7tmbv68wth4yn",
+   "itemId": "ENG-008-RC-01",
+   "oldValue": "Phyllis wakes Roberta by pulling her hair.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "By pulling her hair roughly.",
+   "execution": "Lines 1 and 2 say Roberta woke Phyllis by pulling her hair 'gently, but quite enough for her purpose'. This option matches the line on 'pulling her hair' and differs from it by one detail: roughly in place of gently."
+  },
+  {
+   "optionId": "cmsw387yf000ktmqbrineesg5",
+   "itemId": "ENG-001-WIW-12",
+   "oldValue": "An animal that chased and chuckled.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "A lake.",
+   "execution": "A lake is close to the key in gist, still water in place of a running one, and differs from line 29 by that one word: line 29 says he had never seen 'a river before'. No lake appears anywhere in the passage."
+  },
+  {
+   "optionId": "cmsw2k7cv0003tmt9tdpgzod4",
+   "itemId": "ENG-001-WIW-03",
+   "oldValue": "His back and arms hurt too much to go on.",
+   "tag": "en-physical-vs-emotional-cue",
+   "newValue": "His back ached too much for him to go on.",
+   "execution": "Line 4 gives the aching back and weary arms from the cleaning, a physical state offered in place of the pull of spring at lines 5 and 6."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmsw2k7cv0004tmt9ah48eokd",
+   "itemId": "ENG-001-WIW-03",
+   "value": "The Water Rat called him from up above.",
+   "tag": "en-cause-agent-swap",
+   "execution": "Line 9 says 'Something up above was calling him', and this hands that call to a character. The Water Rat is not in lines 5 to 9: his face first appears at line 46 and he is named at line 52."
+  },
+  {
+   "optionId": "cmsw2k7cv0005tmt9tkhcpcy2",
+   "itemId": "ENG-001-WIW-03",
+   "value": "He wanted to find the river he had heard about.",
+   "tag": "en-motive-invention",
+   "execution": "No line says he had heard of a river or went looking for one. Line 29 says only that he had never seen a river before, and he comes on it by chance, 'as he meandered aimlessly along' at line 28. The motive is supplied by the reader."
+  },
+  {
+   "optionId": "cmsw2f4t8001htmbvesh5kwta",
+   "itemId": "ENG-001-WIW-10",
+   "value": "He is sorry at once for knocking the rabbit over.",
+   "tag": "en-plausible-not-stated",
+   "execution": "Lines 26 and 27 have him 'gone before they could think of a thoroughly satisfactory reply', which leaves no room for the remorse this asserts."
+  }
+ ],
+ "rebuilds": [
+  {
+   "itemId": "ENG-001-WIW-02",
+   "why": "Sweep hold: the hint was an either/or whose halves were two options (dust, whitewash). New hint points to the line without splitting the choice. Annie's hint marker cleared (R94); old text kept.",
+   "stem": {
+    "text": "Read lines 3 to 4. What was all over the Mole's black fur?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 2
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t00007tmbvtfp4o2p3",
+     "value": "Dust, which was in his throat and eyes.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 3 puts the dust 'in his throat and eyes'. That is true inside the window, but it is the wrong element: lines 3 to 4 say it was 'splashes of whitewash' that were 'all over his black fur'."
+    },
+    {
+     "optionId": "cmsw2f4t00008tmbvgkbflg6a",
+     "value": "Bits of straw from his brooms.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Straw appears nowhere in the passage; the brooms at line 2 make it sound like a detail that ought to be there."
+    },
+    {
+     "optionId": "cmsw2f4t00009tmbvuczz3w9j",
+     "value": "Warm grass from the great meadow.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The warm grass is line 15, after he comes up into the meadow — a true detail from a different part of the passage."
+    },
+    {
+     "optionId": "cmsw2f4t0000atmbvl3p5kyzj",
+     "value": "Splashes of whitewash.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t0000btmbvibnlqe9s",
+     "value": "Blue and white paint.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Blue and white are the boat's colours at line 60, transferred onto the fur."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find his black fur on line 4. Read the words just before it.",
+    "hintAuthoredBy": null,
+    "hintAuthority": null,
+    "_previousHintCore": "One thing is in his eyes, one thing is on his fur. Which does the question want?"
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-05",
+   "why": "Sweep hold: the walk script put all four reversed digging words on line 12; 'scraped' is on line 13. Walk script corrected to lines 12 and 13; nothing else changed. The walk script carries no authorship marker; old text kept.",
+   "stem": {
+    "text": "In lines 11 to 14 the writer repeats words like 'scraped' and 'scrabbled'. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 5
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t2000jtmbv87855vma",
+     "value": "To show that digging is the easiest job a mole ever does.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "'The easiest job a mole ever does' overstates; nothing in the passage ranks the work at all."
+    },
+    {
+     "optionId": "cmsw2f4t2000ktmbvjk27iuxw",
+     "value": "To show the Mole was bored, and fed up with hard work.",
+     "isKey": false,
+     "tag": "en-repetition-purpose",
+     "execution": "A dismissive reading of the repetition. Lines 11 to 14 show him 'working busily' and cheering himself on with 'Up we go! Up we go!', which is effort, not boredom; the piled-up digging verbs make the climb feel long and hard."
+    },
+    {
+     "optionId": "cmsw2f4t2000ltmbvg4r4tu1z",
+     "value": "To show the climb went on and on and was hard work.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t2000mtmbvrxrtn7f0",
+     "value": "To copy the sound of the birds singing up above.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The birds are line 18, after he is out of the tunnel — a true sound from a different part."
+    },
+    {
+     "optionId": "cmsw2f4t2000ntmbvsd01cs63",
+     "value": "To make the reader feel sorry for the Mole's aching back.",
+     "isKey": false,
+     "tag": "en-technique-effect-mislocated",
+     "execution": "Gives the effect of line 4, where he has 'an aching back and weary arms' from the cleaning, not of the repeated digging verbs in lines 11 to 13. Those make the climb itself feel long and hard."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Lines 11 and 12 give four digging words: scraped, scratched, scrabbled, scrooged. Lines 12 and 13 give the same four again, backwards. So the climb feels long and hard. The birds sing at line 18, later.",
+    "_previousWalkScript": "Lines 11 and 12 give four digging words: scraped, scratched, scrabbled, scrooged. Line 12 gives the same four again, backwards. So the climb feels long and hard. The birds sing at line 18, later."
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-09",
+   "why": "Sweep hold: the hint said the rabbit says one sentence; lines 22 to 23 give two. New hint makes no sentence count. Annie's hint marker cleared (R94); old text kept.",
+   "stem": {
+    "text": "Read lines 22 to 23. What did the elderly rabbit at the gap want from the Mole?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 9
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t70017tmbvdibva2l1",
+     "value": "Sixpence for using the private road.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t70018tmbv8bq0sgma",
+     "value": "Help with his own spring-cleaning.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "The spring-cleaning belongs to the Mole, at line 1. The child moves it onto the rabbit at the gap, who at line 22 asks only for sixpence to pass along the private road."
+    },
+    {
+     "optionId": "cmsw2f4t70019tmbv2kzq0aqh",
+     "value": "A ride across the river in a boat.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The boat ride is line 63, at the far end of the passage."
+    },
+    {
+     "optionId": "cmsw2f4t7001atmbvi285jr7m",
+     "value": "The privilege of passing by the private road.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Reverses the exchange in lines 22 to 23. The rabbit asks 'Sixpence for the privilege of passing by the private road': the privilege is what the Mole would get, and the sixpence is what the rabbit wants from him."
+    },
+    {
+     "optionId": "cmsw2f4t7001btmbv140bphdt",
+     "value": "Some onion sauce for his dinner.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "'Onion-sauce!' at line 25 is the Mole's jeer on the way past, taken as an order for the rabbit's dinner."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "The rabbit asks for something at lines 22 and 23. What is it?",
+    "hintAuthoredBy": null,
+    "hintAuthority": null,
+    "_previousHintCore": "The rabbit says one sentence. What is he asking for in it?"
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-13",
+   "why": "Sweep hold: the key was the only 'To ...' option and the only three-part one. All five options now begin 'To ...' and the key has two parts like its siblings. Tags unchanged; executions reworded to the new values.",
+   "stem": {
+    "text": "The writer calls the river an animal that chases, chuckles and grips things. Read lines 29 to 33. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 13
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tb001vtmbvc84advnk",
+     "value": "To make the river seem alive and always moving.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tb001wtmbv3i1pm7w6",
+     "value": "To show that a real animal was swimming in the water.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Takes the animal comparison at line 30 as a real animal swimming in the water. Line 29 says the thing beside him is a river; the animal is the writer's picture of it."
+    },
+    {
+     "optionId": "cmsw2f4tb001xtmbv25sj12gz",
+     "value": "To show the river was dangerous and might grab the Mole.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Pulls the gripping in line 30 to its most threatening reading. Lines 30 to 31 have the river 'chuckling', leaving things 'with a laugh' and finding 'fresh playmates', so it is playful, not a danger to the Mole."
+    },
+    {
+     "optionId": "cmsw2f4tb001ytmbvpeol94yp",
+     "value": "To show that the Water Rat lived in the bank beside it.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The Rat's hole in the bank is line 39, after this window; nothing in lines 29 to 33 is about the Rat."
+    },
+    {
+     "optionId": "cmsw2f4tb001ztmbv14pu0ugz",
+     "value": "To show that the Mole thought a big animal was in front of him.",
+     "isKey": false,
+     "tag": "en-technique-intent-as-character",
+     "execution": "The child turns the writer's choice of picture into something the Mole believes. Line 33 says the Mole was bewitched and entranced, not that he took the river for a creature; calling it an animal is the writer's way of making it seem alive."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-14",
+   "why": "Sweep hold: the stem says lines 33 to 36 but lineRefs omitted line 33. lineRefs set to [33, 34, 35, 36]; nothing else changed.",
+   "stem": {
+    "text": "Read lines 33 to 36. The Mole 'trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories'. What does this tell you about the Mole?",
+    "quotes": [
+     {
+      "rule": "R4",
+      "text": "trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories",
+      "lineRefs": [
+       34,
+       35,
+       36
+      ],
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling"
+      ],
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 14
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tc0021tmbvpodnk62w",
+     "value": "The Mole was too small and slow to keep up with the river.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "execution": "Takes 'when very small' from the comparison in line 34 as a fact about the Mole. The words 'very small' belong to the child walking beside the storyteller; the Mole himself 'trotted' beside the river and kept with it, held 'spell-bound' (line 35) as the child is."
+    },
+    {
+     "optionId": "cmsw2f4tc0022tmbvqf4cf3r1",
+     "value": "The Mole was much younger than the Water Rat.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "execution": "The 'very small' child of the comparison at line 34 is carried across to the Mole as an age, and the Rat is not in this window at all."
+    },
+    {
+     "optionId": "cmsw2f4tc0023tmbvq1zy93fx",
+     "value": "The Mole was looking for a man to help him.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Takes the man in the comparison at line 35 as a man the Mole is actually looking for."
+    },
+    {
+     "optionId": "cmsw2f4tc0024tmbvzkkasyfl",
+     "value": "The river held the Mole's interest so much that he kept following it.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tc0025tmbvjefeli98",
+     "value": "The Mole was tired and wanted to go home.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 35 has him tired and sitting down. True, inside the window, and the wrong element for a question about why he kept following."
+    }
+   ],
+   "lineRefs": [
+    33,
+    34,
+    35,
+    36
+   ]
+  }
+ ],
+ "notes": [
+  "ENG-008-RC-01: the agent-patient reversal was ruled out by the stem's own wording and broke the 'By ...' form -> seated 'By pulling her hair roughly.' (en-minimal-pair-skim), which the stem does not exclude and line 1 ('gently') defeats.",
+  "ENG-001-WIW-02: hint was an either/or whose halves are options -> hint now 'Find his black fur on line 4. Read the words just before it.'; authorship marker cleared, old hint under _previousHintCore.",
+  "ENG-001-WIW-03: two false execution facts (Rat 'not until line 54'; 'never seen' read as 'never heard') -> redrafted: Rat's face at line 46, named at line 52; no line says he had heard of or sought a river. GATE-FORCED: checkItemChildFacing holds 'arms' (subject-matter, HOLD AND ROUTE) in the live option 'His back and arms hurt too much to go on.', so that option is reseated as 'His back ached too much for him to go on.' with the same tag (en-physical-vs-emotional-cue).",
+  "ENG-001-WIW-05: walk script said the reversed four sit on line 12 ('scraped' is line 13) -> 'Lines 12 and 13 give the same four again, backwards.'; old walk script under _previousWalkScript.",
+  "ENG-001-WIW-09: hint 'The rabbit says one sentence' is false (two sentences at lines 22 to 23) -> hint 'The rabbit asks for something at lines 22 and 23. What is it?'; authorship marker cleared, old hint kept.",
+  "ENG-001-WIW-10: execution misquoted line 26 -> redrafted with the exact quotation from lines 26 and 27, 'gone before they could think of a thoroughly satisfactory reply'.",
+  "ENG-001-WIW-12: 'An animal that chased and chuckled.' is the passage's own name for the river (second defensible answer) -> seated 'A lake.' (en-minimal-pair-skim), named nowhere in the passage; line 29 says river.",
+  "ENG-001-WIW-13: key alone began 'To ...' and alone had three parts -> all five options now in the 'To ...' form; key shortened to 'To make the river seem alive and always moving.' (matches the walk script); tags kept, executions reworded.",
+  "ENG-001-WIW-14: lineRefs [34, 35, 36] disagreed with the stem's 'lines 33 to 36' -> lineRefs set to [33, 34, 35, 36]."
+ ]
+}

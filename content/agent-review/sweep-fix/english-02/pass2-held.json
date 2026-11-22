@@ -1,0 +1,55 @@
+{
+ "door": "sweep-fix/english-02",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-005-BB-03",
+  "ENG-005-BB-09",
+  "ENG-004-AGG-05",
+  "ENG-004-AGG-01",
+  "ENG-014-TS-12",
+  "ENG-005-BB-01",
+  "ENG-004-AGG-12",
+  "ENG-005-BB-08",
+  "ENG-004-AGG-06",
+  "ENG-004-AGG-08",
+  "ENG-004-AGG-04"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-005-BB-04",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-005-BB-04",
+     "verdict": "REFUSE",
+     "reason": "The fishing sense is no longer named, but the second sentence 'What would he need after that journey?' brings back the framing the finding faulted. Of the four options only the key, 'A feed and a rest.', is something a horse needs. A long wait with no food, a fish lure and a trick are not, so the hint selects the key by category and coaches."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-005-BB-04",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "faultField": "hintCore",
+    "reason": "The hint 'What would he need after that journey?' frames the answer as a need. Only the key, 'A feed and a rest.', fits that frame, which is the same coaching the finding named. The options are otherwise sound (dominant, form-lookalike and neighbouring senses), and line 14 fixes the sense."
+   }
+  },
+  {
+   "itemId": "ENG-014-TS-03",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-014-TS-03",
+     "verdict": "REFUSE",
+     "reason": "The either/or is gone, and the gate-forced reword ('full of hope' for 'his hopes were high') is sound: 'high' is HOLD AND ROUTE on the bare value field, and the tag and error are kept. But the new hint 'Look at what Ben is doing in line 11. The writer reads his mood from that.' hands over the key. Line 11's only action by Ben is 'Ben's gait was the hop-skip-', which is the key. Every distractor sits on line 10 (calm), lines 12 to 13 (apple) or line 12 (light heart). Its second sentence tells the child that this action is the answer."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-014-TS-03",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "hintCore",
+    "reason": "The original either/or is fixed, but the replacement hint pins line 11, whose only action by Ben is the hop-skip-and-jump (the key). It adds 'The writer reads his mood from that', which hands over the key. The reworded light-heart distractor is otherwise sound."
+   }
+  }
+ ]
+}

@@ -1,0 +1,258 @@
+{
+ "door": "sweep-fix/english-02",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-005-BB-03",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 10 to 11 and 47. Only the key matches the man's words; 'low' and the meadows are the narrator's report. The hint names neither part of the key. The walk script gives both parts of the key.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "He says two things: what is happening, and what he fears.",
+     "after": "The man's words run from line 10 into line 11. Check every part of the option against just those words."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-09",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read as a new question against lines 36 to 41 and 62 to 63. 'Whipped' is stated, and the refusal is what saved them. The 'knew', 'John' and 'test' options are each excluded by the text. There is no length or form tell, and the walk script states the key.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at lines 37 and 38 first. The master gives a touch, then a sharp cut. Now look at lines 62 and 63: he calls the horse wiser than they were. The refusal he punished is the one he later thanks.",
+     "after": "Look at lines 37 and 38 first. The master gives a touch with the whip, then a sharp cut. Now look at lines 62 and 63. He says the horse was wiser than they were. So the master whipped Beauty for the very thing that saved them."
+    },
+    {
+     "field": "option A (cmsw2f4un009stmbvl9lrq1b7).value",
+     "before": "The master punished Beauty for the very thing that saved them.",
+     "after": "The master whipped Beauty for the very thing that saved them."
+    },
+    {
+     "field": "option C (cmsw2f4un009utmbvh2mqqkoy).value",
+     "before": "Beauty was too frightened of the water to cross the bridge.",
+     "after": "It was John, not Beauty, who saved them on the bridge."
+    },
+    {
+     "field": "option C (cmsw2f4un009utmbvh2mqqkoy).tag",
+     "before": "en-emotion-label-approximation",
+     "after": "en-cause-agent-swap"
+    },
+    {
+     "field": "option C (cmsw2f4un009utmbvh2mqqkoy).execution",
+     "before": "Line 41 says he knew the bridge was not safe, so it is knowledge, not fear.",
+     "after": "Gives the saving to the wrong character. At line 40 John tries to lead Beauty forward onto the bridge, and at line 62 the master says it was Black Beauty who was wiser than they were."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-05",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 3 to 4, 18 and 20 to 22. The key matches the handover. The waiting, Matthew's words and reversal options are excluded. The new execution is true. The key is a little the longest but is not a tell.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4ub007qtmbvqupe4atn).execution",
+     "before": "A helpful thing to do, but line 21 says she gave the girl into his charge and went.",
+     "after": "A helpful thing to do, but lines 20 and 21 say she gave the girl into the stationmaster's charge. At lines 3 and 4 the girl is the only one on the platform, so Mrs Spencer did not wait."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-01",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 4 to 6, 37 to 38 and 64. The key is the only option consistent with 'without looking at her'. The new negation-dropped option has a different frame, and lengths are even. The walk script states the key.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4u70078tmbv52vg4qve).value",
+     "before": "He slipped past her, glancing at her as he went.",
+     "after": "He took a good look at her as he hurried past."
+    },
+    {
+     "field": "option D (cmsw2f4u70078tmbv52vg4qve).tag",
+     "before": "en-minimal-pair-skim",
+     "after": "en-negation-dropped"
+    },
+    {
+     "field": "option D (cmsw2f4u70078tmbv52vg4qve).execution",
+     "before": "Differs from the key by one element: line 5 says without looking at her.",
+     "after": "Lines 5 and 6 say he sidled past her 'without looking at her'. The child keeps the hurrying past and drops 'without', so he looks at her instead."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-12",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk script checked against lines 8 and 34 to 37; it reaches and states the key. Options unchanged: the reversal, the lookalike and the chronology option (lines 39 to 52) are each wrong as tagged.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "At line 8 an idea bursts on him, and we are never told what it is. At line 39 he alters his mind, and the reason for that is held back. At line 53 we get his face first and his heart second.",
+     "after": "At line 8 an idea bursts on Tom, and we are never told what it is. Lines 34 to 37 show Tom at work as Ben sees it. Ben watches every move and grows more and more interested. So the writer gives us what Ben can see, but holds Tom's plan back."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-01",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 2, 3 and 12. The key is the only option giving lines 2 to 3's reasons, and 'big' for 'high' wheels is an acceptable paraphrase. Each distractor is excluded by the text, with no twin or length tell. The hint does not count, and the walk script states the key.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One sentence gives two reasons together.",
+     "after": "Beauty says he liked the dog-cart on line 2. Read on to see what he says next."
+    },
+    {
+     "field": "option D (cmsw2f4ug008rtmbvg5j0st6p).value",
+     "before": "The cart was heavy, and its wheels ran along pleasantly.",
+     "after": "The master drove gently, so the ride was smooth."
+    },
+    {
+     "field": "option D (cmsw2f4ug008rtmbvg5j0st6p).tag",
+     "before": "en-minimal-pair-skim",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option D (cmsw2f4ug008rtmbvg5j0st6p).execution",
+     "before": "Differs from the text by one word: line 3 says 'it was so light'. The wheels running along 'so pleasantly' are right, so a child matching on gist takes it; heavy is the reverse of the reason Beauty gives.",
+     "after": "The master driving gently is line 12, on the flooded road on the way to town, and it is no reason for liking the dog-cart. The child answers from that part of the passage; lines 2 and 3 give Beauty's reason: the cart was so light and its high wheels ran along so pleasantly."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-12",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 14 and 64 to 65. The key matches 'Come along ... Give me your bag'. The recast option is wrong on who carries the bag, and the near-identical pair is gone. The hint does not count requests, and the walk script states both requests.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "He asks for two things, not one.",
+     "after": "Read Matthew's short speech in lines 64 and 65. Check every part of the option against it."
+    },
+    {
+     "field": "option B (cmsw2f4uf008ktmbvn89tfhlo).value",
+     "before": "Come to the horse, and take her own bag.",
+     "after": "Carry her own bag over to the horse."
+    },
+    {
+     "field": "option B (cmsw2f4uf008ktmbvn89tfhlo).execution",
+     "before": "Right on going to the horse, which line 64 says 'is over in the yard', and wrong on one detail: lines 64 to 65 end 'Give me your bag', so Matthew asks to carry the bag himself, not for her to keep it.",
+     "after": "Right on the horse, which line 64 says 'is over in the yard', and off on one detail: lines 64 and 65 end 'Give me your bag', so Matthew asks to carry the bag himself, not for her to carry it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-08",
+   "passageRef": "stream-a-04-black-beauty",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 33 to 36 and 43. The key matches 'that happened sometimes when the floods were out'. The retagged option is denied by line 33. The gatekeeper and good-pace options are excluded at lines 43 and 36. The walk script reaches the key.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4um009ntmbvx6umqa5c).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option A (cmsw2f4um009ntmbvx6umqa5c).execution",
+     "before": "Line 33 says they could just see the water, so he did see it.",
+     "after": "Line 33 says 'we could just see that the water was over the middle of it', so the passage states the contrary: he did see the water. The child takes 'very nearly dark' on the same line and misses the clause that follows it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-06",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 24 to 25, 45 and 64. 'Helplessly' and 'to cope' support the key. The execution now cites numbered lines, and the other distractors are unsupported in lines 24 to 25.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4ub007utmbvucn6nfq8).execution",
+     "before": "Gives Marilla the shyness the preamble gives Matthew.",
+     "after": "Gives Marilla the shyness the passage gives Matthew: line 45 calls him 'shy Matthew Cuthbert', and at line 64 he speaks 'shyly'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-08",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 33 to 46. The key matches 'no commonplace soul' set against the ordinary observer's plain description. The distractors are each excluded (no change, line 34 not looking, measured not extreme), and the walk script now ends on the key. Minor: lineRefs omit 44 to 45, which the stem's 33 to 46 range covers.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at line 34, then lines 35 and 41. Line 34 tells you Matthew was not looking at her. The writer then shows the same girl twice, to two different watchers. What changes is the watcher, not the girl.",
+     "after": "Look at line 34, then lines 35 and 41. Line 34 tells you Matthew was not looking at her. The writer then shows the same girl twice, to two different watchers. At lines 44 to 46 the second watcher sees that she is no ordinary girl inside. So there is far more to this girl than her plain looks suggest."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-004-AGG-04",
+   "passageRef": "stream-a-06-anne-green-gables",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-02",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 13 and 17 to 22. Only the key has a boy brought by Mrs Spencer. The girl, stationmaster and Marilla options are each excluded. The near-identical pair is gone. One mild note, not a hold: the key shares 'A boy' with one option and ', sent' with another.",
+   "landedAt": "2026-11-22T17:31:10.659Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4ua007ltmbvvyql4ay6).value",
+     "before": "A boy, sent over by the man at the station.",
+     "after": "A boy the stationmaster had promised to bring for him."
+    },
+    {
+     "field": "option B (cmsw2f4ua007ltmbvvyql4ay6).execution",
+     "before": "Right arrangement, wrong person: line 18 names Mrs Spencer.",
+     "after": "Right arrangement, wrong person: line 18 has Matthew name Mrs Alexander Spencer as the one bringing the boy. The stationmaster knows nothing of a boy, and at line 22 says that is all he knows about it."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,412 @@
+{
+ "reviewer": "rev-agent-01",
+ "group": "L",
+ "note": "Drafted for the R1037 second-reader sweep findings (content/agent-review/sweep/findings.json). Carriers read as LIVE items in the DB, read-only, on 2026-11-22. Every resulting text passed checkChildFacingText (role hint and misconception-hint) and checkMisconceptionProposal with no failures; every transform's from occurs exactly once in the current DB text.",
+ "entries": [
+  {
+   "id": "maths-72-wrong-operation-chosen",
+   "verdict": "REFUSE",
+   "reason": "Read 20 LIVE carriers. 'Look at the words in the question' and 'Are things getting bigger, smaller, or being shared?' assume a word problem with things in it; 3 carriers are bare sums (MC03-CALC-01 'Work out 356 + 287', MC05-CALC-01, MC05-CALC-02) and 5 are coordinate or area questions where nothing is shared. Every carrier's carrying option does one operation in place of another: subtract for add (sums, coordinates, 100 more, bus time, L-shape cut-out), add for subtract (eggs, 83 - 46), multiply for divide (pencils, squash), add for multiply (MC03-GEOM-05 area). The new hint describes the move, choosing the operation for each step and then checking the direction of the answer, so it is true on all 20 whether the question is a bare sum, a story, a grid or an area. It names no number from any item.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"Look at the words in the question\"",
+     "falseOn": [
+      "MC03-CALC-01",
+      "MC05-CALC-01",
+      "MC05-CALC-02"
+     ]
+    },
+    {
+     "clause": "childHint: \"Are things getting bigger, smaller, or being shared?\"",
+     "falseOn": [
+      "MC03-CALC-01",
+      "MC05-CALC-01",
+      "MC05-CALC-02",
+      "MC03-GEOM-02",
+      "MC05-GEOM-03",
+      "MC02-GEOM-04"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+     "to": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "maths-85-miscount-or-rounding-in-measures",
+   "verdict": "REFUSE",
+   "reason": "Read 10 LIVE carriers. 'price' is false on 4: MC02-RP-01 (pasta grams), MC03-MEAS-02 (plank cm), MC03-MEAS-04 (bus time), MC04-CALC-07 (badges). The description 'Adding the item count to the price' fits none of the 10, and 'one fewer item' does not reach the plank and bus carriers. Seven carriers multiply by one group too few (notebooks, apples, footballs, pencils, badge packs, pens, and the pasta scaled for 4 people not 5); the plank (45 for 47) and night bus (00:30 for 00:20) slip by a step when counting back or on. The new hint describes the move, recounting the groups or steps and using the exact number, which fits all 10 and makes no claim about money. The new description names both shapes the carriers show.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"Take the exact price\"",
+     "falseOn": [
+      "MC02-RP-01",
+      "MC03-MEAS-02",
+      "MC03-MEAS-04",
+      "MC04-CALC-07"
+     ]
+    },
+    {
+     "clause": "description: \"Adding the item count to the price\"",
+     "falseOn": [
+      "all 10"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Use multiplication for repeated groups. Take the exact price and multiply by the exact count.",
+     "to": "Count the groups or steps again before you work it out. Use the exact number, not one more or one fewer."
+    },
+    {
+     "field": "description",
+     "from": "Adding the item count to the price or multiplying by one fewer item.",
+     "to": "Miscounting in a measures or money problem: multiplying by one group too few, or slipping by a step when counting on or back."
+    }
+   ],
+   "misfiledCarriers": [
+    {
+     "itemId": "MC03-MEAS-02",
+     "option": "45 cm",
+     "why": "Weak fit: a subtraction slip (75 - 28), not a miscount of groups; covered only by the 'counting back' half of the new description."
+    },
+    {
+     "itemId": "MC03-MEAS-04",
+     "option": "00:30",
+     "why": "Weak fit: a ten-minute slip counting on past midnight; covered only by the 'counting on' half of the new description."
+    }
+   ]
+  },
+  {
+   "id": "maths-77-treating-a-percentage-as-money",
+   "verdict": "REFUSE",
+   "reason": "Read 8 LIVE carriers. 'not an exact amount of money' is false on 2 that carry no money at all: MC02-FDP-03 ('What is 40% of 60?') and MC05-FDP-05 (sweets). On all 8 the carrying option takes the percent number straight off the amount (60 - 40, £80 - 25, £44 - 25, £45 - 20, 48 - 25, £64 - 25, and £80 - 25 - £5 on MC03-FDP-08). The new second sentence describes exactly that move and why it is wrong, with no claim about pounds, so it is true on all 8. The first sentence ('Percent means out of 100') is kept.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"not an exact amount of money\"",
+     "falseOn": [
+      "MC02-FDP-03",
+      "MC05-FDP-05"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "It is a proportion, not an exact amount of money!",
+     "to": "The percent is a share of the amount, not a number to take away from it!"
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "maths-79-dividing-by-a-fraction-error",
+   "verdict": "REFUSE",
+   "reason": "Read 4 LIVE carriers. 'halves... litre' is false on 2: MC01-FDP-08 (3/4 kg bags) and MC04-FDP-05 (2/3 kg bags) are kilograms, and MC05-FDP-06 is 2/3 litre, not halves. On all 4 the carrying option treats each part as one whole (2 glasses from 2 litres, 15 bags from 15 kg, 12 from 12 kg, 6 from 6 litres). The new hint says each bag or glass holds less than one whole kilogram or litre (true: 1/2, 3/4, 2/3, 2/3) and so more of them can be filled than there are kilograms or litres (true on all 4: 4 > 2, 20 > 15, 18 > 12, 9 > 6). It gives the direction, not the number.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"halves\"",
+     "falseOn": [
+      "MC01-FDP-08",
+      "MC04-FDP-05",
+      "MC05-FDP-06"
+     ]
+    },
+    {
+     "clause": "childHint: \"litre\"",
+     "falseOn": [
+      "MC01-FDP-08",
+      "MC04-FDP-05"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "How many halves can you pour into one whole litre?",
+     "to": "Each bag or glass holds less than one whole kilogram or litre. So you can fill more of them than you have kilograms or litres."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "maths-07-decimals-as-two-separate-whole-numbers",
+   "verdict": "REFUSE",
+   "reason": "Read 4 LIVE carriers. 'Compare the parts column by column' fits only MC02-NPV-07 (largest of 0.6, 0.55...); the other 3 (MC03-NPV-06, MC04-NPV-05, MC05-NPV-05) ask for a digit's value and compare nothing. On all 4 the carrying option reads the digits after the point as one whole number (55 beats 6; 284 makes the 8 worth 80). The new sentence names that move, reading each digit after the point in its own column, which settles both the comparison and the digit-value reads. The first sentence is kept.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"Compare the parts column by column\"",
+     "falseOn": [
+      "MC03-NPV-06",
+      "MC04-NPV-05",
+      "MC05-NPV-05"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Compare the parts column by column, starting with the tenths.",
+     "to": "Read each digit after the point in its own column, not as one whole number."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "maths-61-reading-the-wrong-place-value-column",
+   "verdict": "REFUSE",
+   "reason": "Read 18 LIVE carriers. 'Ones, tens, hundreds, thousands' lists only whole-number columns; 4 carriers turn on decimal columns (MC02-NPV-07, MC03-NPV-06, MC04-NPV-05, MC05-NPV-05, where the misread is tenths for hundredths) and MC05-NPV-03 carries a ten-thousands misread (19500). The replacement, 'Name every column, counting out from the ones', describes the move and works both ways from the ones: tenths and hundredths to the right, tens to ten thousands to the left. The rest of the hint is kept.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"Ones, tens, hundreds, thousands.\"",
+     "falseOn": [
+      "MC02-NPV-07",
+      "MC03-NPV-06",
+      "MC04-NPV-05",
+      "MC05-NPV-05",
+      "MC05-NPV-03"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Ones, tens, hundreds, thousands.",
+     "to": "Name every column, counting out from the ones."
+    }
+   ],
+   "misfiledCarriers": [
+    {
+     "itemId": "MC02-NPV-07",
+     "option": "0.4",
+     "why": "Unclear fit: choosing 0.4 as largest of 0.6, 0.55, 0.4, 0.049 has no obvious one-column misread and no execution text."
+    }
+   ]
+  },
+  {
+   "id": "maths-47-translation-by-gap",
+   "verdict": "REFUSE",
+   "reason": "Read 3 LIVE carriers (MC02-GEOM-04, MC03-GEOM-02, MC05-GEOM-03). All 3 move a single point or counter; none has a first shape, new shape or corner, so the old hint and the description's 'between two shapes' are false on 3 of 3. On all 3 the carrying option comes out one short on each move (3 right for 4, 4 for 5, 5 for 6), from counting the squares in between. The new hint describes the move, starting from the point and counting each jump to the next grid line as one square, and the new description names the one-short result. Both are true on all 3.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"first shape / new shape / corner\"",
+     "falseOn": [
+      "MC02-GEOM-04",
+      "MC03-GEOM-02",
+      "MC05-GEOM-03"
+     ]
+    },
+    {
+     "clause": "description: \"between two shapes\"",
+     "falseOn": [
+      "MC02-GEOM-04",
+      "MC03-GEOM-02",
+      "MC05-GEOM-03"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Pick one corner on the first shape. Count the squares to that same corner on the new shape.",
+     "to": "Start counting from the point itself. Each jump to the next grid line counts as one square."
+    },
+    {
+     "field": "description",
+     "from": "between two shapes instead of point-to-point",
+     "to": "in between instead of the jumps from point to point, so each move comes out one short"
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "maths-89-wrong-angle-total",
+   "verdict": "REFUSE",
+   "reason": "Read 10 LIVE carriers. 7 are triangle questions (MC01-GEOM-06, MC02-GEOM-02, MC02-GEOM-06, MC03-GEOM-03, MC04-GEOM-03, MC04-GEOM-06, MC05-GEOM-06) where the carrying option uses 360° for the triangle; the old hint never gives the triangle total, and 'what the angles sit on' does not describe a triangle's angles. 3 are straight-line questions using 360° (or 90°). The new hint describes the move (first decide what the angles make) and gives the totals for both a line and a triangle, so it settles all 10. Degree signs per house notation; no carrier key is 180° or 360°.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"Ask what the angles sit on first\" (no triangle total given)",
+     "falseOn": [
+      "MC01-GEOM-06",
+      "MC02-GEOM-02",
+      "MC02-GEOM-06",
+      "MC03-GEOM-03",
+      "MC04-GEOM-03",
+      "MC04-GEOM-06",
+      "MC05-GEOM-06"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Ask what the angles sit on first. A line is 180, a turn is 360.",
+     "to": "First ask what the angles make: a straight line, a triangle or a full turn. A line and a triangle both make 180°, and a full turn makes 360°."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "vr04-wrong-strength",
+   "verdict": "REFUSE",
+   "reason": "Read 29 LIVE carriers. 'A quiet word needs a quiet answer' is right way round only where the card word is mild; on 3 the card word is the strong one and the carrying option too weak (huge/big, JUBILANT/pleased, EXQUISITE/pretty), and the old 'Check how strong the word is' also contains the key of gen-vr-04-closest-meaning-14 ('strong', for sturdy). A first redraft with 'weaker' was blocked by the banned-vocabulary gate ('weak'). The new hint describes the move both ways (some words say a lot, some a little; choose one that says just as much) and says 'the word you are given', which fits both the card items and the sentence items with a word in capitals. True on all 29 (26 too strong, 3 too weak).",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"A quiet word needs a quiet answer\"",
+     "falseOn": [
+      "gen-vr-04-closest-meaning-08",
+      "gen-vr-04-closest-meaning-25",
+      "gen-vr-04-closest-meaning-34"
+     ]
+    },
+    {
+     "clause": "childHint: \"strong\" restates a key",
+     "falseOn": [
+      "gen-vr-04-closest-meaning-14"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "to": "Some words say a lot and some say a little. Choose the answer that says just as much as the word you are given."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "vr16-loose-opposite",
+   "verdict": "REFUSE",
+   "reason": "Read 14 LIVE carriers. The example 'hot and cold' is the card word and key of gen-vr-16-opposite-meaning-01, so on that item the hint gives the answer away. The replacement 'open and shut' matches no carrier's card word or key (keys: cold, full, sell, below, timid, narrow, shallow, finish, forget, defeat, modern, depart, shrink, sorrow). The rest of the hint describes the test and fits all 14.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"like hot and cold\" restates a key",
+     "falseOn": [
+      "gen-vr-16-opposite-meaning-01"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "like hot and cold",
+     "to": "like open and shut"
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "vr-move-letter-second-word-invalid",
+   "verdict": "REFUSE",
+   "reason": "Read 25 LIVE carriers. 'say it aloud' and 'sound like' tell the child to use a channel a silent test does not give (R567). On all 25 the carrying letter does make a real first word but cannot go anywhere in the second word to make a word (R into OLD, S into EACH, and so on). The new wording describes the move, trying the letter in every spot of the second word, and asks whether any spot makes a word, which is the check that rules out each carrier. No key letter appears as a word.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"say it aloud... sound like\"",
+     "falseOn": [
+      "all 25 (channel, R567)"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": " and say it aloud. Does it sound like a real word?",
+     "to": ", trying every spot. Does any spot make a real word?"
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "vr14-step-direction",
+   "verdict": "REFUSE",
+   "reason": "Read 25 LIVE carriers and checked each from its operands: on all 25 the carrying letter is the new letter moved by the first pair's step the opposite way. 12 first pairs run backwards (K G, C A, D A, G D), 13 forwards, so 'Moved backwards... instead of forwards' is false on the 12. 'Draw the arrow' asks for a channel a child may not have (R567). The new description names the opposite-way move; the new hint describes the move (check which way the first pair goes, then go the same way). Both true on all 25. The hint avoids the word 'I', which is a key (rows 15, 19).",
+   "assertionClauses": [
+    {
+     "clause": "description: \"backwards... instead of forwards\"",
+     "falseOn": [
+      "gen-vr-14-letter-connections-03",
+      "-04",
+      "-07",
+      "-08",
+      "-11",
+      "-12",
+      "-15",
+      "-16",
+      "-19",
+      "-20",
+      "-23",
+      "-24"
+     ]
+    },
+    {
+     "clause": "childHint: \"Draw the arrow\"",
+     "falseOn": [
+      "all 25 (channel, R567)"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Draw the arrow: which way did the first pair travel?",
+     "to": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "field": "description",
+     "from": "backwards through the alphabet instead of forwards",
+     "to": "the opposite way through the alphabet to the first pair"
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "en-article-avoids-the-sound-choice",
+   "verdict": "REFUSE",
+   "reason": "Read 1 LIVE carrier (ENG-003-A-CZ-A2, '___ hour', key an, carrying option the). 'Say the next word aloud' tells a child in a silent test to use a channel she does not have (R567). The new sentence asks her to hear the word in her head, which she can do silently, and keeps the question about its first sound. 'This gap wants a or an' names the choice the entry is defined on, and is not a giveaway since it offers both.",
+   "assertionClauses": [
+    {
+     "clause": "childHint: \"Say the next word aloud\"",
+     "falseOn": [
+      "ENG-003-A-CZ-A2 (channel, R567)"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Say the next word aloud.",
+     "to": "Hear the next word in your head."
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "vr13-wrong-pieces",
+   "verdict": "REFUSE",
+   "reason": "Read 25 LIVE carriers and checked each by letter count: on all 25 the carrying word is built from letters of the two outer words, and on none does it follow the first-two-letters rule. Only some take middle letters (HEAR, HEAT, PAIN); others take end letters (THIN from INSECT, PLUG from SLEEP), the right first half and a wrong second half (FLEA, DRAB, PLEA, CLUE, GRUB, SHOT, FLEW, SLAB, BOLT), or one outer word only (CROW, DRAG). So 'from the middle' is false on most of them. The new description says 'from other places in the outer words', true on all 25. The childHint already describes the move and is kept.",
+   "assertionClauses": [
+    {
+     "clause": "description: \"Took letters from the middle\"",
+     "falseOn": [
+      "most of 25, e.g. gen-vr-13-make-a-word-04 FLEA, -05 THIN, -12 CROW, -15 PLUG, -18 DRAG"
+     ]
+    }
+   ],
+   "transforms": [
+    {
+     "field": "description",
+     "from": "from the middle instead of the shown positions",
+     "to": "from other places in the outer words instead of the positions the example shows"
+    }
+   ],
+   "misfiledCarriers": []
+  }
+ ]
+}

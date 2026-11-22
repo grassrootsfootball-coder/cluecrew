@@ -1,0 +1,525 @@
+{
+ "door": "sweep-fix/english-08",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw2f50d017ttmbvcrj70ala",
+   "itemId": "ENG-027-RR-01",
+   "oldValue": "That he would be doing the King little credit.",
+   "tag": "en-negation-dropped",
+   "newValue": "That he would be doing the King little credit.",
+   "execution": "Line 3 says he would pay the King a poor compliment only 'if I did not set modesty aside'. The child drops 'if I did not' and reads it as something he admits: that he does the King little credit."
+  },
+  {
+   "optionId": "cmsw2f50d017utmbvrb21c1y9",
+   "itemId": "ENG-027-RR-01",
+   "oldValue": "That he had been practising the ride for days.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "That he had been getting ready for the ride for days.",
+   "execution": "A man doing this once invites preparation; no line gives any. Lines 3 and 4 have him admit only that he made a very fine figure."
+  },
+  {
+   "optionId": "cmsw2f50g0186tmbvlu1doc06",
+   "itemId": "ENG-027-RR-04",
+   "oldValue": "That the pictures of him are handsome enough.",
+   "tag": "en-negation-dropped",
+   "newValue": "That his pictures show him as handsome as he really is.",
+   "execution": "Line 15 says the pictures 'aren't handsome enough'. The child drops the negative and takes it that the pictures show him as handsome as he really is."
+  },
+  {
+   "optionId": "cmsw2f50l0191tmbvpl06ruyh",
+   "itemId": "ENG-027-RR-11",
+   "oldValue": "Because the ambassadors had paid their respects.",
+   "tag": "en-within-span-wrong-element",
+   "newValue": "Because the ambassadors had paid their respects.",
+   "execution": "True at line 65, where the ambassadors pay their respects, and line 66 puts Lord Topham among them. That is what happened, not why he is thankful. Line 67 gives the reason: the old man was as blind as a bat."
+  },
+  {
+   "optionId": "cmsw2f4vl00fjtmbvebk2dbg6",
+   "itemId": "ENG-009-SM-06",
+   "oldValue": "He looked over as soon as he could hear the water.",
+   "tag": "en-wrong-scope-retrieval",
+   "newValue": "He was watching a gull standing on an old boat.",
+   "execution": "The gull standing on the boat is at lines 20 and 21, before this part of the walk. Lines 24 to 26 give the reason he keeps going without looking: the water sat higher up than the field beside him."
+  },
+  {
+   "optionId": "cmsw2f4vl00fitmbv2tyq4taj",
+   "itemId": "ENG-009-SM-06",
+   "oldValue": "The wind was blowing hard into his eyes.",
+   "tag": "en-contradicted-by-the-text",
+   "newValue": "The wind was blowing hard into his eyes.",
+   "execution": "Line 24 says the wind dropped out of his ears, so it had eased. The child gives a strong wind as the reason, where the passage says the wind had dropped."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-027-RR-02",
+   "why": "Sweep R1037: the walk script stopped at line 61 and never reached the key's second half; it now ends on lines 62 and 63 and states the key. Option C is contradicted by line 60, so it is retagged en-contradicted-by-the-text.",
+   "stem": {
+    "text": "Look at lines 6 to 9 and lines 60 to 63. What do the two moments show about how well he is being looked at?",
+    "quotes": [],
+    "passageRef": "stream-a-22-prisoner-of-zenda",
+    "answerShape": "what-the-crowd-checks-against-what-nobody-checks",
+    "orderAnchor": 6,
+    "techniqueKey": "a-test-he-passes-set-against-a-test-nobody-runs"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f50e017wtmbv1qryddvv",
+     "value": "They saw his helmet come off in the street, and the princess had no doubt.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Both spans handed back in order, with no relation named."
+    },
+    {
+     "optionId": "cmsw2f50e017xtmbvkq9f16n6",
+     "value": "They test his hair and pass him, but nobody puts the two men together.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f50e017ytmbvnjtdmkk7",
+     "value": "The princess is the one person who suspects him, but she says nothing.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 60 says he saw no doubt or questioning in the face of the princess. Lines 62 and 63 say neither she nor anyone else dreamed he was other than the King. The child turns 'she could have told us' at line 61 into a suspicion she has."
+    },
+    {
+     "optionId": "cmsw2f50e017ztmbvrk3ohvvq",
+     "value": "He shows his hair so that the story will reach the palace.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plan the lines never give him. Line 8 says he took off his helmet so that the woman 'might see' his colour."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 6 has a woman call out from a window. Line 9 has him show his hair and the crowd cheer. Line 61 says the princess could have told the two men apart. Lines 62 and 63 say nobody even dreamed he was not the King. So they test his hair and pass him, but nobody puts the two men together.",
+    "_previousWalkScript": "Line 6 has a woman call out from a window. Line 9 has him show his hair and the crowd cheer. Line 61 says she could have told them apart in an instant."
+   }
+  },
+  {
+   "itemId": "ENG-027-RR-03",
+   "why": "Sweep R1037: the walk script never reached 'usual'; two closing steps tie 'paler than his wont' to 'paler than he usually looks' and state the key. The substitution hint let the pictures option through, so the hint now also points out that pictures are not mentioned until line 15.",
+   "stem": {
+    "text": "Look at lines 11 and 12. What does \"wont\" mean here?",
+    "quotes": [
+     "wont"
+    ],
+    "passageRef": "stream-a-22-prisoner-of-zenda",
+    "orderAnchor": 11
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f50f0181tmbv9z300mwg",
+     "value": "His refusal to do something.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "execution": "Built from the contraction a child meets constantly in the other spelling."
+    },
+    {
+     "optionId": "cmsw2f50f0182tmbvsxqetufs",
+     "value": "His reason for looking pale.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 12, and it is the reply rather than the word."
+    },
+    {
+     "optionId": "cmsw2f50f0183tmbvdthbltrf",
+     "value": "His usual way of looking.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f50f0184tmbv7m30zvwz",
+     "value": "His look in the pictures of him.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Pictures of him are named later; no line ties them to this word."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Try each answer in place of wont on line 11. Pictures do not come up until line 15, so look nearer.",
+    "walkScript": "Line 11 says he looks paler than his wont. Line 12 gives the reply about how he lives. The word sits after paler than his. Paler than his wont means paler than he usually looks. So wont means his usual way of looking.",
+    "_previousHintCore": "Try each answer in place of wont on line 11. Read the sentence again each time.",
+    "_previousWalkScript": "Line 11 says he looks paler than his wont. Line 12 gives the reply about how he lives. The word sits after paler than his."
+   }
+  },
+  {
+   "itemId": "ENG-027-RR-12",
+   "why": "Sweep R1037: the walk script listed only what the crowd noticed and never reached what he makes of it; it now reads lines 16 and 17 and states the key.",
+   "stem": {
+    "text": "Think about the whole passage. What does the narrator do with what the crowd says?",
+    "quotes": [],
+    "passageRef": "stream-a-22-prisoner-of-zenda",
+    "answerShape": "what-they-notice-set-against-what-he-makes-of-it",
+    "orderAnchor": 999,
+    "techniqueKey": "accurate-observations-received-as-compliments"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f50m0195tmbv9thzd49q",
+     "value": "They cheered him in the Old Town, and watched him ride on in silence.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 6 and 17 and gives two moments instead of the pattern."
+    },
+    {
+     "optionId": "cmsw2f50m0196tmbvll6ee1s2",
+     "value": "He is frightened of the crowd all the way, but he keeps riding on as before.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Lines 8 and 9 have him laugh, and no line gives him fear in the street."
+    },
+    {
+     "optionId": "cmsw2f50m0197tmbve1pefs9t",
+     "value": "He tells us the crowd has spotted, each time, that he is not the King.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "execution": "No line has him say it; the noticing is what he never remarks on."
+    },
+    {
+     "optionId": "cmsw2f50m0198tmbvv5hdu10n",
+     "value": "They keep on noticing the difference, but what he hears in it is approval.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 11 says he looks paler than usual. Line 13 says he is bigger than they thought. Line 14 says he had a good jaw under the beard. Line 16 calls one remark mere flattery. Line 17 calls the remarks signs of approval. So they keep on noticing the difference, but what he hears in it is approval.",
+    "_previousWalkScript": "Line 11 says he looks paler than usual. Line 13 says he is bigger than they thought. Line 14 says he had a good jaw under the beard."
+   }
+  },
+  {
+   "itemId": "ENG-028-PR-01",
+   "why": "Sweep R1037: the key added a heat mechanism the lines do not give (and wood swells by taking in moisture). Key now gives the meaning only, 'Grows bigger and takes up more room.' The suggested 'Gets bigger, so the door no longer fits' was not used because it folds in the result that option D carries. D's execution now quotes line 4; the walk script ends on the key.",
+   "stem": {
+    "text": "Look at lines 3 and 4. What does \"swells\" mean here?",
+    "quotes": [
+     "swells"
+    ],
+    "passageRef": "stream-b-01",
+    "orderAnchor": 3
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f50n019atmbv77iduwoy",
+     "value": "Grows bigger and takes up more room.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f50n019btmbvczhisvb7",
+     "value": "Rises louder, the way music does.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "Swelling as music swells, growing louder, is a genuine sense of the word but not the one these lines fix. Lines 3 and 4 have the wood swell in a hot summer so that doors stop shutting, which is about getting bigger, not louder."
+    },
+    {
+     "optionId": "cmsw2f50n019ctmbv5oog2vhc",
+     "value": "Grows in number, the way a crowd does.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "Built from a real second sense of the same word."
+    },
+    {
+     "optionId": "cmsw2f50n019dtmbvcjzi1py7",
+     "value": "Stops sitting flat in its frame.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Lines 3 and 4 say every door 'stops shutting properly' once the wood swells. The child takes that result, a door that no longer sits right in its frame, for what the word means."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 3 has him say the door is swollen, and that wood swells. Lines 3 and 4 say one hot summer stops every door shutting properly. So swells means the wood grows bigger and takes up more room.",
+    "_previousWalkScript": "Line 3 has him say the door is swollen. Line 3 says wood swells. Line 3 says one hot summer does it."
+   }
+  },
+  {
+   "itemId": "ENG-028-PR-10",
+   "why": "Sweep R1037 (objective): the walk script said line 40 alone answers and that line 39 only shows her saying his name; line 39 starts the answer. Line numbers corrected.",
+   "stem": {
+    "text": "Look at lines 37 to 40. What happens both times Priya says his name?",
+    "quotes": [],
+    "passageRef": "stream-b-01",
+    "orderAnchor": 37
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f50v01ajtmbvrtdoh49w",
+     "value": "She has said his name twice this morning in that voice.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 39, where she has said his name twice this morning in that voice. That is how often she has said it, not what happens; lines 39 and 40 say both times he has answered a different question."
+    },
+    {
+     "optionId": "cmsw2f50v01aktmbvt33flzu1",
+     "value": "He has answered a different question both times.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f50v01altmbv5cq23zqd",
+     "value": "He had forgotten anybody was behind him.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True at line 2, at the start of the morning."
+    },
+    {
+     "optionId": "cmsw2f50v01amtmbvqczxp1fl",
+     "value": "He told her to be quiet.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Line 38 has him answer with Mm and nothing else."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 37 has Priya say his name, and line 38 has him answer Mm. Lines 39 and 40 answer the question. Both times, he has answered a different question.",
+    "_previousWalkScript": "Line 40 is the one that answers it. Both times, he answered a different question. Lines 37 and 39 only show her saying his name."
+   }
+  },
+  {
+   "itemId": "ENG-024-BF-11",
+   "why": "Sweep R1037: form giveaway; the key was the only option beginning 'That' and phrased as an explanation. All four now begin 'That' and are explanations of 'again'; each keeps its tag.",
+   "stem": {
+    "text": "Look at lines 36 to 40. How does Dilan explain the word \"again\" to himself?",
+    "quotes": [
+     "again"
+    ],
+    "passageRef": "stream-b-03",
+    "orderAnchor": 36
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4zr0145tmbvztzxhhr3",
+     "value": "That it is just what Mrs Farrell is saying through the door.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 38, where he hears Mrs Farrell say the word through the door. That only repeats that she said it and gives no reading of it. Line 39 gives his: 'that will be about the fountain'."
+    },
+    {
+     "optionId": "cmsw2f4zr0146tmbv71yp5k14",
+     "value": "That it is about his mother coming in early, at half past two.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 36, 'She came at half past two, which is early for her', and a fact about his mother rather than his explanation. Line 39 gives that: the word 'again' 'will be about the fountain, and the fountain was ages ago'."
+    },
+    {
+     "optionId": "cmsw2f4zr0147tmbv9qtk6g2q",
+     "value": "That it is about the fountain, which he thinks is finished.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4zr0148tmbvccshhkd5",
+     "value": "That his mother promised Mrs Farrell it would not happen again.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A promise the lines never give her. At lines 36 and 37 she says nothing on the way past, only 'a small nod'. Line 39 gives his own explanation of 'again': 'that will be about the fountain, and the fountain was ages ago'."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-007-LP-08",
+   "why": "Sweep R1037: the walk script stopped at line 38 on 'the empty space' and never tied it to Reuben; it now reads line 39 and ends on the key.",
+   "stem": {
+    "text": "The trials sheet has eleven names and 'plenty of room left at the bottom'. Why does the writer tell us? (lines 37 to 39)",
+    "quotes": [
+     "plenty of room left at the bottom"
+    ],
+    "passageRef": "stream-b-04"
+   },
+   "options": [
+    {
+     "optionId": "cmtdflmov000ctmf5btqjosde",
+     "value": "The football team still needs more players.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Gives a reason about the team, which the passage never states: lines 37 to 39 say nothing about players being short. The room left on the sheet matters because Reuben walks past it, not because of the team."
+    },
+    {
+     "optionId": "cmtdflmov000dtmf5bfbxp4lb",
+     "value": "Reuben has already written his name on it.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Lines 37 to 39 have Reuben only pass the noticeboard on the way to fetch a bin bag. The child supplies a signature the passage never gives him; the room at the bottom is still there at line 39."
+    },
+    {
+     "optionId": "cmtdflmov000etmf5g8vv9xgo",
+     "value": "Nobody at the school wants to play in September.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Line 38 gives eleven names on the sheet, so eleven people do want to play. The child turns room left at the bottom into nobody at all, which goes much further than the passage."
+    },
+    {
+     "optionId": "cmtdflmov000ftmf5ikypq0x4",
+     "value": "There is a space Reuben is not going to fill.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look at lines 37 and 38. Reuben passes the sheet for September trials. Eleven people have signed in eleven different pens. Line 39 says there is plenty of room left at the bottom. Reuben only passes it, on his way to fetch a bin bag. So the space is one Reuben is not going to fill.",
+    "_previousWalkScript": "Look at lines 37 and 38. Reuben passes the sheet for September trials. Eleven people have signed in eleven different pens. The writer ends on the empty space rather than the names."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "why": "Sweep R1037: giveaway by echo; the key was the only option repeating 'top' from the quoted 'the top layer'. Key reworded without 'top'; the walk script's last sentence follows it.",
+   "stem": {
+    "text": "Read lines 43 and 44. On line 44 Miss Bhatt lifted 'the top layer' out of the Friday box. What is a 'layer' here?",
+    "quotes": [
+     "the top layer"
+    ],
+    "passageRef": "stream-b-04",
+    "orderAnchor": 10,
+    "_previousQuotes": [
+     "lifted the top layer out of the Friday box"
+    ]
+   },
+   "options": [
+    {
+     "optionId": "cmsw5vr5g001wtm8ec3ke4dy0",
+     "value": "A thin coat of paint or dust.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The commonest other sense of the word, which a box of clothes does not fit."
+    },
+    {
+     "optionId": "cmsw5vr5g001xtm8e7whza9ya",
+     "value": "A level of things lying on others.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw5vr5g001ytm8eupycie97",
+     "value": "A hen that lays eggs.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "A second everyday sense, and nothing in a cupboard of clothes supports it."
+    },
+    {
+     "optionId": "cmsw5vr5g001ztm8enka65ik7",
+     "value": "A list of what is in the box.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No list exists; she lifts things out and looks under them."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look at lines 43 and 44. She lifts the top layer out and keeps going down. Under it she reaches the navy jumper. So a layer here is a level of things lying on others.",
+    "_previousWalkScript": "Look at lines 43 and 44. She lifts the top layer out and keeps going down. Under it she reaches the navy jumper. So a layer here is the things lying on top."
+   }
+  },
+  {
+   "itemId": "ENG-007-LP-15",
+   "why": "Sweep R1037 (objective): the key said 'pressed it flat' where line 34 says 'pushed it flat', and the returns-box option was its twin carrying the text's verb. Key now uses 'pushed'; the returns-box option's second half is changed to a reason line 46 makes tempting.",
+   "stem": {
+    "text": "What did Reuben do with the navy jumper? (lines 33 and 34)",
+    "quotes": [],
+    "passageRef": "stream-b-04"
+   },
+   "options": [
+    {
+     "optionId": "cmtdflmpc000otmf541ei95uo",
+     "value": "Put it in the Friday box, low down, and pushed it flat.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmtdflmpc000ptmf5ujf9ioc4",
+     "value": "Put it in the returns box, because his name was in it.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Lines 7 and 8 send named things to the returns box, and line 46 shows the jumper has his name in it. But line 33 says he put it 'in the Friday box, low down', the box going to the charity collection."
+    },
+    {
+     "optionId": "cmtdflmpc000qtmf5u76vaj7b",
+     "value": "Put it in the bin bag, because the cuffs had gone thin.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses the cuffs that had gone thin at lines 29 and 30. Those words describe the jumper, but line 33 has him put it in the Friday box, not the bin bag."
+    },
+    {
+     "optionId": "cmtdflmpc000rtmf508bendq3",
+     "value": "Folded it and gave it to Miss Bhatt.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Miss Bhatt has the jumper only at lines 44 to 49, when she finds it in the box herself and folds it. The child answers from that later part instead of lines 33 and 34."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-02",
+   "why": "Sweep R1037 (objective): the hint pointed at the 'and' option as the one to drop, which left the key without any reading; the 'and' option was the key's twin. Hint now sends the child to compare lines 7 and 38; the lookalike option no longer carries 'eighth of eight', so it no longer mirrors the key.",
+   "stem": {
+    "text": "Look at lines 7 to 11 and lines 38 and 39. What do the two put together?",
+    "quotes": [],
+    "passageRef": "stream-c-01",
+    "answerShape": "two-halved-contrast-of-what-he-claims-against-what-happened",
+    "orderAnchor": 7,
+    "techniqueKey": "a-choice-insisted-on-against-the-picking-that-produced-it"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4z100zutmbvdzvsury0",
+     "value": "He put himself in goal, and Dan picked the teams last week.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Hands back line 7 and line 38 side by side, both true, but drops that he was picked eighth out of eight. It names no link between what he claims and how he was picked."
+    },
+    {
+     "optionId": "cmsw2f4z100zvtmbvlfauuebi",
+     "value": "He chose the goal because he is the best keeper they have.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A sensible-sounding reason the poem never gives. No line calls him the best, and line 20 has fourteen go past him."
+    },
+    {
+     "optionId": "cmsw2f4z100zwtmbvddaft6gf",
+     "value": "He wanted the goal, so that Dan would pick him sooner the next time.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plan the lines never give him. Nothing in lines 7 to 11 or lines 38 and 39 links the goal to being picked sooner."
+    },
+    {
+     "optionId": "cmsw2f4z100zxtmbv5xjzlhaf",
+     "value": "He says he chose the goal, but he was picked last of them.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read line 7, then line 38. Ask whether the two agree with each other.",
+    "_previousHintCore": "One of these joins the two moments with an and."
+   }
+  }
+ ],
+ "notes": {
+  "ENG-027-RR-01": "Fault: 'doing the King little credit' tagged en-attribute-transfer, but it comes from dropping 'if I did not' on line 3. Fix: retagged en-negation-dropped (value unchanged); execution now names 'if I did not' on line 3. Gate-forced: the child-facing gate warns on 'practising' in the plausible-not-stated option, so it is reworded 'That he had been getting ready for the ride for days.' (same tag).",
+  "ENG-027-RR-02": "Fault: walk script stopped at line 61 and never reached 'nobody puts the two men together'; option C (princess suspects) tagged en-plausible-not-stated though line 60 denies it. Fix: walk script now reads lines 62 and 63 and ends on the key; C retagged en-contradicted-by-the-text with a new execution citing lines 60, 62 and 63. Gate-forced: option D's execution was under the 40-character floor, so it now adds line 8 ('that she might see').",
+  "ENG-027-RR-03": "Fault: walk script ended without reaching the key, and the substitution hint did not rule out 'His look in the pictures of him'. Fix: walk script now ends 'Paler than his wont means paler than he usually looks. So wont means his usual way of looking.'; hint adds that pictures do not come up until line 15 (line 15 checked). Old texts kept under _previous fields.",
+  "ENG-027-RR-04": "Fault: the negation-dropped distractor mirrored the key word for word but for 'not'. Fix: seated 'That his pictures show him as handsome as he really is.' (same tag, en-negation-dropped; 11 words against the key's 9); key unchanged.",
+  "ENG-027-RR-11": "Fault: 'the ambassadors had paid their respects' tagged en-attribute-transfer, though nothing moves between parties; it is a true detail that answers a different question. Fix: retagged en-within-span-wrong-element (value unchanged) with an execution citing lines 65 to 67.",
+  "ENG-027-RR-12": "Fault: walk script stopped at lines 11 to 14 and never reached the key's second half. Fix: walk script adds line 16 ('mere flattery') and line 17 ('signs of approval') and ends on the key.",
+  "ENG-028-PR-01": "Fault: key 'Gets bigger as it takes in the heat.' taught a mechanism the lines do not give; D's execution claimed 'True at line 4' for wording line 4 does not have; walk script never reached the key. Fix: key now 'Grows bigger and takes up more room.'; D's execution quotes 'stops shutting properly' (lines 3 and 4); walk script ends on the key. Annie's hint and its marker untouched (hint not rewritten).",
+  "ENG-028-PR-10": "Fault: walk script gave the answer as line 40 alone and said line 39 only shows her saying his name. Fix: walk script now 'Line 37 has Priya say his name, and line 38 has him answer Mm. Lines 39 and 40 answer the question. Both times, he has answered a different question.' Annie's hint and marker untouched.",
+  "ENG-009-SM-06": "Fault: option D ('looked over as soon as he could hear the water') was ruled out by the stem itself; option C tagged en-cause-agent-swap though line 24 contradicts it. Fix: D seated 'He was watching a gull standing on an old boat.' (en-wrong-scope-retrieval, lines 20 and 21); C retagged en-contradicted-by-the-text (value unchanged).",
+  "ENG-024-BF-11": "Fault: key the only option beginning 'That' and the only one phrased as an explanation. Fix: the three distractors recast as 'That ...' explanations of 'again', tags unchanged: 'That it is just what Mrs Farrell is saying through the door.' (12 words), 'That it is about his mother coming in early, at half past two.' (13), 'That his mother promised Mrs Farrell it would not happen again.' (11); key unchanged (11).",
+  "ENG-007-LP-08": "Fault: walk script never linked the space to Reuben and never read line 39. Fix: walk script adds line 39 and ends 'Reuben only passes it, on his way to fetch a bin bag. So the space is one Reuben is not going to fill.'",
+  "ENG-007-LP-10": "Fault: key 'The things lying across the top.' echoed 'top' from the quoted 'the top layer'. Fix: key now 'A level of things lying on others.' (7 words; distractors 5 to 8); walk script's closing sentence updated to match.",
+  "ENG-007-LP-15": "Fault: key said 'pressed it flat' against line 34's 'pushed it flat', and the returns-box distractor was its twin. Fix: key now 'Put it in the Friday box, low down, and pushed it flat.'; returns-box option now 'Put it in the returns box, because his name was in it.' (same tag, en-contradicted-by-the-text; lines 7, 8, 33 and 46 checked).",
+  "ENG-022-GK-02": "Fault: the hint ('joins the two moments with an and') pointed at the key's near-twin, so the key fell out without reading lines 7 to 11 or 38 and 39. Fix: hint now 'Read line 7, then line 38. Ask whether the two agree with each other.'; the lookalike option recast as 'He put himself in goal, and Dan picked the teams last week.' (same tag) so it no longer mirrors the key. Old hint kept under _previousHintCore.",
+  "ENG-022-GK-03": "Not touched: finding marked overruled (place-sense 'behind' is permitted)."
+ }
+}

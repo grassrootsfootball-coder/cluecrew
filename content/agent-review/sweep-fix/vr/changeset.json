@@ -1,0 +1,501 @@
+{
+ "door": "sweep-fix/vr",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-17",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "unfriendly the only correct answer; murderous (too strong), rude (other shade), frowning (one sign) each wrong in every sense of hostile; cold's near-synonym fault fixed.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-17-opt4 (gen-vr-04-closest-meaning-17-opt4).value",
+     "before": "cold",
+     "after": "frowning"
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-17-opt4 (gen-vr-04-closest-meaning-17-opt4).execution",
+     "before": "The key is 'unfriendly'. A cold manner is one way hostility can show, so 'cold' names one sign of it, not what 'hostile' means. A child who picks that visible sign picks 'cold'.",
+     "after": "The key is 'unfriendly'. A frown is one way hostility can show on a face, so 'frowning' names one sign of it, not what 'hostile' means. People also frown when worried or puzzled, and no sense of 'hostile' means frowning. A child who picks that visible sign picks 'frowning'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-28",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Echo fixed; cattle the only answer; horns and wool wrong in the ways tagged; cowboy and cattle known to 9-11-year-olds in Britain.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "stem.stemWord",
+     "before": "beekeeper",
+     "after": "cowboy"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-03-related-words-28-opt1 (gen-vr-03-related-words-28-opt1).value",
+     "before": "bees",
+     "after": "cattle"
+    },
+    {
+     "field": "option gen-vr-03-related-words-28-opt2 (gen-vr-03-related-words-28-opt2).value",
+     "before": "sting",
+     "after": "horns"
+    },
+    {
+     "field": "option gen-vr-03-related-words-28-opt2 (gen-vr-03-related-words-28-opt2).execution",
+     "before": "A shepherd looks after sheep, the whole animals, so a beekeeper looks after bees. The child gives sting instead: a sting is a part of a bee. The example named the animals themselves, and the child names a part of the animal.",
+     "after": "A shepherd looks after sheep, the whole animals, so a cowboy looks after cattle. The child gives horns instead: horns are a part of the animal. The example named the animals themselves, and the child names a part of the animal."
+    },
+    {
+     "field": "option gen-vr-03-related-words-28-opt3 (gen-vr-03-related-words-28-opt3).execution",
+     "before": "A shepherd looks after sheep, so a beekeeper looks after bees. The child stays with the first pair: wool comes from sheep, which a shepherd tends. Wool belongs with shepherd and sheep, and the relationship is never carried across to beekeeper.",
+     "after": "A shepherd looks after sheep, so a cowboy looks after cattle. The child stays with the first pair: wool comes from sheep, which a shepherd tends. Wool belongs with shepherd and sheep, and the relationship is never carried across to cowboy."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-30",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "food the only lack-of answer; hunger (what famine brings) and cloud (first-pair anchor) both wrong; crop near-defensible fault fixed.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-03-related-words-30-opt2 (gen-vr-03-related-words-30-opt2).value",
+     "before": "crop",
+     "after": "hunger"
+    },
+    {
+     "field": "option gen-vr-03-related-words-30-opt2 (gen-vr-03-related-words-30-opt2).execution",
+     "before": "A drought is a lack of rain, so a famine is a lack of food. The child chooses crop because it belongs to the same topic as famine (farming and food supply). A famine is not a lack of crop in the way the pair works, so the topic is matched but not the relationship.",
+     "after": "A drought is a lack of rain, so a famine is a lack of food. The child chooses hunger because it belongs to the same topic as famine. Hunger is what a famine causes, not what it lacks: a famine brings more hunger, never less. The topic is matched but not the relationship."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look hard at 9, 37, 13, 35. One chain rises 9, 13; the other falls 37, 35. The rising chain follows, landing on 17. Both 16 and 18 miss by one; 21 adds an extra step.",
+     "after": "Notice the gaps between 18, 22, 29 and 39. They are 4, 7 and 10. Each gap grows by 3. Add the next gap of 13 to 39 to reach 52. The number 49 repeats the gap of 10. The number 51 is one short."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-10",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read 2, 8, 15 across. Each leap is one bigger: 6, 7, 8. A leap of 9 lifts 23 to 32. Then 31 and 33 miss by one; 38 bounds far past.",
+     "after": "Notice the space from 5 to 11. You go up 6 each time. Count 6 on from 23 to reach 29. The number 35 takes the step twice. The number 28 is one short. The number 40 adds the last two numbers together."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-12",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Study 4, 41, 7, 39 with care. One chain steps up 4, 7; the other steps down 41, 39. The rising chain is next, reaching 10. Here 9 and 11 slip one place; 13 stretches too far.",
+     "after": "Notice the gaps between 13, 16, 22 and 31. They are 3, 6 and 9. Each gap grows by 3. Add the next gap of 12 to 31 to reach 43. The number 40 repeats the gap of 9. The number 42 is one short."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-18",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Start with 10 and 14. Each step gains one: 4, 5, 6. A step of 7 takes 25 to 32. Watch 31 dip and 33 rise; 36 overshoots.",
+     "after": "Notice the space from 13 to 17. You go up 4 each time. Count 4 on from 25 to reach 29. The number 33 takes the step twice. The number 28 is one short. The number 46 adds the last two numbers together."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-14",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Point to 6 and 11. The gaps build: 5, 6, 7. Add 8 to 24 for 32. Nearby 31 comes short, 33 slips over; 37 sails too high.",
+     "after": "Notice the space from 9 to 14. You go up 5 each time. Count 5 on from 24 to reach 29. The number 34 takes the step twice. The number 28 is one short. The number 43 adds the last two numbers together."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look twice at 3, 49, 9, 47. One chain jumps up 3, 9; the other jumps down 49, 47. The rising chain is next, reaching 15. Both 14 and 16 sit one off; 21 leaps too far.",
+     "after": "Notice the gaps between 12, 18, 27 and 39. They are 6, 9 and 12. Each gap grows by 3. Add the next gap of 15 to 39 to reach 54. The number 51 repeats the gap of 12. The number 53 is one short."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-22",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "See the gap from 5 to 8. The gaps swell: 3, 4, 5. A gap of 6 makes 23. Both 22 and 24 sit a step off; 26 pushes far past.",
+     "after": "Notice the space from 8 to 11. You go up 3 each time. Count 3 on from 17 to reach 20. The number 23 takes the step twice. The number 19 is one short. The number 31 adds the last two numbers together."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-04",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Watch 5, 33, 10, 31 closely. One chain climbs 5, 10; the other drops 33, 31. The climbing chain is next, reaching 15. Here 14 and 16 land one off; 20 runs too far.",
+     "after": "Notice the gaps between 14, 19, 27 and 38. They are 5, 8 and 11. Each gap grows by 3. Add the next gap of 14 to 38 to reach 52. The number 49 repeats the gap of 11. The number 51 is one short."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-06",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Find the jump from 7 to 9. The gaps widen: 2, 3, 4. A gap of 5 makes 16 into 21. Here 20 and 22 land one off; 23 stretches too far.",
+     "after": "Notice the space from 10 to 12. You go up 2 each time. Count 2 on from 16 to reach 18. The number 20 takes the step twice. The number 17 is one short. The number 30 adds the last two numbers together."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read 8, 45, 10, 43 slowly. One chain grows 8, 10; the other shrinks 45, 43. The growing chain comes next, hitting 12. Then 11 and 13 land one off; 14 goes a step beyond.",
+     "after": "Notice the gaps between 17, 19, 24 and 32. They are 2, 5 and 8. Each gap grows by 3. Add the next gap of 11 to 32 to reach 43. The number 40 repeats the gap of 8. The number 42 is one short."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-24",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Watch 7, 53, 12, 51 with care. One chain climbs 7, 12; the other sinks 53, 51. The climbing chain follows, landing on 17. Here 16 and 18 drift one place; 22 adds one step too many.",
+     "after": "Notice the gaps between 16, 21, 29 and 40. They are 5, 8 and 11. Each gap grows by 3. Add the next gap of 14 to 40 to reach 54. The number 51 repeats the gap of 11. The number 53 is one short."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-20",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "large the only synonym; small (opposite), slow and heavy (associates) correct in no sense of big; huge second-answer fault fixed.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-20-opt3 (gen-vr-21-same-meaning-20-opt3).value",
+     "before": "huge",
+     "after": "slow"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-20-opt3 (gen-vr-21-same-meaning-20-opt3).tag",
+     "before": "vr21-too-strong",
+     "after": "vr21-associated-not-same"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-20-opt3 (gen-vr-21-same-meaning-20-opt3).execution",
+     "before": "The task is to find the word that means the same as 'big', and the key is 'large'. 'Huge' means very big, a much stronger version of 'big'. A child who finds the right meaning but ignores its strength picks 'huge' instead of 'large'.",
+     "after": "The task is to find the word that means the same as 'big', and the key is 'large'. 'Big and slow' is a common pair for an elephant, but 'slow' is about speed, not size. No sense of 'big' means slow. A child who picks a word that goes with 'big', not one that means the same, picks 'slow' instead of 'large'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-09",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 11 no longer copies the visible middle number; key unique under the add rule; distractors 28 and 13 recomputed and correct.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "stem.sum",
+     "before": "(4 [10] 6)    (7 [?] 3)",
+     "after": "(4 [10] 6)    (7 [?] 4)"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-18-related-numbers-09-opt1 (gen-vr-18-related-numbers-09-opt1).value",
+     "before": "10",
+     "after": "11"
+    },
+    {
+     "field": "option gen-vr-18-related-numbers-09-opt2 (gen-vr-18-related-numbers-09-opt2).value",
+     "before": "21",
+     "after": "28"
+    },
+    {
+     "field": "option gen-vr-18-related-numbers-09-opt2 (gen-vr-18-related-numbers-09-opt2).execution",
+     "before": "The first group settles the rule: 4 + 6 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 3 = 10. This option multiplied them instead: 7 x 3 = 21.",
+     "after": "The first group settles the rule: 4 + 6 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 4 = 11. This option multiplied them instead: 7 x 4 = 28."
+    },
+    {
+     "field": "option gen-vr-18-related-numbers-09-opt3 (gen-vr-18-related-numbers-09-opt3).execution",
+     "before": "The first group settles the rule: 4 + 6 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 3 = 10. This option read a one-sided rule off the first group, add 6 to the left number (4 + 6 = 10), and applied it to 7 alone, leaving out 3: 7 + 6 = 13.",
+     "after": "The first group settles the rule: 4 + 6 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 4 = 11. This option read a one-sided rule off the first group, add 6 to the left number (4 + 6 = 10), and applied it to 7 alone, leaving out 4: 7 + 6 = 13."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-10",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 25 no longer copies the visible middle number; key unique under the add rule; distractors 144 and 19 recomputed and correct.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "stem.sum",
+     "before": "(10 [24] 14)    (16 [?] 8)",
+     "after": "(10 [24] 14)    (16 [?] 9)"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-18-related-numbers-10-opt1 (gen-vr-18-related-numbers-10-opt1).value",
+     "before": "24",
+     "after": "25"
+    },
+    {
+     "field": "option gen-vr-18-related-numbers-10-opt2 (gen-vr-18-related-numbers-10-opt2).value",
+     "before": "128",
+     "after": "144"
+    },
+    {
+     "field": "option gen-vr-18-related-numbers-10-opt2 (gen-vr-18-related-numbers-10-opt2).execution",
+     "before": "The first group settles the rule: 10 + 14 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 16 + 8 = 24. This option multiplied them instead: 16 x 8 = 128.",
+     "after": "The first group settles the rule: 10 + 14 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 16 + 9 = 25. This option multiplied them instead: 16 x 9 = 144."
+    },
+    {
+     "field": "option gen-vr-18-related-numbers-10-opt3 (gen-vr-18-related-numbers-10-opt3).value",
+     "before": "18",
+     "after": "19"
+    },
+    {
+     "field": "option gen-vr-18-related-numbers-10-opt3 (gen-vr-18-related-numbers-10-opt3).execution",
+     "before": "The first group settles the rule: 10 + 14 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 16 + 8 = 24. This option read a one-sided rule off the first group, add 10 to the right number (14 + 10 = 24), and applied it to 8 alone, leaving out 16: 8 + 10 = 18.",
+     "after": "The first group settles the rule: 10 + 14 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 16 + 9 = 25. This option read a one-sided rule off the first group, add 10 to the right number (14 + 10 = 24), and applied it to 9 alone, leaving out 16: 9 + 10 = 19."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Lexicon: only C makes a word among C, T, K (CAMEL true, TAMEL false, KAMEL false); SAMEL fault fixed.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-20-complete-the-word-07-opt2 (gen-vr-20-complete-the-word-07-opt2).value",
+     "before": "S",
+     "after": "T"
+    },
+    {
+     "field": "option gen-vr-20-complete-the-word-07-opt2 (gen-vr-20-complete-the-word-07-opt2).execution",
+     "before": "The task is to complete _AMEL, and the correct word is CAMEL, so the key is C. The child drops in S, one of the most common letters in English, without reading the finished word back. That gives SAMEL, which is not a word.",
+     "after": "The task is to complete _AMEL, and the correct word is CAMEL, so the key is C. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives TAMEL, which is not a word (checked against the word-puzzle lexicon)."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-22",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "fearful the only synonym; bold (opposite), dark and alone (associates) correct in no sense of scared; terrified second-answer fault fixed.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-22-opt3 (gen-vr-21-same-meaning-22-opt3).value",
+     "before": "terrified",
+     "after": "dark"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-22-opt3 (gen-vr-21-same-meaning-22-opt3).tag",
+     "before": "vr21-too-strong",
+     "after": "vr21-associated-not-same"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-22-opt3 (gen-vr-21-same-meaning-22-opt3).execution",
+     "before": "The task is to find the word that means the same as 'scared', and the key is 'fearful'. 'Terrified' means extremely scared, a much stronger word than 'scared', so it matches the meaning but not its size. A child who finds the right meaning but ignores its strength picks 'terrified' instead of 'fearful'.",
+     "after": "The task is to find the word that means the same as 'scared', and the key is 'fearful'. Many children are scared of the dark, so the two go together, but 'dark' means without light, not afraid. No sense of 'scared' means dark. A child who picks a word that goes with 'scared', not one that means the same, picks 'dark' instead of 'fearful'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-04",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr",
+    "faultField": "execution"
+   },
+   "reviewerNote": "jump the only synonym; dance, run, land correct in no sense of leap; hop second-answer fault fixed.",
+   "landedAt": "2026-11-22T17:32:52.304Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-04-opt2 (gen-vr-21-same-meaning-04-opt2).value",
+     "before": "hop",
+     "after": "dance"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-04-opt2 (gen-vr-21-same-meaning-04-opt2).tag",
+     "before": "vr21-too-strong",
+     "after": "vr21-associated-not-same"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-04-opt2 (gen-vr-21-same-meaning-04-opt2).execution",
+     "before": "The task is to find the word that means the same as 'leap', and the key is 'jump'. 'Hop' is a small jump, much weaker than a 'leap', so it matches the meaning but not its size. A child who finds the right meaning but ignores its strength picks 'hop' instead of 'jump'.",
+     "after": "The task is to find the word that means the same as 'leap', and the key is 'jump'. Dancers leap, so the two go together, but dancing is moving to music, not jumping. No sense of 'leap' means dance. A child who picks a word that goes with 'leap', not one that means the same, picks 'dance' instead of 'jump'."
+    }
+   ]
+  }
+ ]
+}

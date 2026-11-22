@@ -1,0 +1,405 @@
+{
+ "door": "sweep-fix/vr-11b",
+ "proposer": "agent",
+ "ruling": "R1037",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "gen-vr-11-number-series-02",
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [6, 9, 12, 15] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     6,
+     9,
+     12,
+     15
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 3,
+     "first": 6,
+     "answer": 18
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-02-opt1",
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-02-opt2",
+     "value": "17",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 17 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-02-opt3",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "execution": "Added the step of 3 twice from the last term, giving 21 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-02-opt4",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 27."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from 6 to 9. You go up 3 each time. Count 3 on from 15 to reach 18. The number 21 takes the step twice. The number 17 is one short. The number 27 adds the last two numbers together."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-03",
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [10, 14, 20, 28] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     10,
+     14,
+     20,
+     28
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 28,
+     "step": 4,
+     "first": 10,
+     "answer": 38,
+     "prevStep": 8
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-03-opt1",
+     "value": "38",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-03-opt2",
+     "value": "36",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 8 instead of letting it grow, giving 36 instead of 38."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-03-opt3",
+     "value": "39",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 39 instead of 38."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 10, 14, 20 and 28. They are 4, 6 and 8. Each gap grows by 2. Add the next gap of 10 to 28 to reach 38. The number 36 repeats the gap of 8. The number 39 is one too many."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-07",
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [14, 17, 22, 29] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     14,
+     17,
+     22,
+     29
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 29,
+     "step": 3,
+     "first": 14,
+     "answer": 38,
+     "prevStep": 7
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-07-opt1",
+     "value": "38",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-07-opt2",
+     "value": "36",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 7 instead of letting it grow, giving 36 instead of 38."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-07-opt3",
+     "value": "39",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 39 instead of 38."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 14, 17, 22 and 29. They are 3, 5 and 7. Each gap grows by 2. Add the next gap of 9 to 29 to reach 38. The number 36 repeats the gap of 7. The number 39 is one too many."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-11",
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [9, 11, 15, 21] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     9,
+     11,
+     15,
+     21
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 21,
+     "step": 2,
+     "first": 9,
+     "answer": 29,
+     "prevStep": 6
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-11-opt1",
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-11-opt2",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 6 instead of letting it grow, giving 27 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-11-opt3",
+     "value": "30",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 30 instead of 29."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 9, 11, 15 and 21. They are 2, 4 and 6. Each gap grows by 2. Add the next gap of 8 to 21 to reach 29. The number 27 repeats the gap of 6. The number 30 is one too many."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-13",
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [5, 9, 13, 17] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     5,
+     9,
+     13,
+     17
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 4,
+     "first": 5,
+     "answer": 21
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-13-opt1",
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-13-opt2",
+     "value": "22",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 22 instead of 21."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-13-opt3",
+     "value": "25",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "execution": "Added the step of 4 twice from the last term, giving 25 instead of 21."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-13-opt4",
+     "value": "30",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 30."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from 5 to 9. You go up 4 each time. Count 4 on from 17 to reach 21. The number 25 takes the step twice. The number 22 is one too many. The number 30 adds the last two numbers together."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-15",
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [13, 19, 27, 37] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     13,
+     19,
+     27,
+     37
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 37,
+     "step": 6,
+     "first": 13,
+     "answer": 49,
+     "prevStep": 10
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-15-opt1",
+     "value": "49",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-15-opt2",
+     "value": "47",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 10 instead of letting it grow, giving 47 instead of 49."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-15-opt3",
+     "value": "50",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 50 instead of 49."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 13, 19, 27 and 37. They are 6, 8 and 10. Each gap grows by 2. Add the next gap of 12 to 37 to reach 49. The number 47 repeats the gap of 10. The number 50 is one too many."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-19",
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [8, 13, 20, 29] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     8,
+     13,
+     20,
+     29
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 29,
+     "step": 5,
+     "first": 8,
+     "answer": 40,
+     "prevStep": 9
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-19-opt1",
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-19-opt2",
+     "value": "38",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 9 instead of letting it grow, giving 38 instead of 40."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-19-opt3",
+     "value": "41",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 41 instead of 40."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 8, 13, 20 and 29. They are 5, 7 and 9. Each gap grows by 2. Add the next gap of 11 to 29 to reach 40. The number 38 repeats the gap of 9. The number 41 is one too many."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-23",
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [12, 16, 22, 30] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     12,
+     16,
+     22,
+     30
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 30,
+     "step": 4,
+     "first": 12,
+     "answer": 40,
+     "prevStep": 8
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-23-opt1",
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-23-opt2",
+     "value": "38",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 8 instead of letting it grow, giving 38 instead of 40."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-23-opt3",
+     "value": "41",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 41 instead of 40."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 12, 16, 22 and 30. They are 4, 6 and 8. Each gap grows by 2. Add the next gap of 10 to 30 to reach 40. The number 38 repeats the gap of 8. The number 41 is one too many."
+   }
+  }
+ ],
+ "notes": [
+  "gen-vr-11-number-series-02: walk script belonged to another series -> rewritten from [6, 9, 12, 15], ends on the key 18, names each distractor.",
+  "gen-vr-11-number-series-03: walk script belonged to another series -> rewritten from [10, 14, 20, 28], ends on the key 38, names each distractor. Gate forced: LIVE options 36, 39 carried no execution; executions added in the existing vr-11 wording, values and tags unchanged.",
+  "gen-vr-11-number-series-07: walk script belonged to another series -> rewritten from [14, 17, 22, 29], ends on the key 38, names each distractor. Gate forced: LIVE options 36, 39 carried no execution; executions added in the existing vr-11 wording, values and tags unchanged.",
+  "gen-vr-11-number-series-11: walk script belonged to another series -> rewritten from [9, 11, 15, 21], ends on the key 29, names each distractor. Gate forced: LIVE options 27, 30 carried no execution; executions added in the existing vr-11 wording, values and tags unchanged.",
+  "gen-vr-11-number-series-13: walk script belonged to another series -> rewritten from [5, 9, 13, 17], ends on the key 21, names each distractor. Gate forced: LIVE options 22, 25, 30 carried no execution; executions added in the existing vr-11 wording, values and tags unchanged.",
+  "gen-vr-11-number-series-15: walk script belonged to another series -> rewritten from [13, 19, 27, 37], ends on the key 49, names each distractor. Gate forced: LIVE options 47, 50 carried no execution; executions added in the existing vr-11 wording, values and tags unchanged.",
+  "gen-vr-11-number-series-19: walk script belonged to another series -> rewritten from [8, 13, 20, 29], ends on the key 40, names each distractor. Gate forced: LIVE options 38, 41 carried no execution; executions added in the existing vr-11 wording, values and tags unchanged.",
+  "gen-vr-11-number-series-23: walk script belonged to another series -> rewritten from [12, 16, 22, 30], ends on the key 40, names each distractor. Gate forced: LIVE options 38, 41 carried no execution; executions added in the existing vr-11 wording, values and tags unchanged."
+ ]
+}

@@ -1,0 +1,414 @@
+{
+ "door": "sweep-fix/english-02",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw2f4um009ntmbvx6umqa5c",
+   "itemId": "ENG-005-BB-08",
+   "oldValue": "Because it was too dark for him to see the water.",
+   "tag": "en-contradicted-by-the-text",
+   "newValue": "Because it was too dark for him to see the water.",
+   "execution": "Line 33 says 'we could just see that the water was over the middle of it', so the passage states the contrary: he did see the water. The child takes 'very nearly dark' on the same line and misses the clause that follows it."
+  },
+  {
+   "optionId": "cmsw2f4u70078tmbv52vg4qve",
+   "itemId": "ENG-004-AGG-01",
+   "oldValue": "He slipped past her, glancing at her as he went.",
+   "tag": "en-negation-dropped",
+   "newValue": "He took a good look at her as he hurried past.",
+   "execution": "Lines 5 and 6 say he sidled past her 'without looking at her'. The child keeps the hurrying past and drops 'without', so he looks at her instead."
+  },
+  {
+   "optionId": "cmsw2f4ua007ltmbvvyql4ay6",
+   "itemId": "ENG-004-AGG-04",
+   "oldValue": "A boy, sent over by the man at the station.",
+   "tag": "en-cause-agent-swap",
+   "newValue": "A boy the stationmaster had promised to bring for him.",
+   "execution": "Right arrangement, wrong person: line 18 has Matthew name Mrs Alexander Spencer as the one bringing the boy. The stationmaster knows nothing of a boy, and at line 22 says that is all he knows about it."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmsw2f4ub007qtmbvqupe4atn",
+   "itemId": "ENG-004-AGG-05",
+   "value": "She waited beside the girl until Matthew came.",
+   "tag": "en-plausible-not-stated",
+   "execution": "A helpful thing to do, but lines 20 and 21 say she gave the girl into the stationmaster's charge. At lines 3 and 4 the girl is the only one on the platform, so Mrs Spencer did not wait."
+  },
+  {
+   "optionId": "cmsw2f4ub007utmbvucn6nfq8",
+   "itemId": "ENG-004-AGG-06",
+   "value": "He knows Marilla is the shy one of the two.",
+   "tag": "en-attribute-transfer",
+   "execution": "Gives Marilla the shyness the passage gives Matthew: line 45 calls him 'shy Matthew Cuthbert', and at line 64 he speaks 'shyly'."
+  }
+ ],
+ "rebuilds": [
+  {
+   "itemId": "ENG-005-BB-01",
+   "why": "Sweep hold: minimal-pair distractor shared the key frame, and the hint counted reasons, which only the key and that twin gave. Twin replaced by a one-reason wrong-scope option; hint now points to where Beauty gives his reason.",
+   "stem": {
+    "text": "Why did Beauty like going in the dog-cart? (lines 2 and 3)",
+    "quotes": [],
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 2
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ug008otmbv92z2yyao",
+     "value": "It was light, and its big wheels ran along pleasantly.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4ug008ptmbvd66gpwt4",
+     "value": "It was the only cart he was strong enough to pull.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A reason a child may supply; the passage gives lightness as the cart's quality, not his."
+    },
+    {
+     "optionId": "cmsw2f4ug008qtmbvabzjqs1d",
+     "value": "It meant John came with him instead of the master.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 2 says 'John went with his master', so the master went too. The child half-reads that line and has John go in place of the master, the contrary of what it states."
+    },
+    {
+     "optionId": "cmsw2f4ug008rtmbvg5j0st6p",
+     "value": "The master drove gently, so the ride was smooth.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The master driving gently is line 12, on the flooded road on the way to town, and it is no reason for liking the dog-cart. The child answers from that part of the passage; lines 2 and 3 give Beauty's reason: the cart was so light and its high wheels ran along so pleasantly."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Beauty says he liked the dog-cart on line 2. Read on to see what he says next."
+   }
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "why": "Sweep hold: hint named fear, a word only the key carries. Hint now sends the child to the man's words without naming either part.",
+   "stem": {
+    "text": "What did the man at the gate say about the river? (lines 10 and 11)",
+    "quotes": [],
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 10
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ui008ytmbvlmj82uew",
+     "value": "It had already broken the wooden bridge.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The broken bridge is line 47, where a man at the far side shouts the news hours later. The child answers from that part of the passage instead of lines 10 and 11, where the gate-man says the river is rising fast."
+    },
+    {
+     "optionId": "cmsw2f4ui008ztmbv20uliq9j",
+     "value": "It was low, and the road was under water.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "The man said 'the river was rising fast' (line 10). Low belongs to the road at line 11, 'one low part of the road', and has been moved onto the river; the water on the road is the narrator's report, not what the man said about the river."
+    },
+    {
+     "optionId": "cmsw2f4ui0090tmbv99fz3qt7",
+     "value": "It was rising fast, and he feared a bad night.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4ui0091tmbvrm0vqv8x",
+     "value": "It had covered the meadows so the road was shut.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Line 11 says meadows were under water, but nothing says the road was shut."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "The man's words run from line 10 into line 11. Check every part of the option against just those words."
+   }
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "why": "Sweep hold: hint eliminated the fishing option by name and framed the answer as what a horse is given. Hint now asks who has the bait and where.",
+   "stem": {
+    "text": "In town Beauty says 'I had a good bait'. What does 'bait' mean here? (line 14)",
+    "quotes": [
+     "I had a good bait"
+    ],
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 14
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4uj0093tmbvcj8n5w7j",
+     "value": "Something used to catch a fish.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "Bait for catching fish is the commonest sense of the word. It does not fit line 14, where a horse that has pulled a cart to town has 'a good bait'."
+    },
+    {
+     "optionId": "cmsw2f4uj0094tmbv0idf1753",
+     "value": "A long wait outside, with nothing to eat.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "execution": "The child reads 'bait' as if it were 'wait', a word one letter away, and builds a long wait with no food. Line 14 calls it a good bait, which is a feed and a rest in town."
+    },
+    {
+     "optionId": "cmsw2f4uj0095tmbv6xohuxgb",
+     "value": "A trick played to make him go on.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "Bait as a lure or trick is a genuine sense of the word, but not the one line 14 fixes. 'I had a good bait' in the town, while the master was busy, is about Beauty being fed and rested."
+    },
+    {
+     "optionId": "cmsw2f4uj0096tmbvr6wzzbpd",
+     "value": "A feed and a rest.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Ask who has the bait in line 14, and where he is. What would he need after that journey?"
+   }
+  },
+  {
+   "itemId": "ENG-005-BB-09",
+   "why": "Sweep hold: the fear distractor was supported by 'I dare not' three times at lines 36 to 38, and its hint sent the child to those words. Replaced by an option the text clearly excludes (John tries to lead Beauty on at line 40; line 62 credits Beauty). Key 'punished' changed to 'whipped', which lines 37 and 38 state; walk script follows and now states the key.",
+   "stem": {
+    "text": "Look at what the master does on the bridge. Then look at what he says at the hall door. What does the writer want us to understand? (lines 36 to 38 and 62 to 63)",
+    "quotes": [],
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 36
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4un009stmbvl9lrq1b7",
+     "value": "The master whipped Beauty for the very thing that saved them.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4un009ttmbv28o2md0c",
+     "value": "The master knew that Beauty was right to stop on the bridge.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Lines 37 and 38 have the master give a touch of the whip and then a sharp cut to force Beauty on. At line 62 he says Beauty was 'wiser than we were', so the passage states he did not know."
+    },
+    {
+     "optionId": "cmsw2f4un009utmbvh2mqqkoy",
+     "value": "It was John, not Beauty, who saved them on the bridge.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "execution": "Gives the saving to the wrong character. At line 40 John tries to lead Beauty forward onto the bridge, and at line 62 the master says it was Black Beauty who was wiser than they were."
+    },
+    {
+     "optionId": "cmsw2f4un009vtmbv89k30rs9",
+     "value": "The master had wanted to test whether Beauty would obey him at all.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "Invents a purpose; line 37 has him simply telling Beauty to go on."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look at lines 37 and 38 first. The master gives a touch with the whip, then a sharp cut. Now look at lines 62 and 63. He says the horse was wiser than they were. So the master whipped Beauty for the very thing that saved them."
+   }
+  },
+  {
+   "itemId": "ENG-014-TS-03",
+   "why": "Sweep hold: hint was an either/or whose halves were options (the proof is the key, the thing proved is a distractor). Hint now asks what Ben is doing, without naming proof against conclusion. Gate-forced: the stored distractor 'His heart was light and his hopes were high.' now fails the subject-matter gate on 'high' (HOLD AND ROUTE); reworded to 'full of hope', same tag and same error.",
+   "stem": {
+    "text": "Look at lines 10 to 14. What shows us that Ben was in a happy mood?",
+    "quotes": [],
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 10
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ww00n8tmbvjmmtakv4",
+     "value": "The calm way of working that is described.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Line 10 gives that calm to Tom; this reads it as a sign about Ben."
+    },
+    {
+     "optionId": "cmsw2f4ww00n9tmbvuewxef2d",
+     "value": "The fruit he had in his hand.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 12 and 13, and it is what he carried rather than the sign of his mood."
+    },
+    {
+     "optionId": "cmsw2f4ww00natmbv4teyn0a2",
+     "value": "The way he came hopping and skipping along.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4ww00nbtmbvh1zkbsrt",
+     "value": "His heart was light and he was full of hope.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 12, 'his heart was light and his anticipations high', and repeats the conclusion rather than giving the sign for it."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Look at what Ben is doing in line 11. The writer reads his mood from that."
+   }
+  },
+  {
+   "itemId": "ENG-014-TS-12",
+   "why": "Sweep hold: walk script never reached the key, and its line 53 step showed the writer giving Tom's feeling. Line 53 step replaced by Ben watching every move (lines 34 to 37); the walk now ends on the key.",
+   "stem": {
+    "text": "Think about the whole passage. How does the writer let us watch Tom work on Ben?",
+    "quotes": [],
+    "passageRef": "stream-a-05-tom-sawyer",
+    "answerShape": "outside-view-set-against-a-withheld-plan",
+    "orderAnchor": 999,
+    "techniqueKey": "a-plan-named-but-withheld-while-its-working-is-shown"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4x400ohtmbvnekx0pjg",
+     "value": "He hides Ben's mind, but he gives us Tom's all through.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Turns the two round: line 12 and line 37 give Ben's mind, and Tom's plan is the thing withheld."
+    },
+    {
+     "optionId": "cmsw2f4x400oitmbvj8q4vx9y",
+     "value": "He tells us the fence had three coats, and then the boys went home.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 68 and 69 and reports the ending rather than anything the telling does."
+    },
+    {
+     "optionId": "cmsw2f4x400ojtmbvvztl35cw",
+     "value": "He shows us Ben giving in first, so the refusals come after that.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "execution": "Tom keeps refusing from line 39 to line 51, and Ben gives in only at line 52 by offering all of the apple. The option turns that order round."
+    },
+    {
+     "optionId": "cmsw2f4x400oktmbv6lcqt656",
+     "value": "He gives us what Ben can see, but he holds Tom's plan back.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "At line 8 an idea bursts on Tom, and we are never told what it is. Lines 34 to 37 show Tom at work as Ben sees it. Ben watches every move and grows more and more interested. So the writer gives us what Ben can see, but holds Tom's plan back."
+   }
+  },
+  {
+   "itemId": "ENG-004-AGG-08",
+   "why": "Sweep hold: walk script ended on the parallel-read distractor and never reached the key. Final step added from lines 44 to 46, ending on the key.",
+   "stem": {
+    "text": "Read lines 33 to 46. The writer shows the girl to an 'ordinary observer', then to an 'extraordinary observer'. Why?",
+    "quotes": [
+     "ordinary observer",
+     "extraordinary observer"
+    ],
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 8
+   },
+   "options": [
+    {
+     "optionId": "cmsw9oyrg0001tmour9tiy144",
+     "value": "To show that the girl slowly changed while she sat there waiting for him.",
+     "isKey": false,
+     "tag": "en-parallel-read-as-sequence",
+     "execution": "Reads two ways of seeing as two moments in time; the passage gives no change."
+    },
+    {
+     "optionId": "cmsw9oyrg0002tmoutw1wd5r0",
+     "value": "To show that Matthew saw both of these things as he came down the platform.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "execution": "Gives the seeing to Matthew, though line 34 says he was not looking at her."
+    },
+    {
+     "optionId": "cmsw9oyrg0003tmou8qdmwmrx",
+     "value": "To show that nobody could ever really know what this girl was like inside.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Stretches to nobody and ever where the passage is measured."
+    },
+    {
+     "optionId": "cmsw9oyrg0004tmouavi6iuco",
+     "value": "To show that there is far more to this girl than her plain looks suggest.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look at line 34, then lines 35 and 41. Line 34 tells you Matthew was not looking at her. The writer then shows the same girl twice, to two different watchers. At lines 44 to 46 the second watcher sees that she is no ordinary girl inside. So there is far more to this girl than her plain looks suggest."
+   }
+  },
+  {
+   "itemId": "ENG-004-AGG-12",
+   "why": "Sweep hold: hint counted requests, which narrowed to the key and its near-identical twin 'Come to the horse, and take her own bag.' Hint now points to the short speech without counting; the twin is recast so it no longer shares the key's frame.",
+   "stem": {
+    "text": "What does Matthew ask the girl to do at the end? (lines 64 and 65)",
+    "quotes": [],
+    "passageRef": "stream-a-06-anne-green-gables",
+    "orderAnchor": 12
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4uf008jtmbvlp6i5ijo",
+     "value": "Go and sit in the ladies' waiting room.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True of line 14, where the stationmaster asked her to go into the ladies' waiting room. Matthew never asks it; lines 64 and 65 give what he asks."
+    },
+    {
+     "optionId": "cmsw2f4uf008ktmbvn89tfhlo",
+     "value": "Carry her own bag over to the horse.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "Right on the horse, which line 64 says 'is over in the yard', and off on one detail: lines 64 and 65 end 'Give me your bag', so Matthew asks to carry the bag himself, not for her to carry it."
+    },
+    {
+     "optionId": "cmsw2f4ug008ltmbv9olp7bo4",
+     "value": "Tell him her name before they set off.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A natural next thing to ask, but he never asks it in these lines."
+    },
+    {
+     "optionId": "cmsw2f4ug008mtmbviiin01b8",
+     "value": "Come along with him, and hand him her bag.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read Matthew's short speech in lines 64 and 65. Check every part of the option against it."
+   }
+  }
+ ],
+ "notes": {
+  "ENG-005-BB-01": "Minimal-pair twin of the key + hint counting reasons -> twin replaced by a one-reason wrong-scope option (line 12); hint points to what Beauty says after line 2.",
+  "ENG-005-BB-03": "Hint named fear, which only the key carries -> hint points to the man's words at lines 10 to 11 without naming either part.",
+  "ENG-005-BB-04": "Hint named the fisherman and framed the answer -> hint asks who has the bait in line 14, where, and what he would need.",
+  "ENG-005-BB-08": "Tag en-plausible-not-stated where line 33 states the contrary -> retagged en-contradicted-by-the-text, value unchanged, execution cites line 33.",
+  "ENG-005-BB-09": "Fear distractor supported by 'I dare not' x3 -> replaced by 'It was John, not Beauty, who saved them' (en-cause-agent-swap; lines 40, 62); key 'punished' -> 'whipped' (lines 37-38); walk script follows and states the key.",
+  "ENG-014-TS-03": "Hint either/or whose halves were options -> hint asks what Ben is doing in line 11. Gate-forced: distractor 'his hopes were high' failed the subject-matter gate on 'high' -> 'he was full of hope', tag unchanged.",
+  "ENG-014-TS-12": "Walk script did not reach the key; line 53 step cut against it -> line 53 step replaced by Ben watching every move (34 to 37); walk ends on the key.",
+  "ENG-004-AGG-01": "Twin of the key opening 'He slipped past her' -> recast as 'He took a good look at her as he hurried past.' (en-negation-dropped: 'without', line 5).",
+  "ENG-004-AGG-04": "Twin of the key 'A boy, sent over by ...' -> recast as 'A boy the stationmaster had promised to bring for him.' (en-cause-agent-swap kept).",
+  "ENG-004-AGG-05": "Execution claimed line 21 says she went -> execution cites lines 20-21 for the handover and lines 3-4 (girl alone on the platform) for her absence.",
+  "ENG-004-AGG-06": "Execution cited a preamble not in the numbered lines -> cites line 45 ('shy Matthew Cuthbert') and line 64 ('shyly').",
+  "ENG-004-AGG-08": "Walk script ended on the distractor -> final steps from lines 44 to 46 reach and state the key.",
+  "ENG-004-AGG-12": "Hint counted requests, narrowing to a near-identical pair -> hint points to the speech without counting; twin recast as 'Carry her own bag over to the horse.' (en-minimal-pair-skim kept)."
+ }
+}

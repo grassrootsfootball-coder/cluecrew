@@ -1,0 +1,2649 @@
+{
+ "door": "sweep-fix/english-01",
+ "questionType": "english",
+ "ruling": "R1037",
+ "entries": {
+  "maths-39-perimeter-vs-area-multiplying": {
+   "description": "Multiplying all visible numbers together when asked for perimeter.",
+   "childHint": "To find the perimeter, imagine walking around the very edge. Add up the whole journey."
+  },
+  "vr-move-letter-both-invalid": {
+   "description": "Chose a letter that makes neither word work.",
+   "childHint": "Test both halves: the first word without the letter, the second word with it."
+  },
+  "vr04-opposite-pull": {
+   "description": "Chose the opposite by mistake.",
+   "childHint": "That word points the other way. Read both meanings again."
+  },
+  "vr-letter-series-step-repeat": {
+   "description": "Applied the letter step twice, overshooting the target.",
+   "childHint": "One jump at a time! Count the step from the last letter just once."
+  },
+  "maths-72-wrong-operation-chosen": {
+   "description": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
+   "childHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?"
+  },
+  "vr06-fits-gap-not-word": {
+   "description": "Chose three letters that are not a word and make a non-word in the gap.",
+   "childHint": "The missing three letters make a little word all by themselves."
+  },
+  "vr20-common-letter": {
+   "description": "Defaulted to a common letter without testing the word.",
+   "childHint": "Try your letter in the gap and read the whole word."
+  },
+  "vr19-letter-order": {
+   "description": "Matched code digits to letters in the reverse order.",
+   "childHint": "Line the code up under the word, letter by letter, left to right."
+  },
+  "maths-14-the-sign-as-the-answer-is": {
+   "description": "Child gives 4 + 5 = 9 + 2 where the answer is 4 + 5 = 7 + 2, reading the equals sign as an instruction to write a total rather than as a balance.",
+   "childHint": "The equals sign means \"is exactly the same as\". Both sides of the sign must balance like a set of scales."
+  },
+  "maths-09-rounding-misdirection": {
+   "description": "Always rounding down regardless of the digit.",
+   "childHint": "Look at the next digit along. If it is 5 or more, round up."
+  },
+  "maths-18-missing-long-multiplication-placeholder": {
+   "description": "Forgetting the zero when multiplying the tens digit.",
+   "childHint": "You are multiplying by a ten, not a one! What needs to go in the ones column to show this?"
+  },
+  "vr05-almost-letters": {
+   "description": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+   "childHint": "Find the exact letters in order. Every letter must be there, touching."
+  },
+  "maths-12-forgetting-to-exchange": {
+   "description": "Leaving the column as a zero or skipping it when the top number is smaller.",
+   "childHint": "If the top column does not have enough, you need to exchange from the next one."
+  },
+  "en-physical-vs-emotional-cue": {
+   "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling.",
+   "childHint": "Look past what the body is doing. Check what the character is feeling right then."
+  },
+  "en-comma-subject-verb-split": {
+   "description": "Accepts a comma cutting subject from verb.",
+   "childHint": "Never let a single comma cut the do-er off from the doing."
+  },
+  "maths-44-reading-the-wrong-protractor-scale": {
+   "description": "Child gives 130° where the answer is 50°, reading the outer scale instead of the inner one.",
+   "childHint": "Look at the angle first. Is it smaller or larger than a perfect right angle (90°)? Use that to choose the right number."
+  },
+  "maths-25-confusing-thirds-and-tenths": {
+   "description": "Child gives 1/3 = 0.3 where the answer is 0.333..., reading the bottom number as the digit after the point.",
+   "childHint": "0.3 means three-tenths (3/10). Does one-third equal three-tenths?"
+  },
+  "maths-26-percentage-symbol-as-a-unit": {
+   "description": "Child gives 0.4 = 0.4% where the answer is 40%, adding the symbol without converting.",
+   "childHint": "Percent means \"out of 100\". To turn a decimal into a percentage, you need to multiply it by 100."
+  },
+  "maths-28-fractions-as-two-separate-numbers": {
+   "description": "Child gives 3/4 as a point past 3 on a number line where the answer lies between 0 and 1, reading the 3 and the 4 as two separate numbers.",
+   "childHint": "A fraction is a single number. The line in the middle just means \"divide\"."
+  },
+  "maths-32-base-100-time": {
+   "description": "Child gives 2:45 + 20 minutes = 2:65 where the answer is 3:05.",
+   "childHint": "There are only 60 minutes in an hour. Once you hit 60, you need to roll over into the next hour."
+  },
+  "maths-40-area-dictates-perimeter": {
+   "description": "Child gives the same perimeter for a 3 cm by 4 cm rectangle and a 2 cm by 6 cm rectangle where the answers are 14 cm and 16 cm, assuming equal areas force equal perimeters.",
+   "childHint": "Try drawing two different shapes with an area of 12 squares. Now count the outside edges of both. Are they the same?"
+  },
+  "maths-41-orientation-changes-shape": {
+   "description": "Thinking a rotated square is a \"diamond\" and no longer a square.",
+   "childHint": "Turn your paper around. A shape keeps its true name no matter which way it is pointing."
+  },
+  "maths-59-fixed-pie-chart-wedges": {
+   "description": "Child gives 10 people for a quarter of a chart of 80 where the answer is 20, carrying the count across from an identical-looking wedge on a chart of 40.",
+   "childHint": "A pie chart only shows fractions of a total. You need to know the grand total before you can figure out what the slices mean."
+  },
+  "maths-35-assuming-scale-ticks-are-1": {
+   "description": "Not calculating the scale intervals on a graph or jug.",
+   "childHint": "Look at the numbers provided. How much space is between them, and how many jumps are there? Divide the space by the jumps."
+  },
+  "maths-38-perimeter-vs-area-adding": {
+   "description": "Adding the sides together when asked for area.",
+   "childHint": "Perimeter is the fence around the outside (add the sides). Area is the grass inside (multiply the length by the width)."
+  },
+  "maths-43-line-length-dictates-angle": {
+   "description": "Believing the physical length of the drawn lines changes the size of the angle.",
+   "childHint": "An angle measures the turn between two lines. It does not measure how long they are."
+  },
+  "en-terminal-punctuation-blind": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match."
+  },
+  "en-inference-literal-lookalike": {
+   "description": "Picks the option that reuses passage wording.",
+   "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you."
+  },
+  "en-technique-intent-as-character": {
+   "description": "Child gives \"the boy feels tense\" where the answer is that the writer builds tension, treating the writer's choice as the character's state.",
+   "childHint": "Ask who is doing this. Is it the writer, or the character?"
+  },
+  "en-double-consonant-boundary": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+  },
+  "en-unstressed-suffix-vowel": {
+   "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+   "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+  },
+  "maths-45-diagonals-as-symmetry": {
+   "description": "Thinking a standard rectangle has 4 lines of symmetry because of the diagonals.",
+   "childHint": "If you folded a rectangle along its diagonal line, would the corners match up perfectly?"
+  },
+  "nvr-mirror-for-rotation": {
+   "description": "Accepts a reflection where the rule is rotation (silhouette looks right) (types: all)",
+   "childHint": "Turn it like a steering wheel, never flip it like a pancake. A shape that only matches after flipping is a mirror twin."
+  },
+  "vr07-term-dropped": {
+   "description": "Stopped before using every letter, usually leaving off the last term.",
+   "childHint": "Check you have used every letter. Count them as you go."
+  },
+  "en-motive-invention": {
+   "description": "Attributes a plausible motive the text never supports.",
+   "childHint": "A reason has to be given, not guessed. Ask what the text says about why."
+  },
+  "en-conjunction-logic": {
+   "description": "Chooses a conjunction with the wrong logical relation.",
+   "childHint": "Is the second idea a reason, a surprise, or just what happened next?"
+  },
+  "maths-42-square-rectangle-exclusivity": {
+   "description": "Believing a square is absolutely not a type of rectangle.",
+   "childHint": "A rectangle has four right angles and opposite equal sides. Does a square have those? Yes! A square is just a very special rectangle."
+  },
+  "maths-50-faces-vs-edges": {
+   "description": "Confusing the flat surfaces with the straight lines where they meet.",
+   "childHint": "A face is the flat part you can put a sticker on. An edge is the sharp part you could run your finger along."
+  },
+  "maths-07-decimals-as-two-separate-whole-numbers": {
+   "description": "Thinking 3.12 is larger than 3.8 because 12 is bigger than 8.",
+   "childHint": "The decimal point separates wholes from parts. Compare the parts column by column, starting with the tenths."
+  },
+  "maths-13-adding-the-exchange-twice": {
+   "description": "Counting the carried '1' in addition as a full 10 or adding it twice.",
+   "childHint": "Cross out your carried number once you add it. This stops you from counting it again."
+  },
+  "maths-23-additive-equivalent-fractions": {
+   "description": "Child gives 1/2 = 3/4 where the answer is 1/2 = 2/4, adding two to the top and bottom instead of multiplying both by two.",
+   "childHint": "Whatever you multiply the top by, you need to multiply the bottom by too."
+  },
+  "maths-46-reversed-coordinates": {
+   "description": "Reading the y-axis before the x-axis.",
+   "childHint": "Go along the corridor (x) before you go up the stairs (y)."
+  },
+  "maths-47-translation-by-gap": {
+   "description": "Counting the squares between two shapes instead of point-to-point.",
+   "childHint": "Pick one corner on the first shape. Count the squares to that same corner on the new shape."
+  },
+  "maths-52-ratio-to-fraction-confusion": {
+   "description": "Child gives 1/3 of the counters as red for a ratio of 1:3 where the answer is 1/4, using the second number as the whole instead of the total of both.",
+   "childHint": "A fraction is part of the whole. First, add the ratio parts to find the total."
+  },
+  "maths-58-restrictive-mean": {
+   "description": "Thinking the calculated mean must be one of the original numbers in the list.",
+   "childHint": "The mean is an average. Your final answer can be a decimal or a brand new number."
+  },
+  "maths-69-dropped-calculation-carry": {
+   "description": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+   "childHint": "Write your carried numbers clearly. Then add them to the next column."
+  },
+  "maths-62-reading-a-digit-at-face-value": {
+   "description": "Giving the face value of a digit while ignoring its place value completely.",
+   "childHint": "Look at where the digit sits. Its position changes its actual value!"
+  },
+  "maths-65-incorrect-rounding-place": {
+   "description": "Rounding to the nearest ten or thousand instead of the requested hundred.",
+   "childHint": "Check which place the question asks for. Then look at the digit after it."
+  },
+  "vr-series-step-applied-twice": {
+   "description": "Added the step twice from the last term, usually after losing track of the gaps.",
+   "childHint": "Take one jump from the last number, not two. Check the gaps first."
+  },
+  "maths-97-missing-value-mean-slip": {
+   "description": "Averaging only the given numbers and ignoring the missing one.",
+   "childHint": "Work backwards. Multiply the mean by the total number of items to find your grand total."
+  },
+  "maths-71-forgetting-part-of-a-multi-step-problem": {
+   "description": "A number the question gives is never used at all.",
+   "childHint": "List every number the question gives you. Check you have used each one."
+  },
+  "maths-77-treating-a-percentage-as-money": {
+   "description": "Subtracting the percentage digits directly as pounds or pence.",
+   "childHint": "Percent means \"out of 100\". It is a proportion, not an exact amount of money!"
+  },
+  "vr02-real-link-wrong-rule": {
+   "description": "Paired two words by a genuine link, a shared property or a real association, that is not the rule the group of three uses.",
+   "childHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+  },
+  "maths-89-wrong-angle-total": {
+   "description": "Uses the wrong total for the shape, typically 360 for a straight line or a triangle, or 90 for a straight line.",
+   "childHint": "Ask what the angles sit on first. A line is 180, a turn is 360."
+  },
+  "maths-94-incomplete-statistical-total": {
+   "description": "Leaving one bar or row out of a total, or comparing without combining first.",
+   "childHint": "Double-check the chart. Have you added together every single row or bar you need?"
+  },
+  "nvr-multi-part-tracking": {
+   "description": "Tracks only the biggest moving part; smaller elements' cycles ignored (types: series, analogy)",
+   "childHint": "Give every piece its own turn. Start with the big shape. Then the dot, then the shading."
+  },
+  "maths-83-money-place-value-slip": {
+   "description": "Dropping the pence and subtracting whole pounds only, or misaligning the pence.",
+   "childHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly."
+  },
+  "en-comparison-vehicle-misread": {
+   "description": "Child gives the quality of the thing a comparison compares TO, where the answer is the quality of the thing being described — reading the vehicle of a simile or metaphor as the subject.",
+   "childHint": "Find the two things being compared. The one being described is the one that matters."
+  },
+  "maths-88-incomplete-perimeter": {
+   "description": "Child gives 19 cm for a rectangle 8 cm by 3 cm where the answer is 22 cm, adding three sides and leaving one out.",
+   "childHint": "Walk all the way round the shape. Count every side once."
+  },
+  "maths-93-comparing-prices-ignoring-quantity": {
+   "description": "Child gives 30p where the answer is 5p, taking £1.20 from £1.50 without finding the price of one egg.",
+   "childHint": "The packs hold different amounts. Find the price of one first."
+  },
+  "nvr-wrong-mirror-axis": {
+   "description": "Reflects across the wrong line — top-to-bottom where the mirror is vertical, or the reverse. Occurs WHEREVER A MIRROR LINE IS GIVEN, including on folds and plan views, not only on figures named as reflections.",
+   "childHint": "Find the mirror line first. An upright line swaps left and right. A flat line swaps up and down."
+  },
+  "nvr-net-mark-orientation": {
+   "description": "Checks which faces meet but not which way marks point after folding.",
+   "childHint": "Arrows are sneaky. Check which way each one points after the fold."
+  },
+  "vr03-wrong-link": {
+   "description": "Found a genuine relationship between the pair and applied it consistently, but not the one the example shows.",
+   "childHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+  },
+  "en-parallel-read-as-sequence": {
+   "description": "The child reads two parallel descriptions of one thing as two moments in time. Where a writer gives the same subject twice — two ways of seeing it, two accounts of it, two things it is at once — she converts the pair into a sequence and looks for what changed between them. Nothing changed. What differs is the vantage, not the subject, and the relation between the two descriptions is what the question asks for.",
+   "childHint": "These two descriptions are of the same thing at the same time. Ask what is different about who is looking."
+  },
+  "nvr-rotation-for-reflection": {
+   "description": "Accepts a rotation where a mirror is required.",
+   "childHint": "Imagine folding along the line. Every part should land exactly on its twin."
+  },
+  "maths-48-reflection-as-sliding": {
+   "description": "Just sliding the shape across the mirror line instead of flipping it.",
+   "childHint": "A mirror flips things backwards. The closest point to the mirror stays closest in the reflection."
+  },
+  "maths-02-zero-placeholder-added-incorrectly": {
+   "description": "Child gives 3004 for \"three hundred and four\" where the answer is 304.",
+   "childHint": "Check your columns. Hundreds, tens, and ones should only take up three spaces, not four."
+  },
+  "maths-11-commutative-subtraction": {
+   "description": "Child gives 42 − 17 = 35 where the answer is 25, taking the smaller digit from the larger in each column regardless of which sits on top.",
+   "childHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+  },
+  "maths-proc-01-stopped-at-the-first-answer": {
+   "description": "Completes part of the chain correctly and gives that intermediate result, without carrying on to the step the question asks for. In a backwards problem the completed part may be the last operation rather than the first.",
+   "childHint": "You found part of it. Now read the question again and finish."
+  },
+  "maths-104-gave-a-different-average": {
+   "description": "Child gives 4 for the mean of 7, 9, 6 and 10 where the answer is 8, giving the range instead.",
+   "childHint": "Mean means add them up, then share. Check which one is asked."
+  },
+  "maths-107-miscounted-across-zero": {
+   "description": "Child gives -4 for 4 falling by 9 where the answer is -5, counting zero as one of the nine steps.",
+   "childHint": "Zero is a place you pass, not a step. Count the jumps."
+  },
+  "maths-74-comparing-fractions-incorrectly": {
+   "description": "Sees matching top numbers and concludes the fractions are the same size.",
+   "childHint": "The top numbers match, so look at the bottoms. Smaller bottoms make bigger pieces."
+  },
+  "vr04-wrong-strength": {
+   "description": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+   "childHint": "Check how strong the word is. A quiet word needs a quiet answer."
+  },
+  "maths-24-inverted-fraction-of-an-amount": {
+   "description": "Child gives 2/3 of 12 = 18 where the answer is 8, using three halves of 12 instead of two thirds.",
+   "childHint": "Check which number is on top. Turning it over changes the fraction."
+  },
+  "vr04-one-feature-only": {
+   "description": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+   "childHint": "That is one sign of it. The word itself means something wider."
+  },
+  "en-technique-effect-mislocated": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only."
+  },
+  "vr21-associated-not-same": {
+   "description": "Chose a goes-together word, not a means-the-same word.",
+   "childHint": "Could you swap one word for the other in a sentence? Twins can swap."
+  },
+  "vr03-part-for-kind": {
+   "description": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+   "childHint": "A part is not the same as a whole. Check what the first pair gave you."
+  },
+  "maths-51-additive-scaling": {
+   "description": "Child gives 6 cakes from 4 eggs where the answer is 8, adding two to both sides instead of doubling.",
+   "childHint": "Recipes scale up by multiplication. If you double the eggs, you need to double the cakes too."
+  },
+  "maths-53-ignoring-the-pictogram-key": {
+   "description": "Child gives 4 where the answer is 20, counting four pictures as four items when the key says each picture stands for five.",
+   "childHint": "Always check the key before you start counting. Sometimes one picture stands for 2, 5, or even 10 things."
+  },
+  "en-vocab-form-lookalike": {
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all — she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word."
+  },
+  "en-determiner-omitted": {
+   "description": "Leaves the determiner out altogether before a singular countable noun, treating a, an and the as optional rather than required. Distinct from en-article-definiteness, which is a choice BETWEEN articles, and from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "A single thing needs a word in front of it. Say the line aloud and listen."
+  },
+  "en-vocab-neighbouring-sense": {
+   "description": "The child chooses another genuine sense of the same word, neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. This holds only where the surrounding text fixes the sense decisively. Where it does not, the option is a defensible second answer and the item is faulty rather than hard. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be."
+  },
+  "en-narrator-voice-as-fact": {
+   "description": "The child treats a crowd's opinion that the narrator reports in flat, certain sentences as the narrator's own verdict, and so takes it as settled truth rather than as something the text is quietly laughing at. Distinct from en-extreme-option-pull, which is about the pull of absolute wording; this one is about mistaking whose voice is speaking.",
+   "childHint": "Before you take this as true, ask whose opinion it is."
+  },
+  "en-relative-pronoun-choice": {
+   "description": "Picks a relative pronoun by habit rather than by what it stands for: which for people, whose in place of who, whom in a subject slot.",
+   "childHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone."
+  },
+  "maths-57-mean-vs-median": {
+   "description": "Just picking the middle number in the list.",
+   "childHint": "The middle number is the median. To find the mean, you need to add them all up and divide."
+  },
+  "en-whole-text-absence-asserted": {
+   "description": "The passage sustains an ABSENCE across its whole length — it never states a feeling, never names a motive, never gives a verdict — and the option asserts the withheld thing as though it were there. There is no negative word to drop, because the negation is a property of the text rather than of any line: the child has failed to notice something maintained across sixty lines, not misread a word in one. Characteristically the option is defeated by no single line and only by the absence itself, so its disposal must cite the SPAN of the withholding rather than a disposal point.",
+   "childHint": "Choose a line number for the option you like. If you cannot find one anywhere in the passage, that option is not it."
+  },
+  "en-negation-dropped": {
+   "description": "The passage carries an explicit negative — no, not, never, nothing, without, could not, sha'n't — and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line. A negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "A negative word can change the whole answer. Read the line again for one."
+  },
+  "en-comparative-superlative-form": {
+   "description": "Errors in forming or choosing comparatives and superlatives: double marking (most fastest), the comparative used for a whole group, or the bare adjective after 'the'.",
+   "childHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job."
+  },
+  "nvr-hidden-footprint-blocks": {
+   "description": "Counts only visible cubes in plan views, missing footprint squares behind or under stacks.",
+   "childHint": "A tall tower still covers one square from above. Count where each column stands."
+  },
+  "en-coordination-wrong-conjunct": {
+   "description": "The target word sits in a coordination — X and Y, X as well as Y, X as Y, X beside Y — and the child attaches the meaning to the wrong conjunct. She takes the half of the pair she read last, or the half that is easier to picture, and glosses the target with it. The error is syntactic: she has parsed which item the word attaches to incorrectly, and the option she picks is usually TRUE of the other conjunct, which is why it survives a check against the passage.",
+   "childHint": "This word is joined to another one. Work out which of the two the question is asking about before you answer."
+  },
+  "vr18-partial-rule": {
+   "description": "Used only one of the two outer numbers in the rule.",
+   "childHint": "The middle number is made from both outside numbers. How do they combine?"
+  },
+  "maths-49-universal-symmetry": {
+   "description": "Assuming all triangles have a vertical line of symmetry.",
+   "childHint": "Only isosceles and equilateral triangles have lines of symmetry. A scalene triangle has none at all!"
+  },
+  "nvr-series-phase-slip": {
+   "description": "Loses their place in a repeating cycle — extends the wrong strand of an alternation, or lands one step early or late. Occurs WHEREVER A CYCLE REPEATS, whether the repetition runs along a series, across a matrix row, or around a rotation.",
+   "childHint": "Each frame copies its own team, not its neighbour. Follow 1-3-5, or follow 2-4."
+  },
+  "maths-54-reading-the-gap": {
+   "description": "Looking at the white space instead of the top of the bar in a bar chart.",
+   "childHint": "Follow the flat top of the bar straight across to the axis to read the number."
+  },
+  "nvr-code-row-swap": {
+   "description": "Binds top-row meaning to bottom-row letters or loses row alignment (types: codes)",
+   "childHint": "Point at each row and say what it stands for. Then read the letters in that order."
+  },
+  "nvr-transform-not-applied": {
+   "description": "Chooses the option that most resembles the untransformed figure — the transformation is identified and then not carried out. Occurs WHEREVER A TRANSFORM IS STATED, whichever way it is stated: an analogy, a series step, a fold, a reflection.",
+   "childHint": "Say the change out loud first, like 'it turns and goes stripy'. Now do that to the new shape."
+  },
+  "nvr-count-by-glance": {
+   "description": "Estimates counts of small repeated marks; off-by-one options succeed (types: all)",
+   "childHint": "Count each mark one at a time. A full-looking picture can still hold fewer."
+  },
+  "maths-55-ignoring-line-graph-scale-divisions": {
+   "description": "Reading the axis numbers but ignoring what the smaller tick marks represent.",
+   "childHint": "Do not just guess where the line sits. Work out exactly what one little square is worth on the axis first."
+  },
+  "maths-56-incomplete-mean": {
+   "description": "Adding all the numbers together but forgetting to divide.",
+   "childHint": "The mean shares things equally. Once you have the total, divide by how many items there are."
+  },
+  "maths-60-ignoring-the-outside-of-a-venn-diagram": {
+   "description": "Forgetting to record items that fit into neither category.",
+   "childHint": "Every piece of data needs a home! If it does not fit in a circle, write it outside."
+  },
+  "maths-61-reading-the-wrong-place-value-column": {
+   "description": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+   "childHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?"
+  },
+  "maths-63-misaligned-addition-carry": {
+   "description": "Adding or losing a carried number into the wrong column.",
+   "childHint": "Only carry into the very next column on the left. Do not skip a space."
+  },
+  "nvr-code-nearest-box-copy": {
+   "description": "Copies the letter pair of the most similar keyed figure wholesale.",
+   "childHint": "The test shape needs its own letters. Build the code one letter at a time."
+  },
+  "nvr-code-partial-verification": {
+   "description": "Verifies one code letter position and accepts the first option containing it.",
+   "childHint": "Every letter is its own clue. Crack each one before you pick."
+  },
+  "nvr-matrix-local-copy": {
+   "description": "Completes a grid from the nearest visible cell, not the whole-grid rule.",
+   "childHint": "Look at the whole big square. Check the far corner, not just the cell next door."
+  },
+  "nvr-partial-rule-match": {
+   "description": "Satisfies one clause of a multi-clause classification rule and stops.",
+   "childHint": "The rule may have more than one part. Check your answer against every part."
+  },
+  "nvr-relational-rule-miss": {
+   "description": "Hunts single surface differences, missing rules that link two parts of each figure.",
+   "childHint": "If nothing stands out, compare two parts inside each picture. Sometimes they must match each other."
+  },
+  "nvr-single-axis-fixation": {
+   "description": "Applies the first change spotted and misses compounded second or third axes.",
+   "childHint": "Found one change? Hunt for a second. Check shading, size and direction before you choose."
+  },
+  "nvr-surface-similarity": {
+   "description": "Picks what looks most like the exemplars instead of testing the defining property.",
+   "childHint": "The right answer is allowed to look different. Ask what secret rule they all obey."
+  },
+  "maths-67-dropped-internal-placeholder": {
+   "description": "Forgetting the zero placeholder for an empty column when writing a number from parts.",
+   "childHint": "Does a column have nothing in it? Use a zero to hold that empty space."
+  },
+  "maths-68-wrong-power-of-ten-scaling": {
+   "description": "Dividing by 10 or 1000 instead of 100 when finding how many hundreds fit into a number.",
+   "childHint": "One hundred has two zeros. Make sure you divide by 100, not a different number."
+  },
+  "maths-73-digit-by-digit-division": {
+   "description": "Dividing each digit on its own and dropping the remainders completely.",
+   "childHint": "Leftovers matter! If a column does not divide perfectly, carry the remainder to the next digit."
+  },
+  "maths-79-dividing-by-a-fraction-error": {
+   "description": "Adding the fraction or treating a half as one whole when dividing.",
+   "childHint": "How many halves can you pour into one whole litre?"
+  },
+  "maths-78-percentage-fraction-confusion": {
+   "description": "Child gives 25% of 80 = 40 where the answer is 20, treating 25% as a half rather than a quarter.",
+   "childHint": "50% is a half. 25% is exactly half of that, which makes it one quarter!"
+  },
+  "en-subject-verb-agreement-by-proximity": {
+   "description": "Agrees the verb with the nearest noun instead of the true subject, usually across an of-phrase: 'the row of new labels were'.",
+   "childHint": "Ignore the of-part. Match the verb to what is left."
+  },
+  "en-question-tag-polarity": {
+   "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+   "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did."
+  },
+  "en-within-span-wrong-element": {
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange — one child's answer offered where the other child's instruction was asked for. The cure is the same in both cases, so the sub-route shares this hint.",
+   "childHint": "Being in the lines is not enough. Check it answers the question you were asked."
+  },
+  "en-emotion-label-approximation": {
+   "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+   "childHint": "Find the words in the text that show the feeling. Close is not the same."
+  },
+  "maximum-given-for-a-sum": {
+   "description": "answers a total question with the largest single value instead of adding the values.",
+   "childHint": "The biggest number alone is not the total. A total needs every value added."
+  },
+  "maths-80-adding-fractions-straight-across": {
+   "description": "Adding the top numbers together and the bottom numbers together.",
+   "childHint": "Make the bottom numbers match first. Once they match, only add the top numbers together."
+  },
+  "maths-82-fraction-of-the-wrong-whole": {
+   "description": "Halving the starting total instead of the remaining amount in a multi-step fraction problem.",
+   "childHint": "Are you finding a fraction of the total, or of what is left?"
+  },
+  "vr07-operation-slip": {
+   "description": "Added when the sum needed another operation.",
+   "childHint": "Look at the signs first. Is it plus, minus or times?"
+  },
+  "ordering-goal-reversed": {
+   "description": "orders the digits soundly but toward the wrong goal, building the largest number where the smallest is asked, or the reverse.",
+   "childHint": "Check which the question asks for, smallest or largest. These digits were ordered the other way."
+  },
+  "en-spelling-form-lookalike": {
+   "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+   "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape."
+  },
+  "vr14-step-direction": {
+   "description": "Moved backwards through the alphabet instead of forwards.",
+   "childHint": "Draw the arrow: which way did the first pair travel?"
+  },
+  "vr03-example-anchor": {
+   "description": "Chose a word related to the first pair rather than applying the relationship to the second.",
+   "childHint": "The first pair only shows the rule. Now use that rule on the new word."
+  },
+  "vr07-value-slip": {
+   "description": "Substituted one letter with the neighbouring value.",
+   "childHint": "Write each letter’s number above it before you add."
+  },
+  "vr03-same-topic": {
+   "description": "Chose a word from the same topic without the same relationship.",
+   "childHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+  },
+  "vr01-second-word-only": {
+   "description": "Chose a letter that completes only the second word.",
+   "childHint": "Check the first word too. Your letter must finish it as well."
+  },
+  "vr03-reversed-relation": {
+   "description": "Applied the relationship backwards.",
+   "childHint": "Check which way round the first pair goes. Keep your answer the same way round."
+  },
+  "vr06-ignores-sentence": {
+   "description": "Made a real word that does not fit the sentence.",
+   "childHint": "Read the whole sentence with your word in it. Does it make sense?"
+  },
+  "vr15-clue-flip": {
+   "description": "Read a comparison the reverse way (taller vs shorter).",
+   "childHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+  },
+  "vr04-associated-not-same": {
+   "description": "Chose an associated word rather than a synonym.",
+   "childHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
+  },
+  "vr01-completes-neither": {
+   "description": "Chose a letter that completes neither word.",
+   "childHint": "Say both finished words out loud. Are they both real?"
+  },
+  "vr12-meaning-not-word": {
+   "description": "Chose a pairing that makes sense but not a real compound word.",
+   "childHint": "The two halves must make one real word you have seen written."
+  },
+  "vr15-first-mention": {
+   "description": "Chose whoever was mentioned first rather than following the clues.",
+   "childHint": "Use every clue to put them in order before you answer."
+  },
+  "maths-95-reading-the-wrong-statistical-quantity": {
+   "description": "Counting the number of categories instead of the data values.",
+   "childHint": "Look at the axis labels. Are you counting the right things?"
+  },
+  "vr01-first-word-only": {
+   "description": "Chose a letter that completes only the first word.",
+   "childHint": "Your letter has to finish both words. Try it in each gap."
+  },
+  "maths-01-zero-placeholder-missing": {
+   "description": "Child gives 34 for \"three hundred and four\" where the answer is 304.",
+   "childHint": "Say the number out loud. Is there a column where a zero needs to stand guard?"
+  },
+  "maths-05-shorter-decimals-are-larger": {
+   "description": "Believing 0.4 is larger than 0.45 because tenths are bigger than hundredths.",
+   "childHint": "Fill the empty spaces with zeros until both numbers are the same length. Then compare them."
+  },
+  "maths-06-multiplying-by-10-adds-a-zero": {
+   "description": "Child gives 3.4 × 10 = 3.40 where the answer is 34, applying a whole-number rule to a decimal.",
+   "childHint": "Multiplying by 10 moves each digit one place to the left. The decimal point does not move."
+  },
+  "vr02-partial-group": {
+   "description": "Found one odd word but paired it with a group member.",
+   "childHint": "Name the group first. Both odd ones sit outside it."
+  },
+  "maths-10-rounding-exact-halves": {
+   "description": "Rounding numbers ending in .5 down instead of up.",
+   "childHint": "Exactly halfway always rounds up. If it ends in 5, go up to the next number."
+  },
+  "maths-03-decimal-alignment": {
+   "description": "Child gives 3.4 + 12.56 = 12.90 where the answer is 15.96, lining up the right-most digits instead of the decimal points.",
+   "childHint": "Line up the decimal points in a perfectly straight line before you start adding."
+  },
+  "maths-04-longer-decimals-are-larger": {
+   "description": "Believing 0.345 is larger than 0.4 because it has more digits.",
+   "childHint": "Look at the tenths column first. Which number has more tenths?"
+  },
+  "maths-08-negative-number-inversion": {
+   "description": "Believing −10 is greater than −5.",
+   "childHint": "Picture a thermometer. Which number is colder and further down the scale?"
+  },
+  "maths-100-steps-out-of-order": {
+   "description": "Child gives 50 degrees where the answer is 70, halving 180 before taking away the 40.",
+   "childHint": "Say the steps out loud in order. Then do them one at a time."
+  },
+  "maths-101-unlike-denominators-cannot-be-compared": {
+   "description": "Child gives \"cannot tell\" for 3/8 against 3/5 where the answer is 3/5, believing fractions with different bottoms cannot be compared.",
+   "childHint": "Any two fractions can be compared. Draw each one and see which covers more."
+  },
+  "maths-34-starting-measurement-at-1": {
+   "description": "Placing the edge of the object at the '1' mark on a ruler instead of the '0'.",
+   "childHint": "Line up the edge of your object with the zero line. Do not start at one."
+  },
+  "maths-110-missing-value-equals-the-average": {
+   "description": "Assumes the unknown in a reverse-mean problem is the mean itself. Child gives 6 for the fifth number where four numbers are 4, 8, 5 and 9 and the mean is 6, and the answer is 4.",
+   "childHint": "The mean is what they share out to. Any number can sit above or below it."
+  },
+  "maths-102-scaled-by-the-difference": {
+   "description": "Child gives £1.20 for 5 apples where the answer is £1.00, multiplying by the two extra apples rather than by five.",
+   "childHint": "Multiply by how many you need now. Not by how many more."
+  },
+  "maths-103-scaled-by-the-original-count": {
+   "description": "Child gives £0.60 for 5 apples where the answer is £1.00, finding 20p each and multiplying by three again.",
+   "childHint": "You found one share. Now count how many you need."
+  },
+  "maths-105-divided-by-the-other-quantity": {
+   "description": "Child gives 13p where the answer is 5p, dividing 120 by ten and 150 by six.",
+   "childHint": "Match each price to its own pack. Keep the pairs together."
+  },
+  "maths-84-adding-instead-of-finding-the-difference": {
+   "description": "Adding lengths or money together when asked for the change or amount left over.",
+   "childHint": "Words like \"change\" or \"left\" usually mean subtraction. Take the amount away instead of adding."
+  },
+  "maths-108-multiplied-instead-of-dividing-by-a-fraction": {
+   "description": "Child gives 2 for the number of half-litre glasses in 4 litres where the answer is 8, working out four halves instead.",
+   "childHint": "Ask how many fit inside. That is a sharing question, not a times."
+  },
+  "maths-109-ran-the-machine-forwards": {
+   "description": "Applies the stated operation instead of its inverse when working backwards. Child gives 19 for □ + 7 = 12 where the answer is 5, adding the seven instead of taking it away.",
+   "childHint": "Going backwards undoes each step. Take away where it added."
+  },
+  "vr21-opposite-pull": {
+   "description": "Gave the word’s opposite where its meaning was asked.",
+   "childHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+  },
+  "maths-15-multiplication-always-makes-it-bigger": {
+   "description": "Believing this is a universal rule (becomes an issue with fractions/decimals).",
+   "childHint": "Multiplying means finding \"groups of\" a number. What happens if you find half a group of something?"
+  },
+  "maths-16-reversing-division": {
+   "description": "Child gives 3 divided by 12 = 4 where the answer is 0.25, treating division as working the same way round either way.",
+   "childHint": "Order matters in division! Are you sharing 12 sweets between 3 people, or 3 sweets between 12 people?"
+  },
+  "maths-17-decimal-remainders": {
+   "description": "Child gives 13 ÷ 5 = 2.3 where the answer is 2.6, writing the remainder after the point as though it were a decimal.",
+   "childHint": "A remainder is what is left over, but a decimal is a specific fraction. Try writing your remainder as a fraction instead."
+  },
+  "maths-19-context-blind-division": {
+   "description": "Child gives 4 cars for 21 children at 5 per car where the answer is 5, dropping the remainder instead of seeing that one child still needs a car.",
+   "childHint": "Look at what the question is asking. If there is a remainder, where will those extra people sit? You might need to round up."
+  },
+  "maths-20-factors-vs-multiples": {
+   "description": "Swapping the definitions.",
+   "childHint": "Factors fit into the number. Multiples are the times tables that multiply up and away!"
+  },
+  "maths-21-larger-denominator-means-larger-fraction": {
+   "description": "Child gives 1/8 as bigger than 1/4 where the answer is 1/4, reading the bigger bottom number as the bigger share.",
+   "childHint": "The bottom number tells you how many slices the cake is cut into. If you cut it into more slices, what happens to the size of each slice?"
+  },
+  "maths-31-dropping-the-zero-in-money": {
+   "description": "Writing £3.5 instead of £3.50.",
+   "childHint": "Money always needs two decimal places to show the pennies. Add a placeholder zero."
+  },
+  "maths-27-improper-fractions-are-wrong": {
+   "description": "Trying to convert an improper fraction to a mixed number before multiplying, causing calculation errors.",
+   "childHint": "Top-heavy fractions are perfectly fine for working out the maths. You only need to turn them back at the very end."
+  },
+  "maths-29-comparing-without-common-denominators": {
+   "description": "Child gives 3/8 > 2/3 where the answer is 2/3 > 3/8, comparing numerators alone.",
+   "childHint": "You cannot compare them fairly until they are speaking the same language. Make the bottom numbers match first."
+  },
+  "maths-30-fractions-of-different-wholes": {
+   "description": "Child gives 1/4 of a 20 cm ribbon as the same length as 1/4 of a 40 cm ribbon where the answers are 5 cm and 10 cm, treating a fraction as a fixed amount rather than a share of its own whole.",
+   "childHint": "Fractions show proportions, not exact sizes. A quarter of a small pizza differs from a massive one!"
+  },
+  "maths-33-12-24-hour-confusion": {
+   "description": "Writing 12:00 for midnight or 00:00 for midday.",
+   "childHint": "In the 24-hour clock, the day starts at exactly 00:00 (midnight)."
+  },
+  "maths-36-multiplying-to-convert-to-a-larger-unit": {
+   "description": "Multiplies instead of dividing when converting up, so gives 100 cm = 10,000 m where the answer is 1 m.",
+   "childHint": "A metre is much larger than a centimetre, so you will need fewer of them. If you are going to a larger unit, you need to divide."
+  },
+  "maths-37-metric-prefix-confusion": {
+   "description": "Child gives 1 kg = 100 g where the answer is 1,000 g, using the hundred from centimetres and metres.",
+   "childHint": "\"Kilo\" always means one thousand. There are 1,000 grams in a kilogram."
+  },
+  "maths-22-adding-numerators-and-denominators": {
+   "description": "Child gives 1/2 + 1/3 = 2/5 where the answer is 5/6.",
+   "childHint": "You can only add fractions when the bottom numbers are exactly the same. Find a common denominator first."
+  },
+  "maths-64-leading-zero-ordering-slip": {
+   "description": "Placing a zero first when building the smallest possible number.",
+   "childHint": "A whole number cannot start with a zero. Pick the next smallest digit to lead."
+  },
+  "maths-66-negative-number-miscount": {
+   "description": "Miscounting steps when crossing zero, or ignoring the minus sign entirely.",
+   "childHint": "Count down past zero. The numbers keep going on the other side."
+  },
+  "maths-70-two-digit-column-totals": {
+   "description": "Writing the full two-digit total in a single column without carrying.",
+   "childHint": "Only one digit can go in each column! Carry the extra over to the left."
+  },
+  "maths-81-forgetting-to-subtract-the-discount": {
+   "description": "Calculating the discount correctly but stopping before taking it off the original price.",
+   "childHint": "You found the discount, well done! Now subtract it from the starting price to finish."
+  },
+  "maths-85-miscount-or-rounding-in-measures": {
+   "description": "Adding the item count to the price or multiplying by one fewer item.",
+   "childHint": "Use multiplication for repeated groups. Take the exact price and multiply by the exact count."
+  },
+  "maths-90-composite-shape-area-slip": {
+   "description": "Using the whole bounding box and forgetting the cut-out, or adding a cut-out instead of subtracting.",
+   "childHint": "Find the area of the whole block first, then subtract the piece that was cut away."
+  },
+  "maths-92-unitary-proportion-slip": {
+   "description": "Child gives £3.00 for 5 apples where the answer is £1.00, multiplying the price of three apples by five.",
+   "childHint": "Find the cost of just one first. Then multiply that."
+  },
+  "maths-96-mean-calculation-slip": {
+   "description": "Child gives 16 for the mean of four scores totalling 32 where the answer is 8, dividing by two instead of by four.",
+   "childHint": "Count how many numbers you added. Divide by that."
+  },
+  "maths-98-digit-dropped-in-column-work": {
+   "description": "Child gives 234 + 158 = 292 where the answer is 392, setting the sum down with only part of one number.",
+   "childHint": "Line the digits up in their columns. Every digit needs a place."
+  },
+  "en-article-avoids-the-sound-choice": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?"
+  },
+  "vr05-single-word-only": {
+   "description": "Searched inside single words instead of across the join.",
+   "childHint": "The hidden word loves to hide across two words. Check where they meet."
+  },
+  "vr13-not-a-word": {
+   "description": "Assembled letters that do not form a real word.",
+   "childHint": "Say your finished word out loud. Is it one you know?"
+  },
+  "vr16-synonym-pull": {
+   "description": "Chose a word meaning the same instead of the opposite.",
+   "childHint": "You found a twin. Now find the reverse."
+  },
+  "vr17-arith-slip": {
+   "description": "Right method, arithmetic slip of one or two.",
+   "childHint": "Your plan is right. Recount the last step slowly."
+  },
+  "vr17-one-side-only": {
+   "description": "Solved one side of the equation and stopped.",
+   "childHint": "Work out both sides. The answer makes them balance like scales."
+  },
+  "vr18-rule-swap": {
+   "description": "Applied a nearby rule (added instead of multiplied).",
+   "childHint": "Test your rule on the first group before using it on the second."
+  },
+  "vr02-answered-the-opposite": {
+   "description": "chooses two words that do go together by the group's own rule, answering which two belong instead of which two are odd.",
+   "childHint": "Those two do belong together. The question asks for the two that do not."
+  },
+  "vr20-sound-alike": {
+   "description": "Chose a letter that sounds right but spells a non-word.",
+   "childHint": "Spell the finished word letter by letter. Is that how it is really written?"
+  },
+  "vr21-too-strong": {
+   "description": "Chose a much stronger or weaker version of the meaning.",
+   "childHint": "Nearly! Match the size of the meaning too. Huge is more than big."
+  },
+  "vr-move-letter-first-word-invalid": {
+   "description": "Chose a letter whose removal does not leave a real first word.",
+   "childHint": "Take the letter out and read what is left. Is that first word a real word?"
+  },
+  "vr-move-letter-second-word-invalid": {
+   "description": "Chose a letter that does not make a real second word when added.",
+   "childHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?"
+  },
+  "vr13-wrong-pieces": {
+   "description": "Took letters from the middle instead of the shown positions.",
+   "childHint": "Look at where the example word takes its letters from. Copy those exact positions."
+  },
+  "vr16-loose-opposite": {
+   "description": "Chose a loosely different word, not a true opposite.",
+   "childHint": "A true opposite flips the meaning exactly, like hot and cold."
+  },
+  "vr19-shared-letter-miss": {
+   "description": "Missed that repeated letters share one digit.",
+   "childHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+  },
+  "vr02-surface-link": {
+   "description": "Grouped by look or sound instead of meaning.",
+   "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+  },
+  "vr10-first-pair-word-returned": {
+   "description": "Gives back a word from the first pair instead of completing the second, copying what the question already shows.",
+   "childHint": "That word is already in the first pair. The second pair needs its own answer."
+  },
+  "vr-series-off-by-one": {
+   "description": "Identified the rule but slipped by one when applying it.",
+   "childHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+  },
+  "vr-series-step-carryover": {
+   "description": "Reused the previous step instead of spotting that the step size changes.",
+   "childHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+  },
+  "vr-series-sum-of-last-two": {
+   "description": "Read the series as each term being the sum of the two before it, and added the last pair.",
+   "childHint": "Look at the gap between each pair. The gap is what tells you the next number."
+  },
+  "en-plausible-not-stated": {
+   "description": "Picks real-world-plausible options the passage never states, especially motives.",
+   "childHint": "Sounding sensible is not enough. Find the line that proves it."
+  },
+  "en-relation-word-flipped": {
+   "description": "The child reads a word that names a relationship between two things (contrast, unless, however, instead of) as its opposite, usually as plain 'and' or 'the same as'. The result is an option that keeps every fact but reverses how the facts sit together.",
+   "childHint": "Some words tell you how two things go together. Find that word and read it again."
+  },
+  "en-extreme-option-pull": {
+   "description": "Chooses always/never/impossible options when the text is measured.",
+   "childHint": "Does the passage really go that far? Check the strongest word in the option."
+  },
+  "en-vocab-built-from-parts": {
+   "description": "The child takes the word apart into parts she has met in other words and sums them. She has not mistaken which word it is — she has taken it apart, and the parts are real while the sum is not the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "The parts of a word do not always add up. Check the whole word in the sentence."
+  },
+  "en-figurative-taken-literally": {
+   "description": "Reads similes and idioms as literal events.",
+   "childHint": "Figures of speech are not facts. Ask what the words are really saying."
+  },
+  "en-repetition-purpose": {
+   "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+   "childHint": "Writers repeat on purpose. Ask what the echo does to the reader."
+  },
+  "en-attribute-transfer": {
+   "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.",
+   "childHint": "Check who or what each detail belongs to in the text."
+  },
+  "en-cause-agent-swap": {
+   "description": "Attributes the right event to the wrong cause or character.",
+   "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step."
+  },
+  "en-wrong-scope-retrieval": {
+   "description": "Answers from a detail in the wrong part of the passage.",
+   "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to."
+  },
+  "vr04-wrong-shade": {
+   "description": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+   "childHint": "Close is not the same. Ask exactly what the word you were given means."
+  },
+  "vr04-keeps-the-same-company": {
+   "description": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+   "childHint": "Both words could fit the same story. Ask whether they mean the same."
+  },
+  "vr04-the-other-meaning": {
+   "description": "Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in \"stayed HUMBLE after winning\" — the humble-cottage sense). T4/T5 only.",
+   "childHint": "The word in capitals has more than one meaning. Read the sentence and pick the one it shows."
+  },
+  "en-vocab-dominant-sense": {
+   "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+   "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here."
+  },
+  "en-agent-patient-reversal": {
+   "description": "Swaps who did or thought something, or who it was done to.",
+   "childHint": "Ask who is doing it and who it is being done to."
+  },
+  "en-minimal-pair-skim": {
+   "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail.",
+   "childHint": "An answer can look almost like the text. Find what differs and check it against the text."
+  },
+  "en-vocab-not-this-word": {
+   "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form.",
+   "childHint": "This word never means that. Put your answer in its place. Read the sentence again."
+  },
+  "vr03-wrong-degree": {
+   "description": "Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size).",
+   "childHint": "You found the right link. Now check how big the change is."
+  },
+  "en-chronology-collapse": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for."
+  },
+  "vr-letter-series-direction": {
+   "description": "Moved backwards through the alphabet instead of forwards.",
+   "childHint": "Which way is the series moving through the alphabet? Check the first two letters."
+  },
+  "en-technique-device-confusion": {
+   "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+   "childHint": "Does the line say like or as? A comparison using those words is a simile."
+  },
+  "leading-zero-repaired-ordering-not": {
+   "description": "keeps zero off the front, as the rule requires, but leads with a larger digit than the digits allow; the leading-zero rule learned, the ordering beneath it still wrong.",
+   "childHint": "The zero is rightly not first. But a smaller digit could still lead."
+  },
+  "percentage-never-divided-by-hundred": {
+   "description": "multiplies by the percentage figure and never divides by one hundred, so the answer grows where it should shrink.",
+   "childHint": "This answer treats the percentage as a whole number. A percentage is a share out of one hundred."
+  },
+  "side-recounted-from-a-reached-corner": {
+   "description": "adds a side length again from a corner the move has already reached, so one side is counted twice.",
+   "childHint": "That point lies one whole side too far. The corner was already reached."
+  },
+  "en-contradicted-by-the-text": {
+   "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+   "childHint": "The passage says something different. Go back and find it."
+  },
+  "en-technique-structure-effect-blind": {
+   "description": "Child gives what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern), reading content where the question asks about shape.",
+   "childHint": "Notice how the writer has built it, not just what it says. What does that do for the reader?"
+  },
+  "en-a-an-by-spelling": {
+   "description": "Chooses a/an by following letter rather than sound.",
+   "childHint": "Listen to the sound that starts the next word."
+  },
+  "en-article-definiteness": {
+   "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "Has the text named it already? That changes which little word fits."
+  },
+  "en-contraction-apostrophe": {
+   "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+   "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were."
+  },
+  "en-homophone-by-sound": {
+   "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+   "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+  },
+  "en-n-option-avoidance": {
+   "description": "Never selects the no-mistake option in error-spotting.",
+   "childHint": "Check every part in turn. No mistake is a real answer, not a way out."
+  },
+  "en-silent-letter-dropped": {
+   "description": "Drops silent letters when spelling.",
+   "childHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+  },
+  "en-speech-punctuation-inside": {
+   "description": "Places a quoted question's mark outside the speech marks.",
+   "childHint": "The question belongs to the spoken words. Keep the mark inside."
+  },
+  "en-unstressed-medial-vowel": {
+   "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+   "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it."
+  },
+  "vr14-step-size": {
+   "description": "Counted the jump one letter short or long.",
+   "childHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+  },
+  "vr-letter-series-off-by-one": {
+   "description": "Correct rule, but landed one letter short or long.",
+   "childHint": "Count along the alphabet again. Land one letter at a time."
+  },
+  "en-preposition-collocation": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
+  },
+  "en-tense-sequence": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+  },
+  "en-word-class-by-ending": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+  },
+  "en-paired-punctuation": {
+   "description": "Misses unclosed brackets or quotes.",
+   "childHint": "Brackets come in pairs, like shoes. Hunt for the partner."
+  },
+  "maths-99-rounded-without-compensating": {
+   "description": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+   "childHint": "Rounding helps you check an answer. Work the real numbers out too."
+  },
+  "maths-111-halved-instead-of-quartered": {
+   "description": "Child gives 20 for 1/4 of 40 where the answer is 10, finding half of the amount instead of a quarter of it.",
+   "childHint": "A quarter is one of four equal parts, not one of two. Split the amount into four equal parts first."
+  },
+  "maths-112-outside-angle-used-inside-the-triangle": {
+   "description": "Child gives 10° where the answer is 110°, taking the 140° angle beside the triangle on the straight line and the 30° angle from 180° as if 140° were an angle of the triangle, instead of first finding the triangle's angle there, 180° - 140° = 40°.",
+   "childHint": "Check that an angle is inside the triangle before you use it. Angles on a straight line add up to 180°."
+  },
+  "maths-113-lost-the-bridge-to-the-pound": {
+   "description": "Child gives £2.00 for the change from £8 for a £5.60 toy where the answer is £2.40, counting on from £5.60 to £6 and then to £8 but keeping only the £2 from £6 to £8 and losing the 40p bridge to the pound.",
+   "childHint": "Count on to the next pound, then on to the money given. Add both jumps to find the change."
+  },
+  "en-modal-conditional-form": {
+   "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+   "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past."
+  },
+  "maths-75-incomplete-fraction-of-an-amount": {
+   "description": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+   "childHint": "A fraction is two numbers working together. Use both."
+  },
+  "en-apostrophe-possession": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'."
+  },
+  "maths-114-read-from-the-digit-to-the-end": {
+   "description": "Child gives 652 for the 6 in 4,652 where the answer is 600, taking the digits from the 6 to the end of the number as its value.",
+   "childHint": "Keep that digit in its column and change all the other digits to zeros. The digits after it are not part of its value."
+  }
+ },
+ "passages": {
+  "stream-a-02-railway-children": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "Next morning Roberta woke Phyllis by pulling her hair gently, but quite enough for her",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "purpose.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "“Wassermarrer?” asked Phyllis, still almost wholly asleep.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "“Wake up! wake up!” said Roberta. “We're in the new house--don't you remember? No",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "servants or anything. Let's get up and begin to be useful. We'll just creep down mouse-",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "quietly, and have everything beautiful before Mother gets up. I've woke Peter. He'll be",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "dressed as soon as we are.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "So they dressed quietly and quickly. Of course, there was no water in their room, so",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "when they got down they washed as much as they thought was necessary under the spout of",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "the pump in the yard. One pumped and the other washed. It was splashy but interesting.",
+     "label": "10"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 11,
+     "text": "“It's much more fun than basin washing,” said Roberta. “How sparkly the weeds are",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "between the stones, and the moss on the roof--oh, and the flowers!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "The roof of the back kitchen sloped down quite low. It was made of thatch and it had",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "moss on it, and house-leeks and stonecrop and wallflowers, and even a clump of purple",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "flag-flowers, at the far corner.",
+     "label": "15"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 16,
+     "text": "“This is far, far, far and away prettier than Edgecombe Villa,” said Phyllis. “I wonder",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "what the garden's like.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "“We mustn't think of the garden yet,” said Roberta, with earnest energy. “Let's go in",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "and begin to work.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "They lighted the fire and put the kettle on, and they arranged the crockery for",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "breakfast; they could not find all the right things, but a glass ash-tray made an",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "excellent salt-cellar, and a newish baking-tin seemed as if it would do to put bread on,",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "if they had any.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "When there seemed to be nothing more that they could do, they went out again into the",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "fresh bright morning.",
+     "label": "25"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 26,
+     "text": "“We'll go into the garden now,” said Peter. But somehow they couldn't find the garden.",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "They went round the house and round the house. The yard occupied the back, and across it",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "were stables and outbuildings. On the other three sides the house stood simply in a",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "field, without a yard of garden to divide it from the short smooth turf. And yet they",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "had certainly seen the garden wall the night before.",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "It was a hilly country. Down below they could see the line of the railway, and the black",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "yawning mouth of a tunnel. The station was out of sight. There was a great bridge with",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "tall arches running across one end of the valley.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "“Never mind the garden,” said Peter; “let's go down and look at the railway. There might",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "be trains passing.”",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "“We can see them from here,” said Roberta, slowly; “let's sit down a bit.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "So they all sat down on a great flat grey stone that had pushed itself up out of the",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "grass; it was one of many that lay about on the hillside, and when Mother came out to",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "look for them at eight o'clock, she found them deeply asleep in a contented, sun-warmed",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "bunch.",
+     "label": "40"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 41,
+     "text": "They had made an excellent fire, and had set the kettle on it at about half-past five.",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "So that by eight the fire had been out for some time, the water had all boiled away, and",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "the bottom was burned out of the kettle. Also they had not thought of washing the",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "crockery before they set the table.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "“But it doesn't matter--the cups and saucers, I mean,” said Mother. “Because I've found",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "another room--I'd quite forgotten there was one. And it's magic! And I've boiled the",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "water for tea in a saucepan.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "The forgotten room opened out of the kitchen. In the agitation and half darkness the",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "night before its door had been mistaken for a cupboard's. It was a little square room,",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "and on its table, all nicely set out, was a joint of cold roast beef, with bread,",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "butter, cheese, and a pie.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "“Pie for breakfast!” cried Peter; “how perfectly ripping!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "“It isn't pigeon-pie,” said Mother; “it's only apple. Well, this is the supper we ought",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "to have had last night. And there was a note from Mrs. Viney. Her son-in-law has broken",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "his arm, and she had to get home early. She's coming this morning at ten.”",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "That was a wonderful breakfast. It is unusual to begin the day with cold apple pie, but",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "the children all said they would rather have it than meat.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "“You see it's more like dinner than breakfast to us,” said Peter, passing his plate for",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "more, “because we were up so early.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "The day passed in helping Mother to unpack and arrange things. Six small legs quite",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "ached with running about while their owners carried clothes and crockery and all sorts",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "of things to their proper places. It was not till quite late in the afternoon that",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "Mother said:--",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "“There! That'll do for to-day. I'll lie down for an hour, so as to be as fresh as a lark",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "by supper-time.”",
+     "label": "65"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 66,
+     "text": "Then they all looked at each other. Each of the three expressive countenances expressed",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "the same thought. That thought was double, and consisted, like the bits of information",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "in the Child's Guide to Knowledge, of a question and an answer.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "Q. Where shall we go?",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "A. To the railway.",
+     "label": "70"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 71,
+     "text": "So to the railway they went, and as soon as they started for the railway they saw where",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "the garden had hidden itself. It was right behind the stables, and it had a high wall",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "all round.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-03-wind-in-willows": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "The Mole had been working very hard all the morning, spring-cleaning his little home.",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "First with brooms, then with dusters; then on ladders and steps and chairs, with a brush",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "and a pail of whitewash; till he had dust in his throat and eyes, and splashes of",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "whitewash all over his black fur, and an aching back and weary arms. Spring was moving",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "in the air above and in the earth below and around him, penetrating even his dark and",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "lowly little house with its spirit of divine discontent and longing. It was small",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "wonder, then, that he suddenly flung down his brush on the floor, said “Bother!” and “O",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "blow!” and also “Hang spring-cleaning!” and bolted out of the house without even waiting",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "to put on his coat. Something up above was calling him imperiously, and he made for the",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "steep little tunnel which answered in his case to the gravelled carriage-drive owned by",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "animals whose residences are nearer to the sun and air. So he scraped and scratched and",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "scrabbled and scrooged and then he scrooged again and scrabbled and scratched and",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "scraped, working busily with his little paws and muttering to himself, “Up we go! Up we",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "go!” till at last, pop! his snout came out into the sunlight, and he found himself",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "rolling in the warm grass of a great meadow.",
+     "label": "15"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 16,
+     "text": "“This is fine!” he said to himself. “This is better than whitewashing!” The sunshine",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "struck hot on his fur, soft breezes caressed his heated brow, and after the seclusion of",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "the cellarage he had lived in so long the carol of happy birds fell on his dulled",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "hearing almost like a shout. Jumping off all his four legs at once, in the joy of living",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "and the delight of spring without its cleaning, he pursued his way across the meadow",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "till he reached the hedge on the further side.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "“Hold up!” said an elderly rabbit at the gap. “Sixpence for the privilege of passing by",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "the private road!” He was bowled over in an instant by the impatient and contemptuous",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "Mole, who trotted along the side of the hedge chaffing the other rabbits as they peeped",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "hurriedly from their holes to see what the row was about. “Onion-sauce! Onion-sauce!” he",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "remarked jeeringly, and was gone before they could think of a thoroughly satisfactory",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "reply.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "He thought his happiness was complete when, as he meandered aimlessly along, suddenly he",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "stood by the edge of a full-fed river. Never in his life had he seen a river before—this",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "sleek, sinuous, full-bodied animal, chasing and chuckling, gripping things with a gurgle",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "and leaving them with a laugh, to fling itself on fresh playmates that shook themselves",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "free, and were caught and held again. All was a-shake and a-shiver—glints and gleams and",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "sparkles, rustle and swirl, chatter and bubble. The Mole was bewitched, entranced,",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "fascinated. By the side of the river he trotted as one trots, when very small, by the",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "side of a man who holds one spell-bound by exciting stories; and when tired at last, he",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "sat on the bank, while the river still chattered on to him, a babbling procession of the",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "best stories in the world, sent from the heart of the earth to be told at last to the",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "insatiable sea.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "As he sat on the grass and looked across the river, a dark hole in the bank opposite,",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "just above the water’s edge, caught his eye, and dreamily he fell to considering what a",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "nice snug dwelling-place it would make for an animal with few wants and fond of a bijou",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "riverside residence, above flood level and remote from noise and dust. As he gazed,",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "something bright and small seemed to twinkle down in the heart of it, vanished, then",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "twinkled once more like a tiny star. But it could hardly be a star in such an unlikely",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "situation; and it was too glittering and small for a glow-worm. Then, as he looked, it",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "winked at him, and so declared itself to be an eye; and a small face began gradually to",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "grow up round it, like a frame round a picture.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "A brown little face, with whiskers.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "A grave round face, with the same twinkle in its eye that had first attracted his",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "notice.",
+     "label": "50"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 51,
+     "text": "Small neat ears and thick silky hair.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "It was the Water Rat!",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "Then the two animals stood and regarded each other cautiously.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "“Hullo, Mole!” said the Water Rat.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "“Hullo, Rat!” said the Mole.",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "“Would you like to come over?” enquired the Rat presently.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "“Oh, it’s all very well to talk,” said the Mole, rather pettishly, he being new to a",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "river and riverside life and its ways.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "The Rat said nothing, but stooped and unfastened a rope and hauled on it; then lightly",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "stepped into a little boat which the Mole had not observed. It was painted blue outside",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "and white within, and was just the size for two animals; and the Mole’s whole heart went",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "out to it at once, even though he did not yet fully understand its uses.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "The Rat sculled smartly across and made fast. Then he held up his forepaw as the Mole",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "stepped gingerly down. “Lean on that!” he said. “Now then, step lively!” and the Mole to",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "his surprise and rapture found himself actually seated in the stern of a real boat.",
+     "label": "65"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 66,
+     "text": "“This has been a wonderful day!” said he, as the Rat shoved off and took to the sculls",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "again. “Do you know, I’ve never been in a boat before in all my life.”",
+     "label": ""
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-008-RC-01",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-02-railway-children",
+   "stem": {
+    "text": "Look at lines 1 to 3. How does Roberta wake Phyllis?",
+    "quotes": [],
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 1
+   },
+   "lineRefs": [
+    1,
+    2,
+    3
+   ],
+   "explanation": {
+    "hintCore": "Find the sentence that says how, not the one that says what happened next.",
+    "walkScript": "Start at line 1 and read the whole sentence. It names who wakes whom, and how. The hair-pulling is gentle, but enough to work. Line 4 comes later, once Phyllis stirs."
+   },
+   "finding": {
+    "itemId": "ENG-008-RC-01",
+    "verdict": "HOLD",
+    "faultAt": [
+     "option Phyllis wakes Roberta by pulling her hair."
+    ],
+    "fault": "Giveaway: the stem 'How does Roberta wake Phyllis?' already names Roberta as the waker, so the agent-patient reversal option 'Phyllis wakes Roberta by pulling her hair.' is ruled out by the question's own wording, without reading line 1. It is also the only option not in the 'By ...' form the question invites.",
+    "objective": true,
+    "suggestedFix": "Replace the reversal with a distractor the stem does not exclude, or put the reversal into the 'By ...' answer form about a different action.",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4v600d4tmbv70l6zl6s",
+     "value": "By pulling her hair, gently but hard enough.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4v600d5tmbvbkmu8txt",
+     "value": "By shouting at her to wake up.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Roberta does call out 'Wake up! wake up!' at line 4, outside this window, after Phyllis has already stirred and answered at line 3. Line 1 gives how she woke her: by pulling her hair gently."
+    },
+    {
+     "optionId": "cmsw2f4v600d6tmbvpx40n2et",
+     "value": "By pulling her blankets off, one by one.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Pulling the blankets off is a common way to wake someone, but no line in the passage has it. Line 1 says Roberta woke Phyllis by pulling her hair gently."
+    },
+    {
+     "optionId": "cmsw2f4v600d7tmbv68wth4yn",
+     "value": "Phyllis wakes Roberta by pulling her hair.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Line 1 runs the other way round: Roberta is the one who acts."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-02",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 3 to 4. What was all over the Mole's black fur?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 2
+   },
+   "lineRefs": [
+    3,
+    4
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "all over his black fur",
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "hintCore": "One thing is in his eyes, one thing is on his fur. Which does the question want?",
+    "walkScript": "Line 3 has the dust in his throat and eyes. Line 4 puts the whitewash 'all over his black fur'. So it is splashes of whitewash; the grass and the paint come later.",
+    "hintAuthority": "annie-eightyseventh-return.md (CONFIRMATIONS block), sha256 b53aa2df063f3404868e0d423da2ffe2f24ebc6f31f9bf37f1acdbd75a5db336",
+    "hintAuthoredBy": "Annie"
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-02",
+    "verdict": "HOLD",
+    "faultAt": [
+     "hint"
+    ],
+    "fault": "Hint 'One thing is in his eyes, one thing is on his fur. Which does the question want?' is an either/or whose halves are both options (dust = 'in his throat and eyes', whitewash = 'all over his black fur'), and the stem already says 'fur', so the hint picks the key for the child.",
+    "objective": false,
+    "suggestedFix": "Point to the line without splitting the choice into two options, e.g. 'Read line 4 to the end of the sentence.'",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t00007tmbvtfp4o2p3",
+     "value": "Dust, which was in his throat and eyes.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 3 puts the dust 'in his throat and eyes'. That is true inside the window, but it is the wrong element: lines 3 to 4 say it was 'splashes of whitewash' that were 'all over his black fur'."
+    },
+    {
+     "optionId": "cmsw2f4t00008tmbvgkbflg6a",
+     "value": "Bits of straw from his brooms.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Straw appears nowhere in the passage; the brooms at line 2 make it sound like a detail that ought to be there."
+    },
+    {
+     "optionId": "cmsw2f4t00009tmbvuczz3w9j",
+     "value": "Warm grass from the great meadow.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The warm grass is line 15, after he comes up into the meadow — a true detail from a different part of the passage."
+    },
+    {
+     "optionId": "cmsw2f4t0000atmbvl3p5kyzj",
+     "value": "Splashes of whitewash.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t0000btmbvibnlqe9s",
+     "value": "Blue and white paint.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Blue and white are the boat's colours at line 60, transferred onto the fur."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-03",
+   "questionType": "en-comp-inference",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 5 to 9. Why did the Mole suddenly stop cleaning and run outside?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 3
+   },
+   "lineRefs": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "in the air above and in the earth below",
+      "passageRef": "stream-a-03-wind-in-willows"
+     },
+     {
+      "rule": "quoted-from-passage",
+      "text": "lowly little house",
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "hintCore": "Read the sentence that comes just before he throws the brush down.",
+    "walkScript": "Line 5 puts spring 'in the air above and in the earth below'. Line 6 has it reach even his 'lowly little house'. Line 7 has him fling the brush down. That pull sends him out, and the Rat has not appeared yet.",
+    "hintAuthority": "annie-sixtyfourth-return.md, sha256 e38bef6119ea210952df3ab39233c64df92e7448f1cb80bfc654c2af50923742",
+    "hintAuthoredBy": "Annie",
+    "_previousHintCore": "Read the sentence that comes just BEFORE he throws the brush down.",
+    "_previousWalkScript": "Lines 5 and 6 say spring was 'moving in the air above and in the earth below' and reaching even his house. Line 7 has him fling the brush down. That pull sends him out, and the Rat has not appeared yet."
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-03",
+    "verdict": "HOLD",
+    "faultAt": [
+     "execution"
+    ],
+    "fault": "Two execution facts are false. Option 'The Water Rat called him from up above.': 'The Water Rat does not appear until line 54' - he is named at line 52 ('It was the Water Rat!') and his face appears from line 46. Option 'He wanted to find the river he had heard about.': 'He has not heard of the river - line 29 says he had never seen one' - line 29 says never SEEN, which does not show he had not heard of one.",
+    "objective": true,
+    "suggestedFix": "Cite line 52 (or 46) for the Rat; for the river, say no line says he had heard of a river or went looking for one.",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-inference"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2k7cv0001tmt9d4er4406",
+     "value": "He had finished every job in the house.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Nothing says the work was finished; line 7 has him fling the brush down in the middle of it."
+    },
+    {
+     "optionId": "cmsw2k7cv0002tmt9uwjoyu8v",
+     "value": "Spring outside was pulling at him and he could not sit still.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2k7cv0003tmt9tdpgzod4",
+     "value": "His back and arms hurt too much to go on.",
+     "isKey": false,
+     "tag": "en-physical-vs-emotional-cue",
+     "execution": "Line 4 gives the aching back and weary arms — a physical state offered in place of the pull of spring at lines 5 and 6."
+    },
+    {
+     "optionId": "cmsw2k7cv0004tmt9ah48eokd",
+     "value": "The Water Rat called him from up above.",
+     "isKey": false,
+     "tag": "en-cause-agent-swap",
+     "execution": "The Water Rat does not appear until line 54. Line 9 says 'something up above was calling him', and this hands that to a character."
+    },
+    {
+     "optionId": "cmsw2k7cv0005tmt9tkhcpcy2",
+     "value": "He wanted to find the river he had heard about.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "He has not heard of the river — line 29 says he had never seen one in his life. The motive is supplied by the reader."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-05",
+   "questionType": "en-comp-technique",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "In lines 11 to 14 the writer repeats words like 'scraped' and 'scrabbled'. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 5
+   },
+   "lineRefs": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "explanation": {
+    "hintCore": "Count how many times he scrapes and scrabbles. Why so many?",
+    "walkScript": "Lines 11 and 12 give four digging words: scraped, scratched, scrabbled, scrooged. Line 12 gives the same four again, backwards. So the climb feels long and hard. The birds sing at line 18, later.",
+    "hintAuthority": "annie-sixtyfourth-return.md, sha256 e38bef6119ea210952df3ab39233c64df92e7448f1cb80bfc654c2af50923742",
+    "hintAuthoredBy": "Annie",
+    "_previousHintCore": "The words keep going and going. So does the climb."
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-05",
+    "verdict": "HOLD",
+    "faultAt": [
+     "walk script"
+    ],
+    "fault": "Walk script says 'Line 12 gives the same four again, backwards.' The reversed run is 'scrooged again and scrabbled and scratched and' (line 12) and 'scraped' (line 13), so the four do not all sit on line 12.",
+    "objective": true,
+    "suggestedFix": "'Lines 12 and 13 give the same four again, backwards.'",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-technique"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t2000jtmbv87855vma",
+     "value": "To show that digging is the easiest job a mole ever does.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "'The easiest job a mole ever does' overstates; nothing in the passage ranks the work at all."
+    },
+    {
+     "optionId": "cmsw2f4t2000ktmbvjk27iuxw",
+     "value": "To show the Mole was bored, and fed up with hard work.",
+     "isKey": false,
+     "tag": "en-repetition-purpose",
+     "execution": "A dismissive reading of the repetition. Lines 11 to 14 show him 'working busily' and cheering himself on with 'Up we go! Up we go!', which is effort, not boredom; the piled-up digging verbs make the climb feel long and hard."
+    },
+    {
+     "optionId": "cmsw2f4t2000ltmbvg4r4tu1z",
+     "value": "To show the climb went on and on and was hard work.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t2000mtmbvrxrtn7f0",
+     "value": "To copy the sound of the birds singing up above.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The birds are line 18, after he is out of the tunnel — a true sound from a different part."
+    },
+    {
+     "optionId": "cmsw2f4t2000ntmbvsd01cs63",
+     "value": "To make the reader feel sorry for the Mole's aching back.",
+     "isKey": false,
+     "tag": "en-technique-effect-mislocated",
+     "execution": "Gives the effect of line 4, where he has 'an aching back and weary arms' from the cleaning, not of the repeated digging verbs in lines 11 to 13. Those make the climb itself feel long and hard."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-09",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 22 to 23. What did the elderly rabbit at the gap want from the Mole?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 9
+   },
+   "lineRefs": [
+    22,
+    23
+   ],
+   "explanation": {
+    "hintCore": "The rabbit says one sentence. What is he asking for in it?",
+    "walkScript": "Line 22 is the rabbit's one speech. He says 'Sixpence for the privilege of passing by the private road!' So he wants paying to let the Mole past. 'Onion-sauce!' at line 25 is the Mole's, on his way out.",
+    "hintAuthority": "annie-eightyninth-return.md (CONFIRMATIONS block), sha256 a51e2126cbfe9f2282254afc915fd340d851fa619fc53f9f4a7c5e4637193118",
+    "hintAuthoredBy": "Annie"
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-09",
+    "verdict": "HOLD",
+    "faultAt": [
+     "hint"
+    ],
+    "fault": "Hint 'The rabbit says one sentence.' is false: at lines 22 to 23 the rabbit says 'Hold up!' and then 'Sixpence for the privilege of passing by the private road!', two sentences each ending in '!'.",
+    "objective": true,
+    "suggestedFix": "'The rabbit asks for something at lines 22 and 23. What is it?'",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t70017tmbvdibva2l1",
+     "value": "Sixpence for using the private road.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t70018tmbv8bq0sgma",
+     "value": "Help with his own spring-cleaning.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "The spring-cleaning belongs to the Mole, at line 1. The child moves it onto the rabbit at the gap, who at line 22 asks only for sixpence to pass along the private road."
+    },
+    {
+     "optionId": "cmsw2f4t70019tmbv2kzq0aqh",
+     "value": "A ride across the river in a boat.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The boat ride is line 63, at the far end of the passage."
+    },
+    {
+     "optionId": "cmsw2f4t7001atmbvi285jr7m",
+     "value": "The privilege of passing by the private road.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Reverses the exchange in lines 22 to 23. The rabbit asks 'Sixpence for the privilege of passing by the private road': the privilege is what the Mole would get, and the sixpence is what the rabbit wants from him."
+    },
+    {
+     "optionId": "cmsw2f4t7001btmbv140bphdt",
+     "value": "Some onion sauce for his dinner.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "'Onion-sauce!' at line 25 is the Mole's jeer on the way past, taken as an order for the rabbit's dinner."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-10",
+   "questionType": "en-comp-inference",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 23 to 27. What does the way the Mole treats the rabbits show about him?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 10
+   },
+   "lineRefs": [
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "why": "The word is the item's whole subject: the stem asks what the Mole's treatment of the rabbits shows, and line 23 answers it with 'impatient and contemptuous'. The child meets the word in the passage before she meets it in the walk, so the ceiling is not protecting her from anything here.",
+      "rule": "R23",
+      "text": "contemptuous",
+      "lineRefs": [
+       23
+      ],
+      "exemptFrom": [
+       "vocabularyCeiling"
+      ],
+      "passageRef": "stream-a-03-wind-in-willows"
+     },
+     {
+      "rule": "quoted-from-passage",
+      "text": "impatient and contemptuous",
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "hintCore": "Read line 23 again. Which word shows how he feels about being held up?",
+    "walkScript": "Line 23 gives two words: 'impatient and contemptuous'. Impatient means he does not want to wait. Lines 19 and 20 show why: he is full of the joy of spring. So he will not stop for anyone. He bowls the rabbit over and is gone in one rush.",
+    "hintAuthority": null,
+    "hintAuthoredBy": null,
+    "_previousHintCore": "Find the two words the writer uses to describe the Mole in this bit."
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-10",
+    "verdict": "HOLD",
+    "faultAt": [
+     "execution"
+    ],
+    "fault": "Misquotation in the execution of 'He is sorry at once for knocking the rabbit over.': it quotes line 26 as 'gone before they could think of a reply', but lines 26 to 27 read 'was gone before they could think of a thoroughly satisfactory reply'.",
+    "objective": true,
+    "suggestedFix": "Quote it exactly: 'gone before they could think of a thoroughly satisfactory reply'.",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-inference"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t8001dtmbvnwi0y8xx",
+     "value": "He is frightened of the older rabbit.",
+     "isKey": false,
+     "tag": "en-emotion-label-approximation",
+     "execution": "Fear is an approximation of the two words the passage does give — 'impatient and contemptuous' at line 23."
+    },
+    {
+     "optionId": "cmsw2f4t8001etmbvfuis53go",
+     "value": "He is so excited that he will not stop for anyone.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t8001ftmbvmzzdsbbe",
+     "value": "He is a cruel animal who is always unkind.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "'Always unkind' pushes one rush past a hedge into a permanent character."
+    },
+    {
+     "optionId": "cmsw2f4t8001gtmbv4gv2oelv",
+     "value": "He is rushing home to get his dinner.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "Dinner is nowhere in the passage, and he is going away from his house rather than towards it."
+    },
+    {
+     "optionId": "cmsw2f4t8001htmbvesh5kwta",
+     "value": "He is sorry at once for knocking the rabbit over.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Line 26 has him 'gone before they could think of a reply', which leaves no room for the remorse this asserts."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-12",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 29 to 33. What had the Mole never seen before in all his life?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 12
+   },
+   "lineRefs": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "explanation": {
+    "hintCore": "The question asks what he had never seen. Not what he saw that day.",
+    "walkScript": "Find 'Never in his life' on line 29. Read on: 'had he seen a river before'. So a river is the new thing. The animal in line 30 is that same river.",
+    "hintAuthority": "annie-sixtyfifth-return.md, sha256 0cd56a0547dbca75363163584f63656b8da67411cfa49783b4c2ed8217ea7469",
+    "hintAuthoredBy": "Annie",
+    "_previousHintCore": "Find the words 'never in his life' and finish the sentence.",
+    "_previousWalkScript": "Find 'Never in his life' on line 29. Read on: 'had he seen a river before'. So a river is the new thing. The boat comes at the end."
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-12",
+    "verdict": "REFUSE",
+    "faultAt": [
+     "option An animal that chased and chuckled."
+    ],
+    "fault": "Second defensible answer. Lines 29 to 30 read 'Never in his life had he seen a river before - this sleek, sinuous, full-bodied animal, chasing and chuckling': the animal is in apposition to the river, so 'An animal that chased and chuckled.' is the passage's own description of the key. The execution itself concedes 'the animal in this window IS the river'. A child who reads the metaphor correctly can defend it.",
+    "objective": false,
+    "suggestedFix": "Replace that option with something not named in lines 29 to 33 as the thing he had never seen.",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "options": [
+    {
+     "optionId": "cmsw387yf000jtmqbs4jbygot",
+     "value": "A great meadow.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Nothing says the meadow was new to the Mole; line 15 only has him rolling in it. A creature from underground meeting a meadow makes 'never seen before' sound likely, but line 29 says it only of the river."
+    },
+    {
+     "optionId": "cmsw387yf000ktmqbrineesg5",
+     "value": "An animal that chased and chuckled.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 30 calls the river 'this sleek, sinuous, full-bodied animal, chasing and chuckling', so the animal in this window IS the river. A child who takes the picture for a second thing has taken an element inside the window for the answer, and line 29 disposes of it without her leaving the lines she was sent to."
+    },
+    {
+     "optionId": "cmsw387yf000ltmqbsitneobv",
+     "value": "A face with whiskers.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The face with whiskers is line 48, nineteen lines later."
+    },
+    {
+     "optionId": "cmsw387yf000mtmqbh3enf8fk",
+     "value": "The bright sunshine.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The sunlight is line 14, where his snout first comes out of the tunnel. The child answers from that earlier part instead of lines 29 to 33, where the thing he had never seen before is the river."
+    },
+    {
+     "optionId": "cmsw387yf000ntmqbmtuyqe5x",
+     "value": "A river.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-13",
+   "questionType": "en-comp-technique",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "The writer calls the river an animal that chases, chuckles and grips things. Read lines 29 to 33. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 13
+   },
+   "lineRefs": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "explanation": {
+    "hintCore": "Chasing, chuckling, laughing. What sort of creature does all that?",
+    "walkScript": "Lines 30 and 31 give the river's verbs: chasing, chuckling, gripping, leaving them with a laugh. So the river feels alive and always moving. The Rat's hole is line 39, later.",
+    "hintAuthority": "annie-sixtyfifth-return.md, sha256 0cd56a0547dbca75363163584f63656b8da67411cfa49783b4c2ed8217ea7469",
+    "hintAuthoredBy": "Annie",
+    "_previousHintCore": "Chasing, chuckling, laughing — what sort of creature does all that?"
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-13",
+    "verdict": "HOLD",
+    "faultAt": [
+     "question",
+     "option To make the river seem alive, playful and always moving."
+    ],
+    "fault": "Form giveaway: the key is the only option beginning 'To ...'; all four distractors begin 'Because ...'. It is also the only three-part option. The key is singled out without the skill.",
+    "objective": true,
+    "suggestedFix": "Put all five options in one form (all 'To ...' or all 'Because ...').",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-technique"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tb001vtmbvc84advnk",
+     "value": "To make the river seem alive, playful and always moving.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tb001wtmbv3i1pm7w6",
+     "value": "Because a real animal was swimming in the water.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Takes the animal comparison at line 30 as a real animal swimming in the water."
+    },
+    {
+     "optionId": "cmsw2f4tb001xtmbv25sj12gz",
+     "value": "Because the river was dangerous, as it might grab the Mole.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Pulls the gripping in line 30 to its most threatening reading. Lines 30 to 31 have the river 'chuckling', leaving things 'with a laugh' and finding 'fresh playmates', so it is playful, not a danger to the Mole."
+    },
+    {
+     "optionId": "cmsw2f4tb001ytmbvpeol94yp",
+     "value": "Because the Water Rat lived in the bank beside it.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The Rat's hole in the bank is line 39, after this window."
+    },
+    {
+     "optionId": "cmsw2f4tb001ztmbv14pu0ugz",
+     "value": "Because the Mole thought a big animal was in front of him.",
+     "isKey": false,
+     "tag": "en-technique-intent-as-character",
+     "execution": "The child turns the writer's choice of picture into something the Mole believes. Line 33 says the Mole was bewitched and entranced, not that he took the river for a creature; calling it an animal is the writer's way of making it seem alive."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-14",
+   "questionType": "en-comp-inference",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 33 to 36. The Mole 'trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories'. What does this tell you about the Mole?",
+    "quotes": [
+     {
+      "rule": "R4",
+      "text": "trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories",
+      "lineRefs": [
+       34,
+       35,
+       36
+      ],
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling"
+      ],
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 14
+   },
+   "lineRefs": [
+    34,
+    35,
+    36
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "R4",
+      "text": "exciting stories",
+      "lineRefs": [
+       35,
+       35
+      ],
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "stream-a-03-wind-in-willows"
+     },
+     {
+      "rule": "quoted-from-passage",
+      "text": "trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories",
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "hintCore": "Why would a small child trot beside someone telling 'exciting stories'?",
+    "walkScript": "Look at the small child, lines 34 and 35. He trots beside a man who holds him 'spell-bound'. So the river holds the Mole walking beside it. He grows tired later.",
+    "hintAuthority": "annie-ninetyfirst-return.md (CONFIRMATIONS block), sha256 522c296cbadcbaa59bf98fd3b73704a7a8240e476036c13876e7b0d1d7165bb8",
+    "hintAuthoredBy": "Annie"
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-14",
+    "verdict": "HOLD",
+    "faultAt": [
+     "question"
+    ],
+    "fault": "Line refs disagree with the stem: the question says 'Read lines 33 to 36' but lineRefs is [34, 35, 36], omitting line 33 ('The Mole was bewitched, entranced, fascinated.'), which the walk-relevant reading uses.",
+    "objective": true,
+    "suggestedFix": "Set lineRefs to [33, 34, 35, 36], or change the stem to 'lines 34 to 36'.",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-inference"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tc0021tmbvpodnk62w",
+     "value": "The Mole was too small and slow to keep up with the river.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "execution": "Takes 'when very small' from the comparison in line 34 as a fact about the Mole. The words 'very small' belong to the child walking beside the storyteller; the Mole himself 'trotted' beside the river and kept with it, held 'spell-bound' (line 35) as the child is."
+    },
+    {
+     "optionId": "cmsw2f4tc0022tmbvqf4cf3r1",
+     "value": "The Mole was much younger than the Water Rat.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "execution": "The 'very small' child of the comparison at line 34 is carried across to the Mole as an age, and the Rat is not in this window at all."
+    },
+    {
+     "optionId": "cmsw2f4tc0023tmbvq1zy93fx",
+     "value": "The Mole was looking for a man to help him.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Takes the man in the comparison at line 35 as a man the Mole is actually looking for."
+    },
+    {
+     "optionId": "cmsw2f4tc0024tmbvzkkasyfl",
+     "value": "The river held the Mole's interest so much that he kept following it.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tc0025tmbvjefeli98",
+     "value": "The Mole was tired and wanted to go home.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 35 has him tired and sitting down. True, inside the window, and the wrong element for a question about why he kept following."
+    }
+   ]
+  }
+ ]
+}

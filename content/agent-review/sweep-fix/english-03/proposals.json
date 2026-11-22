@@ -1,0 +1,324 @@
+{
+ "door": "sweep-fix/english-03",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw2f4w000i4tmbvna33z1ac",
+   "itemId": "ENG-011-CV-01",
+   "oldValue": "Lady Canterville arranged for one to meet the family.",
+   "tag": "en-wrong-scope-retrieval",
+   "newValue": "Because Lady Canterville had asked the family to.",
+   "execution": "Lady Canterville's request is at line 14, outside lines 1 to 3, and it was a request to keep Mrs Umney as housekeeper. Line 1 gives the reason for the waggonette: the nearest station is seven miles away."
+  },
+  {
+   "optionId": "cmsw2f4w200ibtmbviagb1fik",
+   "itemId": "ENG-011-CV-03",
+   "oldValue": "A pheasant shows its breast deep in the fern.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "The squirrels and the rabbits both run away.",
+   "execution": "Only the rabbits run: lines 6 and 7 send them scudding away through the brushwood. Line 6 has the squirrels peer at the family from the beech-trees. The option changes one detail, giving the squirrels the rabbits' running, and matches the lines on gist."
+  },
+  {
+   "optionId": "cmsw2f4w700j7tmbvvmcx9dr1",
+   "itemId": "ENG-011-CV-09",
+   "oldValue": "She doubts the story rather than the stain itself.",
+   "tag": "en-attribute-transfer",
+   "newValue": "She doubts the story rather than the stain itself.",
+   "execution": "It is Washington, not Mrs Otis, who doubts the story: at line 34 he calls it all nonsense, after Mrs Umney tells it at lines 28 to 33. The option gives his doubt to her. In lines 24 to 27 she takes the spilt blood as fact, calls it horrid and orders the mark removed."
+  },
+  {
+   "optionId": "cmsw2f4w900jktmbvzgxqun6m",
+   "itemId": "ENG-011-CV-12",
+   "oldValue": "They laugh at her openly, while she is out of the room.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "They mostly ask her questions, like who the ghost is and where it hides.",
+   "execution": "Nobody in the passage asks Mrs Umney a question. Mrs Otis answers the blood with an order at lines 26 and 27, and Washington scrubs the stain at lines 34 to 37. The only question, at line 47, is Mrs Otis asking her husband what to do with a woman who faints."
+  },
+  {
+   "optionId": "cmt0m4n0s0001tmhftf6pz6p0",
+   "itemId": "ENG-015-CC-12",
+   "oldValue": "He says Pooh, pooh, and then a little later he says Humbug too.",
+   "tag": "en-minimal-pair-skim",
+   "newValue": "He says Humbug, and then a little later he says Pooh, pooh too.",
+   "execution": "The passage has the words the other way round: Pooh, pooh comes first, at line 26, and Humbug follows at line 53 and again at line 67. The child matches the two words on gist and misses the one detail that differs, their order. The option also names only what he says, where the key adds what he keeps doing."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-011-CV-08",
+   "why": "Sweep hold (objective): walk script said line 22 held her words; the spill is on line 23.",
+   "stem": {
+    "text": "Read lines 21 to 23. What does Mrs Otis take the stain to be?",
+    "quotes": [],
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 8
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4w600iztmbvb96sixpt",
+     "value": "Something she was quite unconscious of.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Reuses line 22, which says she did not know what it meant, not what she thought."
+    },
+    {
+     "optionId": "cmsw2f4w600j0tmbvcnjqwbbc",
+     "value": "The blood of Lady Eleanore de Canterville, murdered there.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True, but at line 28, and line 22 says she does not yet know what it means."
+    },
+    {
+     "optionId": "cmsw2f4w600j1tmbvodhyi0mq",
+     "value": "A shadow the firelight was throwing on the boards.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Line 21 gives a dull red stain, which is a mark rather than a shadow."
+    },
+    {
+     "optionId": "cmsw2f4w600j2tmbvluraprqa",
+     "value": "Something that has been spilt on the floor.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Read lines 22 and 23. She says what she is afraid of: something has been spilt. The words quite unconscious tell you she does not know more than that. What Mrs Umney says next is not yet hers."
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-04",
+   "why": "Sweep hold: hint counted the options and was untrue as written. The new hint points at the order of actions from line 20 without counting.",
+   "stem": {
+    "text": "Look at lines 19 to 22. What did Scrooge do after the shock?",
+    "quotes": [],
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 19
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4x700p1tmbvhvafjvzc",
+     "value": "The sight left him quite unmoved.",
+     "isKey": false,
+     "tag": "en-negation-dropped",
+     "execution": "Lines 19 and 20 say it would be untrue to say he was not startled."
+    },
+    {
+     "optionId": "cmsw2f4x700p2tmbvly5zpof2",
+     "value": "He let go of the key he was holding.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 21, where the key is one he had relinquished, so he had already let go of it. It is what he had done before rather than what came next."
+    },
+    {
+     "optionId": "cmsw2f4x700p3tmbv7gg5axtf",
+     "value": "He lighted his candle, then turned the key.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "execution": "He turns the key at line 21 and lights his candle at lines 21 and 22, after it, so this reverses them."
+    },
+    {
+     "optionId": "cmsw2f4x700p4tmbvug6sej4w",
+     "value": "He turned his key and he walked in.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Start at the word But on line 20. Read his actions in the order they come."
+   }
+  },
+  {
+   "itemId": "ENG-015-CC-09",
+   "why": "Sweep hold (objective): walk script gave the forgotten purpose to the chamber, not the bell, and closed on a claim the passage never makes.",
+   "stem": {
+    "text": "Look at lines 54 to 59. Why is the swinging bell so strange?",
+    "quotes": [],
+    "passageRef": "stream-a-08-christmas-carol",
+    "orderAnchor": 54
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xb00pqtmbvk3kr90iu",
+     "value": "Nobody has used that bell for a long time.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xb00prtmbvencc0x8g",
+     "value": "It rang out loudly, and every bell rang too.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 59, and it is what followed rather than why the swinging is strange."
+    },
+    {
+     "optionId": "cmsw2f4xb00pstmbv29dqjnkd",
+     "value": "He felt a strange dread that he could not explain.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 57 and names his feeling rather than the reason for it."
+    },
+    {
+     "optionId": "cmsw2f4xb00pttmbv3xvcy2fa",
+     "value": "The wind had got into the rooms above him.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A real explanation for a swinging bell; lines 54 to 59 never give it."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 55 calls it a disused bell. Line 56 says the purpose it once had is now forgotten. So nobody has used that bell for a long time. That is why its swinging is so strange."
+   }
+  },
+  {
+   "itemId": "ENG-021-ED-02",
+   "why": "Sweep hold (objective): key said he tells them all to play, which line 7 does not; drops a large remark was unclear; walk cited line 74, which plays no part. Key reworded as the reviewer suggested; line 74 dropped from the walk, which now states the key.",
+   "stem": {
+    "text": "Look at lines 7 and 8, and lines 81 and 82. What does Fogg do both times?",
+    "quotes": [],
+    "passageRef": "stream-a-09-eighty-days",
+    "answerShape": "two-halved-contrast-of-what-he-says-against-what-he-does-next",
+    "orderAnchor": 7,
+    "techniqueKey": "a-large-remark-closed-with-an-instruction-about-the-game"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yr00y6tmbvmdb5d7ji",
+     "value": "He makes a big remark, then turns back to the cards.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yr00y7tmbvuxo1sc6u",
+     "value": "He says the world was once big, and then asks for diamonds.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Both lines handed back in order, with no relation named."
+    },
+    {
+     "optionId": "cmsw2f4yr00y8tmbv068pka84",
+     "value": "He calls for the cards first, and makes his remark later.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "execution": "Line 7 puts the remark before the instruction, both times."
+    },
+    {
+     "optionId": "cmsw2f4yr00y9tmbvqmcoh0x1",
+     "value": "He grows calm as the evening goes on, and plays better.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A shape the scene invites; he is the same at line 7 and at line 81."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 7 has him say the world was big once, then say Cut, sir. Line 81 has him say he is quite ready now, then call diamonds trumps. Both times he makes a big remark, then turns back to the cards."
+   }
+  },
+  {
+   "itemId": "ENG-021-ED-07",
+   "why": "Sweep hold: hint said a bargain was being argued about in lines 23 and 24, which it is not until line 29, and called the phrase a word.",
+   "stem": {
+    "text": "Look at lines 23 and 24. What does \"whose turn it was to deal\" on line 24 mean here?",
+    "quotes": [
+     "whose turn it was to deal"
+    ],
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 24
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yv00yvtmbvw4mqmj2l",
+     "value": "It was his to make a bargain.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The commonest everyday sense of 'deal' is a bargain, and a wager is argued over a few lines later. But line 24 has Stuart gather up the cards, so the deal here is of cards."
+    },
+    {
+     "optionId": "cmsw2f4yv00ywtmbvtlcmn5ix",
+     "value": "It was his to give out the cards again.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yv00yxtmbvu0wgypah",
+     "value": "It was his to take a large amount.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "As in a great deal, which is just as common."
+    },
+    {
+     "optionId": "cmsw2f4yv00yytmbv4m7dzhon",
+     "value": "It was his to gather up the cards.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 24, and it is what he does before the thing the word names."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Look at what Stuart does with the cards on line 24. The phrase is part of the game."
+   }
+  },
+  {
+   "itemId": "ENG-021-ED-09",
+   "why": "Sweep hold (objective): hint said two numbers belong to somebody else; only one option carries another person’s number.",
+   "stem": {
+    "text": "Look at lines 45 to 52. What does Fogg say he will risk?",
+    "quotes": [],
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 45
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yx00z5tmbvwff8ibo7",
+     "value": "The least possible time for the journey.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Lines 50 to 51 say eighty days are 'the least possible time in which the journey can be made'. True inside the window, but it is the time, not the stake; what he will 'risk' is the twenty thousand at line 46."
+    },
+    {
+     "optionId": "cmsw2f4yx00z6tmbvytwemck2",
+     "value": "Four thousand pounds, as Stuart has just done.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Stuart wagers four thousand at line 42, three lines before this window opens at line 45, and the child gives Stuart's stake as Fogg's. Fogg's own stake, at lines 45 and 46, is the twenty thousand he has deposited at Baring's."
+    },
+    {
+     "optionId": "cmsw2f4yx00z7tmbvmwg15byb",
+     "value": "Twenty thousand pounds he has deposited at Baring’s.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yx00z8tmbvd2ffpd7r",
+     "value": "Everything he owns, down to the last penny.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Line 46 has Fogg risk the twenty thousand he has at Baring's, and line 74 says that was half his fortune. The child reaches for the all-or-nothing answer where the passage is measured."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "One of these sums is somebody else’s stake."
+   }
+  }
+ ],
+ "notes": [
+  "ENG-011-CV-01: distractor crediting Lady Canterville contradicted the stem and was the only non-reason option -> seated a reason-shaped distractor from line 14 (wrong scope).",
+  "ENG-011-CV-03: pheasant distractor named neither animal the stem asks about -> seated a squirrels-and-rabbits distractor that changes one detail (minimal pair).",
+  "ENG-011-CV-08: walk put the spill on line 22 -> walk now reads lines 22 and 23.",
+  "ENG-011-CV-09: execution claimed the option is true at line 55 -> retagged en-attribute-transfer (Washington's doubt at line 34 given to Mrs Otis), value unchanged.",
+  "ENG-011-CV-12: key was the only hedged option -> the self-contradicting 'laugh openly while out of the room' distractor replaced by a hedged, list-shaped one that the passage never supports.",
+  "ENG-015-CC-04: hint counted options and was untrue -> hint now points at the order of actions from line 20.",
+  "ENG-015-CC-09: walk gave the forgotten purpose to the chamber and invented a closing claim -> walk follows lines 55 and 56 and states the key.",
+  "ENG-015-CC-12: Pooh/Humbug distractor was true and half the key -> order reversed so it is false, retagged en-minimal-pair-skim.",
+  "ENG-021-ED-02: key untrue at line 7 and unclear; walk cited line 74 -> key 'He makes a big remark, then turns back to the cards.'; line 74 dropped from walk.",
+  "ENG-021-ED-07: hint asserted a bargain in lines 23 and 24 -> hint points at what Stuart does with the cards on line 24.",
+  "ENG-021-ED-09: hint said two numbers belong to somebody else -> 'One of these sums is somebody else's stake.'"
+ ]
+}

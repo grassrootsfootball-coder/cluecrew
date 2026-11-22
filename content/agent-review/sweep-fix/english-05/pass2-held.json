@@ -1,0 +1,78 @@
+{
+ "door": "sweep-fix/english-05",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-002-pp-12",
+  "ENG-012-ML-08",
+  "ENG-012-ML-01",
+  "ENG-002-pp-05"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-002-pp-09",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-002-pp-09",
+     "verdict": "REFUSE",
+     "reason": "The length and two-part-shape giveaway is fixed: the key and 'Because he was friendly and kind to everyone he met.' are both 10 words and two-part. But the rewrite breaks the hint. The unchanged hintCore asks 'What had everybody HEARD about him within five minutes?', and the new key now says 'people HEARD he was rich'. 'Heard' is in the hint and the key and in no other option, and the hint's answer (he was rich) is in the key alone. That is coaching (R572). The old key said 'the news that', so the echo is new. Recast the hint so it does not point to words only the key contains. Executions checked: line 32 'proud, to be above his company'; line 40 'declined being introduced to any other lady'; 'handsome' line 27 and 30."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-002-pp-09",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "hintCore",
+    "reason": "Judged as a new question. The key 'Because he was handsome and people heard he was rich.' is correct (handsome features at line 27, much handsomer at line 30, the report of ten thousand a year at lines 28 and 29) and it is the only right answer. The original length and shape fault is fixed. HOLD on hintCore: 'What had everybody heard about him within five minutes?' now shares 'heard' with the key alone, and only the key gives its answer. The hint hands over the key."
+   }
+  },
+  {
+   "itemId": "ENG-002-pp-06",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-002-pp-06",
+     "verdict": "REFUSE",
+     "reason": "The named fault is reduced, not fixed. The key 'His two sisters, one sister's husband and a young man.' is still the single longest option: 10 words and 53 characters, against distractors of 5, 6, 7 and 8 words (longest 40 characters). The drafter's own note gives the distractors as 5 to 8. A child choosing the longest option still scores, without reading lines 21 to 23. Bring the key inside the distractors' range, or lengthen one distractor to match it. The new key is otherwise accurate to lines 21 to 23 and matches the walk script."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-002-pp-06",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "faultField": "options",
+    "reason": "Length giveaway remains (options field). The key is 10 words and 53 characters. The longest distractor is 8 words and 40 characters, so the key is still the single longest option. Otherwise the key is correct to lines 21 to 23, it is the only right answer, and the walk script reaches it."
+   }
+  },
+  {
+   "itemId": "ENG-025-LW-09",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-025-LW-09",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "hintCore",
+    "reason": "The grammar giveaway is fixed: all four options now complete 'wait for', and the lines and tags are checked. HOLD on hintCore and walkScript. (1) The unchanged hint 'Meg names a moment, not a thing to say.' was built against the old that-clause options. 'Not a thing to say' now rules out no option, and 'a moment' fits the key and 'The next time the girls go skating.' alike, so it no longer helps the child choose. (2) The walk script never states the key. It ends 'Line 54 says take a quiet minute.' with no closing line, and it puts 'got good-natured' on line 53 when it is on line 54."
+   }
+  },
+  {
+   "itemId": "ENG-017-CR-09",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-017-CR-09",
+     "verdict": "REFUSE",
+     "reason": "The false count is fixed: 'Several people come up in these lines' is true (Dr Johnson, her father, Miss Jenkyns, Boz as 'your favourite', Captain Brown, lines 38 to 42). But the second sentence was correct and has been rewritten to 'Work out who is giving advice to who.' 'To who' is non-standard where the object form is needed, and an English item should not model it. Nothing forced it. I ran 'Work out who is advising whom.', the finding's suggested fix, through checkItemChildFacing and it passes, so this restyled a sound sentence into a worse one. Keep 'Several people come up in these lines.' and restore 'Work out who is advising whom.'"
+    }
+   ],
+   "row": {
+    "itemId": "ENG-017-CR-09",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "hintCore",
+    "reason": "The original fault, the false 'Three people are named', is gone. HOLD on hintCore: the replacement 'Work out who is giving advice to who.' uses non-standard 'to who' and was not forced, since 'advising whom' passes the gate. Rest of the row checked: the key matches lines 38 to 40 ('I recommend it to your favourite'). The father-to-her reversal is line 38. Her own letters are line 39. Numbers is line 35, outside the window."
+   }
+  }
+ ]
+}

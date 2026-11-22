@@ -1,0 +1,776 @@
+{
+ "door": "sweep-fix/maths",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmteo82pl00hmtmmjttswdfo4",
+   "itemId": "MC05-GEOM-01",
+   "oldValue": "162 cm²",
+   "tag": "maths-39-perimeter-vs-area-multiplying",
+   "newValue": "162 cm",
+   "execution": "The child multiplies the two sides, 18 × 9 = 162, when asked for the perimeter, and writes 162 cm. That is the area's number; the perimeter is 18 + 9 + 18 + 9 = 54 cm."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "MC02-FDP-03",
+   "why": "Walk script named traps no option carries ('treats the percent as pounds'; 'stops at one part', which would be 12). Now names the two present: 6 (10% only) and 20 (60 - 40). 40% of 60 = 24. The maths-77 tag hint is left to the library track; the tag (subtracting the percentage digits directly) is right for 20.",
+   "stem": {
+    "text": "What is 40% of 60?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo8244004stmmjdjiuy3so",
+     "value": "6",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child finds 10% of 60 correctly by dividing by 10, gets 6, and gives that as the answer. They stop before multiplying by 4 to reach 40%, which gives 24."
+    },
+    {
+     "optionId": "cmteo8244004ttmmjsm9xq3ab",
+     "value": "24",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo8244004utmmj1zscio7e",
+     "value": "20",
+     "isKey": false,
+     "tag": "maths-77-treating-a-percentage-as-money",
+     "execution": "The child takes the percentage figure straight off the amount, working out 60 − 40 = 20. The 40 is used as a quantity to subtract rather than as 40 out of every 100, which gives 24."
+    },
+    {
+     "optionId": "cmteo8244004vtmmjjf2b976n",
+     "value": "150",
+     "isKey": false,
+     "tag": "maths-24-inverted-fraction-of-an-amount",
+     "execution": "The child uses 40% as 40/100 turned upside down, so works out 60 × 100 ÷ 40 = 150 instead of 60 × 40 ÷ 100 = 24. Multiplying by the bottom number and dividing by the top makes the answer bigger than 60 when 40% of it must be smaller."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Percentages first become parts. One fifth of 60 is 12, so two fifths is 24. One trap finds only 10% and stops. Another takes 40 away from 60.",
+    "_previousWalkScript": "Percentages first become parts. One fifth of 60 is 12, so two fifths is 24. One trap stops at one part. Another treats the percent as pounds."
+   }
+  },
+  {
+   "itemId": "MC01-GEOM-04",
+   "why": "Walk script falsely said two corners share x = 5 and two share y = 4; only (5, 1) has x = 5 and only (2, 4) has y = 4. Now states that, and the fourth corner (5, 4).",
+   "stem": {
+    "text": "On a grid, a square has three corners at (2, 1), (5, 1) and (2, 4). What are the coordinates of the fourth corner?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo81yy001ktmmjsd562trx",
+     "value": "(5, 4)",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo81yy001ltmmjktj9hqup",
+     "value": "(4, 5)",
+     "isKey": false,
+     "tag": "maths-46-reversed-coordinates",
+     "execution": "The child finds the right corner but writes the y-coordinate first, giving (4, 5) instead of (5, 4)."
+    },
+    {
+     "optionId": "cmteo81yy001mtmmjhg8ms2gg",
+     "value": "(3, 3)",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child finds the side of the square correctly, 5 − 2 = 3 and 4 − 1 = 3, and writes those lengths as the answer. They stop before adding 3 to the corner (2, 1) in each direction, which gives (5, 4)."
+    },
+    {
+     "optionId": "cmteo81yy001ntmmjhrai3pm8",
+     "value": "(8, 4)",
+     "isKey": false,
+     "tag": "side-recounted-from-a-reached-corner",
+     "execution": "The child starts at (2, 4) and moves 3 squares right to (5, 4), the corner the square needs. They then count the side of 3 again, so x becomes 5 + 3 = 8, giving (8, 4)."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line up the corners you have. One corner has the x value 5, and another has the y value 4. The fourth corner takes both, so it sits at (5, 4). Always read across, then up.",
+    "_previousWalkScript": "Line up the corners you have. Two share the x value 5, and two share the y value 4. The fourth corner must sit at (5, 4). Always read across, then up."
+   }
+  },
+  {
+   "itemId": "MC02-GEOM-03",
+   "why": "Walk script named a 360 trap no option carries ((360 - 46) / 2 = 157, not offered). Now names the three present: 44 (90 - 46, halving first), 65 ((180 - 50) / 2, rounding), 12 (134 halved digit by digit). Key (180 - 46) / 2 = 67.",
+   "stem": {
+    "text": "An isosceles triangle has a top angle of 46 degrees. The other two angles are equal. What is the size of each equal angle?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo825h005otmmjk9y5c809",
+     "value": "67°",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo825h005ptmmjy1m7d9pt",
+     "value": "44°",
+     "isKey": false,
+     "tag": "maths-100-steps-out-of-order",
+     "execution": "The child halves the 180° first, getting 90°, and then takes away the 46°: 90° - 46° = 44°. The 46° must come off the whole 180° before the rest is shared, giving 134° ÷ 2 = 67°."
+    },
+    {
+     "optionId": "cmteo825h005qtmmjlbp9dbha",
+     "value": "12°",
+     "isKey": false,
+     "tag": "maths-73-digit-by-digit-division",
+     "execution": "The child takes 46° from 180° correctly to get 134°, then halves it one digit at a time and drops each remainder: 1 ÷ 2 = 0, 3 ÷ 2 = 1 and 4 ÷ 2 = 2. That gives 12° where 134° ÷ 2 = 67°."
+    },
+    {
+     "optionId": "cmteo825h005rtmmj3gnnjsrv",
+     "value": "65°",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "execution": "The child rounds the 46° to 50° to make the take-away easy and works out (180° - 50°) ÷ 2 = 65°. Rounding took 4° too many away, 2° from each equal angle, and the child never puts it back, so each angle is 67°."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Name the parts first: one top angle and two equal base angles. Take the 46 degrees from 180 to leave 134. Share that 134 into two equal angles: 67 each. One trap halves 180 first. Others round 46 to 50, or halve 134 one digit at a time.",
+    "_previousWalkScript": "Name the parts first: one top angle and two equal base angles. Take the 46 degrees from 180 to leave 134. Share that 134 into two equal angles: 67 each. The trap swaps the order or uses 360."
+   }
+  },
+  {
+   "itemId": "MC03-GEOM-05",
+   "why": "Walk script opened with no verb ('Half the perimeter to 15') and named a half-total trap that disagreed with the tag on 15 cm² (9 + 6 added, maths-72); now 'Halve the perimeter to get 15' and the traps named as their tags give them (15 cm² adds 9 and 6; 135 cm² uses 15 as the width, 15 x 9 = 135). Unit giveaway: 6 cm was the only cm option on an area question, now 6 cm², tag and mistake unchanged. 30 / 2 = 15, 15 - 9 = 6, 9 x 6 = 54.",
+   "stem": {
+    "text": "A rectangle has a perimeter of 30 cm and a length of 9 cm. Work out the width, then the area."
+   },
+   "options": [
+    {
+     "optionId": "cmteo82d1009stmmjsm494t92",
+     "value": "54 cm²",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82d1009ttmmj96luqtu6",
+     "value": "135 cm²",
+     "isKey": false,
+     "tag": "maths-82-fraction-of-the-wrong-whole",
+     "execution": "The child halves the whole perimeter, 30 ÷ 2 = 15, and uses 15 as the width. They should halve what is left after the two lengths, 30 − 9 − 9 = 12, to get a width of 6, so they give 15 × 9 = 135 instead of 6 × 9 = 54 cm²."
+    },
+    {
+     "optionId": "cmteo82d1009utmmjukee5zou",
+     "value": "6 cm²",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child finds the width correctly, (30 − 9 − 9) ÷ 2 = 6 cm, and gives that 6 as the area. They stop before working out the area itself, 9 × 6 = 54 cm²."
+    },
+    {
+     "optionId": "cmteo82d1009vtmmjvc04k0gw",
+     "value": "15 cm²",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child finds the width of 6 cm correctly but adds it to the length, 9 + 6 = 15, instead of multiplying. The area is 9 × 6 = 54 cm²."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Halve the perimeter to get 15, which is the length plus the width. Take the 9 cm length off to get a 6 cm width. The area is 9 times 6, which is 54 cm². One trap adds 9 and 6 instead of multiplying. Another uses 15 as the width.",
+    "_previousWalkScript": "Half the perimeter to 15, which is the length plus width. Take the 9 cm length off to get a 6 cm width. Area is 9 times 6, or 54 cm². One trap stops at the half-total."
+   }
+  },
+  {
+   "itemId": "MC05-GEOM-04",
+   "why": "48 cm² repeated the stem's given area with its unit, the only cm² option on a perimeter question. Replaced by 96 cm, tag maths-72: the child subtracts instead of dividing for the width (48 - 8 = 40), so 8 + 40 + 8 + 40 = 96. The walk said 'One trap hands back the area', which would now be false, so its last sentence names the traps present: 6 cm (stops at the width) and 22 cm (three sides, 8 + 6 + 8). Key 48 / 8 = 6, 2 x (8 + 6) = 28.",
+   "stem": {
+    "text": "A rectangle has an area of 48 cm² and a length of 8 cm. First find its width, then work out its perimeter."
+   },
+   "options": [
+    {
+     "optionId": "cmteo82q200hwtmmj4jtgzg7f",
+     "value": "28 cm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82q200hxtmmjvxeneyam",
+     "value": "96 cm",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child subtracts the length from the area instead of dividing, 48 − 8 = 40, and uses 40 cm as the width. That gives 8 + 40 + 8 + 40 = 96 cm, where the width is 48 ÷ 8 = 6 cm and the perimeter is 28 cm."
+    },
+    {
+     "optionId": "cmteo82q200hytmmj9z4pztps",
+     "value": "22 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "execution": "The child finds the width of 6 cm correctly but adds only three sides, 8 + 6 + 8 = 22. All four sides give 28 cm."
+    },
+    {
+     "optionId": "cmteo82q200hztmmjguuw6gyd",
+     "value": "6 cm",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child finds the width correctly, 48 ÷ 8 = 6 cm, and gives that as the answer. They stop before working out the perimeter, 8 + 6 + 8 + 6 = 28 cm."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Area is length times width, so width is 48 shared by 8, giving 6 cm. Now add 8 and 6, then double for the perimeter. That makes 28 cm. One trap stops at the width. Another adds only three sides.",
+    "_previousWalkScript": "Area is length times width, so width is 48 shared by 8, giving 6 cm. Now add 8 and 6, then double for the perimeter. That makes 28 cm. One trap hands back the area instead."
+   }
+  },
+  {
+   "itemId": "MC05-GEOM-05",
+   "why": "Notation: walk wrote '76 cm squared', now '76 cm²'. Unit giveaway: 40 cm was the only cm option on an area question, now 40 cm² (as sibling MC04-GEOM-05), tag and mistake unchanged. 12 x 8 = 96, 5 x 4 = 20, 96 - 20 = 76; 12 + 8 + 12 + 8 = 40.",
+   "stem": {
+    "text": "An L-shape is made from a rectangle 12 cm by 8 cm. A corner 5 cm by 4 cm is cut out. What is the area of the L-shape?"
+   },
+   "options": [
+    {
+     "optionId": "cmteorein0010tm2ci5fc668y",
+     "value": "76 cm²",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteorein0011tm2cc1yvmtyp",
+     "value": "96 cm²",
+     "isKey": false,
+     "tag": "maths-90-composite-shape-area-slip",
+     "execution": "The child finds the area of the whole 12 cm by 8 cm rectangle, 96 cm², and forgets to take away the 5 cm by 4 cm cut-out. Taking away 20 cm² gives 76 cm²."
+    },
+    {
+     "optionId": "cmteorein0012tm2cfwy9opxa",
+     "value": "40 cm²",
+     "isKey": false,
+     "tag": "maths-38-perimeter-vs-area-adding",
+     "execution": "The child adds the sides of the 12 cm by 8 cm rectangle, 12 + 8 + 12 + 8 = 40, when asked for area, and writes 40 cm². The area is 12 × 8 − 5 × 4 = 96 − 20 = 76 cm²."
+    },
+    {
+     "optionId": "cmteorein0013tm2clxqw8exu",
+     "value": "116 cm²",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child finds both areas correctly, 96 cm² and 20 cm², but adds the cut-out instead of taking it away. That gives 96 + 20 = 116 instead of 96 − 20 = 76 cm²."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Find the whole block first: 12 times 8 is 96. The cut-out corner is 5 times 4, which is 20. Take the cut-out away to leave 76 cm². One trap forgets the cut-out.",
+    "_previousWalkScript": "Find the whole block first: 12 times 8 is 96. The cut-out corner is 5 times 4, which is 20. Take the cut-out away to leave 76 cm squared. One trap forgets the cut-out."
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-01",
+   "why": "Walk named a rounding trap no option carries (£8 - £3 = £5.00, not offered). Now names one present: £6.00 drops the pence. £8.00 - £2.60 = £5.40.",
+   "stem": {
+    "text": "Ben has £8. He buys a toy for £2.60. How much change does he get?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82650064tmmjr20vtbf6",
+     "value": "£6.60",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "execution": "Working out £8.00 - £2.60, the child sees 0 above 6 in the tenths column and takes the smaller from the larger, 6 - 0 = 6, instead of exchanging a pound. The pounds give 8 - 2 = 6, so the answer reads £6.60 where the change is £5.40."
+    },
+    {
+     "optionId": "cmteo82650065tmmje9thd537",
+     "value": "£6.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "execution": "The child drops the 60p and subtracts whole pounds only: £8 - £2 = £6.00. The toy costs £2.60, so the 60p must come off too, leaving £5.40."
+    },
+    {
+     "optionId": "cmteo82650066tmmjmr915ifk",
+     "value": "£5.40",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82660067tmmjsfsuo6tg",
+     "value": "£10.60",
+     "isKey": false,
+     "tag": "maths-84-adding-instead-of-finding-the-difference",
+     "execution": "The child adds the toy's price to the £8 instead of taking it away: £8 + £2.60 = £10.60. Change is what is left, so £8 - £2.60 = £5.40."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line up the pounds and pence first. Write £8 as £8.00, then take £2.60 away. That leaves £5.40. One trap drops the pence.",
+    "_previousWalkScript": "Line up the pounds and pence first. Write £8 as £8.00, then take £2.60 away. That leaves £5.40. One trap rounds £2.60 up and forgets to adjust."
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-03",
+   "why": "Walk named a rounding trap no option carries (£4 + £3 = £7.00, not offered). Now names £6.00 as its tag does (pence dropped, £4 + £2). £4.35 + £2.50 = £6.85; £2.85 still the dropped £4.",
+   "stem": {
+    "text": "A book costs £4.35 and a pen costs £2.50. What is the total cost?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo826h006ctmmjr950spp4",
+     "value": "£2.85",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "execution": "The child adds the £2.50 to only the 35p of the £4.35, dropping the £4, and gets £2.85. The full total is £4.35 + £2.50 = £6.85."
+    },
+    {
+     "optionId": "cmteo826h006dtmmj6nhlmfyi",
+     "value": "£1.85",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child takes the pen's price away from the book's instead of adding them: £4.35 - £2.50 = £1.85. The question asks for the total cost, £4.35 + £2.50 = £6.85."
+    },
+    {
+     "optionId": "cmteo826h006etmmjpv6ety7w",
+     "value": "£6.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "execution": "The child drops the pence and adds whole pounds only: £4 + £2 = £6.00. The 35p and 50p add another 85p, so the total is £6.85."
+    },
+    {
+     "optionId": "cmteo826h006ftmmj05crje7u",
+     "value": "£6.85",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Stack the pounds and pence in columns. Add £4.35 and £2.50 to make £6.85. One trap loses a whole digit from a column. Another drops the pence and adds only the pounds.",
+    "_previousWalkScript": "Stack the pounds and pence in columns. Add £4.35 and £2.50 to make £6.85. One trap loses a whole digit from a column. Another rounds both prices and forgets to adjust."
+   }
+  },
+  {
+   "itemId": "MC02-MEAS-07",
+   "why": "Walk named a rounding trap no option carries. Now names £4.90 (stops at the total spent). 4 x 65p = £2.60, + £2.30 = £4.90, £10 - £4.90 = £5.10; 'leaves an item out' stays true of £5.75 (one apple left out: 3 x 65p + £2.30 = £4.25, £10 - £4.25 = £5.75).",
+   "stem": {
+    "text": "A shop sells apples at 65p each. Reuben buys 4 apples and a bottle of juice for £2.30. He pays with a £10 note. How much change does he get?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo827e006stmmjtov7wwt8",
+     "value": "£4.90",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child works out what Reuben spends, 4 × 65p = £2.60 and £2.60 + £2.30 = £4.90, and gives that. The change is what is left from £10: £10 - £4.90 = £5.10."
+    },
+    {
+     "optionId": "cmteo827e006ttmmj9km1xf7h",
+     "value": "£7.10",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "execution": "The child adds 4 × 65p = £2.60 to only the 30p of the £2.30 juice, dropping the £2, to make £2.90. Taking £2.90 from £10 gives £7.10 instead of £10 − £4.90 = £5.10."
+    },
+    {
+     "optionId": "cmteo827e006utmmj7mem7xbk",
+     "value": "£5.10",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo827e006vtmmjsdyy46ih",
+     "value": "£5.75",
+     "isKey": false,
+     "tag": "maths-85-miscount-or-rounding-in-measures",
+     "execution": "The child multiplies 65p by one fewer apple, 3 × 65p = £1.95, and adds the £2.30 juice to get £4.25. Taking £4.25 from £10 gives £5.75 instead of £10 - £4.90 = £5.10."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Add every item first, then find the change. The shopping costs £4.90, leaving £5.10. One trap leaves an item out. Another stops at the total spent.",
+    "_previousWalkScript": "Add every item first, then find the change. The shopping costs £4.90, leaving £5.10. One trap leaves an item out. Another rounds a price and forgets to adjust."
+   }
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "why": "Notation: walk wrote 8.00, 5.60, 2.40 without £; now £8.00, £5.60, £2.40. It also named a rounding trap no option carries (£8 - £6 = £2.00, not offered); now only 'drops the pence' (£3.00). £8.00 - £5.60 = £2.40.",
+   "stem": {
+    "text": "Ben has £8. He buys a toy for £5.60. How much change does he get?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82dc00a0tmmj114e5e9k",
+     "value": "£2.40",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82dc00a1tmmj0mkrjfwd",
+     "value": "£3.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "execution": "The child drops the 60p and subtracts whole pounds only: £8 - £5 = £3.00. The toy costs £5.60, so the 60p must come off too, leaving £2.40."
+    },
+    {
+     "optionId": "cmteo82dc00a2tmmjmzn9d03d",
+     "value": "£3.60",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "execution": "Working out £8.00 - £5.60, the child sees 0 above 6 in the tenths column and takes the smaller from the larger, 6 - 0 = 6, instead of exchanging a pound. The pounds give 8 - 5 = 3, so the answer reads £3.60 where the change is £2.40."
+    },
+    {
+     "optionId": "cmteo82dc00a3tmmjnb8n4fne",
+     "value": "£13.60",
+     "isKey": false,
+     "tag": "maths-84-adding-instead-of-finding-the-difference",
+     "execution": "The child adds the toy's price to the £8 instead of taking it away: £8 + £5.60 = £13.60. Change is what is left, so £8 - £5.60 = £2.40."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Change means the totals must line up. Write £8 as £8.00, then take £5.60 away. That leaves £2.40. One trap drops the pence.",
+    "_previousWalkScript": "Change means the totals must line up. Write £8 as 8.00, then take 5.60 away. That leaves 2.40. The trap rounds the price or drops the pence."
+   }
+  },
+  {
+   "itemId": "MC03-MEAS-05",
+   "why": "Walk named a dropped-pounds-digit trap no option carries. Now names the two present: £5.50 (rounded to £2.70 + £1.80 = £4.50) and £4.60 (carry added twice, £5.40 spent). £2.65 + £1.75 = £4.40, £10 - £4.40 = £5.60.",
+   "stem": {
+    "text": "Sam buys a comic for £2.65 and a pen for £1.75. He pays with a £10 note. How much change does he get?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82e000agtmmjn3wghzhf",
+     "value": "£5.60",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82e000ahtmmjnspvlcme",
+     "value": "£4.40",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child works out what Sam spends, £2.65 + £1.75 = £4.40, and gives that. The change is what is left from £10: £10 - £4.40 = £5.60."
+    },
+    {
+     "optionId": "cmteo82e000aitmmjiutqewr1",
+     "value": "£4.60",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "execution": "Adding £2.65 + £1.75, the child carries correctly into the tenths, 6 + 7 + 1 = 14, writes 4 and carries 1, but adds that carried 1 twice into the pounds: 2 + 1 + 1 + 1 = 5. That makes £5.40 instead of £4.40, and £10 - £5.40 = £4.60 instead of £5.60."
+    },
+    {
+     "optionId": "cmteo82e000ajtmmj4j6kp40f",
+     "value": "£5.50",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "execution": "The child rounds £2.65 to £2.70 and £1.75 to £1.80, both to the nearest 10p, and works out £10 - £4.50 = £5.50. Rounding added 5p to each price, 10p in all, which the child never gives back, so the change is £5.60."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Get the total spent first. £2.65 plus £1.75 is £4.40. Take that from £10 to leave £5.60. One trap rounds the prices. Another carries a 1 twice.",
+    "_previousWalkScript": "Get the total spent first. £2.65 plus £1.75 is £4.40. Take that from £10 to leave £5.60. The trap rounds the prices or drops a pounds digit."
+   }
+  },
+  {
+   "itemId": "MC03-MEAS-06",
+   "why": "Walk named stop-at-total (615 m) and dropped-digit traps, neither offered. Now names those present: 280 m and 260 m (275 rounded to 280 or 300, 900 - 340 - 280 = 280, 900 - 340 - 300 = 260) and 185 m (carry twice, 715, 900 - 715 = 185). 340 + 275 = 615, 900 - 615 = 285.",
+   "stem": {
+    "text": "A path is being laid. On Monday 340 m is laid and on Tuesday 275 m. The whole path is 900 m. How many metres are left to lay?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82e600aktmmjc0t1n41l",
+     "value": "285 m",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82e600altmmjx1u331wv",
+     "value": "185 m",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "execution": "Adding 340 + 275, the tens make 4 + 7 = 11, so the child writes 1 and carries 1, but adds it twice into the hundreds: 3 + 2 + 1 + 1 = 7. That gives 715 m instead of 615 m, and 900 - 715 = 185 m instead of 285 m."
+    },
+    {
+     "optionId": "cmteo82e600amtmmj3kqzpjlp",
+     "value": "280 m",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "execution": "The child rounds 275 m to 280 m, the nearest ten, and works out 900 - 340 - 280 = 280 m. Rounding took 5 m too many away and the child never puts it back, so 285 m are left."
+    },
+    {
+     "optionId": "cmteo82e600antmmjcs691nel",
+     "value": "260 m",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "execution": "The child rounds 275 m up to 300 m, the nearest hundred, and works out 900 - 340 - 300 = 260 m. Rounding took 25 m too many away and the child never puts it back, so 285 m are left."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Find the total laid first. 340 m plus 275 m is 615 m. Take that from 900 m to leave 285 m. One trap rounds 275 m and never puts the difference back. Another carries a 1 twice.",
+    "_previousWalkScript": "Find the total laid first. 340 m plus 275 m is 615 m. Take that from 900 m to leave 285 m. The trap stops at the total, or drops a digit."
+   }
+  },
+  {
+   "itemId": "MC04-MEAS-07",
+   "why": "Notation: walk wrote 2.35, 7.05, 2.95 without £; now £2.35, £7.05, £2.95. 3 x £2.35 = £7.05, £10 - £7.05 = £2.95.",
+   "stem": {
+    "text": "A shop sells notebooks at £2.35 each. Tom buys 3 notebooks and pays with a £10 note. How much change does he get?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82l000estmmje2w5o3sg",
+     "value": "£2.95",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82l000ettmmjb09nczyi",
+     "value": "£7.05",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "The child works out the cost of the notebooks correctly, 3 × £2.35 = £7.05, and gives that. The change is still to find: £10 - £7.05 = £2.95."
+    },
+    {
+     "optionId": "cmteo82l000eutmmjja17nu7u",
+     "value": "£5.30",
+     "isKey": false,
+     "tag": "maths-85-miscount-or-rounding-in-measures",
+     "execution": "The child multiplies by one notebook too few, 2 × £2.35 = £4.70, and gives £10 - £4.70 = £5.30. Tom buys 3 notebooks, so the change is £10 - £7.05 = £2.95."
+    },
+    {
+     "optionId": "cmteo82l000evtmmj86bl6sjl",
+     "value": "£2.80",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "execution": "The child rounds £2.35 to £2.40 and works out 3 × £2.40 = £7.20, so gives £10 - £7.20 = £2.80. Rounding added 5p to each of the 3 notebooks, 15p in all, which the child never puts back, so the change is £2.95."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Three notebooks cost £2.35 times 3, which is £7.05. Take £7.05 from the £10 note. The change is £2.95. The trap stops at the total or miscounts.",
+    "_previousWalkScript": "Three notebooks cost 2.35 times 3, which is 7.05. Take 7.05 from the £10 note. The change is 2.95. The trap stops at the total or miscounts."
+   }
+  },
+  {
+   "itemId": "MC01-NPV-02",
+   "why": "Walk script never stated the key; the carry sentence now ends 'to reach 5,070'. Checked: What number is 100 more than 4,970? = 5,070.",
+   "stem": {
+    "text": "What number is 100 more than 4,970?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo820n002otmmj9iqtavp2",
+     "value": "5070",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo820n002ptmmj069wrqyf",
+     "value": "4980",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "execution": "The child writes the 1 of 100 one column to the right, under the tens instead of the hundreds, so adds 10: 4,970 + 10 = 4,980. In 100 the 1 sits in the hundreds column, so the 9 hundreds become 10 and the answer is 5,070."
+    },
+    {
+     "optionId": "cmteo820n002qtmmjdlveifgw",
+     "value": "4870",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child takes 100 away instead of adding it, working out 4,970 - 100 = 4,870. The question asks for 100 more, so the answer is 4,970 + 100 = 5,070."
+    },
+    {
+     "optionId": "cmteo820n002rtmmjimurvrcf",
+     "value": "4070",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 but drops the carried 1. The thousands digit stays 4, so the answer reads 4,070 instead of 5,070."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 5,070. A common slip forgets to carry or adds to the next column along.",
+    "_previousWalkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. A common slip forgets to carry or adds to the next column along."
+   }
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "why": "Walk script never stated the key; the carry sentence now ends 'to reach 7,070'. Checked: What number is 100 more than 6,970? = 7,070.",
+   "stem": {
+    "text": "What number is 100 more than 6,970?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82lb00f0tmmjgymta4re",
+     "value": "7070",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82lb00f1tmmjhfxzg4sd",
+     "value": "6980",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "execution": "The child writes the 1 of 100 one column to the right, under the tens instead of the hundreds, so adds 10: 6,970 + 10 = 6,980. In 100 the 1 sits in the hundreds column, so the answer is 7,070."
+    },
+    {
+     "optionId": "cmteo82lb00f2tmmjd1il61gp",
+     "value": "7970",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "execution": "The child writes the 1 of 100 one column to the left, under the thousands instead of the hundreds, so adds 1,000: 6,970 + 1,000 = 7,970. In 100 the 1 sits in the hundreds column, so the answer is 7,070."
+    },
+    {
+     "optionId": "cmteo82lc00f3tmmjlyn7o7jj",
+     "value": "6070",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 but drops the carried 1. The thousands digit stays 6, so the answer reads 6,070 instead of 7,070."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 7,070. The trap adds into a neighbouring column or drops the carry.",
+    "_previousWalkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. The trap adds into a neighbouring column or drops the carry."
+   }
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "why": "Walk script never stated the key; the carry sentence now ends 'to reach 6,060'. Checked: What number is 100 more than 5,960? = 6,060.",
+   "stem": {
+    "text": "What number is 100 more than 5,960?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82rg00iwtmmjxaspll63",
+     "value": "6060",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82rg00ixtmmjn4i7tqmf",
+     "value": "5970",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "execution": "The child writes the 1 of 100 one column to the right, under the tens instead of the hundreds, so adds 10: 5,960 + 10 = 5,970. In 100 the 1 sits in the hundreds column, so the answer is 6,060."
+    },
+    {
+     "optionId": "cmteo82rg00iytmmjo5g83zax",
+     "value": "6960",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "execution": "The child writes the 1 of 100 one column to the left, under the thousands instead of the hundreds, so adds 1,000: 5,960 + 1,000 = 6,960. In 100 the 1 sits in the hundreds column, so the answer is 6,060."
+    },
+    {
+     "optionId": "cmteo82rg00iztmmjkshrh0zn",
+     "value": "5060",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 but drops the carried 1. The thousands digit stays 5, so the answer reads 5,060 instead of 6,060."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 6,060. The trap adds into a neighbouring column or drops the carry.",
+    "_previousWalkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. The trap adds into a neighbouring column or drops the carry."
+   }
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "why": "Walk script never stated the key; the carry sentence now ends 'to reach 10,400'. Checked: What number is 1,000 more than 9,400? = 10,400.",
+   "stem": {
+    "text": "What number is 1,000 more than 9,400?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82li00f4tmmjuzyyx44j",
+     "value": "10400",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82li00f5tmmjraxjjor0",
+     "value": "9500",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "execution": "The child writes the 1 of 1,000 one column to the right, under the hundreds instead of the thousands, so adds 100: 9,400 + 100 = 9,500. In 1,000 the 1 sits in the thousands column, so the 9 thousands become 10 and the answer is 10,400."
+    },
+    {
+     "optionId": "cmteo82li00f6tmmjies79c06",
+     "value": "8400",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child takes 1,000 away instead of adding it, working out 9,400 - 1,000 = 8,400. The question asks for 1,000 more, so the answer is 9,400 + 1,000 = 10,400."
+    },
+    {
+     "optionId": "cmteo82li00f7tmmjf14y60iy",
+     "value": "400",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "execution": "In the thousands column 9 + 1 makes 10; the child writes 0 but drops the carried 1. No ten-thousands digit is written, which leaves 400 where the answer is 10,400."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column to reach 10,400. The trap adds into a neighbouring column or loses the carry.",
+    "_previousWalkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column. The trap adds into a neighbouring column or loses the carry."
+   }
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "why": "Walk script never stated the key; the carry sentence now ends 'to reach 10,500'. Checked: What number is 1,000 more than 9,500? = 10,500.",
+   "stem": {
+    "text": "What number is 1,000 more than 9,500?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82rm00j0tmmj8ha9z9ai",
+     "value": "10500",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82rm00j1tmmjq78asvi4",
+     "value": "9600",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "execution": "The child writes the 1 of 1,000 one column to the right, under the hundreds instead of the thousands, so adds 100: 9,500 + 100 = 9,600. In 1,000 the 1 sits in the thousands column, so the answer is 10,500."
+    },
+    {
+     "optionId": "cmteo82rm00j2tmmjnyjv6p3v",
+     "value": "19500",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "execution": "The child writes the 1 of 1,000 one column to the left, under the ten thousands instead of the thousands, so adds 10,000: 9,500 + 10,000 = 19,500. In 1,000 the 1 sits in the thousands column, so the answer is 10,500."
+    },
+    {
+     "optionId": "cmteo82rm00j3tmmjjjh1l3pg",
+     "value": "500",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "execution": "In the thousands column 9 + 1 makes 10; the child writes 0 but drops the carried 1. No ten-thousands digit is written, which leaves 500 where the answer is 10,500."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column to reach 10,500. The trap adds into a neighbouring column or loses the carry.",
+    "_previousWalkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column. The trap adds into a neighbouring column or loses the carry."
+   }
+  }
+ ],
+ "notes": {
+  "MC02-FDP-03": "Walk script named traps no option carries ('treats the percent as pounds'; 'stops at one part', which would be 12). Now names the two present: 6 (10% only) and 20 (60 - 40). 40% of 60 = 24. The maths-77 tag hint is left to the library track; the tag (subtracting the percentage digits directly) is right for 20.",
+  "MC01-GEOM-04": "Walk script falsely said two corners share x = 5 and two share y = 4; only (5, 1) has x = 5 and only (2, 4) has y = 4. Now states that, and the fourth corner (5, 4).",
+  "MC02-GEOM-03": "Walk script named a 360 trap no option carries ((360 - 46) / 2 = 157, not offered). Now names the three present: 44 (90 - 46, halving first), 65 ((180 - 50) / 2, rounding), 12 (134 halved digit by digit). Key (180 - 46) / 2 = 67.",
+  "MC03-GEOM-05": "Walk script opened with no verb ('Half the perimeter to 15') and named a half-total trap that disagreed with the tag on 15 cm² (9 + 6 added, maths-72); now 'Halve the perimeter to get 15' and the traps named as their tags give them (15 cm² adds 9 and 6; 135 cm² uses 15 as the width, 15 x 9 = 135). Unit giveaway: 6 cm was the only cm option on an area question, now 6 cm², tag and mistake unchanged. 30 / 2 = 15, 15 - 9 = 6, 9 x 6 = 54.",
+  "MC05-GEOM-01": "Unit giveaway: 162 cm² was the only cm² option on a perimeter question; now 162 cm, as sibling cards give it. 18 x 9 = 162; key 2 x (18 + 9) = 54 cm. Walk script ('One trap swaps in the area instead') stays true.",
+  "MC05-GEOM-04": "48 cm² repeated the stem's given area with its unit, the only cm² option on a perimeter question. Replaced by 96 cm, tag maths-72: the child subtracts instead of dividing for the width (48 - 8 = 40), so 8 + 40 + 8 + 40 = 96. The walk said 'One trap hands back the area', which would now be false, so its last sentence names the traps present: 6 cm (stops at the width) and 22 cm (three sides, 8 + 6 + 8). Key 48 / 8 = 6, 2 x (8 + 6) = 28.",
+  "MC05-GEOM-05": "Notation: walk wrote '76 cm squared', now '76 cm²'. Unit giveaway: 40 cm was the only cm option on an area question, now 40 cm² (as sibling MC04-GEOM-05), tag and mistake unchanged. 12 x 8 = 96, 5 x 4 = 20, 96 - 20 = 76; 12 + 8 + 12 + 8 = 40.",
+  "MC02-MEAS-01": "Walk named a rounding trap no option carries (£8 - £3 = £5.00, not offered). Now names one present: £6.00 drops the pence. £8.00 - £2.60 = £5.40.",
+  "MC02-MEAS-03": "Walk named a rounding trap no option carries (£4 + £3 = £7.00, not offered). Now names £6.00 as its tag does (pence dropped, £4 + £2). £4.35 + £2.50 = £6.85; £2.85 still the dropped £4.",
+  "MC02-MEAS-07": "Walk named a rounding trap no option carries. Now names £4.90 (stops at the total spent). 4 x 65p = £2.60, + £2.30 = £4.90, £10 - £4.90 = £5.10; 'leaves an item out' stays true of £5.75 (one apple left out: 3 x 65p + £2.30 = £4.25, £10 - £4.25 = £5.75).",
+  "MC03-MEAS-01": "Notation: walk wrote 8.00, 5.60, 2.40 without £; now £8.00, £5.60, £2.40. It also named a rounding trap no option carries (£8 - £6 = £2.00, not offered); now only 'drops the pence' (£3.00). £8.00 - £5.60 = £2.40.",
+  "MC03-MEAS-05": "Walk named a dropped-pounds-digit trap no option carries. Now names the two present: £5.50 (rounded to £2.70 + £1.80 = £4.50) and £4.60 (carry added twice, £5.40 spent). £2.65 + £1.75 = £4.40, £10 - £4.40 = £5.60.",
+  "MC03-MEAS-06": "Walk named stop-at-total (615 m) and dropped-digit traps, neither offered. Now names those present: 280 m and 260 m (275 rounded to 280 or 300, 900 - 340 - 280 = 280, 900 - 340 - 300 = 260) and 185 m (carry twice, 715, 900 - 715 = 185). 340 + 275 = 615, 900 - 615 = 285.",
+  "MC04-MEAS-07": "Notation: walk wrote 2.35, 7.05, 2.95 without £; now £2.35, £7.05, £2.95. 3 x £2.35 = £7.05, £10 - £7.05 = £2.95.",
+  "MC01-NPV-02": "Walk script never stated the key; the carry sentence now ends 'to reach 5,070'. Checked: What number is 100 more than 4,970? = 5,070.",
+  "MC04-NPV-02": "Walk script never stated the key; the carry sentence now ends 'to reach 7,070'. Checked: What number is 100 more than 6,970? = 7,070.",
+  "MC05-NPV-02": "Walk script never stated the key; the carry sentence now ends 'to reach 6,060'. Checked: What number is 100 more than 5,960? = 6,060.",
+  "MC04-NPV-03": "Walk script never stated the key; the carry sentence now ends 'to reach 10,400'. Checked: What number is 1,000 more than 9,400? = 10,400.",
+  "MC05-NPV-03": "Walk script never stated the key; the carry sentence now ends 'to reach 10,500'. Checked: What number is 1,000 more than 9,500? = 10,500."
+ }
+}

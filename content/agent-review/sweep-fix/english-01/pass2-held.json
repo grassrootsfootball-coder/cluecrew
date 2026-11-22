@@ -1,0 +1,73 @@
+{
+ "door": "sweep-fix/english-01",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-001-WIW-05",
+  "ENG-001-WIW-10",
+  "ENG-001-WIW-03",
+  "ENG-001-WIW-02",
+  "ENG-008-RC-01"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-001-WIW-13",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-001-WIW-13",
+     "verdict": "REFUSE",
+     "reason": "The giveaway the sweep named survives one word along. The four distractors all open 'To show ...' and the key alone opens 'To make ...'. That is the same odd-one-out shape as the old 'To' against four 'Because'. The key is also now the shortest option at 9 words against 11, 11, 11 and 13. Otherwise the new question is sound: the key matches the walk script, every distractor is wrong under every reading, and line 29, line 33 and line 39 check. Vary the openings so the key's verb is shared, or phrase the key 'To show ...'."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-001-WIW-13",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "faultField": "options",
+    "reason": "The form giveaway is not fixed. Four distractors open 'To show' and the key alone opens 'To make'. The key is also the shortest option, 9 words against 11 to 13. Content is otherwise sound: there is one defensible answer, and the executions are true against lines 29 to 33 and 39."
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-12",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw387yf000ktmqbrineesg5",
+     "verdict": "REFUSE",
+     "reason": "WIW-12: 'A lake.' removes the second answer but is a throwaway, and it builds a tell. It is the only option with no source anywhere in the passage, and it is the key's two-word body-of-water twin. A child who has noticed the river running through lines 29 to 67 picks 'A river.' from the pair without finding line 29. The tag story is fitted: no text reads almost like 'a lake', so nothing is being matched on gist; any noun swapped for 'river' would get the same execution."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-001-WIW-12",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "faultField": "options",
+    "reason": "The proposed 'A lake.' is a sourceless throwaway and the key's body-of-water twin, so 'A river.' can be picked from the pair without reading line 29 (seat refused). The original fault is therefore not fixed as proposed. A secondary note for the redraft: the hint 'Not what he saw that day.' would also exclude the key, because he first sees the river that day."
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-09",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-001-WIW-09",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "walkScript",
+    "reason": "The original hint fault is fixed. But the walk script says 'Line 22 is the rabbit's one speech' when the speech runs on to line 23 ('the private road!'). It then quotes that line-22-and-23 sentence as if it all stood on line 22. This is the same line-number fault class as WIW-05, and it now disagrees with the new hint's 'lines 22 and 23'. Fix: 'Lines 22 and 23 are the rabbit's one speech.' Options and key are otherwise sound."
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-14",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-001-WIW-14",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "options",
+    "reason": "The lineRefs fault is fixed. But read whole, the row has the form tell the sweep held in WIW-13. All four distractors open 'The Mole was ...' and the key alone opens 'The river held ...', so a child can pick it without the skill. Content is otherwise sound against lines 33 to 36: one defensible answer, and the walk script states the key."
+   }
+  }
+ ]
+}

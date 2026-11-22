@@ -1,0 +1,60 @@
+{
+ "door": "sweep-fix/vr-11b",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "gen-vr-11-number-series-02",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-11b",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; key the only option fitting the constant step; every distractor wrong; adjacent pair's key position varies across rows (17<18, 21<22) so no positional shortcut; vocabulary suitable. [6,9,12,15] step 3 -> 18.",
+   "landedAt": "2026-11-22T17:33:34.583Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at 3 and 6. Each gap grows one: 3, 4, 5. A gap of 6 gives 21. Now 20 and 22 miss either side; 24 goes too far.",
+     "after": "Notice the space from 6 to 9. You go up 3 each time. Count 3 on from 15 to reach 18. The number 21 takes the step twice. The number 17 is one short. The number 27 adds the last two numbers together."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-13",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-11b",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; key the only option fitting the constant step; every distractor wrong; adjacent pair's key position varies across rows (17<18, 21<22) so no positional shortcut; vocabulary suitable. [5,9,13,17] step 4 -> 21.",
+   "landedAt": "2026-11-22T17:33:34.583Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Cover the last number. The count grows by 4 each time. So 17 plus 4 gives 21. Beside it 20 lands low, 22 lands high, and 25 leaps far.",
+     "after": "Notice the space from 5 to 9. You go up 4 each time. Count 4 on from 17 to reach 21. The number 25 takes the step twice. The number 22 is one too many. The number 30 adds the last two numbers together."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-11-number-series-13-opt2 (gen-vr-11-number-series-13-opt2).execution",
+     "before": null,
+     "after": "Had the rule right but slipped by one on the last jump, giving 22 instead of 21."
+    },
+    {
+     "field": "option gen-vr-11-number-series-13-opt3 (gen-vr-11-number-series-13-opt3).execution",
+     "before": null,
+     "after": "Added the step of 4 twice from the last term, giving 25 instead of 21."
+    },
+    {
+     "field": "option gen-vr-11-number-series-13-opt4 (gen-vr-11-number-series-13-opt4).execution",
+     "before": null,
+     "after": "Read the series as each term being the sum of the two before it, and added the last two terms to make 30."
+    }
+   ]
+  }
+ ]
+}

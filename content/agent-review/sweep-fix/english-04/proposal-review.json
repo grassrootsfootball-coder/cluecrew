@@ -1,0 +1,105 @@
+{
+ "door": "sweep-fix/english-04",
+ "reviewer": "rev-agent-01",
+ "precheck": "sweep-fix/english-04 --precheck --from-live: 8 rows touched, 8 pass every gate, 0 fail. A gate pass is not the basis of any verdict below.",
+ "changes": [
+  {
+   "ref": "seat:cmsw2f4ux00bjtmbvszhqnr73",
+   "verdict": "ATTEST",
+   "reason": "Value unchanged; retag to en-plausible-not-stated fixes the finding (the motive tag's 'why' hint did not fit a 'what' question). Execution checked: lines 49 to 51 do have her hope to be told in time so she can go and spend a week with her mother; no line gives hiding the hammer. Note: this row now carries en-plausible-not-stated on two of its three distractors, which is allowed but weakens the diagnosis."
+  },
+  {
+   "ref": "rebuild:ENG-006-TM-08",
+   "verdict": "ATTEST",
+   "reason": "Only the stem changed: 're-measures' is gone, so the stem no longer hands over the key's 'measuring'. Quote 'the rule' is on line 38 ('he would take the rule'). The child must now find 're-measure' at line 38 to fix the sense."
+  },
+  {
+   "ref": "rebuild:ENG-006-TM-12",
+   "verdict": "ATTEST",
+   "reason": "Stem now asks about 'these events', so it no longer asserts the single day the key denies. All four options share the 'They tell us ...' frame, so the 'It is not X, but Y' pair is gone. Executions checked: first 'would' is line 3; line 57-58 has the picture up about midnight, very crooked and insecure; line 62 'surveying the mess he had made with evident pride'. Minor: stem's singular 'that' is answered by 'They'; readable, not a fault."
+  },
+  {
+   "ref": "rebuild:ENG-010-JE-01",
+   "verdict": "ATTEST",
+   "reason": "Only the hint changed. 'Read the whole of line 2 before you choose.' no longer steers away from where the stile leads, which is the one detail separating the key from 'a stile that leads into a lane'. It does not quote or paraphrase the key."
+  },
+  {
+   "ref": "rebuild:ENG-010-JE-12",
+   "verdict": "REFUSE",
+   "reason": "Fixes the named faults (off-question second clause gone; walk no longer misreads line 53) but introduces a new giveaway: the stem asks what Jane does 'before describing something', and the key is the only option that restates that frame ('... before she describes what she sees'). It is the only option containing 'before'. This is the same stem-echo class the sweep held on TM-08 ('measuring') and HB-07 ('chilled'); a child can match the stem's words to the key without reading lines 51 or 71."
+  },
+  {
+   "ref": "rebuild:ENG-016-HB-02",
+   "verdict": "ATTEST",
+   "reason": "Mirror distractor replaced with 'He grows cheerful and chatty as the moor comes into view.' (en-contradicted-by-the-text): line 45 'Even Baskerville fell silent' and line 5-6 (sat a long time, eyes fixed) contradict 'chatty', and the change runs the opposite way to the text. Execution true (line 40 moor rises in front; line 46 overcoat). Walk now adds line 6 'eager face', line 9 comrade, lines 45 and 46, and ends on the change, which matches the key."
+  },
+  {
+   "ref": "rebuild:ENG-016-HB-07",
+   "verdict": "ATTEST",
+   "reason": "Key no longer repeats the stem's 'chilled'. 'The bleak moor, with a dangerous man hiding on it.' is true of lines 40 to 45 (barren waste, desolate plain; the fiendish man hiding in a burrow, line 42-43). This is the second reader's own suggested wording. The key remains the one two-part option, which is what the text says (line 44 'It needed but this to complete')."
+  },
+  {
+   "ref": "rebuild:ENG-016-HB-12",
+   "verdict": "ATTEST",
+   "reason": "Unclear key 'He writes a still moor' replaced with 'He writes as if the land itself had feelings.' Walk now uses moor evidence only: line 4 'melancholy hill' (the moor, per line 1), line 19 'gloomy curve of the moor', line 20 'sinister hills'; line 27 lane evidence dropped; walk ends on the key."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-006-TM-08",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Stem no longer gives 're-measures'; line 38 fixes the measuring sense; three distractors wrong (law sense, wall mark at lines 34-35, 'as a rule' habit); hint and walk accurate, walk states 'measuring tool'."
+  },
+  {
+   "itemId": "ENG-006-TM-10",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Key matches lines 50-51 (spend a week with her mother while it was being done); retagged distractor's tag and hint now fit; other distractors wrong (offer never made; 'a man in' is Uncle Podger's scorn at lines 62-63); walk states the plan."
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Stem no longer asserts one day; key (every time he took on a job, line 2 'undertook to do a job' plus habitual 'would') is the only defensible reading; options share one frame with similar lengths; walk lines 11 and 37 checked and walk ends on the key."
+  },
+  {
+   "itemId": "ENG-010-JE-01",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "walkScript",
+   "reason": "Hint fault is fixed, but the unchanged walk script never states the answer: it ends 'The field is where the stile leads, not where she is.' and never says she sits on a stile that leads into a field. It also keeps 'Read what she sits on', the very steer the sweep struck from the hint. A walk must reach and state the key."
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "key",
+   "reason": "The original faults are gone, but the new key echoes the stem: stem 'before describing something', key '... before she describes what she sees', the only option with 'before'. Stem-echo giveaway, same class as TM-08 and HB-07. Also weak: at lines 70-72 the house is named 'with the battlements' (line 70) before the moon's gleam (line 71), and the only description after the light is 'distinct and pale', so the walk's 'Only then is the house described' overstates."
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Near-identical mirror pair gone; key (brave comrade, line 9-10; fell silent, line 45) is the only change both windows support; new distractor contradicted by line 45; walk lines 6, 9, 45, 46 checked and ends on the change."
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "walkScript",
+   "reason": "Key fix is sound, but the unchanged walk script never states the answer: it lists the moor (line 40), the hidden man (lines 42-43), line 44 and the silence (line 45), and stops. It never says the bleak moor with the dangerous man hiding on it is what has chilled him. A walk must reach and state the key."
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Key now plain English and correct (melancholy, gloomy, sinister give the land feelings); distractors wrong (literal details, no calm-by-day line, no looking away); walk uses moor lines 4, 19, 20 only and ends on the key. Minor: 'These are words for people, not for land' slightly overstates, but it is the teaching point."
+  }
+ ]
+}

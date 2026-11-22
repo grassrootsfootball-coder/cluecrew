@@ -1,0 +1,342 @@
+{
+ "door": "sweep-fix/english-07",
+ "proposer": "agent",
+ "ruling": "R1037",
+ "seats": [
+  {
+   "optionId": "cmsw2f4yi00wqtmbvhvrbn8wg",
+   "itemId": "ENG-020-HD-03",
+   "oldValue": "Somebody changed her mind, and the passage never hides who.",
+   "newValue": "Heidi fetched it back herself and put it in her bed.",
+   "tag": "en-cause-agent-swap",
+   "execution": "The child gives the hat's return to Heidi herself. Lines 42 and 43 have her find the hat lying under the counterpane when she goes to bed, so she is not the one who put it there."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-020-HD-06",
+   "why": "Sweep hold (R1037): the walk script ended 'So they are not stale yet.', a fact no line gives. Cut it; the walk now ends by stating Clara's reason from line 29. The 'worse than the bread this house has' execution cited a preamble not on the card; it now cites lines 26 to 30.",
+   "stem": {
+    "text": "Look at lines 26 to 30. What reason does Clara give for the rolls not being worth keeping?",
+    "quotes": [],
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 26
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yk00x2tmbv3qhrz3fi",
+     "value": "The rolls Heidi kept in the cupboard were hard and stale by now.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "Line 29 has Clara say the rolls would have been hard and stale by then, meaning by the time Heidi went home. The child keeps hard and stale and changes one detail, by then to by now, so a reason about the future becomes a fact about the present."
+    },
+    {
+     "optionId": "cmsw2f4yk00x3tmbv1nv4druc",
+     "value": "They will be replaced with fresh ones.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 28, and it is what she offers rather than the reason."
+    },
+    {
+     "optionId": "cmsw2f4yk00x4tmbvy182imoq",
+     "value": "They are worse than the bread this house has.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A rich house's better bread is a sensible-sounding reason, but no line in 26 to 30 compares the rolls with any other bread. Clara's reason at line 29 is that they would have been hard and stale by the time Heidi went home."
+    },
+    {
+     "optionId": "cmsw2f4yk00x5tmbvs2lv5v0z",
+     "value": "They would have gone hard and stale before Heidi went home.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 29 says 'yours would have been hard and stale by then'. By then means by the time she goes home. So Clara's reason is that they would have gone hard and stale before she went home."
+   }
+  },
+  {
+   "itemId": "ENG-020-HD-09",
+   "why": "Sweep hold (R1037): the walk script put 'could not suppress a sob' on line 37; the words are on line 38, where the question puts the tested word.",
+   "stem": {
+    "text": "Look at lines 37 and 38. What does \"suppress\" on line 38 mean here?",
+    "quotes": [
+     "suppress"
+    ],
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 37
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yn00xhtmbv7n8q9tjy",
+     "value": "To put down a rising by force.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The sense a child meets in history, and it is the commoner one."
+    },
+    {
+     "optionId": "cmsw2f4yn00xitmbv8cbllgh3",
+     "value": "To hold back a thing that is coming out.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yn00xjtmbvyam18ung",
+     "value": "To sit quietly at the table.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 38, and it is what she knew she must do."
+    },
+    {
+     "optionId": "cmsw2f4yn00xktmbvuwze5cxo",
+     "value": "To press down hard on a thing.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "execution": "The child finds 'press' inside 'suppress' and builds a meaning from that part. The part is real but the sum is not the word: at line 38 Heidi could not hold back a sob."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Lines 37 and 38 say when she saw her roll she could not suppress a sob. Line 38 says she made an effort to control herself. The word names what she could not do to the sob."
+   }
+  },
+  {
+   "itemId": "ENG-020-HD-12",
+   "why": "Sweep hold (R1037): 'the things done for her' let Clara's spoken promise of rolls and the clothes count, so the key held only if 'what returns' meant the hat. The stem now names the bread and the hat being taken and the hat coming back. The hint follows the new stem, and the walk script drops the clothes steps (lines 4 and 6) and cites only the taking and the hat's return.",
+   "stem": {
+    "text": "Think about the whole passage. Heidi's bread and hat are taken away, and later the hat comes back. What is true of how these things happen?",
+    "quotes": [],
+    "passageRef": "stream-a-19-heidi",
+    "answerShape": "two-halved-contrast-of-what-is-taken-against-what-is-given",
+    "orderAnchor": 9999,
+    "techniqueKey": "decisions-taken-over-the-child-and-kindness-done-without-a-word"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yp00xwtmbvyzktf3kr",
+     "value": "What is taken is settled aloud, but what returns comes in silence.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yp00xxtmbvabzkc9ko",
+     "value": "What is taken is taken gently, but what returns comes with sharp words.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Fraulein Rottenmeier takes the bread in a determined tone at line 19, and Sebastian's signs at lines 40 and 41 are kind. The child swaps the two manners."
+    },
+    {
+     "optionId": "cmsw2f4yp00xytmbvlcf8gmpt",
+     "value": "What is taken is judged by the writer, but the giving is never judged.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "execution": "No line anywhere gives a verdict on the house."
+    },
+    {
+     "optionId": "cmsw2f4yp00xztmbvixwi9p8n",
+     "value": "What is taken is missed by all, but only Heidi says so.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Fraulein Rottenmeier runs out of the room at line 25 and never comes back."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find the lines where each thing is taken, and where the hat turns up again. Compare how each one happens.",
+    "walkScript": "At lines 13 to 15 Fraulein Rottenmeier calls out her order to Tinette. At lines 18 and 19 she says the bread will be taken away. At lines 40 and 41 Sebastian makes only signs. At lines 42 and 43 Heidi simply finds the hat in her bed. So what is taken is settled aloud, but what returns comes in silence."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-07",
+   "why": "Sweep hold (R1037): the walk script put 'shelving' on line 26; it is on line 27, as the question says.",
+   "stem": {
+    "text": "Look at lines 26 and 27. What does \"shelving\" on line 27 mean here?",
+    "quotes": [
+     "shelving"
+    ],
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 26
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yb00vjtmbvt4il11jf",
+     "value": "Fitted with shelves for standing things on.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The sense a child meets first, and it is a noun they know."
+    },
+    {
+     "optionId": "cmsw2f4yb00vktmbv7uf8gfz9",
+     "value": "Put aside to be dealt with later.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "The other everyday sense of the verb, and nothing here is put aside."
+    },
+    {
+     "optionId": "cmsw2f4yb00vltmbvl2uu1m5b",
+     "value": "Low and sloping gently down to the water.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yb00vmtmbvacnnb1z8",
+     "value": "Suddenly steep, and cut through by the water.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 27, and it is what the strand becomes rather than what it was."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Lines 26 and 27 say the strand was till then so low and shelving. Line 27 says it suddenly became steep. The word has to name what steep is the opposite of."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "why": "Sweep hold (R1037): 'What does Bevis keep doing with the rules' let two distractors fall outside the question and left the key against a literally true option. The stem now asks where his rules come from and how he states them (the row's answerShape). The two off-frame distractors are replaced by in-frame ones, and the literal option's execution now names what the question asks for.",
+   "stem": {
+    "text": "Think about the whole passage. Where do Bevis's rules for the game come from, and how does he state them?",
+    "quotes": [],
+    "passageRef": "stream-a-20-bevis",
+    "answerShape": "two-halved-contrast-of-who-made-them-against-how-they-are-stated",
+    "orderAnchor": 9999,
+    "techniqueKey": "rules-of-an-invented-game-asserted-as-facts-about-the-world"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yf00w8tmbvip3s8s6s",
+     "value": "He says the captain does everything, and that Mark has to obey.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "The child repeats what two of the rules say, from lines 14 and 15 and lines 87 and 88. It answers neither half of the question: it does not say where the rules come from or how Bevis states them."
+    },
+    {
+     "optionId": "cmsw2f4yf00w9tmbvn2ia68aj",
+     "value": "The writer gives the rules, and tells us that they are fair.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "execution": "The passage never gives a verdict on the rules, and the writer never sets any. Every rule is spoken by Bevis himself, at lines 14 and 15, lines 87 and 88, and line 90."
+    },
+    {
+     "optionId": "cmsw2f4yf00watmbvzdnudgdk",
+     "value": "He makes the rules up himself, but states them like plain fact.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yf00wbtmbvuof2q0v4",
+     "value": "He and Mark agree on them together, and Mark is happy with them.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "The passage says the opposite. Mark argues at lines 12 and 13 that he might be the one shooting the elephant, and at line 18 says he hates dying under a tree. Bevis answers him with 'Impossible' at line 14."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-11",
+   "why": "Sweep hold (R1037): the key rests on line 47 ('I can only see pieces of things'), outside the cited lines 57 to 59, and the walk script left the window to reach it. Line 47 is added to the question and lineRefs; the walk's last sentence now draws the key as her meaning rather than asserting an unstated fact.",
+   "stem": {
+    "text": "Look at line 47 and lines 57 to 59. What does Rebecca mean by a real passenger?",
+    "quotes": [],
+    "passageRef": "stream-a-21-rebecca-sunnybrook"
+   },
+   "lineRefs": [
+    47,
+    57,
+    58,
+    59
+   ],
+   "options": [
+    {
+     "optionId": "cmt9qp4qu0008tmovvxj7742q",
+     "value": "Somebody shut up in a coop like a hen.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 58 of how she felt down there, before she moved up. The child takes the other half of the comparison, what she was, for what a real passenger is."
+    },
+    {
+     "optionId": "cmt9qp4qu0009tmovn7l41lzl",
+     "value": "Somebody with a long, long way to go.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 58 and 59 and takes her next wish rather than her meaning."
+    },
+    {
+     "optionId": "cmt9qp4qu000atmovazztbe4y",
+     "value": "Somebody who can see where she goes.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmt9qp4qu000btmovfhduvkfj",
+     "value": "Somebody who has paid for a seat.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Paying runs through other parts of the passage: the mother pays the fare at line 16, Rebecca asks whether it costs any more at line 45, and Mr Cobb says there is no extra charge at line 50. The child answers from those lines, where lines 57 and 58 set a real passenger against a hen shut up in a coop."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 57 has her say this is better, and names what it is like. The same line has her call herself a real passenger now. Line 58 gives the other side: down there she felt shut in like a hen. Down there, line 47 says, she could only see pieces of things. So she means somebody who can see where she goes, not just pieces."
+   }
+  },
+  {
+   "itemId": "ENG-018-RB-12",
+   "why": "Sweep hold (R1037): two distractors described what Rebecca is like or does, not how much we are told, and the hint presupposed a line giving her thoughts. Both are recast as 'We are told...' claims about her inner life, and the hint no longer assumes such a line exists.",
+   "stem": {
+    "text": "Think about the whole passage. How much are we told about what Rebecca thinks?",
+    "quotes": [],
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "answerShape": "speech-set-against-a-withheld-mind",
+    "orderAnchor": 999,
+    "techniqueKey": "a-child-given-entirely-from-outside-while-she-talks-throughout"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4y600uptmbvpvxs9hzg",
+     "value": "We are told she feels shy at first, but stops feeling shy later.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Shy at first, then bold, is a tidy shape a child might expect, but no line tells us what she feels. From line 27 she answers her mother back, and at line 30 she argues eagerly and willfully."
+    },
+    {
+     "optionId": "cmsw2f4y600uqtmbv7drf4i37",
+     "value": "We are told she was small for her age, and that her braid was black.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 13 and 40 and lists what she looked like rather than what the telling does."
+    },
+    {
+     "optionId": "cmsw2f4y600urtmbvobwahmjo",
+     "value": "We are told she makes a plan in her head to reach the front seat.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plan worked out in her head is a plausible motive, but no line reports one. At line 45 she simply asks Mr Cobb whether it costs any more to ride up there."
+    },
+    {
+     "optionId": "cmsw2f4y600ustmbv545e6wc8",
+     "value": "We hear what she says, but we are never let inside her head.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Go through what we learn about Rebecca. For each thing, ask how the passage lets us know it."
+   }
+  }
+ ],
+ "notes": [
+  "ENG-020-HD-03: the 'Somebody changed her mind ... never hides who' option was unreadable, mirrored the key's frame and had a non-production execution -> seated a plain distractor, 'Heidi fetched it back herself and put it in her bed.', retagged en-cause-agent-swap (lines 42-43: she finds it there), with an execution saying how a child produces it.",
+  "ENG-020-HD-06: walk script asserted 'So they are not stale yet.', which no line says -> cut it; walk ends on 'By then means by the time she goes home.' and then states the key as Clara's reason. Also redrafted the execution of 'They are worse than the bread this house has' so it cites lines 26 to 30, not the off-card preamble.",
+  "ENG-020-HD-09: walk script put 'could not suppress a sob' on line 37 (it is line 38) -> first walk sentence now reads 'Lines 37 and 38 say ...'.",
+  "ENG-020-HD-12: 'things done for her' admitted Clara's spoken promise and the clothes, and the walk cited the clothes as things taken -> stem narrowed to the bread and hat being taken and the hat coming back; hint follows the stem; walk drops the clothes steps (lines 4, 6), cites lines 13-15, 18-19, 40-41, 42-43 and states the key.",
+  "ENG-019-BV-07: walk script put 'shelving' on line 26 (it is line 27) -> first walk sentence now reads 'Lines 26 and 27 say ...'.",
+  "ENG-019-BV-12: stem 'what does Bevis keep doing with the rules' ruled out two distractors by its own wording and left a literally true rival -> stem now asks where his rules come from and how he states them; 'He is judged by the writer...' replaced by 'The writer gives the rules, and tells us that they are fair.' (en-whole-text-absence-asserted); 'He is harsh at the start...' replaced by 'He and Mark agree on them together, and Mark is happy with them.' (retagged en-contradicted-by-the-text, lines 12-13, 18); the literal option's execution now says it answers neither half.",
+  "ENG-018-RB-11: question cited lines 57-59 but the key rests on line 47 -> line 47 added to the question text and lineRefs [47,57,58,59]; walk's last sentence now states the key as her meaning ('So she means somebody who can see where she goes, not just pieces.') instead of asserting 'Up here she can see where she is going'.",
+  "ENG-018-RB-12: two distractors were off-frame (what she is like/does) and the hint presupposed a thoughts line -> recast as 'We are told she feels shy at first, but stops feeling shy later.' (en-plausible-not-stated) and 'We are told she makes a plan in her head to reach the front seat.' (en-motive-invention); hint now 'Go through what we learn about Rebecca. For each thing, ask how the passage lets us know it.'"
+ ]
+}

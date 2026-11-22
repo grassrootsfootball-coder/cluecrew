@@ -1,0 +1,98 @@
+{
+ "checker": "rev-agent-01 (independent of the verdicts-L drafter)",
+ "group": "L",
+ "checkedOn": "2026-11-22",
+ "method": "DB text and LIVE carriers read-only (Prisma and psql) from a scratchpad script; each transform applied in memory; from-occurrence counted; gates run on every result; every option set read for key-pointing.",
+ "tally": {
+  "ATTEST": 11,
+  "REFUSE": 3
+ },
+ "entries": [
+  {
+   "id": "maths-72-wrong-operation-chosen",
+   "verdict": "ATTEST",
+   "reason": "Checked against the DB text, read-only. The transform's from occurs exactly once in childHint. I read 21 LIVE carriers, not the 20 the verdict counts. MC05-GEOM-04 (area 48 cm², length 8 cm; option 96 cm, from 48 - 8 instead of 48 ÷ 8) also carries the tag now, and my first read did not list it. On all 21 the carrying option does one operation in place of another. The new hint asserts no feature of the item: it describes a move, choosing the operation for each step and then checking the direction. That move is right on bare sums, stories, grids, areas and times. I checked every option set, and on none does 'grown or shrunk the way it should' single out the key: each carrier has at least one other option on the key's side. It names no number. Sentences have 16 and 15 words, British English. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "maths-85-miscount-or-rounding-in-measures",
+   "verdict": "REFUSE",
+   "reason": "Both froms occur exactly once, and the new childHint is acceptable on all 10 carriers. The new DESCRIPTION asserts a feature that is false on a carrier. It says 'Miscounting in a measures or money problem', but MC04-CALC-07 ('A club buys 4 packs of badges with 25 in each pack... How many badges are left?', key 68, carrying 43 = 3 × 25 + 30 - 62) counts badges: it involves no measure and no money. The mistake half, 'multiplying by one group too few', is true there; the population clause is not (R586/R591, a description claiming a broader population than it has). A transform that removes the clause passes both gates: 'Miscounting: multiplying by one group too few, or slipping by a step when counting on or back.' Secondary, not the reason for refusing: on MC03-MEAS-02 (75 - 28, key 47 cm, carrying 45 cm) the slip is 2, not 'a step', so neither half of the description clearly covers it. The verdict already flags that item as a weak fit. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings. The gates do not catch the population claim.",
+   "failsOn": [
+    "MC04-CALC-07"
+   ],
+   "suggestedDescriptionTo": "Miscounting: multiplying by one group too few, or slipping by a step when counting on or back."
+  },
+  {
+   "id": "maths-77-treating-a-percentage-as-money",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once. I read 8 LIVE carriers. On all 8 the carrying option subtracts the percent figure straight from the amount (80-25, 60-40, 80-25, 44-25, 45-20, 80-25-5, 48-25, 64-25). The new clause 'The percent is a share of the amount, not a number to take away from it' is literally true on all 8, makes no money claim (so it now holds on MC02-FDP-03 and MC05-FDP-05), and contains no key. Observation, not a reason to refuse: on the five 'off' or 'reduced' carriers (MC02-FDP-07, MC03-FDP-04, MC03-FDP-08, MC05-FDP-05, MC05-FDP-08) the key does take the SHARE away, and a share-only sibling is on offer (£20, £9, 12, £16). A child could read 'not a number to take away' as 'do not subtract'. Read with its subject, 'the percent', the sentence is correct. Sentence lengths are 4 and 15 words. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "maths-79-dividing-by-a-fraction-error",
+   "verdict": "REFUSE",
+   "reason": "The from occurs exactly once, and both sentences are true on all 4 carriers. But the second sentence points to the key by elimination. 'So you can fill more of them than you have kilograms or litres' leaves exactly one option standing on 3 of the 4 carriers: MC04-FDP-05 (12 kg; options 18, 8, 4, 12, and only the key 18 is above 12), MC05-FDP-06 (6 litres; 9, 4, 6, 2, only the key 9), and MC01-FDP-08 (15 kg; 20, 11.25, 5, 15, only the key 20). A child shown this hint can answer again without dividing at all. The verdict's 'gives the direction, not the number' does not hold, because with these option sets the direction IS the number. A wording that rules out the carrying move without picking out the key passes both gates: 'Each bag or glass holds only part of one kilogram or litre. So do not count one bag or glass for each kilogram or litre.' On all 4 carriers that rules out only the carrying option, which equals the amount (12, 6, 15, and 2 litres left). checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings. The gates cannot see option sets.",
+   "failsOn": [
+    "MC04-FDP-05",
+    "MC05-FDP-06",
+    "MC01-FDP-08"
+   ],
+   "suggestedChildHintTo": "Each bag or glass holds only part of one kilogram or litre. So do not count one bag or glass for each kilogram or litre."
+  },
+  {
+   "id": "maths-07-decimals-as-two-separate-whole-numbers",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once. I read 4 LIVE carriers. On MC02-NPV-07 the carrying option 0.55 reads 55 as beating 6. On MC03-NPV-06, MC04-NPV-05 and MC05-NPV-05 the carrying option reads 284, 351 or 482 as a whole number (80, 50, 80). 'Read each digit after the point in its own column, not as one whole number' names that move on all 4. It settles the comparison (tenths 5 < 6) and the digit-value reads. It contains no key. The sentence has 15 words. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "maths-61-reading-the-wrong-place-value-column",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once. I read 24 LIVE carrying options on 18 items. 'Name every column, counting out from the ones' asserts nothing. It reaches the decimal misreads (0.8 for 0.08, 0.5 for 0.05) and the ten-thousands misread (19500 on MC05-NPV-03), which the old 'Ones, tens, hundreds, thousands' did not reach, and it gives no column value that is a key. Observation: on MC02-NPV-07 (0.4) and MC03-NPV-07 ('How many hundreds in 2,800?', carrying 2) the fit to a one-column misread is loose. That is an item tagging question; the hint is not false there. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "maths-47-translation-by-gap",
+   "verdict": "REFUSE",
+   "reason": "Both froms occur exactly once, and the new description is true on all 3 (each move comes out one short: 3 for 4 and 0 for 1; 4 for 5 and 2 for 3; 5 for 6 and 3 for 4). The first hint sentence fails the help test on MC02-GEOM-04, and equally on MC03-GEOM-02 and MC05-GEOM-03. Every carrier comes out one short because the child counts the starting point as 'one'. 'Start counting from the point itself' does not say whether the point counts, and the reading a child who made this mistake already holds, 'the point is one', is the mistake itself. The second sentence ('Each jump to the next grid line counts as one square') is right, but the hint opens with an instruction that can confirm the error. A wording that settles it passes both gates: 'Do not count the point you start on. Each jump to the next grid line counts as one square.' checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings. The gates cannot judge ambiguity.",
+   "failsOn": [
+    "MC02-GEOM-04",
+    "MC03-GEOM-02",
+    "MC05-GEOM-03"
+   ],
+   "suggestedChildHintTo": "Do not count the point you start on. Each jump to the next grid line counts as one square."
+  },
+  {
+   "id": "maths-89-wrong-angle-total",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once. I read 11 LIVE carrying options on 10 items: 7 triangle questions using 360°, 3 straight-line questions using 360° (and one 35° option on MC01-GEOM-02, from 90°). The new hint describes the move (decide what the angles make) and states true totals for a line, a triangle and a full turn, so it settles all 10. No key is 180° or 360°. Degree signs follow house notation. Sentence lengths are 15 and 13 words. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "vr04-wrong-strength",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once. I read 29 LIVE carriers: 26 carrying options too strong and 3 too weak (huge/big, JUBILANT/pleased, EXQUISITE/pretty). The new hint describes the move both ways and asserts no direction, so it is true on all 29. It says 'the word you are given', which fits both the card items and the sentence items. I compared its words with every key (fearless, speedy, moist, cool, ... strong, ... sad): none appears, so the 'strong' giveaway on gen-vr-04-closest-meaning-14 is gone. Sentence lengths are 10 and 13 words. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "vr16-loose-opposite",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once. I read 15 LIVE carrying options on 14 items (gen-vr-16-opposite-meaning-01 carries two: warm and wet). 'hot and cold' was the card word and key of -01. 'open and shut' matches no carrier's card word (hot, empty, buy, above, brave, wide, deep, begin, remember, victory, ancient, arrive, expand, joy) and no key (cold, full, sell, below, timid, narrow, shallow, finish, forget, defeat, modern, depart, shrink, sorrow). It is a true opposite pair. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "vr-move-letter-second-word-invalid",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once. I read 26 LIVE carrying options on 25 items (gen-vr-08-move-letter-15 carries R and A). I checked each with loadWordPuzzleLexicon. On all 26 the letter is in word 1 and removing it leaves a real word (HEAT, TICK, DRAW, ... PACE). I inserted the letter at every spot of word 2: on 24 no spot makes a word. On 2 the lexicon admits strings no 9-11 child would count as words: ALOW/LOWA (-15, A into LOW) and FOOED (-22, E into FOOD). I judge the hint's implied answer, 'no spot makes a real word', true for the child there; this is a lexicon edge, not a hint fault. The new wording removes the say-aloud channel (R567), describes the move, and contains no single key letter as a word. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "vr14-step-direction",
+   "verdict": "ATTEST",
+   "reason": "Both froms occur exactly once. I read 25 LIVE carriers and computed each from its operands (carrying = first - step): it matches on 25 of 25. 12 first pairs run backwards and 13 forwards, so the new description 'Moved the opposite way through the alphabet to the first pair' is true on all 25 where the old 'backwards instead of forwards' was false on 12. The new hint removes 'Draw the arrow' (R567) and describes the move. It contains no single letter as a word, so no key ('I' is a key) is printed. Sentence lengths are 10 and 7 words. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "en-article-avoids-the-sound-choice",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once. I read 1 LIVE carrier, ENG-003-A-CZ-A2 ('spent ___ hour', key an, carrying the). 'Hear the next word in your head' is silent and so usable in a test (R567). For 'hour' it leads to the vowel sound and so to 'an' by the child's own judgement. Observation: the kept first sentence 'This gap wants a or an' prints the key 'an' beside 'a'. It narrows the choice to the pair the entry is defined on and does not choose between them, so I do not count it as a giveaway. It was not part of the transform. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  },
+  {
+   "id": "vr13-wrong-pieces",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once (description only; the childHint is unchanged and already describes the move). I read 25 LIVE carriers. On all 25 every letter of the carrying word occurs in the outer words (e.g. SKIN from GRASS and INK, PLUG from SLEEP and UGLY, IRON from ONION and MOTHER). BEAM (AMBER), CROW (CROWN) and DRAG (DRAGON) take from one outer word only, which the new wording still covers. None follows the first-two-letters rule. 'from other places in the outer words instead of the positions the example shows' is true on all 25. checkChildFacingText (role 'hint') and checkMisconceptionProposal on the result: 0 findings."
+  }
+ ]
+}

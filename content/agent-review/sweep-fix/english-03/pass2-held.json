@@ -1,0 +1,47 @@
+{
+ "door": "sweep-fix/english-03",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-011-CV-12",
+  "ENG-015-CC-12",
+  "ENG-011-CV-09",
+  "ENG-015-CC-04",
+  "ENG-015-CC-09",
+  "ENG-021-ED-02",
+  "ENG-021-ED-09",
+  "ENG-011-CV-08",
+  "ENG-011-CV-01"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-021-ED-07",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-021-ED-07",
+     "verdict": "REFUSE",
+     "reason": "hintCore 'Look at what Stuart does with the cards on line 24.' sends the child to 'gathered them up', which is exactly the distractor 'It was his to gather up the cards.' (en-within-span-wrong-element). The false bargain claim is gone, but the new hint points at a wrong answer's value. A hint must establish the card-game context without directing the child to the gathering-up, and without asking for the definition that is the key (R572)."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-021-ED-07",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "faultField": "hintCore",
+    "reason": "New hint 'Look at what Stuart does with the cards on line 24.' points to 'gathered them up', which is the value of the distractor 'It was his to gather up the cards.'; the hint fault is replaced by a hint that steers to a wrong answer."
+   }
+  },
+  {
+   "itemId": "ENG-011-CV-03",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-011-CV-03",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "walkScript",
+    "reason": "Named fault fixed by the seat, but the row as it will stand fails the house rule that a walk reaches and states the key: the walk ends 'One looks, the other runs. Check which does which before you answer.' and never says the squirrels peer and the rabbits run. Also note: hint 'Two animals, two actions.' now rules out the new 'both run away' distractor without the passage; a walk fix should not lean on that."
+   }
+  }
+ ]
+}

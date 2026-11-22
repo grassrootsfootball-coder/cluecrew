@@ -1,0 +1,105 @@
+{
+ "door": "sweep-fix/english-07",
+ "reviewer": "rev-agent-01",
+ "precheck": "--precheck --from-live: 8 rows touched, 8 pass every gate, 0 fail (run before review; a gate pass was not taken as a reason to attest).",
+ "changes": [
+  {
+   "ref": "seat:cmsw2f4yi00wqtmbvhvrbn8wg",
+   "verdict": "ATTEST",
+   "reason": "HD-03: 'Heidi fetched it back herself and put it in her bed.' is plain, 11 words, and drops the key's 'Somebody ..., and ... who' frame, so the near-identical pair is gone. en-cause-agent-swap fits: the right event (the hat comes back) given to the wrong person. Lines 42 and 43 have her FIND it lying under the counterpane and snatch it up with delight, so she did not put it there. The stem alone does not rule it out, and the execution says how a child reaches it (she ends up holding the hat)."
+  },
+  {
+   "ref": "rebuild:ENG-020-HD-06",
+   "verdict": "ATTEST",
+   "reason": "HD-06: 'So they are not stale yet.' is gone. The walk quotes line 29 exactly ('yours would have been hard and stale by then'), glosses 'by then' from 'when you go home' at lines 28 and 29, and ends by stating the key (16 words). The redrafted execution for 'worse than the bread this house has' now cites lines 26 to 30 and line 29, both true: nothing in 26 to 30 compares the rolls with other bread. Stem, other options and hint are unchanged."
+  },
+  {
+   "ref": "rebuild:ENG-020-HD-09",
+   "verdict": "ATTEST",
+   "reason": "HD-09: the named fault is fixed. 'when she saw her roll she' is on line 37 and 'could not suppress a sob' is on line 38, so 'Lines 37 and 38 say ...' is exact. Nothing else in the row was changed. Other faults on the row predate this change and are recorded on the row verdict."
+  },
+  {
+   "ref": "rebuild:ENG-020-HD-12",
+   "verdict": "REFUSE",
+   "reason": "HD-12, judged as a new question: narrowing the stem fixes the clothes and promise rival, and the new walk (lines 13 to 15, 18 and 19, 40 and 41, 42 and 43) is accurate and states the key. But the new stem breaks two distractors that it did not rewrite. It now asks 'how these things happen' about the bread and hat being taken and the hat coming back. 'What is taken is missed by all, but only Heidi says so.' has both halves about the taking and says nothing of the hat or of how anything happens, so the stem's own wording rules it out. This is the off-frame fault the sweep held BV-12 and RB-12 for. Its execution ('Fraulein Rottenmeier runs out of the room at line 25 and never comes back') does not show why 'missed by all' is false. 'What is taken is judged by the writer, but the giving is never judged.' now points at a 'giving' the stem no longer names: the hat 'comes back', and the only giving left in the passage is Clara's promise, which the narrowing was meant to exclude."
+  },
+  {
+   "ref": "rebuild:ENG-019-BV-07",
+   "verdict": "ATTEST",
+   "reason": "BV-07: the named fault is fixed. 'till then so low and' is on line 26 and 'shelving' is on line 27, so 'Lines 26 and 27 say ...' is exact. 'suddenly became steep' is on line 27. Nothing else in the row was changed. The walk still does not state the key, a fault that predates this change; it is recorded on the row verdict."
+  },
+  {
+   "ref": "rebuild:ENG-019-BV-12",
+   "verdict": "REFUSE",
+   "reason": "BV-12, judged as a new question: the stem's second half, 'how does he state them?', is answered by the key and by no distractor. The key also takes its verb from the stem ('states them like plain fact'), and no other option shares that word. 'He says the captain does everything...' answers neither half, which its own new execution admits. 'The writer gives the rules, and tells us that they are fair.' answers where the rules come from and then gives a verdict, not a way of stating them. 'He and Mark agree on them together, and Mark is happy with them.' answers where and then Mark's feelings. So a child can find the key from the stem alone, by keeping the one option that says how he states them. That is the stem-alone fault the sweep named, now concentrated on the key. The quotations in the new executions are exact: lines 12 and 13, 14, 14 and 15, 18, 87 and 88, and 90."
+  },
+  {
+   "ref": "rebuild:ENG-018-RB-11",
+   "verdict": "ATTEST",
+   "reason": "RB-11, judged as a new question: line 47 ('the windows are so small I can only see pieces of things') is now cited in the stem and in lineRefs [47,57,58,59], so the key rests on cited lines. The walk is accurate: line 57 'This is like traveling! I am a real passenger now', line 58 the hen shut up in a coop, line 47 pieces of things. It ends by stating the key (13 words). All sentences are at most 16 words. The three executions are unchanged and still true (lines 16, 45, 50, 58 and 59 checked). Nothing else was changed."
+  },
+  {
+   "ref": "rebuild:ENG-018-RB-12",
+   "verdict": "REFUSE",
+   "reason": "RB-12: the hint no longer assumes a thoughts line, and both distractors are recast inside the question's frame. Two new faults come with them. (1) The new execution for 'We are told she feels shy at first...' says 'no line tells us what she feels', which is untrue. At lines 57 and 58 she tells us herself ('down there I felt like our setting hen'), and line 56 has her speak 'delightedly'. The true claim is that no line tells us she is shy. (2) The recast makes the key the odd one out by form. Three options now open 'We are told she ...', echoing the stem's 'are we told', while the key alone opens 'We hear what she says' and alone carries 'never'. A child who picks the option that does not match can find the key without reading."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-020-HD-03",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 13 to 15 and 42 and 43, plus lines 39 to 41. Only the key holds: the hat is ordered away at line 15 and found under the counterpane at lines 42 and 43, and the cited lines never say who did it. Sebastian's hint is at lines 39 to 41, outside the cited window, so 'these lines never say who' is true. 'Nobody touched it' is contradicted by the move. No line has Tinette bring it back. Heidi finds it rather than fetching it. The near-identical pair with the key is gone, and no option stands out by length. The hint does not coach. The walk script reaches the key: the hat was taken, it turns up again, and neither part says who put it there."
+  },
+  {
+   "itemId": "ENG-020-HD-06",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 26 to 30. The key is Clara's reason at line 29, and it is the only option that matches. 'by now' changes when the rolls are stale. 'Replaced with fresh ones' is the offer at lines 27 and 28, not the reason. No line compares the rolls with the house's bread. The walk quotes line 29 exactly, makes no unstated claim, and states the key. Every execution's line numbers are true."
+  },
+  {
+   "itemId": "ENG-020-HD-09",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "walkScript",
+   "reason": "The named line fault is fixed, but the row as it will stand has two faults. (1) walkScript: it never states the key. It ends 'The word names what she could not do to the sob.', which points at the answer but does not say it, so it does not reach 'to hold back a thing that is coming out'. The walk script must state the key. (2) execution on 'To sit quietly at the table.': it says 'True at line 38', but 'must sit quietly at table' is on line 39. Line 39 is also outside the cited window (37 and 38), so en-within-span-wrong-element ('true inside the cited window') does not exactly fit as written."
+  },
+  {
+   "itemId": "ENG-020-HD-12",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "options",
+   "reason": "The original fault is gone: the stem no longer admits Clara's promise or the clothes, and the walk no longer cites lines 4 and 6. The key is now the only true option. But two distractors no longer fit the new question. 'What is taken is missed by all, but only Heidi says so.' says nothing about the hat or about how anything happens, so the stem rules it out. Its execution does not show why it is false. 'What is taken is judged by the writer, but the giving is never judged.' names a 'giving' that the narrowed stem does not contain. Only the key and 'taken gently ... sharp words' answer how the taking and the hat's return happen."
+  },
+  {
+   "itemId": "ENG-019-BV-07",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "walkScript",
+   "reason": "The named line fault is fixed, and the key, distractors and line numbers check against lines 26 to 28. But the walk script still never states the key. It ends 'The word has to name what steep is the opposite of.', a pointer, and never says 'low and sloping gently down to the water'. The walk script must state the key."
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "verdict": "HOLD",
+   "holdFixed": false,
+   "faultField": "stem",
+   "reason": "Judged as a new question. The original fault was that distractors fell outside the stem's frame. It is not fixed, only moved. The stem asks 'how does he state them?', and only the key answers that. The key also echoes the stem's verb ('states'), and no other option does. 'He says the captain does everything...' answers neither half, as its own execution says. The other two distractors answer only where the rules come from. So the stem alone finds the key. The key itself is correct: Bevis speaks every rule (lines 14 and 15, 87 and 88, 90) and states them flatly ('Of course', 'Impossible'). The walk script's quotations are exact, and it states the key."
+  },
+  {
+   "itemId": "ENG-018-RB-11",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Judged as a new question with line 47 and lines 57 to 59 cited. Line 47 (can only see pieces of things) set against line 57 (a real passenger now) gives the key, and no other option survives. The coop is what she was down there (line 58). The long way is her next wish (lines 58 and 59). The fare was paid at line 16, and moving up cost nothing extra (lines 45 and 50), so paying is not what changed. The stem and walk sentences are at most 16 words. The hint points at the coop option and does not coach. The walk script states the key."
+  },
+  {
+   "itemId": "ENG-018-RB-12",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "options",
+   "reason": "The original faults are fixed: both distractors now answer 'how much are we told', and the hint no longer assumes a thoughts line. The row as it will stand has three faults. (1) options: three distractors open 'We are told she ...', echoing the stem, while the key alone opens 'We hear what she says' and alone says 'never'. The key stands out by form. (2) execution on the shy option: 'no line tells us what she feels' is untrue, because she says 'down there I felt like our setting hen' at lines 57 and 58. (3) walkScript, unchanged: it never states the key. It ends on Mr Cobb's thought at line 60 ('it is his thought, not hers') and never says that we hear her speech but are never let inside her head."
+  }
+ ]
+}

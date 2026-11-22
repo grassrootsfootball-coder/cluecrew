@@ -1,0 +1,55 @@
+{
+ "door": "sweep-fix/english-04",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-006-TM-10",
+  "ENG-006-TM-12",
+  "ENG-016-HB-02",
+  "ENG-016-HB-12",
+  "ENG-006-TM-08"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-010-JE-12",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-010-JE-12",
+     "verdict": "REFUSE",
+     "reason": "Fixes the named faults (off-question second clause gone; walk no longer misreads line 53) but introduces a new giveaway: the stem asks what Jane does 'before describing something', and the key is the only option that restates that frame ('... before she describes what she sees'). It is the only option containing 'before'. This is the same stem-echo class the sweep held on TM-08 ('measuring') and HB-07 ('chilled'); a child can match the stem's words to the key without reading lines 51 or 71."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-010-JE-12",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "key",
+    "reason": "The original faults are gone, but the new key echoes the stem: stem 'before describing something', key '... before she describes what she sees', the only option with 'before'. Stem-echo giveaway, same class as TM-08 and HB-07. Also weak: at lines 70-72 the house is named 'with the battlements' (line 70) before the moon's gleam (line 71), and the only description after the light is 'distinct and pale', so the walk's 'Only then is the house described' overstates."
+   }
+  },
+  {
+   "itemId": "ENG-010-JE-01",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-010-JE-01",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "walkScript",
+    "reason": "Hint fault is fixed, but the unchanged walk script never states the answer: it ends 'The field is where the stile leads, not where she is.' and never says she sits on a stile that leads into a field. It also keeps 'Read what she sits on', the very steer the sweep struck from the hint. A walk must reach and state the key."
+   }
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-016-HB-07",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "walkScript",
+    "reason": "Key fix is sound, but the unchanged walk script never states the answer: it lists the moor (line 40), the hidden man (lines 42-43), line 44 and the silence (line 45), and stops. It never says the bleak moor with the dangerous man hiding on it is what has chilled him. A walk must reach and state the key."
+   }
+  }
+ ]
+}

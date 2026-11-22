@@ -1,0 +1,136 @@
+{
+ "door": "sweep-fix/english-01",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-001-WIW-05",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 4 and 11 to 18. The walk script's line numbers are now exact, and it states the key: long, hard climb. Each distractor is excluded: nothing ranks the work, he is 'working busily' and not bored, the birds come at line 18, and the aching back is line 4. Openings vary (To show, To copy, To make), with no length tell.",
+   "landedAt": "2026-11-22T17:33:12.104Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Lines 11 and 12 give four digging words: scraped, scratched, scrabbled, scrooged. Line 12 gives the same four again, backwards. So the climb feels long and hard. The birds sing at line 18, later.",
+     "after": "Lines 11 and 12 give four digging words: scraped, scratched, scrabbled, scrooged. Lines 12 and 13 give the same four again, backwards. So the climb feels long and hard. The birds sing at line 18, later."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Lines 11 and 12 give four digging words: scraped, scratched, scrabbled, scrooged. Line 12 gives the same four again, backwards. So the climb feels long and hard. The birds sing at line 18, later."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-10",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 19 to 27. The misquotation is fixed, verbatim across lines 26 to 27. The key follows 'impatient' at line 23 and the rush past. Fear, 'always unkind', dinner and remorse are each excluded by the text. All options open 'He is'. The hint points to a word without naming the key, and the walk script states it.",
+   "landedAt": "2026-11-22T17:33:12.104Z",
+   "changes": [
+    {
+     "field": "option E (cmsw2f4t8001htmbvesh5kwta).execution",
+     "before": "Line 26 has him 'gone before they could think of a reply', which leaves no room for the remorse this asserts.",
+     "after": "Lines 26 and 27 have him 'gone before they could think of a thoroughly satisfactory reply', which leaves no room for the remorse this asserts."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-03",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 4 to 9, 28 to 29, 46 and 52. Both false execution facts are corrected, and the gate-forced reseat keeps its tag and meaning. Only the key reflects the spring pull of lines 5 to 7. The others are a finished job that the flung brush contradicts, a physical cause, a Rat absent until line 46, and an invented motive. No length or form tell, and the walk script states the key.",
+   "landedAt": "2026-11-22T17:33:12.104Z",
+   "changes": [
+    {
+     "field": "option C (cmsw2k7cv0003tmt9tdpgzod4).value",
+     "before": "His back and arms hurt too much to go on.",
+     "after": "His back ached too much for him to go on."
+    },
+    {
+     "field": "option C (cmsw2k7cv0003tmt9tdpgzod4).execution",
+     "before": "Line 4 gives the aching back and weary arms — a physical state offered in place of the pull of spring at lines 5 and 6.",
+     "after": "Line 4 gives the aching back and weary arms from the cleaning, a physical state offered in place of the pull of spring at lines 5 and 6."
+    },
+    {
+     "field": "option D (cmsw2k7cv0004tmt9ah48eokd).execution",
+     "before": "The Water Rat does not appear until line 54. Line 9 says 'something up above was calling him', and this hands that to a character.",
+     "after": "Line 9 says 'Something up above was calling him', and this hands that call to a character. The Water Rat is not in lines 5 to 9: his face first appears at line 46 and he is named at line 52."
+    },
+    {
+     "field": "option E (cmsw2k7cv0005tmt9tkhcpcy2).execution",
+     "before": "He has not heard of the river — line 29 says he had never seen one in his life. The motive is supplied by the reader.",
+     "after": "No line says he had heard of a river or went looking for one. Line 29 says only that he had never seen a river before, and he comes on it by chance, 'as he meandered aimlessly along' at line 28. The motive is supplied by the reader."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-02",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 2 to 4, 15 and 60. The either/or hint is replaced by a line pointer that splits no choice. Only whitewash is 'all over his black fur'. The dust is in his throat and eyes, the straw appears nowhere, the grass is at line 15, and the blue and white paint is the boat at line 60. The walk script states the key.",
+   "landedAt": "2026-11-22T17:33:12.104Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One thing is in his eyes, one thing is on his fur. Which does the question want?",
+     "after": "Find his black fur on line 4. Read the words just before it."
+    },
+    {
+     "field": "explanation.hintAuthority",
+     "before": "annie-eightyseventh-return.md (CONFIRMATIONS block), sha256 b53aa2df063f3404868e0d423da2ffe2f24ebc6f31f9bf37f1acdbd75a5db336",
+     "after": null
+    },
+    {
+     "field": "explanation.hintAuthoredBy",
+     "before": "Annie",
+     "after": null
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "One thing is in his eyes, one thing is on his fur. Which does the question want?"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-008-RC-01",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 1 to 4. Only the key matches line 1: gently, and enough for her purpose. 'Roughly' contradicts 'gently'. The shouting is at line 4, and the blankets appear on no line. All four options are in the 'By ...' form, and the stem no longer rules any option out. The hint does not coach, and the walk script gives gentle but enough.",
+   "landedAt": "2026-11-22T17:33:12.104Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4v600d7tmbv68wth4yn).value",
+     "before": "Phyllis wakes Roberta by pulling her hair.",
+     "after": "By pulling her hair roughly."
+    },
+    {
+     "field": "option D (cmsw2f4v600d7tmbv68wth4yn).tag",
+     "before": "en-agent-patient-reversal",
+     "after": "en-minimal-pair-skim"
+    },
+    {
+     "field": "option D (cmsw2f4v600d7tmbv68wth4yn).execution",
+     "before": "Line 1 runs the other way round: Roberta is the one who acts.",
+     "after": "Lines 1 and 2 say Roberta woke Phyllis by pulling her hair 'gently, but quite enough for her purpose'. This option matches the line on 'pulling her hair' and differs from it by one detail: roughly in place of gently."
+    }
+   ]
+  }
+ ]
+}

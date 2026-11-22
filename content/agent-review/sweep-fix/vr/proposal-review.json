@@ -1,0 +1,234 @@
+{
+ "door": "sweep-fix/vr",
+ "reviewer": "rev-agent-01",
+ "precheck": "PRECHECK --from-live: 22 rows touched, 22 pass every gate, 0 fail (gate pass is not the reason for any ATTEST)",
+ "changes": [
+  {
+   "ref": "seat:gen-vr-04-closest-meaning-15-opt3",
+   "verdict": "ATTEST",
+   "reason": "stubborn: correct in no sense of BOLD (brave/daring, cheeky/forward, bright/vivid, thick print); a genuine wrong shade (strong-willed read as won't-back-down); familiar word."
+  },
+  {
+   "ref": "seat:gen-vr-04-closest-meaning-15-opt4",
+   "verdict": "REFUSE",
+   "reason": "shouting clears the two-part screen but the vr04-one-feature-only story is fitted, not genuine: shouting is a sign of anger or noise, not of boldness (daring shows in what you dare to do, not in volume), so the tag does not name the mistake that produces this value. It is also the only verb form among three adjectives, so it reads as a throwaway. Needs a distractor that is a true single visible sign of boldness."
+  },
+  {
+   "ref": "seat:gen-vr-04-closest-meaning-17-opt4",
+   "verdict": "ATTEST",
+   "reason": "frowning: no sense of HOSTILE (unfriendly, enemy/military, harsh conditions, unwelcome takeover) means frowning; a real single sign of hostility, and the execution honestly notes frowns also show worry; replaces the near-synonym cold."
+  },
+  {
+   "ref": "seat:gen-vr-21-same-meaning-04-opt2",
+   "verdict": "ATTEST",
+   "reason": "dance: no sense of LEAP (jump, move suddenly, rise sharply) means dance; dancers leap, so the association is real; familiar word."
+  },
+  {
+   "ref": "seat:gen-vr-21-same-meaning-14-opt4",
+   "verdict": "REFUSE",
+   "reason": "shop clears the two-part screen (no sense of CHOOSE: pick, decide, wish), but it is drawn from the same shop scene as the existing distractor buy, and shop and buy are near-synonyms of each other as verbs. Two of three distractors are one idea, so a child can strike the pair together and the key stands out. Needs an associated word from a different scene."
+  },
+  {
+   "ref": "seat:gen-vr-21-same-meaning-20-opt3",
+   "verdict": "ATTEST",
+   "reason": "slow: no sense of BIG (large, important, older, grown-up, generous, popular) means slow; 'big and slow' is a real pairing; the execution is accurate. Weakest of the associates but not a second answer."
+  },
+  {
+   "ref": "seat:gen-vr-21-same-meaning-22-opt3",
+   "verdict": "ATTEST",
+   "reason": "dark: no sense of SCARED (afraid, frightened) means dark; 'scared of the dark' is a real association; execution accurate."
+  },
+  {
+   "ref": "seat:gen-vr-03-related-words-30-opt2",
+   "verdict": "ATTEST",
+   "reason": "hunger: drought = lack of rain, so famine = lack of food; hunger is what a famine brings, never what it lacks, so it cannot be read as the key under the lack-of relation; same-topic tag fits; execution states why."
+  },
+  {
+   "ref": "seat:gen-vr-20-complete-the-word-07-opt2",
+   "verdict": "ATTEST",
+   "reason": "loadWordPuzzleLexicon run: CAMEL=true, TAMEL=false, KAMEL=false (SAMEL=true, confirming the old fault). T is a common letter; execution true."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-04",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: gaps 5,8,11 grow by 3; next 14; 38+14=52. 49=38+11 (carryover), 51=key-1. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-06",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: +2 each time; 16+2=18. 20=16+2+2, 17=key-1, 30=14+16. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-08",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: gaps 4,7,10 grow by 3; next 13; 39+13=52. 49=39+10, 51=key-1. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-10",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: +6 each time; 23+6=29. 35=23+12, 28=key-1, 40=17+23. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-12",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: gaps 3,6,9 grow by 3; next 12; 31+12=43. 40=31+9, 42=key-1. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-14",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: +5 each time; 24+5=29. 34=24+10, 28=key-1, 43=19+24. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-16",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: gaps 2,5,8 grow by 3; next 11; 32+11=43. 40=32+8, 42=key-1. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-18",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: +4 each time; 25+4=29. 33=25+8, 28=key-1, 46=21+25. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-20",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: gaps 6,9,12 grow by 3; next 15; 39+15=54. 51=39+12, 53=key-1. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-22",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: +3 each time; 17+3=20. 23=17+6, 19=key-1, 31=14+17. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-24",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: gaps 5,8,11 grow by 3; next 14; 40+14=54. 51=40+11, 53=key-1. New walk script uses only this row's terms, is arithmetically right, names each option's actual mistake, states the key; sentences <=16 words, full stops, no banned words. Options and executions unchanged and correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-03-related-words-28",
+   "verdict": "ATTEST",
+   "reason": "cowboy : cattle under shepherd : sheep (person who tends the animal); key no longer echoes the stem word (cattle does not appear inside cowboy, and no option contains cow). horns = part of cattle (part-for-kind fits); wool = from the first pair (example-anchor fits). Exactly one answer."
+  },
+  {
+   "ref": "rebuild:gen-vr-18-related-numbers-09",
+   "verdict": "ATTEST",
+   "reason": "Rule from (4 [10] 6): add. (7 [?] 4) -> 11; 11 no longer equals 10 nor any number on the card. 28 = 7 x 4 (rule-swap); 13 = 7 + 6, the right number of group one used as a constant, 4 left out (partial-rule). Executions' arithmetic all correct."
+  },
+  {
+   "ref": "rebuild:gen-vr-18-related-numbers-10",
+   "verdict": "ATTEST",
+   "reason": "Rule from (10 [24] 14): add. (16 [?] 9) -> 25; 25 no longer equals 24 nor any number on the card. 144 = 16 x 9 (rule-swap); 19 = 9 + 10, the left number of group one used as a constant, 16 left out (partial-rule). Executions' arithmetic all correct."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-11-number-series-04",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-06",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-10",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-12",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-14",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-18",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-22",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-24",
+   "verdict": "SIGN",
+   "reason": "Walk-script fault fixed; series recomputed, key unique, distractors wrong as tagged. Pattern checked family-wide over 25 LIVE vr-11 rows: off-by-one is +1 on 13 and -1 on 12, key is the maximum on 6 of 12 three-option rows, so no positional shortcut. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN, which no longer describes this text."
+  },
+  {
+   "itemId": "gen-vr-03-related-words-28",
+   "verdict": "SIGN",
+   "reason": "Echo fixed; cattle the only answer; horns and wool wrong in the ways tagged; cowboy and cattle known to 9-11-year-olds in Britain."
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-09",
+   "verdict": "SIGN",
+   "reason": "Key 11 no longer copies the visible middle number; key unique under the add rule; distractors 28 and 13 recomputed and correct."
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-10",
+   "verdict": "SIGN",
+   "reason": "Key 25 no longer copies the visible middle number; key unique under the add rule; distractors 144 and 19 recomputed and correct."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "verdict": "HOLD",
+   "reason": "After changes the options are daring (key), reckless, stubborn, shouting. The seat for shouting is REFUSED: its one-feature-only tag is a fitted story (shouting signals anger or noise, not boldness) and as the only verb form it reads as a throwaway. The rude/loud second-answer fault is fixed by the attested stubborn seat, but the row cannot be signed until opt4 is redrafted. Separately (outside this door): VR04_FORBIDDEN_BY_HEADWORD.bold still lacks rude, cheeky, loud, bright, vivid."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-17",
+   "verdict": "SIGN",
+   "reason": "unfriendly the only correct answer; murderous (too strong), rude (other shade), frowning (one sign) each wrong in every sense of hostile; cold's near-synonym fault fixed."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-04",
+   "verdict": "SIGN",
+   "reason": "jump the only synonym; dance, run, land correct in no sense of leap; hop second-answer fault fixed."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-14",
+   "verdict": "HOLD",
+   "reason": "The want second-answer fault is fixed, but the replacement shop is REFUSED: shop and buy come from the same shop scene and are near-synonyms of each other, so two distractors collapse into one idea and the key stands out by elimination."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-20",
+   "verdict": "SIGN",
+   "reason": "large the only synonym; small (opposite), slow and heavy (associates) correct in no sense of big; huge second-answer fault fixed."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-22",
+   "verdict": "SIGN",
+   "reason": "fearful the only synonym; bold (opposite), dark and alone (associates) correct in no sense of scared; terrified second-answer fault fixed."
+  },
+  {
+   "itemId": "gen-vr-03-related-words-30",
+   "verdict": "SIGN",
+   "reason": "food the only lack-of answer; hunger (what famine brings) and cloud (first-pair anchor) both wrong; crop near-defensible fault fixed."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "verdict": "SIGN",
+   "reason": "Lexicon: only C makes a word among C, T, K (CAMEL true, TAMEL false, KAMEL false); SAMEL fault fixed."
+  }
+ ]
+}

@@ -1,0 +1,165 @@
+{
+ "door": "sweep-fix/english-02",
+ "reviewer": "rev-agent-01",
+ "precheck": "--precheck --from-live: 13 rows touched, 13 pass every gate, 0 fail (run before review; a gate pass was not taken as a reason to attest).",
+ "changes": [
+  {
+   "ref": "seat:cmsw2f4um009ntmbvx6umqa5c",
+   "verdict": "ATTEST",
+   "reason": "BB-08: value unchanged, retag to en-contradicted-by-the-text is right: line 33 states 'we could just see that the water was over the middle of it' (verbatim), and 'very nearly dark' opens line 33. The library hint 'The passage says something different' now fits."
+  },
+  {
+   "ref": "seat:cmsw2f4u70078tmbv52vg4qve",
+   "verdict": "ATTEST",
+   "reason": "AGG-01: 'He took a good look at her as he hurried past.' states the affirmative of 'without looking at her' (lines 5 to 6, verbatim across the break), which is en-negation-dropped exactly; 'as quickly as possible' supports the hurrying. No longer shares the key's opening 'He slipped past her'. Not excludable from the stem alone."
+  },
+  {
+   "ref": "seat:cmsw2f4ua007ltmbvvyql4ay6",
+   "verdict": "ATTEST",
+   "reason": "AGG-04: 'A boy the stationmaster had promised to bring for him.' is the right arrangement given to the wrong character (en-cause-agent-swap); line 18 names Mrs Alexander Spencer; line 22 'That's all I know about it' is verbatim. Frame no longer duplicates the key 'A boy, sent over by Mrs Spencer.'"
+  },
+  {
+   "ref": "redraft:cmsw2f4ub007qtmbvqupe4atn",
+   "verdict": "ATTEST",
+   "reason": "AGG-05: the unsupported 'and went' is gone. Lines 20 to 21 give the handover into the stationmaster's charge; lines 3 to 4 have the girl as 'the only living creature in sight' on the platform. Both true; plausible-not-stated still fits."
+  },
+  {
+   "ref": "redraft:cmsw2f4ub007utmbvucn6nfq8",
+   "verdict": "ATTEST",
+   "reason": "AGG-06: the preamble citation is replaced by line 45 'shy Matthew Cuthbert' and line 64 'he said shyly', both verbatim. en-attribute-transfer fits."
+  },
+  {
+   "ref": "rebuild:ENG-005-BB-01",
+   "verdict": "ATTEST",
+   "reason": "The heavy/light twin is replaced by 'The master drove gently, so the ride was smooth.' (line 12, on the flooded road before town, en-wrong-scope-retrieval); execution line numbers are correct. The new hint does not count reasons and adds nothing beyond the stem's own line pointer. Walk script unchanged and states the key."
+  },
+  {
+   "ref": "rebuild:ENG-005-BB-03",
+   "verdict": "ATTEST",
+   "reason": "Only the hint changed. It no longer names fear. The man's words do run from line 10 ('the river was rising fast') into line 11 ('night'). 'Check every part' does not single out the key: three options have two parts."
+  },
+  {
+   "ref": "rebuild:ENG-005-BB-04",
+   "verdict": "REFUSE",
+   "reason": "The fishing sense is no longer named, but the second sentence 'What would he need after that journey?' brings back the framing the finding faulted. Of the four options only the key, 'A feed and a rest.', is something a horse needs. A long wait with no food, a fish lure and a trick are not, so the hint selects the key by category and coaches."
+  },
+  {
+   "ref": "rebuild:ENG-014-TS-03",
+   "verdict": "REFUSE",
+   "reason": "The either/or is gone, and the gate-forced reword ('full of hope' for 'his hopes were high') is sound: 'high' is HOLD AND ROUTE on the bare value field, and the tag and error are kept. But the new hint 'Look at what Ben is doing in line 11. The writer reads his mood from that.' hands over the key. Line 11's only action by Ben is 'Ben's gait was the hop-skip-', which is the key. Every distractor sits on line 10 (calm), lines 12 to 13 (apple) or line 12 (light heart). Its second sentence tells the child that this action is the answer."
+  },
+  {
+   "ref": "rebuild:ENG-005-BB-09",
+   "verdict": "ATTEST",
+   "reason": "Judged as a new question. Key 'whipped' is stated: line 37 has 'a touch with the whip' and line 38 'a sharp cut'. The refusal that saved them is credited at lines 62 to 63. The fear distractor that 'I dare not' x3 supported is replaced by 'It was John, not Beauty, who saved them on the bridge.' (en-cause-agent-swap). Line 40 'He tried to lead me forward' and line 62 'wiser than we were' exclude it, and the stem alone does not. The walk script is accurate ('a touch with the whip', lines 62 to 63) and ends on the key."
+  },
+  {
+   "ref": "rebuild:ENG-014-TS-12",
+   "verdict": "ATTEST",
+   "reason": "The line 53 step (Tom's 'alacrity in his heart') is gone. Line 8 'inspiration burst upon him' and lines 34 to 37 'Ben watching every move and getting more and more interested' are accurate. The walk now ends on the key. All sentences are 16 words or fewer."
+  },
+  {
+   "ref": "rebuild:ENG-004-AGG-08",
+   "verdict": "ATTEST",
+   "reason": "The walk no longer ends on 'What changes is the watcher, not the girl.' The added step uses lines 44 to 46 ('no commonplace soul inhabited the body'), and the last sentence states the key. The step 'sees' slightly firms up the text's 'might have concluded' but stays faithful. Its longest sentence is exactly 16 words."
+  },
+  {
+   "ref": "rebuild:ENG-004-AGG-12",
+   "verdict": "ATTEST",
+   "reason": "The hint no longer counts requests. The twin is recast as 'Carry her own bag over to the horse.', which differs from the speech by one detail (who carries the bag), so en-minimal-pair-skim fits. 'is over in the yard' (line 64) and 'Give me your bag' (lines 64 to 65) are verbatim. It no longer shares the key's 'Come ..., and ... her bag' frame."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-005-BB-01",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 2, 3 and 12. The key is the only option giving lines 2 to 3's reasons, and 'big' for 'high' wheels is an acceptable paraphrase. Each distractor is excluded by the text, with no twin or length tell. The hint does not count, and the walk script states the key."
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 10 to 11 and 47. Only the key matches the man's words; 'low' and the meadows are the narrator's report. The hint names neither part of the key. The walk script gives both parts of the key."
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "verdict": "HOLD",
+   "holdFixed": false,
+   "faultField": "hintCore",
+   "reason": "The hint 'What would he need after that journey?' frames the answer as a need. Only the key, 'A feed and a rest.', fits that frame, which is the same coaching the finding named. The options are otherwise sound (dominant, form-lookalike and neighbouring senses), and line 14 fixes the sense."
+  },
+  {
+   "itemId": "ENG-005-BB-08",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 33 to 36 and 43. The key matches 'that happened sometimes when the floods were out'. The retagged option is denied by line 33. The gatekeeper and good-pace options are excluded at lines 43 and 36. The walk script reaches the key."
+  },
+  {
+   "itemId": "ENG-005-BB-09",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Read as a new question against lines 36 to 41 and 62 to 63. 'Whipped' is stated, and the refusal is what saved them. The 'knew', 'John' and 'test' options are each excluded by the text. There is no length or form tell, and the walk script states the key."
+  },
+  {
+   "itemId": "ENG-014-TS-03",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "hintCore",
+   "reason": "The original either/or is fixed, but the replacement hint pins line 11, whose only action by Ben is the hop-skip-and-jump (the key). It adds 'The writer reads his mood from that', which hands over the key. The reworded light-heart distractor is otherwise sound."
+  },
+  {
+   "itemId": "ENG-014-TS-12",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Walk script checked against lines 8 and 34 to 37; it reaches and states the key. Options unchanged: the reversal, the lookalike and the chronology option (lines 39 to 52) are each wrong as tagged."
+  },
+  {
+   "itemId": "ENG-004-AGG-01",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 4 to 6, 37 to 38 and 64. The key is the only option consistent with 'without looking at her'. The new negation-dropped option has a different frame, and lengths are even. The walk script states the key."
+  },
+  {
+   "itemId": "ENG-004-AGG-04",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 13 and 17 to 22. Only the key has a boy brought by Mrs Spencer. The girl, stationmaster and Marilla options are each excluded. The near-identical pair is gone. One mild note, not a hold: the key shares 'A boy' with one option and ', sent' with another."
+  },
+  {
+   "itemId": "ENG-004-AGG-05",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 3 to 4, 18 and 20 to 22. The key matches the handover. The waiting, Matthew's words and reversal options are excluded. The new execution is true. The key is a little the longest but is not a tell."
+  },
+  {
+   "itemId": "ENG-004-AGG-06",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 24 to 25, 45 and 64. 'Helplessly' and 'to cope' support the key. The execution now cites numbered lines, and the other distractors are unsupported in lines 24 to 25."
+  },
+  {
+   "itemId": "ENG-004-AGG-08",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 33 to 46. The key matches 'no commonplace soul' set against the ordinary observer's plain description. The distractors are each excluded (no change, line 34 not looking, measured not extreme), and the walk script now ends on the key. Minor: lineRefs omit 44 to 45, which the stem's 33 to 46 range covers."
+  },
+  {
+   "itemId": "ENG-004-AGG-12",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 14 and 64 to 65. The key matches 'Come along ... Give me your bag'. The recast option is wrong on who carries the bag, and the near-identical pair is gone. The hint does not count requests, and the walk script states both requests."
+  }
+ ]
+}

@@ -35,7 +35,9 @@ export const VR04_FORBIDDEN_BY_HEADWORD: Record<string, string[]> = {
   generous: ['large', 'plentiful', 'ample'],
   gloomy: ['dark', 'dim', 'shadowy'],
   rare: ['underdone', 'pink'],
-  bold: ['thick', 'dark', 'heavy'],
+  // R1037: the cheeky sense (rude, cheeky) and the colour sense (loud, bright, vivid) were missing, so a
+  // bare BOLD card carried "rude" and "loud" as distractors — each a second correct answer.
+  bold: ['thick', 'dark', 'heavy', 'rude', 'cheeky', 'loud', 'bright', 'vivid'],
   humble: ['poor', 'simple', 'plain', 'shabby'],
   vague: ['forgetful', 'dreamy', 'absent-minded'],
   feeble: ['unconvincing', 'pathetic', 'lame'],

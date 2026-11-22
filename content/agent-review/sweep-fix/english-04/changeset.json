@@ -1,0 +1,156 @@
+{
+ "door": "sweep-fix/english-04",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-006-TM-10",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-04",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key matches lines 50-51 (spend a week with her mother while it was being done); retagged distractor's tag and hint now fit; other distractors wrong (offer never made; 'a man in' is Uncle Podger's scorn at lines 62-63); walk states the plan.",
+   "landedAt": "2026-11-22T17:30:46.775Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4ux00bjtmbvszhqnr73).tag",
+     "before": "en-motive-invention",
+     "after": "en-plausible-not-stated"
+    },
+    {
+     "field": "option D (cmsw2f4ux00bjtmbvszhqnr73).execution",
+     "before": "Invents a plan; her words are about leaving, not about stopping him.",
+     "after": "Hiding the hammer is a sensible-sounding plan a child might invent for her, but no line gives it. Lines 49 to 51 have her hope to be told in time so she can go and spend a week with her mother."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-04",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Stem no longer asserts one day; key (every time he took on a job, line 2 'undertook to do a job' plus habitual 'would') is the only defensible reading; options share one frame with similar lengths; walk lines 11 and 37 checked and walk ends on the key.",
+   "landedAt": "2026-11-22T17:30:46.775Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "The writer says 'would' again and again. He would shout, he would drop it, he would call us fools. What does that tell us about this day?",
+     "after": "The writer says 'would' again and again. He would shout, he would drop it, he would call us fools. What does that tell us about these events?"
+    },
+    {
+     "field": "option A (cmsw2f4uy00bqtmbvvad8ic2l).value",
+     "before": "It is not one clear memory, but a guess at what may have happened.",
+     "after": "They tell us the writer is only guessing at what happened."
+    },
+    {
+     "field": "option A (cmsw2f4uy00bqtmbvvad8ic2l).execution",
+     "before": "Takes the guessing sense of 'would', which the repeated pattern does not fix.",
+     "after": "Takes the guessing sense of 'would', as in 'that would be him'. The repeated pattern does not fix that sense: from line 3 'would' gives what happened every time he took on a job."
+    },
+    {
+     "field": "option B (cmsw2f4uy00brtmbvot7kr3yj).value",
+     "before": "It tells us the picture was never hung, though he says it was.",
+     "after": "They tell us the picture was never hung at all."
+    },
+    {
+     "field": "option B (cmsw2f4uy00brtmbvot7kr3yj).execution",
+     "before": "Stretches to never; line 58 has the picture up by midnight, crooked but up.",
+     "after": "Stretches to never. Line 58 has the picture up by about midnight, very crooked and insecure, but up."
+    },
+    {
+     "field": "option C (cmsw2f4uy00bstmbvhoy04uck).value",
+     "before": "It tells us Uncle Podger was cross with everyone all day.",
+     "after": "They tell us Uncle Podger was cross with everyone all day."
+    },
+    {
+     "field": "option D (cmsw2f4uy00bttmbvsewigl8p).value",
+     "before": "It is not one day at all, but what happened every single time.",
+     "after": "They tell us this happened every time he took on a job."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-04",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Near-identical mirror pair gone; key (brave comrade, line 9-10; fell silent, line 45) is the only change both windows support; new distractor contradicted by line 45; walk lines 6, 9, 45, 46 checked and ends on the change.",
+   "landedAt": "2026-11-22T17:30:46.775Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 9 has Watson call him a comrade worth taking a risk for. Line 45 says even Baskerville fell silent as the moor opened out. Line 46 has him pull his overcoat more closely round him.",
+     "after": "Line 6 shows his eager face as he first sees the moor. Line 9 has Watson call him a comrade worth taking a risk for. Line 45 says even Baskerville fell silent. Line 46 has him pull his overcoat more closely round him. So the brave comrade of the start has now been silenced by the moor."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 9 has Watson call him a comrade worth taking a risk for. Line 45 says even Baskerville fell silent as the moor opened out. Line 46 has him pull his overcoat more closely round him."
+    },
+    {
+     "field": "option C (cmsw2f4xf00qctmbv1cf2jzpp).value",
+     "before": "He falls silent first, but Watson had judged him brave.",
+     "after": "He grows cheerful and chatty as the moor comes into view."
+    },
+    {
+     "field": "option C (cmsw2f4xf00qctmbv1cf2jzpp).tag",
+     "before": "en-chronology-collapse",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option C (cmsw2f4xf00qctmbv1cf2jzpp).execution",
+     "before": "Line 45 comes thirty-six lines after line 9, so this turns the order round.",
+     "after": "Line 45 says the opposite: as the moor spreads out in front of them, even Baskerville fell silent. At line 46 he pulls his overcoat closer. Neither window has him cheerful or talking."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-04",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key now plain English and correct (melancholy, gloomy, sinister give the land feelings); distractors wrong (literal details, no calm-by-day line, no looking away); walk uses moor lines 4, 19, 20 only and ends on the key. Minor: 'These are words for people, not for land' slightly overstates, but it is the teaching point.",
+   "landedAt": "2026-11-22T17:30:46.775Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "At line 4 the far-off hill is melancholy. At line 8 the moor is forbidding, and at line 20 the hills are sinister. At line 27 the rotting plants become sad gifts that Nature throws before the carriage.",
+     "after": "At line 4 the far-off hill of the moor is melancholy, which means sad. At line 19 the long curve of the moor is gloomy. At line 20 its hills are sinister, as if they meant harm. These are words for people, not for land. So Watson writes as if the land itself had feelings."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "At line 4 the far-off hill is melancholy. At line 8 the moor is forbidding, and at line 20 the hills are sinister. At line 27 the rotting plants become sad gifts that Nature throws before the carriage."
+    },
+    {
+     "field": "option D (cmsw2f4xn00rrtmbvgvsxxs8k).value",
+     "before": "He writes a still moor, but he gives it a mind of its own.",
+     "after": "He writes as if the land itself had feelings."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-08",
+   "passageRef": "stream-a-10-three-men-boat",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-04",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Stem no longer gives 're-measures'; line 38 fixes the measuring sense; three distractors wrong (law sense, wall mark at lines 34-35, 'as a rule' habit); hint and walk accurate, walk states 'measuring tool'.",
+   "landedAt": "2026-11-22T17:30:46.775Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Read lines 38 and 39. On line 38 Uncle Podger takes 'the rule' and re-measures. What is a 'rule' here?",
+     "after": "Read lines 38 and 39. On line 38 Uncle Podger takes 'the rule'. What is a 'rule' here?"
+    }
+   ]
+  }
+ ]
+}

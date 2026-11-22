@@ -1,0 +1,489 @@
+{
+ "door": "sweep-fix/maths",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "MC02-FDP-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 24 only correct; 6, 20, 150 wrong as tagged; walk names only present traps and states 24. maths-77 child hint still mentions money until the library track rewords it (out of this door's scope by brief).",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Percentages first become parts. One fifth of 60 is 12, so two fifths is 24. One trap stops at one part. Another treats the percent as pounds.",
+     "after": "Percentages first become parts. One fifth of 60 is 12, so two fifths is 24. One trap finds only 10% and stops. Another takes 40 away from 60."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Percentages first become parts. One fifth of 60 is 12, so two fifths is 24. One trap stops at one part. Another treats the percent as pounds."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  },
+  {
+   "itemId": "MC03-GEOM-05",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 54 cm² unique; 135, 6, 15 all cm² and wrong as tagged; no unit giveaway; walk accurate, states key; key second-largest, ranks unchanged.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Half the perimeter to 15, which is the length plus width. Take the 9 cm length off to get a 6 cm width. Area is 9 times 6, or 54 cm². One trap stops at the half-total.",
+     "after": "Halve the perimeter to get 15, which is the length plus the width. Take the 9 cm length off to get a 6 cm width. The area is 9 times 6, which is 54 cm². One trap adds 9 and 6 instead of multiplying. Another uses 15 as the width."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Half the perimeter to 15, which is the length plus width. Take the 9 cm length off to get a 6 cm width. Area is 9 times 6, or 54 cm². One trap stops at the half-total."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option C (cmteo82d1009utmmjukee5zou).value",
+     "before": "6 cm",
+     "after": "6 cm²"
+    },
+    {
+     "field": "option C (cmteo82d1009utmmjukee5zou).execution",
+     "before": "The child finds the width correctly, (30 − 9 − 9) ÷ 2 = 6 cm, and gives that as the answer. They stop before working out the area, 9 × 6 = 54 cm².",
+     "after": "The child finds the width correctly, (30 − 9 − 9) ÷ 2 = 6 cm, and gives that 6 as the area. They stop before working out the area itself, 9 × 6 = 54 cm²."
+    }
+   ]
+  },
+  {
+   "itemId": "MC05-GEOM-05",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 76 cm² unique; 96, 40, 116 all cm² and wrong as tagged; notation fixed; key second-smallest, unchanged numerically.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Find the whole block first: 12 times 8 is 96. The cut-out corner is 5 times 4, which is 20. Take the cut-out away to leave 76 cm squared. One trap forgets the cut-out.",
+     "after": "Find the whole block first: 12 times 8 is 96. The cut-out corner is 5 times 4, which is 20. Take the cut-out away to leave 76 cm². One trap forgets the cut-out."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Find the whole block first: 12 times 8 is 96. The cut-out corner is 5 times 4, which is 20. Take the cut-out away to leave 76 cm squared. One trap forgets the cut-out."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option C (cmteorein0012tm2cfwy9opxa).value",
+     "before": "40 cm",
+     "after": "40 cm²"
+    },
+    {
+     "field": "option C (cmteorein0012tm2cfwy9opxa).execution",
+     "before": "The child adds the sides of the 12 cm by 8 cm rectangle, 12 + 8 + 12 + 8 = 40, when asked for area. The area is 12 × 8 − 5 × 4 = 96 − 20 = 76 cm².",
+     "after": "The child adds the sides of the 12 cm by 8 cm rectangle, 12 + 8 + 12 + 8 = 40, when asked for area, and writes 40 cm². The area is 12 × 8 − 5 × 4 = 96 − 20 = 76 cm²."
+    }
+   ]
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 7070 unique; 6980, 7970, 6070 recomputed; walk states 7,070.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. The trap adds into a neighbouring column or drops the carry.",
+     "after": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 7,070. The trap adds into a neighbouring column or drops the carry."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. The trap adds into a neighbouring column or drops the carry."
+    }
+   ]
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 6060 unique; 5970, 6960, 5060 recomputed; walk states 6,060.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. The trap adds into a neighbouring column or drops the carry.",
+     "after": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 6,060. The trap adds into a neighbouring column or drops the carry."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. The trap adds into a neighbouring column or drops the carry."
+    }
+   ]
+  },
+  {
+   "itemId": "MC01-NPV-02",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 5070 unique; 4980, 4870, 4070 recomputed; walk states 5,070.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. A common slip forgets to carry or adds to the next column along.",
+     "after": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 5,070. A common slip forgets to carry or adds to the next column along."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. A common slip forgets to carry or adds to the next column along."
+    }
+   ]
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 10500 unique; 9600, 19500, 500 recomputed; walk states 10,500.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column. The trap adds into a neighbouring column or loses the carry.",
+     "after": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column to reach 10,500. The trap adds into a neighbouring column or loses the carry."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column. The trap adds into a neighbouring column or loses the carry."
+    }
+   ]
+  },
+  {
+   "itemId": "MC04-MEAS-07",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key £2.95 unique; £7.05, £5.30, £2.80 recomputed; £ on every amount.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Three notebooks cost 2.35 times 3, which is 7.05. Take 7.05 from the £10 note. The change is 2.95. The trap stops at the total or miscounts.",
+     "after": "Three notebooks cost £2.35 times 3, which is £7.05. Take £7.05 from the £10 note. The change is £2.95. The trap stops at the total or miscounts."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Three notebooks cost 2.35 times 3, which is 7.05. Take 7.05 from the £10 note. The change is 2.95. The trap stops at the total or miscounts."
+    }
+   ]
+  },
+  {
+   "itemId": "MC05-GEOM-01",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 54 cm the only correct value; 45 (three sides), 162 cm (area number), 44 (carry dropped in 36 + 18) all wrong as tagged; all in cm; key second-largest of 44/45/54/162, not alone on a side; walk true.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option C (cmteo82pl00hmtmmjttswdfo4).value",
+     "before": "162 cm²",
+     "after": "162 cm"
+    },
+    {
+     "field": "option C (cmteo82pl00hmtmmjttswdfo4).execution",
+     "before": "The child multiplies the two sides, 18 × 9 = 162, when asked for the perimeter. That is the area of the rectangle; the perimeter is 18 + 9 + 18 + 9 = 54 cm.",
+     "after": "The child multiplies the two sides, 18 × 9 = 162, when asked for the perimeter, and writes 162 cm. That is the area's number; the perimeter is 18 + 9 + 18 + 9 = 54 cm."
+    }
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-04",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key (5, 4) unique; (4, 5), (3, 3), (8, 4) wrong as tagged; walk now true and states the key; sentences within 16 words.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line up the corners you have. Two share the x value 5, and two share the y value 4. The fourth corner must sit at (5, 4). Always read across, then up.",
+     "after": "Line up the corners you have. One corner has the x value 5, and another has the y value 4. The fourth corner takes both, so it sits at (5, 4). Always read across, then up."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line up the corners you have. Two share the x value 5, and two share the y value 4. The fourth corner must sit at (5, 4). Always read across, then up."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  },
+  {
+   "itemId": "MC02-MEAS-01",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key £5.40 unique; £6.60, £6.00, £10.60 recomputed; walk true with £ notation.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line up the pounds and pence first. Write £8 as £8.00, then take £2.60 away. That leaves £5.40. One trap rounds £2.60 up and forgets to adjust.",
+     "after": "Line up the pounds and pence first. Write £8 as £8.00, then take £2.60 away. That leaves £5.40. One trap drops the pence."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line up the pounds and pence first. Write £8 as £8.00, then take £2.60 away. That leaves £5.40. One trap rounds £2.60 up and forgets to adjust."
+    }
+   ]
+  },
+  {
+   "itemId": "MC02-MEAS-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key £6.85 unique; £2.85, £1.85, £6.00 recomputed; both walk traps present.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Stack the pounds and pence in columns. Add £4.35 and £2.50 to make £6.85. One trap loses a whole digit from a column. Another rounds both prices and forgets to adjust.",
+     "after": "Stack the pounds and pence in columns. Add £4.35 and £2.50 to make £6.85. One trap loses a whole digit from a column. Another drops the pence and adds only the pounds."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Stack the pounds and pence in columns. Add £4.35 and £2.50 to make £6.85. One trap loses a whole digit from a column. Another rounds both prices and forgets to adjust."
+    }
+   ]
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key £2.40 unique; £3.00, £3.60, £13.60 recomputed; £ on every amount; walk trap present.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Change means the totals must line up. Write £8 as 8.00, then take 5.60 away. That leaves 2.40. The trap rounds the price or drops the pence.",
+     "after": "Change means the totals must line up. Write £8 as £8.00, then take £5.60 away. That leaves £2.40. One trap drops the pence."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Change means the totals must line up. Write £8 as 8.00, then take 5.60 away. That leaves 2.40. The trap rounds the price or drops the pence."
+    }
+   ]
+  },
+  {
+   "itemId": "MC05-GEOM-04",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 28 cm unique; 96, 22, 6 all cm and wrong as tagged; given value no longer offered; key second-largest of 6/22/28/96, not alone on a side; walk names only present traps.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Area is length times width, so width is 48 shared by 8, giving 6 cm. Now add 8 and 6, then double for the perimeter. That makes 28 cm. One trap hands back the area instead.",
+     "after": "Area is length times width, so width is 48 shared by 8, giving 6 cm. Now add 8 and 6, then double for the perimeter. That makes 28 cm. One trap stops at the width. Another adds only three sides."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Area is length times width, so width is 48 shared by 8, giving 6 cm. Now add 8 and 6, then double for the perimeter. That makes 28 cm. One trap hands back the area instead."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option B (cmteo82q200hxtmmjvxeneyam).value",
+     "before": "48 cm²",
+     "after": "96 cm"
+    },
+    {
+     "field": "option B (cmteo82q200hxtmmjvxeneyam).tag",
+     "before": "maths-39-perimeter-vs-area-multiplying",
+     "after": "maths-72-wrong-operation-chosen"
+    },
+    {
+     "field": "option B (cmteo82q200hxtmmjvxeneyam).execution",
+     "before": "The child finds the width correctly, 48 ÷ 8 = 6 cm, then multiplies the sides, 8 × 6 = 48, when asked for the perimeter. The perimeter is 8 + 6 + 8 + 6 = 28 cm.",
+     "after": "The child subtracts the length from the area instead of dividing, 48 − 8 = 40, and uses 40 cm as the width. That gives 8 + 40 + 8 + 40 = 96 cm, where the width is 48 ÷ 8 = 6 cm and the perimeter is 28 cm."
+    }
+   ]
+  },
+  {
+   "itemId": "MC03-MEAS-05",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key £5.60 unique; £4.40, £4.60, £5.50 recomputed; both walk traps present.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Get the total spent first. £2.65 plus £1.75 is £4.40. Take that from £10 to leave £5.60. The trap rounds the prices or drops a pounds digit.",
+     "after": "Get the total spent first. £2.65 plus £1.75 is £4.40. Take that from £10 to leave £5.60. One trap rounds the prices. Another carries a 1 twice."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Get the total spent first. £2.65 plus £1.75 is £4.40. Take that from £10 to leave £5.60. The trap rounds the prices or drops a pounds digit."
+    }
+   ]
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 10400 unique; 9500, 8400, 400 recomputed; walk states 10,400.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column. The trap adds into a neighbouring column or loses the carry.",
+     "after": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column to reach 10,400. The trap adds into a neighbouring column or loses the carry."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column. The trap adds into a neighbouring column or loses the carry."
+    }
+   ]
+  },
+  {
+   "itemId": "MC02-GEOM-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 67° unique; 44°, 12°, 65° recomputed; walk names only present traps, states 67; sentences within 16 words.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Name the parts first: one top angle and two equal base angles. Take the 46 degrees from 180 to leave 134. Share that 134 into two equal angles: 67 each. The trap swaps the order or uses 360.",
+     "after": "Name the parts first: one top angle and two equal base angles. Take the 46 degrees from 180 to leave 134. Share that 134 into two equal angles: 67 each. One trap halves 180 first. Others round 46 to 50, or halve 134 one digit at a time."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Name the parts first: one top angle and two equal base angles. Take the 46 degrees from 180 to leave 134. Share that 134 into two equal angles: 67 each. The trap swaps the order or uses 360."
+    }
+   ]
+  },
+  {
+   "itemId": "MC03-MEAS-06",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key 285 m unique; 185, 280, 260 recomputed; both walk traps present.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Find the total laid first. 340 m plus 275 m is 615 m. Take that from 900 m to leave 285 m. The trap stops at the total, or drops a digit.",
+     "after": "Find the total laid first. 340 m plus 275 m is 615 m. Take that from 900 m to leave 285 m. One trap rounds 275 m and never puts the difference back. Another carries a 1 twice."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Find the total laid first. 340 m plus 275 m is 615 m. Take that from 900 m to leave 285 m. The trap stops at the total, or drops a digit."
+    }
+   ]
+  },
+  {
+   "itemId": "MC02-MEAS-07",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key £5.10 unique; £4.90, £7.10, £5.75 recomputed; both walk traps present.",
+   "landedAt": "2026-11-22T17:30:17.597Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Add every item first, then find the change. The shopping costs £4.90, leaving £5.10. One trap leaves an item out. Another rounds a price and forgets to adjust.",
+     "after": "Add every item first, then find the change. The shopping costs £4.90, leaving £5.10. One trap leaves an item out. Another stops at the total spent."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Add every item first, then find the change. The shopping costs £4.90, leaving £5.10. One trap leaves an item out. Another rounds a price and forgets to adjust."
+    }
+   ]
+  }
+ ]
+}

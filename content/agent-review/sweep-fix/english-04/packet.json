@@ -1,0 +1,2302 @@
+{
+ "door": "sweep-fix/english-04",
+ "questionType": "english",
+ "ruling": "R1037",
+ "entries": {
+  "en-physical-vs-emotional-cue": {
+   "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling.",
+   "childHint": "Look past what the body is doing. Check what the character is feeling right then."
+  },
+  "en-comma-subject-verb-split": {
+   "description": "Accepts a comma cutting subject from verb.",
+   "childHint": "Never let a single comma cut the do-er off from the doing."
+  },
+  "en-terminal-punctuation-blind": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match."
+  },
+  "en-inference-literal-lookalike": {
+   "description": "Picks the option that reuses passage wording.",
+   "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you."
+  },
+  "en-technique-intent-as-character": {
+   "description": "Child gives \"the boy feels tense\" where the answer is that the writer builds tension, treating the writer's choice as the character's state.",
+   "childHint": "Ask who is doing this. Is it the writer, or the character?"
+  },
+  "en-double-consonant-boundary": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+  },
+  "en-unstressed-suffix-vowel": {
+   "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+   "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+  },
+  "en-motive-invention": {
+   "description": "Attributes a plausible motive the text never supports.",
+   "childHint": "A reason has to be given, not guessed. Ask what the text says about why."
+  },
+  "en-conjunction-logic": {
+   "description": "Chooses a conjunction with the wrong logical relation.",
+   "childHint": "Is the second idea a reason, a surprise, or just what happened next?"
+  },
+  "en-comparison-vehicle-misread": {
+   "description": "Child gives the quality of the thing a comparison compares TO, where the answer is the quality of the thing being described — reading the vehicle of a simile or metaphor as the subject.",
+   "childHint": "Find the two things being compared. The one being described is the one that matters."
+  },
+  "en-parallel-read-as-sequence": {
+   "description": "The child reads two parallel descriptions of one thing as two moments in time. Where a writer gives the same subject twice — two ways of seeing it, two accounts of it, two things it is at once — she converts the pair into a sequence and looks for what changed between them. Nothing changed. What differs is the vantage, not the subject, and the relation between the two descriptions is what the question asks for.",
+   "childHint": "These two descriptions are of the same thing at the same time. Ask what is different about who is looking."
+  },
+  "en-technique-effect-mislocated": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only."
+  },
+  "en-vocab-form-lookalike": {
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all — she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word."
+  },
+  "en-determiner-omitted": {
+   "description": "Leaves the determiner out altogether before a singular countable noun, treating a, an and the as optional rather than required. Distinct from en-article-definiteness, which is a choice BETWEEN articles, and from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "A single thing needs a word in front of it. Say the line aloud and listen."
+  },
+  "en-vocab-neighbouring-sense": {
+   "description": "The child chooses another genuine sense of the same word, neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. This holds only where the surrounding text fixes the sense decisively. Where it does not, the option is a defensible second answer and the item is faulty rather than hard. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be."
+  },
+  "en-narrator-voice-as-fact": {
+   "description": "The child treats a crowd's opinion that the narrator reports in flat, certain sentences as the narrator's own verdict, and so takes it as settled truth rather than as something the text is quietly laughing at. Distinct from en-extreme-option-pull, which is about the pull of absolute wording; this one is about mistaking whose voice is speaking.",
+   "childHint": "Before you take this as true, ask whose opinion it is."
+  },
+  "en-relative-pronoun-choice": {
+   "description": "Picks a relative pronoun by habit rather than by what it stands for: which for people, whose in place of who, whom in a subject slot.",
+   "childHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone."
+  },
+  "en-whole-text-absence-asserted": {
+   "description": "The passage sustains an ABSENCE across its whole length — it never states a feeling, never names a motive, never gives a verdict — and the option asserts the withheld thing as though it were there. There is no negative word to drop, because the negation is a property of the text rather than of any line: the child has failed to notice something maintained across sixty lines, not misread a word in one. Characteristically the option is defeated by no single line and only by the absence itself, so its disposal must cite the SPAN of the withholding rather than a disposal point.",
+   "childHint": "Choose a line number for the option you like. If you cannot find one anywhere in the passage, that option is not it."
+  },
+  "en-negation-dropped": {
+   "description": "The passage carries an explicit negative — no, not, never, nothing, without, could not, sha'n't — and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line. A negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "A negative word can change the whole answer. Read the line again for one."
+  },
+  "en-comparative-superlative-form": {
+   "description": "Errors in forming or choosing comparatives and superlatives: double marking (most fastest), the comparative used for a whole group, or the bare adjective after 'the'.",
+   "childHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job."
+  },
+  "en-coordination-wrong-conjunct": {
+   "description": "The target word sits in a coordination — X and Y, X as well as Y, X as Y, X beside Y — and the child attaches the meaning to the wrong conjunct. She takes the half of the pair she read last, or the half that is easier to picture, and glosses the target with it. The error is syntactic: she has parsed which item the word attaches to incorrectly, and the option she picks is usually TRUE of the other conjunct, which is why it survives a check against the passage.",
+   "childHint": "This word is joined to another one. Work out which of the two the question is asking about before you answer."
+  },
+  "en-subject-verb-agreement-by-proximity": {
+   "description": "Agrees the verb with the nearest noun instead of the true subject, usually across an of-phrase: 'the row of new labels were'.",
+   "childHint": "Ignore the of-part. Match the verb to what is left."
+  },
+  "en-question-tag-polarity": {
+   "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+   "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did."
+  },
+  "en-within-span-wrong-element": {
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange — one child's answer offered where the other child's instruction was asked for. The cure is the same in both cases, so the sub-route shares this hint.",
+   "childHint": "Being in the lines is not enough. Check it answers the question you were asked."
+  },
+  "en-emotion-label-approximation": {
+   "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+   "childHint": "Find the words in the text that show the feeling. Close is not the same."
+  },
+  "en-spelling-form-lookalike": {
+   "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+   "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape."
+  },
+  "en-article-avoids-the-sound-choice": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?"
+  },
+  "en-plausible-not-stated": {
+   "description": "Picks real-world-plausible options the passage never states, especially motives.",
+   "childHint": "Sounding sensible is not enough. Find the line that proves it."
+  },
+  "en-relation-word-flipped": {
+   "description": "The child reads a word that names a relationship between two things (contrast, unless, however, instead of) as its opposite, usually as plain 'and' or 'the same as'. The result is an option that keeps every fact but reverses how the facts sit together.",
+   "childHint": "Some words tell you how two things go together. Find that word and read it again."
+  },
+  "en-extreme-option-pull": {
+   "description": "Chooses always/never/impossible options when the text is measured.",
+   "childHint": "Does the passage really go that far? Check the strongest word in the option."
+  },
+  "en-vocab-built-from-parts": {
+   "description": "The child takes the word apart into parts she has met in other words and sums them. She has not mistaken which word it is — she has taken it apart, and the parts are real while the sum is not the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "The parts of a word do not always add up. Check the whole word in the sentence."
+  },
+  "en-figurative-taken-literally": {
+   "description": "Reads similes and idioms as literal events.",
+   "childHint": "Figures of speech are not facts. Ask what the words are really saying."
+  },
+  "en-repetition-purpose": {
+   "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+   "childHint": "Writers repeat on purpose. Ask what the echo does to the reader."
+  },
+  "en-attribute-transfer": {
+   "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.",
+   "childHint": "Check who or what each detail belongs to in the text."
+  },
+  "en-cause-agent-swap": {
+   "description": "Attributes the right event to the wrong cause or character.",
+   "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step."
+  },
+  "en-wrong-scope-retrieval": {
+   "description": "Answers from a detail in the wrong part of the passage.",
+   "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to."
+  },
+  "en-vocab-dominant-sense": {
+   "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+   "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here."
+  },
+  "en-agent-patient-reversal": {
+   "description": "Swaps who did or thought something, or who it was done to.",
+   "childHint": "Ask who is doing it and who it is being done to."
+  },
+  "en-minimal-pair-skim": {
+   "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail.",
+   "childHint": "An answer can look almost like the text. Find what differs and check it against the text."
+  },
+  "en-vocab-not-this-word": {
+   "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form.",
+   "childHint": "This word never means that. Put your answer in its place. Read the sentence again."
+  },
+  "en-chronology-collapse": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for."
+  },
+  "en-technique-device-confusion": {
+   "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+   "childHint": "Does the line say like or as? A comparison using those words is a simile."
+  },
+  "en-contradicted-by-the-text": {
+   "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+   "childHint": "The passage says something different. Go back and find it."
+  },
+  "en-technique-structure-effect-blind": {
+   "description": "Child gives what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern), reading content where the question asks about shape.",
+   "childHint": "Notice how the writer has built it, not just what it says. What does that do for the reader?"
+  },
+  "en-a-an-by-spelling": {
+   "description": "Chooses a/an by following letter rather than sound.",
+   "childHint": "Listen to the sound that starts the next word."
+  },
+  "en-article-definiteness": {
+   "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "Has the text named it already? That changes which little word fits."
+  },
+  "en-contraction-apostrophe": {
+   "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+   "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were."
+  },
+  "en-homophone-by-sound": {
+   "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+   "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+  },
+  "en-n-option-avoidance": {
+   "description": "Never selects the no-mistake option in error-spotting.",
+   "childHint": "Check every part in turn. No mistake is a real answer, not a way out."
+  },
+  "en-silent-letter-dropped": {
+   "description": "Drops silent letters when spelling.",
+   "childHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+  },
+  "en-speech-punctuation-inside": {
+   "description": "Places a quoted question's mark outside the speech marks.",
+   "childHint": "The question belongs to the spoken words. Keep the mark inside."
+  },
+  "en-unstressed-medial-vowel": {
+   "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+   "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it."
+  },
+  "en-preposition-collocation": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
+  },
+  "en-tense-sequence": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+  },
+  "en-word-class-by-ending": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+  },
+  "en-paired-punctuation": {
+   "description": "Misses unclosed brackets or quotes.",
+   "childHint": "Brackets come in pairs, like shoes. Hunt for the partner."
+  },
+  "en-modal-conditional-form": {
+   "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+   "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past."
+  },
+  "en-apostrophe-possession": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'."
+  }
+ },
+ "passages": {
+  "stream-a-10-three-men-boat": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "He always reminds me of my poor Uncle Podger. You never saw such a commotion up and down",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "a house, in all your life, as when my Uncle Podger undertook to do a job. A picture",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "would have come home from the frame-maker’s, and be standing in the dining-room, waiting",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "to be put up; and Aunt Podger would ask what was to be done with it, and Uncle Podger",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "would say:",
+     "label": "5"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 6,
+     "text": "“Oh, you leave that to me. Don’t you, any of you, worry yourselves about that. I’ll do",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "all that.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "And then he would take off his coat, and begin. He would send the girl out for",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "sixpen’orth of nails, and then one of the boys after her to tell her what size to get;",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "and, from that, he would gradually work down, and start the whole house.",
+     "label": "10"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 11,
+     "text": "“Now you go and get me my hammer, Will,” he would shout; “and you bring me the rule,",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "Tom; and I shall want the step-ladder, and I had better have a kitchen-chair, too; and,",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "Jim! you run round to Mr. Goggles, and tell him, ‘Pa’s kind regards, and hopes his leg’s",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "better; and will he lend him his spirit-level?’ And don’t you go, Maria, because I shall",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "want somebody to hold me the light; and when the girl comes back, she must go out again",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "for a bit of picture-cord; and Tom!—where’s Tom?—Tom, you come here; I shall want you to",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "hand me up the picture.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "And then he would lift up the picture, and drop it, and it would come out of the frame,",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "and he would try to save the glass, and cut himself; and then he would spring round the",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "room, looking for his handkerchief. He could not find his handkerchief, because it was",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "in the pocket of the coat he had taken off, and he did not know where he had put the",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "coat, and all the house had to leave off looking for his tools, and start looking for",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "his coat; while he would dance round and hinder them.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "And, when half an hour had been spent in tying up his finger, and a new glass had been",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "got, and the tools, and the ladder, and the chair, and the candle had been brought, he",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "would have another go, the whole family, including the girl and the charwoman, standing",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "round in a semi-circle, ready to help. Two people would have to hold the chair, and a",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "third would help him up on it, and hold him there, and a fourth would hand him a nail,",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "and a fifth would pass him up the hammer, and he would take hold of the nail, and drop",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "it.",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "The nail would be found at last, but by that time he would have lost the hammer.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "“Where’s the hammer? What did I do with the hammer? Great heavens! Seven of you, gaping",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "round there, and you don’t know what I did with the hammer!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "We would find the hammer for him, and then he would have lost sight of the mark he had",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "made on the wall, where the nail was to go in, and each of us had to get up on the",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "chair, beside him, and see if we could find it; and we would each discover it in a",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "different place, and he would call us all fools, one after another, and tell us to get",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "down. And he would take the rule, and re-measure, and find that he wanted half thirty-",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "one and three-eighths inches from the corner, and would try to do it in his head, and go",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "mad.",
+     "label": "40"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 41,
+     "text": "He would use a bit of string this time, and at the critical moment, when the old fool",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "was leaning over the chair at an angle of forty-five, and trying to reach a point three",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "inches beyond what was possible for him to reach, the string would slip, and down he",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "would slide on to the piano, a really fine musical effect being produced by the",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "suddenness with which his head and body struck all the notes at the same time.",
+     "label": "45"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 46,
+     "text": "At last, Uncle Podger would get the spot fixed again, and put the point of the nail on",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "it with his left hand, and take the hammer in his right hand. And, with the first blow,",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "he would smash his thumb, and drop the hammer, with a yell, on somebody’s toes.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "Aunt Maria would mildly observe that, next time Uncle Podger was going to hammer a nail",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "into the wall, she hoped he’d let her know in time, so that she could make arrangements",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "to go and spend a week with her mother while it was being done.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "“Oh! you women, you make such a fuss over everything,” Uncle Podger would reply, picking",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "himself up. “Why, I like doing a little job of this sort.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "And then he would have another try, and, at the second blow, the nail would go clean",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "through the plaster, and half the hammer after it, and Uncle Podger be precipitated",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "against the wall with force nearly sufficient to flatten his nose.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "Then we had to find the rule and the string again, and a new hole was made; and, about",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "midnight, the picture would be up—very crooked and insecure, the wall for yards round",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "looking as if it had been smoothed down with a rake, and everybody dead beat and",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "wretched—except Uncle Podger.",
+     "label": "60"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 61,
+     "text": "“There you are,” he would say, stepping heavily off the chair on to the charwoman’s",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "corns, and surveying the mess he had made with evident pride. “Why, some people would",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "have had a man in to do a little thing like that!”",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-11-jane-eyre": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "This lane inclined up-hill all the way to Hay; having reached the middle, I sat down on",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "a stile which led thence into a field. Gathering my mantle about me, and sheltering my",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "hands in my muff, I did not feel the cold, though it froze keenly; as was attested by a",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "sheet of ice covering the causeway, where a little brooklet, now congealed, had",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "overflowed after a rapid thaw some days since. From my seat I could look down on",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "Thornfield: the grey and battlemented hall was the principal object in the vale below",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "me; its woods and dark rookery rose against the west. I lingered till the sun went down",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "amongst the trees, and sank crimson and clear behind them. I then turned eastward.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "The din was on the causeway: a horse was coming; the windings of the lane yet hid it,",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "but it approached. I was just leaving the stile; yet, as the path was narrow, I sat",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "still to let it go by. In those days I was young, and all sorts of fancies bright and",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "dark tenanted my mind: the memories of nursery stories were there amongst other rubbish;",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "and when they recurred, maturing youth added to them a vigour and vividness beyond what",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "childhood could give. As this horse approached, and as I watched for it to appear",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "through the dusk, I remembered certain of Bessie’s tales, wherein figured a North-of-",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "England spirit called a “Gytrash,” which, in the form of horse, mule, or large dog,",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "haunted solitary ways, and sometimes came upon belated travellers, as this horse was now",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "coming upon me.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "It was very near, but not yet in sight; when, in addition to the tramp, tramp, I heard a",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "rush under the hedge, and close down by the hazel stems glided a great dog, whose black",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "and white colour made him a distinct object against the trees. It was exactly one form",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "of Bessie’s Gytrash—a lion-like creature with long hair and a huge head: it passed me,",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "however, quietly enough; not staying to look up, with strange pretercanine eyes, in my",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "face, as I half expected it would. The horse followed,—a tall steed, and on its back a",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "rider. The man, the human being, broke the spell at once. No Gytrash was this,—only a",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "traveller taking the short cut to Millcote. He passed, and I went on; a few steps, and I",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "turned: a sliding sound and an exclamation of “What the deuce is to do now?” and a",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "clattering tumble, arrested my attention. Man and horse were down; they had slipped on",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "the sheet of ice which glazed the causeway. The dog came bounding back, and seeing his",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "master in a predicament, and hearing the horse groan, barked till the evening hills",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "echoed the sound, which was deep in proportion to his magnitude. He snuffed round the",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "prostrate group, and then he ran up to me; it was all he could do,—there was no other",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "help at hand to summon. I obeyed him, and walked down to the traveller, by this time",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "struggling himself free of his steed. His efforts were so vigorous, I thought he could",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "not be much hurt; but I asked him the question—",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "“Are you injured, sir?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "“Can I do anything?” I asked again.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "“You must just stand on one side,” he answered as he rose, first to his knees, and then",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "to his feet. I did; whereupon began a heaving, stamping, clattering process, accompanied",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "by a barking and baying which removed me effectually some yards’ distance; but I would",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "not be driven quite away till I saw the event. This was finally fortunate; the horse was",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "re-established, and the dog was silenced with a “Down, Pilot!” The traveller now,",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "stooping, felt his foot and leg, as if trying whether they were sound; apparently",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "something ailed them, for he halted to the stile whence I had just risen, and sat down.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "I was in the mood for being useful, or at least officious, I think, for I now drew near",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "him again.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "“If you are hurt, and want help, sir, I can fetch some one either from Thornfield Hall",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "or from Hay.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "“Thank you: I shall do: I have no broken bones,—only a sprain;” and again he stood up",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "and tried his foot, but the result extorted an involuntary “Ugh!”",
+     "label": "50"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 51,
+     "text": "Something of daylight still lingered, and the moon was waxing bright: I could see him",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "plainly. His figure was enveloped in a riding cloak, fur collared and steel clasped; its",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "details were not apparent, but I traced the general points of middle height and",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "considerable breadth of chest. He had a dark face, with stern features and a heavy brow;",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "his eyes and gathered eyebrows looked ireful and thwarted just now; he was past youth,",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "but had not reached middle-age; perhaps he might be thirty-five. I felt no fear of him,",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "and but little shyness.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "If even this stranger had smiled and been good-humoured to me when I addressed him; if",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "he had put off my offer of assistance gaily and with thanks, I should have gone on my",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "way and not felt any vocation to renew inquiries: but the frown, the roughness of the",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "traveller, set me at my ease: I retained my station when he waved to me to go, and",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "announced—",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "“I cannot think of leaving you, sir, at so late an hour, in this solitary lane, till I",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "see you are fit to mount your horse.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "“I should think you ought to be at home yourself,” said he, “if you have a home in this",
+     "label": "65"
+    },
+    {
+     "n": 66,
+     "text": "neighbourhood: where do you come from?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "“From just below; and I am not at all afraid of being out late when it is moonlight: I",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "will run over to Hay for you with pleasure, if you wish it: indeed, I am going there to",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "post a letter.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "“You live just below—do you mean at that house with the battlements?” pointing to",
+     "label": "70"
+    },
+    {
+     "n": 71,
+     "text": "Thornfield Hall, on which the moon cast a hoary gleam, bringing it out distinct and pale",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "from the woods that, by contrast with the western sky, now seemed one mass of shadow.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "“Yes, sir.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 74,
+     "text": "“Whose house is it?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 75,
+     "text": "“Mr. Rochester’s.”",
+     "label": "75"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 76,
+     "text": "“Do you know Mr. Rochester?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 77,
+     "text": "“No, I have never seen him.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 78,
+     "text": "“He is not resident, then?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 79,
+     "text": "“No.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 80,
+     "text": "“Can you tell me where he is?”",
+     "label": "80"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 81,
+     "text": "“I cannot.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 82,
+     "text": "“You are not a servant at the hall, of course. You are—” He stopped, ran his eye over my",
+     "label": ""
+    },
+    {
+     "n": 83,
+     "text": "dress, which, as usual, was quite simple: a black merino cloak, a black beaver bonnet;",
+     "label": ""
+    },
+    {
+     "n": 84,
+     "text": "neither of them half fine enough for a lady’s-maid. He seemed puzzled to decide what I",
+     "label": ""
+    },
+    {
+     "n": 85,
+     "text": "was; I helped him.",
+     "label": "85"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 86,
+     "text": "“I am the governess.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 87,
+     "text": "“Ah, the governess!” he repeated; “deuce take me, if I had not forgotten! The",
+     "label": ""
+    },
+    {
+     "n": 88,
+     "text": "governess!” and again my raiment underwent scrutiny. In two minutes he rose from the",
+     "label": ""
+    },
+    {
+     "n": 89,
+     "text": "stile: his face expressed pain when he tried to move.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-12-hound-baskervilles": {
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "“Are you? Then your wish is easily granted, for there is your first sight of the moor,”",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "said Dr. Mortimer, pointing out of the carriage window.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "Over the green squares of the fields and the low curve of a wood there rose in the",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "distance a grey, melancholy hill, with a strange jagged summit, dim and vague in the",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "distance, like some fantastic landscape in a dream. Baskerville sat for a long time, his",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "eyes fixed upon it, and I read upon his eager face how much it meant to him, this first",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "sight of that strange spot where the men of his blood had held sway so long and left",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "their mark so deep. If on that forbidding moor a difficult and dangerous quest should",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "lie before us, this was at least a comrade for whom one might venture to take a risk",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "with the certainty that he would bravely share it.",
+     "label": "10"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 11,
+     "text": "The train pulled up at a small wayside station and we all descended. Outside, beyond the",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "low, white fence, a wagonette with a pair of cobs was waiting. It was a sweet, simple",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "country spot, but I was surprised to observe that by the gate there stood two soldierly",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "men in dark uniforms who leaned upon their short rifles and glanced keenly at us as we",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "passed. The coachman, a hard-faced, gnarled little fellow, saluted Sir Henry",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "Baskerville, and in a few minutes we were flying swiftly down the broad, white road.",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "Rolling pasture lands curved upward on either side of us, and old gabled houses peeped",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "out from amid the thick green foliage, but behind the peaceful and sunlit countryside",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "there rose ever, dark against the evening sky, the long, gloomy curve of the moor,",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "broken by the jagged and sinister hills.",
+     "label": "20"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 21,
+     "text": "The wagonette swung round into a side road, and we curved upward through deep lanes worn",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "by centuries of wheels, high banks on either side, heavy with dripping moss and fleshy",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "hart’s-tongue ferns. Bronzing bracken and mottled bramble gleamed in the light of the",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "sinking sun. Still steadily rising, we passed over a narrow granite bridge and skirted a",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "noisy stream which gushed swiftly down, foaming and roaring amid the grey boulders. Both",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "road and stream wound up through a valley dense with scrub oak and fir. The rattle of",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "our wheels died away as we drove through drifts of rotting vegetation—sad gifts, as it",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "seemed to me, for Nature to throw before the carriage of the returning heir of the",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "Baskervilles.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "“Halloa!” cried Dr. Mortimer, “what is this?”",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "A steep curve of heath-clad land, an outlying spur of the moor, lay in front of us. On",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "the summit, hard and clear like an equestrian statue upon its pedestal, was a mounted",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "soldier, dark and stern, his rifle poised ready over his forearm. He was watching the",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "road along which we travelled.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "“What is this, Perkins?” asked Dr. Mortimer.",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "Our driver half turned in his seat. “There’s a convict escaped from Princetown, sir.",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "He’s been out three days now, and the warders watch every road and every station, but",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "they’ve had no sight of him yet. The farmers about here don’t like it, sir, and that’s a",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "fact.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "Our wagonette had topped a rise and in front of us rose the huge expanse of the moor,",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "mottled with gnarled and craggy cairns and tors. A cold wind swept down from it and set",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "us shivering. Somewhere there, on that desolate plain, was lurking this fiendish man,",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "hiding in a burrow like a wild beast, his heart full of malignancy against the whole",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "race which had cast him out. It needed but this to complete the grim suggestiveness of",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "the barren waste, the chilling wind, and the darkling sky. Even Baskerville fell silent",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "and pulled his overcoat more closely around him.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "We had left the fertile country behind and beneath us. We looked back on it now, the",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "slanting rays of a low sun turning the streams to threads of gold and glowing on the red",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "earth new turned by the plough and the broad tangle of the woodlands. The road in front",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "of us grew bleaker and wilder over huge russet and olive slopes, sprinkled with giant",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "boulders. Now and then we passed a moorland cottage, walled and roofed with stone, with",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "no creeper to break its harsh outline. Suddenly we looked down into a cuplike",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "depression, patched with stunted oaks and firs which had been twisted and bent by the",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "fury of years of storm. Two high, narrow towers rose over the trees. The driver pointed",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "with his whip.",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "“Baskerville Hall,” said he.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "Its master had risen and was staring with flushed cheeks and shining eyes. A few minutes",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "later we had reached the lodge-gates, a maze of fantastic tracery in wrought iron, with",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "weather-bitten pillars on either side, blotched with lichens, and surmounted by the",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "boars’ heads of the Baskervilles.",
+     "label": "60"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 61,
+     "text": "Through the gateway we passed into the avenue, where the wheels were again hushed amid",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "the leaves, and the old trees shot their branches in a sombre tunnel over our heads.",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "Baskerville shuddered as he looked up the long, dark drive to where the house glimmered",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "like a ghost at the farther end.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "“Was it here?” he asked in a low voice.",
+     "label": "65"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 66,
+     "text": "“No, no, the yew alley is on the other side.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "The young heir glanced round with a gloomy face.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "“It’s no wonder my uncle felt as if trouble were coming on him in such a place as this,”",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "said he. “It’s enough to scare any man. I’ll have a row of electric lamps up here inside",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "of six months, and you won’t know it again, with a thousand candle-power Swan and Edison",
+     "label": "70"
+    },
+    {
+     "n": 71,
+     "text": "right here in front of the hall door.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "The avenue opened into a broad expanse of turf, and the house lay before us. In the",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "fading light I could see that the centre was a heavy block of building from which a",
+     "label": ""
+    },
+    {
+     "n": 74,
+     "text": "porch projected. The whole front was draped in ivy, with a patch clipped bare here and",
+     "label": ""
+    },
+    {
+     "n": 75,
+     "text": "there where a window or a coat of arms broke through the dark veil. From this central",
+     "label": "75"
+    },
+    {
+     "n": 76,
+     "text": "block rose the twin towers, ancient, crenelated, and pierced with many loopholes. To",
+     "label": ""
+    },
+    {
+     "n": 77,
+     "text": "right and left of the turrets were more modern wings of black granite. A dull light",
+     "label": ""
+    },
+    {
+     "n": 78,
+     "text": "shone through heavy mullioned windows, and from the high chimneys which rose from the",
+     "label": ""
+    },
+    {
+     "n": 79,
+     "text": "steep, high-angled roof there sprang a single black column of smoke.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 80,
+     "text": "“Welcome, Sir Henry! Welcome to Baskerville Hall!”",
+     "label": "80"
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-006-TM-08",
+   "questionType": "en-comp-vocab",
+   "passageRef": "stream-a-10-three-men-boat",
+   "stem": {
+    "text": "Read lines 38 and 39. On line 38 Uncle Podger takes 'the rule' and re-measures. What is a 'rule' here?",
+    "quotes": [
+     "the rule"
+    ],
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 38,
+    "_previousQuotes": [
+     "he would take the rule, and re-measure"
+    ]
+   },
+   "lineRefs": [
+    38,
+    39
+   ],
+   "explanation": {
+    "hintCore": "Ask what he does with it in the very next words.",
+    "walkScript": "Look at lines 38 and 39. He takes the rule and re-measures with it. Then he needs half of thirty-one and three-eighths inches. Only a measuring tool gives you a number like that."
+   },
+   "finding": {
+    "itemId": "ENG-006-TM-08",
+    "verdict": "HOLD",
+    "faultAt": [
+     "question",
+     "option A tool for measuring length."
+    ],
+    "fault": "Giveaway: the question itself says Uncle Podger 're-measures' with the rule, and the key is the only option containing 'measuring'. A child can match the stem's word to the key without reading line 38 or knowing the word.",
+    "objective": false,
+    "suggestedFix": "Quote only 'he would take the rule' in the stem, so the child has to find 're-measure' in line 38 for themselves.",
+    "batch": "english-04",
+    "district": "ENGLISH",
+    "questionType": "en-comp-vocab"
+   },
+   "options": [
+    {
+     "optionId": "cmsw5vr5e001htm8eox9228o1",
+     "value": "A law about how the job has to be done.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The commonest other sense of the word, which this sentence does not fix."
+    },
+    {
+     "optionId": "cmsw5vr5e001itm8edsvy5y87",
+     "value": "A line drawn on the wall to work from.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The child reuses the mark he made on the wall at lines 34 and 35, but the rule is a separate thing he takes up. At line 38 he takes the rule and re-measures with it, so it is a measuring tool, not a line on the wall."
+    },
+    {
+     "optionId": "cmsw5vr5e001jtm8ehwbao9ci",
+     "value": "A habit he always follows when working.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "A rule as a habit, as in 'as a rule', is a genuine sense of the word, but not the one line 38 fixes. He takes the rule and re-measures with it, so it is a tool for measuring."
+    },
+    {
+     "optionId": "cmsw5vr5e001ktm8elnvfxm9n",
+     "value": "A tool for measuring length.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-10",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-10-three-men-boat",
+   "stem": {
+    "text": "What does Aunt Maria say she would like to do next time? (lines 49 to 51)",
+    "quotes": [],
+    "passageRef": "stream-a-10-three-men-boat",
+    "orderAnchor": 49
+   },
+   "lineRefs": [
+    49,
+    50,
+    51
+   ],
+   "explanation": {
+    "hintCore": "Read to the end of her sentence for the plan.",
+    "walkScript": "Look at lines 49 to 51. She hopes he will let her know in time. Her reason follows: so she can make arrangements. What she plans is a week at her mother's while it is done."
+   },
+   "finding": {
+    "itemId": "ENG-006-TM-10",
+    "verdict": "HOLD",
+    "faultAt": [
+     "option Hide the hammer so he cannot start at all.",
+     "a tag"
+    ],
+    "fault": "The tag en-motive-invention and its child hint ('Ask what the text says about why') are about a reason. The question asks WHAT Aunt Maria would like to do, not why, so the hint does not help here. The option is an invented plan, so en-plausible-not-stated fits.",
+    "objective": false,
+    "suggestedFix": "Retag as en-plausible-not-stated, or replace the option with one the motive tag fits.",
+    "batch": "english-04",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ux00bgtmbv12bmsl9p",
+     "value": "Ask Uncle Podger to let her hang the picture instead.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Offering to do the job herself is a likely thing for Aunt Maria to say, but she never says it. Lines 49 to 51 have her hope to be told in time so she can go and stay with her mother."
+    },
+    {
+     "optionId": "cmsw2f4ux00bhtmbv33cjqs0w",
+     "value": "Go and stay with her mother while the job is done.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4ux00bitmbvck06rr47",
+     "value": "Send for a man to come and do it properly.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Having a man in is Uncle Podger's idea at lines 62 and 63, and he mentions it only to scorn it. The child gives it to Aunt Maria, whose own wish at lines 49 to 51 is to go and stay with her mother."
+    },
+    {
+     "optionId": "cmsw2f4ux00bjtmbvszhqnr73",
+     "value": "Hide the hammer so he cannot start at all.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "Invents a plan; her words are about leaving, not about stopping him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "questionType": "en-comp-technique",
+   "passageRef": "stream-a-10-three-men-boat",
+   "stem": {
+    "text": "The writer says 'would' again and again. He would shout, he would drop it, he would call us fools. What does that tell us about this day?",
+    "quotes": [],
+    "passageRef": "stream-a-10-three-men-boat",
+    "answerShape": "grammatical-split",
+    "orderAnchor": 9999,
+    "techniqueKey": "habitual-would-turns-one-scene-into-a-standing-pattern"
+   },
+   "lineRefs": [],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "would",
+      "passageRef": "stream-a-10-three-men-boat"
+     }
+    ],
+    "hintCore": "Try putting the story into 'he did' and see what is lost.",
+    "walkScript": "Lines 1 and 2 set up what happened when he undertook to do a job. From line 3, most of what he does takes 'would'. He would shout at line 11 and would call us all fools at line 37. A single day would be told with plain past words, like shouted and dropped. So the passage gives what happened every time, not one day."
+   },
+   "finding": {
+    "itemId": "ENG-006-TM-12",
+    "verdict": "HOLD",
+    "faultAt": [
+     "question",
+     "option It is not one day at all, but what happened every single time."
+    ],
+    "fault": "The stem asks 'What does that tell us about this day?', which says there is one day. The key then says 'It is not one day at all'. So the stem asserts what the key denies, and a child who reads the habitual 'would' correctly is told by the question that it is a single day. The key also shares its 'It is not one X, but Y' frame with the distractor 'It is not one clear memory, but a guess...', which sets that pair apart from the two 'It tells us...' options.",
+    "objective": false,
+    "suggestedFix": "Ask 'What does that tell us about these events?' and give the four options matching frames.",
+    "batch": "english-04",
+    "district": "ENGLISH",
+    "questionType": "en-comp-technique"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4uy00bqtmbvvad8ic2l",
+     "value": "It is not one clear memory, but a guess at what may have happened.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "Takes the guessing sense of 'would', which the repeated pattern does not fix."
+    },
+    {
+     "optionId": "cmsw2f4uy00brtmbvot7kr3yj",
+     "value": "It tells us the picture was never hung, though he says it was.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Stretches to never; line 58 has the picture up by midnight, crooked but up."
+    },
+    {
+     "optionId": "cmsw2f4uy00bstmbvhoy04uck",
+     "value": "It tells us Uncle Podger was cross with everyone all day.",
+     "isKey": false,
+     "tag": "en-technique-intent-as-character",
+     "execution": "The child reads the writer's choice as the character's state, so the repeated 'would' becomes Uncle Podger's mood. 'Would' marks what happened every time he took on a job, and he is not cross all day: at line 62 he surveys the mess with evident pride."
+    },
+    {
+     "optionId": "cmsw2f4uy00bttmbvsewigl8p",
+     "value": "It is not one day at all, but what happened every single time.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-01",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-11-jane-eyre",
+   "stem": {
+    "text": "Look at lines 1 and 2. Where does Jane sit down?",
+    "quotes": [],
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 1
+   },
+   "lineRefs": [
+    1,
+    2
+   ],
+   "explanation": {
+    "hintCore": "Read what she sits on, not where it goes.",
+    "walkScript": "Start at line 1. The lane goes up-hill, and she stops at the middle. Read what she sits on. The field is where the stile leads, not where she is."
+   },
+   "finding": {
+    "itemId": "ENG-010-JE-01",
+    "verdict": "HOLD",
+    "faultAt": [
+     "hint",
+     "option On a stile that leads into a lane."
+    ],
+    "fault": "The hint says 'Read what she sits on, not where it goes.' The only thing separating the key ('a stile that leads into a field') from the distractor 'On a stile that leads into a lane' is where the stile goes. A child who follows the hint cannot tell those two apart.",
+    "objective": false,
+    "suggestedFix": "Reword the hint so it does not steer away from the stile's destination, for example 'Read the whole of line 2.'",
+    "batch": "english-04",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vq00getmbv2u7stla3",
+     "value": "On a stile that leads into a field.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4vq00gftmbvm28itq4l",
+     "value": "In the field on the other side of the stile.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 2 names the field, but only as the place the stile leads into. She sits on the stile and never goes into the field."
+    },
+    {
+     "optionId": "cmsw2f4vq00ggtmbv281ducz4",
+     "value": "On a low wall beside the frozen causeway.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No wall appears anywhere in the lane; line 2 gives a stile."
+    },
+    {
+     "optionId": "cmsw2f4vq00ghtmbvf6k4trf0",
+     "value": "On a stile that leads into a lane.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "One word out: line 2 says the stile led into a field."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-08",
+   "questionType": "en-comp-vocab",
+   "passageRef": "stream-a-11-jane-eyre",
+   "stem": {
+    "text": "Look at lines 42 to 44. What does 'halted' on line 44 mean there?",
+    "quotes": [
+     "halted"
+    ],
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 42
+   },
+   "lineRefs": [
+    42,
+    43,
+    44
+   ],
+   "explanation": {
+    "hintCore": "He is moving in this line. Ask how he moves.",
+    "walkScript": "Read line 43, then line 44. Something is the matter with his foot. Then he goes to the stile and sits down. He is moving, so the word is about how."
+   },
+   "finding": {
+    "itemId": "ENG-010-JE-08",
+    "verdict": "HOLD",
+    "faultAt": [
+     "question"
+    ],
+    "fault": "The card has only 3 options (key, 'stopped where he was standing', 'felt along his foot and leg'). Every other card in this batch has 4, so one option looks missing, and a guess now succeeds one time in three.",
+    "objective": true,
+    "suggestedFix": "Restore or author a fourth distractor.",
+    "batch": "english-04",
+    "district": "ENGLISH",
+    "questionType": "en-comp-vocab"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vw00hdtmbvg6vvk18t",
+     "value": "walked with a limp",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4vw00hetmbvcmtohkky",
+     "value": "stopped where he was standing",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The everyday sense, and line 44 has him move to the stile and sit down."
+    },
+    {
+     "optionId": "cmsw2f4vw00hftmbvxz56ltic",
+     "value": "felt along his foot and leg",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "That is what he does at line 43, just before; this word covers what he does next."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "questionType": "en-comp-technique",
+   "passageRef": "stream-a-11-jane-eyre",
+   "stem": {
+    "text": "Look at lines 51 to 56 and lines 70 to 72. Jane does the same thing in both places before describing something. What is it?",
+    "quotes": [],
+    "passageRef": "stream-a-11-jane-eyre",
+    "answerShape": "observation-bounded-by-conditions",
+    "orderAnchor": 9999,
+    "techniqueKey": "the-light-is-reported-before-the-description"
+   },
+   "lineRefs": [
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    70,
+    71,
+    72
+   ],
+   "explanation": {
+    "hintCore": "Put the two places side by side. Find the words that match up.",
+    "walkScript": "Line 51 gives the daylight and the moon before the man is described. Line 53 keeps the description to general points, since details are not apparent. Line 71 gives the moon again before Thornfield is described. The light comes first, then the description."
+   },
+   "finding": {
+    "itemId": "ENG-010-JE-12",
+    "verdict": "HOLD",
+    "faultAt": [
+     "option She reports the light first, but describes little beyond what it shows.",
+     "walk script"
+    ],
+    "fault": "The stem asks what Jane does in both places BEFORE describing something. The key's second clause ('describes little beyond what it shows') is about the description, not what comes before it, and it is weak at lines 54 to 56, where she gives a dark face, stern features, heavy brow, eyebrows and an age of thirty-five. That clause also makes the key the long qualified option. The walk script reaches only 'The light comes first, then the description' and never supports the second clause. In the walk script, 'details are not apparent' at line 53 is about the cloak, not the man.",
+    "objective": false,
+    "suggestedFix": "Key: 'She tells us about the light before she describes what she sees.'",
+    "batch": "english-04",
+    "district": "ENGLISH",
+    "questionType": "en-comp-technique"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vz00hwtmbvxmvvrbp4",
+     "value": "She tells us the sun sank down crimson and clear behind the trees.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 8, and one sunset is not a thing she does each time."
+    },
+    {
+     "optionId": "cmsw2f4vz00hxtmbvtwwwf8bn",
+     "value": "She describes each person in full first, but gives their actions later.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "The traveller rides past at line 26 and falls at line 28, but is not described until lines 51 to 56."
+    },
+    {
+     "optionId": "cmsw2f4w000hytmbvzreaacp9",
+     "value": "She never describes a person, but only the weather and the sky.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Lines 52 to 56 describe the traveller closely, from his cloak to his age."
+    },
+    {
+     "optionId": "cmsw2f4w000hztmbvdsoy6cjn",
+     "value": "She reports the light first, but describes little beyond what it shows.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "questionType": "en-comp-inference",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "stem": {
+    "text": "Look at lines 5 to 10 and 45 to 46. What has changed in Sir Henry?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 5
+   },
+   "lineRefs": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    45,
+    46
+   ],
+   "explanation": {
+    "hintCore": "Read lines 5 to 10, then lines 45 and 46. What is different about him?",
+    "walkScript": "Line 9 has Watson call him a comrade worth taking a risk for. Line 45 says even Baskerville fell silent as the moor opened out. Line 46 has him pull his overcoat more closely round him."
+   },
+   "finding": {
+    "itemId": "ENG-016-HB-02",
+    "verdict": "HOLD",
+    "faultAt": [
+     "option He falls silent first, but Watson had judged him brave.",
+     "walk script"
+    ],
+    "fault": "The distractor is the key's two facts (brave, silenced) put back in the other order. That makes a near-identical pair with the key, set apart from the other two options. The distractor is also self-inconsistent: 'had judged' puts the judging earlier, which is true, so only the word 'first' makes it false. The walk script lists lines 9, 45 and 46 but never states the change it is meant to reach. The clearest before-state, the 'eager face' at line 6, is in neither the key nor the walk.",
+    "objective": false,
+    "suggestedFix": "Replace that distractor with one that does not mirror the key, and end the walk script on the change itself.",
+    "batch": "english-04",
+    "district": "ENGLISH",
+    "questionType": "en-comp-inference"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xf00qatmbvgobhphrc",
+     "value": "His eyes were fixed upon it, and his face was eager to see it.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 5 and 6, and both halves come from the first window alone."
+    },
+    {
+     "optionId": "cmsw2f4xf00qbtmbvbe4mhwbh",
+     "value": "He is a brave comrade at first, but the moor has silenced him.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xf00qctmbv1cf2jzpp",
+     "value": "He falls silent first, but Watson had judged him brave.",
+     "isKey": false,
+     "tag": "en-chronology-collapse",
+     "execution": "Line 45 comes thirty-six lines after line 9, so this turns the order round."
+    },
+    {
+     "optionId": "cmsw2f4xf00qdtmbv5os75kel",
+     "value": "He talks of electric lamps, and then he says nothing more.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True at lines 69 to 71, outside both windows; neither window has him speak at all."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "questionType": "en-comp-inference",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "stem": {
+    "text": "Look at lines 40 to 46. Even Sir Henry falls silent. What has chilled him?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 40
+   },
+   "lineRefs": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "explanation": {
+    "hintCore": "Cold air is not the only thing out there.",
+    "walkScript": "Line 40 has the huge expanse of the moor rise in front of them. Lines 42 and 43 put the escaped man out there, lurking like a beast. Line 44 says it needed but this to complete the grim feeling. At line 45 even Baskerville fell silent."
+   },
+   "finding": {
+    "itemId": "ENG-016-HB-07",
+    "verdict": "HOLD",
+    "faultAt": [
+     "option The bare moor and the hidden man together chill him."
+    ],
+    "fault": "Giveaway: the key repeats the stem's word 'chilled' ('...together chill him'). It is the only option that uses it, and the only two-part option ('X and Y together'). The other three are single details or actions.",
+    "objective": false,
+    "suggestedFix": "Drop 'chill him' from the key, for example 'The bleak moor, with a dangerous man hiding on it.'",
+    "batch": "english-04",
+    "district": "ENGLISH",
+    "questionType": "en-comp-inference"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xj00qztmbvrgecxz0g",
+     "value": "He pulled his overcoat more closely round him.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 46 and names what he did rather than why he did it."
+    },
+    {
+     "optionId": "cmsw2f4xj00r0tmbvkb67v7p4",
+     "value": "The moor was mottled with gnarled and craggy cairns.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 41, and it is the look of the place rather than what chills him."
+    },
+    {
+     "optionId": "cmsw2f4xj00r1tmbvw3nx8s11",
+     "value": "The bare moor and the hidden man together chill him.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xj00r2tmbv1ycjfpic",
+     "value": "He is beginning to wish he had never come home.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plausible thought for him here; lines 40 to 46 never give it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "questionType": "en-comp-technique",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "stem": {
+    "text": "Think about the whole passage. How does Watson write about the moor?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "answerShape": "inert-land-set-against-a-mind-put-into-it",
+    "orderAnchor": 999,
+    "techniqueKey": "a-still-landscape-given-feelings-and-intentions-it-cannot-have"
+   },
+   "lineRefs": [],
+   "explanation": {
+    "hintCore": "Look at the words Watson chooses for the hills and the moor. Ask what they make the land seem like.",
+    "walkScript": "At line 4 the far-off hill is melancholy. At line 8 the moor is forbidding, and at line 20 the hills are sinister. At line 27 the rotting plants become sad gifts that Nature throws before the carriage."
+   },
+   "finding": {
+    "itemId": "ENG-016-HB-12",
+    "verdict": "HOLD",
+    "faultAt": [
+     "option He writes a still moor, but he gives it a mind of its own.",
+     "walk script"
+    ],
+    "fault": "'He writes a still moor' is not usual English, and 'still' can be read as calm, motionless or nevertheless. A child cannot tell what the key claims. The walk script's last piece of evidence (line 27, rotting plants as 'sad gifts' from Nature) is from the deep lanes of lines 21 to 29, not the moor the question asks about. The walk also never states the conclusion the key gives.",
+    "objective": false,
+    "suggestedFix": "Key: 'He writes as if the land itself had feelings.' Use moor evidence only (lines 4, 8, 20) and end the walk on that point.",
+    "batch": "english-04",
+    "district": "ENGLISH",
+    "questionType": "en-comp-technique"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xn00rotmbve306xibw",
+     "value": "He tells us the hills were jagged, and the wind was very cold.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses lines 20 and 41 and reports two details rather than anything the telling does."
+    },
+    {
+     "optionId": "cmsw2f4xn00rptmbvws2x44v9",
+     "value": "The moor is calm by day, but it turns cruel after dark.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A tidy day-and-night shape the passage never carries. No line shows the moor calm: it is already a melancholy hill at line 4 and a forbidding moor at line 8."
+    },
+    {
+     "optionId": "cmsw2f4xn00rqtmbv4zfms514",
+     "value": "He is afraid of the moor, so he keeps his eyes on the road.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plausible reason to look away; nowhere does he say he looked away from it."
+    },
+    {
+     "optionId": "cmsw2f4xn00rrtmbvgvsxxs8k",
+     "value": "He writes a still moor, but he gives it a mind of its own.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

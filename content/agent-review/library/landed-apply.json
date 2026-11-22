@@ -245,14 +245,87 @@
  },
  {
   "id": "vr06-fits-gap-not-word",
+  "outcome": "already attested"
+ },
+ {
+  "id": "maths-72-wrong-operation-chosen",
+  "outcome": "already attested"
+ },
+ {
+  "id": "maths-85-miscount-or-rounding-in-measures",
+  "outcome": "held: transform not independently attested (REFUSE)"
+ },
+ {
+  "id": "maths-77-treating-a-percentage-as-money",
+  "outcome": "already attested"
+ },
+ {
+  "id": "maths-79-dividing-by-a-fraction-error",
+  "outcome": "held: transform not independently attested (REFUSE)"
+ },
+ {
+  "id": "maths-07-decimals-as-two-separate-whole-numbers",
+  "outcome": "already attested"
+ },
+ {
+  "id": "maths-61-reading-the-wrong-place-value-column",
+  "outcome": "already attested"
+ },
+ {
+  "id": "maths-47-translation-by-gap",
+  "outcome": "held: transform not independently attested (REFUSE)"
+ },
+ {
+  "id": "maths-89-wrong-angle-total",
+  "outcome": "already attested"
+ },
+ {
+  "id": "vr04-wrong-strength",
+  "outcome": "already attested"
+ },
+ {
+  "id": "vr16-loose-opposite",
+  "outcome": "already attested"
+ },
+ {
+  "id": "vr-move-letter-second-word-invalid",
+  "outcome": "held: refused at write",
+  "error": "vr-move-letter-second-word-invalid.childHint: REFUSED: 1 word(s) would be cut from APPROVED text. The cap reports over-length; it never shortens. If this text must change, it changes by the approver's own redraft, recorded as her act — not by a fit-to-cap rewrite (R213).\n  before 18w -> after 17w (1 lost)\n  Enforced at the client (R214): the cap reports over-length, it never trims."
+ },
+ {
+  "id": "vr14-step-direction",
   "outcome": "TRANSFORMED + ATTESTED",
   "before": {
-   "childHint": "The missing three letters make a little word all by themselves.",
-   "description": "Chose three letters that fit the gap but do not form a word."
+   "childHint": "Draw the arrow: which way did the first pair travel?",
+   "description": "Moved backwards through the alphabet instead of forwards."
   },
   "after": {
-   "description": "Chose three letters that are not a word and make a non-word in the gap.",
-   "childHint": "The missing three letters make a little word all by themselves."
+   "description": "Moved the opposite way through the alphabet to the first pair.",
+   "childHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+  }
+ },
+ {
+  "id": "en-article-avoids-the-sound-choice",
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?",
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear."
+  },
+  "after": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Hear the next word in your head. Which sound starts it?"
+  }
+ },
+ {
+  "id": "vr13-wrong-pieces",
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Look at where the example word takes its letters from. Copy those exact positions.",
+   "description": "Took letters from the middle instead of the shown positions."
+  },
+  "after": {
+   "description": "Took letters from other places in the outer words instead of the positions the example shows.",
+   "childHint": "Look at where the example word takes its letters from. Copy those exact positions."
   }
  }
 ]

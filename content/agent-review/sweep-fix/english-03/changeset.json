@@ -1,0 +1,194 @@
+{
+ "door": "sweep-fix/english-03",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-011-CV-12",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-03",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key no longer the only hedged option; new distractor false (no question is put to Mrs Umney, line 47 checked); key is the only defensible answer; walk lays out each everyday answer (stain remover, weather, pay rise at lines 56-57) and so reaches the key; line numbers checked.",
+   "landedAt": "2026-11-22T17:30:53.429Z",
+   "changes": [
+    {
+     "field": "option B (cmsw2f4w900jktmbvzgxqun6m).value",
+     "before": "They laugh at her openly, while she is out of the room.",
+     "after": "They mostly ask her questions, like who the ghost is and where it hides."
+    },
+    {
+     "field": "option B (cmsw2f4w900jktmbvzgxqun6m).execution",
+     "before": "Line 54 has them warmly assure her, and nothing anywhere has them laugh.",
+     "after": "Nobody in the passage asks Mrs Umney a question. Mrs Otis answers the blood with an order at lines 26 and 27, and Washington scrubs the stain at lines 34 to 37. The only question, at line 47, is Mrs Otis asking her husband what to do with a woman who faints."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-12",
+   "passageRef": "stream-a-08-christmas-carol",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-03",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Pooh/Humbug option now false by order (26, then 53 and 67), so no second answer; key the only option naming both the dismissal and the repeated checking (lines 23-24, 32-36); walk sets out the checking and 'humbug still' at line 67.",
+   "landedAt": "2026-11-22T17:30:53.429Z",
+   "changes": [
+    {
+     "field": "option A (cmt0m4n0s0001tmhftf6pz6p0).value",
+     "before": "He says Pooh, pooh, and then a little later he says Humbug too.",
+     "after": "He says Humbug, and then a little later he says Pooh, pooh too."
+    },
+    {
+     "field": "option A (cmt0m4n0s0001tmhftf6pz6p0).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-minimal-pair-skim"
+    },
+    {
+     "field": "option A (cmt0m4n0s0001tmhftf6pz6p0).execution",
+     "before": "Reuses lines 26 and 53 and quotes him twice rather than naming anything he does.",
+     "after": "The passage has the words the other way round: Pooh, pooh comes first, at line 26, and Humbug follows at line 53 and again at line 67. The child matches the two words on gist and misses the one detail that differs, their order. The option also names only what he says, where the key adds what he keeps doing."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-09",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-03",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Execution now true (Washington's doubt at line 34 transferred to Mrs Otis); key is the only defensible reading of lines 26-27; other distractors wrong as tagged; walk reaches the key (she wants the mark removed).",
+   "landedAt": "2026-11-22T17:30:53.429Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4w700j7tmbvvmcx9dr1).tag",
+     "before": "en-wrong-scope-retrieval",
+     "after": "en-attribute-transfer"
+    },
+    {
+     "field": "option D (cmsw2f4w700j7tmbvvmcx9dr1).execution",
+     "before": "True at line 55, where the Otises are said to be 'not afraid of ghosts' — that is the family's scepticism about the STORY, and it sits fifty lines past this window. Inside the window, lines 26 and 27 answer the stem: Mrs Otis says 'I don't at all care for blood-stains in a sitting-room. It must be removed at once' — she addresses the mess and never the tale.",
+     "after": "It is Washington, not Mrs Otis, who doubts the story: at line 34 he calls it all nonsense, after Mrs Umney tells it at lines 28 to 33. The option gives his doubt to her. In lines 24 to 27 she takes the spilt blood as fact, calls it horrid and orders the mark removed."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-04",
+   "passageRef": "stream-a-08-christmas-carol",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-03",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Hint no longer counts options and is true; key 'turned his key and he walked in' matches line 21; let-go option is pluperfect ('had relinquished'), before the But; reversed-order option false; walk states the key.",
+   "landedAt": "2026-11-22T17:30:53.429Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two of these happened. Ask which one came next.",
+     "after": "Start at the word But on line 20. Read his actions in the order they come."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-015-CC-09",
+   "passageRef": "stream-a-08-christmas-carol",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-03",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk now gives the forgotten purpose to the bell (lines 55-56) and states the key; no invented claim; key is the only option that explains the strangeness; distractors wrong as tagged.",
+   "landedAt": "2026-11-22T17:30:53.429Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 55 calls it a disused bell. Lines 55 and 56 say it went to a chamber whose purpose is now forgotten. So nothing up there can be pulling on it.",
+     "after": "Line 55 calls it a disused bell. Line 56 says the purpose it once had is now forgotten. So nobody has used that bell for a long time. That is why its swinging is so strange."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-02",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-03",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Key true both times (lines 7-8 and 81-82) and in plain words; line 74 gone from the walk, which states the key; distractors wrong as tagged. Minor, unchanged: the chronology option's execution cites only line 7 for 'both times'; line 81 is the second instance.",
+   "landedAt": "2026-11-22T17:30:53.429Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 7 has him say the world was big once, then say Cut, sir. Line 74 says he has staked half his fortune. Line 81 has him say he is ready, then call diamonds trumps.",
+     "after": "Line 7 has him say the world was big once, then say Cut, sir. Line 81 has him say he is quite ready now, then call diamonds trumps. Both times he makes a big remark, then turns back to the cards."
+    },
+    {
+     "field": "option A (cmsw2f4yr00y6tmbvmdb5d7ji).value",
+     "before": "He drops a large remark, and then tells them all to play.",
+     "after": "He makes a big remark, then turns back to the cards."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-09",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-03",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Hint now true (one sum, four thousand, is Stuart's: lines 29, 42); key matches lines 45-46; 'everything he owns' contradicted by line 74 (half his fortune); time option is lines 50-51; walk states the key.",
+   "landedAt": "2026-11-22T17:30:53.429Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two of these numbers belong to somebody else.",
+     "after": "One of these sums is somebody else’s stake."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-08",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-03",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk now cites lines 22 and 23 correctly and states the key (something spilt); key matches line 23 and line 21 ('on the floor'); distractors each wrong as tagged; hint accurate.",
+   "landedAt": "2026-11-22T17:30:53.429Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 22 to the end. She says what she is afraid of: something has been spilt. The words quite unconscious tell you she does not know more than that. What Mrs Umney says next is not yet hers.",
+     "after": "Read lines 22 and 23. She says what she is afraid of: something has been spilt. The words quite unconscious tell you she does not know more than that. What Mrs Umney says next is not yet hers."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-01",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-03",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole: all four options are 'Because ...' reasons; only the key (line 1, seven miles from the station) is supported; no option is ruled out by the stem; hint and walk accurate; key not the odd one out by length or form.",
+   "landedAt": "2026-11-22T17:30:53.429Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4w000i4tmbvna33z1ac).value",
+     "before": "Lady Canterville arranged for one to meet the family.",
+     "after": "Because Lady Canterville had asked the family to."
+    },
+    {
+     "field": "option D (cmsw2f4w000i4tmbvna33z1ac).tag",
+     "before": "en-cause-agent-swap",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option D (cmsw2f4w000i4tmbvna33z1ac).execution",
+     "before": "Line 2 says Mr Otis had telegraphed for it himself.",
+     "after": "Lady Canterville's request is at line 14, outside lines 1 to 3, and it was a request to keep Mrs Umney as housekeeper. Line 1 gives the reason for the waggonette: the nearest station is seven miles away."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "door": "sweep-fix/vr-11b",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "rebuild:gen-vr-11-number-series-02",
+   "verdict": "ATTEST",
+   "reason": "[6,9,12,15] step 3 -> 18. 17 = one short of 15+3; 21 = 15+3+3; 27 = 12+15. Walk figures all correct, names 21/17/27 by their own tags, states 18; every sentence <=16 words, no 'wrong'. Executions unchanged from LIVE (already present), all true. Stem, values, tags, keys identical to LIVE; only walkScript patched."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-03",
+   "verdict": "ATTEST",
+   "reason": "[10, 14, 20, 28] gaps 4,6,8 growing by 2; next gap 10 -> 38. 36 = 28+8 (previous gap reused, matches vr-series-step-carryover); 39 = one over (matches vr-series-off-by-one). Walk figures all correct, names only 36 and 39, states 38; sentences <=16 words, no 'wrong'. Both added executions true and name their tags' mistakes. Stem, values, tags, key identical to LIVE; only walkScript and the two gate-forced executions change."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-07",
+   "verdict": "ATTEST",
+   "reason": "[14, 17, 22, 29] gaps 3,5,7 growing by 2; next gap 9 -> 38. 36 = 29+7 (previous gap reused, matches vr-series-step-carryover); 39 = one over (matches vr-series-off-by-one). Walk figures all correct, names only 36 and 39, states 38; sentences <=16 words, no 'wrong'. Both added executions true and name their tags' mistakes. Stem, values, tags, key identical to LIVE; only walkScript and the two gate-forced executions change."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-11",
+   "verdict": "ATTEST",
+   "reason": "[9, 11, 15, 21] gaps 2,4,6 growing by 2; next gap 8 -> 29. 27 = 21+6 (previous gap reused, matches vr-series-step-carryover); 30 = one over (matches vr-series-off-by-one). Walk figures all correct, names only 27 and 30, states 29; sentences <=16 words, no 'wrong'. Both added executions true and name their tags' mistakes. Stem, values, tags, key identical to LIVE; only walkScript and the two gate-forced executions change."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-13",
+   "verdict": "ATTEST",
+   "reason": "[5,9,13,17] step 4 -> 21. 22 = 17+5 (one over); 25 = 17+4+4; 30 = 13+17. Walk figures correct, names 25/22/30 by their own tags, states 21; sentences <=16 words, no 'wrong'. The three added executions are true and each names its tag's mistake. Stem, values, tags, key identical to LIVE."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-15",
+   "verdict": "ATTEST",
+   "reason": "[13, 19, 27, 37] gaps 6,8,10 growing by 2; next gap 12 -> 49. 47 = 37+10 (previous gap reused, matches vr-series-step-carryover); 50 = one over (matches vr-series-off-by-one). Walk figures all correct, names only 47 and 50, states 49; sentences <=16 words, no 'wrong'. Both added executions true and name their tags' mistakes. Stem, values, tags, key identical to LIVE; only walkScript and the two gate-forced executions change."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-19",
+   "verdict": "ATTEST",
+   "reason": "[8, 13, 20, 29] gaps 5,7,9 growing by 2; next gap 11 -> 40. 38 = 29+9 (previous gap reused, matches vr-series-step-carryover); 41 = one over (matches vr-series-off-by-one). Walk figures all correct, names only 38 and 41, states 40; sentences <=16 words, no 'wrong'. Both added executions true and name their tags' mistakes. Stem, values, tags, key identical to LIVE; only walkScript and the two gate-forced executions change."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-23",
+   "verdict": "ATTEST",
+   "reason": "[12, 16, 22, 30] gaps 4,6,8 growing by 2; next gap 10 -> 40. 38 = 30+8 (previous gap reused, matches vr-series-step-carryover); 41 = one over (matches vr-series-off-by-one). Walk figures all correct, names only 38 and 41, states 40; sentences <=16 words, no 'wrong'. Both added executions true and name their tags' mistakes. Stem, values, tags, key identical to LIVE; only walkScript and the two gate-forced executions change."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-11-number-series-02",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; key the only option fitting the constant step; every distractor wrong; adjacent pair's key position varies across rows (17<18, 21<22) so no positional shortcut; vocabulary suitable. [6,9,12,15] step 3 -> 18."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-03",
+   "verdict": "HOLD",
+   "reason": "Option set {36, 38, 39}: key is always the middle value and the smaller of the one-apart pair, the brief's own example of a predictable pattern. Same shape on all 6 grown-gap rows in this door (03, 07, 11, 15, 19, 23), so 'pick the middle' scores 6/6 without computing. Pre-existing LIVE distractor design (off-by-one always +1, carryover always -2), not introduced by this door; needs a distractor redraft (e.g. vary the off-by-one direction), outside this door's scope."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-07",
+   "verdict": "HOLD",
+   "reason": "Option set {36, 38, 39}: key is always the middle value and the smaller of the one-apart pair, the brief's own example of a predictable pattern. Same shape on all 6 grown-gap rows in this door (03, 07, 11, 15, 19, 23), so 'pick the middle' scores 6/6 without computing. Pre-existing LIVE distractor design (off-by-one always +1, carryover always -2), not introduced by this door; needs a distractor redraft (e.g. vary the off-by-one direction), outside this door's scope."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-11",
+   "verdict": "HOLD",
+   "reason": "Option set {27, 29, 30}: key is always the middle value and the smaller of the one-apart pair, the brief's own example of a predictable pattern. Same shape on all 6 grown-gap rows in this door (03, 07, 11, 15, 19, 23), so 'pick the middle' scores 6/6 without computing. Pre-existing LIVE distractor design (off-by-one always +1, carryover always -2), not introduced by this door; needs a distractor redraft (e.g. vary the off-by-one direction), outside this door's scope."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-13",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; key the only option fitting the constant step; every distractor wrong; adjacent pair's key position varies across rows (17<18, 21<22) so no positional shortcut; vocabulary suitable. [5,9,13,17] step 4 -> 21."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-15",
+   "verdict": "HOLD",
+   "reason": "Option set {47, 49, 50}: key is always the middle value and the smaller of the one-apart pair, the brief's own example of a predictable pattern. Same shape on all 6 grown-gap rows in this door (03, 07, 11, 15, 19, 23), so 'pick the middle' scores 6/6 without computing. Pre-existing LIVE distractor design (off-by-one always +1, carryover always -2), not introduced by this door; needs a distractor redraft (e.g. vary the off-by-one direction), outside this door's scope."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-19",
+   "verdict": "HOLD",
+   "reason": "Option set {38, 40, 41}: key is always the middle value and the smaller of the one-apart pair, the brief's own example of a predictable pattern. Same shape on all 6 grown-gap rows in this door (03, 07, 11, 15, 19, 23), so 'pick the middle' scores 6/6 without computing. Pre-existing LIVE distractor design (off-by-one always +1, carryover always -2), not introduced by this door; needs a distractor redraft (e.g. vary the off-by-one direction), outside this door's scope."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-23",
+   "verdict": "HOLD",
+   "reason": "Option set {38, 40, 41}: key is always the middle value and the smaller of the one-apart pair, the brief's own example of a predictable pattern. Same shape on all 6 grown-gap rows in this door (03, 07, 11, 15, 19, 23), so 'pick the middle' scores 6/6 without computing. Pre-existing LIVE distractor design (off-by-one always +1, carryover always -2), not introduced by this door; needs a distractor redraft (e.g. vary the off-by-one direction), outside this door's scope."
+  }
+ ]
+}

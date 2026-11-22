@@ -66,7 +66,10 @@ async function main() {
     const textChanged = next.childHint !== m.childHint || next.description !== m.description;
     out.push({ id: v.id, outcome: textChanged ? 'TRANSFORMED + ATTESTED' : 'ATTESTED', before: textChanged ? { childHint: m.childHint, description: m.description } : undefined, after: textChanged ? next : undefined });
     if (!APPLY) continue;
-    await prisma.$transaction(async (tx) => {
+    // R1037: each entry is its own transaction, so one refused write must not abort the entries after it.
+    // The write-level approved-text guard (R213) is stricter than refuseApprovedTrim above; when it refuses,
+    // the entry is HELD and reported, never retried in another shape here.
+    try { await prisma.$transaction(async (tx) => {
       await tx.misconception.update({ where: { id: m.id }, data: { ...next, approvedBy: `reviewer:${AGENT}`, approvalMethod: method,
         textProvenance: { ...prov, agentAttestation: { approvedBy: `reviewer:${AGENT}`, approverKind: 'MACHINE', textChanged, method, date: new Date().toISOString().slice(0, 10),
           previousApprovedBy: m.approvedBy ?? null } } } });
@@ -75,7 +78,11 @@ async function main() {
           note: `before sha256 ${sha(m[f]).slice(0, 16)}; after sha256 ${sha(next[f]).slice(0, 16)}` } });
       await tx.attributionEvent.create({ data: { recordType: 'misconception', recordId: m.id, action: 'APPROVED', reviewerId: AGENT, actor: 'agent-reviewer', recordedBy: RECORDED_BY, field: 'approvedBy', method,
         note: `previous approvedBy ${m.approvedBy ?? 'none'} — not rewritten in history (R65)` } });
-    });
+    }); } catch (e) {
+      out[out.length - 1] = { id: v.id, outcome: 'held: refused at write', error: String((e as Error).message).slice(0, 400) };
+      console.error(`  ${v.id}: REFUSED AT WRITE — ${String((e as Error).message).slice(0, 200)}`);
+      process.exitCode = 1;
+    }
   }
   const tally = out.reduce<Record<string, number>>((a, o) => { const k = String(o.outcome).split(':')[0]; a[k] = (a[k] ?? 0) + 1; return a; }, {});
   console.log(`library — ${APPLY ? 'APPLY' : 'DRY RUN'}: ${JSON.stringify(tally)}`);

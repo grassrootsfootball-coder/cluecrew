@@ -1,0 +1,198 @@
+{
+  "door": "sweep-fix/maths",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:cmteo82pl00hmtmmjttswdfo4",
+      "verdict": "ATTEST",
+      "reason": "MC05-GEOM-01: 18 x 9 = 162 is maths-39 (multiplying the sides when asked for perimeter), now shown as 162 cm so every option is in cm and the unit no longer rules it out; key 2 x (18 + 9) = 54 cm. Execution figures correct."
+    },
+    {
+      "ref": "rebuild:MC02-FDP-03",
+      "verdict": "ATTEST",
+      "reason": "Walk now names only traps on the row: 10% only = 6 (maths-proc-01) and 60 - 40 = 20; 'pounds' and 'one part' (12) removed. Key 40% of 60 = 24 stated. maths-77 child hint (money wording) is library track, not this row's fault; the mistake (subtracting the percentage digits) produces 20."
+    },
+    {
+      "ref": "rebuild:MC01-GEOM-04",
+      "verdict": "ATTEST",
+      "reason": "False claim removed: only (5, 1) has x = 5 and only (2, 4) has y = 4, as the walk now says; fourth corner (5, 4) stated. Options unchanged."
+    },
+    {
+      "ref": "rebuild:MC02-GEOM-03",
+      "verdict": "ATTEST",
+      "reason": "360 trap (157, not offered) removed. Named traps all present: halving 180 first, 90 - 46 = 44; rounding 46 to 50, 130 / 2 = 65; halving 134 digit by digit = 12. Key 134 / 2 = 67 stated."
+    },
+    {
+      "ref": "rebuild:MC03-GEOM-05",
+      "verdict": "ATTEST",
+      "reason": "'Halve the perimeter to get 15' fixes the verbless opener. Traps as the tags give them: 9 + 6 = 15 cm² (maths-72), 15 x 9 = 135 cm² (maths-82). 6 cm becomes 6 cm² so all options share the area unit; maths-proc-01 still produces it (width 6 given as the answer), execution says so honestly. Key 30/2 - 9 = 6, 9 x 6 = 54 cm² stated. Ranks unchanged (6, 15, 54, 135)."
+    },
+    {
+      "ref": "rebuild:MC05-GEOM-04",
+      "verdict": "ATTEST",
+      "reason": "48 cm² (the stem's given area) replaced by 96 cm: subtracting instead of dividing, 48 - 8 = 40 as the width, 8 + 40 + 8 + 40 = 96; maths-72 is wrong-operation-chosen and produces exactly this value. All options now in cm. Walk's 'hands back the area' (would be false) replaced by traps present: 6 cm stops at the width, 22 cm = 8 + 6 + 8. Key 48 / 8 = 6, 2 x (8 + 6) = 28 cm stated. maths-39 leaves this row because its only value here is the given number."
+    },
+    {
+      "ref": "rebuild:MC05-GEOM-05",
+      "verdict": "ATTEST",
+      "reason": "'76 cm squared' now '76 cm²'. 40 cm becomes 40 cm² so all options share the area unit; maths-38 (12 + 8 + 12 + 8 = 40 for area) unchanged. 96 - 20 = 76 stated; 'forgets the cut-out' = 96 cm² present."
+    },
+    {
+      "ref": "rebuild:MC02-MEAS-01",
+      "verdict": "ATTEST",
+      "reason": "Absent rounding trap (£5.00) removed; 'drops the pence' = £6.00 present. £8.00 - £2.60 = £5.40 stated, £ throughout."
+    },
+    {
+      "ref": "rebuild:MC02-MEAS-03",
+      "verdict": "ATTEST",
+      "reason": "Absent rounding trap (£7.00) removed; 'drops the pence and adds only the pounds' = £6.00 present; 'loses a whole digit' = £2.85 present. £4.35 + £2.50 = £6.85 stated."
+    },
+    {
+      "ref": "rebuild:MC02-MEAS-07",
+      "verdict": "ATTEST",
+      "reason": "Absent rounding trap removed; 'stops at the total spent' = £4.90 present; 'leaves an item out' = £5.75 (one apple fewer, 3 x 65p + £2.30 = £4.25). 4 x 65p + £2.30 = £4.90, £10 - £4.90 = £5.10 stated."
+    },
+    {
+      "ref": "rebuild:MC03-MEAS-01",
+      "verdict": "ATTEST",
+      "reason": "£ now on £8.00, £5.60, £2.40; absent rounding trap removed; 'drops the pence' = £3.00 present. Key £2.40 stated."
+    },
+    {
+      "ref": "rebuild:MC03-MEAS-05",
+      "verdict": "ATTEST",
+      "reason": "Absent dropped-pounds-digit trap removed. 'Rounds the prices' = £2.70 + £1.80 = £4.50, £5.50; 'carries a 1 twice' = £5.40 spent, £4.60. £4.40 spent, £5.60 key stated."
+    },
+    {
+      "ref": "rebuild:MC03-MEAS-06",
+      "verdict": "ATTEST",
+      "reason": "Absent stop-at-total (615 m) and dropped-digit traps removed. Rounding 275 to 280 or 300 gives 280 m and 260 m; carry twice gives 715, 185 m. 340 + 275 = 615, 900 - 615 = 285 m stated."
+    },
+    {
+      "ref": "rebuild:MC04-MEAS-07",
+      "verdict": "ATTEST",
+      "reason": "£ now on £2.35, £7.05, £2.95 and £10. 3 x £2.35 = £7.05, £10 - £7.05 = £2.95. Named traps present: £7.05 (total), £5.30 (2 notebooks, miscount)."
+    },
+    {
+      "ref": "rebuild:MC01-NPV-02",
+      "verdict": "ATTEST",
+      "reason": "Walk now ends the carry sentence at 5,070 = 4,970 + 100. Named slips present: dropped carry 4070, next column 4980."
+    },
+    {
+      "ref": "rebuild:MC04-NPV-02",
+      "verdict": "ATTEST",
+      "reason": "Walk now reaches 7,070 = 6,970 + 100. Neighbouring column (6980, 7970) and dropped carry (6070) present."
+    },
+    {
+      "ref": "rebuild:MC05-NPV-02",
+      "verdict": "ATTEST",
+      "reason": "Walk now reaches 6,060 = 5,960 + 100. Neighbouring column (5970, 6960) and dropped carry (5060) present."
+    },
+    {
+      "ref": "rebuild:MC04-NPV-03",
+      "verdict": "ATTEST",
+      "reason": "Walk now reaches 10,400 = 9,400 + 1,000. Neighbouring column (9500) and lost carry (400) present."
+    },
+    {
+      "ref": "rebuild:MC05-NPV-03",
+      "verdict": "ATTEST",
+      "reason": "Walk now reaches 10,500 = 9,500 + 1,000. Neighbouring column (9600, 19500) and lost carry (500) present."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC01-GEOM-04",
+      "verdict": "SIGN",
+      "reason": "Key (5, 4) unique; (4, 5), (3, 3), (8, 4) wrong as tagged; walk now true and states the key; sentences within 16 words."
+    },
+    {
+      "itemId": "MC01-NPV-02",
+      "verdict": "SIGN",
+      "reason": "Key 5070 unique; 4980, 4870, 4070 recomputed; walk states 5,070."
+    },
+    {
+      "itemId": "MC02-FDP-03",
+      "verdict": "SIGN",
+      "reason": "Key 24 only correct; 6, 20, 150 wrong as tagged; walk names only present traps and states 24. maths-77 child hint still mentions money until the library track rewords it (out of this door's scope by brief)."
+    },
+    {
+      "itemId": "MC02-GEOM-03",
+      "verdict": "SIGN",
+      "reason": "Key 67° unique; 44°, 12°, 65° recomputed; walk names only present traps, states 67; sentences within 16 words."
+    },
+    {
+      "itemId": "MC02-MEAS-01",
+      "verdict": "SIGN",
+      "reason": "Key £5.40 unique; £6.60, £6.00, £10.60 recomputed; walk true with £ notation."
+    },
+    {
+      "itemId": "MC02-MEAS-03",
+      "verdict": "SIGN",
+      "reason": "Key £6.85 unique; £2.85, £1.85, £6.00 recomputed; both walk traps present."
+    },
+    {
+      "itemId": "MC02-MEAS-07",
+      "verdict": "SIGN",
+      "reason": "Key £5.10 unique; £4.90, £7.10, £5.75 recomputed; both walk traps present."
+    },
+    {
+      "itemId": "MC03-GEOM-05",
+      "verdict": "SIGN",
+      "reason": "Key 54 cm² unique; 135, 6, 15 all cm² and wrong as tagged; no unit giveaway; walk accurate, states key; key second-largest, ranks unchanged."
+    },
+    {
+      "itemId": "MC03-MEAS-01",
+      "verdict": "SIGN",
+      "reason": "Key £2.40 unique; £3.00, £3.60, £13.60 recomputed; £ on every amount; walk trap present."
+    },
+    {
+      "itemId": "MC03-MEAS-05",
+      "verdict": "SIGN",
+      "reason": "Key £5.60 unique; £4.40, £4.60, £5.50 recomputed; both walk traps present."
+    },
+    {
+      "itemId": "MC03-MEAS-06",
+      "verdict": "SIGN",
+      "reason": "Key 285 m unique; 185, 280, 260 recomputed; both walk traps present."
+    },
+    {
+      "itemId": "MC04-MEAS-07",
+      "verdict": "SIGN",
+      "reason": "Key £2.95 unique; £7.05, £5.30, £2.80 recomputed; £ on every amount."
+    },
+    {
+      "itemId": "MC04-NPV-02",
+      "verdict": "SIGN",
+      "reason": "Key 7070 unique; 6980, 7970, 6070 recomputed; walk states 7,070."
+    },
+    {
+      "itemId": "MC04-NPV-03",
+      "verdict": "SIGN",
+      "reason": "Key 10400 unique; 9500, 8400, 400 recomputed; walk states 10,400."
+    },
+    {
+      "itemId": "MC05-GEOM-01",
+      "verdict": "SIGN",
+      "reason": "Key 54 cm the only correct value; 45 (three sides), 162 cm (area number), 44 (carry dropped in 36 + 18) all wrong as tagged; all in cm; key second-largest of 44/45/54/162, not alone on a side; walk true."
+    },
+    {
+      "itemId": "MC05-GEOM-04",
+      "verdict": "SIGN",
+      "reason": "Key 28 cm unique; 96, 22, 6 all cm and wrong as tagged; given value no longer offered; key second-largest of 6/22/28/96, not alone on a side; walk names only present traps."
+    },
+    {
+      "itemId": "MC05-GEOM-05",
+      "verdict": "SIGN",
+      "reason": "Key 76 cm² unique; 96, 40, 116 all cm² and wrong as tagged; notation fixed; key second-smallest, unchanged numerically."
+    },
+    {
+      "itemId": "MC05-NPV-02",
+      "verdict": "SIGN",
+      "reason": "Key 6060 unique; 5970, 6960, 5060 recomputed; walk states 6,060."
+    },
+    {
+      "itemId": "MC05-NPV-03",
+      "verdict": "SIGN",
+      "reason": "Key 10500 unique; 9600, 19500, 500 recomputed; walk states 10,500."
+    }
+  ]
+}

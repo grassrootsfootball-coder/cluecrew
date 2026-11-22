@@ -1,0 +1,745 @@
+{
+ "door": "sweep-fix/vr",
+ "proposer": "agent",
+ "ruling": "R1037",
+ "seats": [
+  {
+   "optionId": "gen-vr-04-closest-meaning-15-opt3",
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "oldValue": "rude",
+   "tag": "vr04-wrong-shade",
+   "newValue": "stubborn",
+   "execution": "The key is 'daring'. 'stubborn' shares the area of a strong, firm character but tilts it towards refusing to change your mind. No sense of 'bold' (brave, cheeky, bright, or thick print) means stubborn. A child who hears only 'strong-willed' picks 'stubborn'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-15-opt4",
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "oldValue": "loud",
+   "tag": "vr04-one-feature-only",
+   "newValue": "shouting",
+   "execution": "The key is 'daring'. A bold person may speak up by shouting, so 'shouting' names one thing boldness can look like, not what 'bold' means. No sense of 'bold' (brave, cheeky, bright, or thick print) means shouting. A child who picks that visible sign picks 'shouting'."
+  },
+  {
+   "optionId": "gen-vr-04-closest-meaning-17-opt4",
+   "itemId": "gen-vr-04-closest-meaning-17",
+   "oldValue": "cold",
+   "tag": "vr04-one-feature-only",
+   "newValue": "frowning",
+   "execution": "The key is 'unfriendly'. A frown is one way hostility can show on a face, so 'frowning' names one sign of it, not what 'hostile' means. People also frown when worried or puzzled, and no sense of 'hostile' means frowning. A child who picks that visible sign picks 'frowning'."
+  },
+  {
+   "optionId": "gen-vr-21-same-meaning-04-opt2",
+   "itemId": "gen-vr-21-same-meaning-04",
+   "oldValue": "hop",
+   "tag": "vr21-associated-not-same",
+   "newValue": "dance",
+   "execution": "The task is to find the word that means the same as 'leap', and the key is 'jump'. Dancers leap, so the two go together, but dancing is moving to music, not jumping. No sense of 'leap' means dance. A child who picks a word that goes with 'leap', not one that means the same, picks 'dance' instead of 'jump'."
+  },
+  {
+   "optionId": "gen-vr-21-same-meaning-14-opt4",
+   "itemId": "gen-vr-21-same-meaning-14",
+   "oldValue": "want",
+   "tag": "vr21-associated-not-same",
+   "newValue": "shop",
+   "execution": "The task is to find the word that means the same as 'choose', and the key is 'select'. You go to the shops to choose things, so the two go together, but shopping means going round shops to buy. No sense of 'choose' (pick, decide or wish) means shop. A child who picks a word that goes with 'choose', not one that means the same, picks 'shop' instead of 'select'."
+  },
+  {
+   "optionId": "gen-vr-21-same-meaning-20-opt3",
+   "itemId": "gen-vr-21-same-meaning-20",
+   "oldValue": "huge",
+   "tag": "vr21-associated-not-same",
+   "newValue": "slow",
+   "execution": "The task is to find the word that means the same as 'big', and the key is 'large'. 'Big and slow' is a common pair for an elephant, but 'slow' is about speed, not size. No sense of 'big' means slow. A child who picks a word that goes with 'big', not one that means the same, picks 'slow' instead of 'large'."
+  },
+  {
+   "optionId": "gen-vr-21-same-meaning-22-opt3",
+   "itemId": "gen-vr-21-same-meaning-22",
+   "oldValue": "terrified",
+   "tag": "vr21-associated-not-same",
+   "newValue": "dark",
+   "execution": "The task is to find the word that means the same as 'scared', and the key is 'fearful'. Many children are scared of the dark, so the two go together, but 'dark' means without light, not afraid. No sense of 'scared' means dark. A child who picks a word that goes with 'scared', not one that means the same, picks 'dark' instead of 'fearful'."
+  },
+  {
+   "optionId": "gen-vr-03-related-words-30-opt2",
+   "itemId": "gen-vr-03-related-words-30",
+   "oldValue": "crop",
+   "tag": "vr03-same-topic",
+   "newValue": "hunger",
+   "execution": "A drought is a lack of rain, so a famine is a lack of food. The child chooses hunger because it belongs to the same topic as famine. Hunger is what a famine causes, not what it lacks: a famine brings more hunger, never less. The topic is matched but not the relationship."
+  },
+  {
+   "optionId": "gen-vr-20-complete-the-word-07-opt2",
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "oldValue": "S",
+   "tag": "vr20-common-letter",
+   "newValue": "T",
+   "execution": "The task is to complete _AMEL, and the correct word is CAMEL, so the key is C. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives TAMEL, which is not a word (checked against the word-puzzle lexicon)."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "gen-vr-11-number-series-04",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [14, 19, 27, 38] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     14,
+     19,
+     27,
+     38
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 38,
+     "step": 5,
+     "first": 14,
+     "answer": 52,
+     "prevStep": 11
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-04-opt1",
+     "value": "52",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-04-opt2",
+     "value": "49",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 11 instead of letting it grow, giving 49 instead of 52."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-04-opt3",
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 51 instead of 52."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 14, 19, 27 and 38. They are 5, 8 and 11. Each gap grows by 3. Add the next gap of 14 to 38 to reach 52. The number 49 repeats the gap of 11. The number 51 is one short."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-06",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [10, 12, 14, 16] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     10,
+     12,
+     14,
+     16
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 2,
+     "first": 10,
+     "answer": 18
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-06-opt1",
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-06-opt2",
+     "value": "17",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 17 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-06-opt3",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "execution": "Added the step of 2 twice from the last term, giving 20 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-06-opt4",
+     "value": "30",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 30."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from 10 to 12. You go up 2 each time. Count 2 on from 16 to reach 18. The number 20 takes the step twice. The number 17 is one short. The number 30 adds the last two numbers together."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [18, 22, 29, 39] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     18,
+     22,
+     29,
+     39
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 39,
+     "step": 4,
+     "first": 18,
+     "answer": 52,
+     "prevStep": 10
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-08-opt1",
+     "value": "52",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-08-opt2",
+     "value": "49",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 10 instead of letting it grow, giving 49 instead of 52."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-08-opt3",
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 51 instead of 52."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 18, 22, 29 and 39. They are 4, 7 and 10. Each gap grows by 3. Add the next gap of 13 to 39 to reach 52. The number 49 repeats the gap of 10. The number 51 is one short."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-10",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [5, 11, 17, 23] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     5,
+     11,
+     17,
+     23
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 6,
+     "first": 5,
+     "answer": 29
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-10-opt1",
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-10-opt2",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-10-opt3",
+     "value": "35",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "execution": "Added the step of 6 twice from the last term, giving 35 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-10-opt4",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 40."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from 5 to 11. You go up 6 each time. Count 6 on from 23 to reach 29. The number 35 takes the step twice. The number 28 is one short. The number 40 adds the last two numbers together."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-12",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [13, 16, 22, 31] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     13,
+     16,
+     22,
+     31
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 31,
+     "step": 3,
+     "first": 13,
+     "answer": 43,
+     "prevStep": 9
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-12-opt1",
+     "value": "43",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-12-opt2",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 9 instead of letting it grow, giving 40 instead of 43."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-12-opt3",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 42 instead of 43."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 13, 16, 22 and 31. They are 3, 6 and 9. Each gap grows by 3. Add the next gap of 12 to 31 to reach 43. The number 40 repeats the gap of 9. The number 42 is one short."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-14",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [9, 14, 19, 24] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     9,
+     14,
+     19,
+     24
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 5,
+     "first": 9,
+     "answer": 29
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-14-opt1",
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-14-opt2",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-14-opt3",
+     "value": "34",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "execution": "Added the step of 5 twice from the last term, giving 34 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-14-opt4",
+     "value": "43",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 43."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from 9 to 14. You go up 5 each time. Count 5 on from 24 to reach 29. The number 34 takes the step twice. The number 28 is one short. The number 43 adds the last two numbers together."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [17, 19, 24, 32] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     17,
+     19,
+     24,
+     32
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 32,
+     "step": 2,
+     "first": 17,
+     "answer": 43,
+     "prevStep": 8
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-16-opt1",
+     "value": "43",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-16-opt2",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 8 instead of letting it grow, giving 40 instead of 43."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-16-opt3",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 42 instead of 43."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 17, 19, 24 and 32. They are 2, 5 and 8. Each gap grows by 3. Add the next gap of 11 to 32 to reach 43. The number 40 repeats the gap of 8. The number 42 is one short."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-18",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [13, 17, 21, 25] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     13,
+     17,
+     21,
+     25
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 4,
+     "first": 13,
+     "answer": 29
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-18-opt1",
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-18-opt2",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-18-opt3",
+     "value": "33",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "execution": "Added the step of 4 twice from the last term, giving 33 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-18-opt4",
+     "value": "46",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 46."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from 13 to 17. You go up 4 each time. Count 4 on from 25 to reach 29. The number 33 takes the step twice. The number 28 is one short. The number 46 adds the last two numbers together."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [12, 18, 27, 39] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     12,
+     18,
+     27,
+     39
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 39,
+     "step": 6,
+     "first": 12,
+     "answer": 54,
+     "prevStep": 12
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-20-opt1",
+     "value": "54",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-20-opt2",
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 12 instead of letting it grow, giving 51 instead of 54."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-20-opt3",
+     "value": "53",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 53 instead of 54."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 12, 18, 27 and 39. They are 6, 9 and 12. Each gap grows by 3. Add the next gap of 15 to 39 to reach 54. The number 51 repeats the gap of 12. The number 53 is one short."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-22",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [8, 11, 14, 17] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     8,
+     11,
+     14,
+     17
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 3,
+     "first": 8,
+     "answer": 20
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-22-opt1",
+     "value": "20",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-22-opt2",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 19 instead of 20."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-22-opt3",
+     "value": "23",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "execution": "Added the step of 3 twice from the last term, giving 23 instead of 20."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-22-opt4",
+     "value": "31",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 31."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the space from 8 to 11. You go up 3 each time. Count 3 on from 17 to reach 20. The number 23 takes the step twice. The number 19 is one short. The number 31 adds the last two numbers together."
+   }
+  },
+  {
+   "itemId": "gen-vr-11-number-series-24",
+   "why": "Sweep R1037: walk script described a different series; rewritten from this row's own series [16, 21, 29, 40] so it reaches the key and names each distractor.",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     16,
+     21,
+     29,
+     40
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 40,
+     "step": 5,
+     "first": 16,
+     "answer": 54,
+     "prevStep": 11
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-24-opt1",
+     "value": "54",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-24-opt2",
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 11 instead of letting it grow, giving 51 instead of 54."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-24-opt3",
+     "value": "53",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 53 instead of 54."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 16, 21, 29 and 40. They are 5, 8 and 11. Each gap grows by 3. Add the next gap of 14 to 40 to reach 54. The number 51 repeats the gap of 11. The number 53 is one short."
+   }
+  },
+  {
+   "itemId": "gen-vr-03-related-words-28",
+   "why": "Sweep R1037: key 'bees' echoed the stem word 'beekeeper'. Stem word now 'cowboy' (key 'cattle', no echo); sting replaced because it is no longer a part of the second word's animal.",
+   "stem": {
+    "pairA": [
+     "shepherd",
+     "sheep"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "cowboy"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-28-opt1",
+     "value": "cattle",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-28-opt2",
+     "value": "horns",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "execution": "A shepherd looks after sheep, the whole animals, so a cowboy looks after cattle. The child gives horns instead: horns are a part of the animal. The example named the animals themselves, and the child names a part of the animal."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-28-opt3",
+     "value": "wool",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "execution": "A shepherd looks after sheep, so a cowboy looks after cattle. The child stays with the first pair: wool comes from sheep, which a shepherd tends. Wool belongs with shepherd and sheep, and the relationship is never carried across to cowboy."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-09",
+   "why": "Sweep R1037: key equalled the first group's middle number. Second group changed to (7 [?] 4), key 11; same adding rule; distractors re-derived.",
+   "stem": {
+    "sum": "(4 [10] 6)    (7 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-09-opt1",
+     "value": "11",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-09-opt2",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 4 + 6 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 4 = 11. This option multiplied them instead: 7 x 4 = 28."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-09-opt3",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": "The first group settles the rule: 4 + 6 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 4 = 11. This option read a one-sided rule off the first group, add 6 to the left number (4 + 6 = 10), and applied it to 7 alone, leaving out 4: 7 + 6 = 13."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-10",
+   "why": "Sweep R1037: key equalled the first group's middle number. Second group changed to (16 [?] 9), key 25; same adding rule; distractors re-derived.",
+   "stem": {
+    "sum": "(10 [24] 14)    (16 [?] 9)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-10-opt1",
+     "value": "25",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-10-opt2",
+     "value": "144",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "execution": "The first group settles the rule: 10 + 14 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 16 + 9 = 25. This option multiplied them instead: 16 x 9 = 144."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-10-opt3",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "execution": "The first group settles the rule: 10 + 14 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 16 + 9 = 25. This option read a one-sided rule off the first group, add 10 to the right number (14 + 10 = 24), and applied it to 9 alone, leaving out 16: 9 + 10 = 19."
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "gen-vr-11-number-series-04: walk script belonged to another series -> rewritten from [14, 19, 27, 38], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-06: walk script belonged to another series -> rewritten from [10, 12, 14, 16], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-08: walk script belonged to another series -> rewritten from [18, 22, 29, 39], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-10: walk script belonged to another series -> rewritten from [5, 11, 17, 23], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-12: walk script belonged to another series -> rewritten from [13, 16, 22, 31], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-14: walk script belonged to another series -> rewritten from [9, 14, 19, 24], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-16: walk script belonged to another series -> rewritten from [17, 19, 24, 32], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-18: walk script belonged to another series -> rewritten from [13, 17, 21, 25], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-20: walk script belonged to another series -> rewritten from [12, 18, 27, 39], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-22: walk script belonged to another series -> rewritten from [8, 11, 14, 17], ends on the key, names each distractor.",
+  "gen-vr-11-number-series-24: walk script belonged to another series -> rewritten from [16, 21, 29, 40], ends on the key, names each distractor.",
+  "gen-vr-04-closest-meaning-15: rude (cheeky sense) and loud (colour sense) were second answers -> stubborn (wrong-shade) and shouting (one-feature-only), correct in no sense of bold. NOT done: adding rude/cheeky/loud/bright/vivid to VR04_FORBIDDEN_BY_HEADWORD.bold is a code change outside this door.",
+  "gen-vr-04-closest-meaning-17: cold (of manner) means unfriendly, a near second answer -> frowning, a true one-sign distractor.",
+  "gen-vr-21-same-meaning-04: hop is a thesaurus synonym of leap -> dance (associated-not-same), no sense of leap.",
+  "gen-vr-21-same-meaning-14: want is correct in choose's wish sense -> shop (associated-not-same), no sense of choose.",
+  "gen-vr-21-same-meaning-20: huge is a thesaurus synonym of big -> slow (associated-not-same), no sense of big.",
+  "gen-vr-21-same-meaning-22: terrified is a thesaurus synonym of scared -> dark (associated-not-same), no sense of scared.",
+  "gen-vr-03-related-words-30: crop was close to defensible (a lack of crops) -> hunger, which a famine causes and never lacks; execution says why.",
+  "gen-vr-20-complete-the-word-07: SAMEL is a lexicon word -> T (TAMEL, not a word in loadWordPuzzleLexicon); note corrected.",
+  "gen-vr-03-related-words-28: key bees repeated the letters of beekeeper -> stem word cowboy, key cattle; sting -> horns (part-for-kind, forced by the new animal); wool execution updated for the new stem word.",
+  "gen-vr-18-related-numbers-09: key 10 equalled the example's middle number -> second group (7 [?] 4), key 11; distractors re-derived 28 (7 x 4) and 13 (7 + 6, leaving out 4).",
+  "gen-vr-18-related-numbers-10: key 24 equalled the example's middle number -> second group (16 [?] 9), key 25; distractors re-derived 144 (16 x 9) and 19 (9 + 10, leaving out 16)."
+ ]
+}
