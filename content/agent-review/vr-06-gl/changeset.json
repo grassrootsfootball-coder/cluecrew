@@ -1,0 +1,2289 @@
+{
+ "door": "vr-06-gl",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-17",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "SEASIDE. Flagged: BEDSIDE is a familiar compound (bedside table/lamp) and in any case only needs to be recognised as a word; 'went to the bedside and built sandcastles on the beach' does not fit. WOR/WORSIDE non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "Drivers need a special ___MIT to park a car on this busy road.",
+     "after": "We went to the ___SIDE and built sandcastles on the beach."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at the frame ___MIT. You need a special paper to park. “per” gives us “permit”, the paper you need. The others become real words that break the meaning.",
+     "after": "“wor” is not a word, so it cannot be the answer. “bed” makes “bedside”, which has no beach. “sea” makes “seaside”, which is where the beach is."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15a2007dtmzvdc3ybpmu (cmscb15a2007dtmzvdc3ybpmu).value",
+     "before": "PER",
+     "after": "SEA"
+    },
+    {
+     "field": "option cmscb15a2007etmzvrxutmsge (cmscb15a2007etmzvrxutmsge).value",
+     "before": "SUB",
+     "after": "BED"
+    },
+    {
+     "field": "option cmscb15a2007etmzvrxutmsge (cmscb15a2007etmzvrxutmsge).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SUBMIT).",
+     "after": "BED is itself a word and makes BEDSIDE, a real word, but BEDSIDE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15a2007ftmzvmybkyjdi (cmscb15a2007ftmzvmybkyjdi).value",
+     "before": "SUM",
+     "after": "WOR"
+    },
+    {
+     "field": "option cmscb15a2007ftmzvmybkyjdi (cmscb15a2007ftmzvmybkyjdi).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15a2007ftmzvmybkyjdi (cmscb15a2007ftmzvmybkyjdi).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SUMMIT).",
+     "after": "WOR is not a word, and in the gap it makes WORSIDE, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-12",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "CARPET. A carrot is not for the floor; VOS/CARVOS non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "See where the word splits: CAR___. It is soft on the living room floor. “pet” fills it to make “carpet” for the floor. Those two form real words, yet none suits here.",
+     "after": "“vos” is not a word, so it cannot be the answer. “rot” makes “carrot”, which does not cover a floor. “pet” makes “carpet”, which covers a floor."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159t006utmzvadnodnxv (cmscb159t006utmzvadnodnxv).value",
+     "before": "EER",
+     "after": "ROT"
+    },
+    {
+     "field": "option cmscb159t006utmzvadnodnxv (cmscb159t006utmzvadnodnxv).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CAREER).",
+     "after": "ROT is itself a word and makes CARROT, a real word, but CARROT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159t006vtmzvqzgbatid (cmscb159t006vtmzvqzgbatid).value",
+     "before": "BON",
+     "after": "VOS"
+    },
+    {
+     "field": "option cmscb159t006vtmzvqzgbatid (cmscb159t006vtmzvqzgbatid).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb159t006vtmzvqzgbatid (cmscb159t006vtmzvqzgbatid).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CARBON).",
+     "after": "VOS is not a word, and in the gap it makes CARVOS, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-09",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "CANDLE. 'lit a middle' makes no sense; PLO/PLODLE non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The heavy rain was the main ___SE of the flood in our town.",
+     "after": "Mum lit a ___DLE on top of my birthday cake."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The letters ___SE mark the frame. Heavy rain led to the flood. Put “cau” in for “cause”, the reason why. The others spell real words, but neither fits here.",
+     "after": "“plo” is not a word, so it cannot be the answer. “mid” makes “middle”, but you cannot light a middle. “can” makes “candle”, and you light a candle on a cake."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159n006htmzvnv5jc2fe (cmscb159n006htmzvnv5jc2fe).value",
+     "before": "CAU",
+     "after": "CAN"
+    },
+    {
+     "field": "option cmscb159n006itmzvryifgdp3 (cmscb159n006itmzvryifgdp3).value",
+     "before": "CHA",
+     "after": "MID"
+    },
+    {
+     "field": "option cmscb159n006itmzvryifgdp3 (cmscb159n006itmzvryifgdp3).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CHASE).",
+     "after": "MID is itself a word and makes MIDDLE, a real word, but MIDDLE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159o006jtmzvhmleskyi (cmscb159o006jtmzvhmleskyi).value",
+     "before": "RIN",
+     "after": "PLO"
+    },
+    {
+     "field": "option cmscb159o006jtmzvhmleskyi (cmscb159o006jtmzvhmleskyi).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb159o006jtmzvhmleskyi (cmscb159o006jtmzvhmleskyi).execution",
+     "before": "Does not fit the sentence, although it makes a real word (RINSE).",
+     "after": "PLO is not a word, and in the gap it makes PLODLE, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-32",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "SPEND. 'spice my pocket money' makes no sense; ATH/SPATH non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "It would be very unkind to DE___VE the dog of its food and clean water.",
+     "after": "I will SP___ my pocket money on sweets at the shop."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The word stops at DE___VE. Taking the dog's food away is unkind. “pri” fills it to make “deprive”, to take away. Those two form real words, yet none suits here.",
+     "after": "“ath” is not a word, so it cannot be the answer. “ice” makes “spice”, which makes no sense with money. “end” makes “spend”, which means use it to buy things."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15au0091tmzvia0nzqn8 (cmscb15au0091tmzvia0nzqn8).value",
+     "before": "PRI",
+     "after": "END"
+    },
+    {
+     "field": "option cmscb15au0092tmzvts876n1q (cmscb15au0092tmzvts876n1q).value",
+     "before": "CEI",
+     "after": "ICE"
+    },
+    {
+     "field": "option cmscb15au0092tmzvts876n1q (cmscb15au0092tmzvts876n1q).execution",
+     "before": "Does not fit the sentence, although it makes a real word (DECEIVE).",
+     "after": "ICE is itself a word and makes SPICE, a real word, but SPICE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15au0093tmzvan8wn1ic (cmscb15au0093tmzvan8wn1ic).value",
+     "before": "SER",
+     "after": "ATH"
+    },
+    {
+     "field": "option cmscb15au0093tmzvan8wn1ic (cmscb15au0093tmzvan8wn1ic).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15au0093tmzvan8wn1ic (cmscb15au0093tmzvan8wn1ic).execution",
+     "before": "Does not fit the sentence, although it makes a real word (DESERVE).",
+     "after": "ATH is not a word, and in the gap it makes SPATH, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "CLAP. Standing up to chop after a show makes no sense; LUP/CLUP non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "Mia was waiting for her turn to sing on the stage. She felt very ___IOUS and her tummy was full of butterflies.",
+     "after": "At the end of the show we all stood up to C___."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Follow the line along to the space. Mia feels nervous before she sings. “anx” turns it into “anxious”, worried and nervous. The other letters give real words, but not this one.",
+     "after": "“lup” is not a word, so it cannot be the answer. “hop” makes “chop”, which people do not do after a show. “lap” makes “clap”, which people do when a show ends."
+    },
+    {
+     "field": "option cmscb15b0009dtmzviostj77b (cmscb15b0009dtmzviostj77b).value",
+     "before": "ANX",
+     "after": "LAP"
+    },
+    {
+     "field": "option cmscb15b0009etmzvqcvdywy7 (cmscb15b0009etmzvqcvdywy7).value",
+     "before": "OBV",
+     "after": "HOP"
+    },
+    {
+     "field": "option cmscb15b0009etmzvqcvdywy7 (cmscb15b0009etmzvqcvdywy7).execution",
+     "before": "Does not fit the sentence, although it makes a real word (OBVIOUS).",
+     "after": "HOP is itself a word and makes CHOP, a real word, but CHOP does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15b0009ftmzvm80nqw86 (cmscb15b0009ftmzvm80nqw86).value",
+     "before": "VAR",
+     "after": "LUP"
+    },
+    {
+     "field": "option cmscb15b0009ftmzvm80nqw86 (cmscb15b0009ftmzvm80nqw86).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15b0009ftmzvm80nqw86 (cmscb15b0009ftmzvm80nqw86).execution",
+     "before": "Does not fit the sentence, although it makes a real word (VARIOUS).",
+     "after": "LUP is not a word, and in the gap it makes CLUP, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "STRAW. You cannot drink through a stage; ULK/STULK non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "Grandad had been ill in bed for a week. He felt tired and ___BLE and could hardly stand.",
+     "after": "I drank my milkshake through a bendy ST___."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The word breaks open at ___BLE. After illness Grandad can hardly stand. With “fee” the word is “feeble”, meaning faint and shaky. Both other choices are real words, not the right ones.",
+     "after": "“ulk” is not a word, so it cannot be the answer. “age” makes “stage”, which you cannot drink through. “raw” makes “straw”, a thin tube for drinking."
+    },
+    {
+     "field": "option cmscb15ba009xtmzvjjbljeqv (cmscb15ba009xtmzvjjbljeqv).value",
+     "before": "FEE",
+     "after": "RAW"
+    },
+    {
+     "field": "option cmscb15ba009ytmzvia60zuti (cmscb15ba009ytmzvia60zuti).value",
+     "before": "MAR",
+     "after": "AGE"
+    },
+    {
+     "field": "option cmscb15ba009ytmzvia60zuti (cmscb15ba009ytmzvia60zuti).execution",
+     "before": "Does not fit the sentence, although it makes a real word (MARBLE).",
+     "after": "AGE is itself a word and makes STAGE, a real word, but STAGE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ba009ztmzvzcdpu6oj (cmscb15ba009ztmzvzcdpu6oj).value",
+     "before": "TRE",
+     "after": "ULK"
+    },
+    {
+     "field": "option cmscb15ba009ztmzvzcdpu6oj (cmscb15ba009ztmzvzcdpu6oj).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15ba009ztmzvzcdpu6oj (cmscb15ba009ztmzvzcdpu6oj).execution",
+     "before": "Does not fit the sentence, although it makes a real word (TREBLE).",
+     "after": "ULK is not a word, and in the gap it makes STULK, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "KITTEN. 'a tiny black bitten/rotten' is not a noun phrase that fits. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The bag of bricks was very heavy. It was a great ___DEN to carry all the way up the hill.",
+     "after": "Our cat had a tiny black ___TEN with white paws."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Follow the line along to the space. A heavy bag is hard to carry. “bur” builds “burden”, a heavy load. The others build real words in the odd place.",
+     "after": "All three are little words, so read the sentence. “bit” makes “bitten” and “rot” makes “rotten”, but neither makes sense here. “kit” makes “kitten”, a baby cat."
+    },
+    {
+     "field": "option cmscb15ad0081tmzvddzdce3f (cmscb15ad0081tmzvddzdce3f).value",
+     "before": "BUR",
+     "after": "KIT"
+    },
+    {
+     "field": "option cmscb15ad0082tmzvxl6x0rpc (cmscb15ad0082tmzvxl6x0rpc).value",
+     "before": "GAR",
+     "after": "BIT"
+    },
+    {
+     "field": "option cmscb15ad0082tmzvxl6x0rpc (cmscb15ad0082tmzvxl6x0rpc).execution",
+     "before": "Does not fit the sentence, although it makes a real word (GARDEN).",
+     "after": "BIT is itself a word and makes BITTEN, a real word, but BITTEN does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ad0083tmzvka50j64a (cmscb15ad0083tmzvka50j64a).value",
+     "before": "SUD",
+     "after": "ROT"
+    },
+    {
+     "field": "option cmscb15ad0083tmzvka50j64a (cmscb15ad0083tmzvka50j64a).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SUDDEN).",
+     "after": "ROT is itself a word and makes ROTTEN, a real word, but ROTTEN does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-01",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "SHOUT. SHARE and SHOWN read into the sentence make no sense; all three values are words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "Please do not SH___ so loudly, or you will wake the sleeping baby.",
+     "after": "Please do not SH___ so loudly, or you will wake the baby."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The frame reads SH___. The line tells you not to be loud. “out” makes “shout”, and shouting wakes the baby. The others are real, but miss the sense.",
+     "after": "All three are little words, so read the sentence. “are” makes “share” and “own” makes “shown”, but neither makes sense here. “out” makes “shout”, and shouting would wake the baby."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb1598005mtmzvss6hanv3 (cmscb1598005mtmzvss6hanv3).value",
+     "before": "ORT",
+     "after": "ARE"
+    },
+    {
+     "field": "option cmscb1598005mtmzvss6hanv3 (cmscb1598005mtmzvss6hanv3).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SHORT).",
+     "after": "ARE is itself a word and makes SHARE, a real word, but SHARE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb1598005ntmzvyzdusjm8 (cmscb1598005ntmzvyzdusjm8).value",
+     "before": "INY",
+     "after": "OWN"
+    },
+    {
+     "field": "option cmscb1598005ntmzvyzdusjm8 (cmscb1598005ntmzvyzdusjm8).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SHINY).",
+     "after": "OWN is itself a word and makes SHOWN, a real word, but SHOWN does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-11",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "WINTER. 'In bitter' / 'In hotter the pond froze' make no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The art teacher asked us to ___ATE a bright new painting of our own.",
+     "after": "In ___TER the pond froze and snow fell on the hills."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Follow the line along to the space. The teacher wants a brand new painting. “cre” makes “create”, which means to make something. The rest are real, but do not fit here.",
+     "after": "All three are little words, so read the sentence. “bit” makes “bitter” and “hot” makes “hotter”, but neither makes sense here. “win” makes “winter”, the cold time of year."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159r006ptmzvlbkykx6h (cmscb159r006ptmzvlbkykx6h).value",
+     "before": "CRE",
+     "after": "WIN"
+    },
+    {
+     "field": "option cmscb159r006qtmzvx61ek5qo (cmscb159r006qtmzvx61ek5qo).value",
+     "before": "ROT",
+     "after": "BIT"
+    },
+    {
+     "field": "option cmscb159r006qtmzvx61ek5qo (cmscb159r006qtmzvx61ek5qo).execution",
+     "before": "Does not fit the sentence, although it makes a real word (ROTATE).",
+     "after": "BIT is itself a word and makes BITTER, a real word, but BITTER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159r006rtmzvvtvlnpti (cmscb159r006rtmzvvtvlnpti).value",
+     "before": "UPD",
+     "after": "HOT"
+    },
+    {
+     "field": "option cmscb159r006rtmzvvtvlnpti (cmscb159r006rtmzvvtvlnpti).execution",
+     "before": "Does not fit the sentence, although it makes a real word (UPDATE).",
+     "after": "HOT is itself a word and makes HOTTER, a real word, but HOTTER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-07",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "CRASH. 'crown through the fence' makes no sense; OLT/CROLT non-words. CRUSH would also fit but UHS is not offered. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at the line and reach the gap. A lorry hits a wooden fence. “ash” gives us “crash”, what a lorry does. The others become real words that break the meaning.",
+     "after": "“olt” is not a word, so it cannot be the answer. “own” makes “crown”, which a lorry cannot do to a fence. “ash” makes “crash”, which is what a lorry out of control does."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159k006atmzvfpdhsqbj (cmscb159k006atmzvfpdhsqbj).value",
+     "before": "ANE",
+     "after": "OWN"
+    },
+    {
+     "field": "option cmscb159k006atmzvfpdhsqbj (cmscb159k006atmzvfpdhsqbj).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CRANE).",
+     "after": "OWN is itself a word and makes CROWN, a real word, but CROWN does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159k006btmzvpf2ahoq7 (cmscb159k006btmzvpf2ahoq7).value",
+     "before": "OWD",
+     "after": "OLT"
+    },
+    {
+     "field": "option cmscb159k006btmzvpf2ahoq7 (cmscb159k006btmzvpf2ahoq7).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb159k006btmzvpf2ahoq7 (cmscb159k006btmzvpf2ahoq7).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CROWD).",
+     "after": "OLT is not a word, and in the gap it makes CROLT, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-08",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "HONEY. HANDY and HAIRY are adjectives and cannot be what bees make. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "I used a big ___ON to eat my bowl of hot tomato soup.",
+     "after": "Bees make sweet H___Y inside their hive."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The word stops at ___ON. You need a tool to eat soup. “spo” finishes the word as “spoon” for soup. The other two are real words that miss the sense.",
+     "after": "All three are little words, so read the sentence. “and” makes “handy” and “air” makes “hairy”, but neither makes sense here. “one” makes “honey”, which is what bees make."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159m006dtmzvhm8ji1bx (cmscb159m006dtmzvhm8ji1bx).value",
+     "before": "SPO",
+     "after": "ONE"
+    },
+    {
+     "field": "option cmscb159m006etmzvmz5iqlrm (cmscb159m006etmzvmz5iqlrm).value",
+     "before": "MEL",
+     "after": "AND"
+    },
+    {
+     "field": "option cmscb159m006etmzvmz5iqlrm (cmscb159m006etmzvmz5iqlrm).execution",
+     "before": "Does not fit the sentence, although it makes a real word (MELON).",
+     "after": "AND is itself a word and makes HANDY, a real word, but HANDY does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159m006ftmzvb12vr5yu (cmscb159m006ftmzvb12vr5yu).value",
+     "before": "ONI",
+     "after": "AIR"
+    },
+    {
+     "field": "option cmscb159m006ftmzvb12vr5yu (cmscb159m006ftmzvb12vr5yu).execution",
+     "before": "Does not fit the sentence, although it makes a real word (ONION).",
+     "after": "AIR is itself a word and makes HAIRY, a real word, but HAIRY does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-10",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "HAMMER. SUMMER is not a tool; ROM/ROMMER not in the lexicon and not a word a child knows. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "We watched the ___NE take off from the runway and fly high into the clouds.",
+     "after": "Dad used a ___MER to bang the nail into the wood."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The empty space opens the word. It lifts off a runway into clouds. With “pla” the word is “plane”, which flies. Both other choices are real words, not the right ones.",
+     "after": "“rom” is not a word, so it cannot be the answer. “sum” makes “summer”, which is not a tool. “ham” makes “hammer”, a tool for banging in nails."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159p006ltmzvdht5bbb7 (cmscb159p006ltmzvdht5bbb7).value",
+     "before": "PLA",
+     "after": "HAM"
+    },
+    {
+     "field": "option cmscb159p006mtmzvu1hj9nd7 (cmscb159p006mtmzvu1hj9nd7).value",
+     "before": "ALO",
+     "after": "SUM"
+    },
+    {
+     "field": "option cmscb159p006mtmzvu1hj9nd7 (cmscb159p006mtmzvu1hj9nd7).execution",
+     "before": "Does not fit the sentence, although it makes a real word (ALONE).",
+     "after": "SUM is itself a word and makes SUMMER, a real word, but SUMMER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159p006ntmzvz7zancxq (cmscb159p006ntmzvz7zancxq).value",
+     "before": "OZO",
+     "after": "ROM"
+    },
+    {
+     "field": "option cmscb159p006ntmzvz7zancxq (cmscb159p006ntmzvz7zancxq).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb159p006ntmzvz7zancxq (cmscb159p006ntmzvz7zancxq).execution",
+     "before": "Does not fit the sentence, although it makes a real word (OZONE).",
+     "after": "ROM is not a word, and in the gap it makes ROMMER, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-28",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "CHAIR. Sitting on the cheat or the chill makes no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The king will DEC___E to everyone that the long war is finally over.",
+     "after": "Please sit on the CH___ by the window and wait."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The word breaks open at DEC___E. The king tells everyone the war ended. “lar” finishes the word as “declare”, to announce. The other two are real words that miss the sense.",
+     "after": "All three are little words, so read the sentence. “eat” makes “cheat” and “ill” makes “chill”, but neither makes sense here. “air” makes “chair”, something you sit on."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15am008ltmzvwwet292d (cmscb15am008ltmzvwwet292d).value",
+     "before": "LAR",
+     "after": "AIR"
+    },
+    {
+     "field": "option cmscb15am008mtmzvcnbihadq (cmscb15am008mtmzvcnbihadq).value",
+     "before": "EIV",
+     "after": "EAT"
+    },
+    {
+     "field": "option cmscb15am008mtmzvcnbihadq (cmscb15am008mtmzvcnbihadq).execution",
+     "before": "Does not fit the sentence, although it makes a real word (DECEIVE).",
+     "after": "EAT is itself a word and makes CHEAT, a real word, but CHEAT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15am008ntmzv2nsfz5dn (cmscb15am008ntmzv2nsfz5dn).value",
+     "before": "LIN",
+     "after": "ILL"
+    },
+    {
+     "field": "option cmscb15am008ntmzv2nsfz5dn (cmscb15am008ntmzv2nsfz5dn).execution",
+     "before": "Does not fit the sentence, although it makes a real word (DECLINE).",
+     "after": "ILL is itself a word and makes CHILL, a real word, but CHILL does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-21",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "COMBINE. Flagged: COMPARE is not offered, so it cannot compete; 'the chef will compete the eggs and the flour' is not English; BUL/COMBULE non-words. Not a hold: the walk's 'eggs and flour cannot race' glosses compete loosely, but it is true and not misleading. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The children stopped to MAR___ at the huge, glittering castle.",
+     "after": "The chef will COM___E the eggs and the flour to make a smooth cake mix."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The letters MAR___ mark the frame. The children stare at a grand castle. “vel” makes “marvel”, to stare in wonder. The rest are real words that do not suit here.",
+     "after": "“bul” is not a word, so it cannot be the answer. “pet” makes “compete”, but eggs and flour cannot race. “bin” makes “combine”, which means mix them together."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15a9007ttmzv9meyam2q (cmscb15a9007ttmzv9meyam2q).value",
+     "before": "VEL",
+     "after": "BIN"
+    },
+    {
+     "field": "option cmscb15a9007utmzv68jakgot (cmscb15a9007utmzv68jakgot).value",
+     "before": "BLE",
+     "after": "PET"
+    },
+    {
+     "field": "option cmscb15a9007utmzv68jakgot (cmscb15a9007utmzv68jakgot).execution",
+     "before": "Does not fit the sentence, although it makes a real word (MARBLE).",
+     "after": "PET is itself a word and makes COMPETE, a real word, but COMPETE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15a9007vtmzvhp914yzy (cmscb15a9007vtmzvhp914yzy).value",
+     "before": "TIN",
+     "after": "BUL"
+    },
+    {
+     "field": "option cmscb15a9007vtmzvhp914yzy (cmscb15a9007vtmzvhp914yzy).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15a9007vtmzvhp914yzy (cmscb15a9007vtmzvhp914yzy).execution",
+     "before": "Does not fit the sentence, although it makes a real word (MARTIN).",
+     "after": "BUL is not a word, and in the gap it makes COMBULE, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-33",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "BUTTON. You cannot press a red cotton to start a machine; GLO/GLOTON non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The dark old house had a strange and ___ISTER feeling that made us shiver.",
+     "after": "Please press the red ___TON to make the machine start."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The letters ___ISTER mark the frame. The dark old house feels creepy. “sin” builds “sinister”, a creepy, scary feeling. The others build real words in the odd place.",
+     "after": "“glo” is not a word, so it cannot be the answer. “cot” makes “cotton”, which you cannot press to start a machine. “but” makes “button”, something you press."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15aw0095tmzvx0vgcuvg (cmscb15aw0095tmzvx0vgcuvg).value",
+     "before": "SIN",
+     "after": "BUT"
+    },
+    {
+     "field": "option cmscb15aw0096tmzvevo53gfi (cmscb15aw0096tmzvevo53gfi).value",
+     "before": "REG",
+     "after": "COT"
+    },
+    {
+     "field": "option cmscb15aw0096tmzvevo53gfi (cmscb15aw0096tmzvevo53gfi).execution",
+     "before": "Does not fit the sentence, although it makes a real word (REGISTER).",
+     "after": "COT is itself a word and makes COTTON, a real word, but COTTON does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15aw0097tmzvj2v8pvvs (cmscb15aw0097tmzvj2v8pvvs).value",
+     "before": "MIN",
+     "after": "GLO"
+    },
+    {
+     "field": "option cmscb15aw0097tmzvj2v8pvvs (cmscb15aw0097tmzvj2v8pvvs).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15aw0097tmzvj2v8pvvs (cmscb15aw0097tmzvj2v8pvvs).execution",
+     "before": "Does not fit the sentence, although it makes a real word (MINISTER).",
+     "after": "GLO is not a word, and in the gap it makes GLOTON, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "PLANT. 'to plate the seeds' makes no sense; OST/PLOST non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "We dug a small hole in the soil so we could ___NT the flower seeds.",
+     "after": "We dug a small hole in the soil to PL___ the seeds."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read the sentence up to the gap. You dig soil and drop in seeds. “pla” builds “plant”, and you plant the seeds. The others build real words in the odd place.",
+     "after": "“ost” is not a word, so it cannot be the answer. “ate” makes “plate”, which is not what you do with seeds. “ant” makes “plant”, which is what you do with seeds."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159c005ttmzvjj7qmgfe (cmscb159c005ttmzvjj7qmgfe).value",
+     "before": "PLA",
+     "after": "ANT"
+    },
+    {
+     "field": "option cmscb159c005utmzvdr8dnyr8 (cmscb159c005utmzvdr8dnyr8).value",
+     "before": "GIA",
+     "after": "ATE"
+    },
+    {
+     "field": "option cmscb159c005utmzvdr8dnyr8 (cmscb159c005utmzvdr8dnyr8).execution",
+     "before": "Does not fit the sentence, although it makes a real word (GIANT).",
+     "after": "ATE is itself a word and makes PLATE, a real word, but PLATE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159c005vtmzvk8pq35ic (cmscb159c005vtmzvk8pq35ic).value",
+     "before": "JOI",
+     "after": "OST"
+    },
+    {
+     "field": "option cmscb159c005vtmzvk8pq35ic (cmscb159c005vtmzvk8pq35ic).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb159c005vtmzvk8pq35ic (cmscb159c005vtmzvk8pq35ic).execution",
+     "before": "Does not fit the sentence, although it makes a real word (JOINT).",
+     "after": "OST is not a word, and in the gap it makes PLOST, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-05",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "CATCH. 'hatch' a thrown ball makes no sense; LOR/LORCH non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "After playing outside, I used soap and water to ___AN my muddy hands.",
+     "after": "Throw me the ball and I will try to ___CH it."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at the frame ___AN. Soap and water wash your muddy hands. “cle” turns it into “clean”, just like washing. The other letters give real words, but not this one.",
+     "after": "“lor” is not a word, so it cannot be the answer. “hat” makes “hatch”, but a ball does not hatch. “cat” makes “catch”, and you catch a ball."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159g0061tmzvknhdwt4i (cmscb159g0061tmzvknhdwt4i).value",
+     "before": "CLE",
+     "after": "CAT"
+    },
+    {
+     "field": "option cmscb159g0062tmzve1quewro (cmscb159g0062tmzve1quewro).value",
+     "before": "ORG",
+     "after": "HAT"
+    },
+    {
+     "field": "option cmscb159g0062tmzve1quewro (cmscb159g0062tmzve1quewro).execution",
+     "before": "Does not fit the sentence, although it makes a real word (ORGAN).",
+     "after": "HAT is itself a word and makes HATCH, a real word, but HATCH does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159g0063tmzv0kwq8125 (cmscb159g0063tmzv0kwq8125).value",
+     "before": "HUM",
+     "after": "LOR"
+    },
+    {
+     "field": "option cmscb159g0063tmzv0kwq8125 (cmscb159g0063tmzv0kwq8125).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb159g0063tmzv0kwq8125 (cmscb159g0063tmzv0kwq8125).execution",
+     "before": "Does not fit the sentence, although it makes a real word (HUMAN).",
+     "after": "LOR is not a word, and in the gap it makes LORCH, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-13",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "FOREST. 'deep in the dark lowest' makes no sense; GRU/GRUEST non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The frame reads ___EST. Tall trees stand thick and dark. “for” builds “forest”, a place full of trees. The others build real words in the odd place.",
+     "after": "“gru” is not a word, so it cannot be the answer. “low” makes “lowest”, which is not a place. “for” makes “forest”, a place full of trees."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159v006ytmzv7l6f00bh (cmscb159v006ytmzv7l6f00bh).value",
+     "before": "PRI",
+     "after": "LOW"
+    },
+    {
+     "field": "option cmscb159v006ytmzv7l6f00bh (cmscb159v006ytmzv7l6f00bh).execution",
+     "before": "Does not fit the sentence, although it makes a real word (PRIEST).",
+     "after": "LOW is itself a word and makes LOWEST, a real word, but LOWEST does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159v006ztmzvyohot2ml (cmscb159v006ztmzvyohot2ml).value",
+     "before": "INV",
+     "after": "GRU"
+    },
+    {
+     "field": "option cmscb159v006ztmzvyohot2ml (cmscb159v006ztmzvyohot2ml).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb159v006ztmzvyohot2ml (cmscb159v006ztmzvyohot2ml).execution",
+     "before": "Does not fit the sentence, although it makes a real word (INVEST).",
+     "after": "GRU is not a word, and in the gap it makes GRUEST, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-14",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "LADDER. You cannot climb a wonder; LAD is familiar British English; BLU/BLUDER non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "She filled the shopping ___KET with apples, bread and milk.",
+     "after": "Dad climbed up the ___DER to fix a tile on the roof."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The gap comes before “ket”. She shops for apples, bread and milk. “bas” completes it as “basket” to carry shopping. Each other choice makes a real word that misfits.",
+     "after": "“blu” is not a word, so it cannot be the answer. “won” makes “wonder”, which you cannot climb. “lad” makes “ladder”, which you climb to reach a roof."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159w0071tmzva0hca61j (cmscb159w0071tmzva0hca61j).value",
+     "before": "BAS",
+     "after": "LAD"
+    },
+    {
+     "field": "option cmscb159w0072tmzvxepdopu9 (cmscb159w0072tmzvxepdopu9).value",
+     "before": "PAC",
+     "after": "WON"
+    },
+    {
+     "field": "option cmscb159w0072tmzvxepdopu9 (cmscb159w0072tmzvxepdopu9).execution",
+     "before": "Does not fit the sentence, although it makes a real word (PACKET).",
+     "after": "WON is itself a word and makes WONDER, a real word, but WONDER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159w0073tmzvwr4afhkt (cmscb159w0073tmzvwr4afhkt).value",
+     "before": "SOC",
+     "after": "BLU"
+    },
+    {
+     "field": "option cmscb159w0073tmzvwr4afhkt (cmscb159w0073tmzvwr4afhkt).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb159w0073tmzvwr4afhkt (cmscb159w0073tmzvwr4afhkt).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SOCKET).",
+     "after": "BLU is not a word, and in the gap it makes BLUDER, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-20",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "FARM. Living on the four or the face down the lane makes no sense; ACE is familiar. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "This large wooden box is big enough to CONT___ all of my toys and books.",
+     "after": "Cows, pigs and sheep live on the F___ down the lane."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The word stops at CONT___. A big box holds all the toys. With “ain” the word is “contain”, to hold. Both other choices are real words, not the right ones.",
+     "after": "All three are little words, so read the sentence. “our” makes “four” and “ace” makes “face”, but neither makes sense here. “arm” makes “farm”, which is where cows and pigs live."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15a7007ptmzvr3ssggsh (cmscb15a7007ptmzvr3ssggsh).value",
+     "before": "AIN",
+     "after": "ARM"
+    },
+    {
+     "field": "option cmscb15a7007qtmzvxlhm5xfq (cmscb15a7007qtmzvxlhm5xfq).value",
+     "before": "ACT",
+     "after": "OUR"
+    },
+    {
+     "field": "option cmscb15a7007qtmzvxlhm5xfq (cmscb15a7007qtmzvxlhm5xfq).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONTACT).",
+     "after": "OUR is itself a word and makes FOUR, a real word, but FOUR does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15a7007rtmzv9ueolzcl (cmscb15a7007rtmzv9ueolzcl).value",
+     "before": "EST",
+     "after": "ACE"
+    },
+    {
+     "field": "option cmscb15a7007rtmzv9ueolzcl (cmscb15a7007rtmzv9ueolzcl).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONTEST).",
+     "after": "ACE is itself a word and makes FACE, a real word, but FACE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-22",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "SPIN. A wheel cannot snow; LOM/SLOM non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The referee raised his flag to S___AL the start of the running race.",
+     "after": "I watched the wheel S___ round and round very fast."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The empty space sits inside the word. A flag starts the running race. “ign” fills it to make “signal”, a start sign. Those two form real words, yet none suits here.",
+     "after": "“lom” is not a word, so it cannot be the answer. “now” makes “snow”, but a wheel cannot snow. “pin” makes “spin”, which means turn round and round."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15ab007xtmzvzpbjcorq (cmscb15ab007xtmzvzpbjcorq).value",
+     "before": "IGN",
+     "after": "PIN"
+    },
+    {
+     "field": "option cmscb15ab007ytmzvb3grca9r (cmscb15ab007ytmzvb3grca9r).value",
+     "before": "PIR",
+     "after": "NOW"
+    },
+    {
+     "field": "option cmscb15ab007ytmzvb3grca9r (cmscb15ab007ytmzvb3grca9r).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SPIRAL).",
+     "after": "NOW is itself a word and makes SNOW, a real word, but SNOW does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ab007ztmzv2khfec92 (cmscb15ab007ztmzv2khfec92).value",
+     "before": "OCI",
+     "after": "LOM"
+    },
+    {
+     "field": "option cmscb15ab007ztmzv2khfec92 (cmscb15ab007ztmzv2khfec92).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15ab007ztmzv2khfec92 (cmscb15ab007ztmzv2khfec92).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SOCIAL).",
+     "after": "LOM is not a word, and in the gap it makes SLOM, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-24",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "GATE. Shutting the garden goat makes no sense; ULB/GULB non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The chef will COM___E the eggs and the flour to make a smooth cake mix.",
+     "after": "We shut the garden G___ so the dog could not get out."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "See where the word splits: COM___E. The chef mixes eggs and flour. “bin” completes it as “combine”, to mix together. Each other choice makes a real word that misfits.",
+     "after": "“ulb” is not a word, so it cannot be the answer. “oat” makes “goat”, which is an animal, not something you shut. “ate” makes “gate”, which keeps the dog in."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15ae0085tmzvi70p4le7 (cmscb15ae0085tmzvi70p4le7).value",
+     "before": "BIN",
+     "after": "ATE"
+    },
+    {
+     "field": "option cmscb15ae0086tmzv4xwhknuk (cmscb15ae0086tmzv4xwhknuk).value",
+     "before": "PET",
+     "after": "OAT"
+    },
+    {
+     "field": "option cmscb15ae0086tmzv4xwhknuk (cmscb15ae0086tmzv4xwhknuk).execution",
+     "before": "Does not fit the sentence, although it makes a real word (COMPETE).",
+     "after": "OAT is itself a word and makes GOAT, a real word, but GOAT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ae0087tmzvslc9rn8g (cmscb15ae0087tmzvslc9rn8g).value",
+     "before": "PUT",
+     "after": "ULB"
+    },
+    {
+     "field": "option cmscb15ae0087tmzvslc9rn8g (cmscb15ae0087tmzvslc9rn8g).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15ae0087tmzvslc9rn8g (cmscb15ae0087tmzvslc9rn8g).execution",
+     "before": "Does not fit the sentence, although it makes a real word (COMPUTE).",
+     "after": "ULB is not a word, and in the gap it makes GULB, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-25",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "TENT. A cart is not put up or zipped shut; MUF/MUFT non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "She tried to CONC___ the birthday present under her bed so no one would find it.",
+     "after": "We put up our ___T in the field and zipped the door shut."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The frame reads CONC___. She hides the present under her bed. “eal” turns it into “conceal”, meaning to hide. The other letters give real words, but not this one.",
+     "after": "“muf” is not a word, so it cannot be the answer. “car” makes “cart”, which you do not put up or zip. “ten” makes “tent”, which you put up and sleep in."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15ag0089tmzvunvtv15o (cmscb15ag0089tmzvunvtv15o).value",
+     "before": "EAL",
+     "after": "TEN"
+    },
+    {
+     "field": "option cmscb15ag008atmzvzlo1v3xj (cmscb15ag008atmzvzlo1v3xj).value",
+     "before": "ERT",
+     "after": "CAR"
+    },
+    {
+     "field": "option cmscb15ag008atmzvzlo1v3xj (cmscb15ag008atmzvzlo1v3xj).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONCERT).",
+     "after": "CAR is itself a word and makes CART, a real word, but CART does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ag008btmzvq4wrlr95 (cmscb15ag008btmzvq4wrlr95).value",
+     "before": "ERN",
+     "after": "MUF"
+    },
+    {
+     "field": "option cmscb15ag008btmzvq4wrlr95 (cmscb15ag008btmzvq4wrlr95).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15ag008btmzvq4wrlr95 (cmscb15ag008btmzvq4wrlr95).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONCERN).",
+     "after": "MUF is not a word, and in the gap it makes MUFT, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-30",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "TEACH. Flagged: 'coach' primes the meaning, which is the sentence doing its job, not a surface cue; COA (COACH) is not offered so the word cannot be copied into the gap. 'pinch us how to swim' is not English; GLA/GLACH non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "She gave her crying friend a warm hug to CONS___ her after the sad news.",
+     "after": "Our coach will ___CH us how to swim this term."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The gap sits in this word. A warm hug comforts a crying friend. With “ole” the word is “console”, to comfort. Both other choices are real words, not the right ones.",
+     "after": "“gla” is not a word, so it cannot be the answer. “pin” makes “pinch”, which is not how you learn to swim. “tea” makes “teach”, which means help us learn."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15aq008ttmzv3ql7hw1g (cmscb15aq008ttmzv3ql7hw1g).value",
+     "before": "OLE",
+     "after": "TEA"
+    },
+    {
+     "field": "option cmscb15aq008utmzvx9j30yo8 (cmscb15aq008utmzvx9j30yo8).value",
+     "before": "ULT",
+     "after": "PIN"
+    },
+    {
+     "field": "option cmscb15aq008utmzvx9j30yo8 (cmscb15aq008utmzvx9j30yo8).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONSULT).",
+     "after": "PIN is itself a word and makes PINCH, a real word, but PINCH does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ar008vtmzv61kk42ap (cmscb15ar008vtmzv61kk42ap).value",
+     "before": "UME",
+     "after": "GLA"
+    },
+    {
+     "field": "option cmscb15ar008vtmzv61kk42ap (cmscb15ar008vtmzv61kk42ap).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15ar008vtmzv61kk42ap (cmscb15ar008vtmzv61kk42ap).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONSUME).",
+     "after": "GLA is not a word, and in the gap it makes GLACH, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-31",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "TOWN. 'walked into tour' makes no sense; RUL/TRUL non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The scientist will CON___T a careful test to see how the plants grow.",
+     "after": "We walked into T___ to buy some new shoes."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at the line and reach the gap. The scientist runs a careful test. “duc” makes “conduct”, to carry out a test. The rest are real, but belong somewhere else.",
+     "after": "“rul” is not a word, so it cannot be the answer. “our” makes “tour”, which you cannot walk into to buy shoes. “own” makes “town”, which is where the shops are."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15as008xtmzvikoe9oa6 (cmscb15as008xtmzvikoe9oa6).value",
+     "before": "DUC",
+     "after": "OWN"
+    },
+    {
+     "field": "option cmscb15as008ytmzvstlehzn8 (cmscb15as008ytmzvstlehzn8).value",
+     "before": "TEN",
+     "after": "OUR"
+    },
+    {
+     "field": "option cmscb15as008ytmzvstlehzn8 (cmscb15as008ytmzvstlehzn8).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONTENT).",
+     "after": "OUR is itself a word and makes TOUR, a real word, but TOUR does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15as008ztmzvei05e03w (cmscb15as008ztmzvei05e03w).value",
+     "before": "CER",
+     "after": "RUL"
+    },
+    {
+     "field": "option cmscb15as008ztmzvei05e03w (cmscb15as008ztmzvei05e03w).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15as008ztmzvei05e03w (cmscb15as008ztmzvei05e03w).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONCERT).",
+     "after": "RUL is not a word, and in the gap it makes TRUL, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-37",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "CUPBOARD. Plates do not go back in a keyboard; FLO/FLOBOARD non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The old lighthouse keeper lived a ___ITARY life, all alone on the rocky island.",
+     "after": "Please put the clean plates back in the ___BOARD."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The frame reads ___ITARY. The keeper lives all alone on an island. “sol” gives us “solitary”, meaning quite alone. The others become real words that break the meaning.",
+     "after": "“flo” is not a word, so it cannot be the answer. “key” makes “keyboard”, which is not where plates go. “cup” makes “cupboard”, which is where plates are kept."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15b4009ltmzvaka1few9 (cmscb15b4009ltmzvaka1few9).value",
+     "before": "SOL",
+     "after": "CUP"
+    },
+    {
+     "field": "option cmscb15b4009mtmzvsdwvvaw6 (cmscb15b4009mtmzvsdwvvaw6).value",
+     "before": "MIL",
+     "after": "KEY"
+    },
+    {
+     "field": "option cmscb15b4009mtmzvsdwvvaw6 (cmscb15b4009mtmzvsdwvvaw6).execution",
+     "before": "Does not fit the sentence, although it makes a real word (MILITARY).",
+     "after": "KEY is itself a word and makes KEYBOARD, a real word, but KEYBOARD does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15b4009ntmzv33qv8i6t (cmscb15b4009ntmzv33qv8i6t).value",
+     "before": "SAN",
+     "after": "FLO"
+    },
+    {
+     "field": "option cmscb15b4009ntmzv33qv8i6t (cmscb15b4009ntmzv33qv8i6t).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15b4009ntmzv33qv8i6t (cmscb15b4009ntmzv33qv8i6t).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SANITARY).",
+     "after": "FLO is not a word, and in the gap it makes FLOBOARD, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-39",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "MEAT. A butcher does not sell mate or moat. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "Because the problem was so serious, the head teacher had to take ___STIC action straight away.",
+     "after": "The butcher sells fresh M___ and sausages in his shop."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read the sentence up to the gap. A serious problem needs action. Put “dra” in for “drastic”, strong and sudden. The others spell real words, but neither fits here.",
+     "after": "All three are little words, so read the sentence. “ate” makes “mate” and “oat” makes “moat”, but neither makes sense here. “eat” makes “meat”, which is what a butcher sells."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15b8009ttmzvt5c3p9ed (cmscb15b8009ttmzvt5c3p9ed).value",
+     "before": "DRA",
+     "after": "EAT"
+    },
+    {
+     "field": "option cmscb15b8009utmzvxzkbgsr0 (cmscb15b8009utmzvxzkbgsr0).value",
+     "before": "ELA",
+     "after": "ATE"
+    },
+    {
+     "field": "option cmscb15b8009utmzvxzkbgsr0 (cmscb15b8009utmzvxzkbgsr0).execution",
+     "before": "Does not fit the sentence, although it makes a real word (ELASTIC).",
+     "after": "ATE is itself a word and makes MATE, a real word, but MATE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15b8009vtmzvg6gniyk1 (cmscb15b8009vtmzvg6gniyk1).value",
+     "before": "PLA",
+     "after": "OAT"
+    },
+    {
+     "field": "option cmscb15b8009vtmzvg6gniyk1 (cmscb15b8009vtmzvg6gniyk1).execution",
+     "before": "Does not fit the sentence, although it makes a real word (PLASTIC).",
+     "after": "OAT is itself a word and makes MOAT, a real word, but MOAT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-04",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "STONE. SHADE and SHAME do not make blocks of a wall; TON is a familiar word ('a ton'). Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The word breaks open at S___E. The wall is hard and grey. “ton” completes it as “stone”, the grey blocks. Each other choice makes a real word that misfits.",
+     "after": "All three are little words, so read the sentence. “had” makes “shade” and “ham” makes “shame”, but neither makes sense here. “ton” makes “stone”, which is hard and grey."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159e005ytmzva9r0a5uw (cmscb159e005ytmzva9r0a5uw).value",
+     "before": "LID",
+     "after": "HAD"
+    },
+    {
+     "field": "option cmscb159e005ytmzva9r0a5uw (cmscb159e005ytmzva9r0a5uw).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SLIDE).",
+     "after": "HAD is itself a word and makes SHADE, a real word, but SHADE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159e005ztmzvh5o3o2y8 (cmscb159e005ztmzvh5o3o2y8).value",
+     "before": "PIC",
+     "after": "HAM"
+    },
+    {
+     "field": "option cmscb159e005ztmzvh5o3o2y8 (cmscb159e005ztmzvh5o3o2y8).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SPICE).",
+     "after": "HAM is itself a word and makes SHAME, a real word, but SHAME does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-19",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "SLIDE. Going down a spine or a scare in the park makes no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The king chose to PAR___ the prisoner, so the man was allowed to go home.",
+     "after": "We took turns to go down the big S___E in the park."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at the line and reach the gap. The king frees the prisoner. Put “don” in for “pardon”, to free. The others spell real words, but neither fits here.",
+     "after": "All three are little words, so read the sentence. “pin” makes “spine” and “car” makes “scare”, but neither makes sense here. “lid” makes “slide”, which you go down in a park."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15a5007ltmzviismldrw (cmscb15a5007ltmzviismldrw).value",
+     "before": "DON",
+     "after": "LID"
+    },
+    {
+     "field": "option cmscb15a5007mtmzvjhkl4qkc (cmscb15a5007mtmzvjhkl4qkc).value",
+     "before": "ENT",
+     "after": "PIN"
+    },
+    {
+     "field": "option cmscb15a5007mtmzvjhkl4qkc (cmscb15a5007mtmzvjhkl4qkc).execution",
+     "before": "Does not fit the sentence, although it makes a real word (PARENT).",
+     "after": "PIN is itself a word and makes SPINE, a real word, but SPINE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15a5007ntmzvb2nl4gxv (cmscb15a5007ntmzvb2nl4gxv).value",
+     "before": "ROT",
+     "after": "CAR"
+    },
+    {
+     "field": "option cmscb15a5007ntmzvb2nl4gxv (cmscb15a5007ntmzvb2nl4gxv).execution",
+     "before": "Does not fit the sentence, although it makes a real word (PARROT).",
+     "after": "CAR is itself a word and makes SCARE, a real word, but SCARE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-27",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "COAT. Putting on a winter cart or care makes no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The famous musician sat down to COMP___ a beautiful new song for the choir.",
+     "after": "It was very cold, so I put on my thick winter C___."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read the sentence up to the gap. The musician writes a new song. “ose” gives us “compose”, to write music. The others become real words that break the meaning.",
+     "after": "All three are little words, so read the sentence. “art” makes “cart” and “are” makes “care”, but neither makes sense here. “oat” makes “coat”, which keeps you warm."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15ak008htmzv2vvvl03k (cmscb15ak008htmzv2vvvl03k).value",
+     "before": "OSE",
+     "after": "OAT"
+    },
+    {
+     "field": "option cmscb15ak008itmzv207w7fwx (cmscb15ak008itmzv207w7fwx).value",
+     "before": "ETE",
+     "after": "ART"
+    },
+    {
+     "field": "option cmscb15ak008itmzv207w7fwx (cmscb15ak008itmzv207w7fwx).execution",
+     "before": "Does not fit the sentence, although it makes a real word (COMPETE).",
+     "after": "ART is itself a word and makes CART, a real word, but CART does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ak008jtmzvsez2keux (cmscb15ak008jtmzvsez2keux).value",
+     "before": "ANY",
+     "after": "ARE"
+    },
+    {
+     "field": "option cmscb15ak008jtmzvsez2keux (cmscb15ak008jtmzvsez2keux).execution",
+     "before": "Does not fit the sentence, although it makes a real word (COMPANY).",
+     "after": "ARE is itself a word and makes CARE, a real word, but CARE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-29",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "LETTER. You do not write and post a matter; PLI/PLITER non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The waiter gave me a large ___TION of chips on my plate.",
+     "after": "I wrote a ___TER to Granny and posted it in the red box."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at the frame ___TION. The waiter piles chips on the plate. Put “por” in for “portion”, an amount of food. The others spell real words, but neither fits here.",
+     "after": "“pli” is not a word, so it cannot be the answer. “mat” makes “matter”, which you cannot post. “let” makes “letter”, which you write and post."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15ao008ptmzvhcmjte2a (cmscb15ao008ptmzvhcmjte2a).value",
+     "before": "POR",
+     "after": "LET"
+    },
+    {
+     "field": "option cmscb15ao008qtmzv1h4a6l48 (cmscb15ao008qtmzv1h4a6l48).value",
+     "before": "CAU",
+     "after": "MAT"
+    },
+    {
+     "field": "option cmscb15ao008qtmzv1h4a6l48 (cmscb15ao008qtmzv1h4a6l48).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CAUTION).",
+     "after": "MAT is itself a word and makes MATTER, a real word, but MATTER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ao008rtmzvlyey87ao (cmscb15ao008rtmzvlyey87ao).value",
+     "before": "AUC",
+     "after": "PLI"
+    },
+    {
+     "field": "option cmscb15ao008rtmzvlyey87ao (cmscb15ao008rtmzvlyey87ao).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15ao008rtmzvlyey87ao (cmscb15ao008rtmzvlyey87ao).execution",
+     "before": "Does not fit the sentence, although it makes a real word (AUCTION).",
+     "after": "PLI is not a word, and in the gap it makes PLITER, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-34",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "STOP. A bus cannot shop or shut outside the gates. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "Dad was so ___IOUS about the broken window that he shouted and stamped his feet.",
+     "after": "The bus will S___ outside the school gates at three o'clock."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The empty space opens the word. Dad shouts and stamps in anger. “fur” completes it as “furious”, very angry indeed. Each other choice makes a real word that misfits.",
+     "after": "All three are little words, so read the sentence. “hop” makes “shop” and “hut” makes “shut”, but neither makes sense here. “top” makes “stop”, which a bus does to let people on."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15ay0099tmzvpwu25ikb (cmscb15ay0099tmzvpwu25ikb).value",
+     "before": "FUR",
+     "after": "TOP"
+    },
+    {
+     "field": "option cmscb15ay009atmzve21anwwl (cmscb15ay009atmzve21anwwl).value",
+     "before": "CUR",
+     "after": "HOP"
+    },
+    {
+     "field": "option cmscb15ay009atmzve21anwwl (cmscb15ay009atmzve21anwwl).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CURIOUS).",
+     "after": "HOP is itself a word and makes SHOP, a real word, but SHOP does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ay009btmzvftrri799 (cmscb15ay009btmzvftrri799).value",
+     "before": "SER",
+     "after": "HUT"
+    },
+    {
+     "field": "option cmscb15ay009btmzvftrri799 (cmscb15ay009btmzvftrri799).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SERIOUS).",
+     "after": "HUT is itself a word and makes SHUT, a real word, but SHUT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-38",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "PANCAKE. A cupcake is not thin and flat; ROP/ROPCAKE non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The blue whale is an ___ENSE animal, far bigger than any other creature in the sea.",
+     "after": "Dad flipped a thin, flat ___CAKE high into the air."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The gap comes before “ense”. The blue whale is hugely big. “imm” finishes the word as “immense”, meaning huge. The other two are real words that miss the sense.",
+     "after": "“rop” is not a word, so it cannot be the answer. “cup” makes “cupcake”, which is not thin and flat. “pan” makes “pancake”, which is thin and flat."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15b6009ptmzv8g8el5ef (cmscb15b6009ptmzv8g8el5ef).value",
+     "before": "IMM",
+     "after": "PAN"
+    },
+    {
+     "field": "option cmscb15b6009qtmzv441ixu8w (cmscb15b6009qtmzv441ixu8w).value",
+     "before": "INT",
+     "after": "CUP"
+    },
+    {
+     "field": "option cmscb15b6009qtmzv441ixu8w (cmscb15b6009qtmzv441ixu8w).execution",
+     "before": "Does not fit the sentence, although it makes a real word (INTENSE).",
+     "after": "CUP is itself a word and makes CUPCAKE, a real word, but CUPCAKE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15b6009rtmzvvqfvaqfn (cmscb15b6009rtmzvvqfvaqfn).value",
+     "before": "INC",
+     "after": "ROP"
+    },
+    {
+     "field": "option cmscb15b6009rtmzvvqfvaqfn (cmscb15b6009rtmzvvqfvaqfn).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15b6009rtmzvvqfvaqfn (cmscb15b6009rtmzvvqfvaqfn).execution",
+     "before": "Does not fit the sentence, although it makes a real word (INCENSE).",
+     "after": "ROP is not a word, and in the gap it makes ROPCAKE, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-16",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "FINGER. 'cut my bigger' makes no sense; GLU/GLUGER non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "We planted red roses and runner beans in our back ___DEN.",
+     "after": "I cut my ___GER on a sharp knife, so Mum found a plaster."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The word breaks open at ___DEN. We planted roses and beans out back. Add “gar” and you get “garden” for plants. Two real words appear here, yet neither belongs.",
+     "after": "“glu” is not a word, so it cannot be the answer. “big” makes “bigger”, which is not a part of you. “fin” makes “finger”, a part of your hand."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15a00079tmzvjuqj7qsq (cmscb15a00079tmzvjuqj7qsq).value",
+     "before": "GAR",
+     "after": "FIN"
+    },
+    {
+     "field": "option cmscb15a0007atmzvf819qxfa (cmscb15a0007atmzvf819qxfa).value",
+     "before": "SUD",
+     "after": "BIG"
+    },
+    {
+     "field": "option cmscb15a0007atmzvf819qxfa (cmscb15a0007atmzvf819qxfa).execution",
+     "before": "Does not fit the sentence, although it makes a real word (SUDDEN).",
+     "after": "BIG is itself a word and makes BIGGER, a real word, but BIGGER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15a0007btmzvvfd4iwwy (cmscb15a0007btmzvvfd4iwwy).value",
+     "before": "HAR",
+     "after": "GLU"
+    },
+    {
+     "field": "option cmscb15a0007btmzvvfd4iwwy (cmscb15a0007btmzvvfd4iwwy).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15a0007btmzvvfd4iwwy (cmscb15a0007btmzvvfd4iwwy).execution",
+     "before": "Does not fit the sentence, although it makes a real word (HARDEN).",
+     "after": "GLU is not a word, and in the gap it makes GLUGER, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-18",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "PIGLET. An outlet cannot sleep beside its mother; SNU/SNULET non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "So many tricky rules began to CON___E the new pupil on her very first day.",
+     "after": "A tiny pink ___LET slept beside its mother in the straw."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The gap sits in this word. Many tricky rules muddle the new pupil. “fus” finishes the word as “confuse”, to muddle. The other two are real words that miss the sense.",
+     "after": "“snu” is not a word, so it cannot be the answer. “out” makes “outlet”, which cannot sleep. “pig” makes “piglet”, a baby pig."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15a4007htmzvqzyy7jot (cmscb15a4007htmzvqzyy7jot).value",
+     "before": "FUS",
+     "after": "PIG"
+    },
+    {
+     "field": "option cmscb15a4007itmzvtd84poik (cmscb15a4007itmzvtd84poik).value",
+     "before": "SUM",
+     "after": "OUT"
+    },
+    {
+     "field": "option cmscb15a4007itmzvtd84poik (cmscb15a4007itmzvtd84poik).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONSUME).",
+     "after": "OUT is itself a word and makes OUTLET, a real word, but OUTLET does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15a4007jtmzvfmfu2xaz (cmscb15a4007jtmzvfmfu2xaz).value",
+     "before": "CIS",
+     "after": "SNU"
+    },
+    {
+     "field": "option cmscb15a4007jtmzvfmfu2xaz (cmscb15a4007jtmzvfmfu2xaz).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15a4007jtmzvfmfu2xaz (cmscb15a4007jtmzvfmfu2xaz).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONCISE).",
+     "after": "SNU is not a word, and in the gap it makes SNULET, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-06",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "CHIPS. 'fish and crows' / 'fish and clips' for tea make no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "Before bed each night I must BR___ my teeth until they are clean and shiny.",
+     "after": "We had fish and C___S for tea on Friday."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The gap sits in this word. It is about cleaning your teeth. Add “ush” and you get “brush” for teeth. Two real words appear here, yet neither belongs.",
+     "after": "All three are little words, so read the sentence. “row” makes “crows” and “lip” makes “clips”, but neither makes sense here. “hip” makes “chips”, which go with fish for tea."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159i0065tmzvvu5pj4lf (cmscb159i0065tmzvvu5pj4lf).value",
+     "before": "USH",
+     "after": "HIP"
+    },
+    {
+     "field": "option cmscb159i0066tmzv1api5nd0 (cmscb159i0066tmzv1api5nd0).value",
+     "before": "OOK",
+     "after": "ROW"
+    },
+    {
+     "field": "option cmscb159i0066tmzv1api5nd0 (cmscb159i0066tmzv1api5nd0).execution",
+     "before": "Does not fit the sentence, although it makes a real word (BROOK).",
+     "after": "ROW is itself a word and makes CROWS, a real word, but CROWS does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159i0067tmzvfxgodjr3 (cmscb159i0067tmzvfxgodjr3).value",
+     "before": "IEF",
+     "after": "LIP"
+    },
+    {
+     "field": "option cmscb159i0067tmzvfxgodjr3 (cmscb159i0067tmzvfxgodjr3).execution",
+     "before": "Does not fit the sentence, although it makes a real word (BRIEF).",
+     "after": "LIP is itself a word and makes CLIPS, a real word, but CLIPS does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-26",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "BOWL. Eating cereal from a bear makes no sense; ORP/BORP non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "Many people wrote letters to CON___N the unfair new law and demand that it be changed.",
+     "after": "I ate my cereal from a big blue B___."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The gap comes inside this word. People speak out against an unfair law. Add “dem” and you get “condemn”, to speak against. Two real words appear here, yet neither belongs.",
+     "after": "“orp” is not a word, so it cannot be the answer. “ear” makes “bear”, which you do not eat from. “owl” makes “bowl”, a dish for cereal."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15ai008dtmzv73f508zk (cmscb15ai008dtmzv73f508zk).value",
+     "before": "DEM",
+     "after": "OWL"
+    },
+    {
+     "field": "option cmscb15ai008etmzv0w3jp8fx (cmscb15ai008etmzv0w3jp8fx).value",
+     "before": "TAI",
+     "after": "EAR"
+    },
+    {
+     "field": "option cmscb15ai008etmzv0w3jp8fx (cmscb15ai008etmzv0w3jp8fx).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONTAIN).",
+     "after": "EAR is itself a word and makes BEAR, a real word, but BEAR does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15ai008ftmzvq3vcg2em (cmscb15ai008ftmzvq3vcg2em).value",
+     "before": "CER",
+     "after": "ORP"
+    },
+    {
+     "field": "option cmscb15ai008ftmzvq3vcg2em (cmscb15ai008ftmzvq3vcg2em).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb15ai008ftmzvq3vcg2em (cmscb15ai008ftmzvq3vcg2em).execution",
+     "before": "Does not fit the sentence, although it makes a real word (CONCERN).",
+     "after": "ORP is not a word, and in the gap it makes BORP, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-36",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "BEETLE. Cattle and a rattle do not crawl across a leaf. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "The boy was told off. He glared in a ___IANT way and refused to say sorry.",
+     "after": "A shiny black ___TLE crawled slowly across the leaf."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "See where the word splits: ___IANT. The boy refuses to say sorry. Add “def” and you get “defiant”, bold and stubborn. Two real words appear here, yet neither belongs.",
+     "after": "All three are little words, so read the sentence. “cat” makes “cattle” and “rat” makes “rattle”, but neither makes sense here. “bee” makes “beetle”, a small insect."
+    },
+    {
+     "field": "option cmscb15b2009htmzvtame6juh (cmscb15b2009htmzvtame6juh).value",
+     "before": "DEF",
+     "after": "BEE"
+    },
+    {
+     "field": "option cmscb15b2009itmzvsral5u3z (cmscb15b2009itmzvsral5u3z).value",
+     "before": "RAD",
+     "after": "CAT"
+    },
+    {
+     "field": "option cmscb15b2009itmzvsral5u3z (cmscb15b2009itmzvsral5u3z).execution",
+     "before": "Does not fit the sentence, although it makes a real word (RADIANT).",
+     "after": "CAT is itself a word and makes CATTLE, a real word, but CATTLE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb15b2009jtmzv97tljlki (cmscb15b2009jtmzv97tljlki).value",
+     "before": "REL",
+     "after": "RAT"
+    },
+    {
+     "field": "option cmscb15b2009jtmzv97tljlki (cmscb15b2009jtmzv97tljlki).execution",
+     "before": "Does not fit the sentence, although it makes a real word (RELIANT).",
+     "after": "RAT is itself a word and makes RATTLE, a real word, but RATTLE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-15",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl",
+    "faultField": "execution"
+   },
+   "reviewerNote": "HOTEL. Staying in a towel or a panel makes no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE.",
+   "landedAt": "2026-11-22T16:36:14.364Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "When I felt ill, Mum took me to see the ___TOR at the surgery.",
+     "after": "On holiday we stayed in a big ___EL by the sea."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read the sentence up to the gap. You feel unwell at the surgery. “doc” turns it into “doctor”, who helps you. The other letters give real words, but not this one.",
+     "after": "All three are little words, so read the sentence. “tow” makes “towel” and “pan” makes “panel”, but neither makes sense here. “hot” makes “hotel”, a place to stay on holiday."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159y0075tmzvznn18hmh (cmscb159y0075tmzvznn18hmh).value",
+     "before": "DOC",
+     "after": "HOT"
+    },
+    {
+     "field": "option cmscb159y0076tmzvlsvi20pq (cmscb159y0076tmzvlsvi20pq).value",
+     "before": "FAC",
+     "after": "TOW"
+    },
+    {
+     "field": "option cmscb159y0076tmzvlsvi20pq (cmscb159y0076tmzvlsvi20pq).execution",
+     "before": "Does not fit the sentence, although it makes a real word (FACTOR).",
+     "after": "TOW is itself a word and makes TOWEL, a real word, but TOWEL does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159y0077tmzvhe5offq1 (cmscb159y0077tmzvhe5offq1).value",
+     "before": "EDI",
+     "after": "PAN"
+    },
+    {
+     "field": "option cmscb159y0077tmzvhe5offq1 (cmscb159y0077tmzvhe5offq1).execution",
+     "before": "Does not fit the sentence, although it makes a real word (EDITOR).",
+     "after": "PAN is itself a word and makes PANEL, a real word, but PANEL does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ]
+  }
+ ]
+}

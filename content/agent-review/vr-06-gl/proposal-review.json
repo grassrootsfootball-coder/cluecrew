@@ -1,0 +1,409 @@
+{
+ "door": "vr-06-gl",
+ "reviewer": "rev-agent-01",
+ "doorChecks": "40 target words distinct and 40 keys distinct. 14 of 40 rows (35%) carry two ignores-sentence distractors, so the rule alone never settles the door. Key values reappear as distractors on other rows (e.g. OUT, PIN, OAT, CUP, PAN), which works against memorising past keys rather than for it. Non-word options are often consonant clusters (GLU, BLU, SNU, PLI), which marks the non-word, not the key, and the non-word is meant to fall to the rule. The key is always the first option in storage; the brief says the app shuffles per child, so this is not a child-visible pattern. Precheck (--from-live): 14 pass, 26 fail, and all 26 failures are the single line 'tag vr06-fits-gap-not-word is not attested'. That will NOT clear on this review: the library entry is REFUSED (verdicts-K.json) on its description; it clears once the description transform lands and the entry is attested.",
+ "changes": [
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-01",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true. Key kept (already a familiar word)."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-02",
+   "verdict": "REFUSE",
+   "reason": "The ignores-sentence distractor RAN makes BRAND, which has a defensible reading in this sentence (a burned mark or scar on the chin). replace RAN with OAR (BOARD), which cannot be on a chin under any reading, and update the execution and walk to match. Rest of the row is clean (EAR/BEARD key, ELO/BELOD non-words, 9-word sentence)."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-03",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-04",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-05",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-06",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-07",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-08",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-09",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-10",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-11",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-12",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-13",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-14",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-15",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-16",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-17",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-18",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-19",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-20",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-21",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-22",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-23",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-24",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-25",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-26",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-27",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-28",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-29",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-30",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-31",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-32",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-33",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-34",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-35",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-36",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-37",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-38",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-39",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-40",
+   "verdict": "ATTEST",
+   "reason": "Old fragment/odd key replaced by a familiar three-letter key under the GL rule; tags name the mistake each value makes on this row; executions true."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-01",
+   "verdict": "SIGN",
+   "reason": "SHOUT. SHARE and SHOWN read into the sentence make no sense; all three values are words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-02",
+   "verdict": "HOLD",
+   "reason": "Not exactly one defensible answer. BRAND has a real noun sense, a mark burned into skin, and 'a long white ___ on his chin' is precisely the frame of a scar ('a long white scar on his chin'), so 'Grandad has a long white brand on his chin' is a coherent sentence a parent can defend. The walk's 'brand does not grow on a chin' relies on 'grow', which the sentence does not say. Fix: replace RAN with OAR (BOARD), which cannot be on a chin under any reading, and update the execution and walk to match. Rest of the row is clean (EAR/BEARD key, ELO/BELOD non-words, 9-word sentence)."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-03",
+   "verdict": "SIGN",
+   "reason": "PLANT. 'to plate the seeds' makes no sense; OST/PLOST non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-04",
+   "verdict": "SIGN",
+   "reason": "STONE. SHADE and SHAME do not make blocks of a wall; TON is a familiar word ('a ton'). Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-05",
+   "verdict": "SIGN",
+   "reason": "CATCH. 'hatch' a thrown ball makes no sense; LOR/LORCH non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-06",
+   "verdict": "SIGN",
+   "reason": "CHIPS. 'fish and crows' / 'fish and clips' for tea make no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-07",
+   "verdict": "SIGN",
+   "reason": "CRASH. 'crown through the fence' makes no sense; OLT/CROLT non-words. CRUSH would also fit but UHS is not offered. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-08",
+   "verdict": "SIGN",
+   "reason": "HONEY. HANDY and HAIRY are adjectives and cannot be what bees make. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-09",
+   "verdict": "SIGN",
+   "reason": "CANDLE. 'lit a middle' makes no sense; PLO/PLODLE non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-10",
+   "verdict": "SIGN",
+   "reason": "HAMMER. SUMMER is not a tool; ROM/ROMMER not in the lexicon and not a word a child knows. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-11",
+   "verdict": "SIGN",
+   "reason": "WINTER. 'In bitter' / 'In hotter the pond froze' make no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-12",
+   "verdict": "SIGN",
+   "reason": "CARPET. A carrot is not for the floor; VOS/CARVOS non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-13",
+   "verdict": "SIGN",
+   "reason": "FOREST. 'deep in the dark lowest' makes no sense; GRU/GRUEST non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-14",
+   "verdict": "SIGN",
+   "reason": "LADDER. You cannot climb a wonder; LAD is familiar British English; BLU/BLUDER non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-15",
+   "verdict": "SIGN",
+   "reason": "HOTEL. Staying in a towel or a panel makes no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-16",
+   "verdict": "SIGN",
+   "reason": "FINGER. 'cut my bigger' makes no sense; GLU/GLUGER non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-17",
+   "verdict": "SIGN",
+   "reason": "SEASIDE. Flagged: BEDSIDE is a familiar compound (bedside table/lamp) and in any case only needs to be recognised as a word; 'went to the bedside and built sandcastles on the beach' does not fit. WOR/WORSIDE non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-18",
+   "verdict": "SIGN",
+   "reason": "PIGLET. An outlet cannot sleep beside its mother; SNU/SNULET non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-19",
+   "verdict": "SIGN",
+   "reason": "SLIDE. Going down a spine or a scare in the park makes no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-20",
+   "verdict": "SIGN",
+   "reason": "FARM. Living on the four or the face down the lane makes no sense; ACE is familiar. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-21",
+   "verdict": "SIGN",
+   "reason": "COMBINE. Flagged: COMPARE is not offered, so it cannot compete; 'the chef will compete the eggs and the flour' is not English; BUL/COMBULE non-words. Not a hold: the walk's 'eggs and flour cannot race' glosses compete loosely, but it is true and not misleading. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-22",
+   "verdict": "SIGN",
+   "reason": "SPIN. A wheel cannot snow; LOM/SLOM non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "verdict": "SIGN",
+   "reason": "KITTEN. 'a tiny black bitten/rotten' is not a noun phrase that fits. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-24",
+   "verdict": "SIGN",
+   "reason": "GATE. Shutting the garden goat makes no sense; ULB/GULB non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-25",
+   "verdict": "SIGN",
+   "reason": "TENT. A cart is not put up or zipped shut; MUF/MUFT non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-26",
+   "verdict": "SIGN",
+   "reason": "BOWL. Eating cereal from a bear makes no sense; ORP/BORP non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-27",
+   "verdict": "SIGN",
+   "reason": "COAT. Putting on a winter cart or care makes no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-28",
+   "verdict": "SIGN",
+   "reason": "CHAIR. Sitting on the cheat or the chill makes no sense. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-29",
+   "verdict": "SIGN",
+   "reason": "LETTER. You do not write and post a matter; PLI/PLITER non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-30",
+   "verdict": "SIGN",
+   "reason": "TEACH. Flagged: 'coach' primes the meaning, which is the sentence doing its job, not a surface cue; COA (COACH) is not offered so the word cannot be copied into the gap. 'pinch us how to swim' is not English; GLA/GLACH non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-31",
+   "verdict": "SIGN",
+   "reason": "TOWN. 'walked into tour' makes no sense; RUL/TRUL non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-32",
+   "verdict": "SIGN",
+   "reason": "SPEND. 'spice my pocket money' makes no sense; ATH/SPATH non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-33",
+   "verdict": "SIGN",
+   "reason": "BUTTON. You cannot press a red cotton to start a machine; GLO/GLOTON non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-34",
+   "verdict": "SIGN",
+   "reason": "STOP. A bus cannot shop or shut outside the gates. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "verdict": "SIGN",
+   "reason": "CLAP. Standing up to chop after a show makes no sense; LUP/CLUP non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-36",
+   "verdict": "SIGN",
+   "reason": "BEETLE. Cattle and a rattle do not crawl across a leaf. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-37",
+   "verdict": "SIGN",
+   "reason": "CUPBOARD. Plates do not go back in a keyboard; FLO/FLOBOARD non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-38",
+   "verdict": "SIGN",
+   "reason": "PANCAKE. A cupcake is not thin and flat; ROP/ROPCAKE non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-39",
+   "verdict": "SIGN",
+   "reason": "MEAT. A butcher does not sell mate or moat. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "verdict": "SIGN",
+   "reason": "STRAW. You cannot drink through a stage; ULK/STULK non-words. Checked: every value put in the gap; key a familiar three-letter word making an everyday target word; lexicon confirms key/ignores-sentence values and their gap words are words and fits-gap-not-word values and gap words are not; one defensible answer; sentence and walk sentences at most 16 words, full stops, no dash, British English; walk true, names the target, no 'wrong'; executions true and over 40 characters; option ids and key option unchanged from LIVE."
+  }
+ ]
+}

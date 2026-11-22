@@ -241,14 +241,18 @@
  },
  {
   "id": "maths-75-incomplete-fraction-of-an-amount",
+  "outcome": "already attested"
+ },
+ {
+  "id": "vr06-fits-gap-not-word",
   "outcome": "TRANSFORMED + ATTESTED",
   "before": {
-   "childHint": "A fraction is two numbers working together. Use both.",
-   "description": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, using only the denominator — treating the fraction as a single number."
+   "childHint": "The missing three letters make a little word all by themselves.",
+   "description": "Chose three letters that fit the gap but do not form a word."
   },
   "after": {
-   "description": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
-   "childHint": "A fraction is two numbers working together. Use both."
+   "description": "Chose three letters that are not a word and make a non-word in the gap.",
+   "childHint": "The missing three letters make a little word all by themselves."
   }
  }
 ]

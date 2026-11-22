@@ -1,0 +1,19 @@
+{
+  "door": "vr-06-gl/r2",
+  "reviewer": "rev-agent-01",
+  "doorChecks": "Precheck (--from-live): 1 row touched, 1 passes every gate, 0 fail; the vr06-fits-gap-not-word attestation failure from round 1 has cleared. Lexicon (loadWordPuzzleLexicon): ear, oar, beard, board are words; elo and belod are not. EAR is the key and BEARD the target on no other row of the vr-06-gl door; OAR appears on no other row.",
+  "changes": [
+    {
+      "ref": "rebuild:bank-vr-06-missing-word-02",
+      "verdict": "ATTEST",
+      "reason": "Round-1 fault fixed: RAN/BRAND, which had a defensible scar reading, is replaced by OAR/BOARD, and a board cannot be on a chin under any reading. OAR is a familiar three-letter word making a real word, so ignores-sentence names the mistake. ELO and BELOD are both non-words, so fits-gap-not-word names the mistake. Both executions are true and over 40 characters. The walk no longer leans on 'grow' to rule out the distractor. Option ids are unchanged, EAR is still on the key option, and the prompt is the GL wording."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "bank-vr-06-missing-word-02",
+      "verdict": "SIGN",
+      "reason": "Read as the child meets it: BEARD fits 'a long white ___ on his chin'. BOARD makes no sense there under any reading, and BELOD is not a word, so there is exactly one defensible answer. Checked: every value put in the gap; the key EAR is a familiar three-letter word making an everyday target; lexicon confirms the word and non-word status of all six strings. The sentence is 10 words with a full stop and no dash, in British English. The walk has three sentences of 10, 11 and 10 words; it rules out the non-word by the rule, then the real word by the sentence, names BEARD, and does not use 'wrong'. No surface pattern gives the key away: EAR and OAR share an ending, so that ending does not single out the key."
+    }
+  ]
+}

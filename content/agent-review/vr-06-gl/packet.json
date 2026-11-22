@@ -1,0 +1,1658 @@
+{
+ "door": "vr-06-gl",
+ "questionType": "vr",
+ "ruling": "R1034",
+ "entries": {
+  "vr06-fits-gap-not-word": {
+   "description": "Chose three letters that fit the gap but do not form a word.",
+   "childHint": "The missing three letters make a little word all by themselves."
+  },
+  "vr06-ignores-sentence": {
+   "description": "Made a real word that does not fit the sentence.",
+   "childHint": "Read the whole sentence with your word in it. Does it make sense?"
+  }
+ },
+ "passages": {},
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-01",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Please do not SH___ so loudly, or you will wake the sleeping baby."
+   },
+   "explanation": {
+    "walkScript": "The frame reads SH___. The line tells you not to be loud. “out” makes “shout”, and shouting wakes the baby. The others are real, but miss the sense.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The frame reads SH___. The line tells you not to be loud. OUT makes SHOUT, and shouting wakes the baby. The others are real, but miss the sense.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "c4101a4514f649819e38ed08e2ce15f17104f005baaa5b20d635e38c25c3f3fe",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb1598005ltmzvuoeh9u7d",
+     "value": "OUT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1598005mtmzvss6hanv3",
+     "value": "ORT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SHORT)."
+    },
+    {
+     "optionId": "cmscb1598005ntmzvyzdusjm8",
+     "value": "INY",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SHINY)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-02",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Mum spread butter on a thick slice of BR___ for my lunch."
+   },
+   "explanation": {
+    "walkScript": "The gap comes after 'slice of'. Mum spreads butter for our lunch. “ead” fills it to make “bread” for eating. Those two form real words, yet none suits here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The gap comes after 'slice of'. Mum spreads butter for our lunch. EAD fills it to make BREAD for eating. Those two form real words, yet none suits here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "5425b10a56cb40adc37faa2465b46011a5e2591f10d5eaa92c1218a2754783d2",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159a005ptmzvirng9y5s",
+     "value": "EAD",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159a005qtmzvs139u84i",
+     "value": "OWN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (BROWN)."
+    },
+    {
+     "optionId": "cmscb159a005rtmzveb1r0s3m",
+     "value": "OKE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (BROKE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-03",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "We dug a small hole in the soil so we could ___NT the flower seeds."
+   },
+   "explanation": {
+    "walkScript": "Read the sentence up to the gap. You dig soil and drop in seeds. “pla” builds “plant”, and you plant the seeds. The others build real words in the odd place.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Read the sentence up to the gap. You dig soil and drop in seeds. PLA builds PLANT, and you plant the seeds. The others build real words in the odd place.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "d181b1b19a1387b0d76d95ee503040ed79d4dbc777cb890835fbac8cf260a7cf",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159c005ttmzvjj7qmgfe",
+     "value": "PLA",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159c005utmzvdr8dnyr8",
+     "value": "GIA",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (GIANT)."
+    },
+    {
+     "optionId": "cmscb159c005vtmzvk8pq35ic",
+     "value": "JOI",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (JOINT)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-04",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The garden wall was built from big blocks of hard grey S___E."
+   },
+   "explanation": {
+    "walkScript": "The word breaks open at S___E. The wall is hard and grey. “ton” completes it as “stone”, the grey blocks. Each other choice makes a real word that misfits.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The word breaks open at S___E. The wall is hard and grey. TON completes it as STONE, the grey blocks. Each other choice makes a real word that misfits.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "4a902b3b7fcd9fe1aac15621d4759bf1558b6884158b960adff324e825392b71",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159e005xtmzvfgf4pjlj",
+     "value": "TON",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159e005ytmzva9r0a5uw",
+     "value": "LID",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SLIDE)."
+    },
+    {
+     "optionId": "cmscb159e005ztmzvh5o3o2y8",
+     "value": "PIC",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SPICE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-05",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "After playing outside, I used soap and water to ___AN my muddy hands."
+   },
+   "explanation": {
+    "walkScript": "Look at the frame ___AN. Soap and water wash your muddy hands. “cle” turns it into “clean”, just like washing. The other letters give real words, but not this one.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Look at the frame ___AN. Soap and water wash your muddy hands. CLE turns it into CLEAN, just like washing. The other letters give real words, but not this one.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "9af6779dd6d1be736928301bb76c18389816a9271b434e04ddfee5262cc6f67a",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159g0061tmzvknhdwt4i",
+     "value": "CLE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159g0062tmzve1quewro",
+     "value": "ORG",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (ORGAN)."
+    },
+    {
+     "optionId": "cmscb159g0063tmzv0kwq8125",
+     "value": "HUM",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (HUMAN)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-06",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Before bed each night I must BR___ my teeth until they are clean and shiny."
+   },
+   "explanation": {
+    "walkScript": "The gap sits in this word. It is about cleaning your teeth. Add “ush” and you get “brush” for teeth. Two real words appear here, yet neither belongs.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The gap sits in this word. It is about cleaning your teeth. Add USH and you get BRUSH for teeth. Two real words appear here, yet neither belongs.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "de81dd1ed0707a83cc9f4e86971ea661a6af4fada26095abd7b4d6e3310b4f3b",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159i0065tmzvvu5pj4lf",
+     "value": "USH",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159i0066tmzv1api5nd0",
+     "value": "OOK",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (BROOK)."
+    },
+    {
+     "optionId": "cmscb159i0067tmzvfxgodjr3",
+     "value": "IEF",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (BRIEF)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-07",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The lorry lost control and began to CR___ through the wooden fence."
+   },
+   "explanation": {
+    "walkScript": "Start at the line and reach the gap. A lorry hits a wooden fence. “ash” gives us “crash”, what a lorry does. The others become real words that break the meaning.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Start at the line and reach the gap. A lorry hits a wooden fence. ASH gives us CRASH, what a lorry does. The others become real words that break the meaning.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "a47d8c010a28dd6f873677cf45ac7da6bddbd5e94270e3704400fc36df2a4efe",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159k0069tmzvtf7mtxxz",
+     "value": "ASH",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159k006atmzvfpdhsqbj",
+     "value": "ANE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CRANE)."
+    },
+    {
+     "optionId": "cmscb159k006btmzvpf2ahoq7",
+     "value": "OWD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CROWD)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-08",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "I used a big ___ON to eat my bowl of hot tomato soup."
+   },
+   "explanation": {
+    "walkScript": "The word stops at ___ON. You need a tool to eat soup. “spo” finishes the word as “spoon” for soup. The other two are real words that miss the sense.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The word stops at ___ON. You need a tool to eat soup. SPO finishes the word as SPOON for soup. The other two are real words that miss the sense.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "fbec4b157ea8e9057e62ab73ddb79d46e60481a02063cd81ab716da70848fcaf",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159m006dtmzvhm8ji1bx",
+     "value": "SPO",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159m006etmzvmz5iqlrm",
+     "value": "MEL",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MELON)."
+    },
+    {
+     "optionId": "cmscb159m006ftmzvb12vr5yu",
+     "value": "ONI",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (ONION)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-09",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The heavy rain was the main ___SE of the flood in our town."
+   },
+   "explanation": {
+    "walkScript": "The letters ___SE mark the frame. Heavy rain led to the flood. Put “cau” in for “cause”, the reason why. The others spell real words, but neither fits here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The letters ___SE mark the frame. Heavy rain led to the flood. Put CAU in for CAUSE, the reason why. The others spell real words, but neither fits here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "8e20cdd541e87f06656072e41e9b30a53f52ccc832ebad4d4e5f3376a4a4f215",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159n006htmzvnv5jc2fe",
+     "value": "CAU",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159n006itmzvryifgdp3",
+     "value": "CHA",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CHASE)."
+    },
+    {
+     "optionId": "cmscb159o006jtmzvhmleskyi",
+     "value": "RIN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (RINSE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-10",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "We watched the ___NE take off from the runway and fly high into the clouds."
+   },
+   "explanation": {
+    "walkScript": "The empty space opens the word. It lifts off a runway into clouds. With “pla” the word is “plane”, which flies. Both other choices are real words, not the right ones.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The empty space opens the word. It lifts off a runway into clouds. With PLA the word is PLANE, which flies. Both other choices are real words, not the right ones.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "7195846e3be74f2e20213a7d983569f01509d4e2c0c4c26df57762630b210d58",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159p006ltmzvdht5bbb7",
+     "value": "PLA",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159p006mtmzvu1hj9nd7",
+     "value": "ALO",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (ALONE)."
+    },
+    {
+     "optionId": "cmscb159p006ntmzvz7zancxq",
+     "value": "OZO",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (OZONE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-11",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The art teacher asked us to ___ATE a bright new painting of our own."
+   },
+   "explanation": {
+    "walkScript": "Follow the line along to the space. The teacher wants a brand new painting. “cre” makes “create”, which means to make something. The rest are real, but do not fit here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Follow the line along to the space. The teacher wants a brand new painting. CRE makes CREATE, which means to make something. The rest are real, but do not fit here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "42f9bbab72ff5377a751bf07026dba272ec864718465513b2f63af0022f236c4",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159r006ptmzvlbkykx6h",
+     "value": "CRE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159r006qtmzvx61ek5qo",
+     "value": "ROT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (ROTATE)."
+    },
+    {
+     "optionId": "cmscb159r006rtmzvvtvlnpti",
+     "value": "UPD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (UPDATE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-12",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Mum bought a soft new CAR___ for the living room floor."
+   },
+   "explanation": {
+    "walkScript": "See where the word splits: CAR___. It is soft on the living room floor. “pet” fills it to make “carpet” for the floor. Those two form real words, yet none suits here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "See where the word splits: CAR___. It is soft on the living room floor. PET fills it to make CARPET for the floor. Those two form real words, yet none suits here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "ca28e8492c50564cc42dab0d155e5bd71a7f82c076e7a4b1ffd153d0f85e4695",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159t006ttmzvgioc05jd",
+     "value": "PET",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159t006utmzvadnodnxv",
+     "value": "EER",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CAREER)."
+    },
+    {
+     "optionId": "cmscb159t006vtmzvqzgbatid",
+     "value": "BON",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CARBON)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-13",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "We walked among the tall trees deep in the dark ___EST."
+   },
+   "explanation": {
+    "walkScript": "The frame reads ___EST. Tall trees stand thick and dark. “for” builds “forest”, a place full of trees. The others build real words in the odd place.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The frame reads ___EST. Tall trees stand thick and dark. FOR builds FOREST, a place full of trees. The others build real words in the odd place.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "f91f5d296ab830753b404a2fa97ce6c55581e8ffc64066d9c3a84eadd23e304f",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159v006xtmzv4wavurz4",
+     "value": "FOR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159v006ytmzv7l6f00bh",
+     "value": "PRI",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (PRIEST)."
+    },
+    {
+     "optionId": "cmscb159v006ztmzvyohot2ml",
+     "value": "INV",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (INVEST)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-14",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "She filled the shopping ___KET with apples, bread and milk."
+   },
+   "explanation": {
+    "walkScript": "The gap comes before “ket”. She shops for apples, bread and milk. “bas” completes it as “basket” to carry shopping. Each other choice makes a real word that misfits.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The gap comes before KET. She shops for apples, bread and milk. BAS completes it as BASKET to carry shopping. Each other choice makes a real word that misfits.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "2c77f0dfb675171f3b767fa35168b2e2688bc273d955ac4254e80ebb0c681f56",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159w0071tmzva0hca61j",
+     "value": "BAS",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159w0072tmzvxepdopu9",
+     "value": "PAC",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (PACKET)."
+    },
+    {
+     "optionId": "cmscb159w0073tmzvwr4afhkt",
+     "value": "SOC",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SOCKET)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-15",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "When I felt ill, Mum took me to see the ___TOR at the surgery."
+   },
+   "explanation": {
+    "walkScript": "Read the sentence up to the gap. You feel unwell at the surgery. “doc” turns it into “doctor”, who helps you. The other letters give real words, but not this one.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Read the sentence up to the gap. You feel unwell at the surgery. DOC turns it into DOCTOR, who helps you. The other letters give real words, but not this one.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "eea829a5f6b727d8f0709f1edcf01a8496b7a839604f1633b36bb8a8aaf4dce4",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb159y0075tmzvznn18hmh",
+     "value": "DOC",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159y0076tmzvlsvi20pq",
+     "value": "FAC",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (FACTOR)."
+    },
+    {
+     "optionId": "cmscb159y0077tmzvhe5offq1",
+     "value": "EDI",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (EDITOR)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-16",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "We planted red roses and runner beans in our back ___DEN."
+   },
+   "explanation": {
+    "walkScript": "The word breaks open at ___DEN. We planted roses and beans out back. Add “gar” and you get “garden” for plants. Two real words appear here, yet neither belongs.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The word breaks open at ___DEN. We planted roses and beans out back. Add GAR and you get GARDEN for plants. Two real words appear here, yet neither belongs.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "0f69d1fe5a9cd103f2ec2dbe836f5ac6679b8759e16c43b4c7a71972d8d3507c",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a00079tmzvjuqj7qsq",
+     "value": "GAR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a0007atmzvf819qxfa",
+     "value": "SUD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUDDEN)."
+    },
+    {
+     "optionId": "cmscb15a0007btmzvvfd4iwwy",
+     "value": "HAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (HARDEN)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-17",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Drivers need a special ___MIT to park a car on this busy road."
+   },
+   "explanation": {
+    "walkScript": "Look at the frame ___MIT. You need a special paper to park. “per” gives us “permit”, the paper you need. The others become real words that break the meaning.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Look at the frame ___MIT. You need a special paper to park. PER gives us PERMIT, the paper you need. The others become real words that break the meaning.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "a7c4e641c3ea26dbbb1bfdcd67e726e32566dfa4645941bc6ab0458b85f0e992",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a2007dtmzvdc3ybpmu",
+     "value": "PER",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a2007etmzvrxutmsge",
+     "value": "SUB",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUBMIT)."
+    },
+    {
+     "optionId": "cmscb15a2007ftmzvmybkyjdi",
+     "value": "SUM",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUMMIT)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-18",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "So many tricky rules began to CON___E the new pupil on her very first day."
+   },
+   "explanation": {
+    "walkScript": "The gap sits in this word. Many tricky rules muddle the new pupil. “fus” finishes the word as “confuse”, to muddle. The other two are real words that miss the sense.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The gap sits in this word. Many tricky rules muddle the new pupil. FUS finishes the word as CONFUSE, to muddle. The other two are real words that miss the sense.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "1fb9ab142e65d183a6c52546e784a535acc6518b3a8584ed5fe9098e6bf2d312",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a4007htmzvqzyy7jot",
+     "value": "FUS",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a4007itmzvtd84poik",
+     "value": "SUM",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONSUME)."
+    },
+    {
+     "optionId": "cmscb15a4007jtmzvfmfu2xaz",
+     "value": "CIS",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONCISE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-19",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The king chose to PAR___ the prisoner, so the man was allowed to go home."
+   },
+   "explanation": {
+    "walkScript": "Start at the line and reach the gap. The king frees the prisoner. Put “don” in for “pardon”, to free. The others spell real words, but neither fits here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Start at the line and reach the gap. The king frees the prisoner. Put DON in for PARDON, to free. The others spell real words, but neither fits here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "498a7d6543eeb5e1eba65003b26e9d4b7edb9509a41e3ce7e77cc73d87626b1f",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a5007ltmzviismldrw",
+     "value": "DON",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a5007mtmzvjhkl4qkc",
+     "value": "ENT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (PARENT)."
+    },
+    {
+     "optionId": "cmscb15a5007ntmzvb2nl4gxv",
+     "value": "ROT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (PARROT)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-20",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "This large wooden box is big enough to CONT___ all of my toys and books."
+   },
+   "explanation": {
+    "walkScript": "The word stops at CONT___. A big box holds all the toys. With “ain” the word is “contain”, to hold. Both other choices are real words, not the right ones.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The word stops at CONT___. A big box holds all the toys. With AIN the word is CONTAIN, to hold. Both other choices are real words, not the right ones.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "5f5dc0795a108c1250d33571945027e40e2fdd873449622c18eb9529feb7de05",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a7007ptmzvr3ssggsh",
+     "value": "AIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a7007qtmzvxlhm5xfq",
+     "value": "ACT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONTACT)."
+    },
+    {
+     "optionId": "cmscb15a7007rtmzv9ueolzcl",
+     "value": "EST",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONTEST)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-21",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The children stopped to MAR___ at the huge, glittering castle."
+   },
+   "explanation": {
+    "walkScript": "The letters MAR___ mark the frame. The children stare at a grand castle. “vel” makes “marvel”, to stare in wonder. The rest are real words that do not suit here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The letters MAR___ mark the frame. The children stare at a grand castle. VEL makes MARVEL, to stare in wonder. The rest are real words that do not suit here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "6923987269c5685f84c65ccc6a2a39b4cc751d86b5642bf14daae6fd63d4d050",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a9007ttmzv9meyam2q",
+     "value": "VEL",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a9007utmzv68jakgot",
+     "value": "BLE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MARBLE)."
+    },
+    {
+     "optionId": "cmscb15a9007vtmzvhp914yzy",
+     "value": "TIN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MARTIN)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-22",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The referee raised his flag to S___AL the start of the running race."
+   },
+   "explanation": {
+    "walkScript": "The empty space sits inside the word. A flag starts the running race. “ign” fills it to make “signal”, a start sign. Those two form real words, yet none suits here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The empty space sits inside the word. A flag starts the running race. IGN fills it to make SIGNAL, a start sign. Those two form real words, yet none suits here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "fc2f174bc62085f8d36c065a075457b17cf2a09a1c12f4cf11e9fe4ab7bc09c4",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ab007xtmzvzpbjcorq",
+     "value": "IGN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ab007ytmzvb3grca9r",
+     "value": "PIR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SPIRAL)."
+    },
+    {
+     "optionId": "cmscb15ab007ztmzv2khfec92",
+     "value": "OCI",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SOCIAL)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The bag of bricks was very heavy. It was a great ___DEN to carry all the way up the hill."
+   },
+   "explanation": {
+    "walkScript": "Follow the line along to the space. A heavy bag is hard to carry. “bur” builds “burden”, a heavy load. The others build real words in the odd place.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Follow the line along to the space. A heavy bag is hard to carry. BUR builds BURDEN, a heavy load. The others build real words in the odd place.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "2408355daf8685fc4ec059b917da0a5c7b9d7c1e2eae92cf9529317969452985",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ad0081tmzvddzdce3f",
+     "value": "BUR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ad0082tmzvxl6x0rpc",
+     "value": "GAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (GARDEN)."
+    },
+    {
+     "optionId": "cmscb15ad0083tmzvka50j64a",
+     "value": "SUD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUDDEN)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-24",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The chef will COM___E the eggs and the flour to make a smooth cake mix."
+   },
+   "explanation": {
+    "walkScript": "See where the word splits: COM___E. The chef mixes eggs and flour. “bin” completes it as “combine”, to mix together. Each other choice makes a real word that misfits.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "See where the word splits: COM___E. The chef mixes eggs and flour. BIN completes it as COMBINE, to mix together. Each other choice makes a real word that misfits.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "25e13b9e77a6f921428006c4c2a59ac84718e8926d5e6397139c03cf7e5a46c8",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ae0085tmzvi70p4le7",
+     "value": "BIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ae0086tmzv4xwhknuk",
+     "value": "PET",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (COMPETE)."
+    },
+    {
+     "optionId": "cmscb15ae0087tmzvslc9rn8g",
+     "value": "PUT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (COMPUTE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-25",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "She tried to CONC___ the birthday present under her bed so no one would find it."
+   },
+   "explanation": {
+    "walkScript": "The frame reads CONC___. She hides the present under her bed. “eal” turns it into “conceal”, meaning to hide. The other letters give real words, but not this one.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The frame reads CONC___. She hides the present under her bed. EAL turns it into CONCEAL, meaning to hide. The other letters give real words, but not this one.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "cd13409cb301135743bce58050635eefbb5ddebfd0e26219231c8db51da01600",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ag0089tmzvunvtv15o",
+     "value": "EAL",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ag008atmzvzlo1v3xj",
+     "value": "ERT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONCERT)."
+    },
+    {
+     "optionId": "cmscb15ag008btmzvq4wrlr95",
+     "value": "ERN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONCERN)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-26",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Many people wrote letters to CON___N the unfair new law and demand that it be changed."
+   },
+   "explanation": {
+    "walkScript": "The gap comes inside this word. People speak out against an unfair law. Add “dem” and you get “condemn”, to speak against. Two real words appear here, yet neither belongs.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The gap comes inside this word. People speak out against an unfair law. Add DEM and you get CONDEMN, to speak against. Two real words appear here, yet neither belongs.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "73cb6b056063f3827cc0a8df7d9dc75bd381a197d4415f160488d14b72acddaf",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ai008dtmzv73f508zk",
+     "value": "DEM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ai008etmzv0w3jp8fx",
+     "value": "TAI",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONTAIN)."
+    },
+    {
+     "optionId": "cmscb15ai008ftmzvq3vcg2em",
+     "value": "CER",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONCERN)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-27",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The famous musician sat down to COMP___ a beautiful new song for the choir."
+   },
+   "explanation": {
+    "walkScript": "Read the sentence up to the gap. The musician writes a new song. “ose” gives us “compose”, to write music. The others become real words that break the meaning.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Read the sentence up to the gap. The musician writes a new song. OSE gives us COMPOSE, to write music. The others become real words that break the meaning.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "f9f11dc7391097d83f1efd91a73873355b5495553101ab91b2362395ae0e5fa7",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ak008htmzv2vvvl03k",
+     "value": "OSE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ak008itmzv207w7fwx",
+     "value": "ETE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (COMPETE)."
+    },
+    {
+     "optionId": "cmscb15ak008jtmzvsez2keux",
+     "value": "ANY",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (COMPANY)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-28",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The king will DEC___E to everyone that the long war is finally over."
+   },
+   "explanation": {
+    "walkScript": "The word breaks open at DEC___E. The king tells everyone the war ended. “lar” finishes the word as “declare”, to announce. The other two are real words that miss the sense.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The word breaks open at DEC___E. The king tells everyone the war ended. LAR finishes the word as DECLARE, to announce. The other two are real words that miss the sense.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "71356f9bbbd51c8f58d7e4b71d58e1ca4fe3c6acaddfad290cef31b296048cd2",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15am008ltmzvwwet292d",
+     "value": "LAR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15am008mtmzvcnbihadq",
+     "value": "EIV",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (DECEIVE)."
+    },
+    {
+     "optionId": "cmscb15am008ntmzv2nsfz5dn",
+     "value": "LIN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (DECLINE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-29",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The waiter gave me a large ___TION of chips on my plate."
+   },
+   "explanation": {
+    "walkScript": "Look at the frame ___TION. The waiter piles chips on the plate. Put “por” in for “portion”, an amount of food. The others spell real words, but neither fits here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Look at the frame ___TION. The waiter piles chips on the plate. Put POR in for PORTION, an amount of food. The others spell real words, but neither fits here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "16276dcb1a1f94be04c953e3eecd69b3a33f519f3d63f50dd79b9ce7f131fc05",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ao008ptmzvhcmjte2a",
+     "value": "POR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ao008qtmzv1h4a6l48",
+     "value": "CAU",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CAUTION)."
+    },
+    {
+     "optionId": "cmscb15ao008rtmzvlyey87ao",
+     "value": "AUC",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (AUCTION)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-30",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "She gave her crying friend a warm hug to CONS___ her after the sad news."
+   },
+   "explanation": {
+    "walkScript": "The gap sits in this word. A warm hug comforts a crying friend. With “ole” the word is “console”, to comfort. Both other choices are real words, not the right ones.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The gap sits in this word. A warm hug comforts a crying friend. With OLE the word is CONSOLE, to comfort. Both other choices are real words, not the right ones.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "70fc94c38b2f46724522ccc48a3eb34a7d95373b3c6a29c0d40f4e66824ed4e5",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15aq008ttmzv3ql7hw1g",
+     "value": "OLE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15aq008utmzvx9j30yo8",
+     "value": "ULT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONSULT)."
+    },
+    {
+     "optionId": "cmscb15ar008vtmzv61kk42ap",
+     "value": "UME",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONSUME)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-31",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The scientist will CON___T a careful test to see how the plants grow."
+   },
+   "explanation": {
+    "walkScript": "Start at the line and reach the gap. The scientist runs a careful test. “duc” makes “conduct”, to carry out a test. The rest are real, but belong somewhere else.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Start at the line and reach the gap. The scientist runs a careful test. DUC makes CONDUCT, to carry out a test. The rest are real, but belong somewhere else.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "8d79932353994a1d168a0de6193b3ab658240655d33e0d1a159ecfbc7139370a",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15as008xtmzvikoe9oa6",
+     "value": "DUC",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15as008ytmzvstlehzn8",
+     "value": "TEN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONTENT)."
+    },
+    {
+     "optionId": "cmscb15as008ztmzvei05e03w",
+     "value": "CER",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CONCERT)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-32",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "It would be very unkind to DE___VE the dog of its food and clean water."
+   },
+   "explanation": {
+    "walkScript": "The word stops at DE___VE. Taking the dog's food away is unkind. “pri” fills it to make “deprive”, to take away. Those two form real words, yet none suits here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The word stops at DE___VE. Taking the dog's food away is unkind. PRI fills it to make DEPRIVE, to take away. Those two form real words, yet none suits here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "ea835412c2a0088d24f567934b130fbb72dcb22cdbf01737d3920a19ee01f235",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15au0091tmzvia0nzqn8",
+     "value": "PRI",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15au0092tmzvts876n1q",
+     "value": "CEI",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (DECEIVE)."
+    },
+    {
+     "optionId": "cmscb15au0093tmzvan8wn1ic",
+     "value": "SER",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (DESERVE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-33",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The dark old house had a strange and ___ISTER feeling that made us shiver."
+   },
+   "explanation": {
+    "walkScript": "The letters ___ISTER mark the frame. The dark old house feels creepy. “sin” builds “sinister”, a creepy, scary feeling. The others build real words in the odd place.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The letters ___ISTER mark the frame. The dark old house feels creepy. SIN builds SINISTER, a creepy, scary feeling. The others build real words in the odd place.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "a1763e5901a1dea66e2a8e638d8228b3efe0dd395b0f0534197e910acabb15cc",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15aw0095tmzvx0vgcuvg",
+     "value": "SIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15aw0096tmzvevo53gfi",
+     "value": "REG",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (REGISTER)."
+    },
+    {
+     "optionId": "cmscb15aw0097tmzvj2v8pvvs",
+     "value": "MIN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MINISTER)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-34",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Dad was so ___IOUS about the broken window that he shouted and stamped his feet."
+   },
+   "explanation": {
+    "walkScript": "The empty space opens the word. Dad shouts and stamps in anger. “fur” completes it as “furious”, very angry indeed. Each other choice makes a real word that misfits.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The empty space opens the word. Dad shouts and stamps in anger. FUR completes it as FURIOUS, very angry indeed. Each other choice makes a real word that misfits.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "6b14b639c5708f2c22f3e706a0cad32d5c8cb15d8b12bc05cddabb312a8b58bd",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ay0099tmzvpwu25ikb",
+     "value": "FUR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ay009atmzve21anwwl",
+     "value": "CUR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (CURIOUS)."
+    },
+    {
+     "optionId": "cmscb15ay009btmzvftrri799",
+     "value": "SER",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SERIOUS)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Mia was waiting for her turn to sing on the stage. She felt very ___IOUS and her tummy was full of butterflies."
+   },
+   "explanation": {
+    "walkScript": "Follow the line along to the space. Mia feels nervous before she sings. “anx” turns it into “anxious”, worried and nervous. The other letters give real words, but not this one.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Follow the line along to the space. Mia feels nervous before she sings. ANX turns it into ANXIOUS, worried and nervous. The other letters give real words, but not this one.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "ce792717297befe12d662d02ac353ab887613162dc6950dbbf8dc5039484d8c8",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b0009dtmzviostj77b",
+     "value": "ANX",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b0009etmzvqcvdywy7",
+     "value": "OBV",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (OBVIOUS)."
+    },
+    {
+     "optionId": "cmscb15b0009ftmzvm80nqw86",
+     "value": "VAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (VARIOUS)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-36",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The boy was told off. He glared in a ___IANT way and refused to say sorry."
+   },
+   "explanation": {
+    "walkScript": "See where the word splits: ___IANT. The boy refuses to say sorry. Add “def” and you get “defiant”, bold and stubborn. Two real words appear here, yet neither belongs.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "See where the word splits: ___IANT. The boy refuses to say sorry. Add DEF and you get DEFIANT, bold and stubborn. Two real words appear here, yet neither belongs.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "beda513239df81878ae0410793c657de9aa9902c12cc34ac5da47ba944f334a7",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b2009htmzvtame6juh",
+     "value": "DEF",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b2009itmzvsral5u3z",
+     "value": "RAD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (RADIANT)."
+    },
+    {
+     "optionId": "cmscb15b2009jtmzv97tljlki",
+     "value": "REL",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (RELIANT)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-37",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The old lighthouse keeper lived a ___ITARY life, all alone on the rocky island."
+   },
+   "explanation": {
+    "walkScript": "The frame reads ___ITARY. The keeper lives all alone on an island. “sol” gives us “solitary”, meaning quite alone. The others become real words that break the meaning.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The frame reads ___ITARY. The keeper lives all alone on an island. SOL gives us SOLITARY, meaning quite alone. The others become real words that break the meaning.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "fa8258d5cc079d29be27fe93b0a11350c9b8a7d0259ca5c925653929bd233687",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b4009ltmzvaka1few9",
+     "value": "SOL",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b4009mtmzvsdwvvaw6",
+     "value": "MIL",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MILITARY)."
+    },
+    {
+     "optionId": "cmscb15b4009ntmzv33qv8i6t",
+     "value": "SAN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SANITARY)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-38",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The blue whale is an ___ENSE animal, far bigger than any other creature in the sea."
+   },
+   "explanation": {
+    "walkScript": "The gap comes before “ense”. The blue whale is hugely big. “imm” finishes the word as “immense”, meaning huge. The other two are real words that miss the sense.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The gap comes before ENSE. The blue whale is hugely big. IMM finishes the word as IMMENSE, meaning huge. The other two are real words that miss the sense.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "2e5fb45429d57181f273797ad2ade61e1b069b35b7d68e50c19c1c3849ce7b73",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b6009ptmzv8g8el5ef",
+     "value": "IMM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b6009qtmzv441ixu8w",
+     "value": "INT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (INTENSE)."
+    },
+    {
+     "optionId": "cmscb15b6009rtmzvvqfvaqfn",
+     "value": "INC",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (INCENSE)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-39",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Because the problem was so serious, the head teacher had to take ___STIC action straight away."
+   },
+   "explanation": {
+    "walkScript": "Read the sentence up to the gap. A serious problem needs action. Put “dra” in for “drastic”, strong and sudden. The others spell real words, but neither fits here.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Read the sentence up to the gap. A serious problem needs action. Put DRA in for DRASTIC, strong and sudden. The others spell real words, but neither fits here.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "9267512986722c1363edde065bebd3de054b519ae157d1eb5e77da821e4ff4d1",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b8009ttmzvt5c3p9ed",
+     "value": "DRA",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b8009utmzvxzkbgsr0",
+     "value": "ELA",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (ELASTIC)."
+    },
+    {
+     "optionId": "cmscb15b8009vtmzvg6gniyk1",
+     "value": "PLA",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (PLASTIC)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Grandad had been ill in bed for a week. He felt tired and ___BLE and could hardly stand."
+   },
+   "explanation": {
+    "walkScript": "The word breaks open at ___BLE. After illness Grandad can hardly stand. With “fee” the word is “feeble”, meaning faint and shaky. Both other choices are real words, not the right ones.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The word breaks open at ___BLE. After illness Grandad can hardly stand. With FEE the word is FEEBLE, meaning faint and shaky. Both other choices are real words, not the right ones.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "a6eaf9702e874185ec5343cdd100a9c15051c121473f9c5051d243951a36c16a",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ba009xtmzvjjbljeqv",
+     "value": "FEE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ba009ytmzvia60zuti",
+     "value": "MAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MARBLE)."
+    },
+    {
+     "optionId": "cmscb15ba009ztmzvzcdpu6oj",
+     "value": "TRE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (TREBLE)."
+    }
+   ]
+  }
+ ]
+}

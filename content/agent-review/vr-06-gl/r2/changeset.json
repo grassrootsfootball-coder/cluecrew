@@ -1,0 +1,68 @@
+{
+ "door": "vr-06-gl/r2",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-02",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06-gl/r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read as the child meets it: BEARD fits 'a long white ___ on his chin'. BOARD makes no sense there under any reading, and BELOD is not a word, so there is exactly one defensible answer. Checked: every value put in the gap; the key EAR is a familiar three-letter word making an everyday target; lexicon confirms the word and non-word status of all six strings. The sentence is 10 words with a full stop and no dash, in British English. The walk has three sentences of 10, 11 and 10 words; it rules out the non-word by the rule, then the real word by the sentence, names BEARD, and does not use 'wrong'. No surface pattern gives the key away: EAR and OAR share an ending, so that ending does not single out the key.",
+   "landedAt": "2026-11-22T16:37:25.650Z",
+   "changes": [
+    {
+     "field": "stem.prompt",
+     "before": "Three letters that make a word are missing. Which three?",
+     "after": "Three letters are missing from the word in capitals. Together they spell a word. Which three?"
+    },
+    {
+     "field": "stem.sentence",
+     "before": "Mum spread butter on a thick slice of BR___ for my lunch.",
+     "after": "Grandad has a long white B___D on his chin."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The gap comes after 'slice of'. Mum spreads butter for our lunch. “ead” fills it to make “bread” for eating. Those two form real words, yet none suits here.",
+     "after": "“elo” is not a word, so it cannot be the answer. “oar” makes “board”, but nobody has a board on their chin. “ear” makes “beard”, the hair that grows on a chin."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb159a005ptmzvirng9y5s (cmscb159a005ptmzvirng9y5s).value",
+     "before": "EAD",
+     "after": "EAR"
+    },
+    {
+     "field": "option cmscb159a005qtmzvs139u84i (cmscb159a005qtmzvs139u84i).value",
+     "before": "OWN",
+     "after": "OAR"
+    },
+    {
+     "field": "option cmscb159a005qtmzvs139u84i (cmscb159a005qtmzvs139u84i).execution",
+     "before": "Does not fit the sentence, although it makes a real word (BROWN).",
+     "after": "OAR is itself a word and makes BOARD, a real word, but a board is not something a person has on their chin. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "field": "option cmscb159a005rtmzveb1r0s3m (cmscb159a005rtmzveb1r0s3m).value",
+     "before": "OKE",
+     "after": "ELO"
+    },
+    {
+     "field": "option cmscb159a005rtmzveb1r0s3m (cmscb159a005rtmzveb1r0s3m).tag",
+     "before": "vr06-ignores-sentence",
+     "after": "vr06-fits-gap-not-word"
+    },
+    {
+     "field": "option cmscb159a005rtmzveb1r0s3m (cmscb159a005rtmzveb1r0s3m).execution",
+     "before": "Does not fit the sentence, although it makes a real word (BROKE).",
+     "after": "ELO is not a word, and in the gap it makes BELOD, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ]
+  }
+ ]
+}

@@ -29280,3 +29280,45 @@ read the content with a different method. Nothing replaces that except the separ
 and the blind calibration sample (R1031). On that sample, the second machine reviewer disagreed on 9
 of 32 machine-signed rows, and every factual claim it made was confirmed. Machine review is the only
 review now, so periodic blind calibration between independent agents is the standing check.
+
+## R1035 — vr-06 Missing Word rebuilt to the GL rule (David, 2026-11-22)
+
+**THE RULING.** David: *"Yes, rebuild them."* The GL missing three-letter-word question rests on one
+rule: the three missing letters are a word by themselves. Of the 40 LIVE keys, only about 9 were
+three-letter words a child knows. All 40 are now rebuilt to the brief in
+`content/agent-review/VR06-GL-REBUILD.md`.
+
+**THE DESIGN.**
+- **Key:** a familiar three-letter word that makes an everyday target word fitting the sentence.
+- **Wrong answers:** a familiar three-letter word making a real word that does not fit
+  (`vr06-ignores-sentence`), and three non-word letters making a non-word (`vr06-fits-gap-not-word`).
+- **14 of 40 rows have two `ignores-sentence` answers,** so the rule alone never settles the door.
+- **New prompt on all 40:** "Three letters are missing from the word in capitals. Together they
+  spell a word. Which three?"
+- **Distinct:** all 40 target words and all 40 keys. Option ids and the key option are unchanged,
+  so attempt history is intact.
+
+**REVIEW.**
+- A drafting agent proposed and a separate agent reviewed: 39 signed, row 02 refused. Its RAN
+  answer made BRAND, which could defend "a white brand on his chin". Round 2 replaced RAN with OAR
+  (BOARD), and that was signed.
+- The library entry `vr06-fits-gap-not-word` was ACTIVE but had never been attested. The reviewer
+  REFUSED its description: "fit the gap" was false on every new carrier, and it described exactly
+  the fragment keys being removed. A second, independent agent attested the transform. The
+  description is now "Chose three letters that are not a word and make a non-word in the gap." The
+  child hint ("The missing three letters make a little word all by themselves.") is unchanged.
+
+**VERIFIED AFTER LANDING.**
+- vr-06 is 40 of 40 LIVE, and the new prompt is on all 40.
+- `check:word-puzzles` screened 305 word-puzzle items: **0 vr-06 faults.** It mechanically checks
+  that the key makes a word, ignores-sentence answers make words, and fits-gap answers make
+  non-words. Its 14 failures are all `vr-05` join ambiguities that were open before today.
+- Every change is in the door's `changeset.json`. Nothing is returned (R1034).
+
+**INCIDENT, STATED.** While the 39 rows landed `--from-live`, the vr-06 pool briefly held one LIVE
+row on the dev database, then was republished to 40. No child saw it.
+
+**FOUND ALONGSIDE.** 7 other ACTIVE library entries have never been attested: `en-multimark-single-answer`,
+`en-surface-word-match-multiselect`, `vr-series-direction`, `vr01-sound-alike`, `vr10-reversed`,
+`vr10-topic-match` and `vr12-wrong-order`. None carries a LIVE option today, so nothing a child sees
+depends on them. Any door that tags one will be refused by the lander until it is attested.

@@ -1,0 +1,1368 @@
+{
+ "door": "vr-06-gl",
+ "proposer": "agent",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "bank-vr-06-missing-word-01",
+   "why": "R1034 GL rebuild. Target word SHOUT kept: its key OUT is already a familiar three-letter word. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Please do not SH___ so loudly, or you will wake the baby."
+   },
+   "options": [
+    {
+     "optionId": "cmscb1598005ltmzvuoeh9u7d",
+     "value": "OUT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1598005mtmzvss6hanv3",
+     "value": "ARE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ARE is itself a word and makes SHARE, a real word, but SHARE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb1598005ntmzvyzdusjm8",
+     "value": "OWN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "OWN is itself a word and makes SHOWN, a real word, but SHOWN does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “are” makes “share” and “own” makes “shown”, but neither makes sense here. “out” makes “shout”, and shouting would wake the baby."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-02",
+   "why": "R1034 GL rebuild. Old key EAD (target from “Mum spread butter on a thick slice of BR___ for my lunch.”) is not a familiar three-letter word, so a new target word, BEARD, with key EAR. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Grandad has a long white B___D on his chin."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159a005ptmzvirng9y5s",
+     "value": "EAR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159a005qtmzvs139u84i",
+     "value": "RAN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "RAN is itself a word and makes BRAND, a real word, but BRAND does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159a005rtmzveb1r0s3m",
+     "value": "ELO",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "ELO is not a word, and in the gap it makes BELOD, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“elo” is not a word, so it cannot be the answer. “ran” makes “brand”, which does not grow on a chin. “ear” makes “beard”, the hair that grows on a chin."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-03",
+   "why": "R1034 GL rebuild. Old key PLA (target from “We dug a small hole in the soil so we could ___NT the flower seeds.”) is not a familiar three-letter word, so a new target word, PLANT, with key ANT. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We dug a small hole in the soil to PL___ the seeds."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159c005ttmzvjj7qmgfe",
+     "value": "ANT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159c005utmzvdr8dnyr8",
+     "value": "ATE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ATE is itself a word and makes PLATE, a real word, but PLATE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159c005vtmzvk8pq35ic",
+     "value": "OST",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "OST is not a word, and in the gap it makes PLOST, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“ost” is not a word, so it cannot be the answer. “ate” makes “plate”, which is not what you do with seeds. “ant” makes “plant”, which is what you do with seeds."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-04",
+   "why": "R1034 GL rebuild. Target word STONE kept: its key TON is already a familiar three-letter word. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The garden wall was built from big blocks of hard grey S___E."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159e005xtmzvfgf4pjlj",
+     "value": "TON",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159e005ytmzva9r0a5uw",
+     "value": "HAD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "HAD is itself a word and makes SHADE, a real word, but SHADE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159e005ztmzvh5o3o2y8",
+     "value": "HAM",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "HAM is itself a word and makes SHAME, a real word, but SHAME does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “had” makes “shade” and “ham” makes “shame”, but neither makes sense here. “ton” makes “stone”, which is hard and grey."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-05",
+   "why": "R1034 GL rebuild. Old key CLE (target from “After playing outside, I used soap and water to ___AN my muddy hands.”) is not a familiar three-letter word, so a new target word, CATCH, with key CAT. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Throw me the ball and I will try to ___CH it."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159g0061tmzvknhdwt4i",
+     "value": "CAT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159g0062tmzve1quewro",
+     "value": "HAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "HAT is itself a word and makes HATCH, a real word, but HATCH does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159g0063tmzv0kwq8125",
+     "value": "LOR",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "LOR is not a word, and in the gap it makes LORCH, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“lor” is not a word, so it cannot be the answer. “hat” makes “hatch”, but a ball does not hatch. “cat” makes “catch”, and you catch a ball."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-06",
+   "why": "R1034 GL rebuild. Old key USH (target from “Before bed each night I must BR___ my teeth until they are clean and shiny.”) is not a familiar three-letter word, so a new target word, CHIPS, with key HIP. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We had fish and C___S for tea on Friday."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159i0065tmzvvu5pj4lf",
+     "value": "HIP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159i0066tmzv1api5nd0",
+     "value": "ROW",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ROW is itself a word and makes CROWS, a real word, but CROWS does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159i0067tmzvfxgodjr3",
+     "value": "LIP",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "LIP is itself a word and makes CLIPS, a real word, but CLIPS does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “row” makes “crows” and “lip” makes “clips”, but neither makes sense here. “hip” makes “chips”, which go with fish for tea."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-07",
+   "why": "R1034 GL rebuild. Target word CRASH kept: its key ASH is already a familiar three-letter word. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The lorry lost control and began to CR___ through the wooden fence."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159k0069tmzvtf7mtxxz",
+     "value": "ASH",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159k006atmzvfpdhsqbj",
+     "value": "OWN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "OWN is itself a word and makes CROWN, a real word, but CROWN does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159k006btmzvpf2ahoq7",
+     "value": "OLT",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "OLT is not a word, and in the gap it makes CROLT, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“olt” is not a word, so it cannot be the answer. “own” makes “crown”, which a lorry cannot do to a fence. “ash” makes “crash”, which is what a lorry out of control does."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-08",
+   "why": "R1034 GL rebuild. Old key SPO (target from “I used a big ___ON to eat my bowl of hot tomato soup.”) is not a familiar three-letter word, so a new target word, HONEY, with key ONE. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Bees make sweet H___Y inside their hive."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159m006dtmzvhm8ji1bx",
+     "value": "ONE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159m006etmzvmz5iqlrm",
+     "value": "AND",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "AND is itself a word and makes HANDY, a real word, but HANDY does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159m006ftmzvb12vr5yu",
+     "value": "AIR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "AIR is itself a word and makes HAIRY, a real word, but HAIRY does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “and” makes “handy” and “air” makes “hairy”, but neither makes sense here. “one” makes “honey”, which is what bees make."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-09",
+   "why": "R1034 GL rebuild. Old key CAU (target from “The heavy rain was the main ___SE of the flood in our town.”) is not a familiar three-letter word, so a new target word, CANDLE, with key CAN. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Mum lit a ___DLE on top of my birthday cake."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159n006htmzvnv5jc2fe",
+     "value": "CAN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159n006itmzvryifgdp3",
+     "value": "MID",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "MID is itself a word and makes MIDDLE, a real word, but MIDDLE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159o006jtmzvhmleskyi",
+     "value": "PLO",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "PLO is not a word, and in the gap it makes PLODLE, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“plo” is not a word, so it cannot be the answer. “mid” makes “middle”, but you cannot light a middle. “can” makes “candle”, and you light a candle on a cake."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-10",
+   "why": "R1034 GL rebuild. Old key PLA (target from “We watched the ___NE take off from the runway and fly high into the clouds.”) is not a familiar three-letter word, so a new target word, HAMMER, with key HAM. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Dad used a ___MER to bang the nail into the wood."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159p006ltmzvdht5bbb7",
+     "value": "HAM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159p006mtmzvu1hj9nd7",
+     "value": "SUM",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "SUM is itself a word and makes SUMMER, a real word, but SUMMER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159p006ntmzvz7zancxq",
+     "value": "ROM",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "ROM is not a word, and in the gap it makes ROMMER, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“rom” is not a word, so it cannot be the answer. “sum” makes “summer”, which is not a tool. “ham” makes “hammer”, a tool for banging in nails."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-11",
+   "why": "R1034 GL rebuild. Old key CRE (target from “The art teacher asked us to ___ATE a bright new painting of our own.”) is not a familiar three-letter word, so a new target word, WINTER, with key WIN. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "In ___TER the pond froze and snow fell on the hills."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159r006ptmzvlbkykx6h",
+     "value": "WIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159r006qtmzvx61ek5qo",
+     "value": "BIT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "BIT is itself a word and makes BITTER, a real word, but BITTER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159r006rtmzvvtvlnpti",
+     "value": "HOT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "HOT is itself a word and makes HOTTER, a real word, but HOTTER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “bit” makes “bitter” and “hot” makes “hotter”, but neither makes sense here. “win” makes “winter”, the cold time of year."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-12",
+   "why": "R1034 GL rebuild. Target word CARPET kept: its key PET is already a familiar three-letter word. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Mum bought a soft new CAR___ for the living room floor."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159t006ttmzvgioc05jd",
+     "value": "PET",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159t006utmzvadnodnxv",
+     "value": "ROT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ROT is itself a word and makes CARROT, a real word, but CARROT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159t006vtmzvqzgbatid",
+     "value": "VOS",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "VOS is not a word, and in the gap it makes CARVOS, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“vos” is not a word, so it cannot be the answer. “rot” makes “carrot”, which does not cover a floor. “pet” makes “carpet”, which covers a floor."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-13",
+   "why": "R1034 GL rebuild. Target word FOREST kept: its key FOR is already a familiar three-letter word. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We walked among the tall trees deep in the dark ___EST."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159v006xtmzv4wavurz4",
+     "value": "FOR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159v006ytmzv7l6f00bh",
+     "value": "LOW",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "LOW is itself a word and makes LOWEST, a real word, but LOWEST does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159v006ztmzvyohot2ml",
+     "value": "GRU",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "GRU is not a word, and in the gap it makes GRUEST, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“gru” is not a word, so it cannot be the answer. “low” makes “lowest”, which is not a place. “for” makes “forest”, a place full of trees."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-14",
+   "why": "R1034 GL rebuild. Old key BAS (target from “She filled the shopping ___KET with apples, bread and milk.”) is not a familiar three-letter word, so a new target word, LADDER, with key LAD. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Dad climbed up the ___DER to fix a tile on the roof."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159w0071tmzva0hca61j",
+     "value": "LAD",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159w0072tmzvxepdopu9",
+     "value": "WON",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "WON is itself a word and makes WONDER, a real word, but WONDER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159w0073tmzvwr4afhkt",
+     "value": "BLU",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "BLU is not a word, and in the gap it makes BLUDER, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“blu” is not a word, so it cannot be the answer. “won” makes “wonder”, which you cannot climb. “lad” makes “ladder”, which you climb to reach a roof."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-15",
+   "why": "R1034 GL rebuild. Old key DOC (target from “When I felt ill, Mum took me to see the ___TOR at the surgery.”) is not a familiar three-letter word, so a new target word, HOTEL, with key HOT. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "On holiday we stayed in a big ___EL by the sea."
+   },
+   "options": [
+    {
+     "optionId": "cmscb159y0075tmzvznn18hmh",
+     "value": "HOT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb159y0076tmzvlsvi20pq",
+     "value": "TOW",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "TOW is itself a word and makes TOWEL, a real word, but TOWEL does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb159y0077tmzvhe5offq1",
+     "value": "PAN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "PAN is itself a word and makes PANEL, a real word, but PANEL does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “tow” makes “towel” and “pan” makes “panel”, but neither makes sense here. “hot” makes “hotel”, a place to stay on holiday."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-16",
+   "why": "R1034 GL rebuild. Old key GAR (target from “We planted red roses and runner beans in our back ___DEN.”) is not a familiar three-letter word, so a new target word, FINGER, with key FIN. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I cut my ___GER on a sharp knife, so Mum found a plaster."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a00079tmzvjuqj7qsq",
+     "value": "FIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a0007atmzvf819qxfa",
+     "value": "BIG",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "BIG is itself a word and makes BIGGER, a real word, but BIGGER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15a0007btmzvvfd4iwwy",
+     "value": "GLU",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "GLU is not a word, and in the gap it makes GLUGER, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“glu” is not a word, so it cannot be the answer. “big” makes “bigger”, which is not a part of you. “fin” makes “finger”, a part of your hand."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-17",
+   "why": "R1034 GL rebuild. Old key PER (target from “Drivers need a special ___MIT to park a car on this busy road.”) is not a familiar three-letter word, so a new target word, SEASIDE, with key SEA. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We went to the ___SIDE and built sandcastles on the beach."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a2007dtmzvdc3ybpmu",
+     "value": "SEA",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a2007etmzvrxutmsge",
+     "value": "BED",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "BED is itself a word and makes BEDSIDE, a real word, but BEDSIDE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15a2007ftmzvmybkyjdi",
+     "value": "WOR",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "WOR is not a word, and in the gap it makes WORSIDE, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“wor” is not a word, so it cannot be the answer. “bed” makes “bedside”, which has no beach. “sea” makes “seaside”, which is where the beach is."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-18",
+   "why": "R1034 GL rebuild. Old key FUS (target from “So many tricky rules began to CON___E the new pupil on her very first day.”) is not a familiar three-letter word, so a new target word, PIGLET, with key PIG. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "A tiny pink ___LET slept beside its mother in the straw."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a4007htmzvqzyy7jot",
+     "value": "PIG",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a4007itmzvtd84poik",
+     "value": "OUT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "OUT is itself a word and makes OUTLET, a real word, but OUTLET does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15a4007jtmzvfmfu2xaz",
+     "value": "SNU",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "SNU is not a word, and in the gap it makes SNULET, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“snu” is not a word, so it cannot be the answer. “out” makes “outlet”, which cannot sleep. “pig” makes “piglet”, a baby pig."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-19",
+   "why": "R1034 GL rebuild. Old key DON (target from “The king chose to PAR___ the prisoner, so the man was allowed to go home.”) is not a familiar three-letter word, so a new target word, SLIDE, with key LID. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We took turns to go down the big S___E in the park."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a5007ltmzviismldrw",
+     "value": "LID",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a5007mtmzvjhkl4qkc",
+     "value": "PIN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "PIN is itself a word and makes SPINE, a real word, but SPINE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15a5007ntmzvb2nl4gxv",
+     "value": "CAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "CAR is itself a word and makes SCARE, a real word, but SCARE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “pin” makes “spine” and “car” makes “scare”, but neither makes sense here. “lid” makes “slide”, which you go down in a park."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-20",
+   "why": "R1034 GL rebuild. Old key AIN (target from “This large wooden box is big enough to CONT___ all of my toys and books.”) is not a familiar three-letter word, so a new target word, FARM, with key ARM. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Cows, pigs and sheep live on the F___ down the lane."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a7007ptmzvr3ssggsh",
+     "value": "ARM",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a7007qtmzvxlhm5xfq",
+     "value": "OUR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "OUR is itself a word and makes FOUR, a real word, but FOUR does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15a7007rtmzv9ueolzcl",
+     "value": "ACE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ACE is itself a word and makes FACE, a real word, but FACE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “our” makes “four” and “ace” makes “face”, but neither makes sense here. “arm” makes “farm”, which is where cows and pigs live."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-21",
+   "why": "R1034 GL rebuild. Old key VEL (target from “The children stopped to MAR___ at the huge, glittering castle.”) is not a familiar three-letter word, so a new target word, COMBINE, with key BIN. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The chef will COM___E the eggs and the flour to make a smooth cake mix."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15a9007ttmzv9meyam2q",
+     "value": "BIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15a9007utmzv68jakgot",
+     "value": "PET",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "PET is itself a word and makes COMPETE, a real word, but COMPETE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15a9007vtmzvhp914yzy",
+     "value": "BUL",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "BUL is not a word, and in the gap it makes COMBULE, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“bul” is not a word, so it cannot be the answer. “pet” makes “compete”, but eggs and flour cannot race. “bin” makes “combine”, which means mix them together."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-22",
+   "why": "R1034 GL rebuild. Old key IGN (target from “The referee raised his flag to S___AL the start of the running race.”) is not a familiar three-letter word, so a new target word, SPIN, with key PIN. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I watched the wheel S___ round and round very fast."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ab007xtmzvzpbjcorq",
+     "value": "PIN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ab007ytmzvb3grca9r",
+     "value": "NOW",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "NOW is itself a word and makes SNOW, a real word, but SNOW does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ab007ztmzv2khfec92",
+     "value": "LOM",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "LOM is not a word, and in the gap it makes SLOM, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“lom” is not a word, so it cannot be the answer. “now” makes “snow”, but a wheel cannot snow. “pin” makes “spin”, which means turn round and round."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "why": "R1034 GL rebuild. Old key BUR (target from “The bag of bricks was very heavy. It was a great ___DEN to carry all the way up the hill.”) is not a familiar three-letter word, so a new target word, KITTEN, with key KIT. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Our cat had a tiny black ___TEN with white paws."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ad0081tmzvddzdce3f",
+     "value": "KIT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ad0082tmzvxl6x0rpc",
+     "value": "BIT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "BIT is itself a word and makes BITTEN, a real word, but BITTEN does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ad0083tmzvka50j64a",
+     "value": "ROT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ROT is itself a word and makes ROTTEN, a real word, but ROTTEN does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “bit” makes “bitten” and “rot” makes “rotten”, but neither makes sense here. “kit” makes “kitten”, a baby cat."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-24",
+   "why": "R1034 GL rebuild. Old key BIN (target from “The chef will COM___E the eggs and the flour to make a smooth cake mix.”) is not a familiar three-letter word, so a new target word, GATE, with key ATE. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We shut the garden G___ so the dog could not get out."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ae0085tmzvi70p4le7",
+     "value": "ATE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ae0086tmzv4xwhknuk",
+     "value": "OAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "OAT is itself a word and makes GOAT, a real word, but GOAT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ae0087tmzvslc9rn8g",
+     "value": "ULB",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "ULB is not a word, and in the gap it makes GULB, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“ulb” is not a word, so it cannot be the answer. “oat” makes “goat”, which is an animal, not something you shut. “ate” makes “gate”, which keeps the dog in."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-25",
+   "why": "R1034 GL rebuild. Old key EAL (target from “She tried to CONC___ the birthday present under her bed so no one would find it.”) is not a familiar three-letter word, so a new target word, TENT, with key TEN. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We put up our ___T in the field and zipped the door shut."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ag0089tmzvunvtv15o",
+     "value": "TEN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ag008atmzvzlo1v3xj",
+     "value": "CAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "CAR is itself a word and makes CART, a real word, but CART does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ag008btmzvq4wrlr95",
+     "value": "MUF",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "MUF is not a word, and in the gap it makes MUFT, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“muf” is not a word, so it cannot be the answer. “car” makes “cart”, which you do not put up or zip. “ten” makes “tent”, which you put up and sleep in."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-26",
+   "why": "R1034 GL rebuild. Old key DEM (target from “Many people wrote letters to CON___N the unfair new law and demand that it be changed.”) is not a familiar three-letter word, so a new target word, BOWL, with key OWL. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I ate my cereal from a big blue B___."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ai008dtmzv73f508zk",
+     "value": "OWL",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ai008etmzv0w3jp8fx",
+     "value": "EAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "EAR is itself a word and makes BEAR, a real word, but BEAR does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ai008ftmzvq3vcg2em",
+     "value": "ORP",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "ORP is not a word, and in the gap it makes BORP, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“orp” is not a word, so it cannot be the answer. “ear” makes “bear”, which you do not eat from. “owl” makes “bowl”, a dish for cereal."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-27",
+   "why": "R1034 GL rebuild. Old key OSE (target from “The famous musician sat down to COMP___ a beautiful new song for the choir.”) is not a familiar three-letter word, so a new target word, COAT, with key OAT. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "It was very cold, so I put on my thick winter C___."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ak008htmzv2vvvl03k",
+     "value": "OAT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ak008itmzv207w7fwx",
+     "value": "ART",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ART is itself a word and makes CART, a real word, but CART does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ak008jtmzvsez2keux",
+     "value": "ARE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ARE is itself a word and makes CARE, a real word, but CARE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “art” makes “cart” and “are” makes “care”, but neither makes sense here. “oat” makes “coat”, which keeps you warm."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-28",
+   "why": "R1034 GL rebuild. Old key LAR (target from “The king will DEC___E to everyone that the long war is finally over.”) is not a familiar three-letter word, so a new target word, CHAIR, with key AIR. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Please sit on the CH___ by the window and wait."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15am008ltmzvwwet292d",
+     "value": "AIR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15am008mtmzvcnbihadq",
+     "value": "EAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "EAT is itself a word and makes CHEAT, a real word, but CHEAT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15am008ntmzv2nsfz5dn",
+     "value": "ILL",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ILL is itself a word and makes CHILL, a real word, but CHILL does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “eat” makes “cheat” and “ill” makes “chill”, but neither makes sense here. “air” makes “chair”, something you sit on."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-29",
+   "why": "R1034 GL rebuild. Old key POR (target from “The waiter gave me a large ___TION of chips on my plate.”) is not a familiar three-letter word, so a new target word, LETTER, with key LET. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I wrote a ___TER to Granny and posted it in the red box."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ao008ptmzvhcmjte2a",
+     "value": "LET",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ao008qtmzv1h4a6l48",
+     "value": "MAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "MAT is itself a word and makes MATTER, a real word, but MATTER does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ao008rtmzvlyey87ao",
+     "value": "PLI",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "PLI is not a word, and in the gap it makes PLITER, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“pli” is not a word, so it cannot be the answer. “mat” makes “matter”, which you cannot post. “let” makes “letter”, which you write and post."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-30",
+   "why": "R1034 GL rebuild. Old key OLE (target from “She gave her crying friend a warm hug to CONS___ her after the sad news.”) is not a familiar three-letter word, so a new target word, TEACH, with key TEA. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Our coach will ___CH us how to swim this term."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15aq008ttmzv3ql7hw1g",
+     "value": "TEA",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15aq008utmzvx9j30yo8",
+     "value": "PIN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "PIN is itself a word and makes PINCH, a real word, but PINCH does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ar008vtmzv61kk42ap",
+     "value": "GLA",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "GLA is not a word, and in the gap it makes GLACH, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“gla” is not a word, so it cannot be the answer. “pin” makes “pinch”, which is not how you learn to swim. “tea” makes “teach”, which means help us learn."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-31",
+   "why": "R1034 GL rebuild. Old key DUC (target from “The scientist will CON___T a careful test to see how the plants grow.”) is not a familiar three-letter word, so a new target word, TOWN, with key OWN. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We walked into T___ to buy some new shoes."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15as008xtmzvikoe9oa6",
+     "value": "OWN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15as008ytmzvstlehzn8",
+     "value": "OUR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "OUR is itself a word and makes TOUR, a real word, but TOUR does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15as008ztmzvei05e03w",
+     "value": "RUL",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "RUL is not a word, and in the gap it makes TRUL, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“rul” is not a word, so it cannot be the answer. “our” makes “tour”, which you cannot walk into to buy shoes. “own” makes “town”, which is where the shops are."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-32",
+   "why": "R1034 GL rebuild. Old key PRI (target from “It would be very unkind to DE___VE the dog of its food and clean water.”) is not a familiar three-letter word, so a new target word, SPEND, with key END. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I will SP___ my pocket money on sweets at the shop."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15au0091tmzvia0nzqn8",
+     "value": "END",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15au0092tmzvts876n1q",
+     "value": "ICE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ICE is itself a word and makes SPICE, a real word, but SPICE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15au0093tmzvan8wn1ic",
+     "value": "ATH",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "ATH is not a word, and in the gap it makes SPATH, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“ath” is not a word, so it cannot be the answer. “ice” makes “spice”, which makes no sense with money. “end” makes “spend”, which means use it to buy things."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-33",
+   "why": "R1034 GL rebuild. Old key SIN (target from “The dark old house had a strange and ___ISTER feeling that made us shiver.”) is not a familiar three-letter word, so a new target word, BUTTON, with key BUT. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Please press the red ___TON to make the machine start."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15aw0095tmzvx0vgcuvg",
+     "value": "BUT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15aw0096tmzvevo53gfi",
+     "value": "COT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "COT is itself a word and makes COTTON, a real word, but COTTON does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15aw0097tmzvj2v8pvvs",
+     "value": "GLO",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "GLO is not a word, and in the gap it makes GLOTON, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“glo” is not a word, so it cannot be the answer. “cot” makes “cotton”, which you cannot press to start a machine. “but” makes “button”, something you press."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-34",
+   "why": "R1034 GL rebuild. Old key FUR (target from “Dad was so ___IOUS about the broken window that he shouted and stamped his feet.”) is not a familiar three-letter word, so a new target word, STOP, with key TOP. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The bus will S___ outside the school gates at three o'clock."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ay0099tmzvpwu25ikb",
+     "value": "TOP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ay009atmzve21anwwl",
+     "value": "HOP",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "HOP is itself a word and makes SHOP, a real word, but SHOP does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ay009btmzvftrri799",
+     "value": "HUT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "HUT is itself a word and makes SHUT, a real word, but SHUT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “hop” makes “shop” and “hut” makes “shut”, but neither makes sense here. “top” makes “stop”, which a bus does to let people on."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "why": "R1034 GL rebuild. Old key ANX (target from “Mia was waiting for her turn to sing on the stage. She felt very ___IOUS and her tummy was full of butterflies.”) is not a familiar three-letter word, so a new target word, CLAP, with key LAP. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "At the end of the show we all stood up to C___."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b0009dtmzviostj77b",
+     "value": "LAP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b0009etmzvqcvdywy7",
+     "value": "HOP",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "HOP is itself a word and makes CHOP, a real word, but CHOP does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15b0009ftmzvm80nqw86",
+     "value": "LUP",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "LUP is not a word, and in the gap it makes CLUP, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“lup” is not a word, so it cannot be the answer. “hop” makes “chop”, which people do not do after a show. “lap” makes “clap”, which people do when a show ends."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-36",
+   "why": "R1034 GL rebuild. Old key DEF (target from “The boy was told off. He glared in a ___IANT way and refused to say sorry.”) is not a familiar three-letter word, so a new target word, BEETLE, with key BEE. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "A shiny black ___TLE crawled slowly across the leaf."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b2009htmzvtame6juh",
+     "value": "BEE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b2009itmzvsral5u3z",
+     "value": "CAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "CAT is itself a word and makes CATTLE, a real word, but CATTLE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15b2009jtmzv97tljlki",
+     "value": "RAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "RAT is itself a word and makes RATTLE, a real word, but RATTLE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “cat” makes “cattle” and “rat” makes “rattle”, but neither makes sense here. “bee” makes “beetle”, a small insect."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-37",
+   "why": "R1034 GL rebuild. Old key SOL (target from “The old lighthouse keeper lived a ___ITARY life, all alone on the rocky island.”) is not a familiar three-letter word, so a new target word, CUPBOARD, with key CUP. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Please put the clean plates back in the ___BOARD."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b4009ltmzvaka1few9",
+     "value": "CUP",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b4009mtmzvsdwvvaw6",
+     "value": "KEY",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "KEY is itself a word and makes KEYBOARD, a real word, but KEYBOARD does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15b4009ntmzv33qv8i6t",
+     "value": "FLO",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "FLO is not a word, and in the gap it makes FLOBOARD, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“flo” is not a word, so it cannot be the answer. “key” makes “keyboard”, which is not where plates go. “cup” makes “cupboard”, which is where plates are kept."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-38",
+   "why": "R1034 GL rebuild. Old key IMM (target from “The blue whale is an ___ENSE animal, far bigger than any other creature in the sea.”) is not a familiar three-letter word, so a new target word, PANCAKE, with key PAN. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Dad flipped a thin, flat ___CAKE high into the air."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b6009ptmzv8g8el5ef",
+     "value": "PAN",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b6009qtmzv441ixu8w",
+     "value": "CUP",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "CUP is itself a word and makes CUPCAKE, a real word, but CUPCAKE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15b6009rtmzvvqfvaqfn",
+     "value": "ROP",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "ROP is not a word, and in the gap it makes ROPCAKE, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“rop” is not a word, so it cannot be the answer. “cup” makes “cupcake”, which is not thin and flat. “pan” makes “pancake”, which is thin and flat."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-39",
+   "why": "R1034 GL rebuild. Old key DRA (target from “Because the problem was so serious, the head teacher had to take ___STIC action straight away.”) is not a familiar three-letter word, so a new target word, MEAT, with key EAT. Shape: two ignores-sentence distractors. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The butcher sells fresh M___ and sausages in his shop."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b8009ttmzvt5c3p9ed",
+     "value": "EAT",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b8009utmzvxzkbgsr0",
+     "value": "ATE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "ATE is itself a word and makes MATE, a real word, but MATE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15b8009vtmzvg6gniyk1",
+     "value": "OAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "OAT is itself a word and makes MOAT, a real word, but MOAT does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "All three are little words, so read the sentence. “ate” makes “mate” and “oat” makes “moat”, but neither makes sense here. “eat” makes “meat”, which is what a butcher sells."
+   }
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "why": "R1034 GL rebuild. Old key FEE (target from “Grandad had been ill in bed for a week. He felt tired and ___BLE and could hardly stand.”) is not a familiar three-letter word, so a new target word, STRAW, with key RAW. Shape: one ignores-sentence and one fits-gap-not-word distractor. Prompt set to the GL wording; walk script rewritten to show the rule then the sentence.",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I drank my milkshake through a bendy ST___."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ba009xtmzvjjbljeqv",
+     "value": "RAW",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ba009ytmzvia60zuti",
+     "value": "AGE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "AGE is itself a word and makes STAGE, a real word, but STAGE does not fit this sentence. Tagged ignores-sentence: the child built a word without checking the sentence."
+    },
+    {
+     "optionId": "cmscb15ba009ztmzvzcdpu6oj",
+     "value": "ULK",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "execution": "ULK is not a word, and in the gap it makes STULK, which is not a word either. Tagged fits-gap-not-word: the child filled the gap without using the little-word rule."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "“ulk” is not a word, so it cannot be the answer. “age” makes “stage”, which you cannot drink through. “raw” makes “straw”, a thin tube for drinking."
+   }
+  }
+ ]
+}
