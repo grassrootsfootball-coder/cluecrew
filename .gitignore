@@ -31,3 +31,7 @@ blob-report/
 # Generated reviewer packs and returned decisions files (pnpm export:review-pack).
 # Output of the repo, not input to it; regenerate rather than commit.
 content/exports/
+
+# R1039: the content snapshot. HELD OUT OF GIT while the repository is public — it would publish the
+# whole item bank and a personal email. Remove these lines once David rules (private repo / encrypt).
+packages/db/snapshot/

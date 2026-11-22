@@ -29511,3 +29511,67 @@ then, gates were added that nothing ever ran in CI, and code accumulated that ea
    - `check:manifest-drift`: needs a committed manifest;
    - `check:word-puzzles`: its frequency file is fetched, not committed, so CI cannot have it;
    - `check:carriage-schema`.
+
+## R1039 — the content snapshot: CI reads the real store (David: "Yes, build the snapshot", 2026-11-22)
+
+**BUILT.** `scripts/content-snapshot.ts` (`pnpm snapshot:export | snapshot:restore | check:snapshot`).
+The snapshot holds 14 tables of content and provenance, 45,652 rows (11 MB):
+- QuestionType, Region, Case, Word, Misconception, Item, ItemOption and ItemOptionTag;
+- Reviewer, AttributionEvent, FamilyBankSignature and NvrTemplateSignature;
+- ContentWriteLog and AdminAuditLog.
+
+That set is closed under foreign keys, and no family, child, session, billing or webhook table is
+exported. The format is one COPY-text TSV per table, with columns named and rows ordered by primary
+key under the C collation. The manifest has no clock, so re-exporting unchanged content is
+byte-identical and `git diff` on the snapshot is the content diff.
+
+**Restore refuses three things:**
+- any non-empty target table (it never merges into a store);
+- a migration mismatch;
+- a file whose digest differs from the manifest (a hand edit).
+
+Restore loads in one transaction with triggers off, so the write log keeps dev's history and not
+45,000 rows of "restore wrote this". It then re-reads the DATABASE and compares it table by table
+with the files (R60 question 3).
+
+**THE ROUND TRIP IS NOT FRESHNESS, AND IT SAYS SO ON EVERY RUN.** In CI, a matching `check` proves
+the restore was faithful. Only a run against dev proves the committed snapshot is current, and CI
+has no dev.
+
+**MEASURED** in a throwaway worktree against fresh en_US databases, with the restore step after the
+migration drift check:
+- Restore: 45,652 of 45,652 rows faithful, digest `bb940792ce412fbc`.
+- CI went from 33 of 73 failing to 30 of 74.
+- 11 steps that failed now pass:
+  - signed-family fingerprints and bank content;
+  - verdict refusals;
+  - serving path;
+  - shipped clusters;
+  - cloze gaps;
+  - error-spot preview;
+  - authority shape;
+  - lint and the scripts typecheck, fixed under R1038.
+- 7 steps FAIL FOR THE FIRST TIME because they now read real content. That is the snapshot working,
+  not a regression:
+  - **Seed:** the free-tier floor refuses because `case-maths-01` exists (since 2026-08-29) and no
+    Maths case is listed free. The seed has refused against the real store since that day; nobody
+    ran it. Which Maths case is free is a pricing decision for David.
+  - **Generate:** `content:generate` would cut 10 words from the APPROVED `vr02-surface-link`
+    childHint, and the R213 guard refuses. The generator's copy of library text has drifted from the
+    store.
+  - **db-content:** 15 SERVING faults, including three maths stems over the 16-word cap
+    (MC04-CALC-08, MC05-CALC-08, MC05-STATS-01).
+  - **every-string-field:** 153 faults.
+  - **option-positions:** en-spag-punct-spot (56%) and en-spag-spelling-spot (67%) serve the key in
+    one position.
+  - **verify:solutions:** 187 of 187 maths items fail. This is its FIRST population ever (R61).
+    Every row failing points at the instrument before the content (R599); not yet read.
+  - **register:** this entry closes it.
+
+**HELD: THE SNAPSHOT IS NOT COMMITTED.** The GitHub repository is PUBLIC. Committing the snapshot
+would publish the whole item bank, the signatures, and a personal email address that appears 4,351
+times in AttributionEvent. The code is committed. `packages/db/snapshot/` is gitignored until David
+rules, and the CI restore step is held with it. The options:
+- make the repository private, then commit the snapshot as is;
+- encrypt the snapshot with a key held as a CI secret, which loses the readable diff;
+- keep it out of git and have CI fetch it with a secret.
