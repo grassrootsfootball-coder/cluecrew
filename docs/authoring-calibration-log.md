@@ -29107,3 +29107,28 @@ nothing tests whether the machine's refusals are right as well.
   person.
 - Read every disagreement whatever the rate, because a disagreement names a fault class the gates and
   the machine share.
+
+**THE FIRST RETURN, 2026-11-22. Annie is no longer reviewing (David: "no more annie"), so the sample
+was read by a second machine reviewer.** It was briefed only with the cards, the reviewer briefs and
+CLAUDE.md, and barred from the key, the review files and the database. **This measures agreement
+between two machines, not whether a person would sign.** Both learned one standard from the same
+documents and can share blind spots, so their agreement is NOT evidence of quality. Their
+disagreements ARE evidence: at least one of the two is wrong on each.
+
+- Machine-signed: the second reviewer signs **23 of 32 (72%, 95% CI 55–84%)**. By district: English
+  8 of 13, maths 4 of 6, VR 11 of 13. It holds 8 and refuses 1.
+- Machine-held: it also holds **3 of 8**. It signs the other 5.
+
+**The objective findings were checked against the cards before being reported, and every one held:**
+- card 39 `bank-vr-06-missing-word-36`: the stem sentence is 18 words, over the 16-word cap;
+- card 10 `ENG-017-CR-01`: the walk script puts "the cards" at line 1, but they are at line 2;
+- cards 19 `MC04-NPV-05` and 20 `MC03-CALC-02`: library hints that do not fit their carrier
+  ("compare column by column" on a place-value read; "look at the words in the question" on a bare
+  sum). This is R586's generality failure.
+- card 12 `ENG-028-PR-03` (REFUSE): option A, "He says her mum says a lot of things", is a literal,
+  true account of line 10. That gives the question two defensible answers.
+
+Judgement calls not yet adjudicated: card 3 (the hint points at the key's words), card 7 (an
+execution that contradicts itself), card 14 (near-twins split by the name the stem gives) and card 26
+(meek against humble). Card 39 also shows a GATE gap: the reading-age cap did not fire on a VR stem
+sentence. Why it did not is unexamined.

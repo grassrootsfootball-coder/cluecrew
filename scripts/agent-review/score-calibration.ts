@@ -7,6 +7,9 @@
  * name). States every denominator (R60): a partial return is scored on the cards she DECIDED, and the
  * undecided count is printed beside every figure, never folded into a rate.
  *
+ * The reviewer may be a person or another machine (R94): the labels say "reviewer", never a person's
+ * pronoun, and `reviewerAsEntered` carries whatever the return named.
+ *
  * The two numbers that matter, and what each one is evidence of:
  *   - On cards the machine SIGNED: how often she would also sign. A refusal here is a fault the machine
  *     passed into a child's pool (its false-accept rate). This is the number the 761 rows rest on.
@@ -40,11 +43,11 @@ if (decided.length === 0) { console.log('  NOTHING SCORED — no card carries a 
 
 const line = (label: string, rows: KeyRow[], agrees: (v: Verdict) => boolean) => { const k = rows.filter((r) => agrees(byCard.get(r.card)!)).length; console.log(`  ${label.padEnd(44)} ${k} of ${rows.length}  ${wilson(k, rows.length)}`); return k; };
 const signed = decided.filter((k) => k.kind === 'SIGNED'); const held = decided.filter((k) => k.kind === 'HELD');
-line('machine SIGNED → she would also sign', signed, (v) => v.verdict === 'SIGN');
-line('machine HELD → she would also hold/refuse', held, (v) => v.verdict !== 'SIGN');
-for (const d of ['ENGLISH', 'MATHS', 'VR']) { const s = signed.filter((k) => k.district === d); if (s.length) line(`  ${d}: signed → she signs`, s, (v) => v.verdict === 'SIGN'); }
+line('machine SIGNED → reviewer also signs', signed, (v) => v.verdict === 'SIGN');
+line('machine HELD → reviewer also holds/refuses', held, (v) => v.verdict !== 'SIGN');
+for (const d of ['ENGLISH', 'MATHS', 'VR']) { const s = signed.filter((k) => k.district === d); if (s.length) line(`  ${d}: signed → reviewer signs`, s, (v) => v.verdict === 'SIGN'); }
 
 const disagreements = decided.filter((k) => (k.kind === 'SIGNED') !== (byCard.get(k.card)!.verdict === 'SIGN')).map((k) => ({ ...k, hers: byCard.get(k.card)! }));
 console.log(`\n  disagreements: ${disagreements.length}`);
-for (const d of disagreements) console.log(`   card ${d.card} ${d.itemId} (${d.questionType}) machine ${d.kind === 'SIGNED' ? 'SIGN' : 'HOLD'} / hers ${d.hers.verdict} at [${d.hers.faultAt.join(', ')}]: ${d.hers.reason ?? ''}`);
+for (const d of disagreements) console.log(`   card ${d.card} ${d.itemId} (${d.questionType}) machine ${d.kind === 'SIGNED' ? 'SIGN' : 'HOLD'} / reviewer ${d.hers.verdict} at [${d.hers.faultAt.join(', ')}]: ${d.hers.reason ?? ''}`);
 writeFileSync(pjoin(DIR, 'score.json'), `${JSON.stringify({ sample: SAMPLE, cardsDigest: key.cardsDigest, reviewerAsEntered: ret.reviewer ?? null, decided: decided.length, of: key.key.length, signedAgree: signed.filter((k) => byCard.get(k.card)!.verdict === 'SIGN').length, signedN: signed.length, heldAgree: held.filter((k) => byCard.get(k.card)!.verdict !== 'SIGN').length, heldN: held.length, disagreements }, null, 1)}\n`);
