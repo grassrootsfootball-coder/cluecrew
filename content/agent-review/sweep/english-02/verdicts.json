@@ -1,0 +1,303 @@
+{
+  "batch": "english-02",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 36,
+  "verdicts": [
+    {
+      "itemId": "ENG-005-BB-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option The cart was heavy, and its wheels ran along pleasantly.",
+        "hint"
+      ],
+      "fault": "Giveaway: the key 'It was light, and its big wheels ran along pleasantly.' and the distractor 'The cart was heavy, and its wheels ran along pleasantly.' are near-identical (differ in one word), and the hint 'One sentence gives two reasons together.' rules out the other two options, which each give one reason, leaving only that pair.",
+      "objective": false,
+      "suggestedFix": "Give the minimal-pair distractor a different frame from the key, or reword the hint so it does not select by option shape."
+    },
+    {
+      "itemId": "ENG-005-BB-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-005-BB-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "hint"
+      ],
+      "fault": "Hint 'He says two things: what is happening, and what he fears.' singles out the key: 'feared' appears in the key ('he feared a bad night') and in no other option.",
+      "objective": true,
+      "suggestedFix": "Point to the man's words at lines 10 and 11 without naming fear."
+    },
+    {
+      "itemId": "ENG-005-BB-04",
+      "verdict": "HOLD",
+      "faultAt": [
+        "hint"
+      ],
+      "fault": "Hint 'Ask what a horse would be given, not a fisherman.' eliminates the fish option by name and frames the answer as something given to a horse, which only the key 'A feed and a rest.' is; it coaches rather than teaches the context check.",
+      "objective": false,
+      "suggestedFix": "Point the child to who has the bait and where (a horse in town) without naming the fishing sense."
+    },
+    {
+      "itemId": "ENG-005-BB-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-005-BB-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-005-BB-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-005-BB-08",
+      "verdict": "HOLD",
+      "faultAt": [
+        "a tag",
+        "option Because it was too dark for him to see the water."
+      ],
+      "fault": "Option 'Because it was too dark for him to see the water.' is tagged en-plausible-not-stated, but its own execution says line 33 states the contrary ('we could just see that the water was over the middle of it'); by the tag descriptions that is en-contradicted-by-the-text, so the child is told 'Find the line that proves it' when the line disproves it.",
+      "objective": true,
+      "suggestedFix": "Retag to en-contradicted-by-the-text."
+    },
+    {
+      "itemId": "ENG-005-BB-09",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option Beauty was too frightened of the water to cross the bridge.",
+        "execution",
+        "a tag"
+      ],
+      "fault": "Execution says 'it is knowledge, not fear', but lines 36 to 38 say 'I dare not go forward' / 'I dare not stir' / 'I dare not go forward' three times, which is fear language; the en-emotion-label-approximation child hint ('Find the words in the text that show the feeling') sends the child to words that support the option. The key's 'punished' is also an interpretation: lines 37 and 38 show the whip used to force Beauty on.",
+      "objective": false,
+      "suggestedFix": "Rebuild this distractor so the text clearly excludes it, and consider 'whipped' for 'punished' in the key."
+    },
+    {
+      "itemId": "ENG-005-BB-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-005-BB-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-005-BB-12",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-005-BB-13",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "hint"
+      ],
+      "fault": "Hint 'The line gives the proof and the thing proved. Take the proof.' is an either/or whose halves are options: the proof is the key ('hopping and skipping'), the thing proved is option 'His heart was light and his hopes were high.', and the hint says which to take.",
+      "objective": true,
+      "suggestedFix": "Ask what the reader can see Ben doing, without naming proof versus conclusion."
+    },
+    {
+      "itemId": "ENG-014-TS-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-014-TS-12",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script does not reach the key: it lists lines 8, 39 and 53 and never states that the writer gives what Ben sees while holding Tom's plan back. Its last step ('At line 53 we get his face first and his heart second') shows the writer GIVING Tom's inner feeling ('alacrity in his heart'), which cuts against the key rather than leading to it.",
+      "objective": false,
+      "suggestedFix": "End the walk on the conclusion and replace the line 53 step with Ben watching every move (lines 36 to 37)."
+    },
+    {
+      "itemId": "ENG-004-AGG-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option He slipped past her, glancing at her as he went."
+      ],
+      "fault": "Giveaway: the key 'He slipped past her without looking at her.' and the distractor 'He slipped past her, glancing at her as he went.' are near-identical, both opening 'He slipped past her', so a child can narrow to the pair without reading lines 4 to 6.",
+      "objective": false,
+      "suggestedFix": "Vary the minimal-pair distractor's frame so it does not share the key's opening."
+    },
+    {
+      "itemId": "ENG-004-AGG-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-004-AGG-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-004-AGG-04",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option A boy, sent over by the man at the station."
+      ],
+      "fault": "Giveaway: the key 'A boy, sent over by Mrs Spencer.' and the distractor 'A boy, sent over by the man at the station.' are near-identical (differ in one element), narrowing the choice to a pair.",
+      "objective": false,
+      "suggestedFix": "Recast the cause-agent-swap distractor so it does not repeat the key's frame."
+    },
+    {
+      "itemId": "ENG-004-AGG-05",
+      "verdict": "HOLD",
+      "faultAt": [
+        "execution"
+      ],
+      "fault": "Execution on 'She waited beside the girl until Matthew came.' says 'line 21 says she gave the girl into his charge and went'; lines 20 and 21 say she 'came off the train with that girl and gave her into my charge' and do not say she went.",
+      "objective": true,
+      "suggestedFix": "Drop 'and went', or cite line 22 ('you would be along for her presently') for her absence."
+    },
+    {
+      "itemId": "ENG-004-AGG-06",
+      "verdict": "HOLD",
+      "faultAt": [
+        "execution"
+      ],
+      "fault": "Execution on 'He knows Marilla is the shy one of the two.' cites 'the shyness the preamble gives Matthew'; no preamble is in the card's numbered lines. Matthew's shyness is at line 45 ('shy Matthew Cuthbert') and line 64 ('he said shyly').",
+      "objective": true,
+      "suggestedFix": "Cite lines 45 and 64 instead of 'the preamble'."
+    },
+    {
+      "itemId": "ENG-004-AGG-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-004-AGG-08",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script does not reach the key: it ends 'What changes is the watcher, not the girl.', which answers the parallel-read distractor but never arrives at 'there is far more to this girl than her plain looks suggest' (lines 44 to 46, 'no commonplace soul').",
+      "objective": false,
+      "suggestedFix": "Add a final step from lines 44 to 46: the extraordinary observer sees no commonplace soul behind the plain looks."
+    },
+    {
+      "itemId": "ENG-004-AGG-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-004-AGG-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-004-AGG-12",
+      "verdict": "HOLD",
+      "faultAt": [
+        "hint",
+        "option Come to the horse, and take her own bag."
+      ],
+      "fault": "Hint 'He asks for two things, not one.' selects by option shape: only the key and 'Come to the horse, and take her own bag.' ask two things, and those two share the frame 'Come ..., and ... her bag', so the hint narrows to a near-identical pair.",
+      "objective": true,
+      "suggestedFix": "Point to the short speech at lines 64 and 65 without counting the requests."
+    }
+  ]
+}

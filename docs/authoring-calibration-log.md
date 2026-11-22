@@ -29344,3 +29344,62 @@ first time since R1021**, with no faults in any word-puzzle type.
 **GENERATOR, STATED.** These rows already diverged from `HIDDEN_WORDS` in `generate-content.ts`, after
 the R1021 repairs, and now diverge further. The R62 reviewed-guard stops `content:generate`
 overwriting them. Bringing the generator table into line with LIVE is a separate task.
+
+## R1037 — The second-reader sweep: 705 machine-signed rows read again (David, 2026-11-22)
+
+David: *"Yes, run the sweep."* Every LIVE row whose latest item signature is `rev-agent-01`, and that
+had not already had an independent second reading, was put in front of a fresh reviewing agent. The
+brief is `content/agent-review/SWEEP-REVIEWER.md` and the batches are under `content/agent-review/sweep/`.
+
+**THE DENOMINATOR (R60).**
+- 796 rows are machine-latest-signed.
+- Excluded: 61 re-signed today through an independent review, and 40 in calibration sample 01
+  (already read blind).
+- **705 read**, in 24 batches. Every batch returned a verdict for every card, and the aggregator
+  refuses any gap.
+
+**THE RESULT.** A second reader would not sign **142 of 705 (20%)**: 136 HOLD and 6 REFUSE. **88 of
+those are objective**, meaning a line number, a count, arithmetic, a lexicon result or a house rule.
+
+| District | Read | Not signed |
+|---|---|---|
+| English | 319 | 72 (23%) |
+| Maths | 73 | 32 (44%) |
+| VR | 313 | 38 (12%) |
+
+The rate sits inside R1031's sample interval (9 of 32 = 28%, 95% CI 14 to 45%).
+
+**ONE OVERRULE.** ENG-022-GK-03 was held only for the place-sense "behind", which manifesto v1.7
+permits. The sweep brief had listed "behind" as banned outright. That was the brief's fault, and the
+row stays signed. A pattern-based overrule first hit ENG-002-pp-12, a REAL line-number fault that
+merely quoted the word, so overrules are now an explicit, hand-checked list.
+
+**WHERE THE FAULTS CLUSTER (fix once, not row by row).**
+- **Library hints that fit one setting and land on others** (R586, generality). These are maths-72
+  "words in the question" on bare sums, maths-85 "price" on non-money questions, maths-77 "money" on
+  "40% of 60", maths-79 litres and halves on kg and quarters, maths-07 and maths-61 on decimal
+  place-value reads, and maths-47 "shape" on a single point. Also maths-89, the vr04 strength hint
+  that points the wrong way when the card word is the strong one, and vr16-loose-opposite whose
+  example IS row -01's answer.
+- **Library descriptions made false by later changes:** `vr14-step-direction` says "backwards
+  instead of forwards", but since R1030 half the rows run backwards (12 holds), and
+  `vr13-wrong-pieces` says "from the middle".
+- **My own R1030 fault:** the 11 vr-11 number-series rows kept walk scripts from the old series. I
+  rebuilt the rows and did not regenerate their walks.
+- **Maths walk scripts:** they name traps no option contains, never state the answer (5 npv rows), or
+  break notation ("cm squared", money without £).
+- **English:**
+  - hints that give the answer away, or offer an either/or whose halves are options;
+  - near-identical pairs;
+  - options the stem rules out;
+  - executions and walk scripts with wrong line numbers;
+  - walks that never reach the key.
+- **VR second answers (REFUSE):**
+  - vr-04-15 BOLD: "rude" fits the cheeky sense and "loud" fits colours. `VR04_FORBIDDEN_BY_HEADWORD`
+    missed both senses.
+  - vr-21-04 leap/hop, -14 choose/want, -20 big/huge, -22 scared/terrified.
+
+**FAMILY-LEVEL FINDINGS, NOT ROW FAULTS.**
+- vr-18 shows one worked group where GL shows two, so a half-rule also fits.
+- Most VR types carry no hint or walk script at all.
+- Several hints instruct a channel not every child has: "draw the arrow" and "say it aloud" (R567).

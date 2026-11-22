@@ -1,0 +1,188 @@
+{
+  "batch": "vr-12",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 24,
+  "verdicts": [
+    {
+      "itemId": "gen-vr-21-same-meaning-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-04",
+      "verdict": "REFUSE",
+      "faultAt": [
+        "option hop",
+        "a tag"
+      ],
+      "fault": "'hop' is listed as a synonym of 'leap' in standard thesauruses (e.g. Collins: leap = jump, spring, bound, hop, skip), so it is a second defensible answer. The vr21-too-strong reasoning does not separate it: 'leap' is a big jump, so 'jump' differs from 'leap' in size too, and 'hop' does not.",
+      "objective": true,
+      "suggestedFix": "Replace 'hop' with a word that is clearly not a synonym of 'leap', e.g. 'crawl' or 'stand'."
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-12",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-13",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-14",
+      "verdict": "REFUSE",
+      "faultAt": [
+        "option want"
+      ],
+      "fault": "Two-part screen: 'choose' has a second sense, 'wish' or 'want' ('stay as long as you choose' = 'as long as you want'), and thesauruses list 'want'/'wish' as synonyms in that sense (Merriam-Webster thesaurus, choose: desire, want, wish). The distractor is correct in another sense of the headword, which is a hard block.",
+      "objective": true,
+      "suggestedFix": "Replace 'want' with an associated word that has no sense in common with 'choose', e.g. 'shop'."
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-15",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-16",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-17",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-18",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-20",
+      "verdict": "REFUSE",
+      "faultAt": [
+        "option huge"
+      ],
+      "fault": "'huge' is listed as a synonym of 'big' in standard thesauruses (Merriam-Webster and Collins both give big = large, huge, enormous...). A word a dictionary lists as a synonym is a second answer, so the card has two defensible keys.",
+      "objective": true,
+      "suggestedFix": "Replace 'huge' with an associated non-synonym such as 'box' or 'tall'."
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-21",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-22",
+      "verdict": "REFUSE",
+      "faultAt": [
+        "option terrified"
+      ],
+      "fault": "'terrified' is listed as a synonym of 'scared' in standard thesauruses (Collins: scared = afraid, frightened, terrified...; Merriam-Webster likewise). A child who picks it is right by the dictionary, so the card has two defensible keys.",
+      "objective": true,
+      "suggestedFix": "Replace 'terrified' with an associated non-synonym, e.g. 'dark' or 'ghost'."
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-23",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-24",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-25",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "batch": "maths-01",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 25,
+  "verdicts": [
+    {
+      "itemId": "MC01-CALC-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC01-CALC-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC01-CALC-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC02-CALC-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC02-CALC-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC03-CALC-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 69",
+        "a tag"
+      ],
+      "fault": "The tag child hint (maths-72-wrong-operation-chosen) says 'Look at the words in the question. Are things getting bigger, smaller, or being shared?' but the question is a bare sum with no words to read; the sign alone sets the operation.",
+      "objective": true,
+      "suggestedFix": "Give this option a child hint about reading the sign (e.g. 'Check the sign. Plus means add the numbers.')."
+    },
+    {
+      "itemId": "MC03-CALC-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC03-CALC-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC03-CALC-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC04-CALC-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC04-CALC-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC04-CALC-07",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 43",
+        "a tag"
+      ],
+      "fault": "The tag child hint (maths-85-miscount-or-rounding-in-measures) says 'Take the exact price and multiply by the exact count.' The question has no price; it counts packs of badges (4 x 25), so the hint is not true of this question.",
+      "objective": true,
+      "suggestedFix": "Use a hint about counting the groups, e.g. 'Count the packs again. Multiply by every pack.'"
+    },
+    {
+      "itemId": "MC05-CALC-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 247",
+        "a tag"
+      ],
+      "fault": "The tag child hint (maths-72-wrong-operation-chosen) says 'Look at the words in the question. Are things getting bigger, smaller, or being shared?' but the question is a bare sum with no words to read; the sign alone sets the operation.",
+      "objective": true,
+      "suggestedFix": "Give this option a child hint about reading the sign (e.g. 'Check the sign. Plus means add the numbers.')."
+    },
+    {
+      "itemId": "MC05-CALC-02",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 129",
+        "a tag"
+      ],
+      "fault": "The tag child hint (maths-72-wrong-operation-chosen) says 'Look at the words in the question. Are things getting bigger, smaller, or being shared?' but the question is a bare sum with no words to read; the sign alone sets the operation.",
+      "objective": true,
+      "suggestedFix": "Give this option a child hint about reading the sign (e.g. 'Check the sign. Minus means take away.')."
+    },
+    {
+      "itemId": "MC05-CALC-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC05-CALC-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC01-FDP-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC01-FDP-08",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 15",
+        "a tag"
+      ],
+      "fault": "Option 15's tag child hint (maths-79-dividing-by-a-fraction-error) is 'How many halves can you pour into one whole litre?' The question is about 3/4 kg bags of rice: it uses kilograms, not litres, and three-quarters, not halves, so the hint does not fit this card.",
+      "objective": false,
+      "suggestedFix": "Hint: 'Each bag holds less than 1 kg. Will you need more bags or fewer?'"
+    },
+    {
+      "itemId": "MC02-FDP-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC02-FDP-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 20",
+        "a tag",
+        "walk script"
+      ],
+      "fault": "Option 20's tag child hint (maths-77-treating-a-percentage-as-money) says the percentage 'is a proportion, not an exact amount of money!', and the walk script says 'Another treats the percent as pounds.' The question '40% of 60' has no money in it, so both describe a mistake this question cannot produce; the child subtracted 40 from 60.",
+      "objective": true,
+      "suggestedFix": "Reword the hint and walk to 'treats 40% as taking 40 away' with no money reference."
+    },
+    {
+      "itemId": "MC03-FDP-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC03-FDP-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC04-FDP-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC04-FDP-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC04-FDP-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    }
+  ]
+}

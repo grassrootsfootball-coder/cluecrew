@@ -1,0 +1,1964 @@
+{
+ "ruling": "R1037",
+ "summary": {
+  "read": 705,
+  "sign": 562,
+  "hold": 136,
+  "refuse": 6,
+  "overruled": 1,
+  "objectiveFaults": 88,
+  "byDistrict": {
+   "ENGLISH": {
+    "read": 319,
+    "hold": 71,
+    "refuse": 1
+   },
+   "MATHS": {
+    "read": 73,
+    "hold": 32,
+    "refuse": 0
+   },
+   "VR": {
+    "read": 313,
+    "hold": 33,
+    "refuse": 5
+   }
+  },
+  "missingBatches": []
+ },
+ "findings": [
+  {
+   "itemId": "ENG-008-RC-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Phyllis wakes Roberta by pulling her hair."
+   ],
+   "fault": "Giveaway: the stem 'How does Roberta wake Phyllis?' already names Roberta as the waker, so the agent-patient reversal option 'Phyllis wakes Roberta by pulling her hair.' is ruled out by the question's own wording, without reading line 1. It is also the only option not in the 'By ...' form the question invites.",
+   "objective": true,
+   "suggestedFix": "Replace the reversal with a distractor the stem does not exclude, or put the reversal into the 'By ...' answer form about a different action.",
+   "batch": "english-01",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-001-WIW-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint"
+   ],
+   "fault": "Hint 'One thing is in his eyes, one thing is on his fur. Which does the question want?' is an either/or whose halves are both options (dust = 'in his throat and eyes', whitewash = 'all over his black fur'), and the stem already says 'fur', so the hint picks the key for the child.",
+   "objective": false,
+   "suggestedFix": "Point to the line without splitting the choice into two options, e.g. 'Read line 4 to the end of the sentence.'",
+   "batch": "english-01",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-001-WIW-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "execution"
+   ],
+   "fault": "Two execution facts are false. Option 'The Water Rat called him from up above.': 'The Water Rat does not appear until line 54' - he is named at line 52 ('It was the Water Rat!') and his face appears from line 46. Option 'He wanted to find the river he had heard about.': 'He has not heard of the river - line 29 says he had never seen one' - line 29 says never SEEN, which does not show he had not heard of one.",
+   "objective": true,
+   "suggestedFix": "Cite line 52 (or 46) for the Rat; for the river, say no line says he had heard of a river or went looking for one.",
+   "batch": "english-01",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-001-WIW-05",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script says 'Line 12 gives the same four again, backwards.' The reversed run is 'scrooged again and scrabbled and scratched and' (line 12) and 'scraped' (line 13), so the four do not all sit on line 12.",
+   "objective": true,
+   "suggestedFix": "'Lines 12 and 13 give the same four again, backwards.'",
+   "batch": "english-01",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-001-WIW-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint"
+   ],
+   "fault": "Hint 'The rabbit says one sentence.' is false: at lines 22 to 23 the rabbit says 'Hold up!' and then 'Sixpence for the privilege of passing by the private road!', two sentences each ending in '!'.",
+   "objective": true,
+   "suggestedFix": "'The rabbit asks for something at lines 22 and 23. What is it?'",
+   "batch": "english-01",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-001-WIW-10",
+   "verdict": "HOLD",
+   "faultAt": [
+    "execution"
+   ],
+   "fault": "Misquotation in the execution of 'He is sorry at once for knocking the rabbit over.': it quotes line 26 as 'gone before they could think of a reply', but lines 26 to 27 read 'was gone before they could think of a thoroughly satisfactory reply'.",
+   "objective": true,
+   "suggestedFix": "Quote it exactly: 'gone before they could think of a thoroughly satisfactory reply'.",
+   "batch": "english-01",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-001-WIW-12",
+   "verdict": "REFUSE",
+   "faultAt": [
+    "option An animal that chased and chuckled."
+   ],
+   "fault": "Second defensible answer. Lines 29 to 30 read 'Never in his life had he seen a river before - this sleek, sinuous, full-bodied animal, chasing and chuckling': the animal is in apposition to the river, so 'An animal that chased and chuckled.' is the passage's own description of the key. The execution itself concedes 'the animal in this window IS the river'. A child who reads the metaphor correctly can defend it.",
+   "objective": false,
+   "suggestedFix": "Replace that option with something not named in lines 29 to 33 as the thing he had never seen.",
+   "batch": "english-01",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-001-WIW-13",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question",
+    "option To make the river seem alive, playful and always moving."
+   ],
+   "fault": "Form giveaway: the key is the only option beginning 'To ...'; all four distractors begin 'Because ...'. It is also the only three-part option. The key is singled out without the skill.",
+   "objective": true,
+   "suggestedFix": "Put all five options in one form (all 'To ...' or all 'Because ...').",
+   "batch": "english-01",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-001-WIW-14",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question"
+   ],
+   "fault": "Line refs disagree with the stem: the question says 'Read lines 33 to 36' but lineRefs is [34, 35, 36], omitting line 33 ('The Mole was bewitched, entranced, fascinated.'), which the walk-relevant reading uses.",
+   "objective": true,
+   "suggestedFix": "Set lineRefs to [33, 34, 35, 36], or change the stem to 'lines 34 to 36'.",
+   "batch": "english-01",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-005-BB-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option The cart was heavy, and its wheels ran along pleasantly.",
+    "hint"
+   ],
+   "fault": "Giveaway: the key 'It was light, and its big wheels ran along pleasantly.' and the distractor 'The cart was heavy, and its wheels ran along pleasantly.' are near-identical (differ in one word), and the hint 'One sentence gives two reasons together.' rules out the other two options, which each give one reason, leaving only that pair.",
+   "objective": false,
+   "suggestedFix": "Give the minimal-pair distractor a different frame from the key, or reword the hint so it does not select by option shape.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-005-BB-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint"
+   ],
+   "fault": "Hint 'He says two things: what is happening, and what he fears.' singles out the key: 'feared' appears in the key ('he feared a bad night') and in no other option.",
+   "objective": true,
+   "suggestedFix": "Point to the man's words at lines 10 and 11 without naming fear.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint"
+   ],
+   "fault": "Hint 'Ask what a horse would be given, not a fisherman.' eliminates the fish option by name and frames the answer as something given to a horse, which only the key 'A feed and a rest.' is; it coaches rather than teaches the context check.",
+   "objective": false,
+   "suggestedFix": "Point the child to who has the bait and where (a horse in town) without naming the fishing sense.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-005-BB-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option Because it was too dark for him to see the water."
+   ],
+   "fault": "Option 'Because it was too dark for him to see the water.' is tagged en-plausible-not-stated, but its own execution says line 33 states the contrary ('we could just see that the water was over the middle of it'); by the tag descriptions that is en-contradicted-by-the-text, so the child is told 'Find the line that proves it' when the line disproves it.",
+   "objective": true,
+   "suggestedFix": "Retag to en-contradicted-by-the-text.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-005-BB-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Beauty was too frightened of the water to cross the bridge.",
+    "execution",
+    "a tag"
+   ],
+   "fault": "Execution says 'it is knowledge, not fear', but lines 36 to 38 say 'I dare not go forward' / 'I dare not stir' / 'I dare not go forward' three times, which is fear language; the en-emotion-label-approximation child hint ('Find the words in the text that show the feeling') sends the child to words that support the option. The key's 'punished' is also an interpretation: lines 37 and 38 show the whip used to force Beauty on.",
+   "objective": false,
+   "suggestedFix": "Rebuild this distractor so the text clearly excludes it, and consider 'whipped' for 'punished' in the key.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-014-TS-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint"
+   ],
+   "fault": "Hint 'The line gives the proof and the thing proved. Take the proof.' is an either/or whose halves are options: the proof is the key ('hopping and skipping'), the thing proved is option 'His heart was light and his hopes were high.', and the hint says which to take.",
+   "objective": true,
+   "suggestedFix": "Ask what the reader can see Ben doing, without naming proof versus conclusion.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-014-TS-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script does not reach the key: it lists lines 8, 39 and 53 and never states that the writer gives what Ben sees while holding Tom's plan back. Its last step ('At line 53 we get his face first and his heart second') shows the writer GIVING Tom's inner feeling ('alacrity in his heart'), which cuts against the key rather than leading to it.",
+   "objective": false,
+   "suggestedFix": "End the walk on the conclusion and replace the line 53 step with Ben watching every move (lines 36 to 37).",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-004-AGG-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option He slipped past her, glancing at her as he went."
+   ],
+   "fault": "Giveaway: the key 'He slipped past her without looking at her.' and the distractor 'He slipped past her, glancing at her as he went.' are near-identical, both opening 'He slipped past her', so a child can narrow to the pair without reading lines 4 to 6.",
+   "objective": false,
+   "suggestedFix": "Vary the minimal-pair distractor's frame so it does not share the key's opening.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-004-AGG-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option A boy, sent over by the man at the station."
+   ],
+   "fault": "Giveaway: the key 'A boy, sent over by Mrs Spencer.' and the distractor 'A boy, sent over by the man at the station.' are near-identical (differ in one element), narrowing the choice to a pair.",
+   "objective": false,
+   "suggestedFix": "Recast the cause-agent-swap distractor so it does not repeat the key's frame.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-004-AGG-05",
+   "verdict": "HOLD",
+   "faultAt": [
+    "execution"
+   ],
+   "fault": "Execution on 'She waited beside the girl until Matthew came.' says 'line 21 says she gave the girl into his charge and went'; lines 20 and 21 say she 'came off the train with that girl and gave her into my charge' and do not say she went.",
+   "objective": true,
+   "suggestedFix": "Drop 'and went', or cite line 22 ('you would be along for her presently') for her absence.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-004-AGG-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "execution"
+   ],
+   "fault": "Execution on 'He knows Marilla is the shy one of the two.' cites 'the shyness the preamble gives Matthew'; no preamble is in the card's numbered lines. Matthew's shyness is at line 45 ('shy Matthew Cuthbert') and line 64 ('he said shyly').",
+   "objective": true,
+   "suggestedFix": "Cite lines 45 and 64 instead of 'the preamble'.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-004-AGG-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script does not reach the key: it ends 'What changes is the watcher, not the girl.', which answers the parallel-read distractor but never arrives at 'there is far more to this girl than her plain looks suggest' (lines 44 to 46, 'no commonplace soul').",
+   "objective": false,
+   "suggestedFix": "Add a final step from lines 44 to 46: the extraordinary observer sees no commonplace soul behind the plain looks.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-004-AGG-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint",
+    "option Come to the horse, and take her own bag."
+   ],
+   "fault": "Hint 'He asks for two things, not one.' selects by option shape: only the key and 'Come to the horse, and take her own bag.' ask two things, and those two share the frame 'Come ..., and ... her bag', so the hint narrows to a near-identical pair.",
+   "objective": true,
+   "suggestedFix": "Point to the short speech at lines 64 and 65 without counting the requests.",
+   "batch": "english-02",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-011-CV-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Lady Canterville arranged for one to meet the family."
+   ],
+   "fault": "The stem itself says Mr Otis sent for the waggonette, so an option crediting Lady Canterville is ruled out by the question's own wording; it is also the only option not phrased as a reason ('Because ...'), so it falls without reading lines 1 to 3.",
+   "objective": false,
+   "suggestedFix": "Replace with a reason-shaped distractor that does not contradict the stem.",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-011-CV-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option A pheasant shows its breast deep in the fern."
+   ],
+   "fault": "The question names the squirrels and the rabbits; this option is about neither, so the question's own wording rules it out. With option 4 covering only the rabbits, only the key and its mirror answer for both animals.",
+   "objective": false,
+   "suggestedFix": "Replace with a distractor about the squirrels and rabbits.",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-011-CV-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk says 'Read line 22 to the end. She says what she is afraid of: something has been spilt.' Line 22 ends at 'I am afraid'; the words 'something has been spilt there' are on line 23.",
+   "objective": true,
+   "suggestedFix": "Say 'Read lines 22 and 23.'",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-011-CV-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "execution"
+   ],
+   "fault": "Execution for 'She doubts the story rather than the stain itself' says it is 'True at line 55'. Line 55 says Mr and Mrs Otis are 'not afraid of ghosts', which is not doubting the story, so the wrong-scope account (true elsewhere, wrong window) does not hold of this option.",
+   "objective": false,
+   "suggestedFix": "Rewrite the execution or retag; the option is not true at line 55.",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-011-CV-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option They mostly answer with everyday things, like stains, weather and pay."
+   ],
+   "fault": "Giveaway: the key is the only hedged, qualified option ('mostly', plus a 'like ...' list); every distractor is absolute ('over and over', 'openly', 'never once'), so a test-wise child picks the key without the skill.",
+   "objective": false,
+   "suggestedFix": "Hedge or lengthen at least one distractor, or tighten the key.",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-015-CC-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint"
+   ],
+   "fault": "Hint 'Two of these happened. Ask which one came next.' narrows the choice to two options (coaching), and is not true as written: the relinquishing in 'He let go of the key' also happened (line 21), and both events in the reversed option happened.",
+   "objective": false,
+   "suggestedFix": "Use a hint about order without counting the options, e.g. point to line 21.",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-015-CC-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk says lines 55 and 56 describe 'a chamber whose purpose is now forgotten'. Line 56 says the bell 'communicated for some purpose now forgotten with a chamber'; the forgotten purpose is the bell's, not the chamber's. The closing 'nothing up there can be pulling on it' is stated nowhere.",
+   "objective": true,
+   "suggestedFix": "Say the bell was disused and its purpose forgotten (lines 55 and 56).",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-015-CC-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option He says Pooh, pooh, and then a little later he says Humbug too."
+   ],
+   "fault": "Second partly defensible answer: the question asks what Scrooge keeps doing, and repeatedly dismissing it aloud (Pooh, pooh line 26; Humbug line 53; humbug still line 67) is something he does again and again. The option is true and is half the key; the execution's claim that it names nothing he does is not sound.",
+   "objective": false,
+   "suggestedFix": "Make this distractor untrue, e.g. wrong words or wrong order.",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-021-ED-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option He drops a large remark, and then tells them all to play.",
+    "walk script"
+   ],
+   "fault": "Key is not true at line 7: there Fogg says 'Cut, sir' to Thomas Flanagan alone, not telling them all to play (only line 81-82 says 'be so good as to play, gentlemen'). 'Drops a large remark' is not a clear phrase for a 9 to 11-year-old. The walk script cites line 74 (his stake), which is outside the cited lines and plays no part in the answer.",
+   "objective": true,
+   "suggestedFix": "Key: 'He makes a big remark, then turns back to the cards.' Drop line 74 from the walk.",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-021-ED-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint"
+   ],
+   "fault": "Hint 'A bargain is being argued about, and the word is not that.' is not true of lines 23 and 24: no bargain or wager is raised until line 29. It also calls the target 'the word' when the question asks about a phrase.",
+   "objective": false,
+   "suggestedFix": "Point to what Stuart does with the cards at line 24.",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-021-ED-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint"
+   ],
+   "fault": "Hint 'Two of these numbers belong to somebody else.' is false: only two options carry a number at all, four thousand (Stuart's, line 42) and twenty thousand (the key, Fogg's). Only one number belongs to somebody else.",
+   "objective": true,
+   "suggestedFix": "'One of these sums is somebody else's stake.'",
+   "batch": "english-03",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-006-TM-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question",
+    "option A tool for measuring length."
+   ],
+   "fault": "Giveaway: the question itself says Uncle Podger 're-measures' with the rule, and the key is the only option containing 'measuring'. A child can match the stem's word to the key without reading line 38 or knowing the word.",
+   "objective": false,
+   "suggestedFix": "Quote only 'he would take the rule' in the stem, so the child has to find 're-measure' in line 38 for themselves.",
+   "batch": "english-04",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-006-TM-10",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Hide the hammer so he cannot start at all.",
+    "a tag"
+   ],
+   "fault": "The tag en-motive-invention and its child hint ('Ask what the text says about why') are about a reason. The question asks WHAT Aunt Maria would like to do, not why, so the hint does not help here. The option is an invented plan, so en-plausible-not-stated fits.",
+   "objective": false,
+   "suggestedFix": "Retag as en-plausible-not-stated, or replace the option with one the motive tag fits.",
+   "batch": "english-04",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-006-TM-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question",
+    "option It is not one day at all, but what happened every single time."
+   ],
+   "fault": "The stem asks 'What does that tell us about this day?', which says there is one day. The key then says 'It is not one day at all'. So the stem asserts what the key denies, and a child who reads the habitual 'would' correctly is told by the question that it is a single day. The key also shares its 'It is not one X, but Y' frame with the distractor 'It is not one clear memory, but a guess...', which sets that pair apart from the two 'It tells us...' options.",
+   "objective": false,
+   "suggestedFix": "Ask 'What does that tell us about these events?' and give the four options matching frames.",
+   "batch": "english-04",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-010-JE-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint",
+    "option On a stile that leads into a lane."
+   ],
+   "fault": "The hint says 'Read what she sits on, not where it goes.' The only thing separating the key ('a stile that leads into a field') from the distractor 'On a stile that leads into a lane' is where the stile goes. A child who follows the hint cannot tell those two apart.",
+   "objective": false,
+   "suggestedFix": "Reword the hint so it does not steer away from the stile's destination, for example 'Read the whole of line 2.'",
+   "batch": "english-04",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-010-JE-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question"
+   ],
+   "fault": "The card has only 3 options (key, 'stopped where he was standing', 'felt along his foot and leg'). Every other card in this batch has 4, so one option looks missing, and a guess now succeeds one time in three.",
+   "objective": true,
+   "suggestedFix": "Restore or author a fourth distractor.",
+   "batch": "english-04",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option She reports the light first, but describes little beyond what it shows.",
+    "walk script"
+   ],
+   "fault": "The stem asks what Jane does in both places BEFORE describing something. The key's second clause ('describes little beyond what it shows') is about the description, not what comes before it, and it is weak at lines 54 to 56, where she gives a dark face, stern features, heavy brow, eyebrows and an age of thirty-five. That clause also makes the key the long qualified option. The walk script reaches only 'The light comes first, then the description' and never supports the second clause. In the walk script, 'details are not apparent' at line 53 is about the cloak, not the man.",
+   "objective": false,
+   "suggestedFix": "Key: 'She tells us about the light before she describes what she sees.'",
+   "batch": "english-04",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-016-HB-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option He falls silent first, but Watson had judged him brave.",
+    "walk script"
+   ],
+   "fault": "The distractor is the key's two facts (brave, silenced) put back in the other order. That makes a near-identical pair with the key, set apart from the other two options. The distractor is also self-inconsistent: 'had judged' puts the judging earlier, which is true, so only the word 'first' makes it false. The walk script lists lines 9, 45 and 46 but never states the change it is meant to reach. The clearest before-state, the 'eager face' at line 6, is in neither the key nor the walk.",
+   "objective": false,
+   "suggestedFix": "Replace that distractor with one that does not mirror the key, and end the walk script on the change itself.",
+   "batch": "english-04",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option The bare moor and the hidden man together chill him."
+   ],
+   "fault": "Giveaway: the key repeats the stem's word 'chilled' ('...together chill him'). It is the only option that uses it, and the only two-part option ('X and Y together'). The other three are single details or actions.",
+   "objective": false,
+   "suggestedFix": "Drop 'chill him' from the key, for example 'The bleak moor, with a dangerous man hiding on it.'",
+   "batch": "english-04",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-016-HB-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option He writes a still moor, but he gives it a mind of its own.",
+    "walk script"
+   ],
+   "fault": "'He writes a still moor' is not usual English, and 'still' can be read as calm, motionless or nevertheless. A child cannot tell what the key claims. The walk script's last piece of evidence (line 27, rotting plants as 'sad gifts' from Nature) is from the deep lanes of lines 21 to 29, not the moor the question asks about. The walk also never states the conclusion the key gives.",
+   "objective": false,
+   "suggestedFix": "Key: 'He writes as if the land itself had feelings.' Use moor evidence only (lines 4, 8, 20) and end the walk on that point.",
+   "batch": "english-04",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-002-pp-05",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Everybody who came to the assembly that night.",
+    "walk script"
+   ],
+   "fault": "The option is a too-broad sense of 'party' (everyone at the assembly), but its tag en-attribute-transfer gives the child hint 'Check who or what each detail belongs to in the text', which does not help with a meaning that is the right kind but too wide. Also the walk script says 'five people are named', which is line 22, outside the cited lineRefs 17 to 21.",
+   "objective": false,
+   "suggestedFix": "Retag to a vocabulary-sense tag whose hint fits, and cite lines 17 to 22.",
+   "batch": "english-05",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-002-pp-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option His two sisters, the husband of the elder sister, and one other young man."
+   ],
+   "fault": "Length giveaway: the key is 14 words and the only long, qualified option; the four distractors are 5 to 8 words. A child can pick it without reading lines 21 to 23.",
+   "objective": false,
+   "suggestedFix": "Shorten the key, e.g. 'His two sisters, Mr Hurst and another young man.'",
+   "batch": "english-05",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-002-pp-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Because of his looks, and because of the news that he was very rich."
+   ],
+   "fault": "Giveaway: the key is the only two-part option and the longest (15 words; distractors 7 to 10 words).",
+   "objective": false,
+   "suggestedFix": "Make the key one compact clause, or give a distractor a matching two-part shape.",
+   "batch": "english-05",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-002-pp-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "execution"
+   ],
+   "fault": "Execution on option 'Three: with Mrs Hurst, Miss Bingley and Miss Bennet.' says Miss Bennet 'dances with Mr Bingley at line 63'. Line 63 is 'sitting down just behind you...'; her dancing with Mr Bingley is at lines 60 and 61.",
+   "objective": true,
+   "suggestedFix": "Change 'line 63' to 'lines 60 and 61'.",
+   "batch": "english-05",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-012-ML-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option There was hope in the air that Wednesday."
+   ],
+   "fault": "Possible second answer: line 3 to 4 reads 'impossible to feel altogether gloomy: there was hope in the air', and the colon lets a child read the hope as what made gloom impossible. The key rests on the 'such ... scents ... that' structure across lines 1 to 3, which a 9 to 11-year-old may not parse.",
+   "objective": false,
+   "suggestedFix": "Replace the 'hope in the air' distractor with one the text clearly does not offer as the cause.",
+   "batch": "english-05",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-012-ML-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script never reaches the key: it ends 'The other has to be about something else, and the puff is what she is eating', which never says relish means enjoyment and, if anything, points toward the 'sauce' distractor.",
+   "objective": true,
+   "suggestedFix": "End with: 'So relish is about how much she enjoyed the taste.'",
+   "batch": "english-05",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-025-LW-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question",
+    "option That it is hard to forgive the loss of the book.",
+    "option That she was very naughty."
+   ],
+   "fault": "The question asks what Meg tells Amy to WAIT FOR. Two distractors (\"That it is hard to forgive the loss of the book.\", \"That she was very naughty.\") are that-clauses that cannot complete \"wait for ...\", so the question's own wording rules them out, and \"Until Laurie has gone off home...\" also does not fit \"wait for\". Only the key (\"A quiet minute once Jo has cheered up.\") is a thing one can wait for, so it is singled out by grammar, not by reading lines 53 to 54.",
+   "objective": false,
+   "suggestedFix": "Ask \"What does Meg tell Amy to do?\" or recast every distractor as a moment or event Amy could wait for.",
+   "batch": "english-06",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-017-CR-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "hint"
+   ],
+   "fault": "Hint says \"Three people are named in these lines.\" Lines 38 to 42 name only two people (Dr Johnson at 38, Captain Brown at 42) and refer to five (Dr Johnson, her father, Miss Jenkyns as I, Boz as your favourite, Captain Brown). No reading gives three, so the hint is untrue.",
+   "objective": true,
+   "suggestedFix": "\"Several people come up in these lines. Work out who is advising whom.\"",
+   "batch": "english-06",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-020-HD-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Somebody changed her mind, and the passage never hides who.",
+    "execution"
+   ],
+   "fault": "Option 'Somebody changed her mind, and the passage never hides who.' is unreadable for a child: whose mind is not stated and 'never hides who' is a double negative meaning 'says who'. It also copies the key's frame ('Somebody ..., and these lines never say who'), so the two near-identical options single out the key's pair. Its execution ('A decision the passage withholds, asserted as though it were on the page') does not say how a child produces this option on this question.",
+   "objective": false,
+   "suggestedFix": "Replace with a plain distractor that does not mirror the key's 'Somebody ..., and ... who' shape.",
+   "batch": "english-07",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-020-HD-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script ends 'So they are not stale yet.' Line 29 says only 'yours would have been hard and stale by then'; no line says the kept rolls are not stale now. The walk asserts a fact the passage does not give. (Also: the execution for 'They are worse than the bread this house has' cites 'the preamble', which is not on the card.)",
+   "objective": true,
+   "suggestedFix": "Cut 'So they are not stale yet.' and end on 'By then means by the time she goes home.'",
+   "batch": "english-07",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-020-HD-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script says 'Line 37 says when she saw her roll she could not suppress a sob.' The words 'could not suppress a sob' are on line 38, and the question itself says 'suppress on line 38'. The walk puts the tested word on a different line from the question.",
+   "objective": true,
+   "suggestedFix": "'Lines 37 and 38 say when she saw her roll she could not suppress a sob.'",
+   "batch": "english-07",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-020-HD-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option What is taken is settled aloud, but what returns comes in silence.",
+    "walk script"
+   ],
+   "fault": "The question asks about 'the things done for her', but two things done for Heidi happen aloud: Clara's spoken promise of fresh rolls (lines 27 to 29, 35 and 36) and the clothes decision confided to Clara (line 6). The key holds only if 'what returns' means the hat alone. The walk script then cites the clothes (lines 4 and 6) as evidence for 'taken is settled aloud', but the clothes are given to Heidi, not taken from her.",
+   "objective": false,
+   "suggestedFix": "Narrow the question to the bread and the hat, and drop the clothes steps from the walk script.",
+   "batch": "english-07",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-019-BV-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script says 'Line 26 says the strand was till then so low and shelving.' 'shelving' is on line 27, as the question says ('shelving on line 27'). The walk puts the tested word on a different line from the question.",
+   "objective": true,
+   "suggestedFix": "'Lines 26 and 27 say the strand was till then so low and shelving.'",
+   "batch": "english-07",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option He is judged by the writer, and the verdict is a hard one.",
+    "option He is harsh at the start, but he grows kinder by the end.",
+    "option He says the captain does everything, and that Mark has to obey."
+   ],
+   "fault": "The question asks 'What does Bevis keep doing with the rules of the game?'. Two distractors do not answer that at all ('He is judged by the writer...' is not something Bevis does; 'He is harsh at the start...' is not about the rules), so the question's own wording rules them out. That leaves the key against 'He says the captain does everything, and that Mark has to obey', which is literally true of what he keeps doing (lines 14 and 15, 87 and 88). Its execution faults it for naming 'nothing that joins the two', which the question never asks for.",
+   "objective": false,
+   "suggestedFix": "Reword the stem to ask how he presents the rules, and replace the two off-frame distractors.",
+   "batch": "english-07",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-018-RB-11",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question",
+    "option Somebody who can see where she goes."
+   ],
+   "fault": "The question sends the child to lines 57 to 59, but nothing there is about seeing. Line 58 contrasts being shut up in a coop, which is about being shut in. The key depends on line 47 ('I can only see pieces of things'), which is outside the cited lines, and the walk script reaches the key only by leaving the window ('Down there, line 47 says...').",
+   "objective": false,
+   "suggestedFix": "Add line 47 to the cited lines, or make the key 'Somebody who is not shut in.'",
+   "batch": "english-07",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-018-RB-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option She is shy at the start, but she is not shy by the end.",
+    "option She wants the seat in front, so she works out how to ask for it.",
+    "hint"
+   ],
+   "fault": "The question asks 'How much are we told about what Rebecca thinks?'. Two distractors describe what she is like or does, not how much we are told, so the question's wording rules them out. Only the key and 'We are told she was small...' answer in the question's frame. The hint 'find the line that tells you her thoughts' presupposes such a line exists, and that contradicts the key, which is that there is none.",
+   "objective": false,
+   "suggestedFix": "Recast the two off-frame distractors as 'We are told...' claims, and reword the hint so it does not assume a thoughts line exists.",
+   "batch": "english-07",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-027-RR-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option That he would be doing the King little credit.",
+    "a tag",
+    "execution"
+   ],
+   "fault": "Tag en-attribute-transfer does not name the mistake. Line 3 reads 'I should be paying a poor compliment to the King if I did not set modesty aside'. The option comes from dropping the 'if I did not' condition. No detail is moved from one character to another. The execution 'it belongs to what he says of the King' describes no transfer, and the child hint 'Check who or what each detail belongs to' does not help here.",
+   "objective": false,
+   "suggestedFix": "Retag as a condition/negation misreading (e.g. en-negation-dropped) and rewrite the execution to name 'if I did not' on line 3.",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-027-RR-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script",
+    "a tag"
+   ],
+   "fault": "The walk script stops at 'Line 61 says she could have told them apart in an instant.' It never reaches the key's second half, 'nobody puts the two men together' (lines 62-63, 'neither she nor anyone else dreamed'). Read alone, that last step points towards option C (the princess suspects). Separately, option C is contradicted by line 60 ('nor in that of any other did I see the least doubt'), so it is not merely unstated, and en-plausible-not-stated misnames it.",
+   "objective": false,
+   "suggestedFix": "End the walk on lines 62-63, where nobody dreamed he was other than the King. Retag C en-contradicted-by-the-text.",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-027-RR-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script never reaches the key 'His usual way of looking'. It ends 'The word sits after paler than his.' and gives no route to 'usual'. Also, the hint's substitution test lets option D through: 'He looks paler than his look in the pictures of him' reads sensibly, so the hint does not separate the key from D.",
+   "objective": false,
+   "suggestedFix": "Add a walk step that ties 'paler than his wont' to 'paler than usual'.",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-027-RR-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option That the pictures of him are handsome enough."
+   ],
+   "fault": "Giveaway. Two near-identical options include the key: 'That the pictures of him are handsome enough.' and 'That the pictures of him are not handsome enough.' differ only by 'not'. A child without the skill can narrow the choice to that pair.",
+   "objective": false,
+   "suggestedFix": "Recast the negation-dropped distractor so it does not mirror the key word for word, or recast the key.",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-027-RR-11",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Because the ambassadors had paid their respects.",
+    "a tag"
+   ],
+   "fault": "Tag en-attribute-transfer does not fit. Line 65 has the ambassadors pay their respects, and Lord Topham is 'among them' (line 66). Nothing is moved from one party to another: the option is a true detail from the window that does not answer 'why thankful'. The execution 'it belongs to the ambassadors as a group' names no transfer.",
+   "objective": false,
+   "suggestedFix": "Retag en-within-span-wrong-element, or replace the distractor with one that really moves an attribute.",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-027-RR-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script lists only the crowd's noticed differences (lines 11, 13, 14). It never reaches the key's second half, 'what he hears in it is approval' (line 16 'mere flattery', line 17 'signs of approval'). As written, the evidence supports option C (the crowd has spotted that he is not the King) as well as the key.",
+   "objective": false,
+   "suggestedFix": "Add the step at lines 16-17 where he takes the remarks as flattery and approval.",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-028-PR-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Gets bigger as it takes in the heat.",
+    "option Stops sitting flat in its frame.",
+    "execution",
+    "walk script"
+   ],
+   "fault": "The key adds a mechanism the lines do not give. Lines 3-4 say 'Wood swells. One hot summer and every door ... stops shutting properly', not that wood takes in heat. Wood swells by taking in moisture, so the key teaches a false fact. Option D's execution says 'True at line 4', but line 4 says 'stops shutting properly', not 'sitting flat in its frame'. The walk script ends on 'one hot summer does it' and never reaches 'gets bigger'.",
+   "objective": false,
+   "suggestedFix": "Key: 'Gets bigger, so the door no longer fits.' Fix D's execution to quote line 4, and end the walk on getting bigger.",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-028-PR-10",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script gets its line numbers wrong. It says 'Line 40 is the one that answers it' and 'Lines 37 and 39 only show her saying his name'. Line 39 reads '...in that voice, and both times he has answered a', so the answer starts on line 39 and line 40 holds only 'different question.' Line 39 does more than show her saying his name.",
+   "objective": true,
+   "suggestedFix": "'Lines 39 and 40 answer it. Both times, he answered a different question.'",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-009-SM-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option He looked over as soon as he could hear the water.",
+    "option The wind was blowing hard into his eyes.",
+    "a tag"
+   ],
+   "fault": "The question's own wording rules out option D. The stem says he keeps from looking over, and D says he looked over at once, so D is not even a candidate reason. Option C is contradicted by line 24 ('the wind dropped out of my ears'), and its own execution says so. That is en-contradicted-by-the-text, not en-cause-agent-swap, since no cause or agent is swapped.",
+   "objective": true,
+   "suggestedFix": "Replace D with a reason-shaped distractor. Retag C en-contradicted-by-the-text.",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-024-BF-11",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option That it is about the fountain, which he thinks is finished."
+   ],
+   "fault": "Form giveaway. The key is the only option that begins 'That' and the only one phrased as an explanation, which is the form 'How does Dilan explain...' asks for. The other three ('Mrs Farrell says...', 'His mother arrived...', 'His mother has promised...') are bare statements.",
+   "objective": false,
+   "suggestedFix": "Give all four options the same form: all begin 'That', or none do.",
+   "batch": "english-08",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-007-LP-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script ends 'The writer ends on the empty space rather than the names.' It never connects the space to Reuben, so it does not reach the key 'There is a space Reuben is not going to fill.' It also stops at line 38 and never reads line 39, where the room at the bottom is mentioned.",
+   "objective": false,
+   "suggestedFix": "Add a closing step linking the space to Reuben, e.g. 'Reuben walks past it and does not sign. The space is one he will not fill.'",
+   "batch": "english-09",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference"
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option The things lying across the top."
+   ],
+   "fault": "Giveaway by echo. The question quotes 'the top layer', and the key is the only option that repeats 'top'. A child can match 'top' without knowing what 'layer' means. The other three options do not contain the word.",
+   "objective": false,
+   "suggestedFix": "Reword the key without 'top', e.g. 'One level of things lying on others.'",
+   "batch": "english-09",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab"
+  },
+  {
+   "itemId": "ENG-007-LP-15",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option Put it in the Friday box, low down, and pressed it flat.",
+    "option Put it in the returns box, low down, and pushed it flat."
+   ],
+   "fault": "Two near-identical options, and the key is one of them. They differ only in 'Friday'/'returns' and 'pressed'/'pushed'. Line 34 says 'pushed it flat', so the distractor carries the text's own verb and the key does not. A child who checks the verb against line 34 is drawn away from the key.",
+   "objective": true,
+   "suggestedFix": "Make the key say 'pushed it flat' to match line 34, and break up the twin pair, e.g. change the returns-box option's second half.",
+   "batch": "english-09",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval"
+  },
+  {
+   "itemId": "ENG-022-GK-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option He put himself in goal, and Dan picked him eighth of eight.",
+    "hint"
+   ],
+   "fault": "Two near-identical options, and the key is one of them. 'He put himself in goal, and Dan picked him eighth of eight' and the key 'He says he chose the goal, but he was picked last of them' give the same two facts and differ only in and/but. The hint 'One of these joins the two moments with an and' points at the twin as the one to drop. That leaves the key without any reading of lines 7 to 11 or 38 to 39.",
+   "objective": true,
+   "suggestedFix": "Rewrite the hint so it does not point at a conjunction in one option, e.g. 'Ask whether line 7 and line 38 agree.'",
+   "batch": "english-09",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique"
+  },
+  {
+   "itemId": "ENG-022-GK-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option You spend the game behind somebody’s head."
+   ],
+   "fault": "The key uses 'behind', which is on the brief's banned list for child-facing text. Line 15 says 'at the back of', so 'behind' is the option's own wording, not a quotation from the passage.",
+   "objective": true,
+   "suggestedFix": "'You spend the game running at the back of someone’s head.'",
+   "batch": "english-09",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference",
+   "overruled": "its only fault is the place-sense \"behind\" (\"behind somebody's head\"), which manifesto v1.7 permits; the sweep brief wrongly listed \"behind\" as banned outright"
+  },
+  {
+   "itemId": "MC03-CALC-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 69",
+    "a tag"
+   ],
+   "fault": "The tag child hint (maths-72-wrong-operation-chosen) says 'Look at the words in the question. Are things getting bigger, smaller, or being shared?' but the question is a bare sum with no words to read; the sign alone sets the operation.",
+   "objective": true,
+   "suggestedFix": "Give this option a child hint about reading the sign (e.g. 'Check the sign. Plus means add the numbers.').",
+   "batch": "maths-01",
+   "district": "MATHS",
+   "questionType": "maths-calc"
+  },
+  {
+   "itemId": "MC04-CALC-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 43",
+    "a tag"
+   ],
+   "fault": "The tag child hint (maths-85-miscount-or-rounding-in-measures) says 'Take the exact price and multiply by the exact count.' The question has no price; it counts packs of badges (4 x 25), so the hint is not true of this question.",
+   "objective": true,
+   "suggestedFix": "Use a hint about counting the groups, e.g. 'Count the packs again. Multiply by every pack.'",
+   "batch": "maths-01",
+   "district": "MATHS",
+   "questionType": "maths-calc"
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 247",
+    "a tag"
+   ],
+   "fault": "The tag child hint (maths-72-wrong-operation-chosen) says 'Look at the words in the question. Are things getting bigger, smaller, or being shared?' but the question is a bare sum with no words to read; the sign alone sets the operation.",
+   "objective": true,
+   "suggestedFix": "Give this option a child hint about reading the sign (e.g. 'Check the sign. Plus means add the numbers.').",
+   "batch": "maths-01",
+   "district": "MATHS",
+   "questionType": "maths-calc"
+  },
+  {
+   "itemId": "MC05-CALC-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 129",
+    "a tag"
+   ],
+   "fault": "The tag child hint (maths-72-wrong-operation-chosen) says 'Look at the words in the question. Are things getting bigger, smaller, or being shared?' but the question is a bare sum with no words to read; the sign alone sets the operation.",
+   "objective": true,
+   "suggestedFix": "Give this option a child hint about reading the sign (e.g. 'Check the sign. Minus means take away.').",
+   "batch": "maths-01",
+   "district": "MATHS",
+   "questionType": "maths-calc"
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 15",
+    "a tag"
+   ],
+   "fault": "Option 15's tag child hint (maths-79-dividing-by-a-fraction-error) is 'How many halves can you pour into one whole litre?' The question is about 3/4 kg bags of rice: it uses kilograms, not litres, and three-quarters, not halves, so the hint does not fit this card.",
+   "objective": false,
+   "suggestedFix": "Hint: 'Each bag holds less than 1 kg. Will you need more bags or fewer?'",
+   "batch": "maths-01",
+   "district": "MATHS",
+   "questionType": "maths-fdp"
+  },
+  {
+   "itemId": "MC02-FDP-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 20",
+    "a tag",
+    "walk script"
+   ],
+   "fault": "Option 20's tag child hint (maths-77-treating-a-percentage-as-money) says the percentage 'is a proportion, not an exact amount of money!', and the walk script says 'Another treats the percent as pounds.' The question '40% of 60' has no money in it, so both describe a mistake this question cannot produce; the child subtracted 40 from 60.",
+   "objective": true,
+   "suggestedFix": "Reword the hint and walk to 'treats 40% as taking 40 away' with no money reference.",
+   "batch": "maths-01",
+   "district": "MATHS",
+   "questionType": "maths-fdp"
+  },
+  {
+   "itemId": "MC01-GEOM-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script says 'Two share the x value 5, and two share the y value 4.' Of the three given corners (2, 1), (5, 1), (2, 4), only (5, 1) has x = 5 and only (2, 4) has y = 4. The statement is false.",
+   "objective": true,
+   "suggestedFix": "Say: one corner has x = 5 and another has y = 4, so the fourth corner is (5, 4).",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC01-GEOM-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 160°",
+    "a tag"
+   ],
+   "fault": "Option 160° (tag maths-89-wrong-angle-total): the child hint says only 'A line is 180, a turn is 360.' The mistake here is using 360° for a TRIANGLE; the hint never names the triangle total, so it does not correct the mistake this option encodes.",
+   "objective": false,
+   "suggestedFix": "Use a hint naming the triangle: 'The angles in a triangle add to 180°.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC02-GEOM-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script ends 'The trap swaps the order or uses 360.' No option uses 360: (360 - 46) ÷ 2 = 157, and the options are 44°, 12°, 65°. The 12° (digit-by-digit halving) and 65° (rounding) traps are not described.",
+   "objective": true,
+   "suggestedFix": "Replace the last sentence with one that names a trap actually present, e.g. halving before subtracting.",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC02-GEOM-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option (6, 2)",
+    "a tag"
+   ],
+   "fault": "Option (6, 2) (tag maths-47-translation-by-gap): the child hint says 'Pick one corner on the first shape. Count the squares to that same corner on the new shape.' The question moves a single point; there is no first shape, new shape or corner, so the hint does not fit this question.",
+   "objective": true,
+   "suggestedFix": "Use a point-move hint: 'Count the squares you move, not the lines you cross.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC02-GEOM-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 265°",
+    "a tag"
+   ],
+   "fault": "Option 265° (tag maths-89-wrong-angle-total): the child hint says only 'A line is 180, a turn is 360.' The mistake here is using 360° for a TRIANGLE; the hint never names the triangle total, so it does not correct the mistake this option encodes.",
+   "objective": false,
+   "suggestedFix": "Use a hint naming the triangle: 'The angles in a triangle add to 180°.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC03-GEOM-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option (6, 3)",
+    "a tag"
+   ],
+   "fault": "Option (6, 3) (tag maths-47-translation-by-gap): the child hint says 'Pick one corner on the first shape. Count the squares to that same corner on the new shape.' The question moves a single point; there is no first shape, new shape or corner, so the hint does not fit this question.",
+   "objective": true,
+   "suggestedFix": "Use a point-move hint: 'Count the squares you move, not the lines you cross.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC03-GEOM-05",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script opens 'Half the perimeter to 15' (verb should be 'Halve'; the sentence has no verb as written) and closes 'One trap stops at the half-total.' No option is the half-total 15 cm; the only 15 option is 15 cm², tagged maths-72 as 9 + 6 added, so the walk and the tag give two different accounts of one option. Also 6 cm is the only option in cm on a question asking for the area, so the unit rules it out.",
+   "objective": false,
+   "suggestedFix": "'Halve the perimeter to get 15.' Name the trap as the tag does: adding 9 and 6 instead of multiplying.",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC05-GEOM-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 162 cm²"
+   ],
+   "fault": "Perimeter question: 162 cm² is the only option in cm², so the area-for-perimeter distractor is labelled as an area and the question's own unit rules it out. Sibling cards (MC01/02/04-GEOM-01) give this distractor in cm (24 cm, 45 cm, 126 cm).",
+   "objective": false,
+   "suggestedFix": "Show it as 162 cm, as the sibling cards do.",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC05-GEOM-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option (10, 5)",
+    "a tag"
+   ],
+   "fault": "Option (10, 5) (tag maths-47-translation-by-gap): the child hint says 'Pick one corner on the first shape. Count the squares to that same corner on the new shape.' The question moves a single point; there is no first shape, new shape or corner, so the hint does not fit this question.",
+   "objective": true,
+   "suggestedFix": "Use a point-move hint: 'Count the squares you move, not the lines you cross.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC05-GEOM-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 48 cm²"
+   ],
+   "fault": "Option 48 cm² repeats the question's own given value ('an area of 48 cm²') with its unit, and it is the only cm² option on a perimeter question. A child can discard it as the number already given, without the skill.",
+   "objective": true,
+   "suggestedFix": "Replace with a different perimeter slip, e.g. 14 cm (8 + 6 not doubled).",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC05-GEOM-05",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script",
+    "option 40 cm"
+   ],
+   "fault": "Walk script writes '76 cm squared'. House notation requires a real superscript: 76 cm². Also option 40 cm is the only option in cm on an area question, so the unit rules it out (sibling MC04-GEOM-05 gives the same distractor as 40 cm²).",
+   "objective": true,
+   "suggestedFix": "Write '76 cm²'; give the distractor as 40 cm².",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC05-GEOM-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 290°",
+    "a tag"
+   ],
+   "fault": "Option 290° (tag maths-89-wrong-angle-total): the child hint says only 'A line is 180, a turn is 360.' The mistake here is using 360° for a TRIANGLE; the hint never names the triangle total, so it does not correct the mistake this option encodes.",
+   "objective": false,
+   "suggestedFix": "Use a hint naming the triangle: 'The angles in a triangle add to 180°.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-geom"
+  },
+  {
+   "itemId": "MC02-MEAS-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script says 'One trap rounds £2.60 up and forgets to adjust.' No option does: rounding to £3 gives £5.00, which is not offered. The options are £6.60 (no exchange), £6.00 (pence dropped), £10.60 (added).",
+   "objective": true,
+   "suggestedFix": "Name a trap that is present, e.g. 'One trap drops the pence.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-meas"
+  },
+  {
+   "itemId": "MC02-MEAS-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script says 'Another rounds both prices and forgets to adjust.' No option is a rounding result: to the nearest pound £4 + £3 = £7.00, not offered. £6.00 is tagged maths-83 (pence dropped), not rounding.",
+   "objective": true,
+   "suggestedFix": "'Another drops the pence and adds only the pounds.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-meas"
+  },
+  {
+   "itemId": "MC02-MEAS-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script says 'Another rounds a price and forgets to adjust.' No option is a rounding result. The options are £4.90 (stopped at the total), £7.10 (£2 of the juice dropped) and £5.75 (one apple too few).",
+   "objective": true,
+   "suggestedFix": "'Another stops at the total spent.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-meas"
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script writes money without the £ symbol: 'Write £8 as 8.00, then take 5.60 away. That leaves 2.40.' House notation requires £8.00, £5.60, £2.40. It also says 'The trap rounds the price', but no option rounds (£6 would give £2.00, not offered).",
+   "objective": true,
+   "suggestedFix": "'Write £8 as £8.00, then take £5.60 away. That leaves £2.40. One trap drops the pence.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-meas"
+  },
+  {
+   "itemId": "MC03-MEAS-05",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script says 'The trap rounds the prices or drops a pounds digit.' No option drops a pounds digit; £4.60 is tagged maths-13, the carried 1 added twice (£5.40 spent). Only the rounding half is true (£5.50).",
+   "objective": true,
+   "suggestedFix": "'One trap rounds the prices. Another carries a 1 twice.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-meas"
+  },
+  {
+   "itemId": "MC03-MEAS-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script says 'The trap stops at the total, or drops a digit.' Neither is offered: no option is 615 m, and none drops a digit. The options are 185 m (carry added twice) and 280 m / 260 m (rounding).",
+   "objective": true,
+   "suggestedFix": "'One trap rounds 275 m and does not put the difference back.'",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-meas"
+  },
+  {
+   "itemId": "MC04-MEAS-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script writes money without the £ symbol: 'cost 2.35 times 3, which is 7.05. Take 7.05 from the £10 note. The change is 2.95.' House notation requires £2.35, £7.05, £2.95.",
+   "objective": true,
+   "suggestedFix": "Put £ on every amount: £2.35, £7.05, £2.95.",
+   "batch": "maths-02",
+   "district": "MATHS",
+   "questionType": "maths-meas"
+  },
+  {
+   "itemId": "MC01-NPV-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 5,070; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+   "objective": true,
+   "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 5,070.'",
+   "batch": "maths-03",
+   "district": "MATHS",
+   "questionType": "maths-npv"
+  },
+  {
+   "itemId": "MC03-NPV-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 80",
+    "option 0.8"
+   ],
+   "fault": "Option 80's child hint (maths-07) says 'Compare the parts column by column, starting with the tenths.' Nothing is compared in this question; it asks the value of one digit in 5.284, so the hint does not fit. Option 0.8's hint (maths-61) lists 'Ones, tens, hundreds, thousands.' The digit is in the hundredths and the mistake is the tenths, and neither column is in that list.",
+   "objective": false,
+   "suggestedFix": "Use decimal-column hint wording for these two tags on decimal digit-value cards (tenths, hundredths, thousandths).",
+   "batch": "maths-03",
+   "district": "MATHS",
+   "questionType": "maths-npv"
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 7,070; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+   "objective": true,
+   "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 7,070.'",
+   "batch": "maths-03",
+   "district": "MATHS",
+   "questionType": "maths-npv"
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 10,400; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+   "objective": true,
+   "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 10,400.'",
+   "batch": "maths-03",
+   "district": "MATHS",
+   "questionType": "maths-npv"
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 6,060; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+   "objective": true,
+   "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 6,060.'",
+   "batch": "maths-03",
+   "district": "MATHS",
+   "questionType": "maths-npv"
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 10,500; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+   "objective": true,
+   "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 10,500.'",
+   "batch": "maths-03",
+   "district": "MATHS",
+   "questionType": "maths-npv"
+  },
+  {
+   "itemId": "MC05-NPV-05",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option 80",
+    "option 0.8"
+   ],
+   "fault": "Option 80's child hint (maths-07) says 'Compare the parts column by column, starting with the tenths.' Nothing is compared in this question; it asks the value of one digit in 7.482, so the hint does not fit. Option 0.8's hint (maths-61) lists 'Ones, tens, hundreds, thousands.' The digit is in the hundredths and the mistake is the tenths, and neither column is in that list.",
+   "objective": false,
+   "suggestedFix": "Use decimal-column hint wording for these two tags on decimal digit-value cards (tenths, hundredths, thousandths).",
+   "batch": "maths-03",
+   "district": "MATHS",
+   "questionType": "maths-npv"
+  },
+  {
+   "itemId": "gen-vr-03-related-words-28",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question",
+    "option bees"
+   ],
+   "fault": "The key 'bees' echoes the stem word 'beekeeper' (bee- is spelled out in the question), so a child can pick it by matching letters without finding the shepherd-looks-after-sheep relationship. Neither distractor (sting, wool) shares that echo.",
+   "objective": true,
+   "suggestedFix": "Use a stem whose second term does not contain the key, e.g. 'shepherd is to sheep as swineherd/farmer is to ...', or keep beekeeper and accept the echo only if every option echoes equally.",
+   "batch": "vr-01",
+   "district": "VR",
+   "questionType": "vr-03-related-words"
+  },
+  {
+   "itemId": "gen-vr-03-related-words-30",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option crop",
+    "execution"
+   ],
+   "fault": "'crop' is close to defensible: famine is commonly explained to children as a time when crops fail, so 'drought is a lack of rain, famine is a lack of crops' is a reasonable reading. The execution does not say why crop is wrong, only that it is 'not a lack of crop in the way the pair works'.",
+   "objective": false,
+   "suggestedFix": "Replace crop with a same-topic word that cannot be read as what is lacking, e.g. 'hunger' or 'farmer'.",
+   "batch": "vr-01",
+   "district": "VR",
+   "questionType": "vr-03-related-words"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag"
+   ],
+   "objective": true,
+   "fault": "vr04-wrong-strength child hint 'Check how strong the word is. A quiet word needs a quiet answer.' points the wrong way here: the card word is the STRONG one and 'big' is far weaker (the option's own execution says 'far weaker'), so the hint tells the child the card word is quiet and nudges them toward the weaker distractor.",
+   "suggestedFix": "Use a strength hint that works both ways, e.g. 'Check how strong the word is. Match its strength.'",
+   "batch": "vr-02",
+   "district": "VR",
+   "questionType": "vr-04-closest-meaning"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "verdict": "REFUSE",
+   "faultAt": [
+    "option rude",
+    "option loud"
+   ],
+   "objective": true,
+   "fault": "Bare card BOLD fails the two-part screen. 'rude' is correct in bold's impudent sense (Oxford defines that sense as 'audaciously rude or impudent'; the option's own execution concedes 'rude shares one area of bold, speaking out cheekily'). 'loud' is correct in bold's colour/design sense (bold colours = loud colours; Collins lists 'loud' under bold 'bright, vivid'). Each is a second correct answer on a card with no carrier sentence.",
+   "suggestedFix": "Replace rude and loud with distractors outside every sense of bold, and add rude, cheeky, loud, bright, vivid to VR04_FORBIDDEN_BY_HEADWORD.bold.",
+   "batch": "vr-02",
+   "district": "VR",
+   "questionType": "vr-04-closest-meaning"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-17",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option cold",
+    "a tag"
+   ],
+   "objective": false,
+   "fault": "'cold' (of a person or manner) means unfriendly, the key's own meaning (a cold welcome = a hostile/unfriendly welcome), so it is a near-equal second answer rather than 'one sign' of hostility; the vr04-one-feature-only tag and its hint 'That is one sign of it' misname it.",
+   "suggestedFix": "Replace 'cold' with a true one-sign distractor such as 'scowling'.",
+   "batch": "vr-02",
+   "district": "VR",
+   "questionType": "vr-04-closest-meaning"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-25",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag"
+   ],
+   "objective": true,
+   "fault": "vr04-wrong-strength child hint 'Check how strong the word is. A quiet word needs a quiet answer.' points the wrong way here: the card word is the STRONG one and 'pleased' is far weaker (the option's own execution says 'far weaker'), so the hint tells the child the card word is quiet and nudges them toward the weaker distractor.",
+   "suggestedFix": "Use a strength hint that works both ways, e.g. 'Check how strong the word is. Match its strength.'",
+   "batch": "vr-02",
+   "district": "VR",
+   "questionType": "vr-04-closest-meaning"
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-34",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag"
+   ],
+   "objective": true,
+   "fault": "vr04-wrong-strength child hint 'Check how strong the word is. A quiet word needs a quiet answer.' points the wrong way here: the card word is the STRONG one and 'pretty' is far weaker (the option's own execution says 'far weaker'), so the hint tells the child the card word is quiet and nudges them toward the weaker distractor.",
+   "suggestedFix": "Use a strength hint that works both ways, e.g. 'Check how strong the word is. Match its strength.'",
+   "batch": "vr-02",
+   "district": "VR",
+   "questionType": "vr-04-closest-meaning"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '14,  19,  27,  38, …' with options 52, 49, 51 and key 52, but the walk script says: \"Watch 5, 33, 10, 31 closely. One chain climbs 5, 10; the other drops 33, 31. The climbing chain is next, reaching 15. Here 14 and 16 land one off; 20 runs too far.\" None of its numbers are this series' terms or options, and it never reaches 52.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 52 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '10,  12,  14,  16, …' with options 18, 17, 20, 30 and key 18, but the walk script says: \"Find the jump from 7 to 9. The gaps widen: 2, 3, 4. A gap of 5 makes 16 into 21. Here 20 and 22 land one off; 23 stretches too far.\" None of its numbers are this series' terms or options, and it never reaches 18.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 18 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '18,  22,  29,  39, …' with options 52, 49, 51 and key 52, but the walk script says: \"Look hard at 9, 37, 13, 35. One chain rises 9, 13; the other falls 37, 35. The rising chain follows, landing on 17. Both 16 and 18 miss by one; 21 adds an extra step.\" None of its numbers are this series' terms or options, and it never reaches 52.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 52 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-10",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '5,  11,  17,  23, …' with options 29, 28, 35, 40 and key 29, but the walk script says: \"Read 2, 8, 15 across. Each leap is one bigger: 6, 7, 8. A leap of 9 lifts 23 to 32. Then 31 and 33 miss by one; 38 bounds far past.\" None of its numbers are this series' terms or options, and it never reaches 29.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 29 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '13,  16,  22,  31, …' with options 43, 40, 42 and key 43, but the walk script says: \"Study 4, 41, 7, 39 with care. One chain steps up 4, 7; the other steps down 41, 39. The rising chain is next, reaching 10. Here 9 and 11 slip one place; 13 stretches too far.\" None of its numbers are this series' terms or options, and it never reaches 43.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 43 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-14",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '9,  14,  19,  24, …' with options 29, 28, 34, 43 and key 29, but the walk script says: \"Point to 6 and 11. The gaps build: 5, 6, 7. Add 8 to 24 for 32. Nearby 31 comes short, 33 slips over; 37 sails too high.\" None of its numbers are this series' terms or options, and it never reaches 29.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 29 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '17,  19,  24,  32, …' with options 43, 40, 42 and key 43, but the walk script says: \"Read 8, 45, 10, 43 slowly. One chain grows 8, 10; the other shrinks 45, 43. The growing chain comes next, hitting 12. Then 11 and 13 land one off; 14 goes a step beyond.\" None of its numbers are this series' terms or options, and it never reaches 43.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 43 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-18",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '13,  17,  21,  25, …' with options 29, 28, 33, 46 and key 29, but the walk script says: \"Start with 10 and 14. Each step gains one: 4, 5, 6. A step of 7 takes 25 to 32. Watch 31 dip and 33 rise; 36 overshoots.\" None of its numbers are this series' terms or options, and it never reaches 29.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 29 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '12,  18,  27,  39, …' with options 54, 51, 53 and key 54, but the walk script says: \"Look twice at 3, 49, 9, 47. One chain jumps up 3, 9; the other jumps down 49, 47. The rising chain is next, reaching 15. Both 14 and 16 sit one off; 21 leaps too far.\" None of its numbers are this series' terms or options, and it never reaches 54.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 54 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-22",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '8,  11,  14,  17, …' with options 20, 19, 23, 31 and key 20, but the walk script says: \"See the gap from 5 to 8. The gaps swell: 3, 4, 5. A gap of 6 makes 23. Both 22 and 24 sit a step off; 26 pushes far past.\" None of its numbers are this series' terms or options, and it never reaches 20.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 20 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-11-number-series-24",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '16,  21,  29,  40, …' with options 54, 51, 53 and key 54, but the walk script says: \"Watch 7, 53, 12, 51 with care. One chain climbs 7, 12; the other sinks 53, 51. The climbing chain follows, landing on 17. Here 16 and 18 drift one place; 22 adds one step too many.\" None of its numbers are this series' terms or options, and it never reaches 54.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 54 and names this card's distractors.",
+   "batch": "vr-05",
+   "district": "VR",
+   "questionType": "vr-11-number-series"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option W"
+   ],
+   "fault": "Option W is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair K->G goes 4 BACK and W is S moved 4 FORWARD, so the description states the opposite of the mistake that produces W here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option O"
+   ],
+   "fault": "Option O is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair C->A goes 2 BACK and O is M moved 2 FORWARD, so the description states the opposite of the mistake that produces O here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option S"
+   ],
+   "fault": "Option S is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair C->A goes 2 BACK and S is Q moved 2 FORWARD, so the description states the opposite of the mistake that produces S here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option T"
+   ],
+   "fault": "Option T is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair D->A goes 3 BACK and T is Q moved 3 FORWARD, so the description states the opposite of the mistake that produces T here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-11",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option R"
+   ],
+   "fault": "Option R is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair G->D goes 3 BACK and R is O moved 3 FORWARD, so the description states the opposite of the mistake that produces R here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option M"
+   ],
+   "fault": "Option M is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair K->G goes 4 BACK and M is I moved 4 FORWARD, so the description states the opposite of the mistake that produces M here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-15",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option Q"
+   ],
+   "fault": "Option Q is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair K->G goes 4 BACK and Q is M moved 4 FORWARD, so the description states the opposite of the mistake that produces Q here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-16",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option T"
+   ],
+   "fault": "Option T is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair C->A goes 2 BACK and T is R moved 2 FORWARD, so the description states the opposite of the mistake that produces T here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-19",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option M"
+   ],
+   "fault": "Option M is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair C->A goes 2 BACK and M is K moved 2 FORWARD, so the description states the opposite of the mistake that produces M here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-20",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option S"
+   ],
+   "fault": "Option S is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair G->D goes 3 BACK and S is P moved 3 FORWARD, so the description states the opposite of the mistake that produces S here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-23",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option R"
+   ],
+   "fault": "Option R is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair D->A goes 3 BACK and R is O moved 3 FORWARD, so the description states the opposite of the mistake that produces R here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-24",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option R"
+   ],
+   "fault": "Option R is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair K->G goes 4 BACK and R is N moved 4 FORWARD, so the description states the opposite of the mistake that produces R here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\"",
+   "batch": "vr-07",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-01",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option warm",
+    "option wet",
+    "a tag"
+   ],
+   "fault": "Options warm and wet carry vr16-loose-opposite, whose child hint reads \"A true opposite flips the meaning exactly, like hot and cold.\" On this card the word is hot and the key is cold, so a child who picks warm or wet is told the answer outright. The hint is generic library text whose example collides with this item.",
+   "objective": true,
+   "suggestedFix": "Change the headword of this item, or change the library hint example (e.g. \"like up and down\") so it names no card it lands on.",
+   "batch": "vr-08",
+   "district": "VR",
+   "questionType": "vr-16-opposite-meaning"
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-09",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question",
+    "option 10"
+   ],
+   "fault": "The key 10 is the same number as the first group's middle number (4 [10] 6), and the second group is (7 [?] 3). A child who copies the visible middle number, or reads 'in the same way each time' as 'the same number', lands on the key without finding the rule. Neither distractor (21, 13) repeats a number on the card.",
+   "objective": true,
+   "suggestedFix": "Change the second group's outer numbers so their sum differs from 10, e.g. (7 [?] 4) with key 11, then re-derive both distractors.",
+   "batch": "vr-10",
+   "district": "VR",
+   "questionType": "vr-18-related-numbers"
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-10",
+   "verdict": "HOLD",
+   "faultAt": [
+    "question",
+    "option 24"
+   ],
+   "fault": "The key 24 is the same number as the first group's middle number (10 [24] 14), and the second group is (16 [?] 8). A child who copies the visible middle number, or reads 'in the same way each time' as 'the same number', lands on the key without finding the rule. Neither distractor (128, 18) repeats a number on the card.",
+   "objective": true,
+   "suggestedFix": "Change the second group's outer numbers so their sum differs from 24, e.g. (16 [?] 9) with key 25, then re-derive both distractors.",
+   "batch": "vr-10",
+   "district": "VR",
+   "questionType": "vr-18-related-numbers"
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option S",
+    "execution"
+   ],
+   "fault": "Option S fills _AMEL as SAMEL, which the project lexicon accepts as a word (base list content/wordlists/en-lower.txt line 143575: 'samel', an underfired brick). The execution note for S says 'SAMEL, which is not a word', which is false against the lexicon, so the distractor is not cleanly wrong under the rule and check:word-puzzles would treat it as a second word-making option.",
+   "objective": true,
+   "suggestedFix": "Replace S with a common letter that makes no word, e.g. T (TAMEL), and correct its execution note.",
+   "batch": "vr-11",
+   "district": "VR",
+   "questionType": "vr-20-complete-the-word"
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-04",
+   "verdict": "REFUSE",
+   "faultAt": [
+    "option hop",
+    "a tag"
+   ],
+   "fault": "'hop' is listed as a synonym of 'leap' in standard thesauruses (e.g. Collins: leap = jump, spring, bound, hop, skip), so it is a second defensible answer. The vr21-too-strong reasoning does not separate it: 'leap' is a big jump, so 'jump' differs from 'leap' in size too, and 'hop' does not.",
+   "objective": true,
+   "suggestedFix": "Replace 'hop' with a word that is clearly not a synonym of 'leap', e.g. 'crawl' or 'stand'.",
+   "batch": "vr-12",
+   "district": "VR",
+   "questionType": "vr-21-same-meaning"
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-14",
+   "verdict": "REFUSE",
+   "faultAt": [
+    "option want"
+   ],
+   "fault": "Two-part screen: 'choose' has a second sense, 'wish' or 'want' ('stay as long as you choose' = 'as long as you want'), and thesauruses list 'want'/'wish' as synonyms in that sense (Merriam-Webster thesaurus, choose: desire, want, wish). The distractor is correct in another sense of the headword, which is a hard block.",
+   "objective": true,
+   "suggestedFix": "Replace 'want' with an associated word that has no sense in common with 'choose', e.g. 'shop'.",
+   "batch": "vr-12",
+   "district": "VR",
+   "questionType": "vr-21-same-meaning"
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-20",
+   "verdict": "REFUSE",
+   "faultAt": [
+    "option huge"
+   ],
+   "fault": "'huge' is listed as a synonym of 'big' in standard thesauruses (Merriam-Webster and Collins both give big = large, huge, enormous...). A word a dictionary lists as a synonym is a second answer, so the card has two defensible keys.",
+   "objective": true,
+   "suggestedFix": "Replace 'huge' with an associated non-synonym such as 'box' or 'tall'.",
+   "batch": "vr-12",
+   "district": "VR",
+   "questionType": "vr-21-same-meaning"
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-22",
+   "verdict": "REFUSE",
+   "faultAt": [
+    "option terrified"
+   ],
+   "fault": "'terrified' is listed as a synonym of 'scared' in standard thesauruses (Collins: scared = afraid, frightened, terrified...; Merriam-Webster likewise). A child who picks it is right by the dictionary, so the card has two defensible keys.",
+   "objective": true,
+   "suggestedFix": "Replace 'terrified' with an associated non-synonym, e.g. 'dark' or 'ghost'.",
+   "batch": "vr-12",
+   "district": "VR",
+   "questionType": "vr-21-same-meaning"
+  }
+ ]
+}

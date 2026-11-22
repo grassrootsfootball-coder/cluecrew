@@ -1,0 +1,301 @@
+{
+  "batch": "english-01",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 38,
+  "verdicts": [
+    {
+      "itemId": "ENG-013-TI-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-013-TI-12",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option Phyllis wakes Roberta by pulling her hair."
+      ],
+      "fault": "Giveaway: the stem 'How does Roberta wake Phyllis?' already names Roberta as the waker, so the agent-patient reversal option 'Phyllis wakes Roberta by pulling her hair.' is ruled out by the question's own wording, without reading line 1. It is also the only option not in the 'By ...' form the question invites.",
+      "objective": true,
+      "suggestedFix": "Replace the reversal with a distractor the stem does not exclude, or put the reversal into the 'By ...' answer form about a different action."
+    },
+    {
+      "itemId": "ENG-008-RC-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-008-RC-12",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-001-WIW-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-001-WIW-02",
+      "verdict": "HOLD",
+      "faultAt": [
+        "hint"
+      ],
+      "fault": "Hint 'One thing is in his eyes, one thing is on his fur. Which does the question want?' is an either/or whose halves are both options (dust = 'in his throat and eyes', whitewash = 'all over his black fur'), and the stem already says 'fur', so the hint picks the key for the child.",
+      "objective": false,
+      "suggestedFix": "Point to the line without splitting the choice into two options, e.g. 'Read line 4 to the end of the sentence.'"
+    },
+    {
+      "itemId": "ENG-001-WIW-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "execution"
+      ],
+      "fault": "Two execution facts are false. Option 'The Water Rat called him from up above.': 'The Water Rat does not appear until line 54' - he is named at line 52 ('It was the Water Rat!') and his face appears from line 46. Option 'He wanted to find the river he had heard about.': 'He has not heard of the river - line 29 says he had never seen one' - line 29 says never SEEN, which does not show he had not heard of one.",
+      "objective": true,
+      "suggestedFix": "Cite line 52 (or 46) for the Rat; for the river, say no line says he had heard of a river or went looking for one."
+    },
+    {
+      "itemId": "ENG-001-WIW-05",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script says 'Line 12 gives the same four again, backwards.' The reversed run is 'scrooged again and scrabbled and scratched and' (line 12) and 'scraped' (line 13), so the four do not all sit on line 12.",
+      "objective": true,
+      "suggestedFix": "'Lines 12 and 13 give the same four again, backwards.'"
+    },
+    {
+      "itemId": "ENG-001-WIW-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-001-WIW-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-001-WIW-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-001-WIW-09",
+      "verdict": "HOLD",
+      "faultAt": [
+        "hint"
+      ],
+      "fault": "Hint 'The rabbit says one sentence.' is false: at lines 22 to 23 the rabbit says 'Hold up!' and then 'Sixpence for the privilege of passing by the private road!', two sentences each ending in '!'.",
+      "objective": true,
+      "suggestedFix": "'The rabbit asks for something at lines 22 and 23. What is it?'"
+    },
+    {
+      "itemId": "ENG-001-WIW-10",
+      "verdict": "HOLD",
+      "faultAt": [
+        "execution"
+      ],
+      "fault": "Misquotation in the execution of 'He is sorry at once for knocking the rabbit over.': it quotes line 26 as 'gone before they could think of a reply', but lines 26 to 27 read 'was gone before they could think of a thoroughly satisfactory reply'.",
+      "objective": true,
+      "suggestedFix": "Quote it exactly: 'gone before they could think of a thoroughly satisfactory reply'."
+    },
+    {
+      "itemId": "ENG-001-WIW-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-001-WIW-12",
+      "verdict": "REFUSE",
+      "faultAt": [
+        "option An animal that chased and chuckled."
+      ],
+      "fault": "Second defensible answer. Lines 29 to 30 read 'Never in his life had he seen a river before - this sleek, sinuous, full-bodied animal, chasing and chuckling': the animal is in apposition to the river, so 'An animal that chased and chuckled.' is the passage's own description of the key. The execution itself concedes 'the animal in this window IS the river'. A child who reads the metaphor correctly can defend it.",
+      "objective": false,
+      "suggestedFix": "Replace that option with something not named in lines 29 to 33 as the thing he had never seen."
+    },
+    {
+      "itemId": "ENG-001-WIW-13",
+      "verdict": "HOLD",
+      "faultAt": [
+        "question",
+        "option To make the river seem alive, playful and always moving."
+      ],
+      "fault": "Form giveaway: the key is the only option beginning 'To ...'; all four distractors begin 'Because ...'. It is also the only three-part option. The key is singled out without the skill.",
+      "objective": true,
+      "suggestedFix": "Put all five options in one form (all 'To ...' or all 'Because ...')."
+    },
+    {
+      "itemId": "ENG-001-WIW-14",
+      "verdict": "HOLD",
+      "faultAt": [
+        "question"
+      ],
+      "fault": "Line refs disagree with the stem: the question says 'Read lines 33 to 36' but lineRefs is [34, 35, 36], omitting line 33 ('The Mole was bewitched, entranced, fascinated.'), which the walk-relevant reading uses.",
+      "objective": true,
+      "suggestedFix": "Set lineRefs to [33, 34, 35, 36], or change the stem to 'lines 34 to 36'."
+    },
+    {
+      "itemId": "ENG-001-WIW-16",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-001-WIW-17",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-001-WIW-19",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    }
+  ]
+}

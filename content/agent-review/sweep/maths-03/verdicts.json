@@ -1,0 +1,128 @@
+{
+  "batch": "maths-03",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 14,
+  "verdicts": [
+    {
+      "itemId": "MC01-NPV-02",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 5,070; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+      "objective": true,
+      "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 5,070.'"
+    },
+    {
+      "itemId": "MC02-NPV-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC03-NPV-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC03-NPV-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC03-NPV-06",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 80",
+        "option 0.8"
+      ],
+      "fault": "Option 80's child hint (maths-07) says 'Compare the parts column by column, starting with the tenths.' Nothing is compared in this question; it asks the value of one digit in 5.284, so the hint does not fit. Option 0.8's hint (maths-61) lists 'Ones, tens, hundreds, thousands.' The digit is in the hundredths and the mistake is the tenths, and neither column is in that list.",
+      "objective": false,
+      "suggestedFix": "Use decimal-column hint wording for these two tags on decimal digit-value cards (tenths, hundredths, thousandths)."
+    },
+    {
+      "itemId": "MC04-NPV-02",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 7,070; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+      "objective": true,
+      "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 7,070.'"
+    },
+    {
+      "itemId": "MC04-NPV-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 10,400; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+      "objective": true,
+      "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 10,400.'"
+    },
+    {
+      "itemId": "MC04-NPV-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC05-NPV-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC05-NPV-02",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 6,060; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+      "objective": true,
+      "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 6,060.'"
+    },
+    {
+      "itemId": "MC05-NPV-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script stops at 'carry into the thousands'/'carry into the next column' and never states the key 10,500; it does not reach the key (contrast MC03-NPV-03, whose walk ends 'to reach 4,040').",
+      "objective": true,
+      "suggestedFix": "End the carry sentence with the result, e.g. '... so carry into the thousands to reach 10,500.'"
+    },
+    {
+      "itemId": "MC05-NPV-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC05-NPV-05",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 80",
+        "option 0.8"
+      ],
+      "fault": "Option 80's child hint (maths-07) says 'Compare the parts column by column, starting with the tenths.' Nothing is compared in this question; it asks the value of one digit in 7.482, so the hint does not fit. Option 0.8's hint (maths-61) lists 'Ones, tens, hundreds, thousands.' The digit is in the hundredths and the mistake is the tenths, and neither column is in that list.",
+      "objective": false,
+      "suggestedFix": "Use decimal-column hint wording for these two tags on decimal digit-value cards (tenths, hundredths, thousandths)."
+    },
+    {
+      "itemId": "MC01-STATS-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    }
+  ]
+}

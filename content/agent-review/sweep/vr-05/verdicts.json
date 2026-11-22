@@ -1,0 +1,285 @@
+{
+ "batch": "vr-05",
+ "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+ "reviewed": 35,
+ "verdicts": [
+  {
+   "itemId": "gen-vr-09-letter-series-01",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-02",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-03",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-04",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-05",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-06",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-07",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-08",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-09",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-10",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-11",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-12",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-13",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-14",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-15",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-17",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-18",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-19",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-20",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-21",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-22",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-23",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-24",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-25",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-11-number-series-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '14,  19,  27,  38, …' with options 52, 49, 51 and key 52, but the walk script says: \"Watch 5, 33, 10, 31 closely. One chain climbs 5, 10; the other drops 33, 31. The climbing chain is next, reaching 15. Here 14 and 16 land one off; 20 runs too far.\" None of its numbers are this series' terms or options, and it never reaches 52.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 52 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-06",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '10,  12,  14,  16, …' with options 18, 17, 20, 30 and key 18, but the walk script says: \"Find the jump from 7 to 9. The gaps widen: 2, 3, 4. A gap of 5 makes 16 into 21. Here 20 and 22 land one off; 23 stretches too far.\" None of its numbers are this series' terms or options, and it never reaches 18.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 18 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '18,  22,  29,  39, …' with options 52, 49, 51 and key 52, but the walk script says: \"Look hard at 9, 37, 13, 35. One chain rises 9, 13; the other falls 37, 35. The rising chain follows, landing on 17. Both 16 and 18 miss by one; 21 adds an extra step.\" None of its numbers are this series' terms or options, and it never reaches 52.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 52 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-10",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '5,  11,  17,  23, …' with options 29, 28, 35, 40 and key 29, but the walk script says: \"Read 2, 8, 15 across. Each leap is one bigger: 6, 7, 8. A leap of 9 lifts 23 to 32. Then 31 and 33 miss by one; 38 bounds far past.\" None of its numbers are this series' terms or options, and it never reaches 29.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 29 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '13,  16,  22,  31, …' with options 43, 40, 42 and key 43, but the walk script says: \"Study 4, 41, 7, 39 with care. One chain steps up 4, 7; the other steps down 41, 39. The rising chain is next, reaching 10. Here 9 and 11 slip one place; 13 stretches too far.\" None of its numbers are this series' terms or options, and it never reaches 43.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 43 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-14",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '9,  14,  19,  24, …' with options 29, 28, 34, 43 and key 29, but the walk script says: \"Point to 6 and 11. The gaps build: 5, 6, 7. Add 8 to 24 for 32. Nearby 31 comes short, 33 slips over; 37 sails too high.\" None of its numbers are this series' terms or options, and it never reaches 29.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 29 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '17,  19,  24,  32, …' with options 43, 40, 42 and key 43, but the walk script says: \"Read 8, 45, 10, 43 slowly. One chain grows 8, 10; the other shrinks 45, 43. The growing chain comes next, hitting 12. Then 11 and 13 land one off; 14 goes a step beyond.\" None of its numbers are this series' terms or options, and it never reaches 43.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 43 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-18",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '13,  17,  21,  25, …' with options 29, 28, 33, 46 and key 29, but the walk script says: \"Start with 10 and 14. Each step gains one: 4, 5, 6. A step of 7 takes 25 to 32. Watch 31 dip and 33 rise; 36 overshoots.\" None of its numbers are this series' terms or options, and it never reaches 29.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 29 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '12,  18,  27,  39, …' with options 54, 51, 53 and key 54, but the walk script says: \"Look twice at 3, 49, 9, 47. One chain jumps up 3, 9; the other jumps down 49, 47. The rising chain is next, reaching 15. Both 14 and 16 sit one off; 21 leaps too far.\" None of its numbers are this series' terms or options, and it never reaches 54.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 54 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-22",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '8,  11,  14,  17, …' with options 20, 19, 23, 31 and key 20, but the walk script says: \"See the gap from 5 to 8. The gaps swell: 3, 4, 5. A gap of 6 makes 23. Both 22 and 24 sit a step off; 26 pushes far past.\" None of its numbers are this series' terms or options, and it never reaches 20.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 20 and names this card's distractors."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-24",
+   "verdict": "HOLD",
+   "faultAt": [
+    "walk script"
+   ],
+   "fault": "Walk script belongs to a different series. The question is '16,  21,  29,  40, …' with options 54, 51, 53 and key 54, but the walk script says: \"Watch 7, 53, 12, 51 with care. One chain climbs 7, 12; the other sinks 53, 51. The climbing chain follows, landing on 17. Here 16 and 18 drift one place; 22 adds one step too many.\" None of its numbers are this series' terms or options, and it never reaches 54.",
+   "objective": true,
+   "suggestedFix": "Rewrite the walk script from this card's own series so it ends on 54 and names this card's distractors."
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+ "batch": "vr-07",
+ "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+ "reviewed": 24,
+ "verdicts": [
+  {
+   "itemId": "gen-vr-14-letter-connections-01",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-02",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-03",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option W"
+   ],
+   "fault": "Option W is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair K->G goes 4 BACK and W is S moved 4 FORWARD, so the description states the opposite of the mistake that produces W here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-04",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option O"
+   ],
+   "fault": "Option O is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair C->A goes 2 BACK and O is M moved 2 FORWARD, so the description states the opposite of the mistake that produces O here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-05",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-06",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option S"
+   ],
+   "fault": "Option S is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair C->A goes 2 BACK and S is Q moved 2 FORWARD, so the description states the opposite of the mistake that produces S here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-08",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option T"
+   ],
+   "fault": "Option T is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair D->A goes 3 BACK and T is Q moved 3 FORWARD, so the description states the opposite of the mistake that produces T here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-09",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-10",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-11",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option R"
+   ],
+   "fault": "Option R is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair G->D goes 3 BACK and R is O moved 3 FORWARD, so the description states the opposite of the mistake that produces R here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-12",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option M"
+   ],
+   "fault": "Option M is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair K->G goes 4 BACK and M is I moved 4 FORWARD, so the description states the opposite of the mistake that produces M here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-13",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-14",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-15",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option Q"
+   ],
+   "fault": "Option Q is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair K->G goes 4 BACK and Q is M moved 4 FORWARD, so the description states the opposite of the mistake that produces Q here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-16",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option T"
+   ],
+   "fault": "Option T is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair C->A goes 2 BACK and T is R moved 2 FORWARD, so the description states the opposite of the mistake that produces T here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-17",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-18",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-19",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option M"
+   ],
+   "fault": "Option M is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair C->A goes 2 BACK and M is K moved 2 FORWARD, so the description states the opposite of the mistake that produces M here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-20",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option S"
+   ],
+   "fault": "Option S is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair G->D goes 3 BACK and S is P moved 3 FORWARD, so the description states the opposite of the mistake that produces S here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-22",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-23",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option R"
+   ],
+   "fault": "Option R is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair D->A goes 3 BACK and R is O moved 3 FORWARD, so the description states the opposite of the mistake that produces R here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-24",
+   "verdict": "HOLD",
+   "faultAt": [
+    "a tag",
+    "option R"
+   ],
+   "fault": "Option R is tagged vr14-step-direction, whose tagDescription reads \"Moved backwards through the alphabet instead of forwards.\" On this card the first pair K->G goes 4 BACK and R is N moved 4 FORWARD, so the description states the opposite of the mistake that produces R here (the execution note itself is correct).",
+   "objective": true,
+   "suggestedFix": "Reword the vr14-step-direction library description to cover both directions, e.g. \"Moved the opposite way through the alphabet to the first pair.\""
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-25",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  }
+ ]
+}

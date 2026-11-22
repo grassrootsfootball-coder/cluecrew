@@ -1,0 +1,271 @@
+{
+  "batch": "english-05",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 35,
+  "verdicts": [
+    {
+      "itemId": "ENG-002-pp-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-05",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option Everybody who came to the assembly that night.",
+        "walk script"
+      ],
+      "fault": "The option is a too-broad sense of 'party' (everyone at the assembly), but its tag en-attribute-transfer gives the child hint 'Check who or what each detail belongs to in the text', which does not help with a meaning that is the right kind but too wide. Also the walk script says 'five people are named', which is line 22, outside the cited lineRefs 17 to 21.",
+      "objective": false,
+      "suggestedFix": "Retag to a vocabulary-sense tag whose hint fits, and cite lines 17 to 22."
+    },
+    {
+      "itemId": "ENG-002-pp-06",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option His two sisters, the husband of the elder sister, and one other young man."
+      ],
+      "fault": "Length giveaway: the key is 14 words and the only long, qualified option; the four distractors are 5 to 8 words. A child can pick it without reading lines 21 to 23.",
+      "objective": false,
+      "suggestedFix": "Shorten the key, e.g. 'His two sisters, Mr Hurst and another young man.'"
+    },
+    {
+      "itemId": "ENG-002-pp-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-09",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option Because of his looks, and because of the news that he was very rich."
+      ],
+      "fault": "Giveaway: the key is the only two-part option and the longest (15 words; distractors 7 to 10 words).",
+      "objective": false,
+      "suggestedFix": "Make the key one compact clause, or give a distractor a matching two-part shape."
+    },
+    {
+      "itemId": "ENG-002-pp-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-12",
+      "verdict": "HOLD",
+      "faultAt": [
+        "execution"
+      ],
+      "fault": "Execution on option 'Three: with Mrs Hurst, Miss Bingley and Miss Bennet.' says Miss Bennet 'dances with Mr Bingley at line 63'. Line 63 is 'sitting down just behind you...'; her dancing with Mr Bingley is at lines 60 and 61.",
+      "objective": true,
+      "suggestedFix": "Change 'line 63' to 'lines 60 and 61'."
+    },
+    {
+      "itemId": "ENG-002-pp-13",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-14",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-15",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-16",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-17",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-18",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-19",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-20",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-21",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-22",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-002-pp-23",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option There was hope in the air that Wednesday."
+      ],
+      "fault": "Possible second answer: line 3 to 4 reads 'impossible to feel altogether gloomy: there was hope in the air', and the colon lets a child read the hope as what made gloom impossible. The key rests on the 'such ... scents ... that' structure across lines 1 to 3, which a 9 to 11-year-old may not parse.",
+      "objective": false,
+      "suggestedFix": "Replace the 'hope in the air' distractor with one the text clearly does not offer as the cause."
+    },
+    {
+      "itemId": "ENG-012-ML-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-08",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script never reaches the key: it ends 'The other has to be about something else, and the puff is what she is eating', which never says relish means enjoyment and, if anything, points toward the 'sauce' distractor.",
+      "objective": true,
+      "suggestedFix": "End with: 'So relish is about how much she enjoyed the taste.'"
+    },
+    {
+      "itemId": "ENG-012-ML-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-012-ML-12",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "batch": "english-08",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 39,
+  "verdicts": [
+    {
+      "itemId": "ENG-027-RR-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option That he would be doing the King little credit.",
+        "a tag",
+        "execution"
+      ],
+      "fault": "Tag en-attribute-transfer does not name the mistake. Line 3 reads 'I should be paying a poor compliment to the King if I did not set modesty aside'. The option comes from dropping the 'if I did not' condition. No detail is moved from one character to another. The execution 'it belongs to what he says of the King' describes no transfer, and the child hint 'Check who or what each detail belongs to' does not help here.",
+      "objective": false,
+      "suggestedFix": "Retag as a condition/negation misreading (e.g. en-negation-dropped) and rewrite the execution to name 'if I did not' on line 3."
+    },
+    {
+      "itemId": "ENG-027-RR-02",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script",
+        "a tag"
+      ],
+      "fault": "The walk script stops at 'Line 61 says she could have told them apart in an instant.' It never reaches the key's second half, 'nobody puts the two men together' (lines 62-63, 'neither she nor anyone else dreamed'). Read alone, that last step points towards option C (the princess suspects). Separately, option C is contradicted by line 60 ('nor in that of any other did I see the least doubt'), so it is not merely unstated, and en-plausible-not-stated misnames it.",
+      "objective": false,
+      "suggestedFix": "End the walk on lines 62-63, where nobody dreamed he was other than the King. Retag C en-contradicted-by-the-text."
+    },
+    {
+      "itemId": "ENG-027-RR-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script never reaches the key 'His usual way of looking'. It ends 'The word sits after paler than his.' and gives no route to 'usual'. Also, the hint's substitution test lets option D through: 'He looks paler than his look in the pictures of him' reads sensibly, so the hint does not separate the key from D.",
+      "objective": false,
+      "suggestedFix": "Add a walk step that ties 'paler than his wont' to 'paler than usual'."
+    },
+    {
+      "itemId": "ENG-027-RR-04",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option That the pictures of him are handsome enough."
+      ],
+      "fault": "Giveaway. Two near-identical options include the key: 'That the pictures of him are handsome enough.' and 'That the pictures of him are not handsome enough.' differ only by 'not'. A child without the skill can narrow the choice to that pair.",
+      "objective": false,
+      "suggestedFix": "Recast the negation-dropped distractor so it does not mirror the key word for word, or recast the key."
+    },
+    {
+      "itemId": "ENG-027-RR-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-027-RR-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-027-RR-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-027-RR-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-027-RR-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-027-RR-11",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option Because the ambassadors had paid their respects.",
+        "a tag"
+      ],
+      "fault": "Tag en-attribute-transfer does not fit. Line 65 has the ambassadors pay their respects, and Lord Topham is 'among them' (line 66). Nothing is moved from one party to another: the option is a true detail from the window that does not answer 'why thankful'. The execution 'it belongs to the ambassadors as a group' names no transfer.",
+      "objective": false,
+      "suggestedFix": "Retag en-within-span-wrong-element, or replace the distractor with one that really moves an attribute."
+    },
+    {
+      "itemId": "ENG-027-RR-12",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script lists only the crowd's noticed differences (lines 11, 13, 14). It never reaches the key's second half, 'what he hears in it is approval' (line 16 'mere flattery', line 17 'signs of approval'). As written, the evidence supports option C (the crowd has spotted that he is not the King) as well as the key.",
+      "objective": false,
+      "suggestedFix": "Add the step at lines 16-17 where he takes the remarks as flattery and approval."
+    },
+    {
+      "itemId": "ENG-028-PR-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option Gets bigger as it takes in the heat.",
+        "option Stops sitting flat in its frame.",
+        "execution",
+        "walk script"
+      ],
+      "fault": "The key adds a mechanism the lines do not give. Lines 3-4 say 'Wood swells. One hot summer and every door ... stops shutting properly', not that wood takes in heat. Wood swells by taking in moisture, so the key teaches a false fact. Option D's execution says 'True at line 4', but line 4 says 'stops shutting properly', not 'sitting flat in its frame'. The walk script ends on 'one hot summer does it' and never reaches 'gets bigger'.",
+      "objective": false,
+      "suggestedFix": "Key: 'Gets bigger, so the door no longer fits.' Fix D's execution to quote line 4, and end the walk on getting bigger."
+    },
+    {
+      "itemId": "ENG-028-PR-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-028-PR-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-028-PR-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-028-PR-10",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script gets its line numbers wrong. It says 'Line 40 is the one that answers it' and 'Lines 37 and 39 only show her saying his name'. Line 39 reads '...in that voice, and both times he has answered a', so the answer starts on line 39 and line 40 holds only 'different question.' Line 39 does more than show her saying his name.",
+      "objective": true,
+      "suggestedFix": "'Lines 39 and 40 answer it. Both times, he answered a different question.'"
+    },
+    {
+      "itemId": "ENG-009-SM-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-06",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option He looked over as soon as he could hear the water.",
+        "option The wind was blowing hard into his eyes.",
+        "a tag"
+      ],
+      "fault": "The question's own wording rules out option D. The stem says he keeps from looking over, and D says he looked over at once, so D is not even a candidate reason. Option C is contradicted by line 24 ('the wind dropped out of my ears'), and its own execution says so. That is en-contradicted-by-the-text, not en-cause-agent-swap, since no cause or agent is swapped.",
+      "objective": true,
+      "suggestedFix": "Replace D with a reason-shaped distractor. Retag C en-contradicted-by-the-text."
+    },
+    {
+      "itemId": "ENG-009-SM-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-009-SM-12",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-024-BF-11",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option That it is about the fountain, which he thinks is finished."
+      ],
+      "fault": "Form giveaway. The key is the only option that begins 'That' and the only one phrased as an explanation, which is the form 'How does Dilan explain...' asks for. The other three ('Mrs Farrell says...', 'His mother arrived...', 'His mother has promised...') are bare statements.",
+      "objective": false,
+      "suggestedFix": "Give all four options the same form: all begin 'That', or none do."
+    },
+    {
+      "itemId": "ENG-024-BF-12",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    }
+  ]
+}

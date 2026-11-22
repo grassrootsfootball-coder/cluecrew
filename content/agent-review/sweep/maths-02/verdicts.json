@@ -1,0 +1,309 @@
+{
+  "batch": "maths-02",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 34,
+  "verdicts": [
+    {
+      "itemId": "MC01-GEOM-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC01-GEOM-04",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script says 'Two share the x value 5, and two share the y value 4.' Of the three given corners (2, 1), (5, 1), (2, 4), only (5, 1) has x = 5 and only (2, 4) has y = 4. The statement is false.",
+      "objective": true,
+      "suggestedFix": "Say: one corner has x = 5 and another has y = 4, so the fourth corner is (5, 4)."
+    },
+    {
+      "itemId": "MC01-GEOM-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC01-GEOM-06",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 160°",
+        "a tag"
+      ],
+      "fault": "Option 160° (tag maths-89-wrong-angle-total): the child hint says only 'A line is 180, a turn is 360.' The mistake here is using 360° for a TRIANGLE; the hint never names the triangle total, so it does not correct the mistake this option encodes.",
+      "objective": false,
+      "suggestedFix": "Use a hint naming the triangle: 'The angles in a triangle add to 180°.'"
+    },
+    {
+      "itemId": "MC02-GEOM-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC02-GEOM-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script ends 'The trap swaps the order or uses 360.' No option uses 360: (360 - 46) ÷ 2 = 157, and the options are 44°, 12°, 65°. The 12° (digit-by-digit halving) and 65° (rounding) traps are not described.",
+      "objective": true,
+      "suggestedFix": "Replace the last sentence with one that names a trap actually present, e.g. halving before subtracting."
+    },
+    {
+      "itemId": "MC02-GEOM-04",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option (6, 2)",
+        "a tag"
+      ],
+      "fault": "Option (6, 2) (tag maths-47-translation-by-gap): the child hint says 'Pick one corner on the first shape. Count the squares to that same corner on the new shape.' The question moves a single point; there is no first shape, new shape or corner, so the hint does not fit this question.",
+      "objective": true,
+      "suggestedFix": "Use a point-move hint: 'Count the squares you move, not the lines you cross.'"
+    },
+    {
+      "itemId": "MC02-GEOM-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC02-GEOM-06",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 265°",
+        "a tag"
+      ],
+      "fault": "Option 265° (tag maths-89-wrong-angle-total): the child hint says only 'A line is 180, a turn is 360.' The mistake here is using 360° for a TRIANGLE; the hint never names the triangle total, so it does not correct the mistake this option encodes.",
+      "objective": false,
+      "suggestedFix": "Use a hint naming the triangle: 'The angles in a triangle add to 180°.'"
+    },
+    {
+      "itemId": "MC03-GEOM-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC03-GEOM-02",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option (6, 3)",
+        "a tag"
+      ],
+      "fault": "Option (6, 3) (tag maths-47-translation-by-gap): the child hint says 'Pick one corner on the first shape. Count the squares to that same corner on the new shape.' The question moves a single point; there is no first shape, new shape or corner, so the hint does not fit this question.",
+      "objective": true,
+      "suggestedFix": "Use a point-move hint: 'Count the squares you move, not the lines you cross.'"
+    },
+    {
+      "itemId": "MC03-GEOM-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC03-GEOM-05",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script opens 'Half the perimeter to 15' (verb should be 'Halve'; the sentence has no verb as written) and closes 'One trap stops at the half-total.' No option is the half-total 15 cm; the only 15 option is 15 cm², tagged maths-72 as 9 + 6 added, so the walk and the tag give two different accounts of one option. Also 6 cm is the only option in cm on a question asking for the area, so the unit rules it out.",
+      "objective": false,
+      "suggestedFix": "'Halve the perimeter to get 15.' Name the trap as the tag does: adding 9 and 6 instead of multiplying."
+    },
+    {
+      "itemId": "MC04-GEOM-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC04-GEOM-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC05-GEOM-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 162 cm²"
+      ],
+      "fault": "Perimeter question: 162 cm² is the only option in cm², so the area-for-perimeter distractor is labelled as an area and the question's own unit rules it out. Sibling cards (MC01/02/04-GEOM-01) give this distractor in cm (24 cm, 45 cm, 126 cm).",
+      "objective": false,
+      "suggestedFix": "Show it as 162 cm, as the sibling cards do."
+    },
+    {
+      "itemId": "MC05-GEOM-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC05-GEOM-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option (10, 5)",
+        "a tag"
+      ],
+      "fault": "Option (10, 5) (tag maths-47-translation-by-gap): the child hint says 'Pick one corner on the first shape. Count the squares to that same corner on the new shape.' The question moves a single point; there is no first shape, new shape or corner, so the hint does not fit this question.",
+      "objective": true,
+      "suggestedFix": "Use a point-move hint: 'Count the squares you move, not the lines you cross.'"
+    },
+    {
+      "itemId": "MC05-GEOM-04",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 48 cm²"
+      ],
+      "fault": "Option 48 cm² repeats the question's own given value ('an area of 48 cm²') with its unit, and it is the only cm² option on a perimeter question. A child can discard it as the number already given, without the skill.",
+      "objective": true,
+      "suggestedFix": "Replace with a different perimeter slip, e.g. 14 cm (8 + 6 not doubled)."
+    },
+    {
+      "itemId": "MC05-GEOM-05",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script",
+        "option 40 cm"
+      ],
+      "fault": "Walk script writes '76 cm squared'. House notation requires a real superscript: 76 cm². Also option 40 cm is the only option in cm on an area question, so the unit rules it out (sibling MC04-GEOM-05 gives the same distractor as 40 cm²).",
+      "objective": true,
+      "suggestedFix": "Write '76 cm²'; give the distractor as 40 cm²."
+    },
+    {
+      "itemId": "MC05-GEOM-06",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option 290°",
+        "a tag"
+      ],
+      "fault": "Option 290° (tag maths-89-wrong-angle-total): the child hint says only 'A line is 180, a turn is 360.' The mistake here is using 360° for a TRIANGLE; the hint never names the triangle total, so it does not correct the mistake this option encodes.",
+      "objective": false,
+      "suggestedFix": "Use a hint naming the triangle: 'The angles in a triangle add to 180°.'"
+    },
+    {
+      "itemId": "MC01-MEAS-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC01-MEAS-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC01-MEAS-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC02-MEAS-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script says 'One trap rounds £2.60 up and forgets to adjust.' No option does: rounding to £3 gives £5.00, which is not offered. The options are £6.60 (no exchange), £6.00 (pence dropped), £10.60 (added).",
+      "objective": true,
+      "suggestedFix": "Name a trap that is present, e.g. 'One trap drops the pence.'"
+    },
+    {
+      "itemId": "MC02-MEAS-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script says 'Another rounds both prices and forgets to adjust.' No option is a rounding result: to the nearest pound £4 + £3 = £7.00, not offered. £6.00 is tagged maths-83 (pence dropped), not rounding.",
+      "objective": true,
+      "suggestedFix": "'Another drops the pence and adds only the pounds.'"
+    },
+    {
+      "itemId": "MC02-MEAS-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC02-MEAS-07",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script says 'Another rounds a price and forgets to adjust.' No option is a rounding result. The options are £4.90 (stopped at the total), £7.10 (£2 of the juice dropped) and £5.75 (one apple too few).",
+      "objective": true,
+      "suggestedFix": "'Another stops at the total spent.'"
+    },
+    {
+      "itemId": "MC03-MEAS-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script writes money without the £ symbol: 'Write £8 as 8.00, then take 5.60 away. That leaves 2.40.' House notation requires £8.00, £5.60, £2.40. It also says 'The trap rounds the price', but no option rounds (£6 would give £2.00, not offered).",
+      "objective": true,
+      "suggestedFix": "'Write £8 as £8.00, then take £5.60 away. That leaves £2.40. One trap drops the pence.'"
+    },
+    {
+      "itemId": "MC03-MEAS-05",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script says 'The trap rounds the prices or drops a pounds digit.' No option drops a pounds digit; £4.60 is tagged maths-13, the carried 1 added twice (£5.40 spent). Only the rounding half is true (£5.50).",
+      "objective": true,
+      "suggestedFix": "'One trap rounds the prices. Another carries a 1 twice.'"
+    },
+    {
+      "itemId": "MC03-MEAS-06",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script says 'The trap stops at the total, or drops a digit.' Neither is offered: no option is 615 m, and none drops a digit. The options are 185 m (carry added twice) and 280 m / 260 m (rounding).",
+      "objective": true,
+      "suggestedFix": "'One trap rounds 275 m and does not put the difference back.'"
+    },
+    {
+      "itemId": "MC03-MEAS-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "MC04-MEAS-07",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "Walk script writes money without the £ symbol: 'cost 2.35 times 3, which is 7.05. Take 7.05 from the £10 note. The change is 2.95.' House notation requires £2.35, £7.05, £2.95.",
+      "objective": true,
+      "suggestedFix": "Put £ on every amount: £2.35, £7.05, £2.95."
+    },
+    {
+      "itemId": "MC05-MEAS-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    }
+  ]
+}

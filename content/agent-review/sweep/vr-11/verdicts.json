@@ -1,0 +1,186 @@
+{
+ "batch": "vr-11",
+ "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+ "reviewed": 25,
+ "verdicts": [
+  {
+   "itemId": "gen-vr-20-complete-the-word-01",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-02",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-03",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-04",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-05",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-06",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "verdict": "HOLD",
+   "faultAt": [
+    "option S",
+    "execution"
+   ],
+   "fault": "Option S fills _AMEL as SAMEL, which the project lexicon accepts as a word (base list content/wordlists/en-lower.txt line 143575: 'samel', an underfired brick). The execution note for S says 'SAMEL, which is not a word', which is false against the lexicon, so the distractor is not cleanly wrong under the rule and check:word-puzzles would treat it as a second word-making option.",
+   "objective": true,
+   "suggestedFix": "Replace S with a common letter that makes no word, e.g. T (TAMEL), and correct its execution note."
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-08",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-09",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-10",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-11",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-12",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-13",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-14",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-15",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-16",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-17",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-18",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-19",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-20",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-21",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-22",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-23",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-24",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-25",
+   "verdict": "SIGN",
+   "faultAt": [],
+   "fault": null,
+   "objective": true
+  }
+ ]
+}

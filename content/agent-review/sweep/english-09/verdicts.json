@@ -1,0 +1,248 @@
+{
+  "batch": "english-09",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 32,
+  "verdicts": [
+    {
+      "itemId": "ENG-007-LP-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-007-LP-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-007-LP-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-007-LP-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-007-LP-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-007-LP-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-007-LP-08",
+      "verdict": "HOLD",
+      "faultAt": [
+        "walk script"
+      ],
+      "fault": "The walk script ends 'The writer ends on the empty space rather than the names.' It never connects the space to Reuben, so it does not reach the key 'There is a space Reuben is not going to fill.' It also stops at line 38 and never reads line 39, where the room at the bottom is mentioned.",
+      "objective": false,
+      "suggestedFix": "Add a closing step linking the space to Reuben, e.g. 'Reuben walks past it and does not sign. The space is one he will not fill.'"
+    },
+    {
+      "itemId": "ENG-007-LP-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-007-LP-10",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option The things lying across the top."
+      ],
+      "fault": "Giveaway by echo. The question quotes 'the top layer', and the key is the only option that repeats 'top'. A child can match 'top' without knowing what 'layer' means. The other three options do not contain the word.",
+      "objective": false,
+      "suggestedFix": "Reword the key without 'top', e.g. 'One level of things lying on others.'"
+    },
+    {
+      "itemId": "ENG-007-LP-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-007-LP-15",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option Put it in the Friday box, low down, and pressed it flat.",
+        "option Put it in the returns box, low down, and pushed it flat."
+      ],
+      "fault": "Two near-identical options, and the key is one of them. They differ only in 'Friday'/'returns' and 'pressed'/'pushed'. Line 34 says 'pushed it flat', so the distractor carries the text's own verb and the key does not. A child who checks the verb against line 34 is drawn away from the key.",
+      "objective": true,
+      "suggestedFix": "Make the key say 'pushed it flat' to match line 34, and break up the twin pair, e.g. change the returns-box option's second half."
+    },
+    {
+      "itemId": "ENG-026-AL-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-026-AL-12",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-022-GK-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-022-GK-02",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option He put himself in goal, and Dan picked him eighth of eight.",
+        "hint"
+      ],
+      "fault": "Two near-identical options, and the key is one of them. 'He put himself in goal, and Dan picked him eighth of eight' and the key 'He says he chose the goal, but he was picked last of them' give the same two facts and differ only in and/but. The hint 'One of these joins the two moments with an and' points at the twin as the one to drop. That leaves the key without any reading of lines 7 to 11 or 38 to 39.",
+      "objective": true,
+      "suggestedFix": "Rewrite the hint so it does not point at a conjunction in one option, e.g. 'Ask whether line 7 and line 38 agree.'"
+    },
+    {
+      "itemId": "ENG-022-GK-03",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option You spend the game behind somebody’s head."
+      ],
+      "fault": "The key uses 'behind', which is on the brief's banned list for child-facing text. Line 15 says 'at the back of', so 'behind' is the option's own wording, not a quotation from the passage.",
+      "objective": true,
+      "suggestedFix": "'You spend the game running at the back of someone’s head.'"
+    },
+    {
+      "itemId": "ENG-022-GK-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-022-GK-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-022-GK-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-022-GK-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-022-GK-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-022-GK-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    }
+  ]
+}

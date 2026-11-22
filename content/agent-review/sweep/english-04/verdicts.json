@@ -1,0 +1,279 @@
+{
+  "batch": "english-04",
+  "reviewer": "rev-agent-01 (second-reader sweep, machine)",
+  "reviewed": 34,
+  "verdicts": [
+    {
+      "itemId": "ENG-006-TM-01",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-006-TM-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-006-TM-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-006-TM-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-006-TM-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-006-TM-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-006-TM-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-006-TM-08",
+      "verdict": "HOLD",
+      "faultAt": [
+        "question",
+        "option A tool for measuring length."
+      ],
+      "fault": "Giveaway: the question itself says Uncle Podger 're-measures' with the rule, and the key is the only option containing 'measuring'. A child can match the stem's word to the key without reading line 38 or knowing the word.",
+      "objective": false,
+      "suggestedFix": "Quote only 'he would take the rule' in the stem, so the child has to find 're-measure' in line 38 for themselves."
+    },
+    {
+      "itemId": "ENG-006-TM-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-006-TM-10",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option Hide the hammer so he cannot start at all.",
+        "a tag"
+      ],
+      "fault": "The tag en-motive-invention and its child hint ('Ask what the text says about why') are about a reason. The question asks WHAT Aunt Maria would like to do, not why, so the hint does not help here. The option is an invented plan, so en-plausible-not-stated fits.",
+      "objective": false,
+      "suggestedFix": "Retag as en-plausible-not-stated, or replace the option with one the motive tag fits."
+    },
+    {
+      "itemId": "ENG-006-TM-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-006-TM-12",
+      "verdict": "HOLD",
+      "faultAt": [
+        "question",
+        "option It is not one day at all, but what happened every single time."
+      ],
+      "fault": "The stem asks 'What does that tell us about this day?', which says there is one day. The key then says 'It is not one day at all'. So the stem asserts what the key denies, and a child who reads the habitual 'would' correctly is told by the question that it is a single day. The key also shares its 'It is not one X, but Y' frame with the distractor 'It is not one clear memory, but a guess...', which sets that pair apart from the two 'It tells us...' options.",
+      "objective": false,
+      "suggestedFix": "Ask 'What does that tell us about these events?' and give the four options matching frames."
+    },
+    {
+      "itemId": "ENG-010-JE-01",
+      "verdict": "HOLD",
+      "faultAt": [
+        "hint",
+        "option On a stile that leads into a lane."
+      ],
+      "fault": "The hint says 'Read what she sits on, not where it goes.' The only thing separating the key ('a stile that leads into a field') from the distractor 'On a stile that leads into a lane' is where the stile goes. A child who follows the hint cannot tell those two apart.",
+      "objective": false,
+      "suggestedFix": "Reword the hint so it does not steer away from the stile's destination, for example 'Read the whole of line 2.'"
+    },
+    {
+      "itemId": "ENG-010-JE-02",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-010-JE-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-010-JE-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-010-JE-05",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-010-JE-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-010-JE-07",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-010-JE-08",
+      "verdict": "HOLD",
+      "faultAt": [
+        "question"
+      ],
+      "fault": "The card has only 3 options (key, 'stopped where he was standing', 'felt along his foot and leg'). Every other card in this batch has 4, so one option looks missing, and a guess now succeeds one time in three.",
+      "objective": true,
+      "suggestedFix": "Restore or author a fourth distractor."
+    },
+    {
+      "itemId": "ENG-010-JE-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-010-JE-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-010-JE-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-010-JE-12",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option She reports the light first, but describes little beyond what it shows.",
+        "walk script"
+      ],
+      "fault": "The stem asks what Jane does in both places BEFORE describing something. The key's second clause ('describes little beyond what it shows') is about the description, not what comes before it, and it is weak at lines 54 to 56, where she gives a dark face, stern features, heavy brow, eyebrows and an age of thirty-five. That clause also makes the key the long qualified option. The walk script reaches only 'The light comes first, then the description' and never supports the second clause. In the walk script, 'details are not apparent' at line 53 is about the cloak, not the man.",
+      "objective": false,
+      "suggestedFix": "Key: 'She tells us about the light before she describes what she sees.'"
+    },
+    {
+      "itemId": "ENG-016-HB-02",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option He falls silent first, but Watson had judged him brave.",
+        "walk script"
+      ],
+      "fault": "The distractor is the key's two facts (brave, silenced) put back in the other order. That makes a near-identical pair with the key, set apart from the other two options. The distractor is also self-inconsistent: 'had judged' puts the judging earlier, which is true, so only the word 'first' makes it false. The walk script lists lines 9, 45 and 46 but never states the change it is meant to reach. The clearest before-state, the 'eager face' at line 6, is in neither the key nor the walk.",
+      "objective": false,
+      "suggestedFix": "Replace that distractor with one that does not mirror the key, and end the walk script on the change itself."
+    },
+    {
+      "itemId": "ENG-016-HB-03",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-016-HB-04",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-016-HB-06",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-016-HB-07",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option The bare moor and the hidden man together chill him."
+      ],
+      "fault": "Giveaway: the key repeats the stem's word 'chilled' ('...together chill him'). It is the only option that uses it, and the only two-part option ('X and Y together'). The other three are single details or actions.",
+      "objective": false,
+      "suggestedFix": "Drop 'chill him' from the key, for example 'The bleak moor, with a dangerous man hiding on it.'"
+    },
+    {
+      "itemId": "ENG-016-HB-08",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-016-HB-09",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-016-HB-10",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-016-HB-11",
+      "verdict": "SIGN",
+      "faultAt": [],
+      "fault": null,
+      "objective": true
+    },
+    {
+      "itemId": "ENG-016-HB-12",
+      "verdict": "HOLD",
+      "faultAt": [
+        "option He writes a still moor, but he gives it a mind of its own.",
+        "walk script"
+      ],
+      "fault": "'He writes a still moor' is not usual English, and 'still' can be read as calm, motionless or nevertheless. A child cannot tell what the key claims. The walk script's last piece of evidence (line 27, rotting plants as 'sad gifts' from Nature) is from the deep lanes of lines 21 to 29, not the moor the question asks about. The walk also never states the conclusion the key gives.",
+      "objective": false,
+      "suggestedFix": "Key: 'He writes as if the land itself had feelings.' Use moor evidence only (lines 4, 8, 20) and end the walk on that point."
+    }
+  ]
+}
