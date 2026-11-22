@@ -29575,3 +29575,27 @@ rules, and the CI restore step is held with it. The options:
 - make the repository private, then commit the snapshot as is;
 - encrypt the snapshot with a key held as a CI secret, which loses the readable diff;
 - keep it out of git and have CI fetch it with a secret.
+
+**ENCRYPTED, NOT HELD** (David, 2026-11-22: "Encrypt it instead"). The repository stays public. The
+snapshot is in git as `packages/db/snapshot.enc`, 1.3 MB: AES-256-GCM over the gzipped tables, with
+the manifest digest as authenticated data. Beside it is `packages/db/snapshot.manifest.json`, which
+is plain and holds tables, columns, row counts and digests, with no names and no addresses. A content
+change therefore shows in review as a changed count and digest, not as readable text: that is the
+diff this choice gives up.
+- The key is `SNAPSHOT_KEY`, in the root `.env` (gitignored) and as a GitHub Actions secret, set on
+  2026-11-22. It was never printed.
+- GCM needs a fresh IV every time, so `snapshot.enc` is rewritten only when the digest changes.
+  Re-exporting unchanged content leaves it byte-identical (verified).
+- Export decrypts what it just wrote and compares every table before it returns.
+- Restore always decrypts the COMMITTED file and never the local TSVs, so it loads what CI loads.
+- Measured on a fresh migrated database:
+  - no key: refused, 0 rows written;
+  - wrong key: refused on authentication, 0 rows written;
+  - real key: 45,652 of 45,652 rows faithful;
+  - a second restore into the loaded database: refused.
+- **Limits:**
+  - Pull requests from forks get no secrets, so they cannot restore, and the step fails rather than
+    skips.
+  - If the key is lost, the file cannot be read. The dev database is the source, so re-export with a
+    new key and reset the secret.
+  - Each content change adds about 1.3 MB to the git history.

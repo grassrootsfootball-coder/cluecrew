@@ -73,6 +73,20 @@ jobs:
       - name: Migration drift check
         run: pnpm db:migrate:check
 
+      # THE CONTENT ITSELF (R1039). Migrations build an empty store; the seed and the generator add
+      # only synthetic and DRAFT rows. Everything reviewed — English, the bank questions, every
+      # signature — comes from the committed snapshot of the dev database's content tables. Restore
+      # refuses a non-empty table and a migration mismatch, then re-reads the database and compares
+      # it table by table with the files, so a partial load fails here, not twenty steps later.
+      # The seed and generator then run ON TOP of the real store: with the reviewed-content guard
+      # (R62) that makes them a test that a derivation change has not rewritten reviewed rows.
+      # The repository is public, so the snapshot is committed ENCRYPTED; the key is a repository
+      # secret. With no key the restore REFUSES rather than skipping (forks get no secrets).
+      - name: Load the content snapshot
+        env:
+          SNAPSHOT_KEY: ${{ secrets.SNAPSHOT_KEY }}
+        run: pnpm snapshot:restore
+
       - name: Seed
         run: pnpm --filter @cluecrew/db seed
 

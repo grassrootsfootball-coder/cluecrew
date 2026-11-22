@@ -32,6 +32,6 @@ blob-report/
 # Output of the repo, not input to it; regenerate rather than commit.
 content/exports/
 
-# R1039: the content snapshot. HELD OUT OF GIT while the repository is public — it would publish the
-# whole item bank and a personal email. Remove these lines once David rules (private repo / encrypt).
+# R1039: the content snapshot's PLAIN working copy. The repository is public, so only the encrypted
+# packages/db/snapshot.enc and its plain manifest are committed (key: SNAPSHOT_KEY, never in git).
 packages/db/snapshot/

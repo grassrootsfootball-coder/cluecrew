@@ -1,0 +1,336 @@
+{
+ "ruling": "R1039",
+ "note": "Content tables of the dev database, for CI. Regenerate with `pnpm snapshot:export`; never hand-edit.",
+ "latestMigration": "20260902190055_add_signature_subject",
+ "tables": [
+  {
+   "table": "QuestionType",
+   "columns": [
+    "id",
+    "district",
+    "name",
+    "glCode",
+    "mechanic"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 35,
+   "sha256": "f06db68363952052e5516158c6447286681c946ef747ef40827cd153eb7c2254"
+  },
+  {
+   "table": "Region",
+   "columns": [
+    "id",
+    "name",
+    "examFormat",
+    "formatSummary",
+    "typicalTestMonth",
+    "subjects",
+    "exampleSchools",
+    "notes",
+    "sourceUrl",
+    "lastVerified",
+    "updatedAt"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 10,
+   "sha256": "24f52e1e3d7eb16ac08ac625fec10f31c812e5b5658fd970983f21245b7b031f"
+  },
+  {
+   "table": "Case",
+   "columns": [
+    "id",
+    "questionTypeId",
+    "title",
+    "narrativeIntro",
+    "modes",
+    "orderInDistrict",
+    "freeTier",
+    "storyWrapper",
+    "mappedQuestionTypeIds"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 28,
+   "sha256": "d89899ba92a8b5763177dac02530c9fbec1b42f99f73e91689f29324108e118c"
+  },
+  {
+   "table": "Word",
+   "columns": [
+    "id",
+    "headword",
+    "definitionChild",
+    "sentence",
+    "rootFamily",
+    "imageRef",
+    "tier",
+    "authoredBy",
+    "imagePrompt",
+    "imagePromptB",
+    "likelierKnown",
+    "likelierKnownNote",
+    "preReviewVerdict",
+    "reviewedBy",
+    "rootFamilies",
+    "senseBDefinition",
+    "senseBSentence",
+    "senseBWordClass",
+    "status",
+    "supersedeNote",
+    "twoMeanings",
+    "wordClass",
+    "reviewNotes"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 302,
+   "sha256": "acea3df1bf073b732873284c74da9d17ba01c2885a937886aeda25e4ee1e4807"
+  },
+  {
+   "table": "Misconception",
+   "columns": [
+    "id",
+    "district",
+    "description",
+    "childHint",
+    "teachback",
+    "status",
+    "proposedBy",
+    "sourcePattern",
+    "approvedBy",
+    "approvalMethod",
+    "approvalNote",
+    "recordedBy",
+    "rejectedAt",
+    "rejectedBy",
+    "rejectionNote",
+    "category",
+    "testedTokens",
+    "createdAt",
+    "updatedAt",
+    "axis",
+    "textProvenance",
+    "boundaries",
+    "move"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 298,
+   "sha256": "d093f811c63a06b90ab0cc4c0fa7394ceffd203d824e5acf872df207853fb937"
+  },
+  {
+   "table": "Item",
+   "columns": [
+    "id",
+    "questionTypeId",
+    "difficultyTier",
+    "calibratedDifficulty",
+    "stem",
+    "explanation",
+    "status",
+    "authoredBy",
+    "reviewedBy",
+    "createdAt",
+    "reviewNotes",
+    "calibrationFlaggedAt",
+    "pool",
+    "similarityFlaggedAt",
+    "similarityScore",
+    "similarityClearedBy",
+    "similarityClearNote",
+    "solution",
+    "reviewMethod",
+    "reviewRecordNote",
+    "reviewRecordedBy",
+    "answerFlagNote",
+    "answerFlaggedAt",
+    "mechanismLedger",
+    "sourcedFrom",
+    "tierRationale",
+    "draftSelfAssessment",
+    "draftSelfAssessmentHash",
+    "lineRefs",
+    "itemModel",
+    "passageFlag",
+    "r4Note",
+    "banListException",
+    "banListExceptionResolved",
+    "importDoorFix",
+    "stemRedraft",
+    "draftingMethod",
+    "clusterPosition",
+    "drafterNote",
+    "sendHistory"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 1227,
+   "sha256": "325efef991f95886afe11d0f83628ba86031ae2a50c4d00e6a2b4abff490b3f9"
+  },
+  {
+   "table": "ItemOption",
+   "columns": [
+    "id",
+    "itemId",
+    "content",
+    "isCorrect",
+    "misconceptionId",
+    "misconceptionExecution",
+    "senseTarget",
+    "attractorLine",
+    "defeaterLine",
+    "tagStatus",
+    "attractorQuote",
+    "defeaterQuote",
+    "windowClass",
+    "a36Note",
+    "defeatedByAbsence",
+    "drafterDeclaredPull",
+    "drafterDeclaredPullVerdict"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 4547,
+   "sha256": "8a6f1186bd664920495d5f41045a02815acbde8b6f32b8577872e1868d8a68c7"
+  },
+  {
+   "table": "ItemOptionTag",
+   "columns": [
+    "id",
+    "optionId",
+    "misconceptionId",
+    "role",
+    "createdAt"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "table": "Reviewer",
+   "columns": [
+    "id",
+    "displayName",
+    "resolvesActor",
+    "heldFrom",
+    "heldUntil",
+    "evidence",
+    "createdAt",
+    "staffEmail"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 3,
+   "sha256": "9550e93fcbaef70640fbcc32c00537fe48bccb9f0a1a80d744fd80014680aa3a"
+  },
+  {
+   "table": "AttributionEvent",
+   "columns": [
+    "id",
+    "recordType",
+    "recordId",
+    "action",
+    "actor",
+    "recordedBy",
+    "field",
+    "note",
+    "method",
+    "at",
+    "subjectHash",
+    "reviewerId",
+    "returnArtefact",
+    "subjectKind",
+    "subjectSpec"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 7353,
+   "sha256": "75c0f104194a372c4c73fbaada9f22eec45f7e3e0381f740ab7b480434aaa233"
+  },
+  {
+   "table": "FamilyBankSignature",
+   "columns": [
+    "familyId",
+    "bankName",
+    "bankHash",
+    "entryHashes",
+    "recordedAt",
+    "recordedBy",
+    "notes"
+   ],
+   "primaryKey": [
+    "familyId"
+   ],
+   "rows": 14,
+   "sha256": "329147dc5498bbff92daf15383cd2eb3249001c1a8152c4adacddcd17e78ad90"
+  },
+  {
+   "table": "NvrTemplateSignature",
+   "columns": [
+    "templateId",
+    "version",
+    "fingerprint",
+    "signedBy",
+    "signedAt",
+    "sampleSheetHash",
+    "lastDriftCheckAt",
+    "notes"
+   ],
+   "primaryKey": [
+    "templateId",
+    "version"
+   ],
+   "rows": 13,
+   "sha256": "6b5a3034b3d44f74f07cee1988b0c4eb740f64364a951fdc5c3dd7b0d899ae26"
+  },
+  {
+   "table": "ContentWriteLog",
+   "columns": [
+    "id",
+    "tableName",
+    "recordId",
+    "op",
+    "changedColumns",
+    "dbUser",
+    "applicationName",
+    "txId",
+    "at"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 30632,
+   "sha256": "ba5b49c3bff78cb371429c3eeb0554555b4f79e3e02bb1f2a3d416a5b7bb13fc"
+  },
+  {
+   "table": "AdminAuditLog",
+   "columns": [
+    "id",
+    "actorId",
+    "action",
+    "targetKind",
+    "targetId",
+    "detail",
+    "createdAt"
+   ],
+   "primaryKey": [
+    "id"
+   ],
+   "rows": 1190,
+   "sha256": "b02651882e12e5fbe20d0082666b71152fb66a11ac4f308ce4009635827c83cf"
+  }
+ ],
+ "digest": "bb940792ce412fbc"
+}
