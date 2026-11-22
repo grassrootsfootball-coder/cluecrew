@@ -1,0 +1,279 @@
+{
+ "door": "vr-05-joins",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "gen-vr-05-hidden-word-15",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-05-joins",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only TENT at a join; kite and over fail as tagged; natural sentence; gates pass.",
+   "landedAt": "2026-11-22T16:59:57.459Z",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "The kitten tumbled over.",
+     "after": "The kitten tumbles over our rug."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": null,
+     "after": "Look where each word meets the next one. The end of “kitten” and the start of “tumbles” spell “tent”. Of the other two, one sits inside one word. The other is only nearly there."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-25",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-05-joins",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only CARE at a join; vice and tied fail as tagged; natural sentence; gates pass.",
+   "landedAt": "2026-11-22T16:59:57.459Z",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "The vicar eats early.",
+     "after": "Our vicar emptied his bin."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": null,
+     "after": "Look where each word meets the next one. The end of “vicar” and the start of “emptied” spell “care”. Of the other two, one sits inside one word. The other is only nearly there."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-05-hidden-word-25-opt3 (gen-vr-05-hidden-word-25-opt3).value",
+     "before": "eats",
+     "after": "tied"
+    },
+    {
+     "field": "option gen-vr-05-hidden-word-25-opt3 (gen-vr-05-hidden-word-25-opt3).execution",
+     "before": "The hidden word must cross the gap between two words. This option is eats, and eats sits whole inside the single word \"eats\" — found by looking inside one word instead of across the join. The answer, care, runs from the end of one word into the start of the next.",
+     "after": "The hidden word must cross the gap between two words. This option is tied, and tied sits whole inside the single word \"emptied\" — found by looking inside one word instead of across the join. The answer, care, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-08",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-05-joins",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only RAID at a join; beam and help fail as tagged; natural sentence; gates pass.",
+   "landedAt": "2026-11-22T16:59:57.459Z",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "My extra idea helped the team.",
+     "after": "Their aid helped the team."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": null,
+     "after": "Look where each word meets the next one. The end of “Their” and the start of “aid” spell “raid”. Of the other two, one sits inside one word. The other is only nearly there."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-05",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-05-joins",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only GONE at a join; lame and nest fail as tagged; natural sentence; gates pass.",
+   "landedAt": "2026-11-22T16:59:57.459Z",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "A flamingo nests near water.",
+     "after": "The flamingo needed a safe nest."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": null,
+     "after": "Look where each word meets the next one. The end of “flamingo” and the start of “needed” spell “gone”. Of the other two, one sits inside one word. The other is only nearly there."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-05-hidden-word-05-opt3 (gen-vr-05-hidden-word-05-opt3).execution",
+     "before": "The hidden word must cross the gap between two words. This option is nest, and nest sits whole inside the single word \"nests\" — found by looking inside one word instead of across the join. The answer, gone, runs from the end of one word into the start of the next.",
+     "after": "The hidden word must cross the gap between two words. This option is nest, and nest sits whole inside the single word \"nest\" — found by looking inside one word instead of across the join. The answer, gone, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-14",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-05-joins",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only ROSE at a join; went and hive fail as tagged; idiom natural, \"intro\" familiar; gates pass.",
+   "landedAt": "2026-11-22T16:59:57.459Z",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "The hero sent a letter.",
+     "after": "The intro sent shivers down my spine."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": null,
+     "after": "Look where each word meets the next one. The end of “intro” and the start of “sent” spell “rose”. Of the other two, one sits inside one word. The other is only nearly there."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-05-hidden-word-14-opt3 (gen-vr-05-hidden-word-14-opt3).value",
+     "before": "hero",
+     "after": "hive"
+    },
+    {
+     "field": "option gen-vr-05-hidden-word-14-opt3 (gen-vr-05-hidden-word-14-opt3).execution",
+     "before": "The hidden word must cross the gap between two words. This option is hero, and hero sits whole inside the single word \"hero\" — found by looking inside one word instead of across the join. The answer, rose, runs from the end of one word into the start of the next.",
+     "after": "The hidden word must cross the gap between two words. This option is hive, and hive sits whole inside the single word \"shivers\" — found by looking inside one word instead of across the join. The answer, rose, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-01",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-05-joins",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only DATE at a join; lost and plum fail as tagged; natural sentence; words familiar; gates pass.",
+   "landedAt": "2026-11-22T16:59:57.459Z",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "Dad ate the last plum.",
+     "after": "Ned ate my last plum."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": null,
+     "after": "Look where each word meets the next one. The end of “Ned” and the start of “ate” spell “date”. Of the other two, one sits inside one word. The other is only nearly there."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-05-joins",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only STOP at a join; wasp and best fail as tagged; natural sentence; gates pass.",
+   "landedAt": "2026-11-22T16:59:57.459Z",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "It was the best option today.",
+     "after": "Your best option was clear."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": null,
+     "after": "Look where each word meets the next one. The end of “best” and the start of “option” spell “stop”. Of the other two, one sits inside one word. The other is only nearly there."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-05-hidden-word-03-opt2 (gen-vr-05-hidden-word-03-opt2).execution",
+     "before": "The letters of wasp are nearly in the sentence but not exactly: the closest run is \"wast\", which differs from wasp by 1 letter. Every letter must be there, touching, and one is not.",
+     "after": "The letters of wasp are nearly in the sentence but not exactly: the closest run is \"wasc\", which differs from wasp by 1 letter. Every letter must be there, touching, and one is not."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-13",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-05-joins",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only FARM at a join; seas (sees) and soft (sofa) are each one letter off and absent; sentence grammatical and readable; gates pass.",
+   "landedAt": "2026-11-22T16:59:57.459Z",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "You can see so far, Max.",
+     "after": "Max sees that my sofa is far more comfy."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": null,
+     "after": "Look where each word meets the next one. The end of “far” and the start of “more” spell “farm”. The other two have letters that are nearly there, but one letter is different."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-17",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-05-joins",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only KIND at a join; skin and pump fail as tagged; natural sentence; gates pass.",
+   "landedAt": "2026-11-22T16:59:57.459Z",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "The pumpkin dropped and split.",
+     "after": "The pumpkin dropped to the floor."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": null,
+     "after": "Look where each word meets the next one. The end of “pumpkin” and the start of “dropped” spell “kind”. Of the other two, one sits inside one word. The other is only nearly there."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  }
+ ]
+}

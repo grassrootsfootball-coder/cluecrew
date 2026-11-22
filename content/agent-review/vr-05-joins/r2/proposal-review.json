@@ -1,0 +1,58 @@
+{
+  "door": "vr-05-joins/r2",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:gen-vr-05-hidden-word-07",
+      "verdict": "ATTEST",
+      "reason": "Hold fixed: no referentless \"it\"; walk now names letters truly (ite from \"white\" + m from \"mug\" = ITEM). \"I warmed my hands on a white mug of tea.\" is natural, 10 words. solveHiddenWord+loadWordPuzzleLexicon returns only the key; every 4-letter join run read by hand, no other familiar word (runs incl. myha, yhan, sona, awhi, temu, emug, ofte). KITE absent, nearest run \"hite\" in \"white\" one letter off; HAND whole in \"hands\", at no join. Walk sentences 8/11/9/6 words, no \"wrong\"."
+    },
+    {
+      "ref": "rebuild:gen-vr-05-hidden-word-09",
+      "verdict": "ATTEST",
+      "reason": "Hold fixed: \"A strong wind made our back door slam behind us.\" is a scene a child can picture, 10 words. solveHiddenWord+loadWordPuzzleLexicon returns only the key; every 4-letter join run read by hand, no other familiar word (runs incl. ongw, dmad, eour, urba, kdoo, rsla, ambe, ndus). LAMB = lam from \"slam\" + b from \"behind\", as the walk says. PACK absent, one off \"back\"; DOOR whole in \"door\", at no join. Walk 8/11/9/6 words, no \"wrong\"."
+    },
+    {
+      "ref": "rebuild:gen-vr-05-hidden-word-12",
+      "verdict": "ATTEST",
+      "reason": "Hold fixed: \"tough and tired\" and \"fish with chips\" gone; \"Ralph and Gran had a big dish of hot chips.\" is natural British English, 10 words, and no \"fish and\" (SHAN) remains. solveHiddenWord+loadWordPuzzleLexicon returns only the key; every 4-letter join run read by hand, no other familiar word (runs incl. lpha, phan, andg, hada, abig, isho, ofho, hotc). Walk true: last letter of \"Ralph\" + whole \"and\" = HAND. WISH absent, one off \"dish\"; CHIP whole in \"chips\", at no join. Walk 8/12/9/6 words, no \"wrong\"."
+    },
+    {
+      "ref": "rebuild:gen-vr-05-hidden-word-21",
+      "verdict": "ATTEST",
+      "reason": "Hold fixed: no one \"stays in a hall\", one \"my\" only. \"Our puppy stayed close to my sofa, still wagging her tail.\" is picturable, 11 words (the our/my switch is everyday child narration, not a stumble). solveHiddenWord+loadWordPuzzleLexicon returns only the key; every 4-letter join run read by hand, no other familiar word (runs incl. ppys, ysta, dclo, seto, tomy, myso, asti, lwag, gher, hert). Walk true: fa from \"sofa\" + st from \"still\" = FAST. TALL absent, one off \"tail\" (also \"till\", equally close, so \"closest\" holds); STAY whole in \"stayed\", at no join. Walk 8/11/9/6 words, no \"wrong\"."
+    },
+    {
+      "ref": "rebuild:gen-vr-05-hidden-word-23",
+      "verdict": "ATTEST",
+      "reason": "Hold fixed: DELL replaced by MOST, a familiar word. MOST absent, one off \"post\". Sentence, key and walk are the round-1 attested ones, unchanged: solveHiddenWord+loadWordPuzzleLexicon returns only the key; every 4-letter join run read by hand, no other familiar word (runs: very, eryo, ryou, ourp, urpo, rpos, ostt, stto, ttod). Walk true: ver from \"Deliver\" + y from \"your\". LIVE whole in \"Deliver\", at no join."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-05-hidden-word-07",
+      "verdict": "SIGN",
+      "reason": "Joins: only ITEM. KITE (familiar) absent, one off \"hite\"; HAND only inside \"hands\". Sentence natural British English, ends on a full stop, no dash. Precheck passes."
+    },
+    {
+      "itemId": "gen-vr-05-hidden-word-09",
+      "verdict": "SIGN",
+      "reason": "Joins: only LAMB. PACK (familiar) absent, one off \"back\"; DOOR only inside \"door\". Natural sentence, full stop, no dash. Precheck passes."
+    },
+    {
+      "itemId": "gen-vr-05-hidden-word-12",
+      "verdict": "SIGN",
+      "reason": "Joins: only HAND. WISH absent, one off \"dish\"; CHIP only inside \"chips\". Natural sentence, full stop, no dash. Precheck passes."
+    },
+    {
+      "itemId": "gen-vr-05-hidden-word-21",
+      "verdict": "SIGN",
+      "reason": "Joins: only FAST. TALL absent, one off \"tail\"; STAY only inside \"stayed\". Sentence ends on a full stop, no dash. Precheck passes."
+    },
+    {
+      "itemId": "gen-vr-05-hidden-word-23",
+      "verdict": "SIGN",
+      "reason": "Joins: only VERY. MOST (familiar) absent, one off \"post\"; LIVE only inside \"Deliver\". Every word known to a 9-11-year-old. Precheck passes."
+    }
+  ]
+}

@@ -29322,3 +29322,25 @@ row on the dev database, then was republished to 40. No child saw it.
 `en-surface-word-match-multiselect`, `vr-series-direction`, `vr01-sound-alike`, `vr10-reversed`,
 `vr10-topic-match` and `vr12-wrong-order`. None carries a LIVE option today, so nothing a child sees
 depends on them. Any door that tags one will be refused by the lander until it is attested.
+
+## R1036 — vr-05 Hidden Word: each sentence hides only its key (David, 2026-11-22)
+
+David: *"Yes, fix them."* `check:word-puzzles` failed on 14 of 25 LIVE vr-05 rows. Each was AMBIGUOUS:
+the sentence hid other common words at a join as well as the key, for example "The metal ambulance
+door shut." hides THEM as well as LAMB. This was open since R1021. The sentences were rewritten so
+that `solveHiddenWord` with the project lexicon returns ONLY the key, and the reviewer also read every
+cross-join run by eye.
+
+- **Round 1:** 14 drafted, 9 signed. 5 were held: 4 for sentences a child could not picture or that
+  read as mistakes ("fish with chips", "Guests stayed in my hall"), and 1 for the distractor "dell",
+  which British children do not know.
+- **Round 2:** all 5 signed.
+- **Distractors replaced, all with their tag kept:** hero → hive, eats → tied, note → kite, talk → pack, dell → most.
+- **Walk scripts:** the 14 rows had none, and each now has one.
+
+**VERIFIED.** vr-05 is 25 of 25 LIVE. `check:word-puzzles` now screens 305 items and **exits 0 for the
+first time since R1021**, with no faults in any word-puzzle type.
+
+**GENERATOR, STATED.** These rows already diverged from `HIDDEN_WORDS` in `generate-content.ts`, after
+the R1021 repairs, and now diverge further. The R62 reviewed-guard stops `content:generate`
+overwriting them. Bringing the generator table into line with LIVE is a separate task.

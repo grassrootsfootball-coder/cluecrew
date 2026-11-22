@@ -1,0 +1,91 @@
+{
+ "door": "vr-05-joins",
+ "mode": "APPLIED",
+ "landed": [
+  "gen-vr-05-hidden-word-15",
+  "gen-vr-05-hidden-word-25",
+  "gen-vr-05-hidden-word-08",
+  "gen-vr-05-hidden-word-05",
+  "gen-vr-05-hidden-word-14",
+  "gen-vr-05-hidden-word-01",
+  "gen-vr-05-hidden-word-03",
+  "gen-vr-05-hidden-word-13",
+  "gen-vr-05-hidden-word-17"
+ ],
+ "held": [
+  {
+   "itemId": "gen-vr-05-hidden-word-23",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "gen-vr-05-hidden-word-23",
+    "verdict": "HOLD",
+    "reason": "Joins clean (only VERY), but distractor \"dell\" is not a word a 9-11-year-old in Britain knows (archaic/US; the UK rhyme is \"in his den\"); replace with a familiar almost-letters word."
+   }
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-12",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:gen-vr-05-hidden-word-12",
+     "verdict": "REFUSE",
+     "reason": "Joins are clean (only HAND) and the executions are true (wish/\"fish\", chip in \"chips\"), but \"Tough and tired, we had fish with chips.\" is unnatural: \"tough and tired\" is not a collocation a child would recognise, and British English says \"fish and chips\", so \"fish with chips\" reads as a mistake. Both are stumbles."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-05-hidden-word-12",
+    "verdict": "HOLD",
+    "reason": "\"Tough and tired\" and \"fish with chips\" are unnatural British English; a child stumbles on both."
+   }
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-07",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:gen-vr-05-hidden-word-07",
+     "verdict": "REFUSE",
+     "reason": "Join set is clean (only ITEM; SITE/TEMP gone) and both distractor executions are true, but the child-facing walk script says \"The end of “it” and the start of “emerged” spell “item”\". The key uses ALL of the two-letter word \"it\", so \"the end of it\" reads as the idiom or as just \"t\", and t + em does not spell item. A child stumbles exactly here. Say it plainly, e.g. \"The word “it” and the start of “emerged” spell “item”.\" Also the sentence's \"it\" has no referent (\"My hands shook when it emerged.\"), which reads oddly."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-05-hidden-word-07",
+    "verdict": "HOLD",
+    "reason": "Walk script \"The end of “it”\" misdescribes the join (the whole of \"it\" is used) and reads as the idiom; sentence's \"it\" has no referent."
+   }
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-09",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:gen-vr-05-hidden-word-09",
+     "verdict": "REFUSE",
+     "reason": "Joins are clean (only LAMB) and both executions are true (talk/\"walk\", door whole), but the new sentence \"Mum walked by a small ambulance door.\" is not sensible English: \"a small ambulance door\" is not a thing a child can picture, and \"walked by\" a door is odd. The rebuild fixed the ambiguity by breaking the sentence."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-05-hidden-word-09",
+    "verdict": "HOLD",
+    "reason": "\"Mum walked by a small ambulance door.\" is not a sensible sentence for a child."
+   }
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-21",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:gen-vr-05-hidden-word-21",
+     "verdict": "REFUSE",
+     "reason": "Joins are clean (only FAST, sof|a+st|ood) and both executions are true (tall/\"hall\", stay in \"stayed\"), but \"Guests stayed in my hall, where my sofa stood.\" is odd: in British English a hall is a passage, nobody stays in it, and the doubled \"my\" plus the trailing clause make a sentence a child stumbles on."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-05-hidden-word-21",
+    "verdict": "HOLD",
+    "reason": "\"Guests stayed in my hall, where my sofa stood.\" is odd English (nobody stays in a hall; doubled \"my\")."
+   }
+  }
+ ]
+}

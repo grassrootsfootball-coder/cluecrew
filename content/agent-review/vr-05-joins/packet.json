@@ -1,0 +1,763 @@
+{
+ "door": "vr-05-joins",
+ "questionType": "vr",
+ "builtAt": "2026-11-22T16:51:06.979Z",
+ "source": "read-only dump of the 14 LIVE rows check:word-puzzles grades AMBIGUOUS",
+ "entries": {
+  "vr05-almost-letters": {
+   "description": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+   "childHint": "Find the exact letters in order. Every letter must be there, touching.",
+   "status": "ACTIVE",
+   "approvedBy": "reviewer:rev-0001"
+  },
+  "vr05-single-word-only": {
+   "description": "Searched inside single words instead of across the join.",
+   "childHint": "The hidden word loves to hide across two words. Check where they meet.",
+   "status": "ACTIVE",
+   "approvedBy": "reviewer:rev-0001"
+  }
+ },
+ "passages": {},
+ "rows": [
+  {
+   "itemId": "gen-vr-05-hidden-word-01",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Dad ate the last plum."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "dada",
+     "adat",
+     "date",
+     "teth"
+    ],
+    "competitors": [
+     "dada",
+     "adat",
+     "teth"
+    ],
+    "competitorsInCommon": [
+     "dada"
+    ],
+    "competitorsNotInCommon": [
+     "adat",
+     "teth"
+    ]
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-01-opt1",
+     "value": "date",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-01-opt2",
+     "value": "lost",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of lost are nearly in the sentence but not exactly: the closest run is \"last\", which differs from lost by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-01-opt3",
+     "value": "plum",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is plum, and plum sits whole inside the single word \"plum\" — found by looking inside one word instead of across the join. The answer, date, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-03",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "It was the best option today."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "twas",
+     "wast",
+     "theb",
+     "stop",
+     "onto"
+    ],
+    "competitors": [
+     "twas",
+     "wast",
+     "theb",
+     "onto"
+    ],
+    "competitorsInCommon": [
+     "twas",
+     "wast",
+     "onto"
+    ],
+    "competitorsNotInCommon": [
+     "theb"
+    ]
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-03-opt1",
+     "value": "stop",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-03-opt2",
+     "value": "wasp",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of wasp are nearly in the sentence but not exactly: the closest run is \"wast\", which differs from wasp by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-03-opt3",
+     "value": "best",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is best, and best sits whole inside the single word \"best\" — found by looking inside one word instead of across the join. The answer, stop, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-05",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "A flamingo nests near water."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "gone",
+     "ones"
+    ],
+    "competitors": [
+     "ones"
+    ],
+    "competitorsInCommon": [
+     "ones"
+    ],
+    "competitorsNotInCommon": []
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-05-opt1",
+     "value": "gone",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-05-opt2",
+     "value": "lame",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of lame are nearly in the sentence but not exactly: the closest run is \"lami\", which differs from lame by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-05-opt3",
+     "value": "nest",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is nest, and nest sits whole inside the single word \"nests\" — found by looking inside one word instead of across the join. The answer, gone, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-07",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Do not sit empty-handed."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "site",
+     "item",
+     "temp"
+    ],
+    "competitors": [
+     "site",
+     "temp"
+    ],
+    "competitorsInCommon": [
+     "site",
+     "temp"
+    ],
+    "competitorsNotInCommon": []
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-07-opt1",
+     "value": "item",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-07-opt2",
+     "value": "note",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of note are nearly in the sentence but not exactly: the closest run is \"nots\", which differs from note by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-07-opt3",
+     "value": "hand",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is hand, and hand sits whole inside the single word \"empty-handed\" — found by looking inside one word instead of across the join. The answer, item, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-08",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "My extra idea helped the team."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "raid",
+     "aide"
+    ],
+    "competitors": [
+     "aide"
+    ],
+    "competitorsInCommon": [
+     "aide"
+    ],
+    "competitorsNotInCommon": []
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-08-opt1",
+     "value": "raid",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-08-opt2",
+     "value": "beam",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of beam are nearly in the sentence but not exactly: the closest run is \"team\", which differs from beam by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-08-opt3",
+     "value": "help",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is help, and help sits whole inside the single word \"helped\" — found by looking inside one word instead of across the join. The answer, raid, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-09",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The metal ambulance door shut."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "them",
+     "heme",
+     "tala",
+     "lamb"
+    ],
+    "competitors": [
+     "them",
+     "heme",
+     "tala"
+    ],
+    "competitorsInCommon": [
+     "them"
+    ],
+    "competitorsNotInCommon": [
+     "heme",
+     "tala"
+    ]
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-09-opt1",
+     "value": "lamb",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-09-opt2",
+     "value": "talk",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of talk are nearly in the sentence but not exactly: the closest run is \"tala\", which differs from talk by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-09-opt3",
+     "value": "door",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is door, and door sits whole inside the single word \"door\" — found by looking inside one word instead of across the join. The answer, lamb, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-12",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "We ate fish and chips on the beach."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "atef",
+     "shan",
+     "hand",
+     "theb"
+    ],
+    "competitors": [
+     "atef",
+     "shan",
+     "theb"
+    ],
+    "competitorsInCommon": [
+     "shan"
+    ],
+    "competitorsNotInCommon": [
+     "atef",
+     "theb"
+    ]
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-12-opt1",
+     "value": "hand",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-12-opt2",
+     "value": "wish",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of wish are nearly in the sentence but not exactly: the closest run is \"fish\", which differs from wish by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-12-opt3",
+     "value": "chip",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is chip, and chip sits whole inside the single word \"chips\" — found by looking inside one word instead of across the join. The answer, hand, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-13",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "You can see so far, Max."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "cans",
+     "sees",
+     "sofa",
+     "farm"
+    ],
+    "competitors": [
+     "cans",
+     "sees",
+     "sofa"
+    ],
+    "competitorsInCommon": [
+     "cans",
+     "sees",
+     "sofa"
+    ],
+    "competitorsNotInCommon": []
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-13-opt1",
+     "value": "farm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-13-opt2",
+     "value": "seas",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of seas are nearly in the sentence but not exactly: the closest run is \"sees\", which differs from seas by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-13-opt3",
+     "value": "soft",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of soft are nearly in the sentence but not exactly: the closest run is \"sofa\", which differs from soft by 1 letter. Every letter must be there, touching, and one is not."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-14",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The hero sent a letter."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "eros",
+     "rose",
+     "tale"
+    ],
+    "competitors": [
+     "eros",
+     "tale"
+    ],
+    "competitorsInCommon": [
+     "eros",
+     "tale"
+    ],
+    "competitorsNotInCommon": []
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-14-opt1",
+     "value": "rose",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-14-opt2",
+     "value": "went",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of went are nearly in the sentence but not exactly: the closest run is \"sent\", which differs from went by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-14-opt3",
+     "value": "hero",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is hero, and hero sits whole inside the single word \"hero\" — found by looking inside one word instead of across the join. The answer, rose, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-15",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The kitten tumbled over."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "tent",
+     "dove"
+    ],
+    "competitors": [
+     "dove"
+    ],
+    "competitorsInCommon": [
+     "dove"
+    ],
+    "competitorsNotInCommon": []
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-15-opt1",
+     "value": "tent",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-15-opt2",
+     "value": "kite",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of kite are nearly in the sentence but not exactly: the closest run is \"kitt\", which differs from kite by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-15-opt3",
+     "value": "over",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is over, and over sits whole inside the single word \"over\" — found by looking inside one word instead of across the join. The answer, tent, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-17",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The pumpkin dropped and split."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "kind",
+     "peda",
+     "dand",
+     "ands"
+    ],
+    "competitors": [
+     "peda",
+     "dand",
+     "ands"
+    ],
+    "competitorsInCommon": [
+     "ands"
+    ],
+    "competitorsNotInCommon": [
+     "peda",
+     "dand"
+    ]
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-17-opt1",
+     "value": "kind",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-17-opt2",
+     "value": "skin",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of skin are nearly in the sentence but not exactly: the closest run is \"pkin\", which differs from skin by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-17-opt3",
+     "value": "pump",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is pump, and pump sits whole inside the single word \"pumpkin\" — found by looking inside one word instead of across the join. The answer, kind, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-21",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The sofa stayed in the hall."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "thes",
+     "fast",
+     "asta",
+     "dint"
+    ],
+    "competitors": [
+     "thes",
+     "asta",
+     "dint"
+    ],
+    "competitorsInCommon": [
+     "asta",
+     "dint"
+    ],
+    "competitorsNotInCommon": [
+     "thes"
+    ]
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-21-opt1",
+     "value": "fast",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-21-opt2",
+     "value": "tall",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of tall are nearly in the sentence but not exactly: the closest run is \"hall\", which differs from tall by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-21-opt3",
+     "value": "stay",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is stay, and stay sits whole inside the single word \"stayed\" — found by looking inside one word instead of across the join. The answer, fast, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-23",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Deliver yesterday’s post."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "very",
+     "ryes",
+     "days"
+    ],
+    "competitors": [
+     "ryes",
+     "days"
+    ],
+    "competitorsInCommon": [
+     "days"
+    ],
+    "competitorsNotInCommon": [
+     "ryes"
+    ]
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-23-opt1",
+     "value": "very",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-23-opt2",
+     "value": "dell",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of dell are nearly in the sentence but not exactly: the closest run is \"deli\", which differs from dell by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-23-opt3",
+     "value": "live",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is live, and live sits whole inside the single word \"Deliver\" — found by looking inside one word instead of across the join. The answer, very, runs from the end of one word into the start of the next."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-25",
+   "questionType": "vr-05-hidden-word",
+   "status": "LIVE",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The vicar eats early."
+   },
+   "explanation": {},
+   "finding": {
+    "from": "check:word-puzzles vr-05 block (machine, not a person): solveHiddenWord + loadWordPuzzleLexicon, graded against content/wordlists/common-en.txt",
+    "verdict": "AMBIGUOUS",
+    "solveHiddenWordReturns": [
+     "hevi",
+     "care",
+     "area",
+     "sear"
+    ],
+    "competitors": [
+     "hevi",
+     "area",
+     "sear"
+    ],
+    "competitorsInCommon": [
+     "area",
+     "sear"
+    ],
+    "competitorsNotInCommon": [
+     "hevi"
+    ]
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-25-opt1",
+     "value": "care",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-25-opt2",
+     "value": "vice",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "execution": "The letters of vice are nearly in the sentence but not exactly: the closest run is \"vica\", which differs from vice by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-25-opt3",
+     "value": "eats",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "execution": "The hidden word must cross the gap between two words. This option is eats, and eats sits whole inside the single word \"eats\" — found by looking inside one word instead of across the join. The answer, care, runs from the end of one word into the start of the next."
+    }
+   ]
+  }
+ ]
+}
