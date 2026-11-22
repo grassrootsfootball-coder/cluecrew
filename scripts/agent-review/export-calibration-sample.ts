@@ -266,7 +266,7 @@ async function main() {
   for (const d of DORDER) {
     const kinds = ['SIGNED', 'HELD'] as const;
     const rate = (kind: string, f: 'hint' | 'walkScript') => { const cs = cards.filter((c, i) => c.district === d && key[i]!.kind === kind); return cs.length ? cs.filter((c) => c[f]).length / cs.length : null; };
-    for (const f of ['hint', 'walkScript'] as const) { const [a, b] = kinds.map((k) => rate(k, f)); if (a !== null && b !== null && Math.abs(a - b) > 0.34) leaks.push(`${d}: ${f} present on ${Math.round(a * 100)}% of one kind and ${Math.round(b * 100)}% of the other — the field itself would tell her`); }
+    for (const f of ['hint', 'walkScript'] as const) { const [a, b] = kinds.map((k) => rate(k, f)); if (a != null && b != null && Math.abs(a - b) > 0.34) leaks.push(`${d}: ${f} present on ${Math.round(a * 100)}% of one kind and ${Math.round(b * 100)}% of the other — the field itself would tell her`); }
   }
   if (leaks.length) { for (const l of leaks) console.error(`  ✗ ${l}`); throw new Error(`blinding failed on ${leaks.length} point(s); nothing written`); }
 

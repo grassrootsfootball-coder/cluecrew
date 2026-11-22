@@ -29252,3 +29252,31 @@ marked `backfilled` with that provenance. Delivered: 7 rows, 8 field changes.
 **NOT COVERED, STATED.** Maths rows are `authoredBy: maths staging import` or `amended maths source`,
 not Cowork, so they do not return. Whether maths has an authoring store that should receive them is
 unexamined.
+
+## R1034 — Cowork is retired: the database is the only content store (David, 2026-11-22)
+
+**THE RULING.** David: *"not using cowork anymore you need to manage it all."* Cowork is no longer
+an authoring store, and Annie is no longer reviewing (R1031). **This repository and its database
+author, review, hold and serve all content.** Agents draft. A separate agent reviews and signs as
+`rev-agent-01`, never under a person's name (R94/R1021). The DB is authoritative for every field.
+
+**WHAT IT SUPERSEDES.**
+- "ONE DIRECTION ONLY FOR AUTHORED ITEM CONTENT: COWORK AUTHORS, THE DB HOLDS" (CLAUDE.md, R23-era).
+  There is no other side to drift from. Edits are made here, through the gated doors.
+- "LIBRARY TEXT: THE DB AUTHORS, COWORK PROPOSES TRANSFORMS." The DB authors library text, and
+  nobody else proposes.
+- The return leg (R88, R579, R588, R1023 condition 5, R1033). Nothing is owed back. The CI step
+  `check:return-leg` is removed. `check:return-sequence`, `check:manifest-diff`,
+  `check:arrival-confirmed`, `export:pilot`/`import:pilot` and the outbound folder
+  `~/Downloads/11+/from-cluecrew` are retired with it. The scripts stay as history.
+
+**WHAT IT KEEPS.** Each door's `changeset.json` (field, before, after) is still written. It is the
+in-repo audit of what an agent changed. It now exists for this repo's own history and is no longer a
+delivery, so the lander no longer delivers returns. Every gate stays. Every signing rule stays. The
+reviewed-content guard (R62) stays. The fault it guards against was never about Cowork.
+
+**WHAT IT COSTS, STATED.** The two-store arrangement held a check that is now gone: a second party
+read the content with a different method. Nothing replaces that except the separate reviewing agent
+and the blind calibration sample (R1031). On that sample, the second machine reviewer disagreed on 9
+of 32 machine-signed rows, and every factual claim it made was confirmed. Machine review is the only
+review now, so periodic blind calibration between independent agents is the standing check.

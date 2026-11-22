@@ -14,6 +14,12 @@ The build is governed by documents, and the documents win arguments.
    `docs/LIVE-LAUNCH-PACK-V3.md` + `docs/LAUNCH-PACK-V3.1-TEACHING-ENGINE.md`
    for the public page.
 
+**COWORK IS RETIRED (David, 2026-11-22 — R1034).** This repo and its database author, review,
+hold and serve ALL content; agents draft, a separate agent reviews and signs as `rev-agent-01`, and
+Annie is no longer reviewing (R1031). The house rules below that describe Cowork, returns, the
+outbound folder or Annie's channel are HISTORY: read them for the lesson, never as a step to perform.
+Nothing is exported to Cowork and nothing is awaited from it.
+
 **Where a ruling lives.** `docs/authoring-calibration-log.md` is THE REGISTER — the numbered
 record, one `## R<n>` heading per ruling, with the reasoning and the evidence. This file carries the
 operative TEXT of the rules that recur, because a rule reduced to "see R57" is a rule nobody has in
@@ -46,7 +52,7 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   did all three, after it was already built and signed. Anyone extending the
   vault will assume it is a spelling-correction-grade edit; it is not. Re-run the
   vocabulary audit and re-sign the affected family after any such change.
-- ONE DIRECTION ONLY FOR AUTHORED ITEM CONTENT: COWORK AUTHORS, THE DB HOLDS
+- [SUPERSEDED by R1034 — the DB is the only store; kept for the drift lesson] ONE DIRECTION ONLY FOR AUTHORED ITEM CONTENT: COWORK AUTHORS, THE DB HOLDS
   (David, 2026-08-08, after the two English comprehension batches drifted on 13
   fields). Both copies were being edited and neither side knew — Cowork applied
   R23 to `pp-16` while this repo applied the R22 urgency rewording to `WIW-19`
@@ -71,7 +77,7 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   object key order, so a raw `JSON.stringify` diff reports permanent false drift
   on any structured field (`quotes`, options). Sort keys before comparing, or a
   synced batch reads as still-drifted and someone re-imports it forever.
-- LIBRARY TEXT: THE DB AUTHORS, COWORK PROPOSES TRANSFORMS (annie, 2026-08-08).
+- [SUPERSEDED by R1034 — the DB authors library text, nobody proposes from outside] LIBRARY TEXT: THE DB AUTHORS, COWORK PROPOSES TRANSFORMS (annie, 2026-08-08).
   "Cowork authors, the DB holds" is about ITEM content and does not reach the
   misconception library — `childHint` lives on the misconception, which the DB
   owns. Three copy mismatches in two turns came of the gap. So, explicitly:

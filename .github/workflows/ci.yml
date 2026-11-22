@@ -309,12 +309,9 @@ jobs:
       - name: Typecheck the root scripts
         run: pnpm typecheck:scripts
 
-      # THE RETURN LEG. Every other guard watches Cowork's content arriving; this watches what the
-      # platform holds that the authoring side works against and has never received. Reports rather
-      # than blocks -- the absent paths are unbuilt work, not a regression, and a step red from its
-      # first run is muted within a week.
-      - name: Return leg (reviewer judgement the authoring side cannot see)
-        run: pnpm check:return-leg
+      # THE RETURN LEG STEP IS RETIRED (David, 2026-11-22 -- R1034): Cowork is no longer used, so
+      # there is no authoring side to return anything to. The DB is the only store. The script stays
+      # for history; nothing it measured is owed to anyone now.
 
       # BOTH STORES GATE ON A DECLARED QUOTED SPAN AND NEITHER CAN SEE THE OTHER'S DECLARATIONS.
       # R339 found four texts here whose pass/fail turns on the declaration alone, swinging 11-14
