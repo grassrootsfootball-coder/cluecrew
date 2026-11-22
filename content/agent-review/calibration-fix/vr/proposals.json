@@ -1,0 +1,51 @@
+{
+ "door": "calibration-fix/vr",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "gen-vr-04-closest-meaning-18-opt2",
+   "itemId": "gen-vr-04-closest-meaning-18",
+   "oldValue": "meek",
+   "tag": "vr04-opposite-pull",
+   "newValue": "proud",
+   "execution": "The key is 'modest'. 'proud' points the other way: a humble person does not think themselves better than others, and a proud one does. A child who catches only the topic, how someone sees themselves, picks 'proud'."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "bank-vr-06-missing-word-36",
+   "why": "Calibration hold: the stem sentence was 18 words, over the 16-word cap. Split into two sentences (5 and 11 words); the gap, key and options are unchanged.",
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The boy was told off. He glared in a ___IANT way and refused to say sorry."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b2009htmzvtame6juh",
+     "value": "DEF",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b2009itmzvsral5u3z",
+     "value": "RAD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (RADIANT)."
+    },
+    {
+     "optionId": "cmscb15b2009jtmzv97tljlki",
+     "value": "REL",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (RELIANT)."
+    }
+   ]
+  }
+ ],
+ "notes": {
+  "gen-vr-04-closest-meaning-18": "Calibration hold: 'meek' is listed as a synonym of 'humble', so it was close to a second answer. Replaced with 'proud', the opposite, which no reading makes closest. 'humble' also means low in rank (a humble home); no option is correct in that sense."
+ }
+}

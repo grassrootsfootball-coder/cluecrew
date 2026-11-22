@@ -1,0 +1,28 @@
+{
+ "door": "calibration-fix/maths",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmteo82lw00fftmmjdv96280j",
+   "itemId": "MC04-NPV-05",
+   "oldValue": "50",
+   "tag": "maths-114-read-from-the-digit-to-the-end",
+   "newValue": "51",
+   "execution": "The child takes the digits from the 5 to the end of the number, 51, as its value. Only the 5 itself counts, and it sits in the hundredths column, so its value is 0.05."
+  },
+  {
+   "optionId": "cmteo829j007ztmmjauekyay6",
+   "itemId": "MC03-CALC-02",
+   "oldValue": "659",
+   "tag": "maths-12-forgetting-to-exchange",
+   "newValue": "310",
+   "execution": "In the ones column 3 is smaller than 6, and the child writes 0 instead of exchanging. Then 8 - 7 = 1 in the tens and 4 - 1 = 3 in the hundreds, giving 310. Exchanging a ten gives 13 - 6 = 7, 7 - 7 = 0 and 4 - 1 = 3: 307."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [],
+ "notes": {
+  "MC04-NPV-05": "Calibration hold: option '50' carried maths-07, whose hint tells the child to COMPARE decimals; nothing is compared here. Replaced with '51' under maths-114 (read from the digit to the end), whose hint fits a single-digit value read. Option '0.5' (maths-61) is NOT changed: its hint lists only whole-number columns, and no attested entry names a tenths-for-hundredths slip with a decimal hint. That is a library wording gap, reported, not forced.",
+  "MC03-CALC-02": "Calibration hold: option '659' carried maths-72, whose hint says 'Look at the words in the question'; a bare sum has none. Replaced with '310' under maths-12 (forgetting to exchange), whose hint fits a column subtraction. Key stays the smallest value, as before."
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "door": "english-rewrite/calibration",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw2f4v500cztmbvgx5mwntn",
+   "itemId": "ENG-007-LP-12",
+   "oldValue": "The writer tells us he is sad, and then shows us only the reasons for it.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "By describing the weather outside to match his mood.",
+   "execution": "No weather is described anywhere in lines 1 to 45; the scene is indoors, in the lost-property cupboard. Reuben's feeling is carried by what he handles: the jumper pushed flat at lines 33 and 34, the paper put back unopened at lines 35 and 36."
+  },
+  {
+   "optionId": "cmsw2f4v500d0tmbvzy5u8zfn",
+   "itemId": "ENG-007-LP-12",
+   "oldValue": "By showing what Ilya does with things, like the sock he finds.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "By letting Ilya say out loud how Reuben must feel.",
+   "execution": "Ilya talks about the Year Six lockers, Whitby and the annexe cupboard (lines 15 to 20 and 40 to 41) and never says how Reuben feels. The feeling is carried by what Reuben does with the jumper and the paper at lines 33 to 36."
+  }
+ ],
+ "redrafts": [
+  {
+   "optionId": "cmsw2f4yz00zftmbv5i56i04x",
+   "itemId": "ENG-021-ED-11",
+   "value": "Very small weights used by a chemist.",
+   "tag": "en-vocab-neighbouring-sense",
+   "execution": "'Scruple' is also an old measure of weight, a real sense of the word but not the one meant here. Lines 76 to 78 use it for the uneasy feelings his friends had about betting on such hard conditions."
+  }
+ ],
+ "rebuilds": [
+  {
+   "itemId": "ENG-001-WIW-20",
+   "why": "Calibration hold: hint led to the key by its words; walk script asserted the Rat sat at the other end, which the passage never says. Hint now points at the boat sense without echoing any option; walk script states only what line 65 gives. The hint Annie authored is replaced, so her authorship marker is cleared (R94): the new hint is machine-written and is served only once a reader is named.",
+   "stem": {
+    "text": "Read line 65. The Mole was 'seated in the stern of a real boat'. What is the stern?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 20
+   },
+   "options": [
+    {
+     "optionId": "cmsw387yi0011tmqbyuvnxx3o",
+     "value": "A strict and serious look.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "A stern look is the adjective, and it is the sense of 'stern' a child meets first; the line is about a boat. NOTE REPAIRED 2026-08-16 (delivery 52): the error is the DOMINANT sense arriving before the nautical one, not a second sense matched to the wrong target. Tag grandfathered; the note is not."
+    },
+    {
+     "optionId": "cmsw387yi0012tmqblxscqxrg",
+     "value": "The oars that push the boat along.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The sculls are lines 63 and 66 — true, and a different part of the boat."
+    },
+    {
+     "optionId": "cmsw387yi0013tmqbh79xnh65",
+     "value": "A soft seat with a cushion on it.",
+     "isKey": false,
+     "tag": "en-vocab-not-this-word",
+     "execution": "A cushioned seat is nowhere in the passage; 'seated in' invites it."
+    },
+    {
+     "optionId": "cmsw387yi0014tmqbxbnp5u9b",
+     "value": "The rope that held the boat to the bank.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The rope is line 59, where the Rat unfastens it and hauls on it before stepping into the boat. The child answers from that earlier part of the passage, where line 65 puts the Mole in the stern, the back part of the boat."
+    },
+    {
+     "optionId": "cmsw387yi0015tmqbxnxt8aeg",
+     "value": "The back part of the boat.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read line 65 again. Here the word is about a boat, not a face.",
+    "walkScript": "Line 65 puts the Mole in the stern of a boat. So here the word names a part of the boat. The stern is the back part. A stern look is a different sense of the word.",
+    "hintAuthoredBy": null,
+    "hintAuthority": null,
+    "_previousHintCore": "He is seated inside it. So it is a part of what?"
+   }
+  },
+  {
+   "itemId": "ENG-017-CR-01",
+   "why": "Calibration hold: walk script put the cards at line 1; they are at line 2.",
+   "stem": {
+    "text": "Look at lines 1 to 5. What did Captain Brown bring up at the party?",
+    "quotes": [],
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 1
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xo00rttmbvb0dtwss9",
+     "value": "Some numbers of a book coming out in parts.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xo00rutmbvdr7mrnb3",
+     "value": "Conversation, and comparing of cards, and tricks.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 1 and 2, and it is what the room was already doing."
+    },
+    {
+     "optionId": "cmsw2f4xo00rvtmbvyu8aivpn",
+     "value": "The scene about a party given at Bath.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True at line 23, outside this window; he reads that scene later in the evening. Lines 3 and 4 give what he brought up."
+    },
+    {
+     "optionId": "cmsw2f4xo00rwtmbv8lrf3lfa",
+     "value": "A newspaper that he had brought in with him.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No newspaper appears in lines 1 to 5. Line 4 has him ask about 'The Pickwick Papers', which lines 4 to 5 say were 'then publishing in parts'; the word papers makes a newspaper sound likely."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 3 says he sported a bit of literature. Line 4 gives the thing itself: the numbers of a book. The trays at line 1 and the cards at line 2 were there before."
+   }
+  },
+  {
+   "itemId": "ENG-028-PR-03",
+   "why": "Calibration REFUSE: option A ('He says her mum says a lot of things') was a true literal account of line 10, so the row had two defensible answers. Replaced with a claim line 10 contradicts. Walk script now reaches the key instead of ending on the bolt.",
+   "stem": {
+    "text": "Look at lines 9 to 12. What does Grandad do with what Priya tells him?",
+    "quotes": [],
+    "passageRef": "stream-b-01",
+    "orderAnchor": 9
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f50p019ktmbv708rz6re",
+     "value": "He agrees to leave the grass alone.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 10 has him answer that her mum says a lot of things on her way out of the door. That brushes her words aside; he agrees to nothing, and at lines 10 and 11 he carries on with the bolt."
+    },
+    {
+     "optionId": "cmsw2f50p019ltmbv087icdax",
+     "value": "He wipes his hands down his shirt and looks at the door.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 11, where he wipes his hands down his shirt and looks at the door. That is what he does next about the bolt, not what he does with her words; line 10 is where he brushes those aside."
+    },
+    {
+     "optionId": "cmsw2f50p019mtmbv6qwa1yc9",
+     "value": "He puts it aside as one of her mother’s many sayings.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f50p019ntmbvs9hcn3dj",
+     "value": "He tells her the mower will not take him long.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No line has him say how long it will take."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 9 has Priya pass on what Mum said. Line 10 has Grandad answer that her mum says a lot of things. He treats it as one more saying and goes back to the bolt. So he puts her words aside."
+   }
+  }
+ ],
+ "notes": {
+  "ENG-021-ED-11": "Calibration hold: option C execution contradicted itself (claimed the weight sense is the dictionary-first sense, then disowned that). One coherent execution, no false claim.",
+  "ENG-007-LP-12": "Calibration hold: C and D were near-twins split only by the name the stem gives (Ilya/Reuben), and A ('The writer tells us he is sad') was ruled out by the stem itself. Both replaced with techniques a child might reach for that the passage does not use."
+ }
+}

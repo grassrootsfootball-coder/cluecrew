@@ -29132,3 +29132,39 @@ Judgement calls not yet adjudicated: card 3 (the hint points at the key's words)
 execution that contradicts itself), card 14 (near-twins split by the name the stem gives) and card 26
 (meek against humble). Card 39 also shows a GATE gap: the reading-age cap did not fire on a VR stem
 sentence. Why it did not is unexamined.
+
+**THE NINE, DRAFTED (2026-11-22). Not yet landed: they wait for an independent reviewer.** David:
+"fix them". `export-calibration-fix-packets.ts` writes one packet per district, each row carrying
+the calibration finding verbatim. Proposals:
+- **English** (`english-rewrite/calibration`, so landing writes the return changeset):
+  - `WIW-20`: hint and walk script rewritten. Annie's hint marker is cleared and her text is kept in
+    `_previousHintCore`.
+  - `ED-11`: option C's self-contradicting execution redrafted.
+  - `CR-01`: walk script line number corrected.
+  - `PR-03`: option A, the second defensible answer, is replaced by a claim line 10 contradicts, and
+    the walk script now reaches the key.
+  - `LP-12`: the Ilya near-twin and the stem-eliminated option are replaced by two techniques the
+    passage does not use.
+- **Maths** (`calibration-fix/maths`):
+  - `NPV-05`: '50' (maths-07, a COMPARE hint) becomes '51' under maths-114.
+  - `CALC-02`: '659' (maths-72, "look at the words") becomes '310' under maths-12.
+  - The key stays the smallest value on both, so the R1025 rank balance does not move.
+- **VR** (`calibration-fix/vr`):
+  - `vr-04-18`: 'meek' becomes 'proud' (opposite-pull).
+  - `vr-06-36`: the stem is split into two sentences of 5 and 11 words.
+
+All nine pass every gate on precheck.
+
+**NOT FORCED:** `NPV-05` option '0.5' keeps maths-61, whose hint lists only whole-number columns. No
+attested entry names a tenths-for-hundredths slip with a decimal hint. The fix is to the library
+WORDING (the DB authors library text), which reaches every maths-61 carrier, so it is reported here
+rather than made.
+
+**THE GATE FINDING (card 39): not a code fault, a scope the approval never covered.** `stem.sentence`
+is routed to the word-card role, which has NO sentence cap (commit `12f52c8`). The reviewer approved
+that on 2026-08-06 for vr-04's CARRIER sentences, which disambiguate a headword and may run long.
+vr-06's cloze sentence was swept in by "one field, one rule". But in vr-06 the sentence is not a
+carrier: it is the text the child reads to answer. Four LIVE vr-06 rows exceed 16 words: `-23`,
+`-35`, `-36` (drafted above) and `-40`. **Narrowing the exemption to vr-04 is a change to an approved
+rule, so it is David's call.** It would newly fail `-23`, `-35` and `-40`, which need the same split.
+The gate is unchanged, so no R149 baseline was needed.
