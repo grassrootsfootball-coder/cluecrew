@@ -1,0 +1,671 @@
+{
+ "kind": "calibration-key",
+ "sample": "01",
+ "seed": "calibration-01",
+ "cardsDigest": "ebda446551d602e2",
+ "generatedAt": "2026-11-22T15:42:55.640Z",
+ "NOT_FOR_THE_REVIEWER": "This file says which card is which. It must never reach the person reviewing the cards.",
+ "design": {
+  "signedByDistrict": {
+   "ENGLISH": 13,
+   "VR": 13,
+   "MATHS": 6
+  },
+  "heldByDistrict": {
+   "ENGLISH": 4,
+   "VR": 4
+  },
+  "guidanceShownFor": [
+   "ENGLISH",
+   "MATHS"
+  ],
+  "guidanceNotShownFor": "VR — a held VR rebuild carries no walk script, so showing it on signed VR cards only would tell her which they are. VR walk scripts are therefore OUTSIDE this sample.",
+  "populations": {
+   "machineSignedLive": {
+    "MATHS": 79,
+    "ENGLISH": 336,
+    "VR": 346
+   },
+   "machineHeldRebuilds": {
+    "ENGLISH": 41,
+    "MATHS": 1,
+    "VR": 63
+   }
+  }
+ },
+ "key": [
+  {
+   "card": 1,
+   "itemId": "ENG-013-TI-05",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4wo00lxtmbvjs3hwmxa",
+    "cmsw2f4wo00lwtmbv0hsjxe3l",
+    "cmsw2f4wo00lvtmbv393m5veu",
+    "cmsw2f4wo00lutmbvvoj7apgb"
+   ]
+  },
+  {
+   "card": 2,
+   "itemId": "ENG-008-RC-05",
+   "kind": "HELD",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "HOLD",
+   "machineReason": "The hold's faults are gone: the library tag hint is now true of two objects, and the walk no longer says the tin holds bread. The bread-and-butter execution is still not true of the passage. It says 'That table is at line 51', but the forgotten room's table, and the bread on it, are on line 50 ('on its table, all nicely set out ... with bread,'). Only 'butter' is on line 51. It also says 'line 23 says they had no bread', where line 23 says 'if they had any'. The row's own new walk reads that, correctly, as 'they may not have any bread'.",
+   "source": "content/agent-review/english-rewrite/G6/proposal-review.json",
+   "optionIdsInShownOrder": [
+    "cmsw2f4va00dqtmbvbukacfvc",
+    "cmsw2f4va00dptmbvl6k07a72",
+    "cmsw2f4va00dotmbv19ddd21z",
+    "cmsw2f4va00drtmbvn9jzirfa"
+   ]
+  },
+  {
+   "card": 3,
+   "itemId": "ENG-001-WIW-20",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw387yi0012tmqblxscqxrg",
+    "cmsw387yi0013tmqbh79xnh65",
+    "cmsw387yi0015tmqbxnxt8aeg",
+    "cmsw387yi0011tmqbyuvnxx3o",
+    "cmsw387yi0014tmqbxbnp5u9b"
+   ]
+  },
+  {
+   "card": 4,
+   "itemId": "ENG-001-WIW-22",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4tj003atmbv86rrl899",
+    "cmsw2f4tj0039tmbvr06zfyc2",
+    "cmsw2f4tj003btmbvlt6pggmi",
+    "cmsw2f4tj0037tmbvkm4h5np7",
+    "cmsw2f4tj0038tmbvnku3kyjp"
+   ]
+  },
+  {
+   "card": 5,
+   "itemId": "ENG-001-WIW-15",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4td002btmbv4q0z8uvb",
+    "cmsw2f4td002atmbv73za99ge",
+    "cmsw2f4td0027tmbvf4ai2sdh",
+    "cmsw2f4td0028tmbv9zd4jux9",
+    "cmsw2f4td0029tmbv1utf9jue"
+   ]
+  },
+  {
+   "card": 6,
+   "itemId": "ENG-004-AGG-09",
+   "kind": "HELD",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "HOLD",
+   "machineReason": "Held execution is fixed, and the 'three things' coaching is gone. But the hintCore now misdirects. 'The sentence that follows her decision' points past lines 47 to 49 to line 50, because the decision and the stand, bag and hand are all in the same sentence.",
+   "source": "content/agent-review/english-rewrite/G4/proposal-review.json",
+   "optionIdsInShownOrder": [
+    "cmsw2f4ud0086tmbv4bdclu1o",
+    "cmsw2f4ud0087tmbvo27kwpqk",
+    "cmsw2f4ud0084tmbviaml2rp3",
+    "cmsw2f4ud0085tmbvmnsgqkux"
+   ]
+  },
+  {
+   "card": 7,
+   "itemId": "ENG-021-ED-11",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4yz00zhtmbv35th6v97",
+    "cmsw2f4yz00zitmbvfcxpyy3g",
+    "cmsw2f4yz00zftmbv5i56i04x",
+    "cmsw2f4yz00zgtmbvf5qatrwp"
+   ]
+  },
+  {
+   "card": 8,
+   "itemId": "ENG-016-HB-01",
+   "kind": "HELD",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "HOLD",
+   "machineReason": "The execution fault is gone. hintCore 'The window is only four lines wide' uses reviewer jargon ('window' for a line range) in a row whose stem uses 'window' literally ('point out of the window', the carriage window at line 2). A child meets two meanings of one word in one item and is not told the hint means lines 1 to 4.",
+   "source": "content/agent-review/english-rewrite/G1/proposal-review.json",
+   "optionIdsInShownOrder": [
+    "cmsw2f4xe00q7tmbva3jv3h3e",
+    "cmsw2f4xe00q8tmbvkpnnk786",
+    "cmsw2f4xe00q5tmbvi7gyjdex",
+    "cmsw2f4xe00q6tmbvv7lngw6o"
+   ]
+  },
+  {
+   "card": 9,
+   "itemId": "ENG-016-HB-05",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4xh00qqtmbvv9yk3m0r",
+    "cmsw2f4xh00qrtmbvs5g0n2jj",
+    "cmsw2f4xh00qstmbvdwpzejl2",
+    "cmsw2f4xh00qptmbvdfhjxuhg"
+   ]
+  },
+  {
+   "card": 10,
+   "itemId": "ENG-017-CR-01",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4xo00rttmbvb0dtwss9",
+    "cmsw2f4xo00rutmbvdr7mrnb3",
+    "cmsw2f4xo00rwtmbv8lrf3lfa",
+    "cmsw2f4xo00rvtmbvyu8aivpn"
+   ]
+  },
+  {
+   "card": 11,
+   "itemId": "ENG-019-BV-01",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4y700uxtmbvcu79mh9k",
+    "cmsw2f4y700uutmbv2epbhw6n",
+    "cmsw2f4y700uwtmbv4nnhdlam",
+    "cmsw2f4y700uvtmbvxor0eqbg"
+   ]
+  },
+  {
+   "card": 12,
+   "itemId": "ENG-028-PR-03",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f50p019ktmbv708rz6re",
+    "cmsw2f50p019mtmbv6qwa1yc9",
+    "cmsw2f50p019ltmbv087icdax",
+    "cmsw2f50p019ntmbvs9hcn3dj"
+   ]
+  },
+  {
+   "card": 13,
+   "itemId": "ENG-024-BF-10",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4zq0142tmbvtlpuo8up",
+    "cmsw2f4zq0140tmbvakjhzo2g",
+    "cmsw2f4zq0141tmbviqy4ustx",
+    "cmsw2f4zr0143tmbvvqmk65qr"
+   ]
+  },
+  {
+   "card": 14,
+   "itemId": "ENG-007-LP-12",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4v500d1tmbvh5lshs9v",
+    "cmsw2f4v500cztmbvgx5mwntn",
+    "cmsw2f4v600d2tmbv5vyp15p7",
+    "cmsw2f4v500d0tmbvzy5u8zfn"
+   ]
+  },
+  {
+   "card": 15,
+   "itemId": "ENG-007-LP-07",
+   "kind": "HELD",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "HOLD",
+   "machineReason": "The hint fault is fixed. But the execution on 'Read it and then put it away again' (en-negation-dropped) says 'Line 36 says without opening it'. Line 36 is only 'opening it.' and the negative word 'without' is on line 35. The same line split was named in the original hold. A negation-dropped execution must put the negative word on the line it names, so this should cite lines 35 and 36.",
+   "source": "content/agent-review/english-rewrite/G2/proposal-review.json",
+   "optionIdsInShownOrder": [
+    "cmsw2f4v200citmbvawidrbpx",
+    "cmsw2f4v200chtmbvfivjosa9",
+    "cmsw2f4v200cftmbvz13535wn",
+    "cmsw2f4v200cgtmbvedt8ltf2"
+   ]
+  },
+  {
+   "card": 16,
+   "itemId": "ENG-007-LP-13",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmtdflmp3000itmf5s6ourkbf",
+    "cmtdflmp3000ltmf5v2f9v83h",
+    "cmtdflmp3000ktmf5zcispic4",
+    "cmtdflmp3000jtmf5s1j9wdfc"
+   ]
+  },
+  {
+   "card": 17,
+   "itemId": "ENG-022-GK-07",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4z5010jtmbve14fr2rn",
+    "cmsw2f4z5010mtmbvrgltwgjl",
+    "cmsw2f4z5010ktmbviqbwuh7j",
+    "cmsw2f4z5010ltmbvck5mvsf2"
+   ]
+  },
+  {
+   "card": 18,
+   "itemId": "MC02-FDP-08",
+   "kind": "SIGNED",
+   "district": "MATHS",
+   "questionType": "maths-fdp",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmteo8250005ftmmjyrv9tssf",
+    "cmteo8250005ctmmjdbzm3gtr",
+    "cmteo8250005etmmja0qizhw4",
+    "cmteo8250005dtmmje7ea9nn3"
+   ]
+  },
+  {
+   "card": 19,
+   "itemId": "MC04-NPV-05",
+   "kind": "SIGNED",
+   "district": "MATHS",
+   "questionType": "maths-npv",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmteo82lw00fftmmjdv96280j",
+    "cmteo82lw00fdtmmjzowwtxwv",
+    "cmteo82lw00fetmmjtbks5107",
+    "cmteo82lw00fctmmjtuevcx09"
+   ]
+  },
+  {
+   "card": 20,
+   "itemId": "MC03-CALC-02",
+   "kind": "SIGNED",
+   "district": "MATHS",
+   "questionType": "maths-calc",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmteo829j007xtmmjzswfh1hq",
+    "cmteo829j007ztmmjauekyay6",
+    "cmteo829j007wtmmjbds0co24",
+    "cmteo829j007ytmmjxqgbwci9"
+   ]
+  },
+  {
+   "card": 21,
+   "itemId": "MC01-STATS-03",
+   "kind": "SIGNED",
+   "district": "MATHS",
+   "questionType": "maths-stats",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmteo821v003htmmjoia9o817",
+    "cmteo821v003jtmmje5r9jr3y",
+    "cmteo821v003itmmjqk086trw",
+    "cmteo821v003gtmmj3sxmwtag"
+   ]
+  },
+  {
+   "card": 22,
+   "itemId": "MC04-GEOM-02",
+   "kind": "SIGNED",
+   "district": "MATHS",
+   "questionType": "maths-geom",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmteo82j900dptmmjiufyw7ja",
+    "cmteo82j900dqtmmjozdjypet",
+    "cmteo82j900drtmmjo7g7ulzp",
+    "cmteo82j900dotmmjmi0g5rdv"
+   ]
+  },
+  {
+   "card": 23,
+   "itemId": "MC05-MEAS-04",
+   "kind": "SIGNED",
+   "district": "MATHS",
+   "questionType": "maths-meas",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmteo82qn00iftmmj1vvdk9nl",
+    "cmteo82qn00ietmmjjld5nlhp",
+    "cmteo82qn00ictmmjp3y7eh2d",
+    "cmteo82qn00idtmmj8die4q7v"
+   ]
+  },
+  {
+   "card": 24,
+   "itemId": "gen-vr-07-letters-for-numbers-23",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-07-letters-for-numbers",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-07-letters-for-numbers-23-opt4",
+    "gen-vr-07-letters-for-numbers-23-opt2",
+    "gen-vr-07-letters-for-numbers-23-opt3",
+    "gen-vr-07-letters-for-numbers-23-opt1"
+   ]
+  },
+  {
+   "card": 25,
+   "itemId": "gen-vr-05-hidden-word-08",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-05-hidden-word",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-05-hidden-word-08-opt3",
+    "gen-vr-05-hidden-word-08-opt2",
+    "gen-vr-05-hidden-word-08-opt1"
+   ]
+  },
+  {
+   "card": 26,
+   "itemId": "gen-vr-04-closest-meaning-18",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-04-closest-meaning",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-04-closest-meaning-18-opt1",
+    "gen-vr-04-closest-meaning-18-opt3",
+    "gen-vr-04-closest-meaning-18-opt4",
+    "gen-vr-04-closest-meaning-18-opt2"
+   ]
+  },
+  {
+   "card": 27,
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "kind": "HELD",
+   "district": "VR",
+   "questionType": "vr-04-closest-meaning",
+   "machineVerdict": "HOLD",
+   "machineReason": "Same headword and same key as bank-30 after both rebuilds (exhausted, worn out), so the second row a child meets is answered from memory. The row is otherwise sound.",
+   "source": "content/agent-review/vr-04/proposal-review-round1.json",
+   "optionIdsInShownOrder": [
+    "gen-vr-04-closest-meaning-28-opt2",
+    "gen-vr-04-closest-meaning-28-opt3",
+    "gen-vr-04-closest-meaning-28-opt1",
+    "gen-vr-04-closest-meaning-28-opt4"
+   ]
+  },
+  {
+   "card": 28,
+   "itemId": "gen-vr-09-letter-series-16",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-09-letter-series",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-09-letter-series-16-opt2",
+    "gen-vr-09-letter-series-16-opt1",
+    "gen-vr-09-letter-series-16-opt3"
+   ]
+  },
+  {
+   "card": 29,
+   "itemId": "gen-vr-16-opposite-meaning-20",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-16-opposite-meaning",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-16-opposite-meaning-20-opt1",
+    "gen-vr-16-opposite-meaning-20-opt4",
+    "gen-vr-16-opposite-meaning-20-opt2",
+    "gen-vr-16-opposite-meaning-20-opt3"
+   ]
+  },
+  {
+   "card": 30,
+   "itemId": "gen-vr-03-related-words-42",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-03-related-words",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-03-related-words-42-opt3",
+    "gen-vr-03-related-words-42-opt2",
+    "gen-vr-03-related-words-42-opt1"
+   ]
+  },
+  {
+   "card": 31,
+   "itemId": "gen-vr-05-hidden-word-21",
+   "kind": "HELD",
+   "district": "VR",
+   "questionType": "vr-05-hidden-word",
+   "machineVerdict": "HOLD",
+   "machineReason": "The row is correct on its own terms: 'Dad drank tea and ate his toast.' is natural, 7 words, and the key, distractors and joins all check, with 'hist' not a second answer. But its key, date, repeats the key of live row 01, which uses the same Dad/'ate' construction. Re-key it to a word not used elsewhere in the door.",
+   "source": "content/agent-review/vr-05/proposal-review-round2.json",
+   "optionIdsInShownOrder": [
+    "gen-vr-05-hidden-word-21-opt3",
+    "gen-vr-05-hidden-word-21-opt1",
+    "gen-vr-05-hidden-word-21-opt2"
+   ]
+  },
+  {
+   "card": 32,
+   "itemId": "gen-vr-13-make-a-word-24",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-13-make-a-word",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-13-make-a-word-24-opt3",
+    "gen-vr-13-make-a-word-24-opt2",
+    "gen-vr-13-make-a-word-24-opt1"
+   ]
+  },
+  {
+   "card": 33,
+   "itemId": "gen-vr-17-complete-the-sum-23",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-17-complete-the-sum",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-17-complete-the-sum-23-opt4",
+    "gen-vr-17-complete-the-sum-23-opt1",
+    "gen-vr-17-complete-the-sum-23-opt2",
+    "gen-vr-17-complete-the-sum-23-opt3"
+   ]
+  },
+  {
+   "card": 34,
+   "itemId": "gen-vr-13-make-a-word-02",
+   "kind": "HELD",
+   "district": "VR",
+   "questionType": "vr-13-make-a-word",
+   "machineVerdict": "HOLD",
+   "machineReason": "A predictable pattern gives the key away. The rebuild adds a giveaway that holds on all 25 rows. The not-a-word option is always a jumble of the key's four letters (SHPO / SHOP). The wrong-pieces option is always a real word that is not an anagram of the key (PEEP). So a child can pick the real word that matches the jumble and get SHOP without using the rule. The jumbles (SHPO) are also unpronounceable, so no child would choose them, which leaves a two-way choice the cue then settles. Fix: make the not-a-word option a pronounceable non-word that is not an anagram of the key (in the house example, DRAP sits beside DRIP), or vary which options share letters with the key.",
+   "source": "content/agent-review/vr-13/proposal-review-round1.json",
+   "optionIdsInShownOrder": [
+    "gen-vr-13-make-a-word-02-opt1",
+    "gen-vr-13-make-a-word-02-opt2",
+    "gen-vr-13-make-a-word-02-opt3"
+   ]
+  },
+  {
+   "card": 35,
+   "itemId": "gen-vr-14-letter-connections-21",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-14-letter-connections",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-14-letter-connections-21-opt1",
+    "gen-vr-14-letter-connections-21-opt2",
+    "gen-vr-14-letter-connections-21-opt3"
+   ]
+  },
+  {
+   "card": 36,
+   "itemId": "gen-vr-21-same-meaning-19",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-21-same-meaning",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-21-same-meaning-19-opt2",
+    "gen-vr-21-same-meaning-19-opt1",
+    "gen-vr-21-same-meaning-19-opt3",
+    "gen-vr-21-same-meaning-19-opt4"
+   ]
+  },
+  {
+   "card": 37,
+   "itemId": "gen-vr-11-number-series-02",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-11-number-series",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-11-number-series-02-opt4",
+    "gen-vr-11-number-series-02-opt1",
+    "gen-vr-11-number-series-02-opt2",
+    "gen-vr-11-number-series-02-opt3"
+   ]
+  },
+  {
+   "card": 38,
+   "itemId": "gen-vr-08-move-letter-09",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-08-move-letter-09-opt1",
+    "gen-vr-08-move-letter-09-opt3",
+    "gen-vr-08-move-letter-09-opt2"
+   ]
+  },
+  {
+   "card": 39,
+   "itemId": "bank-vr-06-missing-word-36",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-06-missing-word",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmscb15b2009jtmzv97tljlki",
+    "cmscb15b2009htmzvtame6juh",
+    "cmscb15b2009itmzvsral5u3z"
+   ]
+  },
+  {
+   "card": 40,
+   "itemId": "gen-vr-08-move-letter-08",
+   "kind": "HELD",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "machineVerdict": "HOLD",
+   "machineReason": "As rebuilt (COAST/LONG), S also leaves two real words: COAT + LONGS. The key A is not the only letter that solves the row, so it is not answerable with one stated answer. Needs a different pair.",
+   "source": "content/agent-review/patterns/vr-08/proposal-review-round1.json",
+   "optionIdsInShownOrder": [
+    "gen-vr-08-move-letter-08-opt3",
+    "gen-vr-08-move-letter-08-opt2",
+    "gen-vr-08-move-letter-08-opt1"
+   ]
+  }
+ ]
+}

@@ -29065,3 +29065,45 @@ that answers itself, and a key that is the only printed option. The gates do not
 hand-authored row could still carry them.
 
 The generator and the LIVE rows agree on all four doors (25/25 unchanged each).
+
+## R1031 — The machine reviewer is calibrated against a person, blind (David, 2026-11-22)
+
+**WHY.** Since R1021 the machine reviewer `rev-agent-01` is the latest signer on **761 of 1,176 LIVE
+rows** (ENGLISH 336, VR 346, MATHS 79). Annie (`rev-0001`) is latest on 176 by signature, 9 more by
+capital-`Item` signature, 204 by the older APPROVED event and 25 (ENG-003) by her return ruling; 1 is
+the dev-only `zz-e2e-fixture-item`. Nobody had measured how often a person would sign what the machine
+signs, so every figure since R1021 rests on a judgement whose error rate is unknown.
+
+**THE SAMPLE** (`scripts/agent-review/export-calibration-sample.ts`, seed `calibration-01`, digest
+`ebda446551d602e2`): 40 cards. **32 machine-SIGNED LIVE rows** (English 13, VR 13 = one each from 13
+of 15 types, maths 6 = one per type) and **8 whole-row rebuilds the machine HELD** (English 4, VR 4,
+from 105 held rebuilds). The held cards exist so her sign rate is not the only number. Without them,
+nothing tests whether the machine's refusals are right as well.
+
+**BLINDNESS IS ASSERTED, NOT HOPED FOR.**
+- Nothing on a card says which kind it is.
+- A screen with a carried fixture checks every card for reviewer ids, verdict words, door names and
+  item ids. It found 0 leaks.
+- Options are shuffled per card, because rebuilds list the key first.
+- Hint and walk script must appear at the same rate on both kinds within a district. That check is
+  why **VR walk scripts are outside this sample**: a held VR rebuild carries none, so showing them on
+  signed VR cards only would tell her which they are.
+- No maths card is held, because a held maths rebuild carries no hint either.
+- `key.json` says which card is which. It is never delivered.
+
+**DELIVERED** as `~/Downloads/11+/from-cluecrew/calibration-cards-ebda446551d602e2.html`, a single offline page. She records Sign, Hold or Refuse, where the fault is, and a reason, then downloads a return quoting the digest.
+
+**THE SCORE** (`score-calibration.ts`):
+- Two numbers: signed → she signs (the false-accept side, the one 761 rows rest on); held → she holds
+  or refuses (false-refuse, a cost in speed, not in safety).
+- Each comes with a Wilson 95% interval. At n = 32 a bare percentage claims more than it knows.
+- A partial return is scored on decided cards only, and the undecided count is printed beside every
+  rate.
+- A return is matched by digest, never by name.
+
+**WHAT FOLLOWS FROM IT is David's to rule once the return is in.** The proposal:
+- If she would sign about 30 of 32 or more, the machine signature stands, with periodic samples.
+- If any district shows two or more refusals, re-review that district's machine-signed rows by a
+  person.
+- Read every disagreement whatever the rate, because a disagreement names a fault class the gates and
+  the machine share.
