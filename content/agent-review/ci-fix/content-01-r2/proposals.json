@@ -1,0 +1,99 @@
+{
+ "door": "ci-fix/content-01-r2",
+ "proposer": "agent",
+ "ruling": "Round 2 of ci-fix/content-01: the two rows rev-agent-01 refused and held. CI first gated the real store (R1038/R1039): 8 LIVE rows fail check:db-content, and two segmented SPaG banks fail check:option-positions. Faults as given in the brief, not from findings.json.",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "MC05-CALC-08",
+   "why": "Round 2. Carries round 1's stem split (attested in substance: 5/11/8/6 words, numbers and question unchanged), key and values. Fixes what was refused: the maths-11 execution for 1,045 now takes the smaller digit from the larger as it says, in MC04-CALC-08's form (5-0, 9-5, 1-1, 3-2), each checked against 3,150 over 2,195 column by column: ones 0 over 5, tens 5 over 9, hundreds 1 over 1, thousands 3 over 2, giving 1,0,4,5 read as 1,045. The 1,230 execution no longer calls 2,195 'seats sold': it says 1,920 booked online plus 275 sold at the door make 2,195 seats taken.",
+   "stem": {
+    "text": "A theatre has 3,150 seats. For a show, 16 rows of 120 seats are booked online. Another 275 seats are sold at the door. How many seats are still empty?"
+   },
+   "options": [
+    {
+     "optionId": "cmteoreif000utm2c147wtuq3",
+     "value": "955",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteoreif000vtm2cf1d7j1qo",
+     "value": "1230",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "execution": "1,230 is 3,150 take away 1,920, the 16 rows of 120 booked online only. The 275 seats sold at the door are never used. All the seats taken make 1,920 + 275 = 2,195, which leaves 955."
+    },
+    {
+     "optionId": "cmteoreif000wtm2c0emuhjnx",
+     "value": "2195",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "execution": "2,195 is the number of seats sold: 16 x 120 = 1,920, plus 275. That is a step on the way. The question asks for the empty seats, so 3,150 - 2,195 = 955."
+    },
+    {
+     "optionId": "cmteoreif000xtm2ck05l79o7",
+     "value": "1045",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "execution": "1,045 comes from 3,150 - 2,195 taking the smaller digit from the larger in each column (5-0, 9-5, 1-1, 3-2) instead of exchanging. Exchanged properly, 3,150 - 2,195 = 955."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-03",
+   "why": "Round 2. Round 1 put the error in B but made the sentence 30 words with a weak 'but' (refused). Now 23 words: 'Ella dried the rabbit’s ears, but it’s fur was still damp, so she wrapped it in Mr Bhatt’s towel and wrote today’s date.' The contrast is real: her ears are dried, but the fur is still damp, so she wraps it. Error stays in B ('it’s fur'); A, C and D each carry a correct possessive (rabbit’s, Mr Bhatt’s, today’s), so en-apostrophe-possession still names the slip of blaming a correct mark; No mistake stays wrong. Walk names the second part and states the key. Hint names no position, so it and its marker stay.",
+   "stem": {
+    "text": "Read the sentence. One part may have a punctuation mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "options": [
+    {
+     "optionId": "ENG-003-A-PU-03-OPT-A",
+     "value": "Ella dried the rabbit’s ears,",
+     "isKey": false,
+     "tag": "en-apostrophe-possession",
+     "execution": "“The rabbit’s ears” is right: the ears belong to one rabbit, so the mark goes before the s. A child unsure of possessive marks may blame it. The mistake is “it’s fur”, in the second part."
+    },
+    {
+     "optionId": "ENG-003-A-PU-03-OPT-B",
+     "value": "but it’s fur was still damp,",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "ENG-003-A-PU-03-OPT-C",
+     "value": "so she wrapped it in Mr Bhatt’s towel",
+     "isKey": false,
+     "tag": "en-apostrophe-possession",
+     "execution": "“Mr Bhatt’s towel” is right: the towel belongs to one person, so the mark goes before the s. A child unsure of possessive marks may blame it. The mistake is “it’s fur”, in the second part."
+    },
+    {
+     "optionId": "ENG-003-A-PU-03-OPT-D",
+     "value": "and wrote today’s date.",
+     "isKey": false,
+     "tag": "en-apostrophe-possession",
+     "execution": "“Today’s date” is right: the date belongs to today, so the mark goes before the s. A child unsure of possessive marks may blame it. The mistake is “it’s fur”, in the second part."
+    },
+    {
+     "optionId": "ENG-003-A-PU-03-OPT-N",
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-apostrophe-possession",
+     "execution": "Choosing No mistake misses “it’s fur”: “it is fur” makes no sense, so the owning word “its” is needed, with no mark. The second part has the mistake."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start at the mark in “it’s”, in the second part. Stretch it out: “it is fur” does not work. The fur belongs to the rabbit, so “its” has no mark. So the second part has the mistake. “Rabbit’s”, “Mr Bhatt’s” and “today’s” hold.",
+    "_previousWalkScript": "Start at the mark in “It’s”. Stretch it out: “It is fur” does not work. The fur belongs to the rabbit, so “its” has no mark. The later marks hold."
+   }
+  }
+ ],
+ "notes": [
+  "MC05-CALC-08: maths-11 execution reversed its own column subtraction -> '(5-0, 9-5, 1-1, 3-2)', each digit rechecked against 3,150 - 2,195; 1,230 execution now says 'seats taken' = 1,920 booked online + 275 at the door; round-1 stem split, key and values carried unchanged.",
+  "ENG-003-A-PU-03: round-1 sentence too long (30 words, weak 'but') -> 'Ella dried the rabbit’s ears, but it’s fur was still damp, so she wrapped it in Mr Bhatt’s towel and wrote today’s date.' (23 words; dried ears vs damp fur); error stays in B, A/C/D correct possessives tagged en-apostrophe-possession, walk names the second part."
+ ]
+}

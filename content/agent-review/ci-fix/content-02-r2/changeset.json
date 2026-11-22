@@ -1,0 +1,63 @@
+{
+ "door": "ci-fix/content-02-r2",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "MC05-MEAS-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-02-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read as it will be: 'Anya buys a ruler for £1.70 and a pen for £2.60. What is the total cost?' Options £4.30*, £13.30, £3.30, £5.00. It can be answered from the stem. The key £4.30 is the only correct value under any reading, and all four option values differ. Each distractor is wrong and comes from a named mistake. Pattern check: sorted, the values are 3.30, 4.30, 5.00, 13.30 (gaps 1, 0.70, 8.30). There is no evenly spaced run with the key in the middle, so the round-1 run is broken. The pair of options £1 apart (3.30 and 4.30) has the key as the larger, which is not a rule repeated across the row. £13.30 is a long way off and an estimating child can reject it, which makes it a weak distractor but not a fault. The vocabulary (ruler, pen, total cost, pounds and pence) suits a 9 to 11 year old in Britain. Notation is house style: £ with two decimal places. Precheck --from-live: 1 row touched, 1 passes every gate, 0 fail.",
+   "landedAt": "2026-11-22T21:20:23.569Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Add the two prices, pounds and pence together. Seventy pence plus sixty pence makes £1.30. That carries to give £4.30 in total. A trap drops the pence zero, or the carried pound.",
+     "after": "Add the two prices, pounds and pence together. Seventy pence plus sixty pence makes £1.30. That carries to give £4.30 in total. A trap loses the carried pound, or counts it as ten pounds."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Add the two prices, pounds and pence together. Seventy pence plus sixty pence makes £1.30. That carries to give £4.30 in total. A trap drops the pence zero, or the carried pound."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option B (cmteo82qi00i9tmmje5damk3o).value",
+     "before": "£4.3",
+     "after": "£13.30"
+    },
+    {
+     "field": "option B (cmteo82qi00i9tmmje5damk3o).tag",
+     "before": "maths-31-dropping-the-zero-in-money",
+     "after": "maths-13-adding-the-exchange-twice"
+    },
+    {
+     "field": "option B (cmteo82qi00i9tmmje5damk3o).execution",
+     "before": null,
+     "after": "The child adds 70p and 60p to make 130p, writes 30p, and counts the carried 1 as a full £10 instead of £1: 10 + 1 + 2 = 13. That gives £13.30 instead of £4.30."
+    },
+    {
+     "field": "option C (cmteo82qi00iatmmj77jhbtfy).tag",
+     "before": "maths-83-money-place-value-slip",
+     "after": "maths-69-dropped-calculation-carry"
+    },
+    {
+     "field": "option C (cmteo82qi00iatmmj77jhbtfy).execution",
+     "before": null,
+     "after": "The child adds 70p and 60p to make 130p but keeps only the 30p and drops the carried £1, adding whole pounds 1 + 2 = 3. That gives £3.30 instead of £4.30."
+    },
+    {
+     "field": "option D (cmteo82qi00ibtmmjsx4lya9v).execution",
+     "before": null,
+     "after": "The child rounds £1.70 up to £2 and £2.60 up to £3 and gives the rounded total, £5.00. The real prices are 30p and 40p less, so the total is £4.30."
+    }
+   ]
+  }
+ ]
+}

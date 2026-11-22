@@ -1,0 +1,797 @@
+{
+ "door": "ci-fix/content-01",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "MC04-CALC-08",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "I read the row as the child meets it. It is answerable; I recomputed the key 1,190 as the only correct value; all three distractors are wrong; the walk is unchanged and correct. Note, not a hold: the key is the smallest option, which is structural to 'how many are left' problems.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "A stadium holds 4,120 people. For a concert, 18 blocks of 145 seats are sold, and another 320 tickets are sold at the door. How many seats are still empty?",
+     "after": "A stadium holds 4,120 people. For a concert, 18 blocks of 145 seats are sold. Another 320 tickets are sold at the door. How many seats are still empty?"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option B (cmteorehr000dtm2c3wuzinr9).execution",
+     "before": null,
+     "after": "1,510 is 4,120 take away 2,610, the 18 blocks of 145 only. The 320 tickets sold at the door are never used. All the seats sold make 2,930, which leaves 1,190."
+    },
+    {
+     "field": "option C (cmteorehr000etm2c4y7o6dgs).execution",
+     "before": null,
+     "after": "2,930 is the number of seats sold: 18 x 145 = 2,610, plus 320. That is a step on the way. The question asks for the empty seats, so 4,120 - 2,930 = 1,190."
+    },
+    {
+     "field": "option D (cmteorehr000ftm2c0kv1tp39).execution",
+     "before": null,
+     "after": "2,810 comes from 4,120 - 2,930 taking the smaller digit from the larger in each column (0-0, 3-2, 9-1, 4-2) instead of exchanging. Exchanged properly, 4,120 - 2,930 = 1,190."
+    }
+   ]
+  },
+  {
+   "itemId": "MC05-STATS-01",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the stem's values. I recomputed the key 7 as unique; 15, 4 and 13 are all wrong; every sentence is 16 words or fewer; the walk is unchanged and correct.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "A table shows badges won: Red team 10, Blue team 9, Green team 14, Yellow team 8. How many more did Green and Red win together than Blue and Yellow together?",
+     "after": "A table shows badges won. Red team won 10, Blue team 9, Green team 14 and Yellow team 8. How many more did Green and Red win together than Blue and Yellow together?"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option B (cmteorej2001dtm2cdbgyxwu4).execution",
+     "before": null,
+     "after": "15 is 24 - 9: Green and Red make 24, but Yellow's 8 is left out of the Blue and Yellow total. Blue and Yellow together make 17, and 24 - 17 = 7."
+    },
+    {
+     "field": "option C (cmteorej2001etm2clrjdvz3d).execution",
+     "before": null,
+     "after": "4 is the number of teams in the table, not a difference between badge totals. Green and Red make 24, Blue and Yellow make 17, and 24 - 17 = 7."
+    },
+    {
+     "field": "option D (cmteorej2001ftm2cig6737of).execution",
+     "before": null,
+     "after": "13 comes from 24 - 17 taking the smaller digit from the larger in each column (7 - 4 = 3, 2 - 1 = 1) instead of exchanging. Exchanged properly, 24 - 17 = 7."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-03-related-words-10",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "baker:bread :: potter:jug. jug is unflagged (screened), and it is the only maker->made answer; oven and handle are wrong. The walk is now this item's own and states the key. No pattern gives the key away.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Point to rain and wet. Rain makes the ground turn wet. The sun makes the ground turn dry. Dry is the match; hot and yellow miss the link.",
+     "after": "Start with baker and bread. A baker makes bread as their work. A potter makes jugs, so jug is the answer. An oven is where bread bakes, and a handle is only part of a jug."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Point to rain and wet. Rain makes the ground turn wet. The sun makes the ground turn dry. Dry is the match; hot and yellow miss the link."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-03-related-words-10-opt1 (gen-vr-03-related-words-10-opt1).value",
+     "before": "pot",
+     "after": "jug"
+    },
+    {
+     "field": "option gen-vr-03-related-words-10-opt2 (gen-vr-03-related-words-10-opt2).execution",
+     "before": null,
+     "after": "An oven belongs with the first pair: it is where a baker bakes the bread. A baker makes bread, so a potter makes something too: a jug."
+    },
+    {
+     "field": "option gen-vr-03-related-words-10-opt3 (gen-vr-03-related-words-10-opt3).execution",
+     "before": null,
+     "after": "A handle is only one part of a jug, not the whole thing a potter makes. Bread is the whole thing a baker makes, so the match is the jug itself."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-01",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One error in one natural sentence, at B (there/their). Every other word is correctly spelt; No mistake is wrong; the walk names the second part; the hint is position-free.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Go straight to the first part. “There” means a place, but the boxes belong to the twins. So “their” is needed. “Quiet”, “past” and “netball court” hold.",
+     "after": "Go straight to the second part. “There” means a place, but the boxes belong to the twins. So “their” is needed, and the second part has the mistake. “Quiet”, “past” and “netball court” hold."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Go straight to the first part. “There” means a place, but the boxes belong to the twins. So “their” is needed. “Quiet”, “past” and “netball court” hold."
+    },
+    {
+     "field": "option A (ENG-003-A-SP-01-OPT-A).value",
+     "before": "The twins left there lunch boxes",
+     "after": "Beside the quiet library door,"
+    },
+    {
+     "field": "option A (ENG-003-A-SP-01-OPT-A).isKey",
+     "before": true,
+     "after": false
+    },
+    {
+     "field": "option A (ENG-003-A-SP-01-OPT-A).tag",
+     "before": null,
+     "after": "en-spelling-form-lookalike"
+    },
+    {
+     "field": "option A (ENG-003-A-SP-01-OPT-A).execution",
+     "before": null,
+     "after": "“Quiet” is right here: it means not noisy. Its near-twin “quite” looks almost the same, so a child may think it is misspelt. The mistake is “there lunch boxes”, in the second part."
+    },
+    {
+     "field": "option B (ENG-003-A-SP-01-OPT-B).value",
+     "before": "beside the quiet library door,",
+     "after": "the twins left there lunch boxes,"
+    },
+    {
+     "field": "option B (ENG-003-A-SP-01-OPT-B).isKey",
+     "before": false,
+     "after": true
+    },
+    {
+     "field": "option B (ENG-003-A-SP-01-OPT-B).tag",
+     "before": "en-spelling-form-lookalike",
+     "after": null
+    },
+    {
+     "field": "option C (ENG-003-A-SP-01-OPT-C).execution",
+     "before": null,
+     "after": "“Past” is right: they walked by the office. It sounds the same as “passed”, so a child may swap the pair. The mistake is “there lunch boxes”, in the second part."
+    },
+    {
+     "field": "option D (ENG-003-A-SP-01-OPT-D).execution",
+     "before": null,
+     "after": "“Hurried” keeps its double r from “hurry”, and “netball” needs one t. A child unsure where letters double may blame this part. The mistake is “there lunch boxes”, in the second part."
+    },
+    {
+     "field": "option N (ENG-003-A-SP-01-OPT-N).execution",
+     "before": null,
+     "after": "Choosing No mistake misses “there lunch boxes”: the boxes belong to the twins, so the owning word “their” is needed. The second part has the mistake."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-01",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One error in one natural sentence, at C. Every other segment is correct; No mistake is wrong; the walk names the third part; the hint is position-free. The bank position counts were recomputed from the live store.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at “boys coats”, in the first part. More than one boy owns them, and “boys” ends in s. The mark goes after the s: boys’ coats. “Mrs Patel’s”, “teachers’” and “trolley” hold.",
+     "after": "Look at “boys coats”, in the third part. More than one boy owns them, and “boys” ends in s. The mark goes after the s: boys’ coats. So the third part has the mistake. “Mrs Patel’s”, “trolley” and “teachers’” hold."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Look at “boys coats”, in the first part. More than one boy owns them, and “boys” ends in s. The mark goes after the s: boys’ coats. “Mrs Patel’s”, “teachers’” and “trolley” hold."
+    },
+    {
+     "field": "option A (ENG-003-A-PU-01-OPT-A).value",
+     "before": "Sam collected the boys coats,",
+     "after": "Sam checked Mrs Patel’s list,"
+    },
+    {
+     "field": "option A (ENG-003-A-PU-01-OPT-A).isKey",
+     "before": true,
+     "after": false
+    },
+    {
+     "field": "option A (ENG-003-A-PU-01-OPT-A).tag",
+     "before": null,
+     "after": "en-apostrophe-possession"
+    },
+    {
+     "field": "option A (ENG-003-A-PU-01-OPT-A).execution",
+     "before": null,
+     "after": "“Mrs Patel’s” is right: the list belongs to one person, so the mark goes before the s. A child unsure where possessive marks go may blame this one. The missing mark is in “boys coats”, the third part."
+    },
+    {
+     "field": "option B (ENG-003-A-PU-01-OPT-B).value",
+     "before": "checked Mrs Patel’s list,",
+     "after": "counted the bags on the trolley,"
+    },
+    {
+     "field": "option B (ENG-003-A-PU-01-OPT-B).execution",
+     "before": null,
+     "after": "“Bags” is just more than one bag and owns nothing, so it takes no apostrophe. A child who mixes plurals with owning may want a mark here. The missing mark is in “boys coats”, the third part."
+    },
+    {
+     "field": "option C (ENG-003-A-PU-01-OPT-C).value",
+     "before": "counted the bags on the trolley,",
+     "after": "collected the boys coats,"
+    },
+    {
+     "field": "option C (ENG-003-A-PU-01-OPT-C).isKey",
+     "before": false,
+     "after": true
+    },
+    {
+     "field": "option C (ENG-003-A-PU-01-OPT-C).tag",
+     "before": "en-apostrophe-possession",
+     "after": null
+    },
+    {
+     "field": "option D (ENG-003-A-PU-01-OPT-D).execution",
+     "before": null,
+     "after": "“Teachers’” is right: two teachers own the cupboards, so the mark goes after the s. A child unsure of plural possession may blame it. The missing mark is in “boys coats”, the third part."
+    },
+    {
+     "field": "option N (ENG-003-A-PU-01-OPT-N).execution",
+     "before": null,
+     "after": "Choosing No mistake misses the possessive in “boys coats”: the coats belong to more than one boy, so it needs boys’ coats. The third part has the mistake."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-11",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "puddle:small :: lake:large. large is the only correct option; water and little are wrong; the walk now fits the card and states the key; all words are known to 9-11s. The opt3 tag misfit noted on the change is staff-facing and pre-existing.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Take the pair puddle and small. A puddle is small; small tells its size. Large is the word for a big lake. Water and deep go with lakes, not size.",
+     "after": "Take the pair puddle and small. A puddle is small, so small tells its size. A lake is large, so large is the answer. Water is what fills a lake, not its size. Little fits a puddle, not a lake."
+    },
+    {
+     "field": "explanation.walkScriptStatus",
+     "before": "APPROVED — her 146th (4a0d56c98e58fcea)",
+     "after": "DRAFT"
+    },
+    {
+     "field": "explanation.walkScriptApprovedBy",
+     "before": "reviewer:rev-0001",
+     "after": null
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Take the pair puddle and small. A puddle is small; small tells its size. Large is the word for a big lake. Water and deep go with lakes, not size."
+    },
+    {
+     "field": "explanation._previousWalkScriptApprovedBy",
+     "before": null,
+     "after": "reviewer:rev-0001"
+    },
+    {
+     "field": "explanation._previousWalkScriptStatus",
+     "before": null,
+     "after": "APPROVED — her 146th (4a0d56c98e58fcea)"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-05",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One error in one natural sentence, at C. caretaker's, keys and hall doors are correct; No mistake is wrong; the walk names the third part; the hint is position-free.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at the mark in “childrens’”. The owner word “children” does not end in s. The mark comes before an added s: children’s coats. The three later parts hold.",
+     "after": "Start at the mark in “childrens’”, in the third part. The owner word “children” does not end in s. The mark comes before an added s: children’s coats. So the third part has the mistake. The other three parts hold."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Start at the mark in “childrens’”. The owner word “children” does not end in s. The mark comes before an added s: children’s coats. The three later parts hold."
+    },
+    {
+     "field": "option A (ENG-003-A-PU-05-OPT-A).value",
+     "before": "The childrens’ coats were still on the pegs,",
+     "after": "Miss Reid checked the caretaker’s office,"
+    },
+    {
+     "field": "option A (ENG-003-A-PU-05-OPT-A).isKey",
+     "before": true,
+     "after": false
+    },
+    {
+     "field": "option A (ENG-003-A-PU-05-OPT-A).tag",
+     "before": null,
+     "after": "en-apostrophe-possession"
+    },
+    {
+     "field": "option A (ENG-003-A-PU-05-OPT-A).execution",
+     "before": null,
+     "after": "“The caretaker’s office” is right: one caretaker owns it, so the mark goes before the s. A child unsure of possessive marks may blame it. The mistake is “childrens’ coats”, in the third part."
+    },
+    {
+     "field": "option B (ENG-003-A-PU-05-OPT-B).value",
+     "before": "so Miss Reid checked the caretaker’s office,",
+     "after": "found the keys in the drawer,"
+    },
+    {
+     "field": "option B (ENG-003-A-PU-05-OPT-B).execution",
+     "before": null,
+     "after": "“Keys” is just more than one key and owns nothing, so it takes no apostrophe. A child who mixes plurals with owning may want one. The mistake is “childrens’ coats”, in the third part."
+    },
+    {
+     "field": "option C (ENG-003-A-PU-05-OPT-C).value",
+     "before": "found the keys in the drawer",
+     "after": "hung the childrens’ coats on the pegs"
+    },
+    {
+     "field": "option C (ENG-003-A-PU-05-OPT-C).isKey",
+     "before": false,
+     "after": true
+    },
+    {
+     "field": "option C (ENG-003-A-PU-05-OPT-C).tag",
+     "before": "en-apostrophe-possession",
+     "after": null
+    },
+    {
+     "field": "option D (ENG-003-A-PU-05-OPT-D).execution",
+     "before": null,
+     "after": "“The hall doors” needs no apostrophe: “hall” describes the doors and owns nothing. A child who adds possessive marks too readily may blame it. The mistake is “childrens’ coats”, in the third part."
+    },
+    {
+     "field": "option N (ENG-003-A-PU-05-OPT-N).execution",
+     "before": null,
+     "after": "Choosing No mistake misses “childrens’ coats”: “children” does not end in s, so the mark comes before an added s, children’s. The third part has the mistake."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-17",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "day:sun :: night:moon. The key is unique; owl and sleep are same-topic distractors and wrong; the walk fits the card and states the key; the vocabulary is suitable.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Take the pair day and sun. The sun gives light by day. The moon gives light at night. Dark and sleep go with night, giving no light.",
+     "after": "Take the pair day and sun. The sun gives light by day. The moon gives light at night, so moon is the answer. An owl and sleep both go with night, but neither gives light."
+    },
+    {
+     "field": "explanation.walkScriptStatus",
+     "before": "APPROVED — her 146th (4a0d56c98e58fcea)",
+     "after": "DRAFT"
+    },
+    {
+     "field": "explanation.walkScriptApprovedBy",
+     "before": "reviewer:rev-0001",
+     "after": null
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Take the pair day and sun. The sun gives light by day. The moon gives light at night. Dark and sleep go with night, giving no light."
+    },
+    {
+     "field": "explanation._previousWalkScriptApprovedBy",
+     "before": null,
+     "after": "reviewer:rev-0001"
+    },
+    {
+     "field": "explanation._previousWalkScriptStatus",
+     "before": null,
+     "after": "APPROVED — her 146th (4a0d56c98e58fcea)"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-09",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "baker:bread :: potter:vase. vase is unflagged (screened) and the only maker->made answer; oven and clay are wrong. The walk fits the card and states the key; the vocabulary is suitable.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Begin with baker and bread. A baker makes bread as their work. A pot is the potter's own work. Oven and clay help the making; neither is the thing made.",
+     "after": "Begin with baker and bread. A baker makes bread as their work. A potter makes vases as their work, so vase is the answer. Oven and clay help the making, but neither is the thing made."
+    },
+    {
+     "field": "explanation.walkScriptStatus",
+     "before": "AMENDED-AND-APPROVED — her 146th (4a0d56c98e58fcea)",
+     "after": "DRAFT"
+    },
+    {
+     "field": "explanation.walkScriptApprovedBy",
+     "before": "reviewer:rev-0001",
+     "after": null
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Begin with baker and bread. A baker makes bread as their work. A pot is the potter's own work. Oven and clay help the making; neither is the thing made."
+    },
+    {
+     "field": "explanation._previousWalkScriptApprovedBy",
+     "before": null,
+     "after": "reviewer:rev-0001"
+    },
+    {
+     "field": "explanation._previousWalkScriptStatus",
+     "before": null,
+     "after": "AMENDED-AND-APPROVED — her 146th (4a0d56c98e58fcea)"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-10-word-connections-09-opt1 (gen-vr-10-word-connections-09-opt1).value",
+     "before": "pot",
+     "after": "vase"
+    },
+    {
+     "field": "option gen-vr-10-word-connections-09-opt2 (gen-vr-10-word-connections-09-opt2).execution",
+     "before": "The first pair sets the relation: a baker is the worker and bread is what he makes. Used on potter, that gives pot. This option stays in potter's world but changes the link — an oven is what a potter fires the work in — and being in the same world is not the same as being joined the same way.",
+     "after": "The first pair sets the relation: a baker is the worker and bread is what he makes. Used on potter, that gives vase. This option stays in potter's world but changes the link. An oven is what a potter fires the work in. Being in the same world is not the same as being joined the same way."
+    },
+    {
+     "field": "option gen-vr-10-word-connections-09-opt3 (gen-vr-10-word-connections-09-opt3).execution",
+     "before": "The first pair sets the relation: a baker is the worker and bread is what he makes. Used on potter, that gives pot. This option stays in potter's world but changes the link — clay is what a potter starts from — and being in the same world is not the same as being joined the same way.",
+     "after": "The first pair sets the relation: a baker is the worker and bread is what he makes. Used on potter, that gives vase. This option stays in potter's world but changes the link. Clay is what a potter starts from. Being in the same world is not the same as being joined the same way."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-23",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "rain:wet :: sun:dry. The key is unique; wet is returned from the first pair and yellow is same-topic; both are wrong. The walk fits the card and states the key; the vocabulary is suitable.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Take the pair rain and wet. Rain makes things wet, its own work. Rain brings wet; the sun brings dry. Hot and yellow go with sun, not its work.",
+     "after": "Take the pair rain and wet. Rain leaves things wet. The sun leaves things dry, so dry is the answer. Wet belongs to the first pair, and yellow is only the colour of the sun."
+    },
+    {
+     "field": "explanation.walkScriptStatus",
+     "before": "APPROVED — her 146th (4a0d56c98e58fcea)",
+     "after": "DRAFT"
+    },
+    {
+     "field": "explanation.walkScriptApprovedBy",
+     "before": "reviewer:rev-0001",
+     "after": null
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Take the pair rain and wet. Rain makes things wet, its own work. Rain brings wet; the sun brings dry. Hot and yellow go with sun, not its work."
+    },
+    {
+     "field": "explanation._previousWalkScriptApprovedBy",
+     "before": null,
+     "after": "reviewer:rev-0001"
+    },
+    {
+     "field": "explanation._previousWalkScriptStatus",
+     "before": null,
+     "after": "APPROVED — her 146th (4a0d56c98e58fcea)"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-02",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One error in one natural sentence, at D (excellant). Every other word is correct; No mistake is wrong; the walk names the fourth part; the hint is position-free.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at the first part, at “excellant”. We write “excellence” with -ence, and -ence goes with -ent. So an e goes where the a is. The three later parts hold.",
+     "after": "Look at the fourth part, at “excellant”. We write “excellence” with -ence, and -ence goes with -ent. So an e goes where the a is, and the fourth part has the mistake. The three earlier parts hold."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Look at the first part, at “excellant”. We write “excellence” with -ence, and -ence goes with -ent. So an e goes where the a is. The three later parts hold."
+    },
+    {
+     "field": "option A (ENG-003-A-SP-02-OPT-A).value",
+     "before": "Ravi gave an excellant answer,",
+     "after": "With a confident smile,"
+    },
+    {
+     "field": "option A (ENG-003-A-SP-02-OPT-A).isKey",
+     "before": true,
+     "after": false
+    },
+    {
+     "field": "option A (ENG-003-A-SP-02-OPT-A).tag",
+     "before": null,
+     "after": "en-unstressed-suffix-vowel"
+    },
+    {
+     "field": "option A (ENG-003-A-SP-02-OPT-A).execution",
+     "before": null,
+     "after": "“Confident” is right: it ends -ent, like “confidence”. A child guessing between -ant and -ent may blame it. The mistake is “excellant”, in the fourth part."
+    },
+    {
+     "field": "option B (ENG-003-A-SP-02-OPT-B).value",
+     "before": "thanked the assistant kindly,",
+     "after": "Ravi thanked the assistant"
+    },
+    {
+     "field": "option B (ENG-003-A-SP-02-OPT-B).execution",
+     "before": null,
+     "after": "“Assistant” is right: it ends -ant, like “assistance”. A child guessing between -ant and -ent may blame it. The mistake is “excellant”, in the fourth part."
+    },
+    {
+     "field": "option C (ENG-003-A-SP-02-OPT-C).value",
+     "before": "then slipped back to his seat",
+     "after": "and slipped back to his seat"
+    },
+    {
+     "field": "option C (ENG-003-A-SP-02-OPT-C).execution",
+     "before": null,
+     "after": "“Slipped” is right: “slip” has a short vowel and one p, so the p doubles before -ed. A child unsure about doubling may blame it. The mistake is “excellant”, in the fourth part."
+    },
+    {
+     "field": "option D (ENG-003-A-SP-02-OPT-D).value",
+     "before": "with a confident smile.",
+     "after": "after giving an excellant answer."
+    },
+    {
+     "field": "option D (ENG-003-A-SP-02-OPT-D).isKey",
+     "before": false,
+     "after": true
+    },
+    {
+     "field": "option D (ENG-003-A-SP-02-OPT-D).tag",
+     "before": "en-unstressed-suffix-vowel",
+     "after": null
+    },
+    {
+     "field": "option N (ENG-003-A-SP-02-OPT-N).execution",
+     "before": null,
+     "after": "Choosing No mistake misses “excellant”: it goes with “excellence”, so it ends -ent, excellent. The fourth part has the mistake."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-05",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One error in one natural sentence, at C (begining). Every other word is correct; No mistake is wrong; the walk names the third part; the hint is position-free.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read the first part again, at “begining”. “Begin” ends in a short vowel and one n. Adding -ing doubles that n: beginning. The three later parts hold.",
+     "after": "Read the third part again, at “begining”. “Begin” ends in a short vowel and one n. Adding -ing doubles that n: beginning. So the third part has the mistake. The other three parts hold."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Read the first part again, at “begining”. “Begin” ends in a short vowel and one n. Adding -ing doubles that n: beginning. The three later parts hold."
+    },
+    {
+     "field": "option A (ENG-003-A-SP-05-OPT-A).value",
+     "before": "At the begining of term,",
+     "after": "Toby was allowed to borrow"
+    },
+    {
+     "field": "option A (ENG-003-A-SP-05-OPT-A).isKey",
+     "before": true,
+     "after": false
+    },
+    {
+     "field": "option A (ENG-003-A-SP-05-OPT-A).tag",
+     "before": null,
+     "after": "en-homophone-by-sound"
+    },
+    {
+     "field": "option A (ENG-003-A-SP-05-OPT-A).execution",
+     "before": null,
+     "after": "“Allowed” is right: it means let. It sounds the same as “aloud”, so a child may swap the pair. The mistake is “begining”, in the third part."
+    },
+    {
+     "field": "option B (ENG-003-A-SP-05-OPT-B).value",
+     "before": "Toby was allowed to borrow",
+     "after": "the good scissors"
+    },
+    {
+     "field": "option B (ENG-003-A-SP-05-OPT-B).tag",
+     "before": "en-homophone-by-sound",
+     "after": "en-silent-letter-dropped"
+    },
+    {
+     "field": "option B (ENG-003-A-SP-05-OPT-B).execution",
+     "before": null,
+     "after": "“Scissors” is right, with its silent c after the first s. A child who drops silent letters may think it looks odd. The mistake is “begining”, in the third part."
+    },
+    {
+     "field": "option C (ENG-003-A-SP-05-OPT-C).value",
+     "before": "the good scissors,",
+     "after": "at the begining of term,"
+    },
+    {
+     "field": "option C (ENG-003-A-SP-05-OPT-C).isKey",
+     "before": false,
+     "after": true
+    },
+    {
+     "field": "option C (ENG-003-A-SP-05-OPT-C).tag",
+     "before": "en-silent-letter-dropped",
+     "after": null
+    },
+    {
+     "field": "option D (ENG-003-A-SP-05-OPT-D).execution",
+     "before": null,
+     "after": "“Stopped” is right: “stop” has a short vowel and one p, so the p doubles before -ed. “Office” and “staff” keep their double letters too. The mistake is “begining”, in the third part."
+    },
+    {
+     "field": "option N (ENG-003-A-SP-05-OPT-N).execution",
+     "before": null,
+     "after": "Choosing No mistake misses “begining”: “begin” ends in a short vowel and one n, so the n doubles before -ing, beginning. The third part has the mistake."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-SP-06",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One error in one natural sentence, at C (dictionery). Every other word is correct; No mistake is wrong; the walk names the third part; the hint is position-free.",
+   "landedAt": "2026-11-22T21:13:16.070Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "The first part holds “dictionery”. “Dictionary” ends -ary, in the same way as “library”. Here an e sits where the a belongs. The three later parts hold.",
+     "after": "The third part holds “dictionery”. “Dictionary” ends -ary, in the same way as “library”. Here an e sits where the a belongs, so the third part has the mistake. The other three parts hold."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "The first part holds “dictionery”. “Dictionary” ends -ary, in the same way as “library”. Here an e sits where the a belongs. The three later parts hold."
+    },
+    {
+     "field": "option A (ENG-003-A-SP-06-OPT-A).value",
+     "before": "The librarian showed us the new dictionery,",
+     "after": "The librarian explained the difference"
+    },
+    {
+     "field": "option A (ENG-003-A-SP-06-OPT-A).isKey",
+     "before": true,
+     "after": false
+    },
+    {
+     "field": "option A (ENG-003-A-SP-06-OPT-A).tag",
+     "before": null,
+     "after": "en-unstressed-suffix-vowel"
+    },
+    {
+     "field": "option A (ENG-003-A-SP-06-OPT-A).execution",
+     "before": null,
+     "after": "“Difference” is right: it ends -ence, like “different” ends -ent. A child guessing between -ance and -ence may blame it. The mistake is “dictionery”, in the third part."
+    },
+    {
+     "field": "option B (ENG-003-A-SP-06-OPT-B).value",
+     "before": "explained the difference",
+     "after": "between the science and history shelves,"
+    },
+    {
+     "field": "option B (ENG-003-A-SP-06-OPT-B).tag",
+     "before": "en-unstressed-suffix-vowel",
+     "after": "en-silent-letter-dropped"
+    },
+    {
+     "field": "option B (ENG-003-A-SP-06-OPT-B).execution",
+     "before": null,
+     "after": "“Science” is right, with its silent c after the s. A child who drops silent letters may think it looks odd. The mistake is “dictionery”, in the third part."
+    },
+    {
+     "field": "option C (ENG-003-A-SP-06-OPT-C).value",
+     "before": "between the science and history shelves,",
+     "after": "showed us the new dictionery"
+    },
+    {
+     "field": "option C (ENG-003-A-SP-06-OPT-C).isKey",
+     "before": false,
+     "after": true
+    },
+    {
+     "field": "option C (ENG-003-A-SP-06-OPT-C).tag",
+     "before": "en-silent-letter-dropped",
+     "after": null
+    },
+    {
+     "field": "option D (ENG-003-A-SP-06-OPT-D).execution",
+     "before": null,
+     "after": "“Temporary” is right: it ends -ary. A child guessing between -ary, -ory and -ery may blame it. The mistake is “dictionery”, in the third part."
+    },
+    {
+     "field": "option N (ENG-003-A-SP-06-OPT-N).execution",
+     "before": null,
+     "after": "Choosing No mistake misses “dictionery”: it ends -ary, like “library”, so it is dictionary. The third part has the mistake."
+    }
+   ]
+  }
+ ]
+}

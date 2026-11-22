@@ -1,0 +1,113 @@
+{
+  "door": "ci-fix/content-01",
+  "reviewer": "rev-agent-01",
+  "round": 1,
+  "precheck": "Run by the reviewer from packages/db with --precheck --from-live: 15 rows touched, 15 pass every gate, 0 fail. A gate pass is not taken as a reason to attest.",
+  "changes": [
+    {
+      "ref": "rebuild:MC04-CALC-08",
+      "verdict": "ATTEST",
+      "reason": "Stem split checked: 5/10/8/6 words, every number (4,120; 18; 145; 320) and the question unchanged. I recomputed 18 x 145 = 2,610, plus 320 = 2,930, and 4,120 - 2,930 = 1,190, which is the key. 1,510 = 4,120 - 2,610, so the 320 is never used (maths-71, 'a number the question gives is never used'). 2,930 is the sold total, a step before the last one (maths-proc-01). 2,810: taking the smaller digit from the larger in each column of 4,120 - 2,930 gives 0, 1, 8, 2, so 2,810 (maths-11). Every execution's numbers are on the row and correct."
+    },
+    {
+      "ref": "rebuild:MC05-CALC-08",
+      "verdict": "REFUSE",
+      "reason": "The stem split is right (5/11/8/6 words, numbers and question unchanged), and so are the key and the values: 16 x 120 = 1,920, plus 275 = 2,195, and 3,150 - 2,195 = 955; 1,230 = 3,150 - 1,920; smaller-from-larger in each column gives 1,045. But the maths-11 execution for 1,045 contradicts itself. It says 'taking the smaller digit from the larger in each column (5 from 0 gives 5, 9 from 5 gives 4, ...)'. Smaller from larger is 0 from 5 and 5 from 9. As written, the brackets take the larger from the smaller, and they state false arithmetic. Fix: '(0 from 5 gives 5, 5 from 9 gives 4, 1 - 1 = 0, 3 - 2 = 1)', or the MC04 form '(5-0, 9-5, 1-1, 3-2)'. Minor, also worth fixing in round 2: the 1,230 execution says 'All the seats sold make 2,195', but on the stem 1,920 of those seats are 'booked online', not sold. 'All the seats taken' would match the row."
+    },
+    {
+      "ref": "rebuild:MC05-STATS-01",
+      "verdict": "ATTEST",
+      "reason": "Stem split checked: 5/14/14 words, all four team values and the question unchanged. Green + Red = 14 + 10 = 24 and Blue + Yellow = 9 + 8 = 17, so the key is 24 - 17 = 7. 15 = 24 - 9, which leaves Yellow's 8 out of a total (maths-94). 4 is the number of teams, which is exactly the library definition of maths-95 ('counting the number of categories instead of the data values'). 13: smaller from larger in each column of 24 - 17 gives 3 and 1, so 13 (maths-11). The execution brackets (7 - 4 = 3, 2 - 1 = 1) are consistent."
+    },
+    {
+      "ref": "rebuild:gen-vr-10-word-connections-11",
+      "verdict": "ATTEST",
+      "reason": "The new walk names only words on the card or stem (puddle, small, lake, large, water, little), states the key ('so large is the answer') and explains both distractors correctly. Its sentences are 6/9/9/9/7 words. Clearing walkScriptApprovedBy is mandatory: the lander's R94 marker gate refuses a rewritten walk that keeps it. Moving walkScriptStatus to DRAFT is the honest record, and nothing reads that field to decide serving (staff disposition; serving is decided by WALK_APPROVED_ITEM_IDS, which does not hold this id). The options are unchanged. Pre-existing, outside this change and outside the signed projection: opt3 'little' carries vr03-same-topic, but 'little' is a synonym of the first pair's own answer 'small'. Its execution ('little is a size word, and a lake is being talked about by size') concedes the link instead of naming the mistake. Recommend a retag/redraft in a later door."
+    },
+    {
+      "ref": "rebuild:gen-vr-10-word-connections-17",
+      "verdict": "ATTEST",
+      "reason": "The new walk names only card or stem words (day, sun, night, moon, owl, sleep), states the key ('so moon is the answer') and says why owl and sleep miss: they go with night but give no light. Its sentences are 6/6/11/12 words. Clearing the approval marker and moving the status to DRAFT is correct, for the same reasons as -11. moon is the only option that gives light at night."
+    },
+    {
+      "ref": "rebuild:gen-vr-10-word-connections-23",
+      "verdict": "ATTEST",
+      "reason": "The new walk names only dry, wet, yellow, rain and sun, states the key ('so dry is the answer') and accounts for both distractors: wet is returned from the first pair, and yellow is only the sun's colour. Its sentences are 6/4/10/15 words. Clearing the marker and moving the status to DRAFT is correct. Pre-existing and staff-facing: the wet execution is a lowercase fragment ('the first pair's second word, wet, returned unchanged.'). Worth a redraft later; it does not affect this change."
+    },
+    {
+      "ref": "rebuild:gen-vr-03-related-words-10",
+      "verdict": "ATTEST",
+      "reason": "Key 'pot' -> 'jug'. I ran screenForAChild myself: pot FLAG-NEEDS-A-SENSE; jug, oven and handle all PASS. A potter makes jugs as a baker makes bread, and jug is the only option completing that relation. The tags still fit the new key. oven (vr03-example-anchor) belongs to the first pair, which is that entry's definition. handle (vr03-part-for-kind) is part of a jug, not the whole thing made. Both new executions are correct and name only words on the row. The optionIds are the same. Drafter extra 3, the second stale walk, is judged right and necessary. The stored walk belonged to another item (rain/wet/sun/dry/hot/yellow: no word on this card, and a key this row does not have), and landing a new key under it would have shipped a walk for a different question. The new walk names baker, bread, potter, jug, oven and handle, states the key, and runs 5/7/9/15 words. Finding for the gate: check:db-content did not flag this walk because wordOptionsNamedNotOnCard fires only on an 'X and Y' pair where exactly ONE side is a real option. A walk wholly about another item ('hot and yellow', neither on the card) is invisible to it."
+    },
+    {
+      "ref": "rebuild:gen-vr-10-word-connections-09",
+      "verdict": "ATTEST",
+      "reason": "Key 'pot' -> 'vase'; I ran screenForAChild myself and vase, oven and clay all PASS. A potter makes vases as a baker makes bread, and vase is the only option completing it. The executions were rewritten for the new key, and the dashes are split into full stops. Their content is right: clay is what a potter starts from, and an oven (a kiln is an oven for firing pottery) is where the work is fired. Both are same-topic words without the maker->made relation (vr03-same-topic). The walk names baker, bread, potter, vases, oven and clay, states the key ('so vase is the answer'), and runs 5/7/12/12 words. Clearing the marker and moving the status to DRAFT is correct: the old 'AMENDED-AND-APPROVED' marker covered the pot text."
+    },
+    {
+      "ref": "rebuild:ENG-003-A-PU-01",
+      "verdict": "ATTEST",
+      "reason": "Every segment checked. 'Sam checked Mrs Patel's list, counted the bags on the trolley, collected the boys coats, then locked the two teachers' cupboards.' joins as one natural 21-word sentence, the same length as before. Exactly one error: 'boys coats' should be boys' coats. Mrs Patel's (one owner) and teachers' (two owners) are right; bags is a plain plural; the list commas are right. All distractor tags are en-apostrophe-possession, which fits what a child choosing each would be thinking: doubting a correct possessive (A, D), or wanting a mark on a plain plural (B). No mistake misses the possessive. The walk names the third part, states it has the mistake and clears the other three. The hint names no position. The executions are correct."
+    },
+    {
+      "ref": "rebuild:ENG-003-A-PU-03",
+      "verdict": "REFUSE",
+      "reason": "Mechanically sound: exactly one error ('it's fur' should be its fur), and the correct 'its hutch', 'Mr Bhatt's towel' and 'today's date' are all error-free. The tags fit (en-apostrophe-possession covers its/it's by its own definition), the walk names the second part and states the key, and No mistake is wrong. But the rewrite took the sentence the child reads from 19 words to 30: 'Ella lifted the rabbit out of its hutch, but it's fur was still damp, so she dried it gently with Mr Bhatt's towel and wrote today's date on the chart.' That is six words longer than any other sentence in either bank (range 17 to 24), with four chained clauses, for a 9-to-11 reader. The 'but' also gives a weak contrast: nothing about lifting the rabbit out sets up an expectation that it is dry. The segment gate reads each option separately, so it cannot see the whole sentence. The fault is fixable without the length, for example 'Ella checked the rabbit, / but it's fur was still damp, / so she dried it with Mr Bhatt's towel / and wrote today's date.' (19 words, error in B, every other part correct). Rebuild it and resubmit."
+    },
+    {
+      "ref": "rebuild:ENG-003-A-PU-05",
+      "verdict": "ATTEST",
+      "reason": "Every segment checked. 'Miss Reid checked the caretaker's office, found the keys in the drawer, hung the childrens' coats on the pegs and unlocked the hall doors.' is one natural sentence, 24 words, down from 26. Exactly one error: childrens' should be children's. caretaker's (one owner) is right; keys and hall doors take no mark; list punctuation is right with no serial comma. The tags fit: doubting a correct possessive (A), wanting a mark on a plural (B) or on a noun used as a describer (D), and missing the error (N). The walk names the third part, states it has the mistake and clears the others. The executions are correct."
+    },
+    {
+      "ref": "rebuild:ENG-003-A-SP-01",
+      "verdict": "ATTEST",
+      "reason": "Every segment checked. 'Beside the quiet library door, the twins left there lunch boxes, then walked past the office and hurried to the netball court.' is one natural 22-word sentence, unchanged in length. The capital moved correctly to the new first segment. Exactly one error: there should be their. quiet, library, past, hurried, netball and court are all correct. The tags fit: quiet/quite lookalike (A), past/passed homophone (C), hurried double r (D), and a homophone missed (N). The walk names the second part and states it has the mistake. The executions are correct."
+    },
+    {
+      "ref": "rebuild:ENG-003-A-SP-02",
+      "verdict": "ATTEST",
+      "reason": "Every segment checked. 'With a confident smile, Ravi thanked the assistant and slipped back to his seat after giving an excellant answer.' is one natural 19-word sentence, unchanged in length. Exactly one error: excellant should be excellent. confident, assistant and slipped are correct. The tags fit: -ent/-ant doubt on confident (A) and on assistant (B), doubling doubt on slipped (C), and the suffix vowel missed (N). The walk names the fourth part, states the key with the -ence/-ent reasoning, and clears the three earlier parts. The executions are correct."
+    },
+    {
+      "ref": "rebuild:ENG-003-A-SP-05",
+      "verdict": "ATTEST",
+      "reason": "Every segment checked. 'Toby was allowed to borrow the good scissors at the begining of term, and he stopped to thank the office staff.' is one natural 21-word sentence, unchanged in length. The stray comma after 'scissors' was correctly dropped. Exactly one error: begining should be beginning. allowed, scissors, stopped, office and staff are correct. The tags fit: allowed/aloud (A), the silent c in scissors (B), doubling on stopped (D), and doubling missed (N). The walk names the third part and states it has the mistake. The executions are correct."
+    },
+    {
+      "ref": "rebuild:ENG-003-A-SP-06",
+      "verdict": "ATTEST",
+      "reason": "Every segment checked. 'The librarian explained the difference between the science and history shelves, showed us the new dictionery and gave everyone a temporary pass.' is one natural 22-word sentence, unchanged in length. Exactly one error: dictionery should be dictionary. librarian, difference, science, history, shelves and temporary are correct. The tags fit: -ence doubt (A), the silent c in science (B), -ary doubt on temporary (D), and -ary missed (N). The walk names the third part and states it has the mistake. stem.correctionOf is unchanged. The executions are correct."
+    }
+  ],
+  "rows": [
+    { "itemId": "MC04-CALC-08", "verdict": "SIGN", "reason": "I read the row as the child meets it. It is answerable; I recomputed the key 1,190 as the only correct value; all three distractors are wrong; the walk is unchanged and correct. Note, not a hold: the key is the smallest option, which is structural to 'how many are left' problems." },
+    { "itemId": "MC05-CALC-08", "verdict": "HOLD", "reason": "Its only change is REFUSED: the maths-11 execution for 1,045 reverses the column subtraction it describes ('5 from 0 gives 5, 9 from 5 gives 4' under 'smaller from larger'). A row lands all or nothing. What the child sees is otherwise sound: key 955 recomputed and unique, every sentence 16 words or fewer." },
+    { "itemId": "MC05-STATS-01", "verdict": "SIGN", "reason": "Answerable from the stem's values. I recomputed the key 7 as unique; 15, 4 and 13 are all wrong; every sentence is 16 words or fewer; the walk is unchanged and correct." },
+    { "itemId": "gen-vr-10-word-connections-11", "verdict": "SIGN", "reason": "puddle:small :: lake:large. large is the only correct option; water and little are wrong; the walk now fits the card and states the key; all words are known to 9-11s. The opt3 tag misfit noted on the change is staff-facing and pre-existing." },
+    { "itemId": "gen-vr-10-word-connections-17", "verdict": "SIGN", "reason": "day:sun :: night:moon. The key is unique; owl and sleep are same-topic distractors and wrong; the walk fits the card and states the key; the vocabulary is suitable." },
+    { "itemId": "gen-vr-10-word-connections-23", "verdict": "SIGN", "reason": "rain:wet :: sun:dry. The key is unique; wet is returned from the first pair and yellow is same-topic; both are wrong. The walk fits the card and states the key; the vocabulary is suitable." },
+    { "itemId": "gen-vr-03-related-words-10", "verdict": "SIGN", "reason": "baker:bread :: potter:jug. jug is unflagged (screened), and it is the only maker->made answer; oven and handle are wrong. The walk is now this item's own and states the key. No pattern gives the key away." },
+    { "itemId": "gen-vr-10-word-connections-09", "verdict": "SIGN", "reason": "baker:bread :: potter:vase. vase is unflagged (screened) and the only maker->made answer; oven and clay are wrong. The walk fits the card and states the key; the vocabulary is suitable." },
+    { "itemId": "ENG-003-A-PU-01", "verdict": "SIGN", "reason": "One error in one natural sentence, at C. Every other segment is correct; No mistake is wrong; the walk names the third part; the hint is position-free. The bank position counts were recomputed from the live store." },
+    { "itemId": "ENG-003-A-PU-03", "verdict": "HOLD", "reason": "Its only change is REFUSED. The rewritten sentence is 30 words, up from 19 and six longer than any other in either SPaG bank, with a weak 'but'. Holding it leaves en-spag-punct-spot at A3 B1 C2 D2 N1, so check:option-positions still fails on that bank until a round-2 rebuild lands the error in B." },
+    { "itemId": "ENG-003-A-PU-05", "verdict": "SIGN", "reason": "One error in one natural sentence, at C. caretaker's, keys and hall doors are correct; No mistake is wrong; the walk names the third part; the hint is position-free." },
+    { "itemId": "ENG-003-A-SP-01", "verdict": "SIGN", "reason": "One error in one natural sentence, at B (there/their). Every other word is correctly spelt; No mistake is wrong; the walk names the second part; the hint is position-free." },
+    { "itemId": "ENG-003-A-SP-02", "verdict": "SIGN", "reason": "One error in one natural sentence, at D (excellant). Every other word is correct; No mistake is wrong; the walk names the fourth part; the hint is position-free." },
+    { "itemId": "ENG-003-A-SP-05", "verdict": "SIGN", "reason": "One error in one natural sentence, at C (begining). Every other word is correct; No mistake is wrong; the walk names the third part; the hint is position-free." },
+    { "itemId": "ENG-003-A-SP-06", "verdict": "SIGN", "reason": "One error in one natural sentence, at C (dictionery). Every other word is correct; No mistake is wrong; the walk names the third part; the hint is position-free." }
+  ],
+  "drafterExtras": [
+    { "extra": "Executions written for distractors that had none", "judgement": "RIGHT AND NECESSARY", "reason": "The lander refuses any distractor without an execution of at least 40 characters, so the rebuilds could not land without them. Executions are staff-facing and outside the signed projection. I checked every one. All are correct except the MC05-CALC-08 1,045 execution, refused above." },
+    { "extra": "walkScriptStatus APPROVED -> DRAFT, old value under _previousWalkScriptStatus", "judgement": "RIGHT", "reason": "The old status recorded a person's approval ('her 146th', reviewer:rev-0001) of text that no longer exists, so keeping it would put her approval on agent-written words (R94). The lander already requires walkScriptApprovedBy to be cleared. The status field is a staff record: nothing reads it to decide serving, which is WALK_APPROVED_ITEM_IDS (ENG ids only). So the reset changes the record and not what a child meets, and the prior value is kept." },
+    { "extra": "Second stale walk rewritten on gen-vr-03-related-words-10", "judgement": "RIGHT AND NECESSARY", "reason": "The stored walk belonged to another item and named no word on this card. A key change without it would have landed a walk for a different question. The gate missed it because wordOptionsNamedNotOnCard needs exactly one side of an 'X and Y' pair to be a real option, so a wholly foreign walk passes." }
+  ],
+  "positionCounts": {
+    "method": "Keys read from the live store for all 9 LIVE items per type, with this door's proposed keys applied.",
+    "enSpagPunctSpotIfAllProposalsLand": "A2 (PU-06, PU-08) B2 (PU-03, PU-04) C2 (PU-01, PU-05) D2 (PU-02, PU-07) N1 (PU-09) - matches the drafter's claim",
+    "enSpagSpellingSpotIfAllProposalsLand": "A2 (SP-03, SP-08) B2 (SP-01, SP-04) C2 (SP-05, SP-06) D1 (SP-02) N2 (SP-07, SP-09) - matches the drafter's claim",
+    "enSpagPunctSpotWithThisReview": "A3 B1 C2 D2 N1 - PU-03 held, so this bank still fails the 2-of-9 cap until round 2",
+    "enSpagSpellingSpotWithThisReview": "A2 B2 C2 D1 N2 - passes"
+  },
+  "counts": { "changes": 15, "attest": 13, "refuse": 2, "rows": 15, "sign": 13, "hold": 2 }
+}

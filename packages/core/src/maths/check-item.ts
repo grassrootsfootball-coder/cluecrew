@@ -21,6 +21,7 @@ import {
   evalArithmetic,
   mathsEntryNumber,
 } from './executors';
+import { optionNumericValue } from '../solution';
 
 export interface MathsDistractor {
   value: string | number;
@@ -59,6 +60,18 @@ export interface MathsFailure {
   severity: 'defect' | 'report';
 }
 
+/**
+ * THE KEY IS READ BY THE SAME FUNCTION `verify:solutions` USES (R1040). This compared with
+ * `answersEqual`, a second definition of an answer's value that cannot read "22 cm", "55°" or "3/5",
+ * so when the 177 maths expressions landed it failed 54 rows the solution gate had just verified —
+ * two doors comparing separately, drifting on their first real population (R42). A key that is not
+ * a single number (a clock time, a coordinate) falls back to the text comparison.
+ */
+function keyMatches(computed: number, keyValue: string | number): boolean {
+  const key = optionNumericValue({ value: keyValue });
+  return key !== null ? Math.abs(computed - key) < 1e-9 : answersEqual(computed, keyValue);
+}
+
 export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
   const failures: MathsFailure[] = [];
 
@@ -67,7 +80,7 @@ export function checkMathsItem(spec: MathsItemSpec): MathsFailure[] {
     const computed = evalArithmetic(spec.solution);
     if (computed === null) {
       failures.push({ itemId: spec.id, rule: 'key-mismatch', severity: 'report', detail: `solution "${spec.solution}" could not be evaluated` });
-    } else if (!answersEqual(computed, spec.keyValue)) {
+    } else if (!keyMatches(computed, spec.keyValue)) {
       failures.push({ itemId: spec.id, rule: 'key-mismatch', severity: 'defect', detail: `solution "${spec.solution}" computes ${computed}, but the key is "${spec.keyValue}"` });
     }
   }

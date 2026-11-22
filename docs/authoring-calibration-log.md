@@ -29599,3 +29599,113 @@ diff this choice gives up.
   - If the key is lost, the file cannot be read. The dev database is the source, so re-export with a
     new key and reset the secret.
   - Each content change adds about 1.3 MB to the git history.
+
+## R1040 — the seven checks CI could finally see (David: "Fix the 7 new failures", 2026-11-22)
+
+Loading the real store (R1039) turned seven CI steps red for the first time. Each one is now
+resolved. Three were instrument faults, three were content, and one needed a ruling. Two of the
+rulings below are David's own words.
+
+**1. GENERATE: the generator overwrote approved library text on every run.** `generate-content.ts`
+upserted its own July copy of 45 VR library entries, both `description` and `childHint`, each time
+it ran. On 2026-11-22, 30 of those 45 differed from the store, and every one was approved, by Annie
+or by rev-agent-01. The only reason no approved hint was ever lost is that the generator had not
+run against dev since those approvals. The first CI run that tried it replaced three entries before
+R213's no-cut guard stopped it on the fourth. That guard catches cuts only, so a longer old wording
+would have gone in silently. **Fixed:** the generator now creates missing entries and never updates
+existing ones (`update: {}`). The DB authors library text (R1034).
+
+**2. SEED: the free-tier floor and the Maths case.** RULING (David): **"Keep Maths paid."**
+`case-maths-01` is the only Maths case and was built paid. The floor of two free cases per district
+(capped at the number of cases) would have made it free, giving away the whole district. The seed
+had refused against the real store since 2026-08-29, and nobody had run it. **Fixed:** MATHS is
+added to `FLOOR_EXEMPT_DISTRICTS` with the reason, and the exemption is printed on every seed run.
+Revisit it when Maths has a second case.
+
+**3. check:db-content: 15 SERVING faults → 0.**
+- **Instrument (7):**
+  - The check never passed the reviewer's clearance record to the gate, unlike publish-door,
+    gate-baseline and check-gate-silence. That left two positions cleared under R1005 failing for
+    ever.
+  - It gated the two case doorplates as `narrative`, when R689 moved them to `doorplate` (no word
+    cap). The role is now chosen from the fact that a record exists at
+    `content/case-faces/<id>.json`.
+  - Before 15 faults, after 8, and the diff by name is exactly those 7 rows (R149).
+- **Content (8), landed through `ci-fix/content-01` and its round 2:**
+  - three maths stems over the 16-word cap, each split in two;
+  - three vr-10 walk scripts naming words not on the card;
+  - two VR rows whose KEY was "pot". A flagged key routes every time (R1005), so the keys became
+    "jug" and "vase".
+  - The drafter also found a walk on gen-vr-03-related-words-10 written for a different item. The
+    gate's `wordOptionsNamedNotOnCard` cannot see a walk that is entirely about another item. That is
+    an open instrument gap.
+
+**4. check:every-string-field: 20 undeclared paths (R720).** The 153 punctuation notes are
+staff-field reports and never failed the check; only the undeclared paths did. Each path was
+declared from a fact:
+- child: `stem.code.A/I/T` (the vr-19 card), `stem.wordWithGap` (rendered by plain-item and
+  stowaway), and `options[].content.value[]` (vr-02 pairs). These are notation-bearing.
+- staff: `banListException.*` and `sendHistory.*`. No file under apps/web or packages/ui names
+  either root.
+
+**5. check:option-positions: two unshuffled banks.** en-spag-punct-spot (A held 56%) and
+en-spag-spelling-spot (A held 67%) serve their segments in order, so the position IS where the error
+sits. Seven items were rebuilt to move the error. One round-2 rebuild was held, a 30-word sentence
+cut to 23. Both banks now read A2 B2 C2 D2 N1 and A2 B2 C2 D1 N2.
+
+**6. verify:solutions: 187 of 187.** RULING (David): **"Add them, reviewed."** The Maths district
+went LIVE without the `solution` expression its spec requires (BUILD-DISTRICT-MATHS §5). R61's
+declaration said "remove this the moment a maths item reaches the database"; 187 did on 2026-08-29,
+and the declaration stood for three months because CI could not see them.
+- **Blind drafting.** The drafter saw the question text and the key's UNIT, never its value.
+- **Result:** 177 expressions matched their keys and 10 keys are not a single number (6
+  coordinates, 3 clock times or durations, 1 named choice). rev-agent-01 attested all 187 after
+  reading every row. The 177 have landed (`land-solutions.ts`, which writes `solution` only). The 10
+  are declared in `content/maths-noncomputable-keys.json`, and the gate prints them on every run and
+  fails if one ever reads as a number. The gate now uses requirePopulation.
+- **ZERO MISMATCHES WAS INVESTIGATED, NOT ACCEPTED (R173).** A key check cannot see a wrong answer
+  that EQUALS the key. Screening every option against the computed value found one:
+  - **MC05-MEAS-03 offered "£4.30" and "£4.3".** The tag `maths-31` (writing £3.5 for £3.50) puts
+    the slip in the ANSWER there, so that option was a second correct answer. On its other carrier,
+    MC04-MEAS-04, the slip sits in the working and gives a genuinely different amount.
+  - The fix went through two review rounds. Round 1 was refused: a stale tag on C, and a
+    £3.30/£4.30/£5.30 run with the key in the middle. Round 2: £13.30 (maths-13) and C retagged
+    maths-69.
+- **THE PARSER MISREAD THREE KEY SHAPES.** `optionNumericValue` read "5/8" as 5, "4:15 pm" as 4 and
+  "1 h 30 min" as 1, the leading digits every time. A fraction key would have matched any expression
+  computing its numerator. It now reads fractions and mixed numbers by value and refuses times,
+  coordinates and two-quantity values. The stale-declaration guard caught the last of these on its
+  first run.
+- **REPLAYS STAY OFF.** The worked-example replay on a miss is built from this same expression and
+  prints the raw trace, for example "18 * 145 makes 2610.", with no £, no commas, fractions as
+  decimals, and an em dash in its template. None of that passes a gate. No child had ever seen it
+  only because nothing had an expression. `orchestrator.ts` now replays only when an item's
+  explanation NAMES a template, which no item does yet. Fixing the replay text is its own task.
+
+**7. check:register:** this entry.
+
+**Also:**
+- The three agent-review landers (land-proposals, publish-door, land-library) and land-solutions now
+  re-export the content snapshot as their final `--apply` step.
+- Noted, not fixed:
+  - MC04-NPV-06 and MC05-NPV-06 are temperature answers given as bare numbers with a hyphen for the
+    minus sign, which breaks house notation; the notation gate does not see it.
+  - gen-vr-10-word-connections-11's "little" carries the tag vr03-same-topic, but it is a synonym of
+    the first pair's answer.
+
+**Second CI pass: two more things the real store exposed.**
+- **The generator no longer describes 13 VR types.** Once the library overwrite was fixed,
+  `content:generate` reached its item loop. There the reviewed-content guard (R62) refused 22 vr-03
+  rows. Measured across all 19 generated types, the derivation would revert **292 reviewed LIVE
+  rows** in 13 types and writes 0 rows anywhere. Those rows were rewritten by rulings (R1035–R1037
+  and this entry), and the July tables were never updated. Those 13 types join `BANK_OWNED_TYPES`,
+  which the generator and `check:generator-agreement` both read. The 6 types where the derivation
+  still reproduces every stored row (vr-01, 07, 09, 12, 14, 15) stay generator-owned, so a code
+  change there still fails on the guard. The guard itself is unchanged.
+- **A second key comparison.** `check:maths-distractors` compared expressions with keys through
+  `answersEqual`, which cannot read "22 cm", "55°" or "3/5". On its first real population it failed
+  54 rows that `verify:solutions` had just verified. `checkMathsItem` now reads the key with
+  `optionNumericValue`, the same function `verify:solutions` uses, and falls back to the text
+  comparison only for a key that is not one number. Baselined before the edit (R149): 54 rows
+  removed, 0 added, every report unchanged.
+- **`solution` declared `staff`** in FIELD_DISPOSITIONS. It is not rendered while replays are opt-in.

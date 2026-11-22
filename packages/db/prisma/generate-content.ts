@@ -1333,6 +1333,18 @@ function completeTheWord(): GenItem[] {
 export const BANK_OWNED_TYPES = new Set([
   'vr-02-two-odd-ones-out',
   'vr-06-missing-word',
+  // R1040 (2026-11-22). The DB authors content (R1034), and reviewed rulings have rewritten these
+  // types in the store since this file's tables were written: measured, the generator would revert
+  // 292 reviewed LIVE rows across these thirteen (vr-03 22, vr-04 22, vr-05 25, vr-08 17, vr-10 1,
+  // vr-11 6, vr-13 25, vr-16 24, vr-17..vr-21 25 each) and writes 0 rows anywhere. The reviewed-
+  // content guard refused every one, correctly. The generator no longer describes these banks, so
+  // it no longer claims them; the ids it created stay, owned by the rulings that changed them.
+  // The six types where it still reproduces every stored row (vr-01, 07, 09, 12, 14, 15) stay
+  // generator-owned, so a derivation change there still fails on the guard.
+  'vr-03-related-words', 'vr-04-closest-meaning', 'vr-05-hidden-word', 'vr-08-move-letter',
+  'vr-10-word-connections', 'vr-11-number-series', 'vr-13-make-a-word', 'vr-16-opposite-meaning',
+  'vr-17-complete-the-sum', 'vr-18-related-numbers', 'vr-19-word-number-codes',
+  'vr-20-complete-the-word', 'vr-21-same-meaning',
 ]);
 
 export const GENERATORS: Record<string, () => GenItem[]> = {
@@ -1365,6 +1377,11 @@ async function main(): Promise<void> {
   }
 
   // Misconceptions first (skip the seed-owned ones marked exists-from-seed).
+  // CREATE-ONLY (R1040). The DB authors library text (R1034); the list in this file is the July
+  // starting copy. Updating from it on every run overwrote approved hints: 30 of its 45 entries
+  // differed from the store on 2026-11-22, and only R213's no-cut guard stopped the first CI run
+  // that tried — after three entries had already been replaced. A missing row is created; an
+  // existing one is never touched here.
   let misconceptionCount = 0;
   for (const [, entries] of Object.entries(M)) {
     for (const entry of entries) {
@@ -1372,7 +1389,7 @@ async function main(): Promise<void> {
       await prisma.misconception.upsert({
         where: { id: entry.id },
         create: { id: entry.id, district: 'VR', description: entry.description, childHint: entry.childHint },
-        update: { description: entry.description, childHint: entry.childHint },
+        update: {},
       });
       misconceptionCount++;
     }

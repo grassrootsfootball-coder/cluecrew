@@ -56,6 +56,7 @@ export const isRetentionPath = (path: string): boolean =>
 export const NOTATION_BEARING_PATHS = new Set([
   'stem.target', 'stem.frame', 'stem.stemWord', 'stem.word1', 'stem.word2', 'stem.sum',
   'stem.code.P', 'stem.code.Q', 'stem.code.R', 'stem.code.S',
+  'stem.code.A', 'stem.code.I', 'stem.code.T', 'stem.wordWithGap', 'options[].content.value[]',
   'stem.series[]', 'stem.pairA[]', 'stem.words[]', 'stem.clues[]',
   'options[].content.value', 'options[].content.label',
 ]);
@@ -166,6 +167,23 @@ export const FIELD_DISPOSITIONS: Record<string, FieldDisposition> = {
   'explanation.walkScript': 'child', 'explanation.walk': 'child', 'explanation.hintCore': 'child',
   'explanation.teachBack': 'child',
   'options[].content.value': 'child', 'options[].content.label': 'child',
+  // R1040: arrived on LIVE rows undeclared, found when CI first read the real store. The code
+  // letters are vr-19's card (A = 4); wordWithGap is the vr-05/vr-20 frame the engines render; an
+  // array value is a vr-02 pair ("pear, plum"). All rendered, all notation in their own system.
+  'stem.code.A': 'child', 'stem.code.I': 'child', 'stem.code.T': 'child',
+  'stem.wordWithGap': 'child', 'options[].content.value[]': 'child',
+
+  // --- STAFF, R1040: review record and Cowork-era send provenance. No file under apps/web or
+  // packages/ui names either root. ---
+  'banListException.word': 'staff', 'banListException.basis': 'staff', banListExceptionResolved: 'staff',
+  'sendHistory.sends[].file': 'staff', 'sendHistory.sends[].role': 'staff', 'sendHistory.sends[].sha256': 'staff',
+  'sendHistory.sends[].pinnedProjectionSha256': 'staff', 'sendHistory.derivedAt': 'staff',
+  'sendHistory.derivedBy': 'staff', 'sendHistory.andWHATTHISISNOT': 'staff', 'sendHistory.note': 'staff',
+  'sendHistory.pinnedAt': 'staff', 'sendHistory.pinnedBy': 'staff', 'sendHistory.pinnedProjectionSha256': 'staff',
+  'sendHistory.boundPopulation': 'staff',
+  // R1040: the maths key-check expression. Not rendered: the replay that reads it runs only for an
+  // item whose explanation names a template, and none does; a template would need its own gate.
+  solution: 'staff',
 
   // --- QUOTATION: bound by fidelity to its source, never by house style (R711). ---
   'options[].attractorQuote': 'quotation', 'options[].defeaterQuote': 'quotation',

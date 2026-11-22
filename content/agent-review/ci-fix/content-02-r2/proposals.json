@@ -1,0 +1,52 @@
+{
+ "door": "ci-fix/content-02-r2",
+ "proposer": "agent",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "MC05-MEAS-03",
+   "why": "Round 2. Round 1 refused: C (£3.30) kept maths-83 while its execution describes a dropped carry, and £3.30/£4.30/£5.30 put the key in the middle of a run. C is retagged maths-69-dropped-calculation-carry (the mistake its execution names); B becomes £13.30, the carried 1 counted as a full ten (maths-13, whose description names exactly that), which breaks the run. Walk trap line updated to the two carry mistakes.",
+   "stem": {
+    "text": "Anya buys a ruler for £1.70 and a pen for £2.60. What is the total cost?"
+   },
+   "options": [
+    {
+     "optionId": "cmteo82qi00i8tmmjnx3rgpy5",
+     "value": "£4.30",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82qi00i9tmmje5damk3o",
+     "value": "£13.30",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "execution": "The child adds 70p and 60p to make 130p, writes 30p, and counts the carried 1 as a full £10 instead of £1: 10 + 1 + 2 = 13. That gives £13.30 instead of £4.30."
+    },
+    {
+     "optionId": "cmteo82qi00iatmmj77jhbtfy",
+     "value": "£3.30",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "execution": "The child adds 70p and 60p to make 130p but keeps only the 30p and drops the carried £1, adding whole pounds 1 + 2 = 3. That gives £3.30 instead of £4.30."
+    },
+    {
+     "optionId": "cmteo82qi00ibtmmjsx4lya9v",
+     "value": "£5.00",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "execution": "The child rounds £1.70 up to £2 and £2.60 up to £3 and gives the rounded total, £5.00. The real prices are 30p and 40p less, so the total is £4.30."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Add the two prices, pounds and pence together. Seventy pence plus sixty pence makes £1.30. That carries to give £4.30 in total. A trap loses the carried pound, or counts it as ten pounds.",
+    "_previousWalkScript": "Add the two prices, pounds and pence together. Seventy pence plus sixty pence makes £1.30. That carries to give £4.30 in total. A trap drops the pence zero, or the carried pound."
+   }
+  }
+ ],
+ "notes": {
+  "MC05-MEAS-03": "Options £4.30*, £13.30 (maths-13, carry as £10), £3.30 (maths-69, carry dropped), £5.00 (maths-99, both rounded up). 1.70 + 2.60 = 4.30; 10 + 1 + 2 = 13; 1 + 2 = 3; 2 + 3 = 5. No equal values, no run of three with the key in the middle."
+ }
+}

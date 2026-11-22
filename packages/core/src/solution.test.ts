@@ -30,6 +30,18 @@ describe('the solution evaluator (BUILD-DISTRICT-MATHS §5)', () => {
     expect(optionNumericValue({ value: 45 })).toBe(45);
     expect(optionNumericValue('five')).toBeNull();
   });
+  it('reads a fraction as its value, never its numerator (R1040)', () => {
+    expect(optionNumericValue('5/8')).toBeCloseTo(0.625);
+    expect(optionNumericValue('1 3/4')).toBeCloseTo(1.75);
+    expect(optionNumericValue({ value: '2/6' })).toBeCloseTo(1 / 3);
+    expect(optionNumericValue('3/0')).toBeNull();
+  });
+  it('refuses a time or a coordinate rather than returning its first digits (R1040)', () => {
+    expect(optionNumericValue('4:15 pm')).toBeNull();
+    expect(optionNumericValue('(5, 4)')).toBeNull();
+    expect(optionNumericValue('1 h 30 min')).toBeNull();
+    expect(optionNumericValue('48 cm²')).toBe(48);
+  });
 });
 
 describe('the CI gate (gate #3: a deliberately wrong key must fail)', () => {

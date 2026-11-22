@@ -1025,10 +1025,14 @@ export async function submitAnswer(
       where: { id: pending.itemId },
       select: { solution: true, explanation: true },
     });
-    if (missed?.solution) {
-      const templateId = (missed.explanation as { replayTemplate?: string } | null)
-        ?.replayTemplate;
-      replaySteps = buildReplay(missed.solution, templateId ?? undefined) ?? undefined;
+    // OPT-IN, NEVER BY DEFAULT (R1040). A solution expression is a KEY CHECK first: the 187 maths
+    // items gain one so `verify:solutions` can recompute every key. The replay it would also feed
+    // prints the raw trace — "18 * 145 makes 2610.", no £, no commas, fractions as decimals — and
+    // that text passes no child-facing gate. So an item replays only when its explanation NAMES a
+    // template, which is a reviewed act per item; an expression alone serves nothing to a child.
+    const templateId = (missed?.explanation as { replayTemplate?: string } | null)?.replayTemplate;
+    if (missed?.solution && templateId) {
+      replaySteps = buildReplay(missed.solution, templateId) ?? undefined;
     }
   }
 

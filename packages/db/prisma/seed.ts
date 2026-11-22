@@ -500,6 +500,17 @@ async function seedCases(): Promise<void> {
   const FREE_TIER_FLOOR_PER_DISTRICT = 2;
 
   /**
+   * A DISTRICT OUTSIDE THE FLOOR, BY RULING (David, 2026-11-22 — R1040: "Keep Maths paid").
+   * Maths has ONE case, `case-maths-01`, built PAID (2026-08-29). Under the floor that single case
+   * had to be free, which gives away the whole district; the seed refused against the real store
+   * from that day and nobody ran it until CI read the snapshot. The exemption is printed on every
+   * run, so a district that grows past one case does not stay exempt by silence — revisit it then.
+   */
+  const FLOOR_EXEMPT_DISTRICTS: Record<string, string> = {
+    MATHS: 'one case, paid by ruling (R1040) — revisit when Maths has a second case',
+  };
+
+  /**
    * WHY EACH EXCLUDED CASE IS OUT. Every reason survives from the 2026-08-02 rulings; only the
    * framing changed. These are cases that would otherwise be free, kept out one at a time.
    */
@@ -586,6 +597,10 @@ async function seedCases(): Promise<void> {
   for (const [d, v] of perDistrict) {
     // A district with fewer cases than the floor cannot meet it; that is a content gap, not a
     // tier fault, and it says so rather than failing.
+    if (FLOOR_EXEMPT_DISTRICTS[d]) {
+      console.log(`  free-tier floor: ${d} EXEMPT (${v.free} free of ${v.total}) — ${FLOOR_EXEMPT_DISTRICTS[d]}`);
+      continue;
+    }
     const required = Math.min(FREE_TIER_FLOOR_PER_DISTRICT, v.total);
     if (v.free < required) {
       problems.push(`district ${d} has ${v.free} free case(s), below the floor of ${required} (${v.total} exist)`);

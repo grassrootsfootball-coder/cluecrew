@@ -1,0 +1,18 @@
+{
+ "door": "ci-fix/content-02",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "rebuild:MC05-MEAS-03",
+   "verdict": "REFUSE",
+   "reason": "The named fault is fixed: £4.3 (equal in value to the key £4.30) is gone, the key £4.30 is right (1.70 + 2.60 = 4.30), and B £5.30 under maths-13 is right (70p + 60p = 130p, carry £1 added twice: 1 + 2 + 1 + 1 = 5, so £5.30), matching how maths-13 is executed on MC03-MEAS-05 and MC03-CALC-04. D £5.00 under maths-99 is right (rounds £1.70 to £2 and £2.60 to £3; 30p and 40p are the true differences). The fault is option C: the new execution says the child 'drops the carried £1', which is maths-69-dropped-calculation-carry ('forgetting to add a carried ten or hundred to the next column's sum'). C is still tagged maths-83-money-place-value-slip, which the library defines as 'dropping the pence and subtracting whole pounds only, or misaligning the pence'. On every other row maths-83 is executed that way (MC01-MEAS-01, MC02-MEAS-03, MC03-CALC-07: whole pounds only). On this row that mistake gives £1 + £2 = £3.00, not £3.30. So the tag does not name the mistake that produces £3.30, and a child choosing C would get maths-83's hint about lining up decimal points, not one about the carry. Retag C as maths-69 (the execution can stay), or change C's value."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "MC05-MEAS-03",
+   "verdict": "HOLD",
+   "reason": "Read as it would be after the rebuild: 'Anya buys a ruler for £1.70 and a pen for £2.60. What is the total cost?' with options £4.30*, £5.30, £3.30, £5.00. It can be answered from the row, the key is the only correct value, every distractor is wrong and the words suit a 9 to 11 year old. Held for two faults. (1) C's tag does not match its execution (see the change). (2) A pattern gives the key away: £3.30, £4.30 and £5.30 form a run £1 apart with the key in the middle, and the fourth option £5.00 is the only one not ending in 30p. A child who picks the middle of the three matching options gets it right without adding. 'The key not the middle of a run' is already a criterion in the register's distractor builder. The old row did not have this run; adding £5.30 created it. Choose a replacement for B that a real mistake produces and that does not put the key in the middle, e.g. maths-13 read as 'the carry counted as a full 10' gives 1 + 2 + 10 = £13.30. Precheck --from-live: 1 row touched, 1 passes every gate, 0 fail. A gate pass is not a reason to sign."
+  }
+ ]
+}

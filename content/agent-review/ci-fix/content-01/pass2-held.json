@@ -1,0 +1,53 @@
+{
+ "door": "ci-fix/content-01",
+ "mode": "APPLIED",
+ "landed": [
+  "MC04-CALC-08",
+  "MC05-STATS-01",
+  "gen-vr-03-related-words-10",
+  "ENG-003-A-SP-01",
+  "ENG-003-A-PU-01",
+  "gen-vr-10-word-connections-11",
+  "ENG-003-A-PU-05",
+  "gen-vr-10-word-connections-17",
+  "gen-vr-10-word-connections-09",
+  "gen-vr-10-word-connections-23",
+  "ENG-003-A-SP-02",
+  "ENG-003-A-SP-05",
+  "ENG-003-A-SP-06"
+ ],
+ "held": [
+  {
+   "itemId": "MC05-CALC-08",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:MC05-CALC-08",
+     "verdict": "REFUSE",
+     "reason": "The stem split is right (5/11/8/6 words, numbers and question unchanged), and so are the key and the values: 16 x 120 = 1,920, plus 275 = 2,195, and 3,150 - 2,195 = 955; 1,230 = 3,150 - 1,920; smaller-from-larger in each column gives 1,045. But the maths-11 execution for 1,045 contradicts itself. It says 'taking the smaller digit from the larger in each column (5 from 0 gives 5, 9 from 5 gives 4, ...)'. Smaller from larger is 0 from 5 and 5 from 9. As written, the brackets take the larger from the smaller, and they state false arithmetic. Fix: '(0 from 5 gives 5, 5 from 9 gives 4, 1 - 1 = 0, 3 - 2 = 1)', or the MC04 form '(5-0, 9-5, 1-1, 3-2)'. Minor, also worth fixing in round 2: the 1,230 execution says 'All the seats sold make 2,195', but on the stem 1,920 of those seats are 'booked online', not sold. 'All the seats taken' would match the row."
+    }
+   ],
+   "row": {
+    "itemId": "MC05-CALC-08",
+    "verdict": "HOLD",
+    "reason": "Its only change is REFUSED: the maths-11 execution for 1,045 reverses the column subtraction it describes ('5 from 0 gives 5, 9 from 5 gives 4' under 'smaller from larger'). A row lands all or nothing. What the child sees is otherwise sound: key 955 recomputed and unique, every sentence 16 words or fewer."
+   }
+  },
+  {
+   "itemId": "ENG-003-A-PU-03",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-003-A-PU-03",
+     "verdict": "REFUSE",
+     "reason": "Mechanically sound: exactly one error ('it's fur' should be its fur), and the correct 'its hutch', 'Mr Bhatt's towel' and 'today's date' are all error-free. The tags fit (en-apostrophe-possession covers its/it's by its own definition), the walk names the second part and states the key, and No mistake is wrong. But the rewrite took the sentence the child reads from 19 words to 30: 'Ella lifted the rabbit out of its hutch, but it's fur was still damp, so she dried it gently with Mr Bhatt's towel and wrote today's date on the chart.' That is six words longer than any other sentence in either bank (range 17 to 24), with four chained clauses, for a 9-to-11 reader. The 'but' also gives a weak contrast: nothing about lifting the rabbit out sets up an expectation that it is dry. The segment gate reads each option separately, so it cannot see the whole sentence. The fault is fixable without the length, for example 'Ella checked the rabbit, / but it's fur was still damp, / so she dried it with Mr Bhatt's towel / and wrote today's date.' (19 words, error in B, every other part correct). Rebuild it and resubmit."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-003-A-PU-03",
+    "verdict": "HOLD",
+    "reason": "Its only change is REFUSED. The rewritten sentence is 30 words, up from 19 and six longer than any other in either SPaG bank, with a weak 'but'. Holding it leaves en-spag-punct-spot at A3 B1 C2 D2 N1, so check:option-positions still fails on that bank until a round-2 rebuild lands the error in B."
+   }
+  }
+ ]
+}

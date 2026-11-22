@@ -1,0 +1,76 @@
+{
+ "what": "MATHS items whose key is not a single number, so no solution expression can verify it (BUILD-DISTRICT-MATHS §5). verify:solutions prints these on every run and fails if a key here becomes a number.",
+ "ruling": "R1040",
+ "declared": [
+  {
+   "itemId": "MC01-GEOM-04",
+   "key": "(5, 4)",
+   "reason": "The answer is a coordinate pair.",
+   "attestedBy": "rev-agent-01",
+   "note": "Square with corners (2,1), (5,1), (2,4): side 3, fourth corner takes x 5 and y 4 = (5, 4). A coordinate pair is not one number; the drafter's (5, 4) is the key (5, 4)."
+  },
+  {
+   "itemId": "MC02-GEOM-04",
+   "key": "(7, 3)",
+   "reason": "The answer is a coordinate pair.",
+   "attestedBy": "rev-agent-01",
+   "note": "A at (3, 2), B is 4 right and 1 up: (7, 3). A coordinate pair is not one number; the drafter's (7, 3) is the key."
+  },
+  {
+   "itemId": "MC02-MEAS-05",
+   "key": "1 h 30 min",
+   "reason": "The answer is a duration in hours and minutes.",
+   "attestedBy": "rev-agent-01",
+   "note": "Film 7:50 pm to 9:20 pm: 10 min to 8:00, then 1 h 20 min = 1 h 30 min. A duration in hours and minutes is not one number; the drafter's '1 hour 30 minutes' is the same answer as the key '1 h 30 min'."
+  },
+  {
+   "itemId": "MC03-GEOM-02",
+   "key": "(7, 4)",
+   "reason": "The answer is a coordinate pair.",
+   "attestedBy": "rev-agent-01",
+   "note": "Counter at (2, 1) moved 5 right and 3 up: (7, 4). A coordinate pair is not one number; the drafter's (7, 4) is the key."
+  },
+  {
+   "itemId": "MC03-MEAS-04",
+   "key": "00:20",
+   "reason": "The answer is a clock time.",
+   "attestedBy": "rev-agent-01",
+   "note": "Bus leaves 23:50, journey 30 minutes: 10 min to midnight, 20 more = 00:20. A clock time is not one number; the drafter's 00:20 is the key 00:20. On the doubt: 24:20 (an option on this row) is not a valid 24-hour time, since the clock runs 00:00 to 23:59, so it is a wrong answer (mislabelled midnight), not the key in another form. No item fault."
+  },
+  {
+   "itemId": "MC04-GEOM-02",
+   "key": "(7, 6)",
+   "reason": "The answer is a coordinate pair.",
+   "attestedBy": "rev-agent-01",
+   "note": "Counter at (3, 1) moves 4 right and 5 up: (7, 6). A coordinate pair is not one number; the drafter's (7, 6) is the key."
+  },
+  {
+   "itemId": "MC04-MEAS-03",
+   "key": "4:15 pm",
+   "reason": "The answer is a clock time.",
+   "attestedBy": "rev-agent-01",
+   "note": "Train leaves 3:50 pm, journey 25 minutes: 10 min to 4:00, 15 more = 4:15 pm. A clock time is not one number; the drafter's 4:15 pm is the key 4:15 pm."
+  },
+  {
+   "itemId": "MC05-FDP-03",
+   "key": "Bag A",
+   "reason": "The answer is a choice between two named bags (Bag A: 1/3 red; Bag B: 1/4 red).",
+   "attestedBy": "rev-agent-01",
+   "note": "Bag A 1/3 red; Bag B red:blue 1:3, so 1/4 red; 1/3 > 1/4, Bag A. A named choice is not a number; the drafter's 'Bag A' is the key 'Bag A'."
+  },
+  {
+   "itemId": "MC05-GEOM-03",
+   "key": "(11, 6)",
+   "reason": "The answer is a coordinate pair.",
+   "attestedBy": "rev-agent-01",
+   "note": "Counter at (5, 2) moved 6 right and 4 up: (11, 6). A coordinate pair is not one number; the drafter's (11, 6) is the key."
+  },
+  {
+   "itemId": "MC05-MEAS-05",
+   "key": "3:25 pm",
+   "reason": "The answer is a clock time.",
+   "attestedBy": "rev-agent-01",
+   "note": "Bus leaves 2:45 pm, journey 40 minutes: 15 min to 3:00, 25 more = 3:25 pm. A clock time is not one number; the drafter's 3:25 pm is the key 3:25 pm."
+  }
+ ]
+}

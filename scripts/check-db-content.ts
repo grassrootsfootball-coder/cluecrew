@@ -33,7 +33,10 @@ import {
   storyWrapperSchema,
   type ContentFailure,
 } from '@cluecrew/core';
+import { existsSync } from 'node:fs';
+import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
+import { loadClearances } from './lib/clearances';
 import { declareMayBeEmpty } from './lib/population';
 
 interface Bucket {
@@ -114,6 +117,7 @@ async function main(): Promise<void> {
 
   // --- Items: stems and options, by role ----------------------------------
   const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } }, questionType: true } });
+  const clearances = loadClearances();
   for (const item of items) {
     counted.items += 1;
     /**
@@ -131,7 +135,10 @@ async function main(): Promise<void> {
     // skips (the vr-06 stem.sentence leak).
     record(
       serving,
-      checkItemChildFacing({ id: item.id, stem: item.stem, explanation: item.explanation, mechanic: item.questionType.mechanic, options: item.options }),
+      // R1040: the reviewer's clearance record, as every other door passes it (publish-door,
+      // gate-baseline, check-gate-silence). Without it, two positions she cleared under R1005 failed
+      // here for ever. A cleared KEY still routes, by her standing exception — that is the gate's.
+      checkItemChildFacing({ id: item.id, stem: item.stem, explanation: item.explanation, mechanic: item.questionType.mechanic, options: item.options, clearedAppropriatenessTokens: clearances.get(item.id) }),
     );
   }
 
@@ -161,7 +168,12 @@ async function main(): Promise<void> {
     const intro = (kase.narrativeIntro as { text?: string } | null)?.text;
     if (intro) {
       screened.cases += 1;
-      record(true, checkChildFacingText({ role: 'narrative', label: `case:${kase.id} narrative`, text: intro }));
+      // THE DOORPLATE ROLE (R689): a case face landed through `landCaseFace` is notice-class, no word
+      // cap, and that path keeps its provenance record at content/case-faces/<id>.json. The record is
+      // the fact this reads — the same role the landing gated it under. Gating those two faces as
+      // `narrative` here reported five faults the ruling had already moved (R1040).
+      const doorplate = existsSync(pjoin(__dirname, '..', 'content', 'case-faces', `${kase.id}.json`));
+      record(true, checkChildFacingText({ role: doorplate ? 'doorplate' : 'narrative', label: `case:${kase.id} ${doorplate ? 'doorplate' : 'narrative'}`, text: intro }));
     }
     if (kase.storyWrapper === null || kase.storyWrapper === undefined) continue;
     wrappers += 1;

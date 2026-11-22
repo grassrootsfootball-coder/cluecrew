@@ -1,0 +1,1128 @@
+{
+ "door": "maths-solutions",
+ "reviewer": "rev-agent-01",
+ "rows": [
+  {
+   "itemId": "MC01-CALC-01",
+   "verdict": "ATTEST",
+   "reason": "Work out 234 + 158: 234+158 = 392, key 392. The question's own sum.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-CALC-02",
+   "verdict": "ATTEST",
+   "reason": "Work out 62 - 27: 62-27 = 35, key 35.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-CALC-05",
+   "verdict": "ATTEST",
+   "reason": "Work out 34 x 6: 34*6 = 204, key 204.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "4 full boxes of 6 eggs plus 3 loose, 15 used: 4*6+3 = 27 eggs, minus 15 = 12, key 12.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "8,006 seats, 3,478 filled, empty seats: 8006-3478 = 4528, key 4528.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-FDP-01",
+   "verdict": "ATTEST",
+   "reason": "Choose the bigger of 3/8 and 3/5. A selection between two given fractions: no arithmetic produces it, so the bare value of the chosen fraction (3/5 = 0.6) is right. Key 3/5; 3/8 = 0.375 differs.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "2/3 of 12: one third is 12/3 = 4, two thirds 4*2 = 8, key 8.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-FDP-03",
+   "verdict": "ATTEST",
+   "reason": "25% of £80: 80*25/100 = 20, key £20.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-FDP-04",
+   "verdict": "ATTEST",
+   "reason": "4 litres, half poured away leaves 4/2 = 2 litres; half-litre glasses: 2/(1/2) = 4, key 4.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-FDP-07",
+   "verdict": "ATTEST",
+   "reason": "30 children, 2/5 walk (12), half of the remaining 18 come by car: (30-30*2/5)/2 = 9, key 9.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "verdict": "ATTEST",
+   "reason": "3/4 kg bags from 15 kg: 15/(3/4) = 20, key 20.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "Rectangle 8 cm by 3 cm, perimeter: 2*(8+3) = 22, key 22 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-GEOM-02",
+   "verdict": "ATTEST",
+   "reason": "Angles on a straight line, one 125°: 180-125 = 55, key 55°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-GEOM-04",
+   "verdict": "ATTEST",
+   "reason": "Square with corners (2,1), (5,1), (2,4): side 3, fourth corner takes x 5 and y 4 = (5, 4). A coordinate pair is not one number; the drafter's (5, 4) is the key (5, 4).",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "10 by 6 rectangle with a 4 by 3 corner cut out: 10*6-4*3 = 60-12 = 48, key 48 cm².",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "Triangle with a 40° angle and two equal others: (180-40)/2 = 70, key 70°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "£5 minus a £3.50 book: 5-3.50 = 1.50, key £1.50.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "90 cm ribbon, 35 cm cut off: 90-35 = 55, key 55 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-MEAS-03",
+   "verdict": "ATTEST",
+   "reason": "3 apples cost 60p, cost of 5: 60/3 = 20p each, *5 = 100p, /100 = £1, key £1.00. The /100 is the pence-to-pounds conversion the £ key needs.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-MEAS-04",
+   "verdict": "ATTEST",
+   "reason": "4 packs at £1.20: 4*1.20 = 4.80, key £4.80.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-MEAS-05",
+   "verdict": "ATTEST",
+   "reason": "3 pencils at 30p plus a 40p rubber = 130p, change from £2 (200p): (200-(3*30+40))/100 = 0.70, key £0.70.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-MEAS-06",
+   "verdict": "ATTEST",
+   "reason": "200 g flour for 4 people, for 6: 200/4 = 50 g each, *6 = 300, key 300 g.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-MEAS-07",
+   "verdict": "ATTEST",
+   "reason": "6 eggs for £1.20 (20p each) vs 10 for £1.50 (15p each): 120/6-150/10 = 5, key 5p. Works in pence as the key does.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-NPV-01",
+   "verdict": "ATTEST",
+   "reason": "Value of the 6 in 4,652: a place-value reading (hundreds column), no calculation. Bare 600 acceptable; key 600.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-NPV-02",
+   "verdict": "ATTEST",
+   "reason": "100 more than 4,970: 4970+100 = 5070, key 5070.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-NPV-03",
+   "verdict": "ATTEST",
+   "reason": "Smallest 3-digit number from 6, 0, 4: an arrangement (4 first since zero cannot lead), not a calculation. Bare 406 acceptable; key 406.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-NPV-04",
+   "verdict": "ATTEST",
+   "reason": "Round 3,762 to the nearest 100: tens digit 6 rounds up to 3800. Rounding cannot be written with + - * / without using the answer; bare 3800 acceptable. Key 3800.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-NPV-06",
+   "verdict": "ATTEST",
+   "reason": "3 ten-thousands, 5 thousands, 0 hundreds, 8 tens, 6 ones: 3*10000+5*1000+0*100+8*10+6 = 35086, key 35086.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-NPV-07",
+   "verdict": "ATTEST",
+   "reason": "How many hundreds in 3,400: 3400/100 = 34, key 34.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "Books read 6, 3, 7, 4, total: 6+3+7+4 = 20, key 20.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-STATS-02",
+   "verdict": "ATTEST",
+   "reason": "Red 8, Blue 5, Green 6; Red and Green together more than Blue: 8+6-5 = 9, key 9.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-STATS-03",
+   "verdict": "ATTEST",
+   "reason": "Mean of 7, 9, 6, 10 over four tests: (7+9+6+10)/4 = 32/4 = 8, key 8.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC01-STATS-04",
+   "verdict": "ATTEST",
+   "reason": "Mean of five numbers is 6, four are 4, 8, 5, 9: 5*6-(4+8+5+9) = 30-26 = 4, key 4.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-CALC-01",
+   "verdict": "ATTEST",
+   "reason": "Work out 456 + 237: 456+237 = 693, key 693.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-CALC-02",
+   "verdict": "ATTEST",
+   "reason": "Work out 582 - 147: 582-147 = 435, key 435.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-CALC-03",
+   "verdict": "ATTEST",
+   "reason": "Work out 34 x 8: 34*8 = 272, key 272.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-CALC-04",
+   "verdict": "ATTEST",
+   "reason": "£10.00 less a £3.45 comic and a £1.80 drink: 10.00-3.45-1.80 = 4.75, key £4.75.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-CALC-05",
+   "verdict": "ATTEST",
+   "reason": "4,872 divided by 4: 4872/4 = 1218, key 1218.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-CALC-06",
+   "verdict": "ATTEST",
+   "reason": "Work out 3,458 + 2,673: 3458+2673 = 6131, key 6131.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "6 crates of 48 apples, 95 sold: 6*48-95 = 288-95 = 193, key 193.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "12 trays of 30 eggs, 48 break, rest in boxes of 6: (12*30-48)/6 = 312/6 = 52, key 52.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-FDP-01",
+   "verdict": "ATTEST",
+   "reason": "Choose the bigger of 2/9 and 2/5: a selection, bare value of the chosen fraction (2/5 = 0.4) is the only honest expression. Key 2/5; 2/9 differs.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "3/4 of 24: 24/4*3 = 18, key 18.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-FDP-03",
+   "verdict": "ATTEST",
+   "reason": "40% of 60: 60*40/100 = 24, key 24.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-FDP-04",
+   "verdict": "ATTEST",
+   "reason": "1/4 + 3/8: value 0.625 = 5/8, key 5/8. The question's own sum.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-FDP-05",
+   "verdict": "ATTEST",
+   "reason": "Which fraction equals 1/3: a selection among options, so the bare value 1/3 is what the chosen option must equal. Recomputed every option: 2/6 = 1/3 (key), 3/5, 3/10 and 2/3 all differ, so the expression singles out exactly one option. The drafter's doubt (an equal-valued wrong option would pass) does not arise on this row.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-FDP-06",
+   "verdict": "ATTEST",
+   "reason": "Choose the bigger of 4/5 and 4/7: a selection, bare value 4/5 = 0.8. Key 4/5; 4/7 differs.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-FDP-07",
+   "verdict": "ATTEST",
+   "reason": "£80 coat with 25% off, sale price: 80-80*25/100 = 60, key £60.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-FDP-08",
+   "verdict": "ATTEST",
+   "reason": "40 marbles, 3/8 blue (15), two fifths of the remaining 25 green: (40-40*3/8)*2/5 = 10, key 10.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "Rectangle 9 cm by 5 cm, perimeter: 2*(9+5) = 28, key 28 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-GEOM-02",
+   "verdict": "ATTEST",
+   "reason": "Triangle with angles 58° and 67°, third angle: 180-58-67 = 55, key 55°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-GEOM-03",
+   "verdict": "ATTEST",
+   "reason": "Isosceles triangle, top angle 46°, two equal angles: (180-46)/2 = 67, key 67°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-GEOM-04",
+   "verdict": "ATTEST",
+   "reason": "A at (3, 2), B is 4 right and 1 up: (7, 3). A coordinate pair is not one number; the drafter's (7, 3) is the key.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "L-shape of a 10 by 4 rectangle plus a 3 by 5 rectangle: 10*4+3*5 = 55, key 55 cm².",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "Triangle on a line next to a 110° angle, so inside angle 180-110 = 70; another angle 25°: 180-(180-110)-25 = 85, key 85°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "£8 less a £2.60 toy: 8-2.60 = 5.40, key £5.40.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "6000 g in kilograms: 6000/1000 = 6, key 6 kg.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-MEAS-03",
+   "verdict": "ATTEST",
+   "reason": "£4.35 book plus £2.50 pen: 4.35+2.50 = 6.85, key £6.85.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-MEAS-04",
+   "verdict": "ATTEST",
+   "reason": "Blue ribbon 85 cm, red 48 cm, how much longer: 85-48 = 37, key 37 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-MEAS-05",
+   "verdict": "ATTEST",
+   "reason": "Film 7:50 pm to 9:20 pm: 10 min to 8:00, then 1 h 20 min = 1 h 30 min. A duration in hours and minutes is not one number; the drafter's '1 hour 30 minutes' is the same answer as the key '1 h 30 min'.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-MEAS-06",
+   "verdict": "ATTEST",
+   "reason": "3 notebooks at £1.45, change from £10: 10-3*1.45 = 10-4.35 = 5.65, key £5.65.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-MEAS-07",
+   "verdict": "ATTEST",
+   "reason": "4 apples at 65p plus £2.30 juice = 490p, change from £10 (1000p): (1000-(4*65+230))/100 = 5.10, key £5.10.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-NPV-01",
+   "verdict": "ATTEST",
+   "reason": "Value of the 8 in 3,826: place-value reading (hundreds), no calculation. Bare 800 acceptable; key 800.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-NPV-02",
+   "verdict": "ATTEST",
+   "reason": "5 thousands, 0 hundreds, 3 tens, 8 ones: 5*1000+0*100+3*10+8 = 5038, key 5038.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-NPV-04",
+   "verdict": "ATTEST",
+   "reason": "Smallest 4-digit number from 4, 0, 0, 7: an arrangement (4 leads, then 0, 0, 7), not a calculation. Bare 4007 acceptable; key 4007.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-NPV-06",
+   "verdict": "ATTEST",
+   "reason": "Round 4,362 to the nearest 100: tens digit 6 rounds up to 4400. Rounding has no + - * / form that does not use the answer; bare acceptable. Key 4400.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-NPV-07",
+   "verdict": "ATTEST",
+   "reason": "Largest of 0.6, 0.55, 0.4, 0.049: a selection by comparing decimals, no calculation produces it. Bare 0.6 acceptable; key 0.6.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-RP-01",
+   "verdict": "ATTEST",
+   "reason": "240 g pasta for 3 people, for 5: 240/3 = 80 g each, *5 = 400, key 400 g.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-RP-02",
+   "verdict": "ATTEST",
+   "reason": "Shop A 5 apples for £1.50 (30p each), Shop B 6 for £1.20 (20p each): 150/5-120/6 = 10, key 10p.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "Monday 9, Tuesday 8, Wednesday 7; Monday and Wednesday together more than Tuesday: 9+7-8 = 8, key 8.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC02-STATS-02",
+   "verdict": "ATTEST",
+   "reason": "Mean of five numbers is 7, four are 4, 9, 8, 5: 5*7-(4+9+8+5) = 35-26 = 9, key 9.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-CALC-01",
+   "verdict": "ATTEST",
+   "reason": "Work out 356 + 287: 356+287 = 643, key 643.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-CALC-02",
+   "verdict": "ATTEST",
+   "reason": "Work out 483 - 176: 483-176 = 307, key 307.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-CALC-03",
+   "verdict": "ATTEST",
+   "reason": "Work out 43 x 5: 43*5 = 215, key 215.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-CALC-04",
+   "verdict": "ATTEST",
+   "reason": "£20 less a £8.75 game and a £3.60 case: 20-8.75-3.60 = 7.65, key £7.65.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-CALC-05",
+   "verdict": "ATTEST",
+   "reason": "Work out 316 x 4: 316*4 = 1264, key 1264.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-CALC-06",
+   "verdict": "ATTEST",
+   "reason": "74 pencils shared equally between 3 tables, whole pencils each: 74 ÷ 3 = 24 remainder 2 (3*24+2 = 74). The grammar has no whole-number division, so the expression removes the remainder the child's own division leaves: (74-2)/3 = 24, key 24. The 2 is the remainder of the question's division, not a number taken from the key; the 24.2 distractor (remainder written as a decimal) stays wrong. On the drafter's doubt: no item fault; 'whole pencils' tells the child to drop the remainder.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "3 footballs at £6.50 and 2 bottles at £2.25: 3*6.50+2*2.25 = 19.50+4.50 = 24, key £24.00.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "320 tickets at £15, show costs £1,200, profit: 320*15-1200 = 4800-1200 = 3600, key £3600.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-FDP-01",
+   "verdict": "ATTEST",
+   "reason": "Choose the bigger of 4/7 and 4/9: a selection, bare value 4/7. Key 4/7; 4/9 differs.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "3/4 of 24: 24/4*3 = 18, key 18.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-FDP-03",
+   "verdict": "ATTEST",
+   "reason": "25% of £44: 44*25/100 = 11, key £11.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-FDP-04",
+   "verdict": "ATTEST",
+   "reason": "£45 hoodie reduced by 20%: 45-45*20/100 = 45-9 = 36, key £36.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-FDP-06",
+   "verdict": "ATTEST",
+   "reason": "Choose the bigger of 7/8 and 7/10: a selection, bare value 7/8 = 0.875. Key 7/8; 7/10 differs.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-FDP-07",
+   "verdict": "ATTEST",
+   "reason": "60 cars, 1/4 red (15), 2/3 of the remaining 45 blue: (60-60/4)*2/3 = 30, key 30.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-FDP-08",
+   "verdict": "ATTEST",
+   "reason": "£80 coat, 25% off then a £5 voucher: 80-80*25/100-5 = 60-5 = 55, key £55.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "Angles on a straight line, one 118°: 180-118 = 62, key 62°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-GEOM-02",
+   "verdict": "ATTEST",
+   "reason": "Counter at (2, 1) moved 5 right and 3 up: (7, 4). A coordinate pair is not one number; the drafter's (7, 4) is the key.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-GEOM-03",
+   "verdict": "ATTEST",
+   "reason": "Triangle with 30° and 40°, third angle split into two equal parts: (180-30-40)/2 = 110/2 = 55, key 55°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-GEOM-04",
+   "verdict": "ATTEST",
+   "reason": "15 by 9 rectangle with a 6 by 7 cut from a corner: 15*9-6*7 = 135-42 = 93, key 93 cm².",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "Perimeter 30 cm, length 9 cm; width = 30/2-9 = 6, area 9*6: 9*(30/2-9) = 54, key 54 cm².",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "Quadrilateral with 80° and 110°, other two equal: (360-80-110)/2 = 85, key 85°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "£8 less a £5.60 toy: 8-5.60 = 2.40 (float 2.4000000000000004, within tolerance), key £2.40.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "75 cm plank, 28 cm sawn off: 75-28 = 47, key 47 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-MEAS-03",
+   "verdict": "ATTEST",
+   "reason": "6 kg in grams: 6*1000 = 6000, key 6000 g.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-MEAS-04",
+   "verdict": "ATTEST",
+   "reason": "Bus leaves 23:50, journey 30 minutes: 10 min to midnight, 20 more = 00:20. A clock time is not one number; the drafter's 00:20 is the key 00:20. On the doubt: 24:20 (an option on this row) is not a valid 24-hour time, since the clock runs 00:00 to 23:59, so it is a wrong answer (mislabelled midnight), not the key in another form. No item fault.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-MEAS-05",
+   "verdict": "ATTEST",
+   "reason": "£2.65 comic plus £1.75 pen = £4.40, change from £10: 10-2.65-1.75 = 5.60, key £5.60.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-MEAS-06",
+   "verdict": "ATTEST",
+   "reason": "900 m path, 340 m and 275 m laid: 900-340-275 = 285, key 285 m.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-MEAS-07",
+   "verdict": "ATTEST",
+   "reason": "7 pencils at 35p plus £1.80 notebook = 425p, change from £10: (1000-(7*35+180))/100 = 5.75, key £5.75.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-NPV-01",
+   "verdict": "ATTEST",
+   "reason": "Value of the 2 in 7,283: place-value reading (hundreds), no calculation. Bare 200 acceptable; key 200.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-NPV-02",
+   "verdict": "ATTEST",
+   "reason": "3 thousands, 0 hundreds, 6 tens, 4 ones: 3*1000+0*100+6*10+4 = 3064, key 3064.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-NPV-03",
+   "verdict": "ATTEST",
+   "reason": "100 more than 3,940: 3940+100 = 4040, key 4040.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-NPV-04",
+   "verdict": "ATTEST",
+   "reason": "Round 5,873 to the nearest 100: tens digit 7 rounds up to 5900. No + - * / form without the answer; bare acceptable. Key 5900.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-NPV-06",
+   "verdict": "ATTEST",
+   "reason": "Value of the 8 in 5.284: place-value reading (hundredths), no calculation. Bare 0.08 acceptable; key 0.08.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-NPV-07",
+   "verdict": "ATTEST",
+   "reason": "How many hundreds in 2,800: 2800/100 = 28, key 28.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-RP-01",
+   "verdict": "ATTEST",
+   "reason": "5 apples cost 90p, cost of 8: 90/5 = 18p each, *8 = 144p, /100 = £1.44, key £1.44.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-RP-02",
+   "verdict": "ATTEST",
+   "reason": "4 oranges for 92p (23p each) vs 6 for 84p (14p each): 92/4-84/6 = 9, key 9p.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "Apples 22, pears 20, plums 30, kiwis 18; apples+plums more than pears+kiwis: (22+30)-(20+18) = 52-38 = 14, key 14.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC03-STATS-02",
+   "verdict": "ATTEST",
+   "reason": "Mean of six numbers is 7, five are 5, 9, 6, 8, 10: 6*7-(5+9+6+8+10) = 42-38 = 4, key 4.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-CALC-01",
+   "verdict": "ATTEST",
+   "reason": "Work out 517 + 265: 517+265 = 782, key 782.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-CALC-02",
+   "verdict": "ATTEST",
+   "reason": "Work out 74 - 38: 74-38 = 36, key 36.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-CALC-03",
+   "verdict": "ATTEST",
+   "reason": "Work out 48 x 6: 48*6 = 288, key 288.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-CALC-04",
+   "verdict": "ATTEST",
+   "reason": "£20 less a £8.40 game and a £5.75 controller: 20-8.40-5.75 = 5.85, key £5.85.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-CALC-05",
+   "verdict": "ATTEST",
+   "reason": "2 litres shared equally between 8 children: 2/8 = 0.25, key 0.25 litres.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-CALC-06",
+   "verdict": "ATTEST",
+   "reason": "Work out 4,002 - 1,375: 4002-1375 = 2627, key 2627.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "4 packs of 25 badges plus 30 already, 62 given away: 4*25+30-62 = 130-62 = 68, key 68.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "18 blocks of 145 seats plus 320 at the door: 18*145+320 = 2930 sold; 4,120 seats less that: 4120-(18*145+320) = 1190, key 1190.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-FDP-01",
+   "verdict": "ATTEST",
+   "reason": "Choose the bigger of 5/6 and 5/9: a selection, bare value 5/6. Key 5/6; 5/9 differs.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "1/4 of 40: 40/4 = 10, key 10.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-FDP-03",
+   "verdict": "ATTEST",
+   "reason": "1/2 as a decimal: 1/2 = 0.5, key 0.5. The division is the conversion itself.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-FDP-04",
+   "verdict": "ATTEST",
+   "reason": "Maya has 1/8 of a cake and is given another 1/4: 1/8+1/4 = 0.375 = 3/8, key 3/8.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-FDP-05",
+   "verdict": "ATTEST",
+   "reason": "2/3 kg bags from 12 kg: 12/(2/3) = 18, key 18.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-FDP-07",
+   "verdict": "ATTEST",
+   "reason": "32 chocolates, 3/8 dark (12), a quarter of the remaining 20 white: (32-32*3/8)/4 = 5, key 5.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "verdict": "ATTEST",
+   "reason": "40 litres, 3/5 used Monday leaves 16; Tuesday uses a quarter of that (4): (40-40*3/5)-(40-40*3/5)/4 = 16-4 = 12, key 12.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "Rectangle 18 cm by 7 cm, perimeter: 2*(18+7) = 50, key 50 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-GEOM-02",
+   "verdict": "ATTEST",
+   "reason": "Counter at (3, 1) moves 4 right and 5 up: (7, 6). A coordinate pair is not one number; the drafter's (7, 6) is the key.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-GEOM-03",
+   "verdict": "ATTEST",
+   "reason": "Triangle with 65° and 48°, third angle: 180-65-48 = 67, key 67 degrees.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "12 by 8 rectangle with a 4 by 7 corner cut out: 12*8-4*7 = 96-28 = 68, key 68 cm².",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "Isosceles triangle, apex 50°, equal base angles: (180-50)/2 = 65, key 65 degrees.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "£7 less a £2.80 pen: 7-2.80 = 4.20, key £4.20.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "Blue string 84 cm, green 57 cm, how much longer: 84-57 = 27, key 27 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-MEAS-03",
+   "verdict": "ATTEST",
+   "reason": "Train leaves 3:50 pm, journey 25 minutes: 10 min to 4:00, 15 more = 4:15 pm. A clock time is not one number; the drafter's 4:15 pm is the key 4:15 pm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-MEAS-04",
+   "verdict": "ATTEST",
+   "reason": "£6.05 pencil case paid with a £10 note: 10-6.05 = 3.95, key £3.95.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-MEAS-05",
+   "verdict": "ATTEST",
+   "reason": "3 kg watermelon vs 200 g apple, difference in grams: 3*1000-200 = 2800, key 2800 g.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-MEAS-06",
+   "verdict": "ATTEST",
+   "reason": "£2.45 sandwich plus £1.30 drink, change from £5: 5-2.45-1.30 = 1.25 (float 1.2499999999999998, within tolerance), key £1.25.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-MEAS-07",
+   "verdict": "ATTEST",
+   "reason": "3 notebooks at £2.35, change from £10: 10-3*2.35 = 10-7.05 = 2.95 (float within tolerance), key £2.95.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-NPV-01",
+   "verdict": "ATTEST",
+   "reason": "Value of the 9 in 5,914: place-value reading (hundreds), no calculation. Bare 900 acceptable; key 900.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "verdict": "ATTEST",
+   "reason": "100 more than 6,970: 6970+100 = 7070, key 7070.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "verdict": "ATTEST",
+   "reason": "1,000 more than 9,400: 9400+1000 = 10400, key 10400.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-NPV-04",
+   "verdict": "ATTEST",
+   "reason": "Round 4,271 to the nearest 100: tens digit 7 rounds up to 4300. No + - * / form without the answer; bare acceptable. Key 4300.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-NPV-05",
+   "verdict": "ATTEST",
+   "reason": "Value of the 5 in 6.351: place-value reading (hundredths), no calculation. Bare 0.05 acceptable; key 0.05.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-NPV-06",
+   "verdict": "ATTEST",
+   "reason": "5°C falls by 8°C: 5-8 = -3, key -3. The question's own subtraction, crossing zero. On the drafter's doubt: a negative key is correct here, and -3 is the only option equal to it (3, -2, -8 differ).",
+   "itemFault": "Notation, not answerability: the question is a temperature but every option is a bare number ('-3', '3', '-2', '-8') with no °C, against house notation for temperatures (should read -3°C etc.). The minus is also a hyphen-minus."
+  },
+  {
+   "itemId": "MC04-NPV-07",
+   "verdict": "ATTEST",
+   "reason": "Round 3,650 to the nearest 100: exactly halfway, rounds up to 3700. Rounding has no + - * / form without the answer; bare acceptable. Key 3700. On the doubt: round-half-up is the convention taught in the English KS2 curriculum ('5 or more rounds up') and the walk script states it, so a child can know it. No item fault.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-RP-01",
+   "verdict": "ATTEST",
+   "reason": "4 pencils cost 48p, cost of 7: 48/4 = 12p each, *7 = 84p, /100 = £0.84, key £0.84.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-RP-02",
+   "verdict": "ATTEST",
+   "reason": "Shop A 5 pens for £2.00 (40p each), Shop B 4 for £1.20 (30p each): 200/5-120/4 = 10, key 10p.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "Cakes 8, 12, 9, 7, total: 8+12+9+7 = 36, key 36.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC04-STATS-02",
+   "verdict": "ATTEST",
+   "reason": "Mean of 6, 8, 5, 9, 12 over five tests: (6+8+5+9+12)/5 = 40/5 = 8, key 8.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "verdict": "ATTEST",
+   "reason": "Work out 465 + 218: 465+218 = 683, key 683.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-CALC-02",
+   "verdict": "ATTEST",
+   "reason": "Work out 83 - 46: 83-46 = 37, key 37.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-CALC-03",
+   "verdict": "ATTEST",
+   "reason": "Work out 57 x 4: 57*4 = 228, key 228.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-CALC-04",
+   "verdict": "ATTEST",
+   "reason": "£20 less a £7.65 jigsaw and a £2.80 pen: 20-7.65-2.80 = 9.55, key £9.55.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-CALC-05",
+   "verdict": "ATTEST",
+   "reason": "3 litres shared equally between 6 children: 3/6 = 0.5, key 0.5 litres.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-CALC-06",
+   "verdict": "ATTEST",
+   "reason": "Work out 6,003 - 2,548: 6003-2548 = 3455, key 3455.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "5 trays of 24 muffins plus 18 already, 96 sold: 5*24+18-96 = 138-96 = 42, key 42.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "16 rows of 120 seats plus 275 at the door = 2195 sold; 3,150 seats less that: 3150-(16*120+275) = 955, key 955.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-FDP-01",
+   "verdict": "ATTEST",
+   "reason": "Choose the bigger of 4/5 and 4/9: a selection, bare value 4/5 = 0.8. Key 4/5; 4/9 differs.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "2/3 of 18: 18/3*2 = 12, key 12.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-FDP-03",
+   "verdict": "ATTEST",
+   "reason": "Bag A 1/3 red; Bag B red:blue 1:3, so 1/4 red; 1/3 > 1/4, Bag A. A named choice is not a number; the drafter's 'Bag A' is the key 'Bag A'.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-FDP-04",
+   "verdict": "ATTEST",
+   "reason": "1/5 as a decimal: 1/5 = 0.2, key 0.2.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-FDP-05",
+   "verdict": "ATTEST",
+   "reason": "48 sweets, 25% eaten, how many left: 48-48*25/100 = 48-12 = 36, key 36.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-FDP-06",
+   "verdict": "ATTEST",
+   "reason": "6 litres into 2/3-litre glasses: 6/(2/3) = 9, key 9.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-FDP-07",
+   "verdict": "ATTEST",
+   "reason": "Jug 1/3 full, another 1/4 poured in: 1/3+1/4 = 7/12, key 7/12.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-FDP-08",
+   "verdict": "ATTEST",
+   "reason": "£64 coat reduced by 25%: 64-64*25/100 = 64-16 = 48, key £48.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "Rectangle 18 cm by 9 cm, perimeter: 2*(18+9) = 54, key 54 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-GEOM-02",
+   "verdict": "ATTEST",
+   "reason": "Angles on a straight line, one 137°: 180-137 = 43, key 43°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-GEOM-03",
+   "verdict": "ATTEST",
+   "reason": "Counter at (5, 2) moved 6 right and 4 up: (11, 6). A coordinate pair is not one number; the drafter's (11, 6) is the key.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-GEOM-04",
+   "verdict": "ATTEST",
+   "reason": "Area 48 cm², length 8 cm; width 48/8 = 6, perimeter 2*(8+6): 2*(8+48/8) = 28, key 28 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "12 by 8 rectangle with a 5 by 4 corner cut out: 12*8-5*4 = 96-20 = 76, key 76 cm².",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "Triangle on a line next to a 140° angle, so inside angle 180-140 = 40; another angle 30°: 180-(180-140)-30 = 110, key 110°.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "£8 less a £3.40 book: 8-3.40 = 4.60, key £4.60.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "4000 g in kilograms: 4000/1000 = 4, key 4 kg.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-MEAS-03",
+   "verdict": "ATTEST",
+   "reason": "£1.70 ruler plus £2.60 pen: 1.70+2.60 = 4.30, key £4.30. The expression is the question's own sum and is attested; see itemFault for the option set.",
+   "itemFault": "Option B '£4.3' has the same value as the key '£4.30', so the row has two correct answers. Being repaired at door ci-fix/content-02 (proposed replacement £5.30)."
+  },
+  {
+   "itemId": "MC05-MEAS-04",
+   "verdict": "ATTEST",
+   "reason": "Blue rope 74 cm, red 29 cm, how much longer: 74-29 = 45, key 45 cm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-MEAS-05",
+   "verdict": "ATTEST",
+   "reason": "Bus leaves 2:45 pm, journey 40 minutes: 15 min to 3:00, 25 more = 3:25 pm. A clock time is not one number; the drafter's 3:25 pm is the key 3:25 pm.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-MEAS-06",
+   "verdict": "ATTEST",
+   "reason": "Parcels 375 g and 246 g, total: 375+246 = 621, key 621 g.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-MEAS-07",
+   "verdict": "ATTEST",
+   "reason": "3 pens at £1.15, change from £5: 5-3*1.15 = 5-3.45 = 1.55 (float within tolerance), key £1.55.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-NPV-01",
+   "verdict": "ATTEST",
+   "reason": "Value of the 4 in 8,473: place-value reading (hundreds), no calculation. Bare 400 acceptable; key 400.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "verdict": "ATTEST",
+   "reason": "100 more than 5,960: 5960+100 = 6060, key 6060.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "verdict": "ATTEST",
+   "reason": "1,000 more than 9,500: 9500+1000 = 10500, key 10500.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-NPV-04",
+   "verdict": "ATTEST",
+   "reason": "Round 2,673 to the nearest 100: tens digit 7 rounds up to 2700. No + - * / form without the answer; bare acceptable. Key 2700.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-NPV-05",
+   "verdict": "ATTEST",
+   "reason": "Value of the 8 in 7.482: place-value reading (hundredths), no calculation. Bare 0.08 acceptable; key 0.08.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-NPV-06",
+   "verdict": "ATTEST",
+   "reason": "6°C falls by 10°C: 6-10 = -4, key -4. The question's own subtraction, crossing zero. On the doubt: a negative key is correct, and -4 is the only option equal to it (4, -3, -10 differ).",
+   "itemFault": "Notation, not answerability: the question is a temperature but every option is a bare number ('-4', '4', '-3', '-10') with no °C, against house notation for temperatures (should read -4°C etc.). The minus is also a hyphen-minus."
+  },
+  {
+   "itemId": "MC05-NPV-07",
+   "verdict": "ATTEST",
+   "reason": "Round 4,750 to the nearest 100: exactly halfway, rounds up to 4800. Bare acceptable (rounding has no + - * / form without the answer). Key 4800. On the doubt: round-half-up is the taught KS2 convention and the walk script states it. No item fault.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-RP-01",
+   "verdict": "ATTEST",
+   "reason": "4 pens cost 60p, cost of 6: 60/4 = 15p each, *6 = 90p, /100 = £0.90, key £0.90.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-RP-02",
+   "verdict": "ATTEST",
+   "reason": "5 pens for 100p (20p each) vs 4 for 60p (15p each): 100/5-60/4 = 5, key 5p.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "Red 10, Blue 9, Green 14, Yellow 8; Green+Red more than Blue+Yellow: (14+10)-(9+8) = 24-17 = 7, key 7.",
+   "itemFault": null
+  },
+  {
+   "itemId": "MC05-STATS-02",
+   "verdict": "ATTEST",
+   "reason": "Mean of 6, 9, 7, 10, 8 over five tests: (6+9+7+10+8)/5 = 40/5 = 8, key 8.",
+   "itemFault": null
+  }
+ ]
+}

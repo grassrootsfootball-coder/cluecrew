@@ -1,0 +1,18 @@
+{
+ "door": "ci-fix/content-02-r2",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "rebuild:MC05-MEAS-03",
+   "verdict": "ATTEST",
+   "reason": "Both round-1 faults are fixed and nothing else broke. Key: 1.70 + 2.60 = 4.30, so £4.30 is right. B £13.30, maths-13: 70p + 60p = 130p, write 30p, carry counted as £10 instead of £1, 10 + 1 + 2 = 13, giving £13.30. The arithmetic is right, and the library description of maths-13 names this mistake in its first clause ('counting the carried 1 as a full 10'). C £3.30 is now maths-69-dropped-calculation-carry: the carried £1 is dropped, 1 + 2 = 3, giving £3.30. That is the mistake maths-69 describes ('forgetting to add a carried ten or hundred to the next column's sum'), and the tag and execution now agree. D £5.00, maths-99: £1.70 rounds to £2 and £2.60 to £3, total £5.00; the 30p and 40p differences are right. Every number in each execution is on the row. The walk script trap line ('loses the carried pound, or counts it as ten pounds') matches C and B. The duplicate £4.3 is gone. Observation, not blocking: the maths-13 childHint ('Cross out your carried number once you add it...') speaks to the add-twice half of the entry, not the counted-as-ten half B uses. That is a library-hint generality question for a library review, not a fault in this row's tagging."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "MC05-MEAS-03",
+   "verdict": "SIGN",
+   "reason": "Read as it will be: 'Anya buys a ruler for £1.70 and a pen for £2.60. What is the total cost?' Options £4.30*, £13.30, £3.30, £5.00. It can be answered from the stem. The key £4.30 is the only correct value under any reading, and all four option values differ. Each distractor is wrong and comes from a named mistake. Pattern check: sorted, the values are 3.30, 4.30, 5.00, 13.30 (gaps 1, 0.70, 8.30). There is no evenly spaced run with the key in the middle, so the round-1 run is broken. The pair of options £1 apart (3.30 and 4.30) has the key as the larger, which is not a rule repeated across the row. £13.30 is a long way off and an estimating child can reject it, which makes it a weak distractor but not a fault. The vocabulary (ruler, pen, total cost, pounds and pence) suits a 9 to 11 year old in Britain. Notation is house style: £ with two decimal places. Precheck --from-live: 1 row touched, 1 passes every gate, 0 fail."
+  }
+ ]
+}

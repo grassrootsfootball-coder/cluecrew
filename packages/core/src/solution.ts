@@ -120,8 +120,20 @@ export function optionNumericValue(content: unknown): number | null {
         : null;
   if (raw === null) return null;
   const cleaned = raw.replace(/[£,]/g, '').trim();
+  // FRACTIONS FIRST (R1040). The leading-number match below read "5/8" as 5 and "1 3/4" as 1, so a
+  // fraction key would have "matched" any expression computing its numerator. Eleven LIVE maths
+  // keys are fractions. A time ("4:15 pm") or a coordinate is NOT a number: refuse it rather than
+  // return its first digits.
+  const mixed = /^(-?\d+)\s+(\d+)\/(\d+)(?!\S)/.exec(cleaned);
+  if (mixed) return Number(mixed[3]) === 0 ? null : Number(mixed[1]) + Math.sign(Number(mixed[1]) || 1) * (Number(mixed[2]) / Number(mixed[3]));
+  const frac = /^(-?\d+)\/(\d+)(?!\S)/.exec(cleaned);
+  if (frac) return Number(frac[2]) === 0 ? null : Number(frac[1]) / Number(frac[2]);
+  if (/^\d+:\d/.test(cleaned) || cleaned.startsWith('(')) return null;
   const match = /^-?\d+(\.\d+)?/.exec(cleaned);
-  return match ? Number(match[0]) : null;
+  if (!match) return null;
+  // Two quantities ("1 h 30 min") are not one number: refuse rather than return the first (R1040).
+  if (/\d/.test(cleaned.slice(match[0].length))) return null;
+  return Number(match[0]);
 }
 
 export interface SolutionCheck {

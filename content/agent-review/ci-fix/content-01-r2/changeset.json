@@ -1,0 +1,120 @@
+{
+ "door": "ci-fix/content-01-r2",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "MC05-CALC-08",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "I read the row as the child meets it. It is answerable; I recomputed the key 955 as the only correct value; 1,230, 2,195 and 1,045 are all wrong; every sentence is 16 words or fewer. The key is the smallest option, which is structural to 'how many are left' problems.",
+   "landedAt": "2026-11-22T21:17:11.879Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "A theatre has 3,150 seats. For a show, 16 rows of 120 seats are booked online, and another 275 seats are sold at the door. How many seats are still empty?",
+     "after": "A theatre has 3,150 seats. For a show, 16 rows of 120 seats are booked online. Another 275 seats are sold at the door. How many seats are still empty?"
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option B (cmteoreif000vtm2cf1d7j1qo).execution",
+     "before": null,
+     "after": "1,230 is 3,150 take away 1,920, the 16 rows of 120 booked online only. The 275 seats sold at the door are never used. All the seats taken make 1,920 + 275 = 2,195, which leaves 955."
+    },
+    {
+     "field": "option C (cmteoreif000wtm2c0emuhjnx).execution",
+     "before": null,
+     "after": "2,195 is the number of seats sold: 16 x 120 = 1,920, plus 275. That is a step on the way. The question asks for the empty seats, so 3,150 - 2,195 = 955."
+    },
+    {
+     "field": "option D (cmteoreif000xtm2ck05l79o7).execution",
+     "before": null,
+     "after": "1,045 comes from 3,150 - 2,195 taking the smaller digit from the larger in each column (5-0, 9-5, 1-1, 3-2) instead of exchanging. Exchanged properly, 3,150 - 2,195 = 955."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-003-A-PU-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/content-01-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "One error, at B, in one natural 23-word sentence. Every other segment is correct; No mistake is wrong; the walk names the second part; the hint is position-free. With this key at B, en-spag-punct-spot reads A2 B2 C2 D2 N1 over its 9 LIVE items.",
+   "landedAt": "2026-11-22T21:17:11.879Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at the mark in “It’s”. Stretch it out: “It is fur” does not work. The fur belongs to the rabbit, so “its” has no mark. The later marks hold.",
+     "after": "Start at the mark in “it’s”, in the second part. Stretch it out: “it is fur” does not work. The fur belongs to the rabbit, so “its” has no mark. So the second part has the mistake. “Rabbit’s”, “Mr Bhatt’s” and “today’s” hold."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Start at the mark in “It’s”. Stretch it out: “It is fur” does not work. The fur belongs to the rabbit, so “its” has no mark. The later marks hold."
+    },
+    {
+     "field": "option A (ENG-003-A-PU-03-OPT-A).value",
+     "before": "It’s fur was still damp,",
+     "after": "Ella dried the rabbit’s ears,"
+    },
+    {
+     "field": "option A (ENG-003-A-PU-03-OPT-A).isKey",
+     "before": true,
+     "after": false
+    },
+    {
+     "field": "option A (ENG-003-A-PU-03-OPT-A).tag",
+     "before": null,
+     "after": "en-apostrophe-possession"
+    },
+    {
+     "field": "option A (ENG-003-A-PU-03-OPT-A).execution",
+     "before": null,
+     "after": "“The rabbit’s ears” is right: the ears belong to one rabbit, so the mark goes before the s. A child unsure of possessive marks may blame it. The mistake is “it’s fur”, in the second part."
+    },
+    {
+     "field": "option B (ENG-003-A-PU-03-OPT-B).value",
+     "before": "so Ella dried the rabbit gently,",
+     "after": "but it’s fur was still damp,"
+    },
+    {
+     "field": "option B (ENG-003-A-PU-03-OPT-B).isKey",
+     "before": false,
+     "after": true
+    },
+    {
+     "field": "option B (ENG-003-A-PU-03-OPT-B).tag",
+     "before": "en-paired-punctuation",
+     "after": null
+    },
+    {
+     "field": "option C (ENG-003-A-PU-03-OPT-C).value",
+     "before": "checked Mr Bhatt’s chart",
+     "after": "so she wrapped it in Mr Bhatt’s towel"
+    },
+    {
+     "field": "option C (ENG-003-A-PU-03-OPT-C).execution",
+     "before": null,
+     "after": "“Mr Bhatt’s towel” is right: the towel belongs to one person, so the mark goes before the s. A child unsure of possessive marks may blame it. The mistake is “it’s fur”, in the second part."
+    },
+    {
+     "field": "option D (ENG-003-A-PU-03-OPT-D).execution",
+     "before": null,
+     "after": "“Today’s date” is right: the date belongs to today, so the mark goes before the s. A child unsure of possessive marks may blame it. The mistake is “it’s fur”, in the second part."
+    },
+    {
+     "field": "option N (ENG-003-A-PU-03-OPT-N).execution",
+     "before": null,
+     "after": "Choosing No mistake misses “it’s fur”: “it is fur” makes no sense, so the owning word “its” is needed, with no mark. The second part has the mistake."
+    }
+   ]
+  }
+ ]
+}

@@ -16,6 +16,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
 import { prisma } from '../../packages/db/src/index';
+import { exportContentSnapshot } from '../content-snapshot';
 import { publishBlockers, isHeldFromServing, caseFaceServes, checkItemChildFacing, isBlocking } from '../../packages/core/src/index';
 import { itemWholeness } from '../lib/item-wholeness';
 import { loadClearances } from '../lib/clearances';
@@ -137,4 +138,6 @@ async function run() {
   if (APPLY) writeFileSync(pjoin(REPO, 'content/exports', `${DOOR}-publication-${sha(body).slice(0, 16)}.json`), body);
   console.log(`\n  ${outcome}: live ${poolBefore} -> ${after}`);
 }
-run().catch((e) => { console.error(e); process.exitCode = 1; }).finally(async () => { await prisma.$disconnect(); });
+// R1040: an apply script re-exports what it changed as its final step (CLAUDE.md) — here the content
+// snapshot CI loads (R1039), so the committed snapshot follows the store rather than waiting to be noticed.
+run().then(() => { if (APPLY && !process.exitCode) exportContentSnapshot(); }).catch((e) => { console.error(e); process.exitCode = 1; }).finally(async () => { await prisma.$disconnect(); });
