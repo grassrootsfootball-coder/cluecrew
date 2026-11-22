@@ -1,0 +1,18 @@
+{
+  "door": "sweep-fix/maths-r2",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:cmteo82pl00hntmmj3pf8dg53",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: 18 + 9 + 18 + 9 in columns, ones 8 + 9 + 8 + 9 = 34 (write 4, carry 3); tens 1 + 1 + 3 = 5 gives 54 cm (key, = 2 x 27). Adding the carried 3 twice gives tens 1 + 1 + 3 + 3 = 8, so 84 cm. Every number in the execution is on the row or follows from it and every sum is right. maths-13 ('Counting the carried 1 ... or adding it twice', DB description) names exactly this mistake; the identical execution is already LIVE on MC04-GEOM-01 (80 cm). Tag occurs 14 times on the door (>= 10). Live value 44 cm / maths-69 matched the packet before review."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC05-GEOM-01",
+      "verdict": "SIGN",
+      "reason": "As it will stand: stem 18 cm by 9 cm, perimeter; options 54 cm (key), 45 cm (three sides, 18 + 18 + 9), 162 cm (18 x 9, area's number), 84 cm (carry added twice). All in cm, key correct and the only correct option, each distractor wrong with a distinct diagnosis. Walk script (add long + short, double, 54 cm; one trap swaps in the area) and hint still true. Key is now second-smallest; measure --after: 0 groups flagged, GEOM-01 template ranks 2/2/0/1/1, shape 'a rectangle is # long' 2/2/1/1. Precheck --from-live: 1 row, passes every gate."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+ "door": "sweep-fix/english-07",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-020-HD-06",
+  "ENG-020-HD-03",
+  "ENG-018-RB-11"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-020-HD-09",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-020-HD-09",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "walkScript",
+    "reason": "The named line fault is fixed, but the row as it will stand has two faults. (1) walkScript: it never states the key. It ends 'The word names what she could not do to the sob.', which points at the answer but does not say it, so it does not reach 'to hold back a thing that is coming out'. The walk script must state the key. (2) execution on 'To sit quietly at the table.': it says 'True at line 38', but 'must sit quietly at table' is on line 39. Line 39 is also outside the cited window (37 and 38), so en-within-span-wrong-element ('true inside the cited window') does not exactly fit as written."
+   }
+  },
+  {
+   "itemId": "ENG-018-RB-12",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-018-RB-12",
+     "verdict": "REFUSE",
+     "reason": "RB-12: the hint no longer assumes a thoughts line, and both distractors are recast inside the question's frame. Two new faults come with them. (1) The new execution for 'We are told she feels shy at first...' says 'no line tells us what she feels', which is untrue. At lines 57 and 58 she tells us herself ('down there I felt like our setting hen'), and line 56 has her speak 'delightedly'. The true claim is that no line tells us she is shy. (2) The recast makes the key the odd one out by form. Three options now open 'We are told she ...', echoing the stem's 'are we told', while the key alone opens 'We hear what she says' and alone carries 'never'. A child who picks the option that does not match can find the key without reading."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-018-RB-12",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "options",
+    "reason": "The original faults are fixed: both distractors now answer 'how much are we told', and the hint no longer assumes a thoughts line. The row as it will stand has three faults. (1) options: three distractors open 'We are told she ...', echoing the stem, while the key alone opens 'We hear what she says' and alone says 'never'. The key stands out by form. (2) execution on the shy option: 'no line tells us what she feels' is untrue, because she says 'down there I felt like our setting hen' at lines 57 and 58. (3) walkScript, unchanged: it never states the key. It ends on Mr Cobb's thought at line 60 ('it is his thought, not hers') and never says that we hear her speech but are never let inside her head."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-07",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-019-BV-07",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "walkScript",
+    "reason": "The named line fault is fixed, and the key, distractors and line numbers check against lines 26 to 28. But the walk script still never states the key. It ends 'The word has to name what steep is the opposite of.', a pointer, and never says 'low and sloping gently down to the water'. The walk script must state the key."
+   }
+  },
+  {
+   "itemId": "ENG-020-HD-12",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-020-HD-12",
+     "verdict": "REFUSE",
+     "reason": "HD-12, judged as a new question: narrowing the stem fixes the clothes and promise rival, and the new walk (lines 13 to 15, 18 and 19, 40 and 41, 42 and 43) is accurate and states the key. But the new stem breaks two distractors that it did not rewrite. It now asks 'how these things happen' about the bread and hat being taken and the hat coming back. 'What is taken is missed by all, but only Heidi says so.' has both halves about the taking and says nothing of the hat or of how anything happens, so the stem's own wording rules it out. This is the off-frame fault the sweep held BV-12 and RB-12 for. Its execution ('Fraulein Rottenmeier runs out of the room at line 25 and never comes back') does not show why 'missed by all' is false. 'What is taken is judged by the writer, but the giving is never judged.' now points at a 'giving' the stem no longer names: the hat 'comes back', and the only giving left in the passage is Clara's promise, which the narrowing was meant to exclude."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-020-HD-12",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "options",
+    "reason": "The original fault is gone: the stem no longer admits Clara's promise or the clothes, and the walk no longer cites lines 4 and 6. The key is now the only true option. But two distractors no longer fit the new question. 'What is taken is missed by all, but only Heidi says so.' says nothing about the hat or about how anything happens, so the stem rules it out. Its execution does not show why it is false. 'What is taken is judged by the writer, but the giving is never judged.' names a 'giving' that the narrowed stem does not contain. Only the key and 'taken gently ... sharp words' answer how the taking and the hat's return happen."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-019-BV-12",
+     "verdict": "REFUSE",
+     "reason": "BV-12, judged as a new question: the stem's second half, 'how does he state them?', is answered by the key and by no distractor. The key also takes its verb from the stem ('states them like plain fact'), and no other option shares that word. 'He says the captain does everything...' answers neither half, which its own new execution admits. 'The writer gives the rules, and tells us that they are fair.' answers where the rules come from and then gives a verdict, not a way of stating them. 'He and Mark agree on them together, and Mark is happy with them.' answers where and then Mark's feelings. So a child can find the key from the stem alone, by keeping the one option that says how he states them. That is the stem-alone fault the sweep named, now concentrated on the key. The quotations in the new executions are exact: lines 12 and 13, 14, 14 and 15, 18, 87 and 88, and 90."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-019-BV-12",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "faultField": "stem",
+    "reason": "Judged as a new question. The original fault was that distractors fell outside the stem's frame. It is not fixed, only moved. The stem asks 'how does he state them?', and only the key answers that. The key also echoes the stem's verb ('states'), and no other option does. 'He says the captain does everything...' answers neither half, as its own execution says. The other two distractors answer only where the rules come from. So the stem alone finds the key. The key itself is correct: Bevis speaks every rule (lines 14 and 15, 87 and 88, 90) and states them flatly ('Of course', 'Impossible'). The walk script's quotations are exact, and it states the key."
+   }
+  }
+ ]
+}

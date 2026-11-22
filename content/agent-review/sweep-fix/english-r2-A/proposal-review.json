@@ -1,0 +1,106 @@
+{
+ "door": "sweep-fix/english-r2-A",
+ "reviewer": "rev-agent-01",
+ "round": 2,
+ "precheck": "--precheck --from-live: 8 rows touched, 8 pass every gate, 0 fail (run before writing verdicts; a gate pass was not taken as a reason to attest).",
+ "changes": [
+  {
+   "ref": "rebuild:ENG-001-WIW-12",
+   "verdict": "ATTEST",
+   "reason": "The refused 'A lake.' is gone. 'Playmates that shook themselves free.' is real text inside the window (line 31, 'fresh playmates that shook themselves' running to 'free' on line 32; cited where it starts, the accepted precedent). It is not the river and nothing says he had never seen it, so en-within-span-wrong-element fits and there is no second answer. The hint that excluded the key is replaced; Annie's marker cleared and both earlier texts kept."
+  },
+  {
+   "ref": "rebuild:ENG-001-WIW-09",
+   "verdict": "ATTEST",
+   "reason": "Round 1's attested hint is carried unchanged. The walk now says 'Lines 22 and 23 are the rabbit's one speech', which is true (line 22 'Hold up!' to line 23 'the private road!'), and it ends on the key: sixpence for using the private road. Nothing else changed."
+  },
+  {
+   "ref": "rebuild:ENG-001-WIW-13",
+   "verdict": "ATTEST",
+   "reason": "Judged as a new question. All five options now open 'To show', so the 'To make' odd-one-out is gone. Word counts are 12 for the key against 11, 11, 12 and 14, so the key is neither shortest nor longest. The key, 'full of life and always moving', is the only reading lines 30 to 31 support. Chasing, chuckling, 'with a laugh' and 'fresh playmates' rule out danger. Line 29 (river), line 33 (bewitched, entranced) and line 39 (the hole) all check. The walk ends on the key's words."
+  },
+  {
+   "ref": "rebuild:ENG-001-WIW-14",
+   "verdict": "ATTEST",
+   "reason": "Judged as a new question. Round 1's lineRefs [33, 34, 35, 36] are carried. The key now opens 'The Mole was', like all four distractors. At 12 words it sits inside the 8 to 13 range. 'So interested in the river that he followed it' is the tenor of the line 34 to 35 comparison (trotting beside the river, held spell-bound) and is the only defensible reading. The walk ends 'He is so interested in it that he follows it.'"
+  },
+  {
+   "ref": "rebuild:ENG-005-BB-04",
+   "verdict": "ATTEST",
+   "reason": "The new hint is 'Put each meaning in the place of bait in line 14. Read the whole sentence each time.' It names the substitution move only. It names no sense, frames no category (round 1's 'need' framing is gone) and leaves all four options to be tested. Options, stem and walk are unchanged."
+  },
+  {
+   "ref": "rebuild:ENG-014-TS-03",
+   "verdict": "ATTEST",
+   "reason": "Round 1's gate-forced 'full of hope' reword is carried; its execution quotes line 12 'his heart was light and his anticipations high' exactly. The new hint, 'Find the things Ben does in lines 10 to 14', spans the whole window. Ben hoves in sight, hop-skip-and-jumps, eats an apple, whoops and plays a steamboat, so the hint does not pin the key's line. It is the move the sweep suggested."
+  },
+  {
+   "ref": "rebuild:ENG-011-CV-03",
+   "verdict": "ATTEST",
+   "reason": "Round 1's attested seat ('both run away') is carried. The walk now ends 'So the squirrels peer and the rabbits run away.', which states the key. 'White tails in the air' is line 7. The squirrels peer on line 6, though they are named at the end of line 5. The hint no longer counts 'two actions', so it no longer rules out the both-run option without the passage."
+  },
+  {
+   "ref": "rebuild:ENG-021-ED-07",
+   "verdict": "ATTEST",
+   "reason": "The false bargain claim and round 1's pointer at the gathering-up are both gone. 'Line 23 shows what game the men are playing' sets the card context ('threw down the cards', 'Two trumps'). That context holds both card options, the key and the gather-up distractor, so it points at neither. The substitution move leaves every option standing. Options and walk are unchanged."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-001-WIW-12",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "The second answer is gone. 'A river.' is the only thing line 29 says he had never seen. Meadow (line 15), face (line 48) and sunshine (line 14) are wrong by their tags. The hint names a locating move: the 'never' sentence runs lines 29 to 32 and holds both the river and the playmates. The walk states 'a river'. Sentences are within the cap."
+  },
+  {
+   "itemId": "ENG-001-WIW-09",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Hint is true and leaves both sixpence and privilege standing in lines 22 to 23. The walk's line numbers are now right and it states the key. The privilege option reverses the exchange and is not a second answer. Spring-cleaning (line 1), boat (line 63) and onion-sauce (line 25) all check."
+  },
+  {
+   "itemId": "ENG-001-WIW-13",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "There is no form or length tell now. There is one defensible answer, and every execution is true against lines 29 to 33 and 39. The unchanged hint ('What sort of creature does all that?') leaves the animal options standing as traps and does not use the key's words. The walk states the key."
+  },
+  {
+   "itemId": "ENG-001-WIW-14",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "lineRefs agree with the stem and all options are in one form. There is one defensible answer: 'too small', 'younger' and 'looking for a man' each misread the comparison, and 'tired and wanted to go home' pulls line 35 out of place. The walk states the key. Note, not a hold: the stem quote's own lineRefs [34, 35, 36] reach one line past where the quote ends (line 35). This was accepted in round 1 and is untouched."
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "The hint no longer names the fishing sense or frames the answer. Line 14 ('of course I had a good bait' on arrival) fixes feed and rest. The 'long wait with nothing to eat' clashes with 'good'. Lure and trick do not fit an arriving horse. The walk states food and rest."
+  },
+  {
+   "itemId": "ENG-014-TS-03",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "The either/or is gone and the new hint pins no single option's line. The key (hop-skip-and-jump, lines 11 to 12) is the only sign. The light-heart option repeats the conclusion of line 12. The calm is Tom's (line 10). The apple (lines 12 to 13) is not a sign. The walk names the gait as the sign."
+  },
+  {
+   "itemId": "ENG-011-CV-03",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "options",
+   "reason": "The pheasant fault is fixed and the walk and hint are now sound. But the option 'The rabbits run out into the road ahead of them.' says nothing about the squirrels. The stem asks what the squirrels AND the rabbits do, so the stem alone rules it out. That is the same elimination-by-stem the original finding named, which noted that this option covers only the rabbits. Replace it with a distractor that names both animals and is wrong against lines 5 to 7, for example one with a not-stated action."
+  },
+  {
+   "itemId": "ENG-021-ED-07",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "The hint is true of line 23 and points at no option: the card context holds both the key and the gather-up distractor. 'Deal' means give out, so only the key is defensible. Bargain, 'a great deal' and gathering (the act before dealing, line 24) are each wrong by their tags. The walk states the key."
+  }
+ ]
+}

@@ -1,0 +1,321 @@
+{
+ "door": "sweep-fix/vr-r2",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; 43 the only option fitting gaps growing by 3; 40 and 44 each wrong as tagged; options [40, 43, 44], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Notice the gaps between 17, 19, 24 and 32. They are 2, 5 and 8. Each gap grows by 3. Add the next gap of 11 to 32 to reach 43. The number 40 repeats the gap of 8. The number 42 is one short.",
+     "after": "Notice the gaps between 17, 19, 24 and 32. They are 2, 5 and 8. Each gap grows by 3. Add the next gap of 11 to 32 to reach 43. The number 40 repeats the gap of 8. The number 44 is one too many."
+    },
+    {
+     "field": "option gen-vr-11-number-series-16-opt3 (gen-vr-11-number-series-16-opt3).value",
+     "before": "42",
+     "after": "44"
+    },
+    {
+     "field": "option gen-vr-11-number-series-16-opt3 (gen-vr-11-number-series-16-opt3).execution",
+     "before": "Had the rule right but slipped by one on the last jump, giving 42 instead of 43.",
+     "after": "Had the rule right but slipped by one on the last jump, giving 44 instead of 43."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-23",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; 40 the only option fitting gaps growing by 2; 38 and 39 each wrong as tagged; options [38, 39, 40], key largest. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "See 6, 10, 7, 11. Two chains hide inside: 6 and 7, then 10 and 11. The first chain is next, so 7 steps to 8. Then 7 and 9 drift one off; 12 keeps to chain two.",
+     "after": "Notice the gaps between 12, 16, 22 and 30. They are 4, 6 and 8. Each gap grows by 2. Add the next gap of 10 to 30 to reach 40. The number 38 repeats the gap of 8. The number 39 is one short."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-11-number-series-23-opt2 (gen-vr-11-number-series-23-opt2).execution",
+     "before": null,
+     "after": "Reused the previous gap of 8 instead of letting it grow, giving 38 instead of 40."
+    },
+    {
+     "field": "option gen-vr-11-number-series-23-opt3 (gen-vr-11-number-series-23-opt3).value",
+     "before": "41",
+     "after": "39"
+    },
+    {
+     "field": "option gen-vr-11-number-series-23-opt3 (gen-vr-11-number-series-23-opt3).execution",
+     "before": null,
+     "after": "Had the rule right but slipped by one on the last jump, giving 39 instead of 40."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; 52 the only option fitting gaps growing by 3; 49 and 53 each wrong as tagged; options [49, 52, 53], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Notice the gaps between 18, 22, 29 and 39. They are 4, 7 and 10. Each gap grows by 3. Add the next gap of 13 to 39 to reach 52. The number 49 repeats the gap of 10. The number 51 is one short.",
+     "after": "Notice the gaps between 18, 22, 29 and 39. They are 4, 7 and 10. Each gap grows by 3. Add the next gap of 13 to 39 to reach 52. The number 49 repeats the gap of 10. The number 53 is one too many."
+    },
+    {
+     "field": "option gen-vr-11-number-series-08-opt3 (gen-vr-11-number-series-08-opt3).value",
+     "before": "51",
+     "after": "53"
+    },
+    {
+     "field": "option gen-vr-11-number-series-08-opt3 (gen-vr-11-number-series-08-opt3).execution",
+     "before": "Had the rule right but slipped by one on the last jump, giving 51 instead of 52.",
+     "after": "Had the rule right but slipped by one on the last jump, giving 53 instead of 52."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; 54 the only option fitting gaps growing by 3; 51 and 55 each wrong as tagged; options [51, 54, 55], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Notice the gaps between 12, 18, 27 and 39. They are 6, 9 and 12. Each gap grows by 3. Add the next gap of 15 to 39 to reach 54. The number 51 repeats the gap of 12. The number 53 is one short.",
+     "after": "Notice the gaps between 12, 18, 27 and 39. They are 6, 9 and 12. Each gap grows by 3. Add the next gap of 15 to 39 to reach 54. The number 51 repeats the gap of 12. The number 55 is one too many."
+    },
+    {
+     "field": "option gen-vr-11-number-series-20-opt3 (gen-vr-11-number-series-20-opt3).value",
+     "before": "53",
+     "after": "55"
+    },
+    {
+     "field": "option gen-vr-11-number-series-20-opt3 (gen-vr-11-number-series-20-opt3).execution",
+     "before": "Had the rule right but slipped by one on the last jump, giving 53 instead of 54.",
+     "after": "Had the rule right but slipped by one on the last jump, giving 55 instead of 54."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-03",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; 38 the only option fitting gaps growing by 2; 36 and 39 each wrong as tagged; options [36, 38, 39], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "See 4, 8, 5, 9. Two chains hide: 4 and 5, then 8 and 9. The first chain is next, so 5 makes 6. Here 5 and 7 miss by one; 10 rides the other chain.",
+     "after": "Notice the gaps between 10, 14, 20 and 28. They are 4, 6 and 8. Each gap grows by 2. Add the next gap of 10 to 28 to reach 38. The number 36 repeats the gap of 8. The number 39 is one too many."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-11-number-series-03-opt2 (gen-vr-11-number-series-03-opt2).execution",
+     "before": null,
+     "after": "Reused the previous gap of 8 instead of letting it grow, giving 36 instead of 38."
+    },
+    {
+     "field": "option gen-vr-11-number-series-03-opt3 (gen-vr-11-number-series-03-opt3).execution",
+     "before": null,
+     "after": "Had the rule right but slipped by one on the last jump, giving 39 instead of 38."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-07",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; 38 the only option fitting gaps growing by 2; 36 and 37 each wrong as tagged; options [36, 37, 38], key largest. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read 8, 11, 9, 12 slowly. Two chains sit inside: 8 and 9, plus 11 and 12. Chain one is next, so 9 steps to 10. Both 9 and 11 land one apart; 13 follows chain two.",
+     "after": "Notice the gaps between 14, 17, 22 and 29. They are 3, 5 and 7. Each gap grows by 2. Add the next gap of 9 to 29 to reach 38. The number 36 repeats the gap of 7. The number 37 is one short."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-11-number-series-07-opt2 (gen-vr-11-number-series-07-opt2).execution",
+     "before": null,
+     "after": "Reused the previous gap of 7 instead of letting it grow, giving 36 instead of 38."
+    },
+    {
+     "field": "option gen-vr-11-number-series-07-opt3 (gen-vr-11-number-series-07-opt3).value",
+     "before": "39",
+     "after": "37"
+    },
+    {
+     "field": "option gen-vr-11-number-series-07-opt3 (gen-vr-11-number-series-07-opt3).execution",
+     "before": null,
+     "after": "Had the rule right but slipped by one on the last jump, giving 37 instead of 38."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-11",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; 29 the only option fitting gaps growing by 2; 27 and 28 each wrong as tagged; options [27, 28, 29], key largest. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at 3, 5, 4, 6. Two counts weave in: 3 and 4, then 5 and 6. The first count follows, so 4 makes 5. Nearby 4 and 6 sit one off; 7 chases the other count.",
+     "after": "Notice the gaps between 9, 11, 15 and 21. They are 2, 4 and 6. Each gap grows by 2. Add the next gap of 8 to 21 to reach 29. The number 27 repeats the gap of 6. The number 28 is one short."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-11-number-series-11-opt2 (gen-vr-11-number-series-11-opt2).execution",
+     "before": null,
+     "after": "Reused the previous gap of 6 instead of letting it grow, giving 27 instead of 29."
+    },
+    {
+     "field": "option gen-vr-11-number-series-11-opt3 (gen-vr-11-number-series-11-opt3).value",
+     "before": "30",
+     "after": "28"
+    },
+    {
+     "field": "option gen-vr-11-number-series-11-opt3 (gen-vr-11-number-series-11-opt3).execution",
+     "before": null,
+     "after": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-15",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; 49 the only option fitting gaps growing by 2; 47 and 50 each wrong as tagged; options [47, 49, 50], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Point along 7, 13, 8, 14. Two chains take turns: 7 and 8, then 13 and 14. Chain one is next, so 8 climbs to 9. Here 8 and 10 land one away; 15 stays on chain two.",
+     "after": "Notice the gaps between 13, 19, 27 and 37. They are 6, 8 and 10. Each gap grows by 2. Add the next gap of 12 to 37 to reach 49. The number 47 repeats the gap of 10. The number 50 is one too many."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-11-number-series-15-opt2 (gen-vr-11-number-series-15-opt2).execution",
+     "before": null,
+     "after": "Reused the previous gap of 10 instead of letting it grow, giving 47 instead of 49."
+    },
+    {
+     "field": "option gen-vr-11-number-series-15-opt3 (gen-vr-11-number-series-15-opt3).execution",
+     "before": null,
+     "after": "Had the rule right but slipped by one on the last jump, giving 50 instead of 49."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-19",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Answerable from the series; 40 the only option fitting gaps growing by 2; 38 and 41 each wrong as tagged; options [38, 40, 41], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read across 2, 7, 3, 8. Two chains are woven in: 2 and 3, plus 7 and 8. The first chain comes next, so 3 turns to 4. Both 3 and 5 miss by one; 9 tags the other chain.",
+     "after": "Notice the gaps between 8, 13, 20 and 29. They are 5, 7 and 9. Each gap grows by 2. Add the next gap of 11 to 29 to reach 40. The number 38 repeats the gap of 9. The number 41 is one too many."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-11-number-series-19-opt2 (gen-vr-11-number-series-19-opt2).execution",
+     "before": null,
+     "after": "Reused the previous gap of 9 instead of letting it grow, giving 38 instead of 40."
+    },
+    {
+     "field": "option gen-vr-11-number-series-19-opt3 (gen-vr-11-number-series-19-opt3).execution",
+     "before": null,
+     "after": "Had the rule right but slipped by one on the last jump, giving 41 instead of 40."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-14",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "select the only synonym of choose; refuse (opposite), buy (shop scene) and answer (quiz scene) correct in no sense of choose (pick, decide, wish); all verbs, no option stands out; vocabulary suitable; no walk script on the row, hint is the tag's childHint.",
+   "landedAt": "2026-11-22T17:41:43.085Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-14-opt4 (gen-vr-21-same-meaning-14-opt4).value",
+     "before": "want",
+     "after": "answer"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-14-opt4 (gen-vr-21-same-meaning-14-opt4).execution",
+     "before": "The task is to find the word that means the same as 'choose', and the key is 'select'. You choose what you want, so the two go together, but wanting is wishing for it, not picking it. A child who picks a word that goes with 'choose', not one that means the same, picks 'want' instead of 'select'.",
+     "after": "The task is to find the word that means the same as 'choose', and the key is 'select'. In a quiz you choose an answer, so the two go together, but to answer means to reply. No sense of 'choose' (pick, decide or wish) means answer. A child who picks a word that goes with 'choose', not one that means the same, picks 'answer' instead of 'select'."
+    }
+   ]
+  }
+ ]
+}

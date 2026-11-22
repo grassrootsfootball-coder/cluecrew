@@ -1,0 +1,349 @@
+{
+ "door": "sweep-fix/english-r2-B",
+ "proposer": "agent",
+ "ruling": "R1037",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-010-JE-01",
+   "why": "Round 2 (R1037): carries round 1's attested hint 'Read the whole of line 2 before you choose.'; the walk script, held for never stating the key and for keeping the struck steer 'Read what she sits on', now ends on the key.",
+   "stem": {
+    "text": "Look at lines 1 and 2. Where does Jane sit down?",
+    "quotes": [],
+    "passageRef": "stream-a-11-jane-eyre",
+    "orderAnchor": 1
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vq00getmbv2u7stla3",
+     "value": "On a stile that leads into a field.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4vq00gftmbvm28itq4l",
+     "value": "In the field on the other side of the stile.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 2 names the field, but only as the place the stile leads into. She sits on the stile and never goes into the field."
+    },
+    {
+     "optionId": "cmsw2f4vq00ggtmbv281ducz4",
+     "value": "On a low wall beside the frozen causeway.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No wall appears anywhere in the lane; line 2 gives a stile."
+    },
+    {
+     "optionId": "cmsw2f4vq00ghtmbvf6k4trf0",
+     "value": "On a stile that leads into a lane.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "One word out: line 2 says the stile led into a field."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read the whole of line 2 before you choose.",
+    "_previousHintCore": "Read what she sits on, not where it goes.",
+    "walkScript": "Start at line 1. The lane goes up-hill, and she stops at the middle. There she sits down on a stile. Line 2 says the stile led into a field. She is on the stile, not in the field. So Jane sits on a stile that leads into a field.",
+    "_previousWalkScript": "Start at line 1. The lane goes up-hill, and she stops at the middle. Read what she sits on. The field is where the stile leads, not where she is."
+   }
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "why": "Round 2 (R1037): round 1's key echoed the stem ('before describing something' / 'before she describes'), and its order claim overstated lines 70 to 72, where the house is named at line 70 before the moon's gleam. The stem drops 'before describing something'; the key now names what both places share, the light letting her see clearly (line 51 'I could see him plainly'; line 71 the gleam 'bringing it out distinct and pale'), with no order claim. Walk rewritten to match and end on the key.",
+   "stem": {
+    "text": "Look at lines 51 to 56 and lines 70 to 72. Jane does the same thing in both places. What is it?",
+    "quotes": [],
+    "passageRef": "stream-a-11-jane-eyre",
+    "answerShape": "observation-bounded-by-conditions",
+    "orderAnchor": 9999,
+    "techniqueKey": "the-light-is-reported-before-the-description"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vz00hwtmbvxmvvrbp4",
+     "value": "She tells us the sun sank down crimson and clear behind the trees.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 8, and one sunset is not a thing she does each time."
+    },
+    {
+     "optionId": "cmsw2f4vz00hxtmbvtwwwf8bn",
+     "value": "She describes each person in full first, but gives their actions later.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "The traveller rides past at line 26 and falls at line 28, but is not described until lines 51 to 56."
+    },
+    {
+     "optionId": "cmsw2f4w000hytmbvzreaacp9",
+     "value": "She never describes a person, but only the weather and the sky.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Lines 52 to 56 describe the traveller closely, from his cloak to his age."
+    },
+    {
+     "optionId": "cmsw2f4w000hztmbvdsoy6cjn",
+     "value": "She tells us how the light lets her see something clearly.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 51 gives the last daylight and the bright moon. Then she says she could see him plainly. Line 71 gives the moon's gleam on Thornfield Hall. It makes the house stand out pale against the dark woods. In both places she tells us how the light lets her see something clearly.",
+    "_previousWalkScript": "Line 51 gives the daylight and the moon before the man is described. Line 53 keeps the description to general points, since details are not apparent. Line 71 gives the moon again before Thornfield is described. The light comes first, then the description."
+   }
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "why": "Round 2 (R1037): carries round 1's attested key 'The bleak moor, with a dangerous man hiding on it.'; the untouched walk listed lines 40 to 45 and stopped, so it now ends on the key.",
+   "stem": {
+    "text": "Look at lines 40 to 46. Even Sir Henry falls silent. What has chilled him?",
+    "quotes": [],
+    "passageRef": "stream-a-12-hound-baskervilles",
+    "orderAnchor": 40
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xj00qztmbvrgecxz0g",
+     "value": "He pulled his overcoat more closely round him.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 46 and names what he did rather than why he did it."
+    },
+    {
+     "optionId": "cmsw2f4xj00r0tmbvkb67v7p4",
+     "value": "The moor was mottled with gnarled and craggy cairns.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 41, and it is the look of the place rather than what chills him."
+    },
+    {
+     "optionId": "cmsw2f4xj00r1tmbvw3nx8s11",
+     "value": "The bleak moor, with a dangerous man hiding on it.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xj00r2tmbv1ycjfpic",
+     "value": "He is beginning to wish he had never come home.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plausible thought for him here; lines 40 to 46 never give it."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 40 has the huge expanse of the moor rise in front of them. Lines 42 and 43 put the escaped man out there, lurking like a beast. Line 44 says it needed but this to complete the grim feeling. At line 45 even Baskerville fell silent. So the bleak moor, with a dangerous man hiding on it, is what has chilled him.",
+    "_previousWalkScript": "Line 40 has the huge expanse of the moor rise in front of them. Lines 42 and 43 put the escaped man out there, lurking like a beast. Line 44 says it needed but this to complete the grim feeling. At line 45 even Baskerville fell silent."
+   }
+  },
+  {
+   "itemId": "ENG-002-pp-06",
+   "why": "Round 2 (R1037): the key was still the single longest option (53 characters against 40). Key now 'His two sisters, one husband and a young man.' (45 characters), and the two-husbands distractor is lengthened to 'His two sisters and both of the sisters' husbands.' (50) with the same meaning, tag and execution, so the key sits inside the distractors' range. Walk ends on the key.",
+   "stem": {
+    "text": "Read lines 17 to 23. Who actually came into the assembly-room with Mr Bingley?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 6
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tp0047tmbv2qjed913",
+     "value": "His five sisters and a cousin.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Five sisters and a cousin is line 20, the SECOND report. True, inside the window, and the wrong element for a question about who actually walked in."
+    },
+    {
+     "optionId": "cmsw2f4tp0048tmbvg2fhtmq7",
+     "value": "Twelve ladies and seven gentlemen.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Twelve ladies and seven gentlemen is the first report, at lines 17 and 18, inside the window. The child takes the first thing the village heard, where the stem asks who actually walked in, which lines 21 and 22 give as five people."
+    },
+    {
+     "optionId": "cmsw2f4tp0049tmbvgvz641ma",
+     "value": "His two sisters, Mr Hurst and Mr Bennet.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "One name changed: Mr Bennet for the young man. Everything else matches line 22."
+    },
+    {
+     "optionId": "cmsw2f4tp004atmbvxcya03ju",
+     "value": "His two sisters and both of the sisters' husbands.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Only one husband is named — 'the husband of the eldest' at line 22 — and a second is supplied."
+    },
+    {
+     "optionId": "cmsw2f4tp004btmbvl7ans6aa",
+     "value": "His two sisters, one husband and a young man.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Lines 21 to 23 name them. The group was 'only five altogether'. The bigger numbers in lines 17 to 20 were only reports. Take Mr Bingley out of the five. That leaves his two sisters, one husband and a young man.",
+    "_previousWalkScript": "Lines 21 to 23 name them. The group was 'only five altogether'. Take Mr Bingley out: two sisters, a husband, a young man. The bigger numbers come earlier."
+   }
+  },
+  {
+   "itemId": "ENG-002-pp-09",
+   "why": "Round 2 (R1037): carries round 1's attested option set (key 'Because he was handsome and people heard he was rich.', two-part 'friendly and kind' distractor). The hint asked what everybody HEARD, which only the key answers, so it now names the move only. The walk ended on the estate, so it now ends on the key.",
+   "stem": {
+    "text": "When Mr Darcy first walked in, the room thought very well of him. Read lines 26 to 30. Why?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 9
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ts004ptmbvsq6f4lim",
+     "value": "Because he danced with lots of different ladies.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Dancing every dance is Mr Bingley at line 37, carried across to Mr Darcy, who dances twice. In the window, line 27 answers the stem: 'drew the attention of the room by his fine'."
+    },
+    {
+     "optionId": "cmsw2f4ts004qtmbva58f6ihg",
+     "value": "Because he was friendly and kind to everyone he met.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Friendliness and kindness are nowhere in lines 26 to 30. Line 32 finds him proud and above his company, and line 40 has him decline being introduced to any other lady."
+    },
+    {
+     "optionId": "cmsw2f4ts004rtmbvl3pxfsdc",
+     "value": "Because he was the tallest man in the room.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "'The tallest man in the room' is the absolute version of line 27's 'fine, tall person'."
+    },
+    {
+     "optionId": "cmsw2f4ts004stmbv1wr7n84t",
+     "value": "Because he was handsome and people heard he was rich.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4ts004ttmbvfoia9jy3",
+     "value": "Because he owned a large estate in Derbyshire.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The Derbyshire estate is line 33, and it appears only when the room has turned against him. In the window, line 27 answers the stem: 'drew the attention of the room by his fine'."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Use only what lines 26 to 30 tell you about him.",
+    "_previousHintCore": "What had everybody heard about him within five minutes?",
+    "walkScript": "Start at line 27, with 'his fine, tall person'. Line 30 says the ladies found him much handsomer than Mr Bingley. Lines 28 and 29 add the report of 'ten thousand a year'. The estate in Derbyshire comes later, at line 33. So the room liked him because he was handsome and people heard he was rich.",
+    "_previousWalkScript": "Start at line 27, with 'his fine, tall person'. Line 29 adds 'ten thousand a year'. So his looks and his money won the room. The estate is named later."
+   }
+  },
+  {
+   "itemId": "ENG-025-LW-09",
+   "why": "Round 2 (R1037): carries round 1's three attested seats. The hint 'Meg names a moment, not a thing to say' no longer separated any option, so it now names the move only. The walk put 'got good-natured' on line 53 (it is line 54) and never stated the key; it now cites lines 53 and 54 and ends on the key.",
+   "stem": {
+    "text": "Look at lines 51 to 55. What does Meg tell Amy to wait for?",
+    "quotes": [],
+    "passageRef": "stream-a-16-little-women",
+    "orderAnchor": 51
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f500015jtmbvhousyaxb",
+     "value": "A quiet minute once Jo has cheered up.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f500015ktmbvidvxmyxq",
+     "value": "The next time the girls go skating.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "'Next time' comes from Amy's complaint at line 49, outside the window. At line 53 Meg says 'Go after them' now, and lines 53 and 54 have Amy wait only till Jo has got good-natured with Laurie."
+    },
+    {
+     "optionId": "cmsw2f500015ltmbvlnefuu3y",
+     "value": "Jo to be friends with her again.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 55, and it is what Meg says will follow Amy's kiss, not the moment to wait for. Lines 53 and 54 have Amy wait till Jo has got good-natured with Laurie, then take a quiet minute."
+    },
+    {
+     "optionId": "cmsw2f500015mtmbvof5oua5v",
+     "value": "Laurie to go off home and leave them alone.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Lines 53 and 54 tell Amy to wait until Jo has got good-natured with Laurie, then take a quiet minute. The child supplies a different, likely condition, Laurie going home, which Meg never gives."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Meg gives Amy steps to follow. Put them in the order she gives them.",
+    "_previousHintCore": "Meg names a moment, not a thing to say.",
+    "walkScript": "Line 53 has Meg tell Amy to go after them. Lines 53 and 54 say to wait till Jo has got good-natured with Laurie. Then, at line 54, Amy is to take a quiet minute. Being friends again comes after that, at line 55. So Meg tells Amy to wait for a quiet minute once Jo has cheered up.",
+    "_previousWalkScript": "Line 53 says go after them. Line 53 says say nothing till Jo has got good-natured. Line 54 says take a quiet minute."
+   }
+  },
+  {
+   "itemId": "ENG-017-CR-09",
+   "why": "Round 2 (R1037): carries round 1's attested first sentence 'Several people come up in these lines.' and restores 'Work out who is advising whom.' as the reviewer directed. The walk now closes on the key.",
+   "stem": {
+    "text": "Look at lines 38 to 42. What does Miss Jenkyns recommend to Boz?",
+    "quotes": [],
+    "passageRef": "stream-a-17-cranford",
+    "orderAnchor": 38
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4xv00sxtmbvwzajphpq",
+     "value": "That he take Dr Johnson's style as a model.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4xv00sytmbvvlg3ec9q",
+     "value": "That her father take Boz for a model.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Line 38 has her father recommending Johnson to her, so this turns the two round."
+    },
+    {
+     "optionId": "cmsw2f4xv00sztmbvs44ix6ee",
+     "value": "That he form his own style upon her letters.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 39 of HER, and it is what she did rather than what she advises."
+    },
+    {
+     "optionId": "cmsw2f4xv00t0tmbv536czlhm",
+     "value": "That he stop publishing his work in numbers.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True at line 35, outside this window; lines 38 to 42 say nothing about numbers."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Several people come up in these lines. Work out who is advising whom.",
+    "_previousHintCore": "Three people are named in these lines. Work out who is advising whom.",
+    "walkScript": "Line 38 says Dr Johnson's style is a model for young beginners. Lines 39 and 40 say she recommends it to your favourite, meaning Boz. Her own letters are the example, not the advice. So she recommends that he take Dr Johnson's style as a model.",
+    "_previousWalkScript": "Line 38 says Dr Johnson's style is a model for young beginners. Lines 39 and 40 say she recommends it to your favourite, meaning Boz. Her own letters are the example, not the advice."
+   }
+  }
+ ],
+ "notes": [
+  "ENG-010-JE-01: held because the untouched walk never stated the key and kept the struck steer 'Read what she sits on' -> round 1's attested hint carried; walk rewritten to end 'So Jane sits on a stile that leads into a field.'",
+  "ENG-010-JE-12: held for a stem echo (only the key said 'before', as the stem did) and for an order claim lines 70 to 72 do not support -> stem now 'Jane does the same thing in both places. What is it?'; key 'She tells us how the light lets her see something clearly.' (11 words; distractors 12 to 13); walk on lines 51 and 71 ends on the key. techniqueKey left as stored (staff-facing; Cowork's name).",
+  "ENG-016-HB-07: held because the untouched walk never stated the key -> round 1's attested key carried; walk unchanged except a closing sentence stating the key.",
+  "ENG-002-pp-06: held because the key was still the longest option -> key 'His two sisters, one husband and a young man.' (45 chars); 'both their husbands' distractor lengthened to 'His two sisters and both of the sisters' husbands.' (50 chars, same tag/execution); walk ends on the key.",
+  "ENG-002-pp-09: held because the hint ('What had everybody heard...') shared 'heard' with the key alone and only the key answered it -> hint now 'Use only what lines 26 to 30 tell you about him.'; round 1's attested options carried; walk ends on the key.",
+  "ENG-025-LW-09: held because the hint no longer separated any option and the walk misplaced line 54 and never stated the key -> round 1's three attested seats carried; hint 'Meg gives Amy steps to follow. Put them in the order she gives them.'; walk cites lines 53 to 55 and ends on the key.",
+  "ENG-017-CR-09: held for the non-standard 'to who' -> hint 'Several people come up in these lines. Work out who is advising whom.'; walk gains a closing sentence stating the key.",
+  "ENG-010-JE-08: excluded by instruction (needs a fourth option, which the lander cannot create)."
+ ]
+}

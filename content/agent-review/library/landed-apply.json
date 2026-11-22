@@ -294,38 +294,62 @@
  },
  {
   "id": "vr14-step-direction",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Draw the arrow: which way did the first pair travel?",
-   "description": "Moved backwards through the alphabet instead of forwards."
-  },
-  "after": {
-   "description": "Moved the opposite way through the alphabet to the first pair.",
-   "childHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "en-article-avoids-the-sound-choice",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?",
-   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear."
-  },
-  "after": {
-   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
-   "childHint": "This gap wants a or an. Hear the next word in your head. Which sound starts it?"
-  }
+  "outcome": "already attested"
  },
  {
   "id": "vr13-wrong-pieces",
+  "outcome": "already attested"
+ },
+ {
+  "id": "maths-85-miscount-or-rounding-in-measures",
   "outcome": "TRANSFORMED + ATTESTED",
   "before": {
-   "childHint": "Look at where the example word takes its letters from. Copy those exact positions.",
-   "description": "Took letters from the middle instead of the shown positions."
+   "childHint": "Use multiplication for repeated groups. Take the exact price and multiply by the exact count.",
+   "description": "Adding the item count to the price or multiplying by one fewer item."
   },
   "after": {
-   "description": "Took letters from other places in the outer words instead of the positions the example shows.",
-   "childHint": "Look at where the example word takes its letters from. Copy those exact positions."
+   "description": "A miscount or a rounding slip: multiplying by one group too few, or rounding a number and not adjusting back.",
+   "childHint": "Count the groups or steps again before you work it out. Use the exact number, not one more or one fewer."
+  }
+ },
+ {
+  "id": "maths-79-dividing-by-a-fraction-error",
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "How many halves can you pour into one whole litre?",
+   "description": "Adding the fraction or treating a half as one whole when dividing."
+  },
+  "after": {
+   "description": "Adding the fraction or treating a half as one whole when dividing.",
+   "childHint": "Each bag or glass holds only part of one kilogram or litre. So do not count one bag or glass for each kilogram or litre."
+  }
+ },
+ {
+  "id": "maths-47-translation-by-gap",
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Pick one corner on the first shape. Count the squares to that same corner on the new shape.",
+   "description": "Counting the squares between two shapes instead of point-to-point."
+  },
+  "after": {
+   "description": "Counting the squares in between instead of the jumps from point to point, so each move comes out one short.",
+   "childHint": "Do not count the point you start on. Each jump to the next grid line counts as one square."
+  }
+ },
+ {
+  "id": "vr-move-letter-second-word-invalid",
+  "outcome": "TRANSFORMED + ATTESTED",
+  "before": {
+   "childHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+   "description": "Chose a letter that does not make a real second word when added."
+  },
+  "after": {
+   "description": "Chose a letter that does not make a real second word when added.",
+   "childHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
   }
  }
 ]

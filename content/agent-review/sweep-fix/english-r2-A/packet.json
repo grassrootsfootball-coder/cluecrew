@@ -1,0 +1,3723 @@
+{
+ "door": "sweep-fix/english-r2-A",
+ "round": 2,
+ "questionType": "english",
+ "ruling": "R1037",
+ "entries": {
+  "en-a-an-by-spelling": {
+   "description": "Chooses a/an by following letter rather than sound.",
+   "childHint": "Listen to the sound that starts the next word."
+  },
+  "en-agent-patient-reversal": {
+   "description": "Swaps who did or thought something, or who it was done to.",
+   "childHint": "Ask who is doing it and who it is being done to."
+  },
+  "en-apostrophe-possession": {
+   "description": "Misses possessive apostrophes; confuses its/it's.",
+   "childHint": "Ask whose it is. An owner needs an apostrophe straight after the owner word, like children's or boys'. Owner words like its, his, ours and theirs never have one. If you see it's, try swapping in 'it is'."
+  },
+  "en-article-avoids-the-sound-choice": {
+   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
+   "childHint": "This gap wants a or an. Hear the next word in your head. Which sound starts it?"
+  },
+  "en-article-definiteness": {
+   "description": "Chooses between a, the and no article by habit, missing that the thing has already been named in the text or is one of a kind. Distinct from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "Has the text named it already? That changes which little word fits."
+  },
+  "en-attribute-transfer": {
+   "description": "Assigns a detail the text gives to one character or thing to another, or the right attribute at the wrong value.",
+   "childHint": "Check who or what each detail belongs to in the text."
+  },
+  "en-cause-agent-swap": {
+   "description": "Attributes the right event to the wrong cause or character.",
+   "childHint": "Ask who did this, or what caused it, in the text. Re-read the moment step by step."
+  },
+  "en-chronology-collapse": {
+   "description": "The child picks a cause that happens LATER in the passage than the effect being asked about. The two events are both real and both about the same people, so the option reads well; only the order rules it out.",
+   "childHint": "Check what happened first, and what the question asks for."
+  },
+  "en-comma-subject-verb-split": {
+   "description": "Accepts a comma cutting subject from verb.",
+   "childHint": "Never let a single comma cut the do-er off from the doing."
+  },
+  "en-comparative-superlative-form": {
+   "description": "Errors in forming or choosing comparatives and superlatives: double marking (most fastest), the comparative used for a whole group, or the bare adjective after 'the'.",
+   "childHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job."
+  },
+  "en-comparison-vehicle-misread": {
+   "description": "Child gives the quality of the thing a comparison compares TO, where the answer is the quality of the thing being described — reading the vehicle of a simile or metaphor as the subject.",
+   "childHint": "Find the two things being compared. The one being described is the one that matters."
+  },
+  "en-conjunction-logic": {
+   "description": "Chooses a conjunction with the wrong logical relation.",
+   "childHint": "Is the second idea a reason, a surprise, or just what happened next?"
+  },
+  "en-contraction-apostrophe": {
+   "description": "Omits or misplaces the apostrophe in a contraction: Youre for You're, dont for don't, wont for won't.",
+   "childHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were."
+  },
+  "en-contradicted-by-the-text": {
+   "description": "Chooses an option the passage explicitly denies, rather than one it merely fails to support. Distinguished from a plausible option the passage never states: here the passage states the contrary. Negation-dropped loses a WORD; this loses a CLAIM, and the option may share no wording with the line that refutes it.",
+   "childHint": "The passage says something different. Go back and find it."
+  },
+  "en-coordination-wrong-conjunct": {
+   "description": "The target word sits in a coordination — X and Y, X as well as Y, X as Y, X beside Y — and the child attaches the meaning to the wrong conjunct. She takes the half of the pair she read last, or the half that is easier to picture, and glosses the target with it. The error is syntactic: she has parsed which item the word attaches to incorrectly, and the option she picks is usually TRUE of the other conjunct, which is why it survives a check against the passage.",
+   "childHint": "This word is joined to another one. Work out which of the two the question is asking about before you answer."
+  },
+  "en-determiner-omitted": {
+   "description": "Leaves the determiner out altogether before a singular countable noun, treating a, an and the as optional rather than required. Distinct from en-article-definiteness, which is a choice BETWEEN articles, and from en-a-an-by-spelling, which is a sound judgement.",
+   "childHint": "A single thing needs a word in front of it. Say the line aloud and listen."
+  },
+  "en-double-consonant-boundary": {
+   "description": "Guesses whether a consonant doubles when an ending is added, or doubles the wrong letter: begining for beginning, dissapointed for disappointed, stoped for stopped.",
+   "childHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+  },
+  "en-emotion-label-approximation": {
+   "description": "Chooses an adjacent emotion word rather than the precisely evidenced one.",
+   "childHint": "Find the words in the text that show the feeling. Close is not the same."
+  },
+  "en-extreme-option-pull": {
+   "description": "Chooses always/never/impossible options when the text is measured.",
+   "childHint": "Does the passage really go that far? Check the strongest word in the option."
+  },
+  "en-figurative-taken-literally": {
+   "description": "Reads similes and idioms as literal events.",
+   "childHint": "Figures of speech are not facts. Ask what the words are really saying."
+  },
+  "en-homophone-by-sound": {
+   "description": "Spells the wrong member of a homophone pair; their/there/they're.",
+   "childHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+  },
+  "en-inference-literal-lookalike": {
+   "description": "Picks the option that reuses passage wording.",
+   "childHint": "Words copied from the passage can still miss the question. Ask what those words are telling you."
+  },
+  "en-minimal-pair-skim": {
+   "description": "Matches an option on gist when it differs from the text, or from the key, by a single word or detail.",
+   "childHint": "An answer can look almost like the text. Find what differs and check it against the text."
+  },
+  "en-modal-conditional-form": {
+   "description": "Mismatches the modal to its if-clause, or builds an impossible modal form: 'if we painted ... people will know', 'would knew', 'would be knowing'.",
+   "childHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past."
+  },
+  "en-motive-invention": {
+   "description": "Attributes a plausible motive the text never supports.",
+   "childHint": "A reason has to be given, not guessed. Ask what the text says about why."
+  },
+  "en-n-option-avoidance": {
+   "description": "Never selects the no-mistake option in error-spotting.",
+   "childHint": "Check every part in turn. No mistake is a real answer, not a way out."
+  },
+  "en-narrator-voice-as-fact": {
+   "description": "The child treats a crowd's opinion that the narrator reports in flat, certain sentences as the narrator's own verdict, and so takes it as settled truth rather than as something the text is quietly laughing at. Distinct from en-extreme-option-pull, which is about the pull of absolute wording; this one is about mistaking whose voice is speaking.",
+   "childHint": "Before you take this as true, ask whose opinion it is."
+  },
+  "en-negation-dropped": {
+   "description": "The passage carries an explicit negative — no, not, never, nothing, without, could not, sha'n't — and the option states the affirmative. The child has read the content words of the sentence and dropped the word that reverses them. Requires a negative WORD in a named line. A negation sustained across a whole text with no such word is en-whole-text-absence-asserted.",
+   "childHint": "A negative word can change the whole answer. Read the line again for one."
+  },
+  "en-paired-punctuation": {
+   "description": "Misses unclosed brackets or quotes.",
+   "childHint": "Brackets come in pairs, like shoes. Hunt for the partner."
+  },
+  "en-parallel-read-as-sequence": {
+   "description": "The child reads two parallel descriptions of one thing as two moments in time. Where a writer gives the same subject twice — two ways of seeing it, two accounts of it, two things it is at once — she converts the pair into a sequence and looks for what changed between them. Nothing changed. What differs is the vantage, not the subject, and the relation between the two descriptions is what the question asks for.",
+   "childHint": "These two descriptions are of the same thing at the same time. Ask what is different about who is looking."
+  },
+  "en-physical-vs-emotional-cue": {
+   "description": "Gives a physical cause, from the body or body-language, when the text signals a feeling.",
+   "childHint": "Look past what the body is doing. Check what the character is feeling right then."
+  },
+  "en-plausible-not-stated": {
+   "description": "Picks real-world-plausible options the passage never states, especially motives.",
+   "childHint": "Sounding sensible is not enough. Find the line that proves it."
+  },
+  "en-preposition-collocation": {
+   "description": "Chooses a preposition that is close in meaning but does not go with the verb: returned on the shelf, listened at the teacher.",
+   "childHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
+  },
+  "en-question-tag-polarity": {
+   "description": "Repeats instead of flipping polarity in question tags; mismatches the auxiliary.",
+   "childHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did."
+  },
+  "en-relation-word-flipped": {
+   "description": "The child reads a word that names a relationship between two things (contrast, unless, however, instead of) as its opposite, usually as plain 'and' or 'the same as'. The result is an option that keeps every fact but reverses how the facts sit together.",
+   "childHint": "Some words tell you how two things go together. Find that word and read it again."
+  },
+  "en-relative-pronoun-choice": {
+   "description": "Picks a relative pronoun by habit rather than by what it stands for: which for people, whose in place of who, whom in a subject slot.",
+   "childHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone."
+  },
+  "en-repetition-purpose": {
+   "description": "Cannot say why a writer repeats words; defaults to literal or dismissive readings.",
+   "childHint": "Writers repeat on purpose. Ask what the echo does to the reader."
+  },
+  "en-silent-letter-dropped": {
+   "description": "Drops silent letters when spelling.",
+   "childHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+  },
+  "en-speech-punctuation-inside": {
+   "description": "Places a quoted question's mark outside the speech marks.",
+   "childHint": "The question belongs to the spoken words. Keep the mark inside."
+  },
+  "en-spelling-form-lookalike": {
+   "description": "Accepts or writes a word's visual near-twin: quiet for quite, dairy for diary, angel for angle, loose for lose.",
+   "childHint": "Two words can look almost the same. Read the middle letters slowly, not the shape."
+  },
+  "en-subject-verb-agreement-by-proximity": {
+   "description": "Agrees the verb with the nearest noun instead of the true subject, usually across an of-phrase: 'the row of new labels were'.",
+   "childHint": "Ignore the of-part. Match the verb to what is left."
+  },
+  "en-technique-device-confusion": {
+   "description": "Child gives \"metaphor\" for a comparison using \"like\" where the answer is simile, naming a device of the right family and the wrong kind.",
+   "childHint": "Does the line say like or as? A comparison using those words is a simile."
+  },
+  "en-technique-effect-mislocated": {
+   "description": "Child gives the effect of an earlier or neighbouring part of the passage where the answer is the effect of the quoted phrase, reading past the words under test.",
+   "childHint": "Find the exact words the question quotes. Answer about those words only."
+  },
+  "en-technique-intent-as-character": {
+   "description": "Child gives \"the boy feels tense\" where the answer is that the writer builds tension, treating the writer's choice as the character's state.",
+   "childHint": "Ask who is doing this. Is it the writer, or the character?"
+  },
+  "en-technique-structure-effect-blind": {
+   "description": "Child gives what the words say where the answer is what their shape does (a short sentence makes a moment land suddenly; a count that grows or shrinks builds a pattern), reading content where the question asks about shape.",
+   "childHint": "Notice how the writer has built it, not just what it says. What does that do for the reader?"
+  },
+  "en-tense-sequence": {
+   "description": "Uses simple past where prior events need 'had'; drifts tense mid-narrative.",
+   "childHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+  },
+  "en-terminal-punctuation-blind": {
+   "description": "Accepts a full stop on a question; misses run-ons and missing boundaries.",
+   "childHint": "Read it in your head. Where your voice would stop or ask, the punctuation must match."
+  },
+  "en-unstressed-medial-vowel": {
+   "description": "Guesses a vowel in an unstressed syllable inside a word: regester for register. Scoped to the ERROR. Distinct from en-unstressed-suffix-vowel, whose vowel surfaces when the stress shifts (definite/definition); a medial vowel has no family word that stresses it, so the remediation is the spelling pattern — minister, sinister, register.",
+   "childHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it."
+  },
+  "en-unstressed-suffix-vowel": {
+   "description": "Guesses between -ant/-ent, -ance/-ence, -ary/-ory/-ery.",
+   "childHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+  },
+  "en-vocab-built-from-parts": {
+   "description": "The child takes the word apart into parts she has met in other words and sums them. She has not mistaken which word it is — she has taken it apart, and the parts are real while the sum is not the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "The parts of a word do not always add up. Check the whole word in the sentence."
+  },
+  "en-vocab-dominant-sense": {
+   "description": "The child applies the word's commonest everyday sense in a context that does not support it. The sense chosen is a real sense of the same word; it is simply the one that arrives first, and the sentence around the word is what should have displaced it. Scoped to the ERROR, not to vocabulary items: it occurs wherever a word's sense is load-bearing, including on technique stems.",
+   "childHint": "Words can have more than one meaning. Check that the meaning you used fits what the sentence is saying here."
+  },
+  "en-vocab-form-lookalike": {
+   "description": "The meaning the child chooses belongs to a DIFFERENT WORD that the target resembles in form, or to a morpheme she has met in other words. She has not chosen among the target's senses at all — she has misidentified the word. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "This word looks like one you know. Read it letter by letter and check it is the same word."
+  },
+  "en-vocab-neighbouring-sense": {
+   "description": "The child chooses another genuine sense of the same word, neither the commonest one nor the one the passage fixes. The option is defensible in isolation and is ruled out only by the surrounding text, so the child gets no signal that anything is wrong. This holds only where the surrounding text fixes the sense decisively. Where it does not, the option is a defensible second answer and the item is faulty rather than hard. Scoped to the ERROR, not to vocabulary items.",
+   "childHint": "More than one meaning fits this word. Find the words nearby that decide which one it has to be."
+  },
+  "en-vocab-not-this-word": {
+   "description": "Picks a meaning that belongs to no sense of the word and to no word it resembles in form.",
+   "childHint": "This word never means that. Put your answer in its place. Read the sentence again."
+  },
+  "en-whole-text-absence-asserted": {
+   "description": "The passage sustains an ABSENCE across its whole length — it never states a feeling, never names a motive, never gives a verdict — and the option asserts the withheld thing as though it were there. There is no negative word to drop, because the negation is a property of the text rather than of any line: the child has failed to notice something maintained across sixty lines, not misread a word in one. Characteristically the option is defeated by no single line and only by the absence itself, so its disposal must cite the SPAN of the withholding rather than a disposal point.",
+   "childHint": "Choose a line number for the option you like. If you cannot find one anywhere in the passage, that option is not it."
+  },
+  "en-within-span-wrong-element": {
+   "description": "The option states something that is true inside the cited window and answers a different question from the one asked. The child has located the right lines and taken the wrong element out of them. A named sub-route is the WRONG SPEAKER: the material is inside the window but belongs to the other party in an exchange — one child's answer offered where the other child's instruction was asked for. The cure is the same in both cases, so the sub-route shares this hint.",
+   "childHint": "Being in the lines is not enough. Check it answers the question you were asked."
+  },
+  "en-word-class-by-ending": {
+   "description": "Classifies words by suffix rather than sentence job; participial adjective traps.",
+   "childHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+  },
+  "en-wrong-scope-retrieval": {
+   "description": "Answers from a detail in the wrong part of the passage.",
+   "childHint": "Something from another part of the passage does not answer this question. Find the part the question points to."
+  }
+ },
+ "passages": {
+  "stream-a-03-wind-in-willows": {
+   "id": "stream-a-03-wind-in-willows",
+   "work": {
+    "author": "Kenneth Grahame",
+    "title": "The Wind in the Willows",
+    "firstPublished": 1908,
+    "authorDied": 1932
+   },
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "The Mole had been working very hard all the morning, spring-cleaning his little home.",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "First with brooms, then with dusters; then on ladders and steps and chairs, with a brush",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "and a pail of whitewash; till he had dust in his throat and eyes, and splashes of",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "whitewash all over his black fur, and an aching back and weary arms. Spring was moving",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "in the air above and in the earth below and around him, penetrating even his dark and",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "lowly little house with its spirit of divine discontent and longing. It was small",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "wonder, then, that he suddenly flung down his brush on the floor, said “Bother!” and “O",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "blow!” and also “Hang spring-cleaning!” and bolted out of the house without even waiting",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "to put on his coat. Something up above was calling him imperiously, and he made for the",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "steep little tunnel which answered in his case to the gravelled carriage-drive owned by",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "animals whose residences are nearer to the sun and air. So he scraped and scratched and",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "scrabbled and scrooged and then he scrooged again and scrabbled and scratched and",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "scraped, working busily with his little paws and muttering to himself, “Up we go! Up we",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "go!” till at last, pop! his snout came out into the sunlight, and he found himself",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "rolling in the warm grass of a great meadow.",
+     "label": "15"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 16,
+     "text": "“This is fine!” he said to himself. “This is better than whitewashing!” The sunshine",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "struck hot on his fur, soft breezes caressed his heated brow, and after the seclusion of",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "the cellarage he had lived in so long the carol of happy birds fell on his dulled",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "hearing almost like a shout. Jumping off all his four legs at once, in the joy of living",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "and the delight of spring without its cleaning, he pursued his way across the meadow",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "till he reached the hedge on the further side.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "“Hold up!” said an elderly rabbit at the gap. “Sixpence for the privilege of passing by",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "the private road!” He was bowled over in an instant by the impatient and contemptuous",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "Mole, who trotted along the side of the hedge chaffing the other rabbits as they peeped",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "hurriedly from their holes to see what the row was about. “Onion-sauce! Onion-sauce!” he",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "remarked jeeringly, and was gone before they could think of a thoroughly satisfactory",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "reply.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "He thought his happiness was complete when, as he meandered aimlessly along, suddenly he",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "stood by the edge of a full-fed river. Never in his life had he seen a river before—this",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "sleek, sinuous, full-bodied animal, chasing and chuckling, gripping things with a gurgle",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "and leaving them with a laugh, to fling itself on fresh playmates that shook themselves",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "free, and were caught and held again. All was a-shake and a-shiver—glints and gleams and",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "sparkles, rustle and swirl, chatter and bubble. The Mole was bewitched, entranced,",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "fascinated. By the side of the river he trotted as one trots, when very small, by the",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "side of a man who holds one spell-bound by exciting stories; and when tired at last, he",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "sat on the bank, while the river still chattered on to him, a babbling procession of the",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "best stories in the world, sent from the heart of the earth to be told at last to the",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "insatiable sea.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "As he sat on the grass and looked across the river, a dark hole in the bank opposite,",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "just above the water’s edge, caught his eye, and dreamily he fell to considering what a",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "nice snug dwelling-place it would make for an animal with few wants and fond of a bijou",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "riverside residence, above flood level and remote from noise and dust. As he gazed,",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "something bright and small seemed to twinkle down in the heart of it, vanished, then",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "twinkled once more like a tiny star. But it could hardly be a star in such an unlikely",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "situation; and it was too glittering and small for a glow-worm. Then, as he looked, it",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "winked at him, and so declared itself to be an eye; and a small face began gradually to",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "grow up round it, like a frame round a picture.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "A brown little face, with whiskers.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "A grave round face, with the same twinkle in its eye that had first attracted his",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "notice.",
+     "label": "50"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 51,
+     "text": "Small neat ears and thick silky hair.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "It was the Water Rat!",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "Then the two animals stood and regarded each other cautiously.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "“Hullo, Mole!” said the Water Rat.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "“Hullo, Rat!” said the Mole.",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "“Would you like to come over?” enquired the Rat presently.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "“Oh, it’s all very well to talk,” said the Mole, rather pettishly, he being new to a",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "river and riverside life and its ways.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "The Rat said nothing, but stooped and unfastened a rope and hauled on it; then lightly",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "stepped into a little boat which the Mole had not observed. It was painted blue outside",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "and white within, and was just the size for two animals; and the Mole’s whole heart went",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "out to it at once, even though he did not yet fully understand its uses.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "The Rat sculled smartly across and made fast. Then he held up his forepaw as the Mole",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "stepped gingerly down. “Lean on that!” he said. “Now then, step lively!” and the Mole to",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "his surprise and rapture found himself actually seated in the stern of a real boat.",
+     "label": "65"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 66,
+     "text": "“This has been a wonderful day!” said he, as the Rat shoved off and took to the sculls",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "again. “Do you know, I’ve never been in a boat before in all my life.”",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-04-black-beauty": {
+   "id": "stream-a-04-black-beauty",
+   "work": {
+    "author": "Anna Sewell",
+    "title": "Black Beauty",
+    "firstPublished": 1877,
+    "authorDied": 1878
+   },
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "One day late in the autumn my master had a long journey to go on business. I was put",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "into the dog-cart, and John went with his master. I always liked to go in the dog-cart,",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "it was so light and the high wheels ran along so pleasantly. There had been a great deal",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "of rain, and now the wind was very high and blew the dry leaves across the road in a",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "shower. We went along merrily till we came to the toll-bar and the low wooden bridge.",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "The river banks were rather high, and the bridge, instead of rising, went across just",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "level, so that in the middle, if the river was full, the water would be nearly up to the",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "woodwork and planks; but as there were good substantial rails on each side, people did",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "not mind it.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "The man at the gate said the river was rising fast, and he feared it would be a bad",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "night. Many of the meadows were under water, and in one low part of the road the water",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "was halfway up to my knees; the bottom was good, and master drove gently, so it was no",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "matter.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "When we got to the town of course I had a good bait, but as the master's business",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "engaged him a long time we did not start for home till rather late in the afternoon. The",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "wind was then much higher, and I heard the master say to John that he had never been out",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "in such a storm; and so I thought, as we went along the skirts of a wood, where the",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "great branches were swaying about like twigs, and the rushing sound was terrible.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "“I wish we were well out of this wood,” said my master.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "“Yes, sir,” said John, “it would be rather awkward if one of these branches came down",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "upon us.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "The words were scarcely out of his mouth when there was a groan, and a crack, and a",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "splitting sound, and tearing, crashing down among the other trees came an oak, torn up",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "by the roots, and it fell right across the road just before us. I will never say I was",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "not frightened, for I was. I stopped still, and I believe I trembled; of course I did",
+     "label": "25"
+    },
+    {
+     "n": 26,
+     "text": "not turn round or run away; I was not brought up to that. John jumped out and was in a",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "moment at my head.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "“That was a very near touch,” said my master. “What's to be done now?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "“Well, sir, we can't drive over that tree, nor yet get round it; there will be nothing",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "for it, but to go back to the four crossways, and that will be a good six miles before",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "we get round to the wooden bridge again; it will make us late, but the horse is fresh.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "So back we went and round by the crossroads, but by the time we got to the bridge it was",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "very nearly dark; we could just see that the water was over the middle of it; but as",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "that happened sometimes when the floods were out, master did not stop. We were going",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "along at a good pace, but the moment my feet touched the first part of the bridge I felt",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "sure there was something wrong. I dare not go forward, and I made a dead stop. “Go on,",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "Beauty,” said my master, and he gave me a touch with the whip, but I dare not stir; he",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "gave me a sharp cut; I jumped, but I dare not go forward.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "“There's something wrong, sir,” said John, and he sprang out of the dog-cart and came to",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "my head and looked all about. He tried to lead me forward. “Come on, Beauty, what's the",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "matter?” Of course I could not tell him, but I knew very well that the bridge was not",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "safe.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "Just then the man at the toll-gate on the other side ran out of the house, tossing a",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "torch about like one mad.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "“Hoy, hoy, hoy! halloo! stop!” he cried.",
+     "label": "45"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 46,
+     "text": "“What's the matter?” shouted my master.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "“The bridge is broken in the middle, and part of it is carried away; if you come on",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "you'll be into the river.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "“Thank God!” said my master. “You Beauty!” said John, and took the bridle and gently",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "turned me round to the right-hand road by the river side. The sun had set some time; the",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "wind seemed to have lulled off after that furious blast which tore up the tree. It grew",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "darker and darker, stiller and stiller. I trotted quietly along, the wheels hardly",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "making a sound on the soft road. For a good while neither master nor John spoke, and",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "then master began in a serious voice. I could not understand much of what they said, but",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "I found they thought, if I had gone on as the master wanted me, most likely the bridge",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "would have given way under us, and horse, chaise, master, and man would have fallen into",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "the river; and as the current was flowing very strongly, and there was no light and no",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "help at hand, it was more than likely we should all have been drowned.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "We saw a light at the hall-door and at the upper windows, and as we came up mistress ran",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "out, saying, “Are you really safe, my dear? Oh! I have been so anxious, fancying all",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "sorts of things. Have you had no accident?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "“No, my dear; but if your Black Beauty had not been wiser than we were we should all",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "have been carried down the river at the wooden bridge.”",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-05-tom-sawyer": {
+   "id": "stream-a-05-tom-sawyer",
+   "work": {
+    "author": "Mark Twain",
+    "title": "The Adventures of Tom Sawyer",
+    "firstPublished": 1876,
+    "authorDied": 1910
+   },
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "But Tom’s energy did not last. He began to think of the fun he had planned for this day,",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "and his sorrows multiplied. Soon the free boys would come tripping along on all sorts of",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "delicious expeditions, and they would make a world of fun of him for having to work—the",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "very thought of it burnt him like fire. He got out his worldly wealth and examined",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "it—bits of toys, marbles, and trash; enough to buy an exchange of work, maybe, but not",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "half enough to buy so much as half an hour of pure freedom. So he returned his",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "straitened means to his pocket, and gave up the idea of trying to buy the boys. At this",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "dark and hopeless moment an inspiration burst upon him! Nothing less than a great,",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "magnificent inspiration.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "He took up his brush and went tranquilly to work. Ben Rogers hove in sight presently—the",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "very boy, of all boys, whose ridicule he had been dreading. Ben’s gait was the hop-skip-",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "and-jump—proof enough that his heart was light and his anticipations high. He was eating",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "an apple, and giving a long, melodious whoop, at intervals, followed by a deep-toned",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "ding-dong-dong, ding-dong-dong, for he was personating a steamboat.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "Tom went on whitewashing—paid no attention to the steamboat. Ben stared a moment and",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "then said: “Hi-Yi! You’re up a stump, ain’t you!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "No answer. Tom surveyed his last touch with the eye of an artist, then he gave his brush",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "another gentle sweep and surveyed the result, as before. Ben ranged up alongside of him.",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "Tom’s mouth watered for the apple, but he stuck to his work. Ben said:",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "“Hello, old chap, you got to work, hey?”",
+     "label": "20"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 21,
+     "text": "Tom wheeled suddenly and said:",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "“Why, it’s you, Ben! I warn’t noticing.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "“Say—I’m going in a-swimming, I am. Don’t you wish you could? But of course you’d",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "druther work—wouldn’t you? Course you would!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "Tom contemplated the boy a bit, and said:",
+     "label": "25"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 26,
+     "text": "“What do you call work?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "“Why, ain’t that work?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "Tom resumed his whitewashing, and answered carelessly:",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "“Well, maybe it is, and maybe it ain’t. All I know, is, it suits Tom Sawyer.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "“Oh come, now, you don’t mean to let on that you like it?”",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "The brush continued to move.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "“Like it? Well, I don’t see why I oughtn’t to like it. Does a boy get a chance to",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "whitewash a fence every day?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "That put the thing in a new light. Ben stopped nibbling his apple. Tom swept his brush",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "daintily back and forth—stepped back to note the effect—added a touch here and",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "there—criticised the effect again—Ben watching every move and getting more and more",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "interested, more and more absorbed. Presently he said:",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "“Say, Tom, let me whitewash a little.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "Tom considered, was about to consent; but he altered his mind:",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "“No—no—I reckon it wouldn’t hardly do, Ben. You see, Aunt Polly’s awful particular about",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "this fence—right here on the street, you know—but if it was the back fence I wouldn’t",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "mind and she wouldn’t. Yes, she’s awful particular about this fence; it’s got to be done",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "very careful; I reckon there ain’t one boy in a thousand, maybe two thousand, that can",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "do it the way it’s got to be done.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "“No—is that so? Oh come, now—lemme just try. Only just a little—I’d let you, if you was",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "me, Tom.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "“Now don’t you see how I’m fixed? If you was to tackle this fence and anything was to",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "happen to it—”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "“Oh, shucks, I’ll be just as careful. Now lemme try. Say—I’ll give you the core of my",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "apple.”",
+     "label": "50"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 51,
+     "text": "“Well, here—No, Ben, now don’t. I’m afeard—”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "“I’ll give you all of it!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "Tom gave up the brush with reluctance in his face, but alacrity in his heart. And while",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "the late steamer Big Missouri worked and sweated in the sun, the retired artist sat on a",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "barrel in the shade close by, dangled his legs, munched his apple, and planned the",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "slaughter of more innocents. There was no lack of material; boys happened along every",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "little while; they came to jeer, but remained to whitewash. By the time Ben was fagged",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "out, Tom had traded the next chance to Billy Fisher for a kite, in good repair; and when",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "he played out, Johnny Miller bought in for a dead rat and a string to swing it with—and",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "so on, and so on, hour after hour. And when the middle of the afternoon came, from being",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "a poor poverty-stricken boy in the morning, Tom was literally rolling in wealth. He had",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "besides the things before mentioned, twelve marbles, part of a jews-harp, a piece of",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "blue bottle-glass to look through, a spool cannon, a key that wouldn’t unlock anything,",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "a fragment of chalk, a glass stopper of a decanter, a tin soldier, a couple of tadpoles,",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "six fire-crackers, a kitten with only one eye, a brass door-knob, a dog-collar—but no",
+     "label": "65"
+    },
+    {
+     "n": 66,
+     "text": "dog—the handle of a knife, four pieces of orange-peel, and a dilapidated old window",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "sash.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "He had had a nice, good, idle time all the while—plenty of company—and the fence had",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "three coats of whitewash on it! If he hadn’t run out of whitewash he would have",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "bankrupted every boy in the village.",
+     "label": "70"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 71,
+     "text": "Tom said to himself that it was not such a hollow world, after all. He had discovered a",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "great law of human action, without knowing it—namely, that in order to make a man or a",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "boy covet a thing, it is only necessary to make the thing difficult to attain.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-07-canterville-ghost": {
+   "id": "stream-a-07-canterville-ghost",
+   "work": {
+    "author": "Oscar Wilde",
+    "title": "The Canterville Ghost",
+    "firstPublished": 1887,
+    "authorDied": 1900
+   },
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "As Canterville Chase is seven miles from Ascot, the nearest railway station, Mr. Otis",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "had telegraphed for a waggonette to meet them, and they started on their drive in high",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "spirits. It was a lovely July evening, and the air was delicate with the scent of the",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "pinewoods. Now and then they heard a wood-pigeon brooding over its own sweet voice, or",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "saw, deep in the rustling fern, the burnished breast of the pheasant. Little squirrels",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "peered at them from the beech-trees as they went by, and the rabbits scudded away",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "through the brushwood and over the mossy knolls, with their white tails in the air. As",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "they entered the avenue of Canterville Chase, however, the sky became suddenly overcast",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "with clouds, a curious stillness seemed to hold the atmosphere, a great flight of rooks",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "passed silently over their heads, and, before they reached the house, some big drops of",
+     "label": "10"
+    },
+    {
+     "n": 11,
+     "text": "rain had fallen.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "Standing on the steps to receive them was an old woman, neatly dressed in black silk,",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "with a white cap and apron. This was Mrs. Umney, the housekeeper, whom Mrs. Otis, at",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "Lady Canterville's earnest request, had consented to keep in her former position. She",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "made them each a low curtsey as they alighted, and said in a quaint, old-fashioned",
+     "label": "15"
+    },
+    {
+     "n": 16,
+     "text": "manner, \"I bid you welcome to Canterville Chase.\" Following her, they passed through the",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "fine Tudor hall into the library, a long, low room, panelled in black oak, at the end of",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "which was a large stained glass window. Here they found tea laid out for them, and,",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "after taking off their wraps, they sat down and began to look round, while Mrs. Umney",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "waited on them.",
+     "label": "20"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 21,
+     "text": "Suddenly Mrs. Otis caught sight of a dull red stain on the floor just by the fireplace,",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "and, quite unconscious of what it really signified, said to Mrs. Umney, \"I am afraid",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "something has been spilt there.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "\"Yes, madam,\" replied the old housekeeper in a low voice, \"blood has been spilt on that",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "spot.\"",
+     "label": "25"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 26,
+     "text": "\"How horrid!\" cried Mrs. Otis; \"I don't at all care for blood-stains in a sitting-room.",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "It must be removed at once.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "The old woman smiled, and answered in the same low, mysterious voice, \"It is the blood",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "of Lady Eleanore de Canterville, who was murdered on that very spot by her own husband,",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "Sir Simon de Canterville, in 1575. Sir Simon survived her nine years, and disappeared",
+     "label": "30"
+    },
+    {
+     "n": 31,
+     "text": "suddenly under very mysterious circumstances. His body has never been discovered, but",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "his guilty spirit still haunts the Chase. The blood-stain has been much admired by",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "tourists and others, and cannot be removed.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "\"That is all nonsense,\" cried Washington Otis; \"Pinkerton's Champion Stain Remover and",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "Paragon Detergent will clean it up in no time,\" and before the terrified housekeeper",
+     "label": "35"
+    },
+    {
+     "n": 36,
+     "text": "could interfere, he had fallen upon his knees, and was rapidly scouring the floor with a",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "small stick of what looked like a black cosmetic. In a few moments no trace of the",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "blood-stain could be seen.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "\"I knew Pinkerton would do it,\" he exclaimed, triumphantly, as he looked round at his",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "admiring family; but no sooner had he said these words than a terrible flash of",
+     "label": "40"
+    },
+    {
+     "n": 41,
+     "text": "lightning lit up the sombre room, a fearful peal of thunder made them all start to their",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "feet, and Mrs. Umney fainted.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "\"What a monstrous climate!\" said the American Minister, calmly, as he lit a long",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "cheroot. \"I guess the old country is so overpopulated that they have not enough decent",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "weather for everybody. I have always been of opinion that emigration is the only thing",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "for England.\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "\"My dear Hiram,\" cried Mrs. Otis, \"what can we do with a woman who faints?\"",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "\"Charge it to her like breakages,\" answered the Minister; \"she won't faint after that;\"",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "and in a few moments Mrs. Umney certainly came to. There was no doubt, however, that she",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "was extremely upset, and she sternly warned Mr. Otis to beware of some trouble coming to",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "the house.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "\"I have seen things with my own eyes, sir,\" she said, \"that would make any Christian's",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "hair stand on end, and many and many a night I have not closed my eyes in sleep for the",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "awful things that are done here.\" Mr. Otis, however, and his wife warmly assured the",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "honest soul that they were not afraid of ghosts, and, after invoking the blessings of",
+     "label": "55"
+    },
+    {
+     "n": 56,
+     "text": "Providence on her new master and mistress, and making arrangements for an increase of",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "salary, the old housekeeper tottered off to her own room.",
+     "label": ""
+    }
+   ]
+  },
+  "stream-a-09-eighty-days": {
+   "id": "stream-a-09-eighty-days",
+   "work": {
+    "author": "Jules Verne",
+    "title": "Around the World in Eighty Days",
+    "firstPublished": 1873,
+    "authorDied": 1905
+   },
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "“I maintain,” said Stuart, “that the chances are in favour of the thief, who must be a",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "shrewd fellow.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "“Well, but where can he fly to?” asked Ralph. “No country is safe for him.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "“Pshaw!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "“Where could he go, then?”",
+     "label": "5"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 6,
+     "text": "“Oh, I don’t know that. The world is big enough.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "“It was once,” said Phileas Fogg, in a low tone. “Cut, sir,” he added, handing the cards",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "to Thomas Flanagan.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "The discussion fell during the rubber, after which Stuart took up its thread.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "“What do you mean by ‘once’? Has the world grown smaller?”",
+     "label": "10"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 11,
+     "text": "“Certainly,” returned Ralph. “I agree with Mr. Fogg. The world has grown smaller, since",
+     "label": ""
+    },
+    {
+     "n": 12,
+     "text": "a man can now go round it ten times more quickly than a hundred years ago. And that is",
+     "label": ""
+    },
+    {
+     "n": 13,
+     "text": "why the search for this thief will be more likely to succeed.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 14,
+     "text": "“And also why the thief can get away more easily.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 15,
+     "text": "“Be so good as to play, Mr. Stuart,” said Phileas Fogg.",
+     "label": "15"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 16,
+     "text": "But the incredulous Stuart was not convinced, and when the hand was finished, said",
+     "label": ""
+    },
+    {
+     "n": 17,
+     "text": "eagerly: “You have a strange way, Ralph, of proving that the world has grown smaller.",
+     "label": ""
+    },
+    {
+     "n": 18,
+     "text": "So, because you can go round it in three months—”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 19,
+     "text": "“In eighty days,” interrupted Phileas Fogg.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 20,
+     "text": "“Yes, in eighty days!” exclaimed Stuart, who in his excitement made a false deal. “But",
+     "label": "20"
+    },
+    {
+     "n": 21,
+     "text": "that doesn’t take into account bad weather, contrary winds, shipwrecks, railway",
+     "label": ""
+    },
+    {
+     "n": 22,
+     "text": "accidents, and so on.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 23,
+     "text": "“All included,” calmly retorted Fogg; adding, as he threw down the cards, “Two trumps.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 24,
+     "text": "Stuart, whose turn it was to deal, gathered them up, and went on: “You are right,",
+     "label": ""
+    },
+    {
+     "n": 25,
+     "text": "theoretically, Mr. Fogg, but practically—”",
+     "label": "25"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 26,
+     "text": "“Practically also, Mr. Stuart.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 27,
+     "text": "“I’d like to see you do it in eighty days.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 28,
+     "text": "“It depends on you. Shall we go?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 29,
+     "text": "“Heaven preserve me! But I would wager four thousand pounds that such a journey, made",
+     "label": ""
+    },
+    {
+     "n": 30,
+     "text": "under these conditions, is impossible.”",
+     "label": "30"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 31,
+     "text": "“Quite possible, on the contrary,” returned Mr. Fogg.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 32,
+     "text": "“Well, make it, then!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 33,
+     "text": "“The journey round the world in eighty days?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 34,
+     "text": "“Yes.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 35,
+     "text": "“I should like nothing better.”",
+     "label": "35"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 36,
+     "text": "“When?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 37,
+     "text": "“At once. Only I warn you that I shall do it at your expense.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 38,
+     "text": "“It’s absurd!” cried Stuart, who was beginning to be annoyed at the persistency of his",
+     "label": ""
+    },
+    {
+     "n": 39,
+     "text": "friend. “Come, let’s go on with the game.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 40,
+     "text": "“Deal over again, then,” said Phileas Fogg. “There’s a false deal.”",
+     "label": "40"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 41,
+     "text": "Stuart took up the pack with a feverish hand; then suddenly put them down again.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 42,
+     "text": "“Well, Mr. Fogg,” said he, “it shall be so: I will wager the four thousand on it.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 43,
+     "text": "“Calm yourself, my dear Stuart,” said Fallentin. “It’s only a joke.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 44,
+     "text": "“When I say I’ll wager,” returned Stuart, “I mean it.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 45,
+     "text": "“All right,” said Mr. Fogg; and, turning to the others, he continued: “I have a deposit",
+     "label": "45"
+    },
+    {
+     "n": 46,
+     "text": "of twenty thousand at Baring’s which I will willingly risk upon it.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 47,
+     "text": "“Twenty thousand pounds!” cried Sullivan. “Twenty thousand pounds, which you would lose",
+     "label": ""
+    },
+    {
+     "n": 48,
+     "text": "by a single accidental delay!”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 49,
+     "text": "“The unforeseen does not exist,” quietly replied Phileas Fogg.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 50,
+     "text": "“But, Mr. Fogg, eighty days are only the estimate of the least possible time in which",
+     "label": "50"
+    },
+    {
+     "n": 51,
+     "text": "the journey can be made.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 52,
+     "text": "“A well-used minimum suffices for everything.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 53,
+     "text": "“But, in order not to exceed it, you must jump mathematically from the trains upon the",
+     "label": ""
+    },
+    {
+     "n": 54,
+     "text": "steamers, and from the steamers upon the trains again.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 55,
+     "text": "“I will jump—mathematically.”",
+     "label": "55"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 56,
+     "text": "“You are joking.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 57,
+     "text": "“A true Englishman doesn’t joke when he is talking about so serious a thing as a wager,”",
+     "label": ""
+    },
+    {
+     "n": 58,
+     "text": "replied Phileas Fogg, solemnly. “I will bet twenty thousand pounds against anyone who",
+     "label": ""
+    },
+    {
+     "n": 59,
+     "text": "wishes that I will make the tour of the world in eighty days or less; in nineteen",
+     "label": ""
+    },
+    {
+     "n": 60,
+     "text": "hundred and twenty hours, or a hundred and fifteen thousand two hundred minutes. Do you",
+     "label": "60"
+    },
+    {
+     "n": 61,
+     "text": "accept?”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 62,
+     "text": "“We accept,” replied Messrs. Stuart, Fallentin, Sullivan, Flanagan, and Ralph, after",
+     "label": ""
+    },
+    {
+     "n": 63,
+     "text": "consulting each other.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 64,
+     "text": "“Good,” said Mr. Fogg. “The train leaves for Dover at a quarter before nine. I will take",
+     "label": ""
+    },
+    {
+     "n": 65,
+     "text": "it.”",
+     "label": "65"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 66,
+     "text": "“This very evening?” asked Stuart.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 67,
+     "text": "“This very evening,” returned Phileas Fogg. He took out and consulted a pocket almanac,",
+     "label": ""
+    },
+    {
+     "n": 68,
+     "text": "and added, “As today is Wednesday, the 2nd of October, I shall be due in London in this",
+     "label": ""
+    },
+    {
+     "n": 69,
+     "text": "very room of the Reform Club, on Saturday, the 21st of December, at a quarter before",
+     "label": ""
+    },
+    {
+     "n": 70,
+     "text": "nine p.m.; or else the twenty thousand pounds, now deposited in my name at Baring’s,",
+     "label": "70"
+    },
+    {
+     "n": 71,
+     "text": "will belong to you, in fact and in right, gentlemen. Here is a cheque for the amount.”",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 72,
+     "text": "A memorandum of the wager was at once drawn up and signed by the six parties, during",
+     "label": ""
+    },
+    {
+     "n": 73,
+     "text": "which Phileas Fogg preserved a stoical composure. He certainly did not bet to win, and",
+     "label": ""
+    },
+    {
+     "n": 74,
+     "text": "had only staked the twenty thousand pounds, half of his fortune, because he foresaw that",
+     "label": ""
+    },
+    {
+     "n": 75,
+     "text": "he might have to expend the other half to carry out this difficult, not to say",
+     "label": "75"
+    },
+    {
+     "n": 76,
+     "text": "unattainable, project. As for his antagonists, they seemed much agitated; not so much by",
+     "label": ""
+    },
+    {
+     "n": 77,
+     "text": "the value of their stake, as because they had some scruples about betting under",
+     "label": ""
+    },
+    {
+     "n": 78,
+     "text": "conditions so difficult to their friend.",
+     "label": ""
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 79,
+     "text": "The clock struck seven, and the party offered to suspend the game so that Mr. Fogg might",
+     "label": ""
+    },
+    {
+     "n": 80,
+     "text": "make his preparations for departure.",
+     "label": "80"
+    },
+    {
+     "n": null,
+     "text": "",
+     "label": ""
+    },
+    {
+     "n": 81,
+     "text": "“I am quite ready now,” was his tranquil response. “Diamonds are trumps: be so good as",
+     "label": ""
+    },
+    {
+     "n": 82,
+     "text": "to play, gentlemen.”",
+     "label": ""
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-001-WIW-12",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 29 to 33. What had the Mole never seen before in all his life?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 12
+   },
+   "lineRefs": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "explanation": {
+    "hintCore": "The question asks what he had never seen. Not what he saw that day.",
+    "walkScript": "Find 'Never in his life' on line 29. Read on: 'had he seen a river before'. So a river is the new thing. The animal in line 30 is that same river.",
+    "hintAuthority": "annie-sixtyfifth-return.md, sha256 0cd56a0547dbca75363163584f63656b8da67411cfa49783b4c2ed8217ea7469",
+    "hintAuthoredBy": "Annie",
+    "_previousHintCore": "Find the words 'never in his life' and finish the sentence.",
+    "_previousWalkScript": "Find 'Never in his life' on line 29. Read on: 'had he seen a river before'. So a river is the new thing. The boat comes at the end."
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-12",
+    "verdict": "REFUSE",
+    "faultAt": [
+     "option An animal that chased and chuckled."
+    ],
+    "fault": "Second defensible answer. Lines 29 to 30 read 'Never in his life had he seen a river before - this sleek, sinuous, full-bodied animal, chasing and chuckling': the animal is in apposition to the river, so 'An animal that chased and chuckled.' is the passage's own description of the key. The execution itself concedes 'the animal in this window IS the river'. A child who reads the metaphor correctly can defend it.",
+    "objective": false,
+    "suggestedFix": "Replace that option with something not named in lines 29 to 33 as the thing he had never seen.",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "previousRound": {
+    "door": "sweep-fix/english-01",
+    "proposal": {
+     "seats": [
+      {
+       "optionId": "cmsw387yf000ktmqbrineesg5",
+       "itemId": "ENG-001-WIW-12",
+       "oldValue": "An animal that chased and chuckled.",
+       "tag": "en-minimal-pair-skim",
+       "newValue": "A lake.",
+       "execution": "A lake is close to the key in gist, still water in place of a running one, and differs from line 29 by that one word: line 29 says he had never seen 'a river before'. No lake appears anywhere in the passage."
+      }
+     ],
+     "redrafts": [],
+     "rebuilds": [],
+     "notes": [
+      "ENG-001-WIW-12: 'An animal that chased and chuckled.' is the passage's own name for the river (second defensible answer) -> seated 'A lake.' (en-minimal-pair-skim), named nowhere in the passage; line 29 says river."
+     ]
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw387yf000ktmqbrineesg5",
+      "verdict": "REFUSE",
+      "reason": "WIW-12: 'A lake.' removes the second answer but is a throwaway, and it builds a tell. It is the only option with no source anywhere in the passage, and it is the key's two-word body-of-water twin. A child who has noticed the river running through lines 29 to 67 picks 'A river.' from the pair without finding line 29. The tag story is fitted: no text reads almost like 'a lake', so nothing is being matched on gist; any noun swapped for 'river' would get the same execution."
+     }
+    ],
+    "reviewOfRow": {
+     "itemId": "ENG-001-WIW-12",
+     "verdict": "HOLD",
+     "holdFixed": false,
+     "faultField": "options",
+     "reason": "The proposed 'A lake.' is a sourceless throwaway and the key's body-of-water twin, so 'A river.' can be picked from the pair without reading line 29 (seat refused). The original fault is therefore not fixed as proposed. A secondary note for the redraft: the hint 'Not what he saw that day.' would also exclude the key, because he first sees the river that day."
+    }
+   },
+   "options": [
+    {
+     "optionId": "cmsw387yf000jtmqbs4jbygot",
+     "value": "A great meadow.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Nothing says the meadow was new to the Mole; line 15 only has him rolling in it. A creature from underground meeting a meadow makes 'never seen before' sound likely, but line 29 says it only of the river."
+    },
+    {
+     "optionId": "cmsw387yf000ktmqbrineesg5",
+     "value": "An animal that chased and chuckled.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 30 calls the river 'this sleek, sinuous, full-bodied animal, chasing and chuckling', so the animal in this window IS the river. A child who takes the picture for a second thing has taken an element inside the window for the answer, and line 29 disposes of it without her leaving the lines she was sent to."
+    },
+    {
+     "optionId": "cmsw387yf000ltmqbsitneobv",
+     "value": "A face with whiskers.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The face with whiskers is line 48, nineteen lines later."
+    },
+    {
+     "optionId": "cmsw387yf000mtmqbh3enf8fk",
+     "value": "The bright sunshine.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The sunlight is line 14, where his snout first comes out of the tunnel. The child answers from that earlier part instead of lines 29 to 33, where the thing he had never seen before is the river."
+    },
+    {
+     "optionId": "cmsw387yf000ntmqbmtuyqe5x",
+     "value": "A river.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-09",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 22 to 23. What did the elderly rabbit at the gap want from the Mole?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 9
+   },
+   "lineRefs": [
+    22,
+    23
+   ],
+   "explanation": {
+    "hintCore": "The rabbit says one sentence. What is he asking for in it?",
+    "walkScript": "Line 22 is the rabbit's one speech. He says 'Sixpence for the privilege of passing by the private road!' So he wants paying to let the Mole past. 'Onion-sauce!' at line 25 is the Mole's, on his way out.",
+    "hintAuthority": "annie-eightyninth-return.md (CONFIRMATIONS block), sha256 a51e2126cbfe9f2282254afc915fd340d851fa619fc53f9f4a7c5e4637193118",
+    "hintAuthoredBy": "Annie"
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-09",
+    "verdict": "HOLD",
+    "faultAt": [
+     "hint"
+    ],
+    "fault": "Hint 'The rabbit says one sentence.' is false: at lines 22 to 23 the rabbit says 'Hold up!' and then 'Sixpence for the privilege of passing by the private road!', two sentences each ending in '!'.",
+    "objective": true,
+    "suggestedFix": "'The rabbit asks for something at lines 22 and 23. What is it?'",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "previousRound": {
+    "door": "sweep-fix/english-01",
+    "proposal": {
+     "seats": [],
+     "redrafts": [],
+     "rebuilds": [
+      {
+       "itemId": "ENG-001-WIW-09",
+       "why": "Sweep hold: the hint said the rabbit says one sentence; lines 22 to 23 give two. New hint makes no sentence count. Annie's hint marker cleared (R94); old text kept.",
+       "stem": {
+        "text": "Read lines 22 to 23. What did the elderly rabbit at the gap want from the Mole?",
+        "passageRef": "stream-a-03-wind-in-willows",
+        "orderAnchor": 9
+       },
+       "options": [
+        {
+         "optionId": "cmsw2f4t70017tmbvdibva2l1",
+         "value": "Sixpence for using the private road.",
+         "isKey": true,
+         "tag": null,
+         "execution": null
+        },
+        {
+         "optionId": "cmsw2f4t70018tmbv8bq0sgma",
+         "value": "Help with his own spring-cleaning.",
+         "isKey": false,
+         "tag": "en-attribute-transfer",
+         "execution": "The spring-cleaning belongs to the Mole, at line 1. The child moves it onto the rabbit at the gap, who at line 22 asks only for sixpence to pass along the private road."
+        },
+        {
+         "optionId": "cmsw2f4t70019tmbv2kzq0aqh",
+         "value": "A ride across the river in a boat.",
+         "isKey": false,
+         "tag": "en-wrong-scope-retrieval",
+         "execution": "The boat ride is line 63, at the far end of the passage."
+        },
+        {
+         "optionId": "cmsw2f4t7001atmbvi285jr7m",
+         "value": "The privilege of passing by the private road.",
+         "isKey": false,
+         "tag": "en-agent-patient-reversal",
+         "execution": "Reverses the exchange in lines 22 to 23. The rabbit asks 'Sixpence for the privilege of passing by the private road': the privilege is what the Mole would get, and the sixpence is what the rabbit wants from him."
+        },
+        {
+         "optionId": "cmsw2f4t7001btmbv140bphdt",
+         "value": "Some onion sauce for his dinner.",
+         "isKey": false,
+         "tag": "en-figurative-taken-literally",
+         "execution": "'Onion-sauce!' at line 25 is the Mole's jeer on the way past, taken as an order for the rabbit's dinner."
+        }
+       ],
+       "explanationPatch": {
+        "hintCore": "The rabbit asks for something at lines 22 and 23. What is it?",
+        "hintAuthoredBy": null,
+        "hintAuthority": null,
+        "_previousHintCore": "The rabbit says one sentence. What is he asking for in it?"
+       }
+      }
+     ],
+     "notes": [
+      "ENG-001-WIW-09: hint 'The rabbit says one sentence' is false (two sentences at lines 22 to 23) -> hint 'The rabbit asks for something at lines 22 and 23. What is it?'; authorship marker cleared, old hint kept."
+     ]
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "rebuild:ENG-001-WIW-09",
+      "verdict": "ATTEST",
+      "reason": "The hint now reads 'The rabbit asks for something at lines 22 and 23. What is it?', which drops the false sentence count. It is true, does not coach, and does not pick between the sixpence and the privilege. The marker was cleared with the old text kept. Options and stem are unchanged."
+     }
+    ],
+    "reviewOfRow": {
+     "itemId": "ENG-001-WIW-09",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "faultField": "walkScript",
+     "reason": "The original hint fault is fixed. But the walk script says 'Line 22 is the rabbit's one speech' when the speech runs on to line 23 ('the private road!'). It then quotes that line-22-and-23 sentence as if it all stood on line 22. This is the same line-number fault class as WIW-05, and it now disagrees with the new hint's 'lines 22 and 23'. Fix: 'Lines 22 and 23 are the rabbit's one speech.' Options and key are otherwise sound."
+    }
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t70017tmbvdibva2l1",
+     "value": "Sixpence for using the private road.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t70018tmbv8bq0sgma",
+     "value": "Help with his own spring-cleaning.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "The spring-cleaning belongs to the Mole, at line 1. The child moves it onto the rabbit at the gap, who at line 22 asks only for sixpence to pass along the private road."
+    },
+    {
+     "optionId": "cmsw2f4t70019tmbv2kzq0aqh",
+     "value": "A ride across the river in a boat.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The boat ride is line 63, at the far end of the passage."
+    },
+    {
+     "optionId": "cmsw2f4t7001atmbvi285jr7m",
+     "value": "The privilege of passing by the private road.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Reverses the exchange in lines 22 to 23. The rabbit asks 'Sixpence for the privilege of passing by the private road': the privilege is what the Mole would get, and the sixpence is what the rabbit wants from him."
+    },
+    {
+     "optionId": "cmsw2f4t7001btmbv140bphdt",
+     "value": "Some onion sauce for his dinner.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "'Onion-sauce!' at line 25 is the Mole's jeer on the way past, taken as an order for the rabbit's dinner."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-13",
+   "status": "LIVE",
+   "questionType": "en-comp-technique",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "The writer calls the river an animal that chases, chuckles and grips things. Read lines 29 to 33. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 13
+   },
+   "lineRefs": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "explanation": {
+    "hintCore": "Chasing, chuckling, laughing. What sort of creature does all that?",
+    "walkScript": "Lines 30 and 31 give the river's verbs: chasing, chuckling, gripping, leaving them with a laugh. So the river feels alive and always moving. The Rat's hole is line 39, later.",
+    "hintAuthority": "annie-sixtyfifth-return.md, sha256 0cd56a0547dbca75363163584f63656b8da67411cfa49783b4c2ed8217ea7469",
+    "hintAuthoredBy": "Annie",
+    "_previousHintCore": "Chasing, chuckling, laughing — what sort of creature does all that?"
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-13",
+    "verdict": "HOLD",
+    "faultAt": [
+     "question",
+     "option To make the river seem alive, playful and always moving."
+    ],
+    "fault": "Form giveaway: the key is the only option beginning 'To ...'; all four distractors begin 'Because ...'. It is also the only three-part option. The key is singled out without the skill.",
+    "objective": true,
+    "suggestedFix": "Put all five options in one form (all 'To ...' or all 'Because ...').",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-technique"
+   },
+   "previousRound": {
+    "door": "sweep-fix/english-01",
+    "proposal": {
+     "seats": [],
+     "redrafts": [],
+     "rebuilds": [
+      {
+       "itemId": "ENG-001-WIW-13",
+       "why": "Sweep hold: the key was the only 'To ...' option and the only three-part one. All five options now begin 'To ...' and the key has two parts like its siblings. Tags unchanged; executions reworded to the new values.",
+       "stem": {
+        "text": "The writer calls the river an animal that chases, chuckles and grips things. Read lines 29 to 33. Why does he do this?",
+        "passageRef": "stream-a-03-wind-in-willows",
+        "orderAnchor": 13
+       },
+       "options": [
+        {
+         "optionId": "cmsw2f4tb001vtmbvc84advnk",
+         "value": "To make the river seem alive and always moving.",
+         "isKey": true,
+         "tag": null,
+         "execution": null
+        },
+        {
+         "optionId": "cmsw2f4tb001wtmbv3i1pm7w6",
+         "value": "To show that a real animal was swimming in the water.",
+         "isKey": false,
+         "tag": "en-figurative-taken-literally",
+         "execution": "Takes the animal comparison at line 30 as a real animal swimming in the water. Line 29 says the thing beside him is a river; the animal is the writer's picture of it."
+        },
+        {
+         "optionId": "cmsw2f4tb001xtmbv25sj12gz",
+         "value": "To show the river was dangerous and might grab the Mole.",
+         "isKey": false,
+         "tag": "en-extreme-option-pull",
+         "execution": "Pulls the gripping in line 30 to its most threatening reading. Lines 30 to 31 have the river 'chuckling', leaving things 'with a laugh' and finding 'fresh playmates', so it is playful, not a danger to the Mole."
+        },
+        {
+         "optionId": "cmsw2f4tb001ytmbvpeol94yp",
+         "value": "To show that the Water Rat lived in the bank beside it.",
+         "isKey": false,
+         "tag": "en-wrong-scope-retrieval",
+         "execution": "The Rat's hole in the bank is line 39, after this window; nothing in lines 29 to 33 is about the Rat."
+        },
+        {
+         "optionId": "cmsw2f4tb001ztmbv14pu0ugz",
+         "value": "To show that the Mole thought a big animal was in front of him.",
+         "isKey": false,
+         "tag": "en-technique-intent-as-character",
+         "execution": "The child turns the writer's choice of picture into something the Mole believes. Line 33 says the Mole was bewitched and entranced, not that he took the river for a creature; calling it an animal is the writer's way of making it seem alive."
+        }
+       ]
+      }
+     ],
+     "notes": [
+      "ENG-001-WIW-13: key alone began 'To ...' and alone had three parts -> all five options now in the 'To ...' form; key shortened to 'To make the river seem alive and always moving.' (matches the walk script); tags kept, executions reworded."
+     ]
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "rebuild:ENG-001-WIW-13",
+      "verdict": "REFUSE",
+      "reason": "The giveaway the sweep named survives one word along. The four distractors all open 'To show ...' and the key alone opens 'To make ...'. That is the same odd-one-out shape as the old 'To' against four 'Because'. The key is also now the shortest option at 9 words against 11, 11, 11 and 13. Otherwise the new question is sound: the key matches the walk script, every distractor is wrong under every reading, and line 29, line 33 and line 39 check. Vary the openings so the key's verb is shared, or phrase the key 'To show ...'."
+     }
+    ],
+    "reviewOfRow": {
+     "itemId": "ENG-001-WIW-13",
+     "verdict": "HOLD",
+     "holdFixed": false,
+     "faultField": "options",
+     "reason": "The form giveaway is not fixed. Four distractors open 'To show' and the key alone opens 'To make'. The key is also the shortest option, 9 words against 11 to 13. Content is otherwise sound: there is one defensible answer, and the executions are true against lines 29 to 33 and 39."
+    }
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tb001vtmbvc84advnk",
+     "value": "To make the river seem alive, playful and always moving.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tb001wtmbv3i1pm7w6",
+     "value": "Because a real animal was swimming in the water.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Takes the animal comparison at line 30 as a real animal swimming in the water."
+    },
+    {
+     "optionId": "cmsw2f4tb001xtmbv25sj12gz",
+     "value": "Because the river was dangerous, as it might grab the Mole.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Pulls the gripping in line 30 to its most threatening reading. Lines 30 to 31 have the river 'chuckling', leaving things 'with a laugh' and finding 'fresh playmates', so it is playful, not a danger to the Mole."
+    },
+    {
+     "optionId": "cmsw2f4tb001ytmbvpeol94yp",
+     "value": "Because the Water Rat lived in the bank beside it.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The Rat's hole in the bank is line 39, after this window."
+    },
+    {
+     "optionId": "cmsw2f4tb001ztmbv14pu0ugz",
+     "value": "Because the Mole thought a big animal was in front of him.",
+     "isKey": false,
+     "tag": "en-technique-intent-as-character",
+     "execution": "The child turns the writer's choice of picture into something the Mole believes. Line 33 says the Mole was bewitched and entranced, not that he took the river for a creature; calling it an animal is the writer's way of making it seem alive."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-001-WIW-14",
+   "status": "LIVE",
+   "questionType": "en-comp-inference",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "stem": {
+    "text": "Read lines 33 to 36. The Mole 'trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories'. What does this tell you about the Mole?",
+    "quotes": [
+     {
+      "rule": "R4",
+      "text": "trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories",
+      "lineRefs": [
+       34,
+       35,
+       36
+      ],
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling"
+      ],
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 14
+   },
+   "lineRefs": [
+    34,
+    35,
+    36
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "R4",
+      "text": "exciting stories",
+      "lineRefs": [
+       35,
+       35
+      ],
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "stream-a-03-wind-in-willows"
+     },
+     {
+      "rule": "quoted-from-passage",
+      "text": "trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories",
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "hintCore": "Why would a small child trot beside someone telling 'exciting stories'?",
+    "walkScript": "Look at the small child, lines 34 and 35. He trots beside a man who holds him 'spell-bound'. So the river holds the Mole walking beside it. He grows tired later.",
+    "hintAuthority": "annie-ninetyfirst-return.md (CONFIRMATIONS block), sha256 522c296cbadcbaa59bf98fd3b73704a7a8240e476036c13876e7b0d1d7165bb8",
+    "hintAuthoredBy": "Annie"
+   },
+   "finding": {
+    "itemId": "ENG-001-WIW-14",
+    "verdict": "HOLD",
+    "faultAt": [
+     "question"
+    ],
+    "fault": "Line refs disagree with the stem: the question says 'Read lines 33 to 36' but lineRefs is [34, 35, 36], omitting line 33 ('The Mole was bewitched, entranced, fascinated.'), which the walk-relevant reading uses.",
+    "objective": true,
+    "suggestedFix": "Set lineRefs to [33, 34, 35, 36], or change the stem to 'lines 34 to 36'.",
+    "batch": "english-01",
+    "district": "ENGLISH",
+    "questionType": "en-comp-inference"
+   },
+   "previousRound": {
+    "door": "sweep-fix/english-01",
+    "proposal": {
+     "seats": [],
+     "redrafts": [],
+     "rebuilds": [
+      {
+       "itemId": "ENG-001-WIW-14",
+       "why": "Sweep hold: the stem says lines 33 to 36 but lineRefs omitted line 33. lineRefs set to [33, 34, 35, 36]; nothing else changed.",
+       "stem": {
+        "text": "Read lines 33 to 36. The Mole 'trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories'. What does this tell you about the Mole?",
+        "quotes": [
+         {
+          "rule": "R4",
+          "text": "trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories",
+          "lineRefs": [
+           34,
+           35,
+           36
+          ],
+          "exemptFrom": [
+           "banList",
+           "sentenceCap",
+           "vocabularyCeiling"
+          ],
+          "passageRef": "stream-a-03-wind-in-willows"
+         }
+        ],
+        "passageRef": "stream-a-03-wind-in-willows",
+        "orderAnchor": 14
+       },
+       "options": [
+        {
+         "optionId": "cmsw2f4tc0021tmbvpodnk62w",
+         "value": "The Mole was too small and slow to keep up with the river.",
+         "isKey": false,
+         "tag": "en-comparison-vehicle-misread",
+         "execution": "Takes 'when very small' from the comparison in line 34 as a fact about the Mole. The words 'very small' belong to the child walking beside the storyteller; the Mole himself 'trotted' beside the river and kept with it, held 'spell-bound' (line 35) as the child is."
+        },
+        {
+         "optionId": "cmsw2f4tc0022tmbvqf4cf3r1",
+         "value": "The Mole was much younger than the Water Rat.",
+         "isKey": false,
+         "tag": "en-comparison-vehicle-misread",
+         "execution": "The 'very small' child of the comparison at line 34 is carried across to the Mole as an age, and the Rat is not in this window at all."
+        },
+        {
+         "optionId": "cmsw2f4tc0023tmbvq1zy93fx",
+         "value": "The Mole was looking for a man to help him.",
+         "isKey": false,
+         "tag": "en-figurative-taken-literally",
+         "execution": "Takes the man in the comparison at line 35 as a man the Mole is actually looking for."
+        },
+        {
+         "optionId": "cmsw2f4tc0024tmbvzkkasyfl",
+         "value": "The river held the Mole's interest so much that he kept following it.",
+         "isKey": true,
+         "tag": null,
+         "execution": null
+        },
+        {
+         "optionId": "cmsw2f4tc0025tmbvjefeli98",
+         "value": "The Mole was tired and wanted to go home.",
+         "isKey": false,
+         "tag": "en-within-span-wrong-element",
+         "execution": "Line 35 has him tired and sitting down. True, inside the window, and the wrong element for a question about why he kept following."
+        }
+       ],
+       "lineRefs": [
+        33,
+        34,
+        35,
+        36
+       ]
+      }
+     ],
+     "notes": [
+      "ENG-001-WIW-14: lineRefs [34, 35, 36] disagreed with the stem's 'lines 33 to 36' -> lineRefs set to [33, 34, 35, 36]."
+     ]
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "rebuild:ENG-001-WIW-14",
+      "verdict": "ATTEST",
+      "reason": "lineRefs is now [33, 34, 35, 36], which agrees with the stem's 'lines 33 to 36'. Nothing else changed: stem, quotes and options are identical to live. The stem quote's own lineRefs [34, 35, 36] is a superset (the quote ends on line 35), which is not false, so no refusal is made on it."
+     }
+    ],
+    "reviewOfRow": {
+     "itemId": "ENG-001-WIW-14",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "faultField": "options",
+     "reason": "The lineRefs fault is fixed. But read whole, the row has the form tell the sweep held in WIW-13. All four distractors open 'The Mole was ...' and the key alone opens 'The river held ...', so a child can pick it without the skill. Content is otherwise sound against lines 33 to 36: one defensible answer, and the walk script states the key."
+    }
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tc0021tmbvpodnk62w",
+     "value": "The Mole was too small and slow to keep up with the river.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "execution": "Takes 'when very small' from the comparison in line 34 as a fact about the Mole. The words 'very small' belong to the child walking beside the storyteller; the Mole himself 'trotted' beside the river and kept with it, held 'spell-bound' (line 35) as the child is."
+    },
+    {
+     "optionId": "cmsw2f4tc0022tmbvqf4cf3r1",
+     "value": "The Mole was much younger than the Water Rat.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "execution": "The 'very small' child of the comparison at line 34 is carried across to the Mole as an age, and the Rat is not in this window at all."
+    },
+    {
+     "optionId": "cmsw2f4tc0023tmbvq1zy93fx",
+     "value": "The Mole was looking for a man to help him.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Takes the man in the comparison at line 35 as a man the Mole is actually looking for."
+    },
+    {
+     "optionId": "cmsw2f4tc0024tmbvzkkasyfl",
+     "value": "The river held the Mole's interest so much that he kept following it.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tc0025tmbvjefeli98",
+     "value": "The Mole was tired and wanted to go home.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 35 has him tired and sitting down. True, inside the window, and the wrong element for a question about why he kept following."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "passageRef": "stream-a-04-black-beauty",
+   "stem": {
+    "text": "In town Beauty says 'I had a good bait'. What does 'bait' mean here? (line 14)",
+    "quotes": [
+     "I had a good bait"
+    ],
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 14
+   },
+   "lineRefs": [
+    14
+   ],
+   "explanation": {
+    "hintCore": "Ask what a horse would be given, not a fisherman.",
+    "walkScript": "Look at line 14. Beauty is a horse who has pulled a cart to town. What a horse is given on arriving is food and rest. That is what a good bait means here."
+   },
+   "finding": {
+    "itemId": "ENG-005-BB-04",
+    "verdict": "HOLD",
+    "faultAt": [
+     "hint"
+    ],
+    "fault": "Hint 'Ask what a horse would be given, not a fisherman.' eliminates the fish option by name and frames the answer as something given to a horse, which only the key 'A feed and a rest.' is; it coaches rather than teaches the context check.",
+    "objective": false,
+    "suggestedFix": "Point the child to who has the bait and where (a horse in town) without naming the fishing sense.",
+    "batch": "english-02",
+    "district": "ENGLISH",
+    "questionType": "en-comp-vocab"
+   },
+   "previousRound": {
+    "door": "sweep-fix/english-02",
+    "proposal": {
+     "seats": [],
+     "redrafts": [],
+     "rebuilds": [
+      {
+       "itemId": "ENG-005-BB-04",
+       "why": "Sweep hold: hint eliminated the fishing option by name and framed the answer as what a horse is given. Hint now asks who has the bait and where.",
+       "stem": {
+        "text": "In town Beauty says 'I had a good bait'. What does 'bait' mean here? (line 14)",
+        "quotes": [
+         "I had a good bait"
+        ],
+        "passageRef": "stream-a-04-black-beauty",
+        "orderAnchor": 14
+       },
+       "options": [
+        {
+         "optionId": "cmsw2f4uj0093tmbvcj8n5w7j",
+         "value": "Something used to catch a fish.",
+         "isKey": false,
+         "tag": "en-vocab-dominant-sense",
+         "execution": "Bait for catching fish is the commonest sense of the word. It does not fit line 14, where a horse that has pulled a cart to town has 'a good bait'."
+        },
+        {
+         "optionId": "cmsw2f4uj0094tmbv0idf1753",
+         "value": "A long wait outside, with nothing to eat.",
+         "isKey": false,
+         "tag": "en-vocab-form-lookalike",
+         "execution": "The child reads 'bait' as if it were 'wait', a word one letter away, and builds a long wait with no food. Line 14 calls it a good bait, which is a feed and a rest in town."
+        },
+        {
+         "optionId": "cmsw2f4uj0095tmbv6xohuxgb",
+         "value": "A trick played to make him go on.",
+         "isKey": false,
+         "tag": "en-vocab-neighbouring-sense",
+         "execution": "Bait as a lure or trick is a genuine sense of the word, but not the one line 14 fixes. 'I had a good bait' in the town, while the master was busy, is about Beauty being fed and rested."
+        },
+        {
+         "optionId": "cmsw2f4uj0096tmbvr6wzzbpd",
+         "value": "A feed and a rest.",
+         "isKey": true,
+         "tag": null,
+         "execution": null
+        }
+       ],
+       "explanationPatch": {
+        "hintCore": "Ask who has the bait in line 14, and where he is. What would he need after that journey?"
+       }
+      }
+     ],
+     "notes": [
+      "ENG-005-BB-04: Hint named the fisherman and framed the answer -> hint asks who has the bait in line 14, where, and what he would need."
+     ]
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "rebuild:ENG-005-BB-04",
+      "verdict": "REFUSE",
+      "reason": "The fishing sense is no longer named, but the second sentence 'What would he need after that journey?' brings back the framing the finding faulted. Of the four options only the key, 'A feed and a rest.', is something a horse needs. A long wait with no food, a fish lure and a trick are not, so the hint selects the key by category and coaches."
+     }
+    ],
+    "reviewOfRow": {
+     "itemId": "ENG-005-BB-04",
+     "verdict": "HOLD",
+     "holdFixed": false,
+     "faultField": "hintCore",
+     "reason": "The hint 'What would he need after that journey?' frames the answer as a need. Only the key, 'A feed and a rest.', fits that frame, which is the same coaching the finding named. The options are otherwise sound (dominant, form-lookalike and neighbouring senses), and line 14 fixes the sense."
+    }
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4uj0093tmbvcj8n5w7j",
+     "value": "Something used to catch a fish.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "Bait for catching fish is the commonest sense of the word. It does not fit line 14, where a horse that has pulled a cart to town has 'a good bait'."
+    },
+    {
+     "optionId": "cmsw2f4uj0094tmbv0idf1753",
+     "value": "A long wait outside, with nothing to eat.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "execution": "The child reads 'bait' as if it were 'wait', a word one letter away, and builds a long wait with no food. Line 14 calls it a good bait, which is a feed and a rest in town."
+    },
+    {
+     "optionId": "cmsw2f4uj0095tmbv6xohuxgb",
+     "value": "A trick played to make him go on.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "Bait as a lure or trick is a genuine sense of the word, but not the one line 14 fixes. 'I had a good bait' in the town, while the master was busy, is about Beauty being fed and rested."
+    },
+    {
+     "optionId": "cmsw2f4uj0096tmbvr6wzzbpd",
+     "value": "A feed and a rest.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-014-TS-03",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-05-tom-sawyer",
+   "stem": {
+    "text": "Look at lines 10 to 14. What shows us that Ben was in a happy mood?",
+    "quotes": [],
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 10
+   },
+   "lineRefs": [
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "explanation": {
+    "hintCore": "The line gives the proof and the thing proved. Take the proof.",
+    "walkScript": "Line 11 says his gait was the hop-skip-and-jump. Line 12 calls that proof enough that his heart was light. So the walk is the sign, and the light heart is what it proves."
+   },
+   "finding": {
+    "itemId": "ENG-014-TS-03",
+    "verdict": "HOLD",
+    "faultAt": [
+     "hint"
+    ],
+    "fault": "Hint 'The line gives the proof and the thing proved. Take the proof.' is an either/or whose halves are options: the proof is the key ('hopping and skipping'), the thing proved is option 'His heart was light and his hopes were high.', and the hint says which to take.",
+    "objective": true,
+    "suggestedFix": "Ask what the reader can see Ben doing, without naming proof versus conclusion.",
+    "batch": "english-02",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "previousRound": {
+    "door": "sweep-fix/english-02",
+    "proposal": {
+     "seats": [],
+     "redrafts": [],
+     "rebuilds": [
+      {
+       "itemId": "ENG-014-TS-03",
+       "why": "Sweep hold: hint was an either/or whose halves were options (the proof is the key, the thing proved is a distractor). Hint now asks what Ben is doing, without naming proof against conclusion. Gate-forced: the stored distractor 'His heart was light and his hopes were high.' now fails the subject-matter gate on 'high' (HOLD AND ROUTE); reworded to 'full of hope', same tag and same error.",
+       "stem": {
+        "text": "Look at lines 10 to 14. What shows us that Ben was in a happy mood?",
+        "quotes": [],
+        "passageRef": "stream-a-05-tom-sawyer",
+        "orderAnchor": 10
+       },
+       "options": [
+        {
+         "optionId": "cmsw2f4ww00n8tmbvjmmtakv4",
+         "value": "The calm way of working that is described.",
+         "isKey": false,
+         "tag": "en-attribute-transfer",
+         "execution": "Line 10 gives that calm to Tom; this reads it as a sign about Ben."
+        },
+        {
+         "optionId": "cmsw2f4ww00n9tmbvuewxef2d",
+         "value": "The fruit he had in his hand.",
+         "isKey": false,
+         "tag": "en-within-span-wrong-element",
+         "execution": "True at lines 12 and 13, and it is what he carried rather than the sign of his mood."
+        },
+        {
+         "optionId": "cmsw2f4ww00natmbv4teyn0a2",
+         "value": "The way he came hopping and skipping along.",
+         "isKey": true,
+         "tag": null,
+         "execution": null
+        },
+        {
+         "optionId": "cmsw2f4ww00nbtmbvh1zkbsrt",
+         "value": "His heart was light and he was full of hope.",
+         "isKey": false,
+         "tag": "en-inference-literal-lookalike",
+         "execution": "Reuses line 12, 'his heart was light and his anticipations high', and repeats the conclusion rather than giving the sign for it."
+        }
+       ],
+       "explanationPatch": {
+        "hintCore": "Look at what Ben is doing in line 11. The writer reads his mood from that."
+       }
+      }
+     ],
+     "notes": [
+      "ENG-014-TS-03: Hint either/or whose halves were options -> hint asks what Ben is doing in line 11. Gate-forced: distractor 'his hopes were high' failed the subject-matter gate on 'high' -> 'he was full of hope', tag unchanged."
+     ]
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "rebuild:ENG-014-TS-03",
+      "verdict": "REFUSE",
+      "reason": "The either/or is gone, and the gate-forced reword ('full of hope' for 'his hopes were high') is sound: 'high' is HOLD AND ROUTE on the bare value field, and the tag and error are kept. But the new hint 'Look at what Ben is doing in line 11. The writer reads his mood from that.' hands over the key. Line 11's only action by Ben is 'Ben's gait was the hop-skip-', which is the key. Every distractor sits on line 10 (calm), lines 12 to 13 (apple) or line 12 (light heart). Its second sentence tells the child that this action is the answer."
+     }
+    ],
+    "reviewOfRow": {
+     "itemId": "ENG-014-TS-03",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "faultField": "hintCore",
+     "reason": "The original either/or is fixed, but the replacement hint pins line 11, whose only action by Ben is the hop-skip-and-jump (the key). It adds 'The writer reads his mood from that', which hands over the key. The reworded light-heart distractor is otherwise sound."
+    }
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ww00n8tmbvjmmtakv4",
+     "value": "The calm way of working that is described.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Line 10 gives that calm to Tom; this reads it as a sign about Ben."
+    },
+    {
+     "optionId": "cmsw2f4ww00n9tmbvuewxef2d",
+     "value": "The fruit he had in his hand.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 12 and 13, and it is what he carried rather than the sign of his mood."
+    },
+    {
+     "optionId": "cmsw2f4ww00natmbv4teyn0a2",
+     "value": "The way he came hopping and skipping along.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4ww00nbtmbvh1zkbsrt",
+     "value": "His heart was light and his hopes were high.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 12 and repeats the conclusion rather than giving the sign for it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-03",
+   "status": "LIVE",
+   "questionType": "en-comp-retrieval",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "stem": {
+    "text": "Read lines 5 to 7. What do the squirrels and the rabbits do?",
+    "quotes": [],
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 3
+   },
+   "lineRefs": [
+    5,
+    6,
+    7
+   ],
+   "explanation": {
+    "hintCore": "Two animals, two actions. Match them up.",
+    "walkScript": "Read line 5 to the end of line 7. Two animals are named after the pheasant. One looks, the other runs. Check which does which before you answer."
+   },
+   "finding": {
+    "itemId": "ENG-011-CV-03",
+    "verdict": "HOLD",
+    "faultAt": [
+     "option A pheasant shows its breast deep in the fern."
+    ],
+    "fault": "The question names the squirrels and the rabbits; this option is about neither, so the question's own wording rules it out. With option 4 covering only the rabbits, only the key and its mirror answer for both animals.",
+    "objective": false,
+    "suggestedFix": "Replace with a distractor about the squirrels and rabbits.",
+    "batch": "english-03",
+    "district": "ENGLISH",
+    "questionType": "en-comp-retrieval"
+   },
+   "previousRound": {
+    "door": "sweep-fix/english-03",
+    "proposal": {
+     "seats": [
+      {
+       "optionId": "cmsw2f4w200ibtmbviagb1fik",
+       "itemId": "ENG-011-CV-03",
+       "oldValue": "A pheasant shows its breast deep in the fern.",
+       "tag": "en-minimal-pair-skim",
+       "newValue": "The squirrels and the rabbits both run away.",
+       "execution": "Only the rabbits run: lines 6 and 7 send them scudding away through the brushwood. Line 6 has the squirrels peer at the family from the beech-trees. The option changes one detail, giving the squirrels the rabbits' running, and matches the lines on gist."
+      }
+     ],
+     "redrafts": [],
+     "rebuilds": [],
+     "notes": [
+      "ENG-011-CV-03: pheasant distractor named neither animal the stem asks about -> seated a squirrels-and-rabbits distractor that changes one detail (minimal pair)."
+     ]
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "seat:cmsw2f4w200ibtmbviagb1fik",
+      "verdict": "ATTEST",
+      "reason": "ENG-011-CV-03. 'The squirrels and the rabbits both run away.' names both animals the stem asks about and is false: line 6 has the squirrels peer from the beech-trees, lines 6 and 7 have only the rabbits scud away through the brushwood. Differs from the key by one detail (squirrels run, not peer): minimal-pair-skim fits. No centroid giveaway (majority vote on the options gives 'both run', not the key). Execution checked against lines 5 to 7."
+     }
+    ],
+    "reviewOfRow": {
+     "itemId": "ENG-011-CV-03",
+     "verdict": "HOLD",
+     "holdFixed": true,
+     "faultField": "walkScript",
+     "reason": "Named fault fixed by the seat, but the row as it will stand fails the house rule that a walk reaches and states the key: the walk ends 'One looks, the other runs. Check which does which before you answer.' and never says the squirrels peer and the rabbits run. Also note: hint 'Two animals, two actions.' now rules out the new 'both run away' distractor without the passage; a walk fix should not lean on that."
+    }
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4w200iatmbvz9in5dg2",
+     "value": "The rabbits look and the squirrels dash off.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Swaps which animal does which. Lines 5 to 7 have the squirrels peer at them from the beech-trees and the rabbits scud away through the brushwood. This option gives the looking to the rabbits and the running to the squirrels."
+    },
+    {
+     "optionId": "cmsw2f4w200ibtmbviagb1fik",
+     "value": "A pheasant shows its breast deep in the fern.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 5, and it is a third animal rather than either of these two."
+    },
+    {
+     "optionId": "cmsw2f4w200ictmbvjcudzfcq",
+     "value": "The squirrels peer and the rabbits run away.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4w200idtmbvfcyz0xkn",
+     "value": "The rabbits run out into the road ahead of them.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Line 6 sends them away through the brushwood, not into the road."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-07",
+   "status": "LIVE",
+   "questionType": "en-comp-vocab",
+   "passageRef": "stream-a-09-eighty-days",
+   "stem": {
+    "text": "Look at lines 23 and 24. What does \"whose turn it was to deal\" on line 24 mean here?",
+    "quotes": [
+     "whose turn it was to deal"
+    ],
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 24
+   },
+   "lineRefs": [
+    23,
+    24
+   ],
+   "explanation": {
+    "quotes": [
+     {
+      "rule": "quoted-from-passage",
+      "text": "whose turn it was to deal",
+      "passageRef": "stream-a-09-eighty-days"
+     }
+    ],
+    "hintCore": "A bargain is being argued about, and the word is not that.",
+    "walkScript": "Line 23 has Fogg throw down the cards. Line 24 says it was Stuart’s turn to deal, and he gathers them up. To deal is to give out the cards to each player. So it was Stuart’s turn to hand them out again."
+   },
+   "finding": {
+    "itemId": "ENG-021-ED-07",
+    "verdict": "HOLD",
+    "faultAt": [
+     "hint"
+    ],
+    "fault": "Hint 'A bargain is being argued about, and the word is not that.' is not true of lines 23 and 24: no bargain or wager is raised until line 29. It also calls the target 'the word' when the question asks about a phrase.",
+    "objective": false,
+    "suggestedFix": "Point to what Stuart does with the cards at line 24.",
+    "batch": "english-03",
+    "district": "ENGLISH",
+    "questionType": "en-comp-vocab"
+   },
+   "previousRound": {
+    "door": "sweep-fix/english-03",
+    "proposal": {
+     "seats": [],
+     "redrafts": [],
+     "rebuilds": [
+      {
+       "itemId": "ENG-021-ED-07",
+       "why": "Sweep hold: hint said a bargain was being argued about in lines 23 and 24, which it is not until line 29, and called the phrase a word.",
+       "stem": {
+        "text": "Look at lines 23 and 24. What does \"whose turn it was to deal\" on line 24 mean here?",
+        "quotes": [
+         "whose turn it was to deal"
+        ],
+        "passageRef": "stream-a-09-eighty-days",
+        "orderAnchor": 24
+       },
+       "options": [
+        {
+         "optionId": "cmsw2f4yv00yvtmbvw4mqmj2l",
+         "value": "It was his to make a bargain.",
+         "isKey": false,
+         "tag": "en-vocab-dominant-sense",
+         "execution": "The commonest everyday sense of 'deal' is a bargain, and a wager is argued over a few lines later. But line 24 has Stuart gather up the cards, so the deal here is of cards."
+        },
+        {
+         "optionId": "cmsw2f4yv00ywtmbvtlcmn5ix",
+         "value": "It was his to give out the cards again.",
+         "isKey": true,
+         "tag": null,
+         "execution": null
+        },
+        {
+         "optionId": "cmsw2f4yv00yxtmbvu0wgypah",
+         "value": "It was his to take a large amount.",
+         "isKey": false,
+         "tag": "en-vocab-neighbouring-sense",
+         "execution": "As in a great deal, which is just as common."
+        },
+        {
+         "optionId": "cmsw2f4yv00yytmbv4m7dzhon",
+         "value": "It was his to gather up the cards.",
+         "isKey": false,
+         "tag": "en-within-span-wrong-element",
+         "execution": "True at line 24, and it is what he does before the thing the word names."
+        }
+       ],
+       "explanationPatch": {
+        "hintCore": "Look at what Stuart does with the cards on line 24. The phrase is part of the game."
+       }
+      }
+     ],
+     "notes": [
+      "ENG-021-ED-07: hint asserted a bargain in lines 23 and 24 -> hint points at what Stuart does with the cards on line 24."
+     ]
+    },
+    "reviewOfChanges": [
+     {
+      "ref": "rebuild:ENG-021-ED-07",
+      "verdict": "REFUSE",
+      "reason": "hintCore 'Look at what Stuart does with the cards on line 24.' sends the child to 'gathered them up', which is exactly the distractor 'It was his to gather up the cards.' (en-within-span-wrong-element). The false bargain claim is gone, but the new hint points at a wrong answer's value. A hint must establish the card-game context without directing the child to the gathering-up, and without asking for the definition that is the key (R572)."
+     }
+    ],
+    "reviewOfRow": {
+     "itemId": "ENG-021-ED-07",
+     "verdict": "HOLD",
+     "holdFixed": false,
+     "faultField": "hintCore",
+     "reason": "New hint 'Look at what Stuart does with the cards on line 24.' points to 'gathered them up', which is the value of the distractor 'It was his to gather up the cards.'; the hint fault is replaced by a hint that steers to a wrong answer."
+    }
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yv00yvtmbvw4mqmj2l",
+     "value": "It was his to make a bargain.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The commonest everyday sense of 'deal' is a bargain, and a wager is argued over a few lines later. But line 24 has Stuart gather up the cards, so the deal here is of cards."
+    },
+    {
+     "optionId": "cmsw2f4yv00ywtmbvtlcmn5ix",
+     "value": "It was his to give out the cards again.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yv00yxtmbvu0wgypah",
+     "value": "It was his to take a large amount.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "As in a great deal, which is just as common."
+    },
+    {
+     "optionId": "cmsw2f4yv00yytmbv4m7dzhon",
+     "value": "It was his to gather up the cards.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 24, and it is what he does before the thing the word names."
+    }
+   ]
+  }
+ ]
+}

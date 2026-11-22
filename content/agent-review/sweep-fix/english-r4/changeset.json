@@ -1,0 +1,63 @@
+{
+ "door": "sweep-fix/english-r4",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-09",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r4",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read whole against numberedLines. Key 'Because he was handsome and people heard he was rich.' is the only answer in lines 26 to 30: 'handsome features' line 27, 'much handsomer than Mr. Bingley' line 30, 'the report ... in general circulation' line 28 of 'ten thousand a year' line 29. Distractors each wrong as tagged: dancing every dance is Bingley (line 37) while Darcy danced only twice (lines 39 and 40), en-attribute-transfer; friendliness and kindness are nowhere in 26 to 30, en-plausible-not-stated; 'tallest man in the room' overstates line 27's 'tall', en-extreme-option-pull; the Derbyshire estate is at line 33, outside the window, en-wrong-scope-retrieval. Every execution citation checked under the line rule: lines 37, 39-40, 27-29, 32-33, 40-41, 27, 33 each hold the whole part cited. Hint 'Use only what lines 26 to 30 tell you about him.' repeats the stem's window and points at no option (key and 'tallest' both stand). Walk citations exact (27, 30, 28-29, 33) and it ends by stating the key. All options open 'Because he' and run 8 to 10 words; the key shares its two-part shape with 'friendly and kind'. Child-facing sentences at most 16 words, end on a full stop, British, child-suitable. Original length and shape giveaway fixed; every earlier hold is fixed.",
+   "landedAt": "2026-11-22T17:57:10.712Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "What had everybody heard about him within five minutes?",
+     "after": "Use only what lines 26 to 30 tell you about him."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at line 27, with 'his fine, tall person'. Line 29 adds 'ten thousand a year'. So his looks and his money won the room. The estate is named later.",
+     "after": "Start at line 27, with 'his fine, tall person'. Line 30 says the ladies found him much handsomer than Mr Bingley. Lines 28 and 29 add the report of 'ten thousand a year'. The estate in Derbyshire comes later, at line 33. So the room liked him because he was handsome and people heard he was rich."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "What had everybody heard about him within five minutes?"
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Start at line 27, with 'his fine, tall person'. Line 29 adds 'ten thousand a year'. So his looks and his money won the room. The estate is named later."
+    },
+    {
+     "field": "option A (cmsw2f4ts004ptmbvsq6f4lim).execution",
+     "before": "Dancing every dance is Mr Bingley at line 37, carried across to Mr Darcy, who dances twice. In the window, line 27 answers the stem: 'drew the attention of the room by his fine'.",
+     "after": "Dancing every dance is Mr Bingley at line 37, carried across to Mr Darcy, who dances only twice at lines 39 and 40. Lines 27 to 29 give why the room admired Mr Darcy: his fine, tall person and handsome features, and the report of his ten thousand a year."
+    },
+    {
+     "field": "option B (cmsw2f4ts004qtmbva58f6ihg).value",
+     "before": "Because he spoke kindly to everyone he was introduced to.",
+     "after": "Because he was friendly and kind to everyone he met."
+    },
+    {
+     "field": "option B (cmsw2f4ts004qtmbva58f6ihg).execution",
+     "before": "Speaking kindly is nowhere; line 40 has him decline being introduced to anyone.",
+     "after": "Friendliness and kindness are nowhere in lines 26 to 30. Lines 32 and 33 find him proud and above his company, and lines 40 and 41 have him decline being introduced to any other lady."
+    },
+    {
+     "field": "option D (cmsw2f4ts004stmbv1wr7n84t).value",
+     "before": "Because of his looks, and because of the news that he was very rich.",
+     "after": "Because he was handsome and people heard he was rich."
+    },
+    {
+     "field": "option E (cmsw2f4ts004ttmbvfoia9jy3).execution",
+     "before": "The Derbyshire estate is line 33, and it appears only when the room has turned against him. In the window, line 27 answers the stem: 'drew the attention of the room by his fine'.",
+     "after": "The Derbyshire estate is at line 33, outside lines 26 to 30, and it is named only after the room has turned against him. Within the window, lines 27 to 29 give his looks and the report of his ten thousand a year."
+    }
+   ]
+  }
+ ]
+}

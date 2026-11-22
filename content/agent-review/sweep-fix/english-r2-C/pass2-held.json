@@ -1,0 +1,45 @@
+{
+ "door": "sweep-fix/english-r2-C",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-020-HD-09",
+  "ENG-009-SM-06",
+  "ENG-027-RR-11",
+  "ENG-018-RB-12",
+  "ENG-020-HD-12",
+  "ENG-022-GK-02",
+  "ENG-027-RR-03"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-019-BV-07",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-019-BV-07",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Original walk line fault fixed, and the walk now states the key. One fault left in an execution the drafter did not touch. 'Suddenly steep, and cut through by the water.' says 'True at line 27', but 'through by the water' is on line 28 (line 27 ends 'was cut as it were'). The option also reaches past the cited window (26 and 27) that its tag en-within-span-wrong-element names. The fix is 'True at lines 27 and 28'.",
+    "faultField": "execution"
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-019-BV-12",
+     "verdict": "REFUSE",
+     "reason": "Every option now answers both halves and all share 'states', which removes the round 1 verb echo. But the key still differs on the surface: it is the only option joined by 'but' (the other three use 'and'), and the only one that says 'the rules' where the others say 'them'. In a contrast-shaped question a child can pick the one 'but' option without reading. The new executions are true (lines 1, 12 and 13, 14, 14 to 17, 18, 87 and 88, 90 checked)."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-019-BV-12",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "Original off-frame fault is fixed: every option now answers where the rules come from and how he states them, and none is literally true. But the key stands out by form. It alone is joined by 'but' (the three distractors use 'and') and it alone repeats 'the rules' where the others say 'them'. A child can pick the single contrast option without reading. Key itself is correct and the walk states it.",
+    "faultField": "options"
+   }
+  }
+ ]
+}

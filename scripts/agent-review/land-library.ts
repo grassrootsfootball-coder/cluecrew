@@ -33,7 +33,18 @@ async function main() {
   const read = (prefix: string) => files.filter((f) => f.startsWith(prefix) && f.endsWith('.json'))
     .map((f) => { const t = readFileSync(pjoin(DIR, f), 'utf8'); return { f, sha: sha(t), body: JSON.parse(t) as { entries: Verdict[] } }; });
   const verdicts = read('verdicts-');
-  const checks = new Map(read('transform-review-').flatMap((x) => x.body.entries.map((e) => [e.id, { ...e, file: x.f, sha: x.sha }] as const)));
+  // R1037: A CHECK ATTESTS THE TRANSFORMS OF ITS OWN ROUND, NOT WHATEVER TRANSFORMS SHARE ITS ENTRY ID.
+  // Keyed by id alone, round L2's ATTEST would have applied round L's REFUSED transforms (verdicts-L is
+  // read first and finds an ATTEST under the same id). So `transform-review-<S>` pairs with
+  // `verdicts-<S>`; the id-only fallback survives only where exactly ONE verdict file proposes
+  // transforms for the entry (the older rounds, whose check files are named for several rounds).
+  const suffix = (f: string, prefix: string) => f.slice(prefix.length, -'.json'.length);
+  const checkFiles = read('transform-review-');
+  const checksBySuffix = new Map(checkFiles.flatMap((x) => x.body.entries.map((e) => [`${suffix(x.f, 'transform-review-')}|${e.id}`, { ...e, file: x.f, sha: x.sha }] as const)));
+  const checksById = new Map(checkFiles.flatMap((x) => x.body.entries.map((e) => [e.id, { ...e, file: x.f, sha: x.sha }] as const)));
+  const proposers = new Map<string, number>();
+  for (const vf of verdicts) for (const v of vf.body.entries) if (v.verdict === 'REFUSE' && v.transforms?.length) proposers.set(v.id, (proposers.get(v.id) ?? 0) + 1);
+  const checkFor = (vfile: string, id: string) => checksBySuffix.get(`${suffix(vfile, 'verdicts-')}|${id}`) ?? (proposers.get(id) === 1 ? checksById.get(id) : undefined);
   const out: Array<Record<string, unknown>> = [];
   for (const vf of verdicts) for (const v of vf.body.entries) {
     const m = await prisma.misconception.findUnique({ where: { id: v.id } });
@@ -45,7 +56,7 @@ async function main() {
     if (v.verdict === 'ATTEST') {
       method = `ATTESTED unchanged by the machine reviewer ${AGENT} on a two-pass reading (assertion, then generality) against every carrier; ${vf.f} sha256 ${vf.sha.slice(0, 16)}.`;
     } else if (v.verdict === 'REFUSE' && v.transforms?.length) {
-      const c = checks.get(v.id);
+      const c = checkFor(vf.f, v.id);
       if (c?.verdict !== 'ATTEST') { out.push({ id: v.id, outcome: `held: transform not independently attested (${c?.verdict ?? 'no check'})` }); continue; }
       const bad: string[] = [];
       for (const t of v.transforms) {

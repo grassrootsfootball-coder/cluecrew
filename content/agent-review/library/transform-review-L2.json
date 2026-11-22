@@ -1,0 +1,36 @@
+{
+ "checker": "rev-agent-01 (independent of the verdicts-L2 drafter)",
+ "group": "L2",
+ "checkedOn": "2026-11-22",
+ "method": "DB text and carriers read read-only through Prisma from a scratchpad script. Each transform was applied in memory and its from-occurrences counted the way land-library.ts counts them (split). Gates run on every result: checkChildFacingText (role 'hint' and role 'misconception-hint') and checkMisconceptionProposal. refuseApprovedTrim was run against the row, and childHint words were counted the way the write-level guard counts them (whitespace tokens on the whole field). Every LIVE option set was read for key-pointing. The VR carriers were re-checked with loadWordPuzzleLexicon: the letter was removed from word 1 and inserted at every spot of word 2.",
+ "tally": {
+  "ATTEST": 4,
+  "REFUSE": 0
+ },
+ "entries": [
+  {
+   "id": "maths-85-miscount-or-rounding-in-measures",
+   "verdict": "ATTEST",
+   "reason": "Both froms occur exactly once (childHint and description). I read 10 LIVE carriers; a REVIEWED carrier exists and I did not read it. Eight carrying options multiply by one group too few: MC02-MEAS-06 (£7.10, 2 × £1.45), MC02-MEAS-07 (£5.75, 3 × 65p), MC02-RP-01 (320 g = 4 × 80 g for 5 people; no recorded execution, but the arithmetic matches), MC03-CALC-07 (£17.50, 2 × £6.50), MC03-MEAS-07 (£6.10, 6 × 35p), MC04-CALC-07 (43, 3 × 25), MC04-MEAS-07 (£5.30, 2 × £2.35) and MC05-MEAS-07 (£2.70, 2 × £1.15). The other two round and do not adjust back: MC03-MEAS-02 (45 cm = 75 - 30 for 75 - 28) and MC03-MEAS-04 (00:30 = 23:50 taken as 00:00, plus 30). Neither has a recorded execution. I found no other arithmetic that gives either value. The new description is a disjunction, and each carrier is covered by one half: the first half on the 8, the second on the 2. It drops round L's population clause, which was false on MC04-CALC-07 (badges, not a measure or money). So the description names the mistake on all 10 and claims no feature that a carrier lacks. The childHint describes a move: count the groups or steps again, then use the exact number. That is true and helpful on the 8 group carriers. On MC03-MEAS-02, 'use the exact number' means 28, not 30. On MC03-MEAS-04, counting the ten-minute steps from 23:50 gives 00:20. It names no number and rules out no option by direction, so no key is singled out. Sentences have 11 and 10 words, with no say-aloud or draw instruction. childHint goes from 15 to 21 words, so R213 is not engaged. checkChildFacingText ('hint' and 'misconception-hint') and checkMisconceptionProposal on the result: 0 findings. The misfiled-carrier note is an item fault, not an entry fault: maths-99-rounded-without-compensating may be the better tag on MC03-MEAS-02 and MC03-MEAS-04.",
+   "failsOn": []
+  },
+  {
+   "id": "maths-79-dividing-by-a-fraction-error",
+   "verdict": "ATTEST",
+   "reason": "The from occurs exactly once. I read 4 LIVE carriers. In each, the container holds part of one unit: MC01-FDP-04 a half-litre glass, MC01-FDP-08 a 3/4 kg bag, MC04-FDP-05 a 2/3 kg bag, MC05-FDP-06 a 2/3 litre glass. So 'Each bag or glass holds only part of one kilogram or litre' is true on all 4, where the current 'halves' and 'litre' were false on 3 and 2. The carrying option on each is one container per unit: 2 for 2 litres left, 15 for 15 kg, 12 for 12 kg, 6 for 6 litres. The second sentence rules out exactly that move. It does not state a direction, so it differs from round L's refused 'more of them than you have'. The options left after it are: 4, 8, 1 on MC01-FDP-04; 20, 11.25, 5 on MC01-FDP-08; 18, 8, 4 on MC04-FDP-05; 9, 4, 2 on MC05-FDP-06. Observation, not a reason to refuse: a child who reasons from 'only part of one kilogram' to 'so more bags' could still reach the key by elimination on MC01-FDP-08, MC04-FDP-05 and MC05-FDP-06, because no sibling there is above the amount. That inference is the concept the hint has to teach, and the hint leaves the child to make it. The fault is in the option sets: none of the three has a 'too many' distractor. Sentences have 12 and 13 words, with no say-aloud or draw instruction. childHint goes from 10 to 25 words, so R213 is not engaged. checkChildFacingText ('hint' and 'misconception-hint') and checkMisconceptionProposal on the result: 0 findings. Not in this transform: the unchanged description's 'treating a half as one whole' is false on the same 3 carriers. That was flagged in the verdict for a later round and should not be lost.",
+   "failsOn": []
+  },
+  {
+   "id": "maths-47-translation-by-gap",
+   "verdict": "ATTEST",
+   "reason": "Both froms occur exactly once. I read 3 LIVE carriers. On each, the carrying option is one short on both moves: MC02-GEOM-04 (6, 2) for (7, 3), moving 3 for 4 and 0 for 1; MC03-GEOM-02 (6, 3) for (7, 4), moving 4 for 5 and 2 for 3; MC05-GEOM-03 (10, 5) for (11, 6), moving 5 for 6 and 3 for 4. The new description ('in between instead of the jumps from point to point, so each move comes out one short') is true on all 3. It no longer mentions shapes, which none of the carriers has. It matches the recorded executions ('counts the gaps between squares rather than moving point to point'). The new childHint settles the ambiguity round L refused: 'Do not count the point you start on' names the fencepost miscount directly. 'Each jump to the next grid line counts as one square' gives the correct move, and it also fixes the in-between reading of the same error. The hint asserts no feature of the item and names no coordinate. Each carrier keeps the reversed and wrong-operation siblings beside the key, so nothing is left standing by elimination. Sentences have 8 and 11 words, with no say-aloud or draw instruction. childHint goes from 18 to 19 words, so R213 is not engaged. checkChildFacingText ('hint' and 'misconception-hint') and checkMisconceptionProposal on the result: 0 findings.",
+   "failsOn": []
+  },
+  {
+   "id": "vr-move-letter-second-word-invalid",
+   "verdict": "ATTEST",
+   "reason": "The from (' and say it aloud. Does it sound like a real word?') occurs exactly once. I read 25 LIVE carriers with 26 carrying options; gen-vr-08-move-letter-15 carries R and A. The 13 NEVER_SHIPPABLE carriers were not read. I re-ran each option through loadWordPuzzleLexicon. On all 26 the letter leaves a real first word (HEAT, TICK, DRAW, TALE, ... PACE). On 24 no insertion spot in word 2 makes a word. The two lexicon edges are ALOW/LOWA (-15, A into LOW) and FOOED (-22, E into FOOD), which no 9 to 11 year old would count as words. So the hint's implied answer, 'no spot makes a real word', is true for the child on all 26. The new text drops the say-aloud channel (R567) and describes the test the child skipped. It does not leave only the key standing. The first-word-invalid sibling on each carrier also passes the second-word test (for example H into OLD makes HOLD on -01), so the hint removes only the carrying option. The hint prints no letter. Sentences have 12 and 7 words. R213, counted the way the write-level guard counts (whitespace tokens on the whole childHint): 18 before, 19 after, so refuseApprovedTrim returns null. Round L's version was held at write with 18 to 17. checkChildFacingText ('hint' and 'misconception-hint') and checkMisconceptionProposal on the result: 0 findings.",
+   "failsOn": []
+  }
+ ]
+}

@@ -1,0 +1,445 @@
+{
+ "door": "sweep-fix/english-r2-C",
+ "proposer": "agent",
+ "ruling": "R1037",
+ "round": 2,
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-020-HD-12",
+   "why": "Round 2 of the R1037 sweep hold. Carries round 1's narrowed stem, hint and walk, which the reviewer found accurate (the walk states the key). Fixes what round 1 left: the two distractors that no longer answered the narrowed stem are rewritten so every option says how the taking and the hat's return happen, in the key's 'What is taken is ..., but what returns ...' frame.",
+   "stem": {
+    "text": "Think about the whole passage. Heidi's bread and hat are taken away, and later the hat comes back. What is true of how these things happen?",
+    "quotes": [],
+    "passageRef": "stream-a-19-heidi",
+    "answerShape": "two-halved-contrast-of-what-is-taken-against-what-is-given",
+    "orderAnchor": 9999,
+    "techniqueKey": "decisions-taken-over-the-child-and-kindness-done-without-a-word"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yp00xwtmbvyzktf3kr",
+     "value": "What is taken is settled aloud, but what returns comes in silence.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yp00xxtmbvabzkc9ko",
+     "value": "What is taken is taken gently, but what returns comes with sharp words.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Fraulein Rottenmeier takes the bread in a determined tone at line 19, and Sebastian's signs at lines 40 and 41 are kind. The child swaps the two manners."
+    },
+    {
+     "optionId": "cmsw2f4yp00xytmbvlcf8gmpt",
+     "value": "What is taken is called unkind by the writer, but what returns is never judged.",
+     "isKey": false,
+     "tag": "en-whole-text-absence-asserted",
+     "execution": "Across lines 1 to 45 the writer never calls the taking unkind or harsh. The lines report what Fraulein Rottenmeier says and does at lines 13 to 19 and leave the verdict out. The child reads Heidi's weeping at lines 21 to 25 as the writer's own verdict."
+    },
+    {
+     "optionId": "cmsw2f4yp00xztmbvixwi9p8n",
+     "value": "What is taken is taken with Heidi's agreement, but what returns comes against her wishes.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "The passage says the opposite of both halves. At lines 16 and 17 Heidi screams 'No! no!' and rushes to stop Tinette, and at line 43 she snatches the hat up with delight. The child reverses how Heidi takes each event."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find the lines where each thing is taken, and where the hat turns up again. Compare how each one happens.",
+    "walkScript": "At lines 13 to 15 Fraulein Rottenmeier calls out her order to Tinette. At lines 18 and 19 she says the bread will be taken away. At lines 40 and 41 Sebastian makes only signs. At lines 42 and 43 Heidi simply finds the hat in her bed. So what is taken is settled aloud, but what returns comes in silence.",
+    "_previousHintCore": "List what is done to Heidi and what is done for her. Compare how each one happens.",
+    "_previousWalkScript": "At line 4 Fraulein Rottenmeier settles the clothes without asking her. At line 6 she settles it with Clara. At line 13 she gives Tinette the order. At lines 40 and 41 Sebastian makes only signs. At line 42 the hat is back."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "why": "Round 2 of the R1037 sweep hold. Round 1's stem (where the rules come from, and how he states them) is kept, but only the key answered its second half. Now every option answers both halves in the same shape (a source, then 'states them' and a manner), so the key no longer stands alone in echoing the stem's verb. The hint no longer points at an option, and the walk ends on the key.",
+   "stem": {
+    "text": "Think about the whole passage. Where do Bevis's rules for the game come from, and how does he state them?",
+    "quotes": [],
+    "passageRef": "stream-a-20-bevis",
+    "answerShape": "two-halved-contrast-of-who-made-them-against-how-they-are-stated",
+    "orderAnchor": 9999,
+    "techniqueKey": "rules-of-an-invented-game-asserted-as-facts-about-the-world"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yf00w8tmbvip3s8s6s",
+     "value": "He and Mark make them up together, and he states them as gentle requests.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "The passage says the opposite. Mark argues against the rules at lines 12 and 13 and at line 18, and Bevis answers 'Impossible' at line 14. At lines 87 and 88 he says 'People must do as the captain tells them', which is no gentle request."
+    },
+    {
+     "optionId": "cmsw2f4yf00w9tmbvn2ia68aj",
+     "value": "He learns them from his father, and states them as his father's words.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No line says where Bevis learned his rules, and no father is named anywhere in the passage. Every rule, at lines 14 to 17, 87 and 88, and 90, is spoken by Bevis without naming anyone else. The child supplies a source that sounds likely for a boy."
+    },
+    {
+     "optionId": "cmsw2f4yf00watmbvzdnudgdk",
+     "value": "He makes the rules up himself, but states them like plain fact.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yf00wbtmbvuof2q0v4",
+     "value": "He asks Mark to choose them, and states them in a whisper.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Bevis whispers only at line 1, and that is a request for his fishing-rod, not a rule of the game. He never asks Mark to choose a rule: at line 14 he answers Mark with 'Impossible'. The child takes the whisper from the wrong part of the passage."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find each rule of the game in the passage. Look at who says it and the words used.",
+    "walkScript": "At lines 14 and 15 he says 'the captain who always does everything'. At lines 87 and 88 he says 'People must do as the captain tells them'. At line 90 he says 'you ought to be put on half-rations'. Mark sets none of them, and argues back at line 18. So he makes the rules up himself, but states them like plain fact.",
+    "_previousHintCore": "One of these says the writer told you what to think.",
+    "_previousWalkScript": "At lines 14 and 15 he says 'the captain who always does everything'. At lines 87 and 88 he says 'People must do as the captain tells them'. At line 90 he says 'you ought to be put on half-rations'. Each rule comes from Bevis, and he says each one as plain fact."
+   }
+  },
+  {
+   "itemId": "ENG-018-RB-12",
+   "why": "Round 2 of the R1037 sweep hold. Round 1's hint is carried. The key stood out by form (three options opened 'We are told she'), so all four now open 'We hear what she says,' and differ only in what they claim about her mind; 'but' and 'and' are split two and two, and one distractor carries an absolute ('every') as the key carries 'never'. The shy execution no longer claims no line tells us what she feels (lines 57 and 58). The walk now states the key.",
+   "stem": {
+    "text": "Think about the whole passage. How much are we told about what Rebecca thinks?",
+    "quotes": [],
+    "passageRef": "stream-a-21-rebecca-sunnybrook",
+    "answerShape": "speech-set-against-a-withheld-mind",
+    "orderAnchor": 999,
+    "techniqueKey": "a-child-given-entirely-from-outside-while-she-talks-throughout"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4y600uptmbvpvxs9hzg",
+     "value": "We hear what she says, but we are told she feels shy at first.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No line tells us she is shy. She waits eagerly at line 11, and at line 30 she answers her mother eagerly and willfully. Shy at first is the start a child expects for a girl leaving home, but the passage never gives it."
+    },
+    {
+     "optionId": "cmsw2f4y600uqtmbv7drf4i37",
+     "value": "We hear what she says, and the writer tells us every thought she has.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "The thoughts the writer reports are Mr Cobb's, at line 37 and at line 60, never hers. Her feeling at lines 57 and 58 reaches us only in her own words. The child gives Mr Cobb's inside view to Rebecca."
+    },
+    {
+     "optionId": "cmsw2f4y600urtmbvobwahmjo",
+     "value": "We hear what she says, and we are told her plan for the front seat.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "No line reports a plan in her head. At line 45 she simply asks Mr Cobb whether it costs any more to ride up there. The child supplies a scheme behind the question."
+    },
+    {
+     "optionId": "cmsw2f4y600ustmbv545e6wc8",
+     "value": "We hear what she says, but we are never let inside her head.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Go through what we learn about Rebecca. For each thing, ask how the passage lets us know it.",
+    "walkScript": "At lines 12 and 13 we are given her age and her size, from outside. At lines 28 and 29 her mother sums her up to the driver. At lines 57 and 58 she tells us her own feeling, in her own words. At line 60 the thought that arrives is Mr Cobb's, not hers. So we hear what she says, but we are never let inside her head.",
+    "_previousHintCore": "Before you say what she felt, find the line that tells you her thoughts.",
+    "_previousWalkScript": "At lines 12 and 13 we are given her age and her size, from outside. At lines 28 and 29 her mother sums her up to the driver. At line 39 he sees a small shape, and line 40 gives her braid. At line 60 the thought about her arrives, and it is his thought, not hers."
+   }
+  },
+  {
+   "itemId": "ENG-020-HD-09",
+   "why": "Round 2 of the R1037 sweep hold. Carries round 1's attested walk-script line fix. The walk now states the key. 'To sit quietly at the table.' comes from line 39, outside the cited lines 37 and 38, so it is retagged en-wrong-scope-retrieval with the line corrected.",
+   "stem": {
+    "text": "Look at lines 37 and 38. What does \"suppress\" on line 38 mean here?",
+    "quotes": [
+     "suppress"
+    ],
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 37
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yn00xhtmbv7n8q9tjy",
+     "value": "To put down a rising by force.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The sense a child meets in history, and it is the commoner one."
+    },
+    {
+     "optionId": "cmsw2f4yn00xitmbv8cbllgh3",
+     "value": "To hold back a thing that is coming out.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yn00xjtmbvyam18ung",
+     "value": "To sit quietly at the table.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The child takes 'must sit quietly at table' from line 39, just after the lines the question names. That is what Heidi knew she had to do, not what suppress means. At line 38 she could not hold back a sob."
+    },
+    {
+     "optionId": "cmsw2f4yn00xktmbvuwze5cxo",
+     "value": "To press down hard on a thing.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "execution": "The child finds 'press' inside 'suppress' and builds a meaning from that part. The part is real but the sum is not the word: at line 38 Heidi could not hold back a sob."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Lines 37 and 38 say when she saw her roll she could not suppress a sob. Line 38 says she made an effort to control herself. So suppress here means to hold back a thing that is coming out.",
+    "_previousWalkScript": "Line 37 says when she saw her roll she could not suppress a sob. Line 38 says she made an effort to control herself. The word names what she could not do to the sob."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-07",
+   "why": "Round 2 of the R1037 sweep hold. Carries round 1's attested walk-script line fix, and the walk now states the key. The hint 'Nothing in these lines is a cupboard.' struck out one option by name, so it now names the substitution move instead.",
+   "stem": {
+    "text": "Look at lines 26 and 27. What does \"shelving\" on line 27 mean here?",
+    "quotes": [
+     "shelving"
+    ],
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 26
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yb00vjtmbvt4il11jf",
+     "value": "Fitted with shelves for standing things on.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The sense a child meets first, and it is a noun they know."
+    },
+    {
+     "optionId": "cmsw2f4yb00vktmbv7uf8gfz9",
+     "value": "Put aside to be dealt with later.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "The other everyday sense of the verb, and nothing here is put aside."
+    },
+    {
+     "optionId": "cmsw2f4yb00vltmbvl2uu1m5b",
+     "value": "Low and sloping gently down to the water.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yb00vmtmbvacnnb1z8",
+     "value": "Suddenly steep, and cut through by the water.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 27, and it is what the strand becomes rather than what it was."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Try each answer in place of shelving on line 27. Read the sentence again each time.",
+    "walkScript": "Lines 26 and 27 say the strand was till then so low and shelving. Line 27 says it suddenly became steep. So shelving here means low and sloping gently down to the water.",
+    "_previousHintCore": "Nothing in these lines is a cupboard.",
+    "_previousWalkScript": "Line 26 says the strand was till then so low and shelving. Line 27 says it suddenly became steep. The word has to name what steep is the opposite of."
+   }
+  },
+  {
+   "itemId": "ENG-027-RR-03",
+   "why": "Round 2 of the R1037 sweep hold. Carries round 1's walk script, which the reviewer found sound. The hint goes back to the plain substitution test and names no option. Option D ('His look in the pictures of him') passed that test; it is replaced by a distractor the test rules out.",
+   "stem": {
+    "text": "Look at lines 11 and 12. What does \"wont\" mean here?",
+    "quotes": [
+     "wont"
+    ],
+    "passageRef": "stream-a-22-prisoner-of-zenda",
+    "orderAnchor": 11
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f50f0181tmbv9z300mwg",
+     "value": "His refusal to do something.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "execution": "Built from the contraction a child meets constantly in the other spelling."
+    },
+    {
+     "optionId": "cmsw2f50f0182tmbvsxqetufs",
+     "value": "His reason for looking pale.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 12, and it is the reply rather than the word."
+    },
+    {
+     "optionId": "cmsw2f50f0183tmbvdthbltrf",
+     "value": "His usual way of looking.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f50f0184tmbv7m30zvwz",
+     "value": "His ride through the Old Town.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The child takes the riding from line 5, where he enters the streets of the Old Town, and from line 10. That is what he is doing, not what wont means. Put in its place, 'paler than his ride through the Old Town' makes no sense."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Line 11 says he looks paler than his wont. Line 12 gives the reply about how he lives. The word sits after paler than his. Paler than his wont means paler than he usually looks. So wont means his usual way of looking.",
+    "_previousWalkScript": "Line 11 says he looks paler than his wont. Line 12 gives the reply about how he lives. The word sits after paler than his."
+   }
+  },
+  {
+   "itemId": "ENG-022-GK-02",
+   "why": "Round 2 of the R1037 sweep hold. Carries round 1's attested recast of the lookalike option. The hint no longer asks a yes/no whose half is the key: it asks how the two parts fit together, which every option answers with its own link. The walk now states the key.",
+   "stem": {
+    "text": "Look at lines 7 to 11 and lines 38 and 39. What do the two put together?",
+    "quotes": [],
+    "passageRef": "stream-c-01",
+    "answerShape": "two-halved-contrast-of-what-he-claims-against-what-happened",
+    "orderAnchor": 7,
+    "techniqueKey": "a-choice-insisted-on-against-the-picking-that-produced-it"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4z100zutmbvdzvsury0",
+     "value": "He put himself in goal, and Dan picked the teams last week.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Hands back line 7 and line 38 side by side, both true, but drops that he was picked eighth out of eight. It names no link between what he claims and how he was picked."
+    },
+    {
+     "optionId": "cmsw2f4z100zvtmbvlfauuebi",
+     "value": "He chose the goal because he is the best keeper they have.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "A sensible-sounding reason the poem never gives. No line calls him the best, and line 20 has fourteen go past him."
+    },
+    {
+     "optionId": "cmsw2f4z100zwtmbvddaft6gf",
+     "value": "He wanted the goal, so that Dan would pick him sooner the next time.",
+     "isKey": false,
+     "tag": "en-motive-invention",
+     "execution": "A plan the lines never give him. Nothing in lines 7 to 11 or lines 38 and 39 links the goal to being picked sooner."
+    },
+    {
+     "optionId": "cmsw2f4z100zxtmbv5xjzlhaf",
+     "value": "He says he chose the goal, but he was picked last of them.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read lines 7 to 11, then lines 38 and 39. Decide how the two parts fit together.",
+    "walkScript": "Line 7 says he put himself in goal and nobody put him there. Line 9 has Dan say anyone. Line 38 has Dan pick him eighth out of eight, which is last. So he says he chose the goal, but he was picked last of them.",
+    "_previousHintCore": "One of these joins the two moments with an and.",
+    "_previousWalkScript": "Line 7 says he put himself in goal and nobody put him there. Line 9 has Dan say anyone. Line 38 has Dan pick him eighth out of eight."
+   }
+  },
+  {
+   "itemId": "ENG-027-RR-11",
+   "why": "Round 2 of the R1037 sweep hold. Carries round 1's attested retag of the ambassadors option. 'Because the old man had left before he arrived.' is stated against by line 66, so it is retagged en-contradicted-by-the-text with the line corrected. The hint pointed at one option ('the reason he was in danger'), so it now names the move, and the walk now states the key.",
+   "stem": {
+    "text": "Look at lines 64 to 68. Why is the narrator thankful about old Lord Topham?",
+    "quotes": [],
+    "passageRef": "stream-a-22-prisoner-of-zenda",
+    "orderAnchor": 64
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f50l0190tmbv3cfti7vu",
+     "value": "Because he had danced at Lord Topham’s house before.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 66 and 67, where he had danced a score of times at Lord Topham's house in Grosvenor Square. That is why the old man might know him, the danger, not why he is thankful; line 67 gives that, the old man was as blind as a bat."
+    },
+    {
+     "optionId": "cmsw2f50l0191tmbvpl06ruyh",
+     "value": "Because the ambassadors had paid their respects.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 65, where the ambassadors pay their respects, and line 66 puts Lord Topham among them. That is what happened, not why he is thankful. Line 67 gives the reason: the old man was as blind as a bat."
+    },
+    {
+     "optionId": "cmsw2f50l0192tmbvwjq8zafl",
+     "value": "Because the old man could hardly see.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f50l0193tmbvlvbefisu",
+     "value": "Because the old man had left before he arrived.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "The passage says the opposite. Line 66 puts old Lord Topham among the ambassadors paying their respects, so he had not left. The child gives a reason that would also keep him from knowing the narrator."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read lines 64 to 68 again. Check that your answer says why, and that the lines say it.",
+    "walkScript": "Line 66 names old Lord Topham, at whose house he had danced. Line 67 says 'Thank heaven, the old man was as blind as a bat'. So he is thankful because the old man could hardly see.",
+    "_previousHintCore": "One of these is the reason he was in danger.",
+    "_previousWalkScript": "Line 66 names old Lord Topham. Line 67 says he was as blind as a bat. Line 68 says he did not claim acquaintance."
+   }
+  },
+  {
+   "itemId": "ENG-009-SM-06",
+   "why": "Round 2 of the R1037 sweep hold. Carries round 1's two attested seats (the gull option and the wind retag). The hint asked for exactly the relation the key states; it now sends the child to lines 24 to 26 without naming the water's position. The walk ended without the key; it now states it.",
+   "stem": {
+    "text": "Read lines 24 to 26. Why does he keep from looking over at the water?",
+    "quotes": [],
+    "passageRef": "stream-b-02",
+    "orderAnchor": 24
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vl00fgtmbvcp2j597s",
+     "value": "He was in a hurry to reach Saltmere before dark.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Nothing in these lines rushes him; line 26 has him simply keeping going."
+    },
+    {
+     "optionId": "cmsw2f4vl00fhtmbvh35xnig7",
+     "value": "It sat higher up than the field beside him.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4vl00fitmbv2tyq4taj",
+     "value": "The wind was blowing hard into his eyes.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 24 says the wind dropped out of his ears, so it had eased. The child gives a strong wind as the reason, where the passage says the wind had dropped."
+    },
+    {
+     "optionId": "cmsw2f4vl00fjtmbvebk2dbg6",
+     "value": "He was watching a gull standing on an old boat.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The gull standing on the boat is at lines 20 and 21, before this part of the walk. Lines 24 to 26 give the reason he keeps going without looking: the water sat higher up than the field beside him."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read lines 24 to 26. Find what he notices just before he decides not to look.",
+    "walkScript": "At lines 24 and 25 he hears how much water there is. Lines 25 and 26 say it sat higher up than the field he was walking beside. Then he keeps going and does not look over. So he keeps from looking because it sat higher up than the field beside him.",
+    "_previousHintCore": "Work out where the water is compared with him.",
+    "_previousWalkScript": "Read lines 25 and 26 together: the words higher up than the field straddle them. The water is behind the bank, above the field he walks beside. Line 26 gives what he does about that."
+   }
+  }
+ ],
+ "notes": {
+  "ENG-020-HD-12": "Hold (round 1): the narrowed stem left 'missed by all, but only Heidi says so' (nothing about the hat or how) and 'the giving is never judged' (a giving the stem no longer names) outside the question. Fix: round 1's stem, hint and walk carried; both rewritten in the key's frame: 'called unkind by the writer, but what returns is never judged' (en-whole-text-absence-asserted, span lines 1 to 45) and 'taken with Heidi's agreement, but what returns comes against her wishes' (retagged en-contradicted-by-the-text, lines 16 and 43).",
+  "ENG-019-BV-12": "Hold (round 1): only the key answered the stem's 'how does he state them?' and only the key echoed 'states'. Fix: round 1's stem kept; all three distractors rewritten to give a source AND 'states them' with a manner: 'He and Mark make them up together, ... gentle requests' (en-contradicted-by-the-text, lines 12-14, 18, 87-88), 'He learns them from his father, ...' (en-plausible-not-stated), 'He asks Mark to choose them, ... in a whisper' (en-wrong-scope-retrieval, line 1). Hint 'One of these says the writer told you what to think.' pointed at an option, so it now names the move. Walk ends on the key.",
+  "ENG-018-RB-12": "Hold (round 1): key stood out by form (three 'We are told she ...' openings, key alone 'We hear' and 'never'); shy execution falsely said no line tells us what she feels; walk never stated the key. Fix: round 1's hint carried; all four options open 'We hear what she says,'; distractors: 'but we are told she feels shy at first' (en-plausible-not-stated, execution now 'No line tells us she is shy', lines 11, 30), 'and the writer tells us every thought she has' (retagged en-attribute-transfer, Mr Cobb's thoughts at lines 37 and 60), 'and we are told her plan for the front seat' (en-motive-invention, line 45). Walk cites lines 57-58 and 60 and ends on the key.",
+  "ENG-020-HD-09": "Hold (round 1): walk never stated the key; 'To sit quietly at the table.' execution said line 38 (it is line 39, outside the cited window, so within-span did not fit). Fix: round 1's 'Lines 37 and 38 say ...' kept; walk now ends 'So suppress here means to hold back a thing that is coming out.'; option retagged en-wrong-scope-retrieval with execution citing line 39.",
+  "ENG-019-BV-07": "Hold (round 1): walk never stated the key. Fix: round 1's 'Lines 26 and 27 say ...' kept; walk now ends 'So shelving here means low and sloping gently down to the water.' Also (round-2 check): hint 'Nothing in these lines is a cupboard.' pointed at the shelves option, now 'Try each answer in place of shelving on line 27. Read the sentence again each time.'",
+  "ENG-027-RR-03": "Hold (round 1): new hint 'Pictures do not come up until line 15, so look nearer.' struck out option D by name. Fix: hint left as stored ('Try each answer in place of wont on line 11. ...'); the D leak fixed in D itself: 'His look in the pictures of him.' replaced by 'His ride through the Old Town.' (en-wrong-scope-retrieval, lines 5 and 10), which the substitution test rules out. Round 1's walk (ends on the key) carried.",
+  "ENG-022-GK-02": "Hold (round 1): hint 'Ask whether the two agree with each other.' was a yes/no whose 'no' half is the key; walk never stated the key. Fix: round 1's lookalike recast carried; hint now 'Read lines 7 to 11, then lines 38 and 39. Decide how the two parts fit together.'; walk adds 'which is last' and ends on the key.",
+  "ENG-027-RR-11": "Hold (round 1): 'Because the old man had left before he arrived.' tagged en-plausible-not-stated though line 66 states the contrary, and its execution cited line 65. Fix: round 1's ambassadors retag carried; that option retagged en-contradicted-by-the-text citing line 66. Round-2 checks: hint 'One of these is the reason he was in danger.' pointed at an option, now names the move; walk ended without the key, now ends 'So he is thankful because the old man could hardly see.'",
+  "ENG-009-SM-06": "Hold (round 1): unchanged hint 'Work out where the water is compared with him.' asked for exactly the key's relation. Fix: round 1's gull seat and wind retag carried; hint now 'Read lines 24 to 26. Find what he notices just before he decides not to look.'; walk (which never stated the key) now ends on it."
+ }
+}

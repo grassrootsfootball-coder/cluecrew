@@ -56,3 +56,19 @@ From packages/db, until 0 fail:
 `pnpm exec dotenv -e ../../.env -- tsx ../../scripts/agent-review/land-proposals.ts --door=<door> --precheck --from-live`
 
 Do not land, publish or commit. Reply with one line per row (fault → fix) and the precheck result.
+
+## Round 2 (held rows)
+Your packet rows carry `previousRound`: round 1's proposal for the row and the reviewer's verdicts
+with reasons. The row is still LIVE in its PRE-round-1 form, because a held row lands nothing. So
+your rebuild must carry every round-1 change the reviewer ATTESTED, plus the fix for what it held
+or refused. Two failures recur in round 1, and you must check both on every row you touch:
+1. **A walk script you did not change still has to state the key.** Many rows were held because an
+   untouched walk stopped short of the answer, or no longer fit a new key or stem. Read the walk
+   against the row as it will stand.
+2. **A hint must not point at ANY option, wrong or right.** Held hints named a line holding exactly one
+   option, asked a yes/no whose half is the key, or asked for the one thing only the key states. A
+   good hint names the move ("Read lines 40 to 42 and decide what changes") and leaves every option
+   standing.
+
+Also: no option may stand out by its opening words, form or length. If all the wrong answers open the
+same way, the key must too.

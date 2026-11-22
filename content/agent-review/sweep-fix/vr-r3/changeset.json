@@ -1,0 +1,48 @@
+{
+ "door": "sweep-fix/vr-r3",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/vr-r3",
+    "faultField": "execution"
+   },
+   "reviewerNote": "As it will stand: BOLD (bare card), daring (key), reckless (wrong-strength), stubborn (wrong-shade), famous (keeps-the-same-company). daring is correct and the only option correct in any sense of bold; checkVr04Row clean; all four are familiar adjectives for a 9-11-year-old in Britain; no positional or form pattern gives the key away. Precheck --from-live: 1 row touched, 1 passes every gate, 0 fail.",
+   "landedAt": "2026-11-22T17:46:27.061Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-15-opt3 (gen-vr-04-closest-meaning-15-opt3).value",
+     "before": "rude",
+     "after": "stubborn"
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-15-opt3 (gen-vr-04-closest-meaning-15-opt3).execution",
+     "before": "The key is 'daring'. 'rude' shares one area of 'bold', speaking out cheekily, but tilts it towards bad manners. A child who hears only 'forward' picks 'rude'.",
+     "after": "The key is 'daring'. 'stubborn' shares the area of a strong, firm character but tilts it towards refusing to change your mind. No sense of 'bold' (brave, cheeky, bright, or thick print) means stubborn. A child who hears only 'strong-willed' picks 'stubborn'."
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-15-opt4 (gen-vr-04-closest-meaning-15-opt4).value",
+     "before": "loud",
+     "after": "famous"
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-15-opt4 (gen-vr-04-closest-meaning-15-opt4).tag",
+     "before": "vr04-one-feature-only",
+     "after": "vr04-keeps-the-same-company"
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-15-opt4 (gen-vr-04-closest-meaning-15-opt4).execution",
+     "before": "The key is 'daring'. A bold person may speak up loudly, so 'loud' names one thing boldness can look like, not what 'bold' means. A child who picks that visible sign picks 'loud'.",
+     "after": "The key is 'daring'. 'famous' turns up beside 'bold' in the same stories, about explorers and heroes. But 'famous' means known by many people, not unafraid. No sense of 'bold' (brave, cheeky, bright, or thick print) means famous. A child who hears another explorer-story word picks 'famous' instead of 'daring'."
+    }
+   ]
+  }
+ ]
+}

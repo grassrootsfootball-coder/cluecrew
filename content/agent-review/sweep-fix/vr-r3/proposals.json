@@ -1,0 +1,52 @@
+{
+ "door": "sweep-fix/vr-r3",
+ "proposer": "agent",
+ "ruling": "R1037",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "why": "Sweep R1037 round 3 (vr-r3): carries round 1's attested seat rude -> stubborn (vr04-wrong-shade, value, tag and execution verbatim from sweep-fix/vr) and replaces loud with famous (vr04-keeps-the-same-company): a word that sits beside bold in explorer and hero stories (a bold explorer, a famous explorer) but means known by many people, correct in no sense of bold. Round 1's shouting and round 2's calm were both refused as fitted one-feature-only stories; this drops that tag rather than force a third sign.",
+   "stem": {
+    "words": [
+     "bold"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt1",
+     "value": "daring",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt2",
+     "value": "reckless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'daring'. 'reckless' pushes the same idea too far: so bold that you ignore danger completely. A child who reaches for the strongest bold word picks 'reckless' instead of 'daring'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt3",
+     "value": "stubborn",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'daring'. 'stubborn' shares the area of a strong, firm character but tilts it towards refusing to change your mind. No sense of 'bold' (brave, cheeky, bright, or thick print) means stubborn. A child who hears only 'strong-willed' picks 'stubborn'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt4",
+     "value": "famous",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'daring'. 'famous' turns up beside 'bold' in the same stories, about explorers and heroes. But 'famous' means known by many people, not unafraid. No sense of 'bold' (brave, cheeky, bright, or thick print) means famous. A child who hears another explorer-story word picks 'famous' instead of 'daring'."
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "gen-vr-04-closest-meaning-15: rude (cheeky sense) and loud (colour sense) were second answers -> stubborn carried verbatim from round 1 (attested, wrong-shade) + famous (keeps-the-same-company: turns up beside bold in explorer and hero stories, means known by many people; not brave, cheeky, bright/vivid or thick print; not on VR04_NEVER_ADD or forbiddenFor('bold')). Rejected: 'loyal' (the entry's own example) is already the keeps-the-same-company distractor on BRAVE gen-vr-04-closest-meaning-01, the BRAVE/BOLD ladder, so it would ask the same question twice; 'timid' is already on bank-vr-04-closest-meaning-15 (BOLD); 'clever' is banned vocabulary (praise of the child); 'proud' and 'strong' a child could defend (confident; strong colours). Options: daring, reckless, stubborn, famous, all adjectives."
+ ]
+}

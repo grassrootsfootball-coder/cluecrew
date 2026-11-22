@@ -1,0 +1,528 @@
+{
+ "door": "sweep-fix/vr-r2",
+ "proposer": "agent",
+ "ruling": "R1037",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "why": "Sweep R1037 round 2 (vr-r2): carries round 1's attested seat rude -> stubborn (vr04-wrong-shade, verbatim from sweep-fix/vr) and replaces the refused shouting with calm (vr04-one-feature-only): an adjective, one genuine sign of a brave person (staying calm in danger), correct in no sense of bold.",
+   "stem": {
+    "words": [
+     "bold"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt1",
+     "value": "daring",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt2",
+     "value": "reckless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'daring'. 'reckless' pushes the same idea too far: so bold that you ignore danger completely. A child who reaches for the strongest bold word picks 'reckless' instead of 'daring'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt3",
+     "value": "stubborn",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'daring'. 'stubborn' shares the area of a strong, firm character but tilts it towards refusing to change your mind. No sense of 'bold' (brave, cheeky, bright, or thick print) means stubborn. A child who hears only 'strong-willed' picks 'stubborn'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt4",
+     "value": "calm",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'daring'. A bold person often stays calm when something is scary, so 'calm' names one sign of boldness, not what 'bold' means. No sense of 'bold' (brave, cheeky, bright, or thick print) means calm. A child who picks that one sign picks 'calm' instead of 'daring'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-14",
+   "why": "Sweep R1037 round 2 (vr-r2): carries round 1's removal of want (correct in choose's wish sense) and replaces the refused shop with answer (vr21-associated-not-same), from a quiz scene rather than buy's shop scene; correct in no sense of choose.",
+   "stem": {
+    "words": [
+     "choose"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-21-same-meaning-14-opt1",
+     "value": "select",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-21-same-meaning-14-opt2",
+     "value": "refuse",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "execution": "The task is to find the word that means the same as 'choose', and the key is 'select'. 'refuse' is the opposite of 'choose'. A child who spots the meaning area but reverses it picks 'refuse' instead of 'select'."
+    },
+    {
+     "optionId": "gen-vr-21-same-meaning-14-opt3",
+     "value": "buy",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "execution": "The task is to find the word that means the same as 'choose', and the key is 'select'. In a shop you choose and then buy, so the two go together, but buying means paying for it. A child who picks a word that goes with 'choose', not one that means the same, picks 'buy' instead of 'select'."
+    },
+    {
+     "optionId": "gen-vr-21-same-meaning-14-opt4",
+     "value": "answer",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "execution": "The task is to find the word that means the same as 'choose', and the key is 'select'. In a quiz you choose an answer, so the two go together, but to answer means to reply. No sense of 'choose' (pick, decide or wish) means answer. A child who picks a word that goes with 'choose', not one that means the same, picks 'answer' instead of 'select'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-11-number-series-03",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     10,
+     14,
+     20,
+     28
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 28,
+     "step": 4,
+     "first": 10,
+     "answer": 38,
+     "prevStep": 8
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-03-opt1",
+     "value": "38",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-03-opt2",
+     "value": "36",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 8 instead of letting it grow, giving 36 instead of 38."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-03-opt3",
+     "value": "39",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 39 instead of 38."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 10, 14, 20 and 28. They are 4, 6 and 8. Each gap grows by 2. Add the next gap of 10 to 28 to reach 38. The number 36 repeats the gap of 8. The number 39 is one too many."
+   },
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [10, 14, 20, 28] so it reaches the key and names each distractor. Round 2 (vr-r2): off-by-one kept at +1 (39) so the key's position varies across the six grown-gap rows."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-07",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     14,
+     17,
+     22,
+     29
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 29,
+     "step": 3,
+     "first": 14,
+     "answer": 38,
+     "prevStep": 7
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-07-opt1",
+     "value": "38",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-07-opt2",
+     "value": "36",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 7 instead of letting it grow, giving 36 instead of 38."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-07-opt3",
+     "value": "37",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 37 instead of 38."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 14, 17, 22 and 29. They are 3, 5 and 7. Each gap grows by 2. Add the next gap of 9 to 29 to reach 38. The number 36 repeats the gap of 7. The number 37 is one short."
+   },
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [14, 17, 22, 29] so it reaches the key and names each distractor. Round 2 (vr-r2): off-by-one moved from +1 to -1 (37) so the key's position varies across the six grown-gap rows."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-11",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     9,
+     11,
+     15,
+     21
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 21,
+     "step": 2,
+     "first": 9,
+     "answer": 29,
+     "prevStep": 6
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-11-opt1",
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-11-opt2",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 6 instead of letting it grow, giving 27 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-11-opt3",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 9, 11, 15 and 21. They are 2, 4 and 6. Each gap grows by 2. Add the next gap of 8 to 21 to reach 29. The number 27 repeats the gap of 6. The number 28 is one short."
+   },
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [9, 11, 15, 21] so it reaches the key and names each distractor. Round 2 (vr-r2): off-by-one moved from +1 to -1 (28) so the key's position varies across the six grown-gap rows."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-15",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     13,
+     19,
+     27,
+     37
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 37,
+     "step": 6,
+     "first": 13,
+     "answer": 49,
+     "prevStep": 10
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-15-opt1",
+     "value": "49",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-15-opt2",
+     "value": "47",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 10 instead of letting it grow, giving 47 instead of 49."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-15-opt3",
+     "value": "50",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 50 instead of 49."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 13, 19, 27 and 37. They are 6, 8 and 10. Each gap grows by 2. Add the next gap of 12 to 37 to reach 49. The number 47 repeats the gap of 10. The number 50 is one too many."
+   },
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [13, 19, 27, 37] so it reaches the key and names each distractor. Round 2 (vr-r2): off-by-one kept at +1 (50) so the key's position varies across the six grown-gap rows."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-19",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     8,
+     13,
+     20,
+     29
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 29,
+     "step": 5,
+     "first": 8,
+     "answer": 40,
+     "prevStep": 9
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-19-opt1",
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-19-opt2",
+     "value": "38",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 9 instead of letting it grow, giving 38 instead of 40."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-19-opt3",
+     "value": "41",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 41 instead of 40."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 8, 13, 20 and 29. They are 5, 7 and 9. Each gap grows by 2. Add the next gap of 11 to 29 to reach 40. The number 38 repeats the gap of 9. The number 41 is one too many."
+   },
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [8, 13, 20, 29] so it reaches the key and names each distractor. Round 2 (vr-r2): off-by-one kept at +1 (41) so the key's position varies across the six grown-gap rows."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-23",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     12,
+     16,
+     22,
+     30
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 30,
+     "step": 4,
+     "first": 12,
+     "answer": 40,
+     "prevStep": 8
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-23-opt1",
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-23-opt2",
+     "value": "38",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 8 instead of letting it grow, giving 38 instead of 40."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-23-opt3",
+     "value": "39",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 39 instead of 40."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 12, 16, 22 and 30. They are 4, 6 and 8. Each gap grows by 2. Add the next gap of 10 to 30 to reach 40. The number 38 repeats the gap of 8. The number 39 is one short."
+   },
+   "why": "Sweep R1037 (vr-11b): walk script described a different series; rewritten from this row's own series [12, 16, 22, 30] so it reaches the key and names each distractor. Round 2 (vr-r2): off-by-one moved from +1 to -1 (39) so the key's position varies across the six grown-gap rows."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     18,
+     22,
+     29,
+     39
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 39,
+     "step": 4,
+     "first": 18,
+     "answer": 52,
+     "prevStep": 10
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-08-opt1",
+     "value": "52",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-08-opt2",
+     "value": "49",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 10 instead of letting it grow, giving 49 instead of 52."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-08-opt3",
+     "value": "53",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 53 instead of 52."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 18, 22, 29 and 39. They are 4, 7 and 10. Each gap grows by 3. Add the next gap of 13 to 39 to reach 52. The number 49 repeats the gap of 10. The number 53 is one too many."
+   },
+   "why": "Sweep R1037 round 2 (vr-r2): off-by-one moved from -1 to +1 (53) so the key is no longer always the largest across the six growing-by-3 rows; walk script's off-by-one sentence updated to match, otherwise unchanged."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     17,
+     19,
+     24,
+     32
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 32,
+     "step": 2,
+     "first": 17,
+     "answer": 43,
+     "prevStep": 8
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-16-opt1",
+     "value": "43",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-16-opt2",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 8 instead of letting it grow, giving 40 instead of 43."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-16-opt3",
+     "value": "44",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 44 instead of 43."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 17, 19, 24 and 32. They are 2, 5 and 8. Each gap grows by 3. Add the next gap of 11 to 32 to reach 43. The number 40 repeats the gap of 8. The number 44 is one too many."
+   },
+   "why": "Sweep R1037 round 2 (vr-r2): off-by-one moved from -1 to +1 (44) so the key is no longer always the largest across the six growing-by-3 rows; walk script's off-by-one sentence updated to match, otherwise unchanged."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     12,
+     18,
+     27,
+     39
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 39,
+     "step": 6,
+     "first": 12,
+     "answer": 54,
+     "prevStep": 12
+    }
+   },
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-20-opt1",
+     "value": "54",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-20-opt2",
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "execution": "Reused the previous gap of 12 instead of letting it grow, giving 51 instead of 54."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-20-opt3",
+     "value": "55",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 55 instead of 54."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Notice the gaps between 12, 18, 27 and 39. They are 6, 9 and 12. Each gap grows by 3. Add the next gap of 15 to 39 to reach 54. The number 51 repeats the gap of 12. The number 55 is one too many."
+   },
+   "why": "Sweep R1037 round 2 (vr-r2): off-by-one moved from -1 to +1 (55) so the key is no longer always the largest across the six growing-by-3 rows; walk script's off-by-one sentence updated to match, otherwise unchanged."
+  }
+ ],
+ "notes": [
+  "gen-vr-04-closest-meaning-15: rude/loud were second answers (cheeky and colour senses); round 1's shouting refused as a fitted story and the only verb -> stubborn (carried, wrong-shade) + calm (one-feature-only: staying calm in danger is one sign of boldness; not brave, cheeky, bright or thick). Options now daring, reckless, stubborn, calm, all adjectives.",
+  "gen-vr-21-same-meaning-14: want was a second answer (wish sense); round 1's shop refused (same shop scene as buy) -> answer (associated-not-same, quiz scene: you choose an answer, but to answer is to reply). Options now select, refuse, buy, answer.",
+  "gen-vr-11-number-series-03: walk script belonged to another series (vr-11b draft carried) + key always the middle -> off-by-one kept +1 = 39; options [36, 38, 39], key 38; walk names 39 as one too many.",
+  "gen-vr-11-number-series-07: walk script belonged to another series (vr-11b draft carried) + key always the middle -> off-by-one now -1 = 37; options [36, 37, 38], key 38; walk names 37 as one short.",
+  "gen-vr-11-number-series-11: walk script belonged to another series (vr-11b draft carried) + key always the middle -> off-by-one now -1 = 28; options [27, 28, 29], key 29; walk names 28 as one short.",
+  "gen-vr-11-number-series-15: walk script belonged to another series (vr-11b draft carried) + key always the middle -> off-by-one kept +1 = 50; options [47, 49, 50], key 49; walk names 50 as one too many.",
+  "gen-vr-11-number-series-19: walk script belonged to another series (vr-11b draft carried) + key always the middle -> off-by-one kept +1 = 41; options [38, 40, 41], key 40; walk names 41 as one too many.",
+  "gen-vr-11-number-series-23: walk script belonged to another series (vr-11b draft carried) + key always the middle -> off-by-one now -1 = 39; options [38, 39, 40], key 40; walk names 39 as one short.",
+  "gen-vr-11-number-series-08: key always the largest -> off-by-one now +1 = 53; options [49, 52, 53], key 52; walk's last sentence now names 53 as one too many.",
+  "gen-vr-11-number-series-16: key always the largest -> off-by-one now +1 = 44; options [40, 43, 44], key 43; walk's last sentence now names 44 as one too many.",
+  "gen-vr-11-number-series-20: key always the largest -> off-by-one now +1 = 55; options [51, 54, 55], key 54; walk's last sentence now names 55 as one too many.",
+  "gen-vr-11-number-series-04: not rebuilt; LIVE off-by-one stays -1 (key largest), counted in the position measure.",
+  "gen-vr-11-number-series-12: not rebuilt; LIVE off-by-one stays -1 (key largest), counted in the position measure.",
+  "gen-vr-11-number-series-24: not rebuilt; LIVE off-by-one stays -1 (key largest), counted in the position measure."
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "door": "sweep-fix/english-r3",
+ "reviewer": "rev-agent-01",
+ "round": 3,
+ "precheck": "sweep-fix/english-r3 --precheck --from-live: 5 rows touched, 5 pass every gate, 0 fail.",
+ "lineRule": "Applied on every row as in round 2 (BV-07): a cited line must hold the whole predicate the sentence cites. A subject named at the end of the previous line does not make it inexact (squirrels end line 5 and peer on line 6; the sun goes down on line 7 and sinks crimson and clear on line 8). A predicate that runs onto the next line does ('cut as it were / through by the water', 'above his / company').",
+ "changes": [
+  {
+   "ref": "rebuild:ENG-011-CV-03",
+   "verdict": "ATTEST",
+   "reason": "Fixes the round-2 hold. 'The squirrels chatter and the rabbits nibble the grass.' names both animals, so the stem no longer rules it out. Neither action is in lines 5 to 7, and the tag en-plausible-not-stated fits (both sound likely in a wood). The execution is exact: squirrels peer at line 6, rabbits scud away at lines 6 and 7, 'through the brushwood' line 7. Round 1's attested 'both run away' seat and round 2's attested hint and walk are carried verbatim."
+  },
+  {
+   "ref": "rebuild:ENG-002-pp-09",
+   "verdict": "REFUSE",
+   "reason": "The two stock redrafts are carried verbatim from english-rewrite/stock (checked word for word) and the stock sentence is gone. But this round edits the 'friendly and kind' execution to fix one run-on line and leaves another in the same sentence. It says 'Line 32 finds him proud and above his company'. Line 32 ends 'to be above his', and 'company' is on line 33. That is the same fault as 'any other lady' running onto line 41, which this round fixed, and as BV-07's 'True at line 27'. Fix: 'Lines 32 and 33 find him proud and above his company'."
+  },
+  {
+   "ref": "rebuild:ENG-019-BV-12",
+   "verdict": "ATTEST",
+   "reason": "Fixes the round-2 refusal. All four options now read '<source>, and states them <manner>'. None uses 'but', and none says 'the rules'. The first distractor changes only its surface ('He makes them up with Mark' for 'He and Mark make them up together, and he'), and its carried execution still fits: Mark argues at lines 12 and 13 and line 18, 'Impossible' at line 14, and 'People must do as the captain tells them' at lines 87 and 88. The walk ends on the new key wording. Its quotations are exact (lines 14 and 15, 87 and 88, 90, line 18)."
+  },
+  {
+   "ref": "rebuild:ENG-019-BV-07",
+   "verdict": "ATTEST",
+   "reason": "Fixes the round-2 hold. 'True at lines 27 and 28' is now exact: 'suddenly became steep' and 'cut as it were' are on line 27, and 'through by the water' is on line 28. Tag question settled: en-within-span-wrong-element is still right. The mistake that produces this option is taking 'suddenly became steep', which is inside lines 26 and 27, the element next to 'shelving' that describes what the strand becomes. The words from line 28 finish the same sentence, and the error does not depend on them. The other candidate, en-wrong-scope-retrieval ('a detail in the wrong part of the passage'), would misname it: the child has not gone to another part of the passage. Round 2's attested hint and walk are carried verbatim."
+  },
+  {
+   "ref": "rebuild:ENG-010-JE-12",
+   "verdict": "ATTEST",
+   "reason": "Only techniqueKey and answerShape change. The other fields match the live row, checked option by option. Both describe the live key 'She tells us how the light lets her see something clearly.' truly. 'the-light-is-named-as-what-lets-her-see-clearly': line 51 names the lingering daylight and the bright moon, then 'I could see him plainly' (lines 51 and 52), and line 71 has the moon's gleam 'bringing it out distinct and pale'. 'light-given-as-the-cause-of-a-clear-sight' is the shape of that key. Neither makes the order claim the old values did. R1034 makes the DB authoritative for every field, so editing staff metadata here is in order. Neither field is shown to a child."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-011-CV-03",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Every earlier hold is fixed. The pheasant is gone. The walk ends on the key and the hint no longer counts actions. Every option names both animals, so the stem rules none out. Key 'The squirrels peer and the rabbits run away.' is true at lines 6 and 7 and is the only answer: the reversal, the both-run version and chatter/nibble are each false against lines 5 to 7. Three options open 'The squirrels' and one 'The rabbits'. They run 8 to 9 words and none echoes the stem. The hint names a move and points at no option. Walk accurate to lines 6 and 7. Sentences are 16 words or fewer, and the wording is British and child-suitable."
+  },
+  {
+   "itemId": "ENG-002-pp-09",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "execution",
+   "reason": "The original length and shape giveaway is fixed, the round-1 hint fault is fixed, and round 2's stock-sentence fault is fixed. The key, hint and walk are right. The key is the only answer under lines 26 to 30, and 'tallest' overstates line 27's 'tall'. Every option opens 'Because he' and runs 8 to 10 words. HOLD on one execution. On 'Because he was friendly and kind to everyone he met.' it says 'Line 32 finds him proud and above his company'. 'company' is on line 33, so it should read 'Lines 32 and 33'. This is the run-on fault this round fixed for lines 40 and 41 in the same sentence."
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "The original off-frame fault is fixed: every option answers where the rules come from and how he states them. The round-2 form fault is fixed: no 'but', and no 'the rules', on any option. Key 'He makes them up himself, and states them as plain facts.' is true: Bevis speaks every rule (lines 14 to 17, 87 and 88, 90), flatly ('Of course', 'Impossible'), and Mark sets none and argues at line 18. Each distractor is wrong in the way its tag names. Mark argues rather than co-authors, and 'People must do as the captain tells them' is no request (contradicted-by-the-text). No father appears anywhere in the 94 lines (plausible-not-stated, checked). The only whisper is line 1, about a fishing-rod (wrong-scope-retrieval). All share 'states them', so the stem picks none out. Noted, not blocking: the key shares 'He makes them up' with one distractor and is 10 words to 12 or 13. The hint names a move. The walk's three quotations are exact and it ends on the key."
+  },
+  {
+   "itemId": "ENG-019-BV-07",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Every earlier hold is fixed. The walk's line is right ('till then so low and' is line 26, 'shelving' line 27), the walk states the key, and the execution now says lines 27 and 28. Key 'Low and sloping gently down to the water.' is the only sense that fits 'so low and shelving, suddenly became steep'. The shelves sense and the put-aside sense do not fit the strand. 'Suddenly steep' is what it becomes, and the tag stands, as given under the change. The substitution hint points at no option. Options run 7 to 8 words with no shared opening or stem echo. The wording is British and child-suitable."
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "The staff metadata now describes the live key. Re-read whole from the passage rather than on round 2's sign. The key is true in both windows (lines 51 and 52 'I could see him plainly', line 71 'distinct and pale'). The sunset is lines 7 and 8, outside both windows. 'Reuses line 8' holds under the line rule above, because 'sank crimson and clear behind them' and 'the trees' are line 8. 'Describes each person in full first' fails twice: there is no person at lines 70 to 72, and the traveller passes at line 26 and falls at line 28 before lines 51 to 56. 'Never describes a person' fails at lines 52 to 56. No stem echo. The key, 11 words, is not the longest, and its opening 'She tells us' is shared. The hint names a move. The walk is accurate to lines 51, 52, 71 and 72 and ends on the key."
+  }
+ ]
+}

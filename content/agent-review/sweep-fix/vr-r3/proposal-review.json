@@ -1,0 +1,18 @@
+{
+ "door": "sweep-fix/vr-r3",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "rebuild:gen-vr-04-closest-meaning-15",
+   "verdict": "ATTEST",
+   "reason": "Named fault fixed: rude (cheeky sense) and loud (colour sense) are gone. Checked by recomputation, not taken from the notes. (1) Carry-over: stem, opt1 daring (key) and opt2 reckless are byte-identical to the LIVE row; opt3 stubborn's value, tag and execution are byte-identical to round 1's attested seat (sweep-fix/vr seat opt3). (2) Two-part screen: checkVr04Row(bold, bare card, [reckless, stubborn, famous]) returns no errors. None of the three is in forbiddenFor('bold') (thick, dark, heavy, rude, cheeky, loud, bright, vivid) or VR04_NEVER_ADD. By hand against every sense of bold: brave/daring (famous means well known, not unafraid); cheeky/forward (no); vivid/striking/eye-catching colours or design (no: famous is about reputation, not how a thing looks); thick print (no); the rarer 'prominent' sense (a bold headland, a bold outline) is visual standing-out, not being widely known, and no 9-11-year-old reads famous that way. No sense of bold makes famous correct. (3) The tag is true, not fitted: vr04-keeps-the-same-company is 'turns up in the same situations without sharing its meaning', and its own example is loyal for BRAVE, another word of praise. Bold and famous genuinely sit together on the same nouns in children's reading (a bold explorer / a famous explorer, a bold knight / a famous knight), both words of admiration for a story hero. That is the associative pull the entry names, and unlike shouting and calm it does not claim famous is a sign of boldness. (4) A child cannot defend famous as closest: 'he was famous' and 'he was bold' cannot swap without changing the meaning, which is exactly the test the entry's childHint teaches. (5) Strength of pull: famous is the weakest of the three distractors and the only one that is not a character trait. It is not a throwaway: it is an adjective like the others, familiar, and a real pull for a child who matches bold to its hero-story setting rather than its meaning; one weaker associative distractor beside a wrong-strength and a wrong-shade does not point to the key. (6) Executions: reckless and stubborn unchanged (previously live / attested). famous's execution is true word for word: the key is daring; famous means known by many people, not unafraid; no sense of bold (brave, cheeky, bright, thick print) means famous. (7) No duplication across the BRAVE/BOLD ladder: gen-vr-04-closest-meaning-01 (BRAVE) carries fearless, reckless, loud, loyal; famous is not on it."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "verdict": "SIGN",
+   "reason": "As it will stand: BOLD (bare card), daring (key), reckless (wrong-strength), stubborn (wrong-shade), famous (keeps-the-same-company). daring is correct and the only option correct in any sense of bold; checkVr04Row clean; all four are familiar adjectives for a 9-11-year-old in Britain; no positional or form pattern gives the key away. Precheck --from-live: 1 row touched, 1 passes every gate, 0 fail."
+  }
+ ]
+}

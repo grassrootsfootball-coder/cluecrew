@@ -1,0 +1,91 @@
+{
+ "door": "sweep-fix/english-07",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-020-HD-06",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-07",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 26 to 30. The key is Clara's reason at line 29, and it is the only option that matches. 'by now' changes when the rolls are stale. 'Replaced with fresh ones' is the offer at lines 27 and 28, not the reason. No line compares the rolls with the house's bread. The walk quotes line 29 exactly, makes no unstated claim, and states the key. Every execution's line numbers are true.",
+   "landedAt": "2026-11-22T17:35:08.087Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 29 says 'yours would have been hard and stale by then'. By then means by the time she goes home. So they are not stale yet.",
+     "after": "Line 29 says 'yours would have been hard and stale by then'. By then means by the time she goes home. So Clara's reason is that they would have gone hard and stale before she went home."
+    },
+    {
+     "field": "option C (cmsw2f4yk00x4tmbvy182imoq).execution",
+     "before": "A rich house is in the preamble; no line here says it.",
+     "after": "A rich house's better bread is a sensible-sounding reason, but no line in 26 to 30 compares the rolls with any other bread. Clara's reason at line 29 is that they would have been hard and stale by the time Heidi went home."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-03",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-07",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked against lines 13 to 15 and 42 and 43, plus lines 39 to 41. Only the key holds: the hat is ordered away at line 15 and found under the counterpane at lines 42 and 43, and the cited lines never say who did it. Sebastian's hint is at lines 39 to 41, outside the cited window, so 'these lines never say who' is true. 'Nobody touched it' is contradicted by the move. No line has Tinette bring it back. Heidi finds it rather than fetching it. The near-identical pair with the key is gone, and no option stands out by length. The hint does not coach. The walk script reaches the key: the hat was taken, it turns up again, and neither part says who put it there.",
+   "landedAt": "2026-11-22T17:35:08.087Z",
+   "changes": [
+    {
+     "field": "option D (cmsw2f4yi00wqtmbvhvrbn8wg).value",
+     "before": "Somebody changed her mind, and the passage never hides who.",
+     "after": "Heidi fetched it back herself and put it in her bed."
+    },
+    {
+     "field": "option D (cmsw2f4yi00wqtmbvhvrbn8wg).tag",
+     "before": "en-whole-text-absence-asserted",
+     "after": "en-cause-agent-swap"
+    },
+    {
+     "field": "option D (cmsw2f4yi00wqtmbvhvrbn8wg).execution",
+     "before": "A decision the passage withholds, asserted as though it were on the page.",
+     "after": "The child gives the hat's return to Heidi herself. Lines 42 and 43 have her find the hat lying under the counterpane when she goes to bed, so she is not the one who put it there."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-11",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-07",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Judged as a new question with line 47 and lines 57 to 59 cited. Line 47 (can only see pieces of things) set against line 57 (a real passenger now) gives the key, and no other option survives. The coop is what she was down there (line 58). The long way is her next wish (lines 58 and 59). The fare was paid at line 16, and moving up cost nothing extra (lines 45 and 50), so paying is not what changed. The stem and walk sentences are at most 16 words. The hint points at the coop option and does not coach. The walk script states the key.",
+   "landedAt": "2026-11-22T17:35:08.087Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 57 to 59. What does Rebecca mean by a real passenger?",
+     "after": "Look at line 47 and lines 57 to 59. What does Rebecca mean by a real passenger?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 57 has her say this is better, and names what it is like. The same line has her call herself a real passenger now. Line 58 gives the other side: down there she felt shut in like a hen. Down there, line 47 says, she could only see pieces of things. Up here she can see where she is going.",
+     "after": "Line 57 has her say this is better, and names what it is like. The same line has her call herself a real passenger now. Line 58 gives the other side: down there she felt shut in like a hen. Down there, line 47 says, she could only see pieces of things. So she means somebody who can see where she goes, not just pieces."
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      57,
+      58,
+      59
+     ],
+     "after": [
+      47,
+      57,
+      58,
+      59
+     ]
+    }
+   ]
+  }
+ ]
+}

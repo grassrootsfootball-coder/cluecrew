@@ -29403,3 +29403,63 @@ merely quoted the word, so overrules are now an explicit, hand-checked list.
 - vr-18 shows one worked group where GL shows two, so a half-rule also fits.
 - Most VR types carry no hint or walk script at all.
 - Several hints instruct a channel not every child has: "draw the arrow" and "say it aloud" (R567).
+
+**THE FIXES, 2026-11-22 (R1037 continued). 141 OF 142 FINDINGS FIXED; ALL 141 ROWS LIVE.**
+- **112 fixed at row level** through up to four rounds. Each round had a drafting agent and a
+  separate reviewing agent that drafted nothing it reviewed, and every row landed `--from-live` and
+  was republished. Doors are under `content/agent-review/sweep-fix/`.
+- **29 fixed by correcting the library text they carried.** 14 entries changed (rounds L and L2,
+  each transform independently re-checked against EVERY carrier before landing):
+  - **maths:** maths-07, maths-47, maths-61, maths-72, maths-77, maths-79, maths-85, maths-89;
+  - **VR:** vr04-wrong-strength, vr16-loose-opposite, vr14-step-direction, vr13-wrong-pieces,
+    vr-move-letter-second-word-invalid;
+  - **English:** en-article-avoids-the-sound-choice.
+
+  That includes every "say it aloud" or "draw the arrow" instruction (R567).
+- **1 NOT FIXED: ENG-010-JE-08.** It has 3 options where every sibling has 4, and
+  `land-proposals.ts` can keep or drop options but never create one. It needs an option-creating
+  door. The row is still correct, so it serves as it is.
+
+**FOUND AND FIXED ALONGSIDE (not sweep findings):**
+- **8 more vr-11 walk scripts** described another series, found by a mechanical check of each walk's
+  numbers against its own terms. They were missed by the sweep because those rows were not
+  machine-latest-signed.
+- **12 three-option vr-11 rows** had the key always middle (growing-by-2) or always largest
+  (growing-by-3). They are rebalanced: no position rule beats half within either shape group or
+  overall.
+- **Maths:** the R1025 rank tell reappeared on the "a rectangle is # long" template once
+  "162 cm²" became readable as "162 cm". It is rebalanced, and the measure flags 0 of 150 groups.
+- **BOLD:** `VR04_FORBIDDEN_BY_HEADWORD.bold` now names the cheeky and colour senses, and the
+  generator row matches the live fix.
+- **`land-proposals.ts`** now enforces the vr-04 hard blocks. VR04_NEVER_ADD and
+  forbiddenFor(headword) had run only in the generator, so "calm" passed every gate before a reviewer
+  caught it.
+- **`land-library.ts`:**
+  - a write refused by the R213 guard now holds that one entry instead of aborting the run (which
+    had left 3 attested entries unapplied);
+  - a check now pairs with the transforms of ITS OWN ROUND. Keyed by id alone, round L2's ATTEST
+    would have applied round L's REFUSED transforms.
+
+**VERIFIED AFTER THE LAST LANDING.**
+- `check:word-puzzles`: exits 0.
+- `gate:baseline`: diffed against the start of the day, 12 → 12 blocked, nothing moved.
+- Maths key rank: 0 flagged.
+- `check:line-refs`: 800 attractor/defeater faults, the same open item and count as before the sweep.
+
+**RESIDUALS, STATED.**
+- **vr-11:** a child reading the SPACING of three-option values can still score 9 of 12. This comes
+  from the two distractor types (repeat-the-gap is always below the key, and off-by-one is always
+  beside it), so only a design change can remove it.
+- **vr-18:** shows one worked group where GL shows two.
+- **Most VR types carry no hint or walk script.**
+- **maths-79's description** says "a half" on carriers with other fractions.
+- **Possibly misfiled:** two maths-85 carriers, MC03-MEAS-02 and MC03-MEAS-04, look like maths-99.
+- **Stale labels:** `walkScriptBatch` and `walkScriptStatus` still describe the old walks on the
+  rewritten vr-11 rows.
+- **`audit:technique-keys`** still fails on 15 T4 items with no techniqueKey. This was open before.
+
+**WHAT THE SWEEP SAYS ABOUT THE MACHINE REVIEWER.** On the first pass it signed 1 in 5 rows with a
+fault a second reader could name. In the fix rounds a fresh reviewer refused or held about 30% of
+first drafts, and those catches were real, often things a gate cannot see: a hint pointing at a
+wrong option, an untouched walk left stale by a new key, an odd-one-out opening. **One reviewer is
+not enough. The second, independent reading is what found these, so it stays the standing check.**

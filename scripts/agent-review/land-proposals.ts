@@ -22,6 +22,7 @@ import { checkTagWrite, TAG_PREDICATES } from '../../packages/core/src/tag-write
 import { checkKeyPerformsStem } from '../../packages/core/src/key-gate';
 import { checkItemChildFacing } from '../../packages/core/src/item-content-gate';
 import { isAppropriateForAChild } from '../../packages/core/src/appropriateness';
+import { forbiddenFor, VR04_NEVER_ADD } from '../../packages/core/src/vr/vr04';
 import { canonicalOrderHash } from '../lib/pin-projection';
 import { loadChildLexicon } from '../lib/child-lexicon';
 import { canonicalJson } from '../lib/findings-digest';
@@ -195,6 +196,15 @@ async function main() {
       if (r.type === 'vr-20-complete-the-word') {
         const filled = String(r.stem.wordWithGap ?? '').replace('_', o.value);
         if (isWord(filled)) fault(r.id, `${o.value}: fills ${filled}, a real word — a second correct answer`);
+      }
+      // R1037: the vr-04 hard blocks (two-part screen) ran only in the generator, never here, so a
+      // reviewed rebuild could seat a word on VR04_NEVER_ADD ("calm") or a headword's other sense
+      // ("rude", "loud" on BOLD) and pass every gate. Same lists, so the two doors cannot drift (R57).
+      if (r.type === 'vr-04-closest-meaning') {
+        const head = String((r.stem.words as string[] | undefined)?.[0] ?? '').toLowerCase();
+        const w = String(o.value).toLowerCase();
+        if (VR04_NEVER_ADD.has(w)) fault(r.id, `${o.value}: on VR04_NEVER_ADD — a defensible second answer`);
+        if (head && forbiddenFor(head).has(w)) fault(r.id, `${o.value}: correct in another sense of "${head}" — a second answer`);
       }
       if (r.type === 'vr-08-move-letter')
         for (const w of vr08Derived(r.stem, o.value)) if (isWord(w) && !isAppropriateForAChild(w)) fault(r.id, `${o.value}: derives ${w}, not suitable for a child`);

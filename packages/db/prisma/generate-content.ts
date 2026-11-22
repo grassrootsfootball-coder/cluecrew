@@ -1045,7 +1045,7 @@ const VR04_ROWS: Vr04Row[] = ([
   ['sturdy', 'strong', [['massive', 'WS'], ['heavy', 'SH'], ['wooden', 'SC']]],
   // R1037: rude (cheeky sense) and loud (colour sense) were second correct answers; the forbidden list
   // now names both senses, so this row matches the reviewed LIVE fix.
-  ['bold', 'daring', [['reckless', 'WS'], ['stubborn', 'SH'], ['shouting', 'OF']]],
+  ['bold', 'daring', [['reckless', 'WS'], ['stubborn', 'SH'], ['famous', 'SC']]],
   ['ancient', 'old', [['prehistoric', 'WS'], ['ruined', 'OF'], ['valuable', 'SC']]],
   // T3
   ['hostile', 'unfriendly', [['murderous', 'WS'], ['rude', 'SH'], ['cold', 'OF']]],

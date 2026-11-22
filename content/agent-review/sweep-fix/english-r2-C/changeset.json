@@ -1,0 +1,355 @@
+{
+ "door": "sweep-fix/english-r2-C",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-020-HD-09",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Walk line fault fixed ('could not suppress a sob' is line 38) and the walk states the key. The line 39 option is now correctly tagged wrong-scope. Substitution into 'could not ___ a sob' leaves only the key. Hint names no option.",
+   "landedAt": "2026-11-22T17:48:22.567Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 37 says when she saw her roll she could not suppress a sob. Line 38 says she made an effort to control herself. The word names what she could not do to the sob.",
+     "after": "Lines 37 and 38 say when she saw her roll she could not suppress a sob. Line 38 says she made an effort to control herself. So suppress here means to hold back a thing that is coming out."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 37 says when she saw her roll she could not suppress a sob. Line 38 says she made an effort to control herself. The word names what she could not do to the sob."
+    },
+    {
+     "field": "option C (cmsw2f4yn00xjtmbvyam18ung).tag",
+     "before": "en-within-span-wrong-element",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option C (cmsw2f4yn00xjtmbvyam18ung).execution",
+     "before": "True at line 38, and it is what she knew she must do.",
+     "after": "The child takes 'must sit quietly at table' from line 39, just after the lines the question names. That is what Heidi knew she had to do, not what suppress means. At line 38 she could not hold back a sob."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-009-SM-06",
+   "passageRef": "stream-b-02",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Both finding faults fixed: the gull option is reason-shaped and wrong-scope (lines 20 and 21), and the wind is en-contradicted-by-the-text (line 24). The hint no longer states the water's position. The walk states the key, which matches lines 25 and 26 ('higher up than the field I was walking beside').",
+   "landedAt": "2026-11-22T17:48:22.567Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Work out where the water is compared with him.",
+     "after": "Read lines 24 to 26. Find what he notices just before he decides not to look."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read lines 25 and 26 together: the words higher up than the field straddle them. The water is behind the bank, above the field he walks beside. Line 26 gives what he does about that.",
+     "after": "At lines 24 and 25 he hears how much water there is. Lines 25 and 26 say it sat higher up than the field he was walking beside. Then he keeps going and does not look over. So he keeps from looking because it sat higher up than the field beside him."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "Work out where the water is compared with him."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Read lines 25 and 26 together: the words higher up than the field straddle them. The water is behind the bank, above the field he walks beside. Line 26 gives what he does about that."
+    },
+    {
+     "field": "option C (cmsw2f4vl00fitmbv2tyq4taj).tag",
+     "before": "en-cause-agent-swap",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option C (cmsw2f4vl00fitmbv2tyq4taj).execution",
+     "before": "Line 24 says the wind dropped out of his ears, so it had eased, not risen.",
+     "after": "Line 24 says the wind dropped out of his ears, so it had eased. The child gives a strong wind as the reason, where the passage says the wind had dropped."
+    },
+    {
+     "field": "option D (cmsw2f4vl00fjtmbvebk2dbg6).value",
+     "before": "He looked over as soon as he could hear the water.",
+     "after": "He was watching a gull standing on an old boat."
+    },
+    {
+     "field": "option D (cmsw2f4vl00fjtmbvebk2dbg6).tag",
+     "before": "en-negation-dropped",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option D (cmsw2f4vl00fjtmbvebk2dbg6).execution",
+     "before": "Line 26 says he did not look over for a while, and this loses that.",
+     "after": "The gull standing on the boat is at lines 20 and 21, before this part of the walk. Lines 24 to 26 give the reason he keeps going without looking: the water sat higher up than the field beside him."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-11",
+   "passageRef": "stream-a-22-prisoner-of-zenda",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Ambassadors option correctly en-within-span-wrong-element; 'left before' now en-contradicted-by-the-text at line 66. Key 'could hardly see' is line 67 ('as blind as a bat') and the only answer. Hint names no option; walk quotes line 67 exactly and states the key.",
+   "landedAt": "2026-11-22T17:48:22.567Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One of these is the reason he was in danger.",
+     "after": "Read lines 64 to 68 again. Check that your answer says why, and that the lines say it."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 66 names old Lord Topham. Line 67 says he was as blind as a bat. Line 68 says he did not claim acquaintance.",
+     "after": "Line 66 names old Lord Topham, at whose house he had danced. Line 67 says 'Thank heaven, the old man was as blind as a bat'. So he is thankful because the old man could hardly see."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "One of these is the reason he was in danger."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 66 names old Lord Topham. Line 67 says he was as blind as a bat. Line 68 says he did not claim acquaintance."
+    },
+    {
+     "field": "option B (cmsw2f50l0191tmbvpl06ruyh).tag",
+     "before": "en-attribute-transfer",
+     "after": "en-within-span-wrong-element"
+    },
+    {
+     "field": "option B (cmsw2f50l0191tmbvpl06ruyh).execution",
+     "before": "True at line 65, and it belongs to the ambassadors as a group.",
+     "after": "True at line 65, where the ambassadors pay their respects, and line 66 puts Lord Topham among them. That is what happened, not why he is thankful. Line 67 gives the reason: the old man was as blind as a bat."
+    },
+    {
+     "field": "option D (cmsw2f50l0193tmbvlvbefisu).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option D (cmsw2f50l0193tmbvlvbefisu).execution",
+     "before": "Line 65 has him among the ambassadors who were there.",
+     "after": "The passage says the opposite. Line 66 puts old Lord Topham among the ambassadors paying their respects, so he had not left. The child gives a reason that would also keep him from knowing the narrator."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-018-RB-12",
+   "passageRef": "stream-a-21-rebecca-sunnybrook",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Original faults fixed: all options answer 'how much are we told', and the hint no longer assumes a thoughts line. Round 1 faults fixed: shared opening 'We hear what she says,' removes the form tell; shy execution true; walk states the key. Key is the only answer: her feeling comes only in her speech (lines 57 and 58), and the only inside thoughts are Mr Cobb's (lines 37, 60). Hint names no option.",
+   "landedAt": "2026-11-22T17:48:22.567Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Before you say what she felt, find the line that tells you her thoughts.",
+     "after": "Go through what we learn about Rebecca. For each thing, ask how the passage lets us know it."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "At lines 12 and 13 we are given her age and her size, from outside. At lines 28 and 29 her mother sums her up to the driver. At line 39 he sees a small shape, and line 40 gives her braid. At line 60 the thought about her arrives, and it is his thought, not hers.",
+     "after": "At lines 12 and 13 we are given her age and her size, from outside. At lines 28 and 29 her mother sums her up to the driver. At lines 57 and 58 she tells us her own feeling, in her own words. At line 60 the thought that arrives is Mr Cobb's, not hers. So we hear what she says, but we are never let inside her head."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "Before you say what she felt, find the line that tells you her thoughts."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "At lines 12 and 13 we are given her age and her size, from outside. At lines 28 and 29 her mother sums her up to the driver. At line 39 he sees a small shape, and line 40 gives her braid. At line 60 the thought about her arrives, and it is his thought, not hers."
+    },
+    {
+     "field": "option A (cmsw2f4y600uptmbvpvxs9hzg).value",
+     "before": "She is shy at the start, but she is not shy by the end.",
+     "after": "We hear what she says, but we are told she feels shy at first."
+    },
+    {
+     "field": "option A (cmsw2f4y600uptmbvpvxs9hzg).execution",
+     "before": "A tidy shape the passage never carries: she is arguing with her mother at line 30.",
+     "after": "No line tells us she is shy. She waits eagerly at line 11, and at line 30 she answers her mother eagerly and willfully. Shy at first is the start a child expects for a girl leaving home, but the passage never gives it."
+    },
+    {
+     "field": "option B (cmsw2f4y600uqtmbv7drf4i37).value",
+     "before": "We are told she was small for her age, and that her braid was black.",
+     "after": "We hear what she says, and the writer tells us every thought she has."
+    },
+    {
+     "field": "option B (cmsw2f4y600uqtmbv7drf4i37).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-attribute-transfer"
+    },
+    {
+     "field": "option B (cmsw2f4y600uqtmbv7drf4i37).execution",
+     "before": "Reuses lines 13 and 40 and lists what she looked like rather than what the telling does.",
+     "after": "The thoughts the writer reports are Mr Cobb's, at line 37 and at line 60, never hers. Her feeling at lines 57 and 58 reaches us only in her own words. The child gives Mr Cobb's inside view to Rebecca."
+    },
+    {
+     "field": "option C (cmsw2f4y600urtmbvobwahmjo).value",
+     "before": "She wants the seat in front, so she works out how to ask for it.",
+     "after": "We hear what she says, and we are told her plan for the front seat."
+    },
+    {
+     "field": "option C (cmsw2f4y600urtmbvobwahmjo).execution",
+     "before": "A plausible piece of scheming; line 45 has her simply ask, with no plan reported.",
+     "after": "No line reports a plan in her head. At line 45 she simply asks Mr Cobb whether it costs any more to ride up there. The child supplies a scheme behind the question."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-12",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Original fault gone: stem now names only the bread and hat taken and the hat coming back, so Clara's spoken promise and the clothes no longer rival the key; walk no longer cites lines 4 and 6. Key is the only true option (taking spoken at lines 13 to 19; Sebastian's signs and the hat under the counterpane at lines 40 to 43). All four options share the 'What is taken is ..., but what returns ...' frame. Hint names no option; walk states the key; sentences within 16 words.",
+   "landedAt": "2026-11-22T17:48:22.567Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Think about the whole passage. What is true of the things done to Heidi and the things done for her?",
+     "after": "Think about the whole passage. Heidi's bread and hat are taken away, and later the hat comes back. What is true of how these things happen?"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "List what is done to Heidi and what is done for her. Compare how each one happens.",
+     "after": "Find the lines where each thing is taken, and where the hat turns up again. Compare how each one happens."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "At line 4 Fraulein Rottenmeier settles the clothes without asking her. At line 6 she settles it with Clara. At line 13 she gives Tinette the order. At lines 40 and 41 Sebastian makes only signs. At line 42 the hat is back.",
+     "after": "At lines 13 to 15 Fraulein Rottenmeier calls out her order to Tinette. At lines 18 and 19 she says the bread will be taken away. At lines 40 and 41 Sebastian makes only signs. At lines 42 and 43 Heidi simply finds the hat in her bed. So what is taken is settled aloud, but what returns comes in silence."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "List what is done to Heidi and what is done for her. Compare how each one happens."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "At line 4 Fraulein Rottenmeier settles the clothes without asking her. At line 6 she settles it with Clara. At line 13 she gives Tinette the order. At lines 40 and 41 Sebastian makes only signs. At line 42 the hat is back."
+    },
+    {
+     "field": "option C (cmsw2f4yp00xytmbvlcf8gmpt).value",
+     "before": "What is taken is judged by the writer, but the giving is never judged.",
+     "after": "What is taken is called unkind by the writer, but what returns is never judged."
+    },
+    {
+     "field": "option C (cmsw2f4yp00xytmbvlcf8gmpt).execution",
+     "before": "No line anywhere gives a verdict on the house.",
+     "after": "Across lines 1 to 45 the writer never calls the taking unkind or harsh. The lines report what Fraulein Rottenmeier says and does at lines 13 to 19 and leave the verdict out. The child reads Heidi's weeping at lines 21 to 25 as the writer's own verdict."
+    },
+    {
+     "field": "option D (cmsw2f4yp00xztmbvixwi9p8n).value",
+     "before": "What is taken is missed by all, but only Heidi says so.",
+     "after": "What is taken is taken with Heidi's agreement, but what returns comes against her wishes."
+    },
+    {
+     "field": "option D (cmsw2f4yp00xztmbvixwi9p8n).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option D (cmsw2f4yp00xztmbvixwi9p8n).execution",
+     "before": "Fraulein Rottenmeier runs out of the room at line 25 and never comes back.",
+     "after": "The passage says the opposite of both halves. At lines 16 and 17 Heidi screams 'No! no!' and rushes to stop Tinette, and at line 43 she snatches the hat up with delight. The child reverses how Heidi takes each event."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-02",
+   "passageRef": "stream-c-01",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The twin is gone and the hint no longer points at a conjunction or offers a yes/no. Each option carries a different link, so the key's 'but' is not a lone tell, and lengths match (three at 58 characters). Key correct: line 7 'I put myself in goal', line 38 'eighth ... Out of eight.' Walk states the key.",
+   "landedAt": "2026-11-22T17:48:22.567Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "One of these joins the two moments with an and.",
+     "after": "Read lines 7 to 11, then lines 38 and 39. Decide how the two parts fit together."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 7 says he put himself in goal and nobody put him there. Line 9 has Dan say anyone. Line 38 has Dan pick him eighth out of eight.",
+     "after": "Line 7 says he put himself in goal and nobody put him there. Line 9 has Dan say anyone. Line 38 has Dan pick him eighth out of eight, which is last. So he says he chose the goal, but he was picked last of them."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "One of these joins the two moments with an and."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 7 says he put himself in goal and nobody put him there. Line 9 has Dan say anyone. Line 38 has Dan pick him eighth out of eight."
+    },
+    {
+     "field": "option A (cmsw2f4z100zutmbvdzvsury0).value",
+     "before": "He put himself in goal, and Dan picked him eighth of eight.",
+     "after": "He put himself in goal, and Dan picked the teams last week."
+    },
+    {
+     "field": "option A (cmsw2f4z100zutmbvdzvsury0).execution",
+     "before": "Both spans handed back in order, with no relation named.",
+     "after": "Hands back line 7 and line 38 side by side, both true, but drops that he was picked eighth out of eight. It names no link between what he claims and how he was picked."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-027-RR-03",
+   "passageRef": "stream-a-22-prisoner-of-zenda",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-C",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Both finding faults fixed: walk reaches and states 'his usual way of looking', and the substitution hint now rules out every distractor (refusal, reason, ride all make no sense after 'paler than his'). Options share the 'His ...' frame, similar length. Line 11 and 12 checked.",
+   "landedAt": "2026-11-22T17:48:22.567Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 11 says he looks paler than his wont. Line 12 gives the reply about how he lives. The word sits after paler than his.",
+     "after": "Line 11 says he looks paler than his wont. Line 12 gives the reply about how he lives. The word sits after paler than his. Paler than his wont means paler than he usually looks. So wont means his usual way of looking."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 11 says he looks paler than his wont. Line 12 gives the reply about how he lives. The word sits after paler than his."
+    },
+    {
+     "field": "option D (cmsw2f50f0184tmbv7m30zvwz).value",
+     "before": "His look in the pictures of him.",
+     "after": "His ride through the Old Town."
+    },
+    {
+     "field": "option D (cmsw2f50f0184tmbv7m30zvwz).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option D (cmsw2f50f0184tmbv7m30zvwz).execution",
+     "before": "Pictures of him are named later; no line ties them to this word.",
+     "after": "The child takes the riding from line 5, where he enters the streets of the Old Town, and from line 10. That is what he is doing, not what wont means. Put in its place, 'paler than his ride through the Old Town' makes no sense."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "door": "sweep-fix/english-r4",
+ "reviewer": "rev-agent-01",
+ "round": 4,
+ "precheck": "sweep-fix/english-r4 --precheck --from-live: 1 row touched, 1 passes every gate, 0 fail.",
+ "lineRule": "Applied as in round 3: a cited line must hold the whole part cited. A subject named on the line before does not make a citation inexact. A predicate or phrase that runs onto the next line does.",
+ "changes": [
+  {
+   "ref": "rebuild:ENG-002-pp-09",
+   "verdict": "ATTEST",
+   "reason": "Diffed field by field against the round-3 proposal: the only change is 'Line 32 finds him' to 'Lines 32 and 33 find him' in the 'friendly and kind' execution, which is the fix round 3 named. Now exact: 'proud' and 'above his' are on line 32 and 'company' is on line 33. The same sentence's 'lines 40 and 41' is exact ('declined being introduced to any other' line 40, 'lady' line 41). Nothing else is touched."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-002-pp-09",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Read whole against numberedLines. Key 'Because he was handsome and people heard he was rich.' is the only answer in lines 26 to 30: 'handsome features' line 27, 'much handsomer than Mr. Bingley' line 30, 'the report ... in general circulation' line 28 of 'ten thousand a year' line 29. Distractors each wrong as tagged: dancing every dance is Bingley (line 37) while Darcy danced only twice (lines 39 and 40), en-attribute-transfer; friendliness and kindness are nowhere in 26 to 30, en-plausible-not-stated; 'tallest man in the room' overstates line 27's 'tall', en-extreme-option-pull; the Derbyshire estate is at line 33, outside the window, en-wrong-scope-retrieval. Every execution citation checked under the line rule: lines 37, 39-40, 27-29, 32-33, 40-41, 27, 33 each hold the whole part cited. Hint 'Use only what lines 26 to 30 tell you about him.' repeats the stem's window and points at no option (key and 'tallest' both stand). Walk citations exact (27, 30, 28-29, 33) and it ends by stating the key. All options open 'Because he' and run 8 to 10 words; the key shares its two-part shape with 'friendly and kind'. Child-facing sentences at most 16 words, end on a full stop, British, child-suitable. Original length and shape giveaway fixed; every earlier hold is fixed."
+  }
+ ]
+}

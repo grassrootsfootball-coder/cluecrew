@@ -249,15 +249,7 @@
  },
  {
   "id": "maths-72-wrong-operation-chosen",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
-   "description": "Adding instead of subtracting, multiplying instead of dividing, or vice versa."
-  },
-  "after": {
-   "description": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
-   "childHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "maths-85-miscount-or-rounding-in-measures",
@@ -265,15 +257,7 @@
  },
  {
   "id": "maths-77-treating-a-percentage-as-money",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Percent means \"out of 100\". It is a proportion, not an exact amount of money!",
-   "description": "Subtracting the percentage digits directly as pounds or pence."
-  },
-  "after": {
-   "description": "Subtracting the percentage digits directly as pounds or pence.",
-   "childHint": "Percent means \"out of 100\". The percent is a share of the amount, not a number to take away from it!"
-  }
+  "outcome": "already attested"
  },
  {
   "id": "maths-79-dividing-by-a-fraction-error",
@@ -281,27 +265,11 @@
  },
  {
   "id": "maths-07-decimals-as-two-separate-whole-numbers",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "The decimal point separates wholes from parts. Compare the parts column by column, starting with the tenths.",
-   "description": "Thinking 3.12 is larger than 3.8 because 12 is bigger than 8."
-  },
-  "after": {
-   "description": "Thinking 3.12 is larger than 3.8 because 12 is bigger than 8.",
-   "childHint": "The decimal point separates wholes from parts. Read each digit after the point in its own column, not as one whole number."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "maths-61-reading-the-wrong-place-value-column",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
-   "description": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left."
-  },
-  "after": {
-   "description": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
-   "childHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
-  }
+  "outcome": "already attested"
  },
  {
   "id": "maths-47-translation-by-gap",
@@ -309,39 +277,15 @@
  },
  {
   "id": "maths-89-wrong-angle-total",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Ask what the angles sit on first. A line is 180, a turn is 360.",
-   "description": "Uses the wrong total for the shape, typically 360 for a straight line or a triangle, or 90 for a straight line."
-  },
-  "after": {
-   "description": "Uses the wrong total for the shape, typically 360 for a straight line or a triangle, or 90 for a straight line.",
-   "childHint": "First ask what the angles make: a straight line, a triangle or a full turn. A line and a triangle both make 180°, and a full turn makes 360°."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "vr04-wrong-strength",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Check how strong the word is. A quiet word needs a quiet answer.",
-   "description": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS)."
-  },
-  "after": {
-   "description": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
-   "childHint": "Some words say a lot and some say a little. Choose the answer that says just as much as the word you are given."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "vr16-loose-opposite",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "A true opposite flips the meaning exactly, like hot and cold.",
-   "description": "Chose a loosely different word, not a true opposite."
-  },
-  "after": {
-   "description": "Chose a loosely different word, not a true opposite.",
-   "childHint": "A true opposite flips the meaning exactly, like open and shut."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "vr-move-letter-second-word-invalid",
@@ -357,38 +301,30 @@
  },
  {
   "id": "vr14-step-direction",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Draw the arrow: which way did the first pair travel?",
-   "description": "Moved backwards through the alphabet instead of forwards."
-  },
-  "after": {
-   "description": "Moved the opposite way through the alphabet to the first pair.",
-   "childHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
-  }
+  "outcome": "already attested"
  },
  {
   "id": "en-article-avoids-the-sound-choice",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "This gap wants a or an. Say the next word aloud. Which sound starts it?",
-   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear."
-  },
-  "after": {
-   "description": "On an a or an choice, picks the to avoid the vowel-sound judgement. The fits any noun without a sound decision, so the child reaches for the article that asks nothing of her ear.",
-   "childHint": "This gap wants a or an. Hear the next word in your head. Which sound starts it?"
-  }
+  "outcome": "already attested"
  },
  {
   "id": "vr13-wrong-pieces",
-  "outcome": "TRANSFORMED + ATTESTED",
-  "before": {
-   "childHint": "Look at where the example word takes its letters from. Copy those exact positions.",
-   "description": "Took letters from the middle instead of the shown positions."
-  },
-  "after": {
-   "description": "Took letters from other places in the outer words instead of the positions the example shows.",
-   "childHint": "Look at where the example word takes its letters from. Copy those exact positions."
-  }
+  "outcome": "already attested"
+ },
+ {
+  "id": "maths-85-miscount-or-rounding-in-measures",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "maths-79-dividing-by-a-fraction-error",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "maths-47-translation-by-gap",
+  "outcome": "held: transform not independently attested (no check)"
+ },
+ {
+  "id": "vr-move-letter-second-word-invalid",
+  "outcome": "held: transform not independently attested (no check)"
  }
 ]

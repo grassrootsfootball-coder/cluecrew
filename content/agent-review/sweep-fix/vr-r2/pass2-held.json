@@ -1,0 +1,34 @@
+{
+ "door": "sweep-fix/vr-r2",
+ "mode": "APPLIED",
+ "landed": [
+  "gen-vr-11-number-series-16",
+  "gen-vr-11-number-series-23",
+  "gen-vr-11-number-series-08",
+  "gen-vr-11-number-series-20",
+  "gen-vr-11-number-series-03",
+  "gen-vr-11-number-series-07",
+  "gen-vr-11-number-series-11",
+  "gen-vr-11-number-series-15",
+  "gen-vr-11-number-series-19",
+  "gen-vr-21-same-meaning-14"
+ ],
+ "held": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:gen-vr-04-closest-meaning-15",
+     "verdict": "REFUSE",
+     "reason": "The carried stubborn seat is verbatim round 1's attested text and correct. 'calm' is REFUSED. (1) It is on VR04_NEVER_ADD in packages/core/src/vr/vr04.ts, the vr-04 hard block of words that are a defensible second answer, 'never emitted as a vr-04 distractor'; checkVr04Row returns 'never-add' for it on any headword. The precheck passes only because land-proposals does not call checkVr04Row. A gate pass is not a reason to attest. (2) The block is right here. Bold sits in the courage family (VR04_SYNONYM_GROUPS courage: brave, bold, daring), and 'calm in the face of danger' is how a child is taught to describe a brave person. A child could defend 'calm' (unafraid, cool-headed) as nearer to bold than 'stubborn'. (3) The vr04-one-feature-only story is fitted, the same fault as the refused 'shouting'. Boldness shows in taking a risk, not in staying calm. A bold act is often excited or hasty, so calm is not a sign of boldness. Needs a word that is a true single visible sign of boldness, correct in no sense (brave, cheeky, bright/vivid, thick print), and not on VR04_NEVER_ADD or forbiddenFor('bold')."
+    }
+   ],
+   "row": {
+    "itemId": "gen-vr-04-closest-meaning-15",
+    "verdict": "HOLD",
+    "reason": "As it would stand: daring (key), reckless, stubborn, calm. opt4 'calm' is REFUSED: it is a vr-04 never-add hard block (VR04_NEVER_ADD), a defensible near-answer in bold's courage sense, and its one-feature-only tag is a fitted story. The rude/loud second-answer fault is fixed by the carried stubborn seat; only opt4 remains."
+   }
+  }
+ ]
+}

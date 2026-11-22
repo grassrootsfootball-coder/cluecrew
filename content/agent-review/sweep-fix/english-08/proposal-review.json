@@ -1,0 +1,187 @@
+{
+ "door": "sweep-fix/english-08",
+ "reviewer": "rev-agent-01",
+ "precheck": "--precheck --from-live: 14 rows touched, 14 pass every gate, 0 fail (run before review; a gate pass was not taken as a reason to attest).",
+ "changes": [
+  {
+   "ref": "seat:cmsw2f50d017ttmbvcrj70ala",
+   "verdict": "ATTEST",
+   "reason": "RR-01: en-negation-dropped fits, as the finding asked. Line 3 makes the poor compliment conditional on 'if I did not set modesty aside', and the option comes from losing that 'not' condition. The value is unchanged and the execution now names 'if I did not'. Note: the quoted clause runs from line 3 onto line 4 ('aside') and is cited as line 3, where it starts. That is the accepted precedent for executions."
+  },
+  {
+   "ref": "seat:cmsw2f50d017utmbvrb21c1y9",
+   "verdict": "ATTEST",
+   "reason": "RR-01: the reword is gate-forced. uk-spelling.json warns on 'practising' (the noun/verb pair), and the house rule is to reword, never exempt. 'That he had been getting ready for the ride for days.' keeps en-plausible-not-stated: no line gives preparation. The execution's 'Lines 3 and 4 ... very fine figure' is true (line 4). At 11 words it does not stand out against the key's 7."
+  },
+  {
+   "ref": "seat:cmsw2f50g0186tmbvlu1doc06",
+   "verdict": "ATTEST",
+   "reason": "RR-04: the word-for-word twin is broken. 'That his pictures show him as handsome as he really is.' shares only 'pictures' with the key. It is the affirmative of line 15's \"aren't handsome enough\", so en-negation-dropped still names the error. It is wrong under every reading, since the girl says the pictures fall short of him. The stem alone does not rule it out, and the execution is true of line 15."
+  },
+  {
+   "ref": "seat:cmsw2f50l0191tmbvpl06ruyh",
+   "verdict": "ATTEST",
+   "reason": "RR-11: the retag to en-within-span-wrong-element is right. The ambassadors pay their respects at line 65 and Lord Topham is among them at line 66, so this is a true detail from the window that does not answer 'why thankful'. Line 67 does give the reason, 'as blind as a bat'. The execution is exact."
+  },
+  {
+   "ref": "seat:cmsw2f4vl00fjtmbvebk2dbg6",
+   "verdict": "ATTEST",
+   "reason": "SM-06: 'He was watching a gull standing on an old boat.' is shaped as a reason, and the stem no longer rules it out. The gull on the boat is at lines 20 and 21 ('a boat lay in the mud ... and a gull standing on it'), outside the 24 to 26 window, so en-wrong-scope-retrieval fits. The execution is true. (See the row hold: with this seat the hint now singles out the key.)"
+  },
+  {
+   "ref": "seat:cmsw2f4vl00fitmbv2tyq4taj",
+   "verdict": "ATTEST",
+   "reason": "SM-06: the retag to en-contradicted-by-the-text is right. Line 24 says 'the wind dropped out of my ears', which states the contrary of a hard wind; no cause or agent is swapped. The execution is true of line 24."
+  },
+  {
+   "ref": "rebuild:ENG-027-RR-02",
+   "verdict": "ATTEST",
+   "reason": "The walk script now reads lines 62 and 63 ('neither she nor anyone else dreamed') and ends by stating the key. Option C is retagged en-contradicted-by-the-text, which lines 60 to 63 support: no doubt in her face, and nobody dreamed otherwise. D's longer execution is gate-forced (the 40-character floor) and true of line 8 ('that she might see'). Minor point: C's execution puts 'doubt or questioning' at line 60, though the words sit at the start of line 61, and quotes 'she could have told us' at line 61, though it runs onto 62. These are spans cited from their first line."
+  },
+  {
+   "ref": "rebuild:ENG-027-RR-03",
+   "verdict": "REFUSE",
+   "reason": "The walk-script half is sound. It now ends 'Paler than his wont means paler than he usually looks. So wont means his usual way of looking.' But the new hintCore, 'Pictures do not come up until line 15, so look nearer.', is a new hint aimed at one wrong option, D ('His look in the pictures of him'). It strikes D out for the child. With D gone, the substitution test the hint also asks for leaves only the key, so the hint now hands over the answer. Its reason is not about meaning either: when pictures come up has nothing to do with what 'wont' means. Fix the D leak by recasting D so the substitution test rules it out, or by a hint that names no option."
+  },
+  {
+   "ref": "rebuild:ENG-027-RR-12",
+   "verdict": "ATTEST",
+   "reason": "The walk script now adds line 16 ('No doubt it was mere flattery', said of the girl's remark) and line 17 ('these signs of approval'), then states the key. Every line number is checked. Nothing else changed."
+  },
+  {
+   "ref": "rebuild:ENG-028-PR-01",
+   "verdict": "ATTEST",
+   "reason": "The key 'Grows bigger and takes up more room.' drops the heat mechanism and gives only the meaning, which is correct for 'Wood swells' at line 3. D's execution now quotes 'stops shutting properly', and that is on line 4. The walk script cites line 3 ('Swollen ... Wood swells. One hot summer') and lines 3 and 4 correctly, and ends on the key. Annie's hint and its marker are untouched, which is correct because the hint was not rewritten. Judged as a new question below."
+  },
+  {
+   "ref": "rebuild:ENG-028-PR-10",
+   "verdict": "ATTEST",
+   "reason": "The walk script's line numbers are fixed. Line 37 is 'Grandad.', line 38 is 'Mm.', and lines 39 and 40 hold 'both times he has answered a different question'. It states the key. Annie's hint and its marker are untouched. Nothing else changed."
+  },
+  {
+   "ref": "rebuild:ENG-024-BF-11",
+   "verdict": "ATTEST",
+   "reason": "All four options now begin 'That' and read as explanations of 'again', so the form giveaway is gone, and each keeps its tag. 'just what Mrs Farrell is saying' reuses lines 38 and 39 (en-inference-literal-lookalike). 'his mother coming in early, at half past two' takes line 36's detail from the window (en-within-span-wrong-element). 'promised ... would not happen again' is a promise no line gives (en-plausible-not-stated). All three executions are true. The rewritten executions were needed for the new values."
+  },
+  {
+   "ref": "rebuild:ENG-007-LP-08",
+   "verdict": "ATTEST",
+   "reason": "The walk script now reads line 39 ('plenty of room left at the bottom') and line 37 (he passes 'on the way to fetch the second bin bag'). It ends by stating the key. Nothing else changed."
+  },
+  {
+   "ref": "rebuild:ENG-007-LP-10",
+   "verdict": "ATTEST",
+   "reason": "The key 'A level of things lying on others.' no longer echoes 'top' from the quoted 'the top layer'. It is a correct sense for things stacked in a box (lines 33 and 44), and the walk script's last sentence matches it. The other options are unchanged. Judged as a new question below."
+  },
+  {
+   "ref": "rebuild:ENG-007-LP-15",
+   "verdict": "ATTEST",
+   "reason": "The key now says 'pushed it flat', which matches line 34. The returns-box twin is broken: 'Put it in the returns box, because his name was in it.' is en-contradicted-by-the-text, because line 33 puts it 'in the Friday box, low down'. It is still tempting: lines 7 and 8 send named things for return, and line 46 'This one's got your name in it' is true. The execution is exact. Judged as a new question below."
+  },
+  {
+   "ref": "rebuild:ENG-022-GK-02",
+   "verdict": "REFUSE",
+   "reason": "The option recast is sound. 'He put himself in goal, and Dan picked the teams last week.' is true of lines 7, 8 and 38, no longer mirrors the key, and still fits en-inference-literal-lookalike. The new hintCore is the fault: 'Read line 7, then line 38. Ask whether the two agree with each other.' It offers a yes/no choice, and its 'no' half is the key. The key is the only option that sets the two against each other ('but'); the others join them with 'and', 'because' and 'so that'. A child can answer 'they do not agree' and pick the one contrast option without working out the relation. That is R572 coaching, a choice whose one half is the key. The sweep reader suggested this wording, but that does not make it safe."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-027-RR-01",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 1 to 4. The key is line 4 ('admit that I made a very fine figure'), and it is the only admission. The white clothes at line 1 are what he wore, not the admission. 'doing the King little credit' comes from dropping 'if I did not' on line 3. The preparation option has no line behind it. Lengths run 7 to 11 words, with no echo and no twin. The hint and walk script are unchanged, and the walk states the key at line 4."
+  },
+  {
+   "itemId": "ENG-027-RR-02",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 6 to 9 and 60 to 63. The key holds: the crowd checks his hair (lines 8 and 9) and nobody dreams he could be anyone else (lines 62 and 63). C is contradicted by lines 60 to 63. D gives him a plan, where line 8 says 'that she might see'. A hands back true spans with no relation named. The walk now ends on lines 62 and 63 and states the key. The hint ('A thought the passage never gives her') is unchanged and still true of C."
+  },
+  {
+   "itemId": "ENG-027-RR-03",
+   "verdict": "HOLD",
+   "holdFixed": false,
+   "faultField": "hintCore",
+   "reason": "The walk-script half of the finding is fixed. The hint half is not fixed honestly. The new hint, 'Pictures do not come up until line 15, so look nearer.', strikes out option D by name. Once D is gone, 'try each answer in place of wont' leaves only the key, so the hint hands over the answer. The D leak should be fixed in D itself, or by a hint that names no option."
+  },
+  {
+   "itemId": "ENG-027-RR-04",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 15 and 16. The key is line 15 (\"The pictures of him aren't handsome enough\"). The new negation-dropped option is the affirmative, but it is no longer a word-for-word twin. 'took great care he would hear her' is how she spoke (lines 15 and 16). No line gives a previous sighting. Lengths run 9 to 11 words. The hint and walk are unchanged, and the walk states the key."
+  },
+  {
+   "itemId": "ENG-027-RR-11",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "options",
+   "reason": "The finding is fixed: the ambassadors option is now en-within-span-wrong-element, which is correct. But the row as it will stand still carries the same fault class the sweep held RR-02 C and SM-06 C for. Option 'Because the old man had left before he arrived.' is tagged en-plausible-not-stated. Lines 65 and 66 state the contrary: the ambassadors 'paid me their respects, among them old Lord Topham'. So it needs en-contradicted-by-the-text. Its own execution says as much, and also cites line 65 where 'among them old Lord Topham' is line 66. Retag it and correct the line to 66. Otherwise the key ('could hardly see', line 67) is sound and is the only answer."
+  },
+  {
+   "itemId": "ENG-027-RR-12",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked across the whole passage. The remarks at lines 11, 13, 14 and 15 each notice a difference from the King, and he calls them 'mere flattery' (line 16) and 'signs of approval' (line 17). That makes the key the only reading. C asserts a remark he never makes. B has no line giving fear. A is two moments (lines 6 and 17). The walk now reaches lines 16 and 17 and states the key, with every sentence 16 words or fewer."
+  },
+  {
+   "itemId": "ENG-028-PR-01",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Judged as a new question against lines 3 and 4. 'Grows bigger and takes up more room.' is the only meaning the lines support for 'Wood swells': the doors stop shutting. 'Rises louder' and 'Grows in number' are genuine senses the context rules out decisively, because wood cannot grow louder or more numerous. 'Stops sitting flat in its frame' is the result, not the meaning. There is no echo of the stem. The shared opening 'Grows' with C is not a cue, and lengths run 6 to 8 words. Annie's hint names no option. The walk states the key."
+  },
+  {
+   "itemId": "ENG-028-PR-10",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 37 to 40, and line 2 for C. The key is lines 39 and 40, and it is the only answer to what happens both times. 'twice ... in that voice' is the count (line 39). 'forgotten anybody was behind him' is line 2, in the place sense. 'told her to be quiet' is ruled out by line 38's 'Mm.'. The walk line numbers are now right and the walk states the key."
+  },
+  {
+   "itemId": "ENG-009-SM-06",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "hintCore",
+   "reason": "Both named faults are fixed: D is shaped as a reason and wrong-scope, and C is contradicted by line 24. But with the new D, the unchanged hint 'Work out where the water is compared with him.' now points straight at the key. The key ('It sat higher up than the field beside him') is the only option about where the water is; the others are a hurry, the wind and a gull. The hint asks for exactly the relation the key states, which is R572 coaching. The hint needs rewording so that it sends the child to lines 24 to 26 without naming the water's position."
+  },
+  {
+   "itemId": "ENG-024-BF-11",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 36 to 40. The key is line 39 ('that will be about the fountain, and the fountain was ages ago'), and it is the only explanation the lines give him. Each distractor is wrong: the mother's early arrival is line 36, no promise is given (lines 36 and 37 give only 'a small nod'), and 'just what she is saying' explains nothing. All four begin 'That', with lengths 11 to 13 words. The hint and walk are unchanged and still accurate. Note for a later pass: the walk's 'say the word again' is unquoted and could read as 'say it a second time'."
+  },
+  {
+   "itemId": "ENG-007-LP-08",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Checked against lines 37 to 39, and line 47 for context. The key is the only reading that ties the room at the bottom to Reuben, who only passes the sheet. The signature option has no line behind it, 'Nobody wants to play' is extreme against eleven names, and the team-short option is not stated. The walk now reads line 39 and states the key."
+  },
+  {
+   "itemId": "ENG-007-LP-10",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Judged as a new question against lines 43 and 44, and line 33 for the stacking. 'A level of things lying on others.' is the only sense that fits lifting the top layer of clothes out of a box to reach the jumper beneath. A coat of paint or dust and a laying hen are real senses that the box rules out, and no list exists. The echo of 'top' is gone, and lengths run 5 to 8 words. The hint names no option. The walk ends on the key."
+  },
+  {
+   "itemId": "ENG-007-LP-15",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Judged as a new question against lines 33 and 34. The key matches line 33 ('in the Friday box, low down') and line 34 ('pushed it flat'), and it is the only correct option. The returns box is contradicted by line 33. The bin bag reuses lines 29 and 30. Folding and giving the jumper to Miss Bhatt belongs to lines 48 and 49. There is no near-identical pair. The two 'because' options are both decoys, but the key shares its action form with D, so form does not single out the key. The hint sends the child to the sentence starting on line 33, which is exact. The walk states the key."
+  },
+  {
+   "itemId": "ENG-022-GK-02",
+   "verdict": "HOLD",
+   "holdFixed": false,
+   "faultField": "hintCore",
+   "reason": "The twin is gone, but the hint still coaches. 'Ask whether the two agree with each other.' is a yes/no choice whose 'no' half picks out the key, the only option that sets the two lines against each other. Also, the unchanged walk script ('Line 7 ... Line 9 ... Line 38 has Dan pick him eighth out of eight.') never states the key's relation. It does not reach 'He says he chose the goal, but he was picked last of them.', which is the same walk-script fault the sweep held RR-02 and RR-12 for."
+  }
+ ]
+}

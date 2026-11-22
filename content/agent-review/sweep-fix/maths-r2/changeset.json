@@ -1,0 +1,33 @@
+{
+ "door": "sweep-fix/maths-r2",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "MC05-GEOM-01",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: sweep-fix/maths-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "As it will stand: stem 18 cm by 9 cm, perimeter; options 54 cm (key), 45 cm (three sides, 18 + 18 + 9), 162 cm (18 x 9, area's number), 84 cm (carry added twice). All in cm, key correct and the only correct option, each distractor wrong with a distinct diagnosis. Walk script (add long + short, double, 54 cm; one trap swaps in the area) and hint still true. Key is now second-smallest; measure --after: 0 groups flagged, GEOM-01 template ranks 2/2/0/1/1, shape 'a rectangle is # long' 2/2/1/1. Precheck --from-live: 1 row, passes every gate.",
+   "landedAt": "2026-11-22T17:38:33.360Z",
+   "changes": [
+    {
+     "field": "option D (cmteo82pl00hntmmj3pf8dg53).value",
+     "before": "44 cm",
+     "after": "84 cm"
+    },
+    {
+     "field": "option D (cmteo82pl00hntmmj3pf8dg53).tag",
+     "before": "maths-69-dropped-calculation-carry",
+     "after": "maths-13-adding-the-exchange-twice"
+    },
+    {
+     "field": "option D (cmteo82pl00hntmmj3pf8dg53).execution",
+     "before": "The child works out 36 + 18 for the two pairs of sides: the ones make 14, so they write 4 but drop the carried 1. The tens give 3 + 1 = 4, so they write 44 cm instead of 54 cm.",
+     "after": "Adding 18 + 9 + 18 + 9 in columns, the ones make 34, so the child writes 4 and carries 3, but adds the 3 twice into the tens: 1 + 1 + 3 + 3 = 8. That gives 84 cm instead of 54 cm."
+    }
+   ]
+  }
+ ]
+}

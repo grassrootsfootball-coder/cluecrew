@@ -1,0 +1,119 @@
+{
+ "door": "sweep-fix/vr-r2",
+ "reviewer": "rev-agent-01",
+ "precheck": "from packages/db, --precheck --from-live: 11 rows touched, 11 pass every gate, 0 fail (run by the reviewer, 2026-11-22). Rows 04, 12 and 24 are not touched and are counted only in the position measure.",
+ "changes": [
+  {
+   "ref": "rebuild:gen-vr-04-closest-meaning-15",
+   "verdict": "REFUSE",
+   "reason": "The carried stubborn seat is verbatim round 1's attested text and correct. 'calm' is REFUSED. (1) It is on VR04_NEVER_ADD in packages/core/src/vr/vr04.ts, the vr-04 hard block of words that are a defensible second answer, 'never emitted as a vr-04 distractor'; checkVr04Row returns 'never-add' for it on any headword. The precheck passes only because land-proposals does not call checkVr04Row. A gate pass is not a reason to attest. (2) The block is right here. Bold sits in the courage family (VR04_SYNONYM_GROUPS courage: brave, bold, daring), and 'calm in the face of danger' is how a child is taught to describe a brave person. A child could defend 'calm' (unafraid, cool-headed) as nearer to bold than 'stubborn'. (3) The vr04-one-feature-only story is fitted, the same fault as the refused 'shouting'. Boldness shows in taking a risk, not in staying calm. A bold act is often excited or hasty, so calm is not a sign of boldness. Needs a word that is a true single visible sign of boldness, correct in no sense (brave, cheeky, bright/vivid, thick print), and not on VR04_NEVER_ADD or forbiddenFor('bold')."
+  },
+  {
+   "ref": "rebuild:gen-vr-21-same-meaning-14",
+   "verdict": "ATTEST",
+   "reason": "Carries round 1's removal of 'want' (wish sense) and replaces the refused 'shop' with 'answer'. Two-part screen on CHOOSE: pick/select, decide (choose to go), wish/prefer (as you choose). 'answer' (reply, respond; or the noun) is correct in none. It is associated through a quiz or test (you choose an answer), which is a different scene from buy's shop, and answer is not a near-synonym of buy, so the two associated distractors no longer collapse into one idea. Tag vr21-associated-not-same names the mistake (goes-together, not swappable: 'I chose the red one' cannot become 'I answered the red one'). Execution true. refuse/buy and their executions unchanged from LIVE. All four options are verbs, familiar to 9-11-year-olds."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-03",
+   "verdict": "ATTEST",
+   "reason": "Recomputed [10, 14, 20, 28]: gaps 4, 6, 8 grow by 2; next gap 10; 28+10=38, the key. 36=28+8 (previous gap reused, vr-series-step-carryover); 39=38+1 (vr-series-off-by-one). options and values identical to LIVE. Walk reads every figure from this row, names only 36 and 39 with their own mistakes, states 38; every sentence 16 words or fewer, ends on a full stop, no 'wrong'. Both executions true ('giving 36/39 instead of 38'). Stem, key and tags unchanged."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-07",
+   "verdict": "ATTEST",
+   "reason": "Recomputed [14, 17, 22, 29]: gaps 3, 5, 7 grow by 2; next gap 9; 29+9=38, the key. 36=29+7 (previous gap reused, vr-series-step-carryover); 37=38-1 (vr-series-off-by-one). opt3 moved from 39 to 37 (off-by-one now -1); walk's last sentence updated to match. Walk reads every figure from this row, names only 36 and 37 with their own mistakes, states 38; every sentence 16 words or fewer, ends on a full stop, no 'wrong'. Both executions true ('giving 36/37 instead of 38'). Stem, key and tags unchanged."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-11",
+   "verdict": "ATTEST",
+   "reason": "Recomputed [9, 11, 15, 21]: gaps 2, 4, 6 grow by 2; next gap 8; 21+8=29, the key. 27=21+6 (previous gap reused, vr-series-step-carryover); 28=29-1 (vr-series-off-by-one). opt3 moved from 30 to 28 (off-by-one now -1); walk's last sentence updated to match. Walk reads every figure from this row, names only 27 and 28 with their own mistakes, states 29; every sentence 16 words or fewer, ends on a full stop, no 'wrong'. Both executions true ('giving 27/28 instead of 29'). Stem, key and tags unchanged."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-15",
+   "verdict": "ATTEST",
+   "reason": "Recomputed [13, 19, 27, 37]: gaps 6, 8, 10 grow by 2; next gap 12; 37+12=49, the key. 47=37+10 (previous gap reused, vr-series-step-carryover); 50=49+1 (vr-series-off-by-one). options and values identical to LIVE. Walk reads every figure from this row, names only 47 and 50 with their own mistakes, states 49; every sentence 16 words or fewer, ends on a full stop, no 'wrong'. Both executions true ('giving 47/50 instead of 49'). Stem, key and tags unchanged."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-19",
+   "verdict": "ATTEST",
+   "reason": "Recomputed [8, 13, 20, 29]: gaps 5, 7, 9 grow by 2; next gap 11; 29+11=40, the key. 38=29+9 (previous gap reused, vr-series-step-carryover); 41=40+1 (vr-series-off-by-one). options and values identical to LIVE. Walk reads every figure from this row, names only 38 and 41 with their own mistakes, states 40; every sentence 16 words or fewer, ends on a full stop, no 'wrong'. Both executions true ('giving 38/41 instead of 40'). Stem, key and tags unchanged."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-23",
+   "verdict": "ATTEST",
+   "reason": "Recomputed [12, 16, 22, 30]: gaps 4, 6, 8 grow by 2; next gap 10; 30+10=40, the key. 38=30+8 (previous gap reused, vr-series-step-carryover); 39=40-1 (vr-series-off-by-one). opt3 moved from 41 to 39 (off-by-one now -1); walk's last sentence updated to match. Walk reads every figure from this row, names only 38 and 39 with their own mistakes, states 40; every sentence 16 words or fewer, ends on a full stop, no 'wrong'. Both executions true ('giving 38/39 instead of 40'). Stem, key and tags unchanged."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-08",
+   "verdict": "ATTEST",
+   "reason": "Recomputed [18, 22, 29, 39]: gaps 4, 7, 10 grow by 3; next gap 13; 39+13=52, the key. 49=39+10 (previous gap reused, vr-series-step-carryover); 53=52+1 (vr-series-off-by-one). opt3 moved from 51 to 53 (off-by-one now +1); walk's last sentence updated to match. Walk reads every figure from this row, names only 49 and 53 with their own mistakes, states 52; every sentence 16 words or fewer, ends on a full stop, no 'wrong'. Both executions true ('giving 49/53 instead of 52'). Stem, key and tags unchanged."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-16",
+   "verdict": "ATTEST",
+   "reason": "Recomputed [17, 19, 24, 32]: gaps 2, 5, 8 grow by 3; next gap 11; 32+11=43, the key. 40=32+8 (previous gap reused, vr-series-step-carryover); 44=43+1 (vr-series-off-by-one). opt3 moved from 42 to 44 (off-by-one now +1); walk's last sentence updated to match. Walk reads every figure from this row, names only 40 and 44 with their own mistakes, states 43; every sentence 16 words or fewer, ends on a full stop, no 'wrong'. Both executions true ('giving 40/44 instead of 43'). Stem, key and tags unchanged."
+  },
+  {
+   "ref": "rebuild:gen-vr-11-number-series-20",
+   "verdict": "ATTEST",
+   "reason": "Recomputed [12, 18, 27, 39]: gaps 6, 9, 12 grow by 3; next gap 15; 39+15=54, the key. 51=39+12 (previous gap reused, vr-series-step-carryover); 55=54+1 (vr-series-off-by-one). opt3 moved from 53 to 55 (off-by-one now +1); walk's last sentence updated to match. Walk reads every figure from this row, names only 51 and 55 with their own mistakes, states 54; every sentence 16 words or fewer, ends on a full stop, no 'wrong'. Both executions true ('giving 51/55 instead of 54'). Stem, key and tags unchanged."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "verdict": "HOLD",
+   "reason": "As it would stand: daring (key), reckless, stubborn, calm. opt4 'calm' is REFUSED: it is a vr-04 never-add hard block (VR04_NEVER_ADD), a defensible near-answer in bold's courage sense, and its one-feature-only tag is a fitted story. The rude/loud second-answer fault is fixed by the carried stubborn seat; only opt4 remains."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-14",
+   "verdict": "SIGN",
+   "reason": "select the only synonym of choose; refuse (opposite), buy (shop scene) and answer (quiz scene) correct in no sense of choose (pick, decide, wish); all verbs, no option stands out; vocabulary suitable; no walk script on the row, hint is the tag's childHint."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-03",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; 38 the only option fitting gaps growing by 2; 36 and 39 each wrong as tagged; options [36, 38, 39], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-07",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; 38 the only option fitting gaps growing by 2; 36 and 37 each wrong as tagged; options [36, 37, 38], key largest. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-11",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; 29 the only option fitting gaps growing by 2; 27 and 28 each wrong as tagged; options [27, 28, 29], key largest. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-15",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; 49 the only option fitting gaps growing by 2; 47 and 50 each wrong as tagged; options [47, 49, 50], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-19",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; 40 the only option fitting gaps growing by 2; 38 and 41 each wrong as tagged; options [38, 40, 41], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-23",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; 40 the only option fitting gaps growing by 2; 38 and 39 each wrong as tagged; options [38, 39, 40], key largest. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; 52 the only option fitting gaps growing by 3; 49 and 53 each wrong as tagged; options [49, 52, 53], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; 43 the only option fitting gaps growing by 3; 40 and 44 each wrong as tagged; options [40, 43, 44], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "verdict": "SIGN",
+   "reason": "Answerable from the series; 54 the only option fitting gaps growing by 3; 51 and 55 each wrong as tagged; options [51, 54, 55], key middle. Positions measured on value rank (options are served in a seeded per-child shuffle, lib/crew/shuffle.ts, so authored order is not seen) across all 12 three-option rows as they will stand: grow-by-2 group (03,07,11,15,19,23) key middle 3/6, largest 3/6; grow-by-3 group (04,08,12,16,20,24) key middle 3/6, largest 3/6; overall middle 6/12, largest 6/12, smallest 0/12; 'smaller of the one-apart pair' 6/12 and 'larger of it' 6/12. No rank rule beats half. Residual, recorded not held: the key is never the smallest (carryover is always key minus the growth), and the spacing of the three values still leaks on the edge shapes: consecutive {n,n+1,n+2} (07,11,23) always has the key largest and {n,n+3,n+4} (08,16,20) always middle; only {n,n+2,n+3} (03,15,19 vs 04,12,24) is 50/50, so a spacing-reading strategy scores 9/12. This is fixed by the tag design (growth 2 with off-by-one -1 can only produce consecutive values), so no choice of off-by-one direction removes it; the drafter's split is the best this distractor pair allows. Note: walkScriptBatch still reads VR-WALKSCRIPTS-FREE-TEN and walkScriptStatus DRAFT, which no longer describe this text."
+  }
+ ]
+}

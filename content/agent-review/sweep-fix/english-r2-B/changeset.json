@@ -1,0 +1,223 @@
+{
+ "door": "sweep-fix/english-r2-B",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-010-JE-12",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Judged as a new question. Key true in both windows (line 51 'I could see him plainly'; line 71 'distinct and pale'). The sunset is line 8, outside both windows. 'Describes each person in full first' fails at lines 70 to 72, which have no person, and fails at lines 26 to 56 (actions first). 'Never describes a person' fails at lines 52 to 56. There is no stem echo. The key is 11 words, against 12 to 13 for the distractors, so it is not a stand-out. Its opening 'She tells us' is shared with the sunset distractor. The unchanged hint ('Find the words that match up') names a move. The walk states the key. On techniqueKey 'the-light-is-reported-before-the-description': it is staff-facing and never served to a child, so it does not block this row. But it now names the order claim this round removed, so it is false about the item. It is read by composeMockPaper's technique-collision exclusion (techniqueKeyOf, packages/core/src/blueprints.ts) and listed by audit:technique-keys. JE-12 is its only carrier in the DB, so no paper is affected today. answerShape 'observation-bounded-by-conditions' fitted the old bounded key and no longer fits either. Both are Cowork-authored, so this repo should not rename them in place. Send them back with the export for Cowork to rename.",
+   "landedAt": "2026-11-22T17:46:13.591Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Look at lines 51 to 56 and lines 70 to 72. Jane does the same thing in both places before describing something. What is it?",
+     "after": "Look at lines 51 to 56 and lines 70 to 72. Jane does the same thing in both places. What is it?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 51 gives the daylight and the moon before the man is described. Line 53 keeps the description to general points, since details are not apparent. Line 71 gives the moon again before Thornfield is described. The light comes first, then the description.",
+     "after": "Line 51 gives the last daylight and the bright moon. Then she says she could see him plainly. Line 71 gives the moon's gleam on Thornfield Hall. It makes the house stand out pale against the dark woods. In both places she tells us how the light lets her see something clearly."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 51 gives the daylight and the moon before the man is described. Line 53 keeps the description to general points, since details are not apparent. Line 71 gives the moon again before Thornfield is described. The light comes first, then the description."
+    },
+    {
+     "field": "option D (cmsw2f4w000hztmbvdsoy6cjn).value",
+     "before": "She reports the light first, but describes little beyond what it shows.",
+     "after": "She tells us how the light lets her see something clearly."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-002-pp-06",
+   "passageRef": "stream-a-13-pride-prejudice",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Only the key matches lines 21 to 23. 'Two sisters and both husbands' and 'Mr Hurst and Mr Bennet' also make five with Mr Bingley, so only line 22 rules them out, which is the reading the item tests. Twelve and seven is lines 17 to 18; five sisters and a cousin is line 20. The key is no longer the longest option (45 characters against a longest of 50). Three options open 'His two sisters', so the key's opening does not stand out. The hint names the sentence, not an option. The walk states the key.",
+   "landedAt": "2026-11-22T17:46:13.591Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Lines 21 to 23 name them. The group was 'only five altogether'. Take Mr Bingley out: two sisters, a husband, a young man. The bigger numbers come earlier.",
+     "after": "Lines 21 to 23 name them. The group was 'only five altogether'. The bigger numbers in lines 17 to 20 were only reports. Take Mr Bingley out of the five. That leaves his two sisters, one husband and a young man."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Lines 21 to 23 name them. The group was 'only five altogether'. Take Mr Bingley out: two sisters, a husband, a young man. The bigger numbers come earlier."
+    },
+    {
+     "field": "option D (cmsw2f4tp004atmbvxcya03ju).value",
+     "before": "His two sisters and both their husbands.",
+     "after": "His two sisters and both of the sisters' husbands."
+    },
+    {
+     "field": "option E (cmsw2f4tp004btmbvl7ans6aa).value",
+     "before": "His two sisters, the husband of the elder sister, and one other young man.",
+     "after": "His two sisters, one husband and a young man."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-01",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Lines 1 and 2: the stile is the only answer. The field (where it leads), the wall (not stated) and the lane (one word changed from line 2) are each wrong in the way their tags name. The hint sends the child to all of line 2, and every option is built from line 2, so it points at none. The walk states the key. All sentences are 16 words or fewer with proper endings.",
+   "landedAt": "2026-11-22T17:46:13.591Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Read what she sits on, not where it goes.",
+     "after": "Read the whole of line 2 before you choose."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at line 1. The lane goes up-hill, and she stops at the middle. Read what she sits on. The field is where the stile leads, not where she is.",
+     "after": "Start at line 1. The lane goes up-hill, and she stops at the middle. There she sits down on a stile. Line 2 says the stile led into a field. She is on the stile, not in the field. So Jane sits on a stile that leads into a field."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "Read what she sits on, not where it goes."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Start at line 1. The lane goes up-hill, and she stops at the middle. Read what she sits on. The field is where the stile leads, not where she is."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-025-LW-09",
+   "passageRef": "stream-a-16-little-women",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "All four options complete 'wait for'. The key matches lines 53 and 54: till Jo has got good-natured with Laurie, then a quiet minute. 'Next time' is line 49, outside the window, and Meg sends Amy now. Friends again is line 55, the result of Amy's kiss rather than the wait. Laurie going home is never given. The options mix forms (two 'X to', one 'The next time', one noun phrase) at 7 to 9 words. The hint names a move and points at no option. The walk's line numbers are right and it states the key.",
+   "landedAt": "2026-11-22T17:46:13.591Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Meg names a moment, not a thing to say.",
+     "after": "Meg gives Amy steps to follow. Put them in the order she gives them."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 53 says go after them. Line 53 says say nothing till Jo has got good-natured. Line 54 says take a quiet minute.",
+     "after": "Line 53 has Meg tell Amy to go after them. Lines 53 and 54 say to wait till Jo has got good-natured with Laurie. Then, at line 54, Amy is to take a quiet minute. Being friends again comes after that, at line 55. So Meg tells Amy to wait for a quiet minute once Jo has cheered up."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "Meg names a moment, not a thing to say."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 53 says go after them. Line 53 says say nothing till Jo has got good-natured. Line 54 says take a quiet minute."
+    },
+    {
+     "field": "option B (cmsw2f500015ktmbvidvxmyxq).value",
+     "before": "That it is hard to forgive the loss of the book.",
+     "after": "The next time the girls go skating."
+    },
+    {
+     "field": "option B (cmsw2f500015ktmbvidvxmyxq).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option B (cmsw2f500015ktmbvidvxmyxq).execution",
+     "before": "Reuses lines 51 and 52 and gives Meg’s view rather than her instruction.",
+     "after": "'Next time' comes from Amy's complaint at line 49, outside the window. At line 53 Meg says 'Go after them' now, and lines 53 and 54 have Amy wait only till Jo has got good-natured with Laurie."
+    },
+    {
+     "field": "option C (cmsw2f500015ltmbvlnefuu3y).value",
+     "before": "That she was very naughty.",
+     "after": "Jo to be friends with her again."
+    },
+    {
+     "field": "option C (cmsw2f500015ltmbvlnefuu3y).execution",
+     "before": "True at line 51, and it is Meg’s judgement rather than the advice.",
+     "after": "True at line 55, and it is what Meg says will follow Amy's kiss, not the moment to wait for. Lines 53 and 54 have Amy wait till Jo has got good-natured with Laurie, then take a quiet minute."
+    },
+    {
+     "field": "option D (cmsw2f500015mtmbvof5oua5v).value",
+     "before": "Until Laurie has gone off home and left them alone.",
+     "after": "Laurie to go off home and leave them alone."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "passageRef": "stream-a-12-hound-baskervilles",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The key is supported by the barren waste and desolate plain (lines 42, 45) and the 'fiendish man ... hiding in a burrow' (lines 42 to 43), which 'It needed but this to complete' (line 44) joins. The overcoat is line 46, an action rather than a cause. The cairns are line 41, the look of the moor. The wish to go home is never given. The key does not repeat 'chilled'. Openings are split two 'The', two 'He', and lengths are 8 to 10 words. The hint 'Cold air is not the only thing out there.' leaves both the cairns and the key standing. The walk states the key.",
+   "landedAt": "2026-11-22T17:46:13.591Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 40 has the huge expanse of the moor rise in front of them. Lines 42 and 43 put the escaped man out there, lurking like a beast. Line 44 says it needed but this to complete the grim feeling. At line 45 even Baskerville fell silent.",
+     "after": "Line 40 has the huge expanse of the moor rise in front of them. Lines 42 and 43 put the escaped man out there, lurking like a beast. Line 44 says it needed but this to complete the grim feeling. At line 45 even Baskerville fell silent. So the bleak moor, with a dangerous man hiding on it, is what has chilled him."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 40 has the huge expanse of the moor rise in front of them. Lines 42 and 43 put the escaped man out there, lurking like a beast. Line 44 says it needed but this to complete the grim feeling. At line 45 even Baskerville fell silent."
+    },
+    {
+     "field": "option C (cmsw2f4xj00r1tmbvw3nx8s11).value",
+     "before": "The bare moor and the hidden man together chill him.",
+     "after": "The bleak moor, with a dangerous man hiding on it."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-09",
+   "passageRef": "stream-a-17-cranford",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r2-B",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The hint is now true and in standard English. The key matches lines 38 to 40. The father-to-her reversal is line 38. Forming a style is what she did (line 39), not what she advises. Numbers is line 35, outside the window. All four options open 'That' at 8 to 9 words. The walk states the key.",
+   "landedAt": "2026-11-22T17:46:13.591Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Three people are named in these lines. Work out who is advising whom.",
+     "after": "Several people come up in these lines. Work out who is advising whom."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 38 says Dr Johnson's style is a model for young beginners. Lines 39 and 40 say she recommends it to your favourite, meaning Boz. Her own letters are the example, not the advice.",
+     "after": "Line 38 says Dr Johnson's style is a model for young beginners. Lines 39 and 40 say she recommends it to your favourite, meaning Boz. Her own letters are the example, not the advice. So she recommends that he take Dr Johnson's style as a model."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "Three people are named in these lines. Work out who is advising whom."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 38 says Dr Johnson's style is a model for young beginners. Lines 39 and 40 say she recommends it to your favourite, meaning Boz. Her own letters are the example, not the advice."
+    }
+   ]
+  }
+ ]
+}

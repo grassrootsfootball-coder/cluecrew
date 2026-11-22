@@ -1,0 +1,209 @@
+{
+ "door": "sweep-fix/english-r3",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-019-BV-07",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r3",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Every earlier hold is fixed. The walk's line is right ('till then so low and' is line 26, 'shelving' line 27), the walk states the key, and the execution now says lines 27 and 28. Key 'Low and sloping gently down to the water.' is the only sense that fits 'so low and shelving, suddenly became steep'. The shelves sense and the put-aside sense do not fit the strand. 'Suddenly steep' is what it becomes, and the tag stands, as given under the change. The substitution hint points at no option. Options run 7 to 8 words with no shared opening or stem echo. The wording is British and child-suitable.",
+   "landedAt": "2026-11-22T17:55:45.006Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Nothing in these lines is a cupboard.",
+     "after": "Try each answer in place of shelving on line 27. Read the sentence again each time."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 26 says the strand was till then so low and shelving. Line 27 says it suddenly became steep. The word has to name what steep is the opposite of.",
+     "after": "Lines 26 and 27 say the strand was till then so low and shelving. Line 27 says it suddenly became steep. So shelving here means low and sloping gently down to the water."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "Nothing in these lines is a cupboard."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Line 26 says the strand was till then so low and shelving. Line 27 says it suddenly became steep. The word has to name what steep is the opposite of."
+    },
+    {
+     "field": "option D (cmsw2f4yb00vmtmbvacnnb1z8).execution",
+     "before": "True at line 27, and it is what the strand becomes rather than what it was.",
+     "after": "True at lines 27 and 28, and it is what the strand becomes rather than what it was."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "passageRef": "stream-a-20-bevis",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r3",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The original off-frame fault is fixed: every option answers where the rules come from and how he states them. The round-2 form fault is fixed: no 'but', and no 'the rules', on any option. Key 'He makes them up himself, and states them as plain facts.' is true: Bevis speaks every rule (lines 14 to 17, 87 and 88, 90), flatly ('Of course', 'Impossible'), and Mark sets none and argues at line 18. Each distractor is wrong in the way its tag names. Mark argues rather than co-authors, and 'People must do as the captain tells them' is no request (contradicted-by-the-text). No father appears anywhere in the 94 lines (plausible-not-stated, checked). The only whisper is line 1, about a fishing-rod (wrong-scope-retrieval). All share 'states them', so the stem picks none out. Noted, not blocking: the key shares 'He makes them up' with one distractor and is 10 words to 12 or 13. The hint names a move. The walk's three quotations are exact and it ends on the key.",
+   "landedAt": "2026-11-22T17:55:45.006Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Think about the whole passage. What does Bevis keep doing with the rules of the game?",
+     "after": "Think about the whole passage. Where do Bevis's rules for the game come from, and how does he state them?"
+    },
+    {
+     "field": "explanation.hintCore",
+     "before": "One of these says the writer told you what to think.",
+     "after": "Find each rule of the game in the passage. Look at who says it and the words used."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "At lines 14 and 15 he says 'the captain who always does everything'. At lines 87 and 88 he says 'People must do as the captain tells them'. At line 90 he says 'you ought to be put on half-rations'. Each rule comes from Bevis, and he says each one as plain fact.",
+     "after": "At lines 14 and 15 he says 'the captain who always does everything'. At lines 87 and 88 he says 'People must do as the captain tells them'. At line 90 he says 'you ought to be put on half-rations'. Mark sets none of them, and argues back at line 18. So he makes them up himself, and states them as plain facts."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "One of these says the writer told you what to think."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "At lines 14 and 15 he says 'the captain who always does everything'. At lines 87 and 88 he says 'People must do as the captain tells them'. At line 90 he says 'you ought to be put on half-rations'. Each rule comes from Bevis, and he says each one as plain fact."
+    },
+    {
+     "field": "option A (cmsw2f4yf00w8tmbvip3s8s6s).value",
+     "before": "He says the captain does everything, and that Mark has to obey.",
+     "after": "He makes them up with Mark, and states them as gentle requests."
+    },
+    {
+     "field": "option A (cmsw2f4yf00w8tmbvip3s8s6s).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option A (cmsw2f4yf00w8tmbvip3s8s6s).execution",
+     "before": "Quotes him twice and names nothing that joins the two.",
+     "after": "The passage says the opposite. Mark argues against the rules at lines 12 and 13 and at line 18, and Bevis answers 'Impossible' at line 14. At lines 87 and 88 he says 'People must do as the captain tells them', which is no gentle request."
+    },
+    {
+     "field": "option B (cmsw2f4yf00w9tmbvn2ia68aj).value",
+     "before": "He is judged by the writer, and the verdict is a hard one.",
+     "after": "He learns them from his father, and states them as his father's words."
+    },
+    {
+     "field": "option B (cmsw2f4yf00w9tmbvn2ia68aj).tag",
+     "before": "en-whole-text-absence-asserted",
+     "after": "en-plausible-not-stated"
+    },
+    {
+     "field": "option B (cmsw2f4yf00w9tmbvn2ia68aj).execution",
+     "before": "No line anywhere gives a verdict on him.",
+     "after": "No line says where Bevis learned his rules, and no father is named anywhere in the passage. Every rule, at lines 14 to 17, 87 and 88, and 90, is spoken by Bevis without naming anyone else. The child supplies a source that sounds likely for a boy."
+    },
+    {
+     "field": "option C (cmsw2f4yf00watmbvzdnudgdk).value",
+     "before": "He makes the rules up himself, but states them like plain fact.",
+     "after": "He makes them up himself, and states them as plain facts."
+    },
+    {
+     "field": "option D (cmsw2f4yf00wbtmbvuof2q0v4).value",
+     "before": "He is harsh at the start, but he grows kinder by the end.",
+     "after": "He asks Mark to choose them, and states them in a whisper."
+    },
+    {
+     "field": "option D (cmsw2f4yf00wbtmbvuof2q0v4).tag",
+     "before": "en-plausible-not-stated",
+     "after": "en-wrong-scope-retrieval"
+    },
+    {
+     "field": "option D (cmsw2f4yf00wbtmbvuof2q0v4).execution",
+     "before": "At line 90 he is still threatening to put Mark on half-rations.",
+     "after": "Bevis whispers only at line 1, and that is a request for his fishing-rod, not a rule of the game. He never asks Mark to choose a rule: at line 14 he answers Mark with 'Impossible'. The child takes the whisper from the wrong part of the passage."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "passageRef": "stream-a-11-jane-eyre",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r3",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The staff metadata now describes the live key. Re-read whole from the passage rather than on round 2's sign. The key is true in both windows (lines 51 and 52 'I could see him plainly', line 71 'distinct and pale'). The sunset is lines 7 and 8, outside both windows. 'Reuses line 8' holds under the line rule above, because 'sank crimson and clear behind them' and 'the trees' are line 8. 'Describes each person in full first' fails twice: there is no person at lines 70 to 72, and the traveller passes at line 26 and falls at line 28 before lines 51 to 56. 'Never describes a person' fails at lines 52 to 56. No stem echo. The key, 11 words, is not the longest, and its opening 'She tells us' is shared. The hint names a move. The walk is accurate to lines 51, 52, 71 and 72 and ends on the key.",
+   "landedAt": "2026-11-22T17:55:45.006Z",
+   "changes": [
+    {
+     "field": "stem.answerShape",
+     "before": "observation-bounded-by-conditions",
+     "after": "light-given-as-the-cause-of-a-clear-sight"
+    },
+    {
+     "field": "stem.techniqueKey",
+     "before": "the-light-is-reported-before-the-description",
+     "after": "the-light-is-named-as-what-lets-her-see-clearly"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-011-CV-03",
+   "passageRef": "stream-a-07-canterville-ghost",
+   "hold": {
+    "reason": "not a held row: sweep-fix/english-r3",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Every earlier hold is fixed. The pheasant is gone. The walk ends on the key and the hint no longer counts actions. Every option names both animals, so the stem rules none out. Key 'The squirrels peer and the rabbits run away.' is true at lines 6 and 7 and is the only answer: the reversal, the both-run version and chatter/nibble are each false against lines 5 to 7. Three options open 'The squirrels' and one 'The rabbits'. They run 8 to 9 words and none echoes the stem. The hint names a move and points at no option. Walk accurate to lines 6 and 7. Sentences are 16 words or fewer, and the wording is British and child-suitable.",
+   "landedAt": "2026-11-22T17:55:45.006Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "Two animals, two actions. Match them up.",
+     "after": "Find each animal in lines 5 to 7. Read what the lines say it does."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 5 to the end of line 7. Two animals are named after the pheasant. One looks, the other runs. Check which does which before you answer.",
+     "after": "Read line 5 to the end of line 7. On line 6, the squirrels peer at the family from the trees. Then the rabbits run away, with their white tails in the air. So the squirrels peer and the rabbits run away."
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": null,
+     "after": "Two animals, two actions. Match them up."
+    },
+    {
+     "field": "explanation._previousWalkScript",
+     "before": null,
+     "after": "Read line 5 to the end of line 7. Two animals are named after the pheasant. One looks, the other runs. Check which does which before you answer."
+    },
+    {
+     "field": "option B (cmsw2f4w200ibtmbviagb1fik).value",
+     "before": "A pheasant shows its breast deep in the fern.",
+     "after": "The squirrels and the rabbits both run away."
+    },
+    {
+     "field": "option B (cmsw2f4w200ibtmbviagb1fik).tag",
+     "before": "en-within-span-wrong-element",
+     "after": "en-minimal-pair-skim"
+    },
+    {
+     "field": "option B (cmsw2f4w200ibtmbviagb1fik).execution",
+     "before": "True at line 5, and it is a third animal rather than either of these two.",
+     "after": "Only the rabbits run: lines 6 and 7 send them scudding away through the brushwood. Line 6 has the squirrels peer at the family from the beech-trees. The option changes one detail, giving the squirrels the rabbits' running, and matches the lines on gist."
+    },
+    {
+     "field": "option D (cmsw2f4w200idtmbvfcyz0xkn).value",
+     "before": "The rabbits run out into the road ahead of them.",
+     "after": "The squirrels chatter and the rabbits nibble the grass."
+    },
+    {
+     "field": "option D (cmsw2f4w200idtmbvfcyz0xkn).execution",
+     "before": "Line 6 sends them away through the brushwood, not into the road.",
+     "after": "Neither action is in lines 5 to 7. Line 6 has the squirrels peer at the family from the beech-trees, and lines 6 and 7 have the rabbits scud away through the brushwood. Chattering squirrels and nibbling rabbits sound likely in a wood, so the option sounds sensible without any line to prove it."
+    }
+   ]
+  }
+ ]
+}

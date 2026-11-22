@@ -1,0 +1,432 @@
+{
+ "door": "sweep-fix/english-r2-A",
+ "proposer": "drafting agent (round 2)",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-001-WIW-12",
+   "why": "Round 2. Sweep fault: 'An animal that chased and chuckled.' is the passage's own name for the river (second answer). Round 1's 'A lake.' was refused as sourceless and the key's body-of-water twin. Now replaced by an element really inside lines 29 to 33 that is not the river (line 31's playmates). Reviewer's note: the hint 'Not what he saw that day.' excluded the key too, so the hint is rewritten; Annie's marker cleared, old text kept.",
+   "stem": {
+    "text": "Read lines 29 to 33. What had the Mole never seen before in all his life?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 12
+   },
+   "options": [
+    {
+     "optionId": "cmsw387yf000jtmqbs4jbygot",
+     "value": "A great meadow.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Nothing says the meadow was new to the Mole; line 15 only has him rolling in it. A creature from underground meeting a meadow makes 'never seen before' sound likely, but line 29 says it only of the river."
+    },
+    {
+     "optionId": "cmsw387yf000ktmqbrineesg5",
+     "value": "Playmates that shook themselves free.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 31 has the river fling itself on 'fresh playmates that shook themselves free'. They are inside the window, but they are things the river plays with. Nothing says they were new to him: line 29 says the thing he had never seen was a river."
+    },
+    {
+     "optionId": "cmsw387yf000ltmqbsitneobv",
+     "value": "A face with whiskers.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The face with whiskers is line 48, nineteen lines later."
+    },
+    {
+     "optionId": "cmsw387yf000mtmqbh3enf8fk",
+     "value": "The bright sunshine.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The sunlight is line 14, where his snout first comes out of the tunnel. The child answers from that earlier part instead of lines 29 to 33, where the thing he had never seen before is the river."
+    },
+    {
+     "optionId": "cmsw387yf000ntmqbmtuyqe5x",
+     "value": "A river.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find where lines 29 to 33 say he had never seen something. Read that whole sentence.",
+    "hintAuthoredBy": null,
+    "hintAuthority": null,
+    "_previousHintCore": "The question asks what he had never seen. Not what he saw that day.",
+    "_previousHintAuthority": "annie-sixtyfifth-return.md, sha256 0cd56a0547dbca75363163584f63656b8da67411cfa49783b4c2ed8217ea7469",
+    "_earlierHintCore": "Find the words 'never in his life' and finish the sentence."
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-09",
+   "why": "Round 2. Carries round 1's attested hint. Held for the walk: it called line 22 the rabbit's one speech and quoted the line-22-to-23 sentence as if it stood on line 22. Walk now says lines 22 and 23 and states the key.",
+   "stem": {
+    "text": "Read lines 22 to 23. What did the elderly rabbit at the gap want from the Mole?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 9
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4t70017tmbvdibva2l1",
+     "value": "Sixpence for using the private road.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4t70018tmbv8bq0sgma",
+     "value": "Help with his own spring-cleaning.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "The spring-cleaning belongs to the Mole, at line 1. The child moves it onto the rabbit at the gap, who at line 22 asks only for sixpence to pass along the private road."
+    },
+    {
+     "optionId": "cmsw2f4t70019tmbv2kzq0aqh",
+     "value": "A ride across the river in a boat.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The boat ride is line 63, at the far end of the passage."
+    },
+    {
+     "optionId": "cmsw2f4t7001atmbvi285jr7m",
+     "value": "The privilege of passing by the private road.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Reverses the exchange in lines 22 to 23. The rabbit asks 'Sixpence for the privilege of passing by the private road': the privilege is what the Mole would get, and the sixpence is what the rabbit wants from him."
+    },
+    {
+     "optionId": "cmsw2f4t7001btmbv140bphdt",
+     "value": "Some onion sauce for his dinner.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "'Onion-sauce!' at line 25 is the Mole's jeer on the way past, taken as an order for the rabbit's dinner."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "The rabbit asks for something at lines 22 and 23. What is it?",
+    "hintAuthoredBy": null,
+    "hintAuthority": null,
+    "_previousHintCore": "The rabbit says one sentence. What is he asking for in it?",
+    "_previousHintAuthority": "annie-eightyninth-return.md (CONFIRMATIONS block), sha256 a51e2126cbfe9f2282254afc915fd340d851fa619fc53f9f4a7c5e4637193118",
+    "walkScript": "Lines 22 and 23 are the rabbit's one speech. He asks for 'Sixpence for the privilege of passing by the private road!' So he wants sixpence for letting the Mole use the private road. 'Onion-sauce!' at line 25 is the Mole's, on his way out.",
+    "_previousWalkScript": "Line 22 is the rabbit's one speech. He says 'Sixpence for the privilege of passing by the private road!' So he wants paying to let the Mole past. 'Onion-sauce!' at line 25 is the Mole's, on his way out."
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-13",
+   "why": "Round 2. Sweep fault: key alone opened 'To ...' against four 'Because ...'. Round 1 made the distractors 'To show ...' but left the key alone on 'To make ...' and shortest. Now all five open 'To show ...', the key is 12 words (others 11, 11, 12, 14). Round 1's reviewed executions kept; walk ends on the key's wording.",
+   "stem": {
+    "text": "The writer calls the river an animal that chases, chuckles and grips things. Read lines 29 to 33. Why does he do this?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 13
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tb001vtmbvc84advnk",
+     "value": "To show that the river was full of life and always moving.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tb001wtmbv3i1pm7w6",
+     "value": "To show that a real animal was swimming in the water.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Takes the animal comparison at line 30 as a real animal swimming in the water. Line 29 says the thing beside him is a river; the animal is the writer's picture of it."
+    },
+    {
+     "optionId": "cmsw2f4tb001xtmbv25sj12gz",
+     "value": "To show the river was dangerous and might grab the Mole.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Pulls the gripping in line 30 to its most threatening reading. Lines 30 to 31 have the river 'chuckling', leaving things 'with a laugh' and finding 'fresh playmates', so it is playful, not a danger to the Mole."
+    },
+    {
+     "optionId": "cmsw2f4tb001ytmbvpeol94yp",
+     "value": "To show that the Water Rat lived in the bank beside it.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The Rat's hole in the bank is line 39, after this window; nothing in lines 29 to 33 is about the Rat."
+    },
+    {
+     "optionId": "cmsw2f4tb001ztmbv14pu0ugz",
+     "value": "To show that the Mole thought a big animal was in front of him.",
+     "isKey": false,
+     "tag": "en-technique-intent-as-character",
+     "execution": "The child turns the writer's choice of picture into something the Mole believes. Line 33 says the Mole was bewitched and entranced, not that he took the river for a creature; calling it an animal is the writer's way of making it seem alive."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Lines 30 and 31 give the river's verbs: chasing, chuckling, gripping, leaving them with a laugh. So the writer shows the river is full of life and always moving. The Rat's hole is line 39, later.",
+    "_previousWalkScript": "Lines 30 and 31 give the river's verbs: chasing, chuckling, gripping, leaving them with a laugh. So the river feels alive and always moving. The Rat's hole is line 39, later."
+   }
+  },
+  {
+   "itemId": "ENG-001-WIW-14",
+   "why": "Round 2. Carries round 1's attested lineRefs [33, 34, 35, 36]. Held for a form tell: four distractors open 'The Mole was ...' and the key alone opened 'The river held ...'. Key now opens the same way; walk ends on the key.",
+   "stem": {
+    "text": "Read lines 33 to 36. The Mole 'trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories'. What does this tell you about the Mole?",
+    "quotes": [
+     {
+      "rule": "R4",
+      "text": "trotted as one trots, when very small, by the side of a man who holds one spell-bound by exciting stories",
+      "lineRefs": [
+       34,
+       35,
+       36
+      ],
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling"
+      ],
+      "passageRef": "stream-a-03-wind-in-willows"
+     }
+    ],
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 14
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4tc0021tmbvpodnk62w",
+     "value": "The Mole was too small and slow to keep up with the river.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "execution": "Takes 'when very small' from the comparison in line 34 as a fact about the Mole. The words 'very small' belong to the child walking beside the storyteller; the Mole himself 'trotted' beside the river and kept with it, held 'spell-bound' (line 35) as the child is."
+    },
+    {
+     "optionId": "cmsw2f4tc0022tmbvqf4cf3r1",
+     "value": "The Mole was much younger than the Water Rat.",
+     "isKey": false,
+     "tag": "en-comparison-vehicle-misread",
+     "execution": "The 'very small' child of the comparison at line 34 is carried across to the Mole as an age, and the Rat is not in this window at all."
+    },
+    {
+     "optionId": "cmsw2f4tc0023tmbvq1zy93fx",
+     "value": "The Mole was looking for a man to help him.",
+     "isKey": false,
+     "tag": "en-figurative-taken-literally",
+     "execution": "Takes the man in the comparison at line 35 as a man the Mole is actually looking for."
+    },
+    {
+     "optionId": "cmsw2f4tc0024tmbvzkkasyfl",
+     "value": "The Mole was so interested in the river that he followed it.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4tc0025tmbvjefeli98",
+     "value": "The Mole was tired and wanted to go home.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "Line 35 has him tired and sitting down. True, inside the window, and the wrong element for a question about why he kept following."
+    }
+   ],
+   "lineRefs": [
+    33,
+    34,
+    35,
+    36
+   ],
+   "explanationPatch": {
+    "walkScript": "Look at the small child, lines 34 and 35. He trots beside a man who holds him 'spell-bound'. The river holds the Mole in the same way. He is so interested in it that he follows it. He grows tired later.",
+    "_previousWalkScript": "Look at the small child, lines 34 and 35. He trots beside a man who holds him 'spell-bound'. So the river holds the Mole walking beside it. He grows tired later."
+   }
+  },
+  {
+   "itemId": "ENG-005-BB-04",
+   "why": "Round 2. Sweep fault: hint named the fishing sense and framed the answer as what a horse is given. Round 1's 'What would he need after that journey?' was refused for the same framing (only the key is a need). Hint now names the move only: try each meaning in the sentence.",
+   "stem": {
+    "text": "In town Beauty says 'I had a good bait'. What does 'bait' mean here? (line 14)",
+    "quotes": [
+     "I had a good bait"
+    ],
+    "passageRef": "stream-a-04-black-beauty",
+    "orderAnchor": 14
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4uj0093tmbvcj8n5w7j",
+     "value": "Something used to catch a fish.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "Bait for catching fish is the commonest sense of the word. It does not fit line 14, where a horse that has pulled a cart to town has 'a good bait'."
+    },
+    {
+     "optionId": "cmsw2f4uj0094tmbv0idf1753",
+     "value": "A long wait outside, with nothing to eat.",
+     "isKey": false,
+     "tag": "en-vocab-form-lookalike",
+     "execution": "The child reads 'bait' as if it were 'wait', a word one letter away, and builds a long wait with no food. Line 14 calls it a good bait, which is a feed and a rest in town."
+    },
+    {
+     "optionId": "cmsw2f4uj0095tmbv6xohuxgb",
+     "value": "A trick played to make him go on.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "Bait as a lure or trick is a genuine sense of the word, but not the one line 14 fixes. 'I had a good bait' in the town, while the master was busy, is about Beauty being fed and rested."
+    },
+    {
+     "optionId": "cmsw2f4uj0096tmbvr6wzzbpd",
+     "value": "A feed and a rest.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Put each meaning in the place of 'bait' in line 14. Read the whole sentence each time.",
+    "_previousHintCore": "Ask what a horse would be given, not a fisherman."
+   }
+  },
+  {
+   "itemId": "ENG-014-TS-03",
+   "why": "Round 2. Carries round 1's attested gate-forced reword ('full of hope' for 'his hopes were high'). Held for the hint: it pinned line 11, whose only action by Ben is the key, and said the writer reads his mood from it. Hint now spans the whole window, where Ben also eats an apple, whoops and plays a steamboat.",
+   "stem": {
+    "text": "Look at lines 10 to 14. What shows us that Ben was in a happy mood?",
+    "quotes": [],
+    "passageRef": "stream-a-05-tom-sawyer",
+    "orderAnchor": 10
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ww00n8tmbvjmmtakv4",
+     "value": "The calm way of working that is described.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Line 10 gives that calm to Tom; this reads it as a sign about Ben."
+    },
+    {
+     "optionId": "cmsw2f4ww00n9tmbvuewxef2d",
+     "value": "The fruit he had in his hand.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 12 and 13, and it is what he carried rather than the sign of his mood."
+    },
+    {
+     "optionId": "cmsw2f4ww00natmbv4teyn0a2",
+     "value": "The way he came hopping and skipping along.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4ww00nbtmbvh1zkbsrt",
+     "value": "His heart was light and he was full of hope.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 12, 'his heart was light and his anticipations high', and repeats the conclusion rather than giving the sign for it."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find the things Ben does in lines 10 to 14. Which one tells you about his mood?",
+    "_previousHintCore": "The line gives the proof and the thing proved. Take the proof."
+   }
+  },
+  {
+   "itemId": "ENG-011-CV-03",
+   "why": "Round 2. Carries round 1's attested seat (the pheasant option replaced by 'The squirrels and the rabbits both run away.'). Held for the walk, which never stated the key. Reviewer also noted the hint 'Two animals, two actions.' ruled out the new option without the passage, so the hint now names the move only.",
+   "stem": {
+    "text": "Read lines 5 to 7. What do the squirrels and the rabbits do?",
+    "quotes": [],
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 3
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4w200iatmbvz9in5dg2",
+     "value": "The rabbits look and the squirrels dash off.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Swaps which animal does which. Lines 5 to 7 have the squirrels peer at them from the beech-trees and the rabbits scud away through the brushwood. This option gives the looking to the rabbits and the running to the squirrels."
+    },
+    {
+     "optionId": "cmsw2f4w200ibtmbviagb1fik",
+     "value": "The squirrels and the rabbits both run away.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "Only the rabbits run: lines 6 and 7 send them scudding away through the brushwood. Line 6 has the squirrels peer at the family from the beech-trees. The option changes one detail, giving the squirrels the rabbits' running, and matches the lines on gist."
+    },
+    {
+     "optionId": "cmsw2f4w200ictmbvjcudzfcq",
+     "value": "The squirrels peer and the rabbits run away.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4w200idtmbvfcyz0xkn",
+     "value": "The rabbits run out into the road ahead of them.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Line 6 sends them away through the brushwood, not into the road."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find each animal in lines 5 to 7. Read what the lines say it does.",
+    "_previousHintCore": "Two animals, two actions. Match them up.",
+    "walkScript": "Read line 5 to the end of line 7. On line 6, the squirrels peer at the family from the trees. Then the rabbits run away, with their white tails in the air. So the squirrels peer and the rabbits run away.",
+    "_previousWalkScript": "Read line 5 to the end of line 7. Two animals are named after the pheasant. One looks, the other runs. Check which does which before you answer."
+   }
+  },
+  {
+   "itemId": "ENG-021-ED-07",
+   "why": "Round 2. Sweep fault: hint asserted a bargain in lines 23 and 24 and called the phrase a word. Round 1's hint was refused for sending the child to the gathering-up on line 24, a distractor's value. Hint now sets the card-game context from line 23 (cards thrown down, 'Two trumps') and names the move, pointing at no option.",
+   "stem": {
+    "text": "Look at lines 23 and 24. What does \"whose turn it was to deal\" on line 24 mean here?",
+    "quotes": [
+     "whose turn it was to deal"
+    ],
+    "passageRef": "stream-a-09-eighty-days",
+    "orderAnchor": 24
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yv00yvtmbvw4mqmj2l",
+     "value": "It was his to make a bargain.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The commonest everyday sense of 'deal' is a bargain, and a wager is argued over a few lines later. But line 24 has Stuart gather up the cards, so the deal here is of cards."
+    },
+    {
+     "optionId": "cmsw2f4yv00ywtmbvtlcmn5ix",
+     "value": "It was his to give out the cards again.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yv00yxtmbvu0wgypah",
+     "value": "It was his to take a large amount.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "As in a great deal, which is just as common."
+    },
+    {
+     "optionId": "cmsw2f4yv00yytmbv4m7dzhon",
+     "value": "It was his to gather up the cards.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 24, and it is what he does before the thing the word names."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Line 23 shows what game the men are playing. Put each answer in place of the phrase.",
+    "_previousHintCore": "A bargain is being argued about, and the word is not that."
+   }
+  }
+ ],
+ "notes": {
+  "ENG-001-WIW-12": "Held: round-1 seat 'A lake.' refused (sourceless, the key's twin) and hint 'Not what he saw that day.' excluded the key -> the animal option is now 'Playmates that shook themselves free.' (en-within-span-wrong-element, line 31, inside the window and not the river); hint rewritten to a locating move that names no option; marker cleared, old text kept. Walk unchanged: it reaches and states 'a river'.",
+  "ENG-001-WIW-09": "Held: walk said 'Line 22 is the rabbit's one speech' though it runs to line 23 -> walk says 'Lines 22 and 23' and ends on the key (sixpence for using the private road); round 1's attested hint carried.",
+  "ENG-001-WIW-13": "Held: key alone opened 'To make ...' against four 'To show ...' and was shortest -> key 'To show that the river was full of life and always moving.' (12 words; others 11 to 14), all five in one form; walk ends on the key's words; hint unchanged.",
+  "ENG-001-WIW-14": "Held: key alone opened 'The river held ...' against four 'The Mole was ...' -> key 'The Mole was so interested in the river that he followed it.' (12 words; others 9 to 13); walk restated to that key; round 1's lineRefs [33-36] carried.",
+  "ENG-005-BB-04": "Held: hint framed the answer as a need, which only the key is -> hint names the move (try each meaning in place of 'bait' in line 14) and leaves every option standing. Walk unchanged: it states food and rest.",
+  "ENG-014-TS-03": "Held: hint pinned line 11 (only the key) -> hint asks for the things Ben does across lines 10 to 14 (he also eats an apple, line 12), naming no line that holds one option; round 1's gate-forced 'full of hope' reword carried. Walk unchanged: it names the hop-skip-and-jump as the sign.",
+  "ENG-011-CV-03": "Held: walk stopped at 'Check which does which' without the key, and hint 'Two animals, two actions.' ruled out the both-run option -> walk now ends 'So the squirrels peer and the rabbits run away.'; hint 'Find each animal in lines 5 to 7. Read what the lines say it does.'; round 1's attested seat carried.",
+  "ENG-021-ED-07": "Held: round-1 hint pointed at the gathering-up on line 24 (a distractor) -> hint sets the card game from line 23 and asks the child to try each answer in place of the phrase; no option named or pointed at. Walk unchanged: it states 'to hand them out again'."
+ }
+}

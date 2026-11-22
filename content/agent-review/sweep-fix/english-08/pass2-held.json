@@ -1,0 +1,78 @@
+{
+ "door": "sweep-fix/english-08",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-028-PR-01",
+  "ENG-007-LP-15",
+  "ENG-007-LP-10",
+  "ENG-007-LP-08",
+  "ENG-028-PR-10",
+  "ENG-027-RR-12",
+  "ENG-027-RR-01",
+  "ENG-027-RR-04",
+  "ENG-024-BF-11",
+  "ENG-027-RR-02"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-009-SM-06",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-009-SM-06",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "hintCore",
+    "reason": "Both named faults are fixed: D is shaped as a reason and wrong-scope, and C is contradicted by line 24. But with the new D, the unchanged hint 'Work out where the water is compared with him.' now points straight at the key. The key ('It sat higher up than the field beside him') is the only option about where the water is; the others are a hurry, the wind and a gull. The hint asks for exactly the relation the key states, which is R572 coaching. The hint needs rewording so that it sends the child to lines 24 to 26 without naming the water's position."
+   }
+  },
+  {
+   "itemId": "ENG-027-RR-11",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-027-RR-11",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "options",
+    "reason": "The finding is fixed: the ambassadors option is now en-within-span-wrong-element, which is correct. But the row as it will stand still carries the same fault class the sweep held RR-02 C and SM-06 C for. Option 'Because the old man had left before he arrived.' is tagged en-plausible-not-stated. Lines 65 and 66 state the contrary: the ambassadors 'paid me their respects, among them old Lord Topham'. So it needs en-contradicted-by-the-text. Its own execution says as much, and also cites line 65 where 'among them old Lord Topham' is line 66. Retag it and correct the line to 66. Otherwise the key ('could hardly see', line 67) is sound and is the only answer."
+   }
+  },
+  {
+   "itemId": "ENG-022-GK-02",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-022-GK-02",
+     "verdict": "REFUSE",
+     "reason": "The option recast is sound. 'He put himself in goal, and Dan picked the teams last week.' is true of lines 7, 8 and 38, no longer mirrors the key, and still fits en-inference-literal-lookalike. The new hintCore is the fault: 'Read line 7, then line 38. Ask whether the two agree with each other.' It offers a yes/no choice, and its 'no' half is the key. The key is the only option that sets the two against each other ('but'); the others join them with 'and', 'because' and 'so that'. A child can answer 'they do not agree' and pick the one contrast option without working out the relation. That is R572 coaching, a choice whose one half is the key. The sweep reader suggested this wording, but that does not make it safe."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-022-GK-02",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "faultField": "hintCore",
+    "reason": "The twin is gone, but the hint still coaches. 'Ask whether the two agree with each other.' is a yes/no choice whose 'no' half picks out the key, the only option that sets the two lines against each other. Also, the unchanged walk script ('Line 7 ... Line 9 ... Line 38 has Dan pick him eighth out of eight.') never states the key's relation. It does not reach 'He says he chose the goal, but he was picked last of them.', which is the same walk-script fault the sweep held RR-02 and RR-12 for."
+   }
+  },
+  {
+   "itemId": "ENG-027-RR-03",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-027-RR-03",
+     "verdict": "REFUSE",
+     "reason": "The walk-script half is sound. It now ends 'Paler than his wont means paler than he usually looks. So wont means his usual way of looking.' But the new hintCore, 'Pictures do not come up until line 15, so look nearer.', is a new hint aimed at one wrong option, D ('His look in the pictures of him'). It strikes D out for the child. With D gone, the substitution test the hint also asks for leaves only the key, so the hint now hands over the answer. Its reason is not about meaning either: when pictures come up has nothing to do with what 'wont' means. Fix the D leak by recasting D so the substitution test rules it out, or by a hint that names no option."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-027-RR-03",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "faultField": "hintCore",
+    "reason": "The walk-script half of the finding is fixed. The hint half is not fixed honestly. The new hint, 'Pictures do not come up until line 15, so look nearer.', strikes out option D by name. Once D is gone, 'try each answer in place of wont' leaves only the key, so the hint hands over the answer. The D leak should be fixed in D itself, or by a hint that names no option."
+   }
+  }
+ ]
+}

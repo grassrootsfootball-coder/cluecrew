@@ -1,0 +1,217 @@
+{
+ "door": "sweep-fix/vr-r3",
+ "questionType": "vr-04-closest-meaning",
+ "ruling": "R1037",
+ "entries": {
+  "vr04-associated-not-same": {
+   "description": "Chose an associated word rather than a synonym.",
+   "childHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
+  },
+  "vr04-keeps-the-same-company": {
+   "description": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+   "childHint": "Both words could fit the same story. Ask whether they mean the same."
+  },
+  "vr04-one-feature-only": {
+   "description": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+   "childHint": "That is one sign of it. The word itself means something wider."
+  },
+  "vr04-opposite-pull": {
+   "description": "Chose the opposite by mistake.",
+   "childHint": "That word points the other way. Read both meanings again."
+  },
+  "vr04-the-other-meaning": {
+   "description": "Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in \"stayed HUMBLE after winning\" — the humble-cottage sense). T4/T5 only.",
+   "childHint": "The word in capitals has more than one meaning. Read the sentence and pick the one it shows."
+  },
+  "vr04-wrong-shade": {
+   "description": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+   "childHint": "Close is not the same. Ask exactly what the word you were given means."
+  },
+  "vr04-wrong-strength": {
+   "description": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+   "childHint": "Some words say a lot and some say a little. Choose the answer that says just as much as the word you are given."
+  }
+ },
+ "rows": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "status": "LIVE",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "stem": {
+    "words": [
+     "bold"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "lineRefs": null,
+   "explanation": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt1",
+     "value": "daring",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt2",
+     "value": "reckless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'daring'. 'reckless' pushes the same idea too far: so bold that you ignore danger completely. A child who reaches for the strongest bold word picks 'reckless' instead of 'daring'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt3",
+     "value": "rude",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'daring'. 'rude' shares one area of 'bold', speaking out cheekily, but tilts it towards bad manners. A child who hears only 'forward' picks 'rude'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt4",
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'daring'. A bold person may speak up loudly, so 'loud' names one thing boldness can look like, not what 'bold' means. A child who picks that visible sign picks 'loud'."
+    }
+   ],
+   "finding": {
+    "sweep": {
+     "itemId": "gen-vr-04-closest-meaning-15",
+     "verdict": "REFUSE",
+     "faultAt": [
+      "option rude",
+      "option loud"
+     ],
+     "objective": true,
+     "fault": "Bare card BOLD fails the two-part screen. 'rude' is correct in bold's impudent sense (Oxford defines that sense as 'audaciously rude or impudent'; the option's own execution concedes 'rude shares one area of bold, speaking out cheekily'). 'loud' is correct in bold's colour/design sense (bold colours = loud colours; Collins lists 'loud' under bold 'bright, vivid'). Each is a second correct answer on a card with no carrier sentence.",
+     "suggestedFix": "Replace rude and loud with distractors outside every sense of bold, and add rude, cheeky, loud, bright, vivid to VR04_FORBIDDEN_BY_HEADWORD.bold.",
+     "batch": "vr-02",
+     "district": "VR",
+     "questionType": "vr-04-closest-meaning"
+    },
+    "round1": {
+     "source": "sweep-fix/vr pass2-held.json row.reason (reviewer hold, verbatim)",
+     "text": "After changes the options are daring (key), reckless, stubborn, shouting. The seat for shouting is REFUSED: its one-feature-only tag is a fitted story (shouting signals anger or noise, not boldness) and as the only verb form it reads as a throwaway. The rude/loud second-answer fault is fixed by the attested stubborn seat, but the row cannot be signed until opt4 is redrafted. Separately (outside this door): VR04_FORBIDDEN_BY_HEADWORD.bold still lacks rude, cheeky, loud, bright, vivid."
+    },
+    "round2": {
+     "source": "sweep-fix/vr-r2 proposal-review.json (reviewer verdicts on this row, verbatim)",
+     "text": [
+      "The carried stubborn seat is verbatim round 1's attested text and correct. 'calm' is REFUSED. (1) It is on VR04_NEVER_ADD in packages/core/src/vr/vr04.ts, the vr-04 hard block of words that are a defensible second answer, 'never emitted as a vr-04 distractor'; checkVr04Row returns 'never-add' for it on any headword. The precheck passes only because land-proposals does not call checkVr04Row. A gate pass is not a reason to attest. (2) The block is right here. Bold sits in the courage family (VR04_SYNONYM_GROUPS courage: brave, bold, daring), and 'calm in the face of danger' is how a child is taught to describe a brave person. A child could defend 'calm' (unafraid, cool-headed) as nearer to bold than 'stubborn'. (3) The vr04-one-feature-only story is fitted, the same fault as the refused 'shouting'. Boldness shows in taking a risk, not in staying calm. A bold act is often excited or hasty, so calm is not a sign of boldness. Needs a word that is a true single visible sign of boldness, correct in no sense (brave, cheeky, bright/vivid, thick print), and not on VR04_NEVER_ADD or forbiddenFor('bold').",
+      "As it would stand: daring (key), reckless, stubborn, calm. opt4 'calm' is REFUSED: it is a vr-04 never-add hard block (VR04_NEVER_ADD), a defensible near-answer in bold's courage sense, and its one-feature-only tag is a fitted story. The rude/loud second-answer fault is fixed by the carried stubborn seat; only opt4 remains."
+     ]
+    }
+   },
+   "previousRound": [
+    {
+     "door": "sweep-fix/vr",
+     "proposal": {
+      "seats": [
+       {
+        "optionId": "gen-vr-04-closest-meaning-15-opt3",
+        "itemId": "gen-vr-04-closest-meaning-15",
+        "oldValue": "rude",
+        "tag": "vr04-wrong-shade",
+        "newValue": "stubborn",
+        "execution": "The key is 'daring'. 'stubborn' shares the area of a strong, firm character but tilts it towards refusing to change your mind. No sense of 'bold' (brave, cheeky, bright, or thick print) means stubborn. A child who hears only 'strong-willed' picks 'stubborn'."
+       },
+       {
+        "optionId": "gen-vr-04-closest-meaning-15-opt4",
+        "itemId": "gen-vr-04-closest-meaning-15",
+        "oldValue": "loud",
+        "tag": "vr04-one-feature-only",
+        "newValue": "shouting",
+        "execution": "The key is 'daring'. A bold person may speak up by shouting, so 'shouting' names one thing boldness can look like, not what 'bold' means. No sense of 'bold' (brave, cheeky, bright, or thick print) means shouting. A child who picks that visible sign picks 'shouting'."
+       }
+      ],
+      "rebuilds": [],
+      "notes": [
+       "gen-vr-04-closest-meaning-15: rude (cheeky sense) and loud (colour sense) were second answers -> stubborn (wrong-shade) and shouting (one-feature-only), correct in no sense of bold. NOT done: adding rude/cheeky/loud/bright/vivid to VR04_FORBIDDEN_BY_HEADWORD.bold is a code change outside this door."
+      ]
+     },
+     "review": [
+      {
+       "ref": "seat:gen-vr-04-closest-meaning-15-opt3",
+       "verdict": "ATTEST",
+       "reason": "stubborn: correct in no sense of BOLD (brave/daring, cheeky/forward, bright/vivid, thick print); a genuine wrong shade (strong-willed read as won't-back-down); familiar word."
+      },
+      {
+       "ref": "seat:gen-vr-04-closest-meaning-15-opt4",
+       "verdict": "REFUSE",
+       "reason": "shouting clears the two-part screen but the vr04-one-feature-only story is fitted, not genuine: shouting is a sign of anger or noise, not of boldness (daring shows in what you dare to do, not in volume), so the tag does not name the mistake that produces this value. It is also the only verb form among three adjectives, so it reads as a throwaway. Needs a distractor that is a true single visible sign of boldness."
+      },
+      {
+       "itemId": "gen-vr-04-closest-meaning-15",
+       "verdict": "HOLD",
+       "reason": "After changes the options are daring (key), reckless, stubborn, shouting. The seat for shouting is REFUSED: its one-feature-only tag is a fitted story (shouting signals anger or noise, not boldness) and as the only verb form it reads as a throwaway. The rude/loud second-answer fault is fixed by the attested stubborn seat, but the row cannot be signed until opt4 is redrafted. Separately (outside this door): VR04_FORBIDDEN_BY_HEADWORD.bold still lacks rude, cheeky, loud, bright, vivid."
+      }
+     ]
+    },
+    {
+     "door": "sweep-fix/vr-r2",
+     "proposal": {
+      "seats": [],
+      "rebuilds": [
+       {
+        "itemId": "gen-vr-04-closest-meaning-15",
+        "why": "Sweep R1037 round 2 (vr-r2): carries round 1's attested seat rude -> stubborn (vr04-wrong-shade, verbatim from sweep-fix/vr) and replaces the refused shouting with calm (vr04-one-feature-only): an adjective, one genuine sign of a brave person (staying calm in danger), correct in no sense of bold.",
+        "stem": {
+         "words": [
+          "bold"
+         ],
+         "prompt": "Which word is closest in meaning to the word on the card?"
+        },
+        "options": [
+         {
+          "optionId": "gen-vr-04-closest-meaning-15-opt1",
+          "value": "daring",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+         },
+         {
+          "optionId": "gen-vr-04-closest-meaning-15-opt2",
+          "value": "reckless",
+          "isKey": false,
+          "tag": "vr04-wrong-strength",
+          "execution": "The key is 'daring'. 'reckless' pushes the same idea too far: so bold that you ignore danger completely. A child who reaches for the strongest bold word picks 'reckless' instead of 'daring'."
+         },
+         {
+          "optionId": "gen-vr-04-closest-meaning-15-opt3",
+          "value": "stubborn",
+          "isKey": false,
+          "tag": "vr04-wrong-shade",
+          "execution": "The key is 'daring'. 'stubborn' shares the area of a strong, firm character but tilts it towards refusing to change your mind. No sense of 'bold' (brave, cheeky, bright, or thick print) means stubborn. A child who hears only 'strong-willed' picks 'stubborn'."
+         },
+         {
+          "optionId": "gen-vr-04-closest-meaning-15-opt4",
+          "value": "calm",
+          "isKey": false,
+          "tag": "vr04-one-feature-only",
+          "execution": "The key is 'daring'. A bold person often stays calm when something is scary, so 'calm' names one sign of boldness, not what 'bold' means. No sense of 'bold' (brave, cheeky, bright, or thick print) means calm. A child who picks that one sign picks 'calm' instead of 'daring'."
+         }
+        ]
+       }
+      ],
+      "notes": [
+       "gen-vr-04-closest-meaning-15: rude/loud were second answers (cheeky and colour senses); round 1's shouting refused as a fitted story and the only verb -> stubborn (carried, wrong-shade) + calm (one-feature-only: staying calm in danger is one sign of boldness; not brave, cheeky, bright or thick). Options now daring, reckless, stubborn, calm, all adjectives."
+      ]
+     },
+     "review": [
+      {
+       "ref": "rebuild:gen-vr-04-closest-meaning-15",
+       "verdict": "REFUSE",
+       "reason": "The carried stubborn seat is verbatim round 1's attested text and correct. 'calm' is REFUSED. (1) It is on VR04_NEVER_ADD in packages/core/src/vr/vr04.ts, the vr-04 hard block of words that are a defensible second answer, 'never emitted as a vr-04 distractor'; checkVr04Row returns 'never-add' for it on any headword. The precheck passes only because land-proposals does not call checkVr04Row. A gate pass is not a reason to attest. (2) The block is right here. Bold sits in the courage family (VR04_SYNONYM_GROUPS courage: brave, bold, daring), and 'calm in the face of danger' is how a child is taught to describe a brave person. A child could defend 'calm' (unafraid, cool-headed) as nearer to bold than 'stubborn'. (3) The vr04-one-feature-only story is fitted, the same fault as the refused 'shouting'. Boldness shows in taking a risk, not in staying calm. A bold act is often excited or hasty, so calm is not a sign of boldness. Needs a word that is a true single visible sign of boldness, correct in no sense (brave, cheeky, bright/vivid, thick print), and not on VR04_NEVER_ADD or forbiddenFor('bold')."
+      },
+      {
+       "itemId": "gen-vr-04-closest-meaning-15",
+       "verdict": "HOLD",
+       "reason": "As it would stand: daring (key), reckless, stubborn, calm. opt4 'calm' is REFUSED: it is a vr-04 never-add hard block (VR04_NEVER_ADD), a defensible near-answer in bold's courage sense, and its one-feature-only tag is a fitted story. The rude/loud second-answer fault is fixed by the carried stubborn seat; only opt4 remains."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

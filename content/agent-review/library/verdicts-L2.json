@@ -1,0 +1,157 @@
+{
+ "reviewer": "rev-agent-01",
+ "group": "L2",
+ "note": "Redrafts of the four round-L entries not landed (three refused in transform-review-L, one held at write by R213). DB text and LIVE carriers read-only on 2026-11-22. Each from occurs exactly once in the current DB text. Every resulting text passed checkChildFacingText (role 'hint' and 'misconception-hint') and checkMisconceptionProposal with 0 findings. refuseApprovedTrim returns null on all four: no childHint gets shorter in words.",
+ "entries": [
+  {
+   "id": "maths-85-miscount-or-rounding-in-measures",
+   "verdict": "REFUSE",
+   "reason": "Read 10 LIVE carriers (one further carrier is REVIEWED, not LIVE, and was not read). Round L's childHint transform is kept unchanged; transform-review-L found it acceptable on all 10. Its description was refused because 'in a measures or money problem' is false on MC04-CALC-07 (badges). The new description drops the population clause and names the two shapes the carriers show. Eight carriers multiply by one group too few: MC02-MEAS-06 (2 notebooks for 3), MC02-MEAS-07 (3 apples for 4), MC02-RP-01 (4 x 80 g for 5 people, 320 g), MC03-CALC-07 (2 footballs for 3), MC03-MEAS-07 (6 pencils for 7), MC04-CALC-07 (3 packs for 4), MC04-MEAS-07 (2 notebooks for 3), MC05-MEAS-07 (2 pens for 3, 5.00 - 2.30 = 2.70). Two round and do not adjust back: MC03-MEAS-02 (75 - 30 = 45 cm, 28 rounded to 30) and MC03-MEAS-04 (23:50 taken as 00:00, plus 30 minutes = 00:30). This replaces the checker's suggested 'slipping by a step', which it noted does not cover the 2 cm slip on MC03-MEAS-02; the rounding reading also matches the entry's own id. Those two carriers have no recorded execution, so that reading is reconstructed from the arithmetic. The childHint is not tied to money: it asks the child to recount the groups or steps and use the exact number. It does not point to any key.",
+   "assertionClauses": [
+    {
+     "clause": "description: \"multiplying by one group too few\"",
+     "falseOn": [
+      "MC03-MEAS-02",
+      "MC03-MEAS-04"
+     ],
+     "coveredBy": "the second half, rounding without adjusting back"
+    },
+    {
+     "clause": "description: \"rounding a number and not adjusting back\"",
+     "falseOn": [
+      "the 8 group carriers"
+     ],
+     "coveredBy": "the first half"
+    },
+    {
+     "clause": "childHint: none (describes a move)",
+     "falseOn": []
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Use multiplication for repeated groups. Take the exact price and multiply by the exact count.",
+     "to": "Count the groups or steps again before you work it out. Use the exact number, not one more or one fewer."
+    },
+    {
+     "field": "description",
+     "from": "Adding the item count to the price or multiplying by one fewer item.",
+     "to": "A miscount or a rounding slip: multiplying by one group too few, or rounding a number and not adjusting back."
+    }
+   ],
+   "misfiledCarriers": [
+    {
+     "itemId": "MC03-MEAS-02",
+     "option": "45 cm",
+     "why": "Rounds 28 to 30 and does not compensate. That mistake has its own entry, maths-99-rounded-without-compensating, which may be the better tag. This is an item fault."
+    },
+    {
+     "itemId": "MC03-MEAS-04",
+     "option": "00:30",
+     "why": "Rounds 23:50 to 00:00 and does not take the 10 minutes back off. Same overlap with maths-99. This is an item fault."
+    }
+   ]
+  },
+  {
+   "id": "maths-79-dividing-by-a-fraction-error",
+   "verdict": "REFUSE",
+   "reason": "Read 4 LIVE carriers. The current hint says 'halves' and 'litre'. 'Halves' is false on MC01-FDP-08 (3/4 kg), MC04-FDP-05 (2/3 kg) and MC05-FDP-06 (2/3 litre). 'Litre' is false on MC01-FDP-08 and MC04-FDP-05. Round L's 'you can fill more of them than you have kilograms or litres' left only the key standing on 3 carriers. This takes the checker's alternative. Each bag or glass holds 1/2, 3/4, 2/3 or 2/3, so 'only part of one kilogram or litre' is true on all 4. The second sentence rules out only the carrying option, which equals the amount. It never says more, so it does not single out the key. Options left after the hint: MC01-FDP-04 leaves 4, 8 and 1 (rules out 2); MC01-FDP-08 leaves 20, 11.25 and 5 (rules out 15); MC04-FDP-05 leaves 18, 8 and 4 (rules out 12); MC05-FDP-06 leaves 9, 4 and 2 (rules out 6). Three options stay on every carrier. It is 25 words against the current 10, so R213 is not engaged.",
+   "assertionClauses": [
+    {
+     "clause": "childHint (current): \"halves\"",
+     "falseOn": [
+      "MC01-FDP-08",
+      "MC04-FDP-05",
+      "MC05-FDP-06"
+     ]
+    },
+    {
+     "clause": "childHint (current): \"litre\"",
+     "falseOn": [
+      "MC01-FDP-08",
+      "MC04-FDP-05"
+     ]
+    },
+    {
+     "clause": "childHint (new): \"Each bag or glass holds only part of one kilogram or litre\"",
+     "falseOn": []
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "How many halves can you pour into one whole litre?",
+     "to": "Each bag or glass holds only part of one kilogram or litre. So do not count one bag or glass for each kilogram or litre."
+    }
+   ],
+   "misfiledCarriers": [],
+   "outOfScopeNote": "Not changed here, because it was outside the brief. The description says 'treating a half as one whole', and 'a half' is false on the same 3 carriers. A later round could change 'a half' to 'each part'."
+  },
+  {
+   "id": "maths-47-translation-by-gap",
+   "verdict": "REFUSE",
+   "reason": "Read 3 LIVE carriers. Round L's description transform is kept unchanged; transform-review-L found it true on all 3. The childHint takes the checker's wording, which removes the ambiguous 'Start counting from the point itself'. On every carrier the carrying option is one short on each move: MC02-GEOM-04 gives 3 for 4 and 0 for 1, MC03-GEOM-02 gives 4 for 5 and 2 for 3, and MC05-GEOM-03 gives 5 for 6 and 3 for 4. 'Do not count the point you start on' names that exact miscount. 'Each jump to the next grid line counts as one square' gives the correct move. It points to a method, not to any key by elimination. It is 19 words against the current 18, so it is not a cut (R213).",
+   "assertionClauses": [
+    {
+     "clause": "childHint (current): \"first shape / new shape / corner\"",
+     "falseOn": [
+      "MC02-GEOM-04",
+      "MC03-GEOM-02",
+      "MC05-GEOM-03"
+     ]
+    },
+    {
+     "clause": "description (current): \"between two shapes\"",
+     "falseOn": [
+      "MC02-GEOM-04",
+      "MC03-GEOM-02",
+      "MC05-GEOM-03"
+     ]
+    },
+    {
+     "clause": "childHint (new): none (describes a move)",
+     "falseOn": []
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": "Pick one corner on the first shape. Count the squares to that same corner on the new shape.",
+     "to": "Do not count the point you start on. Each jump to the next grid line counts as one square."
+    },
+    {
+     "field": "description",
+     "from": "between two shapes instead of point-to-point",
+     "to": "in between instead of the jumps from point to point, so each move comes out one short"
+    }
+   ],
+   "misfiledCarriers": []
+  },
+  {
+   "id": "vr-move-letter-second-word-invalid",
+   "verdict": "REFUSE",
+   "reason": "Read 25 LIVE carriers with 26 carrying options; gen-vr-08-move-letter-15 carries both R and A. Thirteen more carriers are NEVER_SHIPPABLE and were not read. Round L's transform was attested but held at the write: the R213 guard counted 18 words before and 17 after. This transform has the same aim. It drops the say-aloud channel (R567) and describes the move, trying the letter in each spot of the second word. Counted the same way as the guard (whitespace tokens on the whole childHint), it is 18 words before and 19 after. The from segment is 11 tokens. The to segment is 13 tokens on its own, but its leading comma attaches to 'word', so it adds one word net. On every carrying option the letter leaves a real first word but fits no spot in the second word. transform-review-L checked this against the lexicon; the only edges were ALOW/LOWA and FOOED, which a child would not count as words. The hint names no key letter.",
+   "assertionClauses": [
+    {
+     "clause": "childHint (current): \"say it aloud... sound like\"",
+     "falseOn": [
+      "all 25 (channel, R567)"
+     ]
+    },
+    {
+     "clause": "childHint (new): none (describes a move)",
+     "falseOn": []
+    }
+   ],
+   "transforms": [
+    {
+     "field": "childHint",
+     "from": " and say it aloud. Does it sound like a real word?",
+     "to": ", trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "misfiledCarriers": []
+  }
+ ]
+}

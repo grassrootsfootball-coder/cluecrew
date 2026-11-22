@@ -1,0 +1,30 @@
+{
+ "door": "sweep-fix/english-r3",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-019-BV-07",
+  "ENG-019-BV-12",
+  "ENG-010-JE-12",
+  "ENG-011-CV-03"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-002-pp-09",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "rebuild:ENG-002-pp-09",
+     "verdict": "REFUSE",
+     "reason": "The two stock redrafts are carried verbatim from english-rewrite/stock (checked word for word) and the stock sentence is gone. But this round edits the 'friendly and kind' execution to fix one run-on line and leaves another in the same sentence. It says 'Line 32 finds him proud and above his company'. Line 32 ends 'to be above his', and 'company' is on line 33. That is the same fault as 'any other lady' running onto line 41, which this round fixed, and as BV-07's 'True at line 27'. Fix: 'Lines 32 and 33 find him proud and above his company'."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-002-pp-09",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "faultField": "execution",
+    "reason": "The original length and shape giveaway is fixed, the round-1 hint fault is fixed, and round 2's stock-sentence fault is fixed. The key, hint and walk are right. The key is the only answer under lines 26 to 30, and 'tallest' overstates line 27's 'tall'. Every option opens 'Because he' and runs 8 to 10 words. HOLD on one execution. On 'Because he was friendly and kind to everyone he met.' it says 'Line 32 finds him proud and above his company'. 'company' is on line 33, so it should read 'Lines 32 and 33'. This is the run-on fault this round fixed for lines 40 and 41 in the same sentence."
+   }
+  }
+ ]
+}

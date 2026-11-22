@@ -1,0 +1,93 @@
+{
+ "door": "sweep-fix/english-r2-B",
+ "reviewer": "rev-agent-01",
+ "precheck": "--precheck --from-live: 7 rows touched, 7 pass every gate, 0 fail. I ran it before the review and did not count a gate pass as a reason to attest.",
+ "changes": [
+  {
+   "ref": "rebuild:ENG-010-JE-01",
+   "verdict": "ATTEST",
+   "reason": "Carries round 1's attested hint 'Read the whole of line 2 before you choose.' The walk script was the only field held. The new walk drops the struck steer 'Read what she sits on' and ends on the key. Every claim checked: line 1 is up-hill, middle, sat down on; line 2 is a stile which led thence into a field. Options, tags and executions are unchanged."
+  },
+  {
+   "ref": "rebuild:ENG-010-JE-12",
+   "verdict": "ATTEST",
+   "reason": "Judged as a new question. The stem drops 'before describing something', so the key no longer echoes the stem. The key 'She tells us how the light lets her see something clearly.' is true in both windows. Line 51 has the daylight and the bright moon, then 'I could see him plainly' at lines 51 and 52. Line 71 has the moon's 'hoary gleam, bringing it out distinct and pale'. The new key makes no order claim, so round 1's line 70 objection (the house is named before the gleam) falls away. The walk is accurate to lines 51, 52 and 71 and ends on the key."
+  },
+  {
+   "ref": "rebuild:ENG-016-HB-07",
+   "verdict": "ATTEST",
+   "reason": "Carries round 1's attested key 'The bleak moor, with a dangerous man hiding on it.' The walk script is unchanged except for one closing sentence that states the key, which is exactly the field held. Lines 40, 42 to 43, 44 and 45 re-checked."
+  },
+  {
+   "ref": "rebuild:ENG-002-pp-06",
+   "verdict": "ATTEST",
+   "reason": "The key 'His two sisters, one husband and a young man.' is 45 characters and 9 words. The two-husbands distractor is lengthened to 'His two sisters and both of the sisters' husbands.' (50 characters), so the key is no longer the longest option; the longest is that distractor. That lengthening was needed: the next-longest distractor is 40 characters. Its meaning, tag and execution are unchanged and still true, since line 22 names only 'the husband of the eldest'. The key is correct to lines 21 to 23: five altogether, less Mr Bingley. The walk is true and ends on the key."
+  },
+  {
+   "ref": "rebuild:ENG-002-pp-09",
+   "verdict": "ATTEST",
+   "reason": "Carries round 1's attested options. The hint 'Use only what lines 26 to 30 tell you about him.' names a move and no longer shares 'heard' with the key. It leaves both the key and 'the tallest man' (line 27 'tall') standing. The walk is true: 'fine, tall person' at line 27, 'much handsomer than Mr Bingley' at line 30, 'ten thousand a year' at lines 28 and 29, Derbyshire at line 33. It ends on the key. This change introduces no new fault. The execution fault I hold the row for is carried over from the stored row."
+  },
+  {
+   "ref": "rebuild:ENG-025-LW-09",
+   "verdict": "ATTEST",
+   "reason": "Carries round 1's three attested seats. The hint 'Meg gives Amy steps to follow. Put them in the order she gives them.' names a move and points at no option. The walk now puts 'got good-natured' on lines 53 and 54, which is correct (the clause starts 'till Jo has' on line 53). It also puts the quiet minute at line 54 and friends again at line 55, and ends on the key."
+  },
+  {
+   "ref": "rebuild:ENG-017-CR-09",
+   "verdict": "ATTEST",
+   "reason": "Carries 'Several people come up in these lines.' and restores 'Work out who is advising whom.', exactly as round 1 directed. The walk gains only a closing sentence that states the key. 'I recommend it to your favourite' is at lines 39 and 40, and 'it' is Dr Johnson's style (line 38)."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-010-JE-01",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Lines 1 and 2: the stile is the only answer. The field (where it leads), the wall (not stated) and the lane (one word changed from line 2) are each wrong in the way their tags name. The hint sends the child to all of line 2, and every option is built from line 2, so it points at none. The walk states the key. All sentences are 16 words or fewer with proper endings."
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Judged as a new question. Key true in both windows (line 51 'I could see him plainly'; line 71 'distinct and pale'). The sunset is line 8, outside both windows. 'Describes each person in full first' fails at lines 70 to 72, which have no person, and fails at lines 26 to 56 (actions first). 'Never describes a person' fails at lines 52 to 56. There is no stem echo. The key is 11 words, against 12 to 13 for the distractors, so it is not a stand-out. Its opening 'She tells us' is shared with the sunset distractor. The unchanged hint ('Find the words that match up') names a move. The walk states the key. On techniqueKey 'the-light-is-reported-before-the-description': it is staff-facing and never served to a child, so it does not block this row. But it now names the order claim this round removed, so it is false about the item. It is read by composeMockPaper's technique-collision exclusion (techniqueKeyOf, packages/core/src/blueprints.ts) and listed by audit:technique-keys. JE-12 is its only carrier in the DB, so no paper is affected today. answerShape 'observation-bounded-by-conditions' fitted the old bounded key and no longer fits either. Both are Cowork-authored, so this repo should not rename them in place. Send them back with the export for Cowork to rename."
+  },
+  {
+   "itemId": "ENG-016-HB-07",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "The key is supported by the barren waste and desolate plain (lines 42, 45) and the 'fiendish man ... hiding in a burrow' (lines 42 to 43), which 'It needed but this to complete' (line 44) joins. The overcoat is line 46, an action rather than a cause. The cairns are line 41, the look of the moor. The wish to go home is never given. The key does not repeat 'chilled'. Openings are split two 'The', two 'He', and lengths are 8 to 10 words. The hint 'Cold air is not the only thing out there.' leaves both the cairns and the key standing. The walk states the key."
+  },
+  {
+   "itemId": "ENG-002-pp-06",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "Only the key matches lines 21 to 23. 'Two sisters and both husbands' and 'Mr Hurst and Mr Bennet' also make five with Mr Bingley, so only line 22 rules them out, which is the reading the item tests. Twelve and seven is lines 17 to 18; five sisters and a cousin is line 20. The key is no longer the longest option (45 characters against a longest of 50). Three options open 'His two sisters', so the key's opening does not stand out. The hint names the sentence, not an option. The walk states the key."
+  },
+  {
+   "itemId": "ENG-002-pp-09",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "faultField": "execution",
+   "reason": "The original length and two-part fault is fixed, round 1's hint fault is fixed, and the key, hint and walk are right. HOLD on two carried executions. 'Because he danced with lots of different ladies.' and 'Because he owned a large estate in Derbyshire.' both still end on the stock sentence: \"In the window, line 27 answers the stem: 'drew the attention of the room by his fine'.\" That is not exactly true. The fragment stops at 'his fine' before anything that draws attention. Line 27 gives only the looks, and the key also needs the report of 'ten thousand a year' at lines 28 and 29. The english-rewrite/stock round already attested corrected wording for both options; it never landed because that row was held on another execution, which is now fixed. Carry those two redrafts."
+  },
+  {
+   "itemId": "ENG-025-LW-09",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "All four options complete 'wait for'. The key matches lines 53 and 54: till Jo has got good-natured with Laurie, then a quiet minute. 'Next time' is line 49, outside the window, and Meg sends Amy now. Friends again is line 55, the result of Amy's kiss rather than the wait. Laurie going home is never given. The options mix forms (two 'X to', one 'The next time', one noun phrase) at 7 to 9 words. The hint names a move and points at no option. The walk's line numbers are right and it states the key."
+  },
+  {
+   "itemId": "ENG-017-CR-09",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "faultField": null,
+   "reason": "The hint is now true and in standard English. The key matches lines 38 to 40. The father-to-her reversal is line 38. Forming a style is what she did (line 39), not what she advises. Numbers is line 35, outside the window. All four options open 'That' at 8 to 9 words. The walk states the key."
+  }
+ ]
+}

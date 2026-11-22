@@ -1,0 +1,253 @@
+{
+ "door": "sweep-fix/english-r3",
+ "proposer": "agent",
+ "ruling": "R1037",
+ "round": 3,
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-011-CV-03",
+   "why": "Round 3 (R1037). Carries every attested change: round 1's seat ('The squirrels and the rabbits both run away.'), and round 2's hint and walk (walk ends on the key). Held in round 2 because 'The rabbits run out into the road ahead of them.' never named the squirrels, so the stem alone ruled it out. Replaced by 'The squirrels chatter and the rabbits nibble the grass.', which names both animals, takes the key's form, and is false against lines 5 to 7.",
+   "stem": {
+    "text": "Read lines 5 to 7. What do the squirrels and the rabbits do?",
+    "quotes": [],
+    "passageRef": "stream-a-07-canterville-ghost",
+    "orderAnchor": 3
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4w200iatmbvz9in5dg2",
+     "value": "The rabbits look and the squirrels dash off.",
+     "isKey": false,
+     "tag": "en-agent-patient-reversal",
+     "execution": "Swaps which animal does which. Lines 5 to 7 have the squirrels peer at them from the beech-trees and the rabbits scud away through the brushwood. This option gives the looking to the rabbits and the running to the squirrels."
+    },
+    {
+     "optionId": "cmsw2f4w200ibtmbviagb1fik",
+     "value": "The squirrels and the rabbits both run away.",
+     "isKey": false,
+     "tag": "en-minimal-pair-skim",
+     "execution": "Only the rabbits run: lines 6 and 7 send them scudding away through the brushwood. Line 6 has the squirrels peer at the family from the beech-trees. The option changes one detail, giving the squirrels the rabbits' running, and matches the lines on gist."
+    },
+    {
+     "optionId": "cmsw2f4w200ictmbvjcudzfcq",
+     "value": "The squirrels peer and the rabbits run away.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4w200idtmbvfcyz0xkn",
+     "value": "The squirrels chatter and the rabbits nibble the grass.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Neither action is in lines 5 to 7. Line 6 has the squirrels peer at the family from the beech-trees, and lines 6 and 7 have the rabbits scud away through the brushwood. Chattering squirrels and nibbling rabbits sound likely in a wood, so the option sounds sensible without any line to prove it."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find each animal in lines 5 to 7. Read what the lines say it does.",
+    "_previousHintCore": "Two animals, two actions. Match them up.",
+    "walkScript": "Read line 5 to the end of line 7. On line 6, the squirrels peer at the family from the trees. Then the rabbits run away, with their white tails in the air. So the squirrels peer and the rabbits run away.",
+    "_previousWalkScript": "Read line 5 to the end of line 7. Two animals are named after the pheasant. One looks, the other runs. Check which does which before you answer."
+   }
+  },
+  {
+   "itemId": "ENG-002-pp-09",
+   "why": "Round 3 (R1037). Carries r2-B's attested rebuild (round 1's option set, hint 'Use only what lines 26 to 30 tell you about him.', walk ending on the key). Held in round 2 on two executions ending on the stock sentence \"In the window, line 27 answers the stem: ...\", which is not exactly true: the key also needs lines 28 to 29. Both now carry the corrected executions attested in english-rewrite/stock. One line reference in a carried execution also made exact: 'any other lady' runs over lines 40 and 41.",
+   "stem": {
+    "text": "When Mr Darcy first walked in, the room thought very well of him. Read lines 26 to 30. Why?",
+    "passageRef": "stream-a-13-pride-prejudice",
+    "orderAnchor": 9
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4ts004ptmbvsq6f4lim",
+     "value": "Because he danced with lots of different ladies.",
+     "isKey": false,
+     "tag": "en-attribute-transfer",
+     "execution": "Dancing every dance is Mr Bingley at line 37, carried across to Mr Darcy, who dances only twice at lines 39 and 40. Lines 27 to 29 give why the room admired Mr Darcy: his fine, tall person and handsome features, and the report of his ten thousand a year."
+    },
+    {
+     "optionId": "cmsw2f4ts004qtmbva58f6ihg",
+     "value": "Because he was friendly and kind to everyone he met.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "Friendliness and kindness are nowhere in lines 26 to 30. Line 32 finds him proud and above his company, and lines 40 and 41 have him decline being introduced to any other lady."
+    },
+    {
+     "optionId": "cmsw2f4ts004rtmbvl3pxfsdc",
+     "value": "Because he was the tallest man in the room.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "'The tallest man in the room' is the absolute version of line 27's 'fine, tall person'."
+    },
+    {
+     "optionId": "cmsw2f4ts004stmbv1wr7n84t",
+     "value": "Because he was handsome and people heard he was rich.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4ts004ttmbvfoia9jy3",
+     "value": "Because he owned a large estate in Derbyshire.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The Derbyshire estate is at line 33, outside lines 26 to 30, and it is named only after the room has turned against him. Within the window, lines 27 to 29 give his looks and the report of his ten thousand a year."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Use only what lines 26 to 30 tell you about him.",
+    "_previousHintCore": "What had everybody heard about him within five minutes?",
+    "walkScript": "Start at line 27, with 'his fine, tall person'. Line 30 says the ladies found him much handsomer than Mr Bingley. Lines 28 and 29 add the report of 'ten thousand a year'. The estate in Derbyshire comes later, at line 33. So the room liked him because he was handsome and people heard he was rich.",
+    "_previousWalkScript": "Start at line 27, with 'his fine, tall person'. Line 29 adds 'ten thousand a year'. So his looks and his money won the room. The estate is named later."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-12",
+   "why": "Round 3 (R1037). Carries r2-C's content (stem, the three new distractors and their executions, hint, walk). Held in round 2 because the key alone was joined by 'but' and alone said 'the rules'. All four options now share one form: a source clause, then ', and states them' and a manner. The key reads 'He makes them up himself, and states them as plain facts.'; the first distractor becomes 'He makes them up with Mark, and states them as gentle requests.' (same content, one subject, so it takes the same form). The walk ends on the new key wording.",
+   "stem": {
+    "text": "Think about the whole passage. Where do Bevis's rules for the game come from, and how does he state them?",
+    "quotes": [],
+    "passageRef": "stream-a-20-bevis",
+    "answerShape": "two-halved-contrast-of-who-made-them-against-how-they-are-stated",
+    "orderAnchor": 9999,
+    "techniqueKey": "rules-of-an-invented-game-asserted-as-facts-about-the-world"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yf00w8tmbvip3s8s6s",
+     "value": "He makes them up with Mark, and states them as gentle requests.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "The passage says the opposite. Mark argues against the rules at lines 12 and 13 and at line 18, and Bevis answers 'Impossible' at line 14. At lines 87 and 88 he says 'People must do as the captain tells them', which is no gentle request."
+    },
+    {
+     "optionId": "cmsw2f4yf00w9tmbvn2ia68aj",
+     "value": "He learns them from his father, and states them as his father's words.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No line says where Bevis learned his rules, and no father is named anywhere in the passage. Every rule, at lines 14 to 17, 87 and 88, and 90, is spoken by Bevis without naming anyone else. The child supplies a source that sounds likely for a boy."
+    },
+    {
+     "optionId": "cmsw2f4yf00watmbvzdnudgdk",
+     "value": "He makes them up himself, and states them as plain facts.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yf00wbtmbvuof2q0v4",
+     "value": "He asks Mark to choose them, and states them in a whisper.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Bevis whispers only at line 1, and that is a request for his fishing-rod, not a rule of the game. He never asks Mark to choose a rule: at line 14 he answers Mark with 'Impossible'. The child takes the whisper from the wrong part of the passage."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Find each rule of the game in the passage. Look at who says it and the words used.",
+    "walkScript": "At lines 14 and 15 he says 'the captain who always does everything'. At lines 87 and 88 he says 'People must do as the captain tells them'. At line 90 he says 'you ought to be put on half-rations'. Mark sets none of them, and argues back at line 18. So he makes them up himself, and states them as plain facts.",
+    "_previousHintCore": "One of these says the writer told you what to think.",
+    "_previousWalkScript": "At lines 14 and 15 he says 'the captain who always does everything'. At lines 87 and 88 he says 'People must do as the captain tells them'. At line 90 he says 'you ought to be put on half-rations'. Each rule comes from Bevis, and he says each one as plain fact."
+   }
+  },
+  {
+   "itemId": "ENG-019-BV-07",
+   "why": "Round 3 (R1037). Carries r2-C's attested rebuild (walk line fix, walk states the key, substitution hint). Held in round 2 on the execution of 'Suddenly steep, and cut through by the water.', which said 'True at line 27'; 'through by the water' is on line 28, so it now says 'True at lines 27 and 28'.",
+   "stem": {
+    "text": "Look at lines 26 and 27. What does \"shelving\" on line 27 mean here?",
+    "quotes": [
+     "shelving"
+    ],
+    "passageRef": "stream-a-20-bevis",
+    "orderAnchor": 26
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4yb00vjtmbvt4il11jf",
+     "value": "Fitted with shelves for standing things on.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The sense a child meets first, and it is a noun they know."
+    },
+    {
+     "optionId": "cmsw2f4yb00vktmbv7uf8gfz9",
+     "value": "Put aside to be dealt with later.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "The other everyday sense of the verb, and nothing here is put aside."
+    },
+    {
+     "optionId": "cmsw2f4yb00vltmbvl2uu1m5b",
+     "value": "Low and sloping gently down to the water.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4yb00vmtmbvacnnb1z8",
+     "value": "Suddenly steep, and cut through by the water.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at lines 27 and 28, and it is what the strand becomes rather than what it was."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Try each answer in place of shelving on line 27. Read the sentence again each time.",
+    "walkScript": "Lines 26 and 27 say the strand was till then so low and shelving. Line 27 says it suddenly became steep. So shelving here means low and sloping gently down to the water.",
+    "_previousHintCore": "Nothing in these lines is a cupboard.",
+    "_previousWalkScript": "Line 26 says the strand was till then so low and shelving. Line 27 says it suddenly became steep. The word has to name what steep is the opposite of."
+   }
+  },
+  {
+   "itemId": "ENG-010-JE-12",
+   "why": "R1034: the DB owns staff-facing stem metadata. techniqueKey 'the-light-is-reported-before-the-description' and answerShape 'observation-bounded-by-conditions' described the old key (an order claim and a bounded observation). Round 2's live key is 'She tells us how the light lets her see something clearly.', so techniqueKey is now 'the-light-is-named-as-what-lets-her-see-clearly' and answerShape 'light-given-as-the-cause-of-a-clear-sight'. Nothing else changes: options, executions, hint, walk and lineRefs are the live values.",
+   "stem": {
+    "text": "Look at lines 51 to 56 and lines 70 to 72. Jane does the same thing in both places. What is it?",
+    "quotes": [],
+    "passageRef": "stream-a-11-jane-eyre",
+    "answerShape": "light-given-as-the-cause-of-a-clear-sight",
+    "orderAnchor": 9999,
+    "techniqueKey": "the-light-is-named-as-what-lets-her-see-clearly"
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vz00hwtmbvxmvvrbp4",
+     "value": "She tells us the sun sank down crimson and clear behind the trees.",
+     "isKey": false,
+     "tag": "en-inference-literal-lookalike",
+     "execution": "Reuses line 8, and one sunset is not a thing she does each time."
+    },
+    {
+     "optionId": "cmsw2f4vz00hxtmbvtwwwf8bn",
+     "value": "She describes each person in full first, but gives their actions later.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "The traveller rides past at line 26 and falls at line 28, but is not described until lines 51 to 56."
+    },
+    {
+     "optionId": "cmsw2f4w000hytmbvzreaacp9",
+     "value": "She never describes a person, but only the weather and the sky.",
+     "isKey": false,
+     "tag": "en-extreme-option-pull",
+     "execution": "Lines 52 to 56 describe the traveller closely, from his cloak to his age."
+    },
+    {
+     "optionId": "cmsw2f4w000hztmbvdsoy6cjn",
+     "value": "She tells us how the light lets her see something clearly.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "ENG-011-CV-03: 'The rabbits run out into the road ahead of them.' never named the squirrels, so the stem ruled it out -> 'The squirrels chatter and the rabbits nibble the grass.' (en-plausible-not-stated), false against lines 5 to 7; round 1's both-run-away seat and round 2's hint and walk carried.",
+  "ENG-002-pp-09: two executions ended on the stock 'line 27 answers the stem' sentence, which leaves out lines 28 to 29 -> carried the english-rewrite/stock attested redrafts for 'danced' and 'Derbyshire'; r2-B's options, hint and walk carried; 'line 40' made 'lines 40 and 41' in the 'friendly and kind' execution (the quoted 'any other lady' runs onto line 41).",
+  "ENG-019-BV-12: key alone used 'but' and 'the rules' -> key 'He makes them up himself, and states them as plain facts.'; all four now read '<source>, and states them <manner>' (first distractor now 'He makes them up with Mark, and states them as gentle requests.'); r2-C's stem, distractors, executions and hint carried; walk ends on the new key wording.",
+  "ENG-019-BV-07: execution on 'Suddenly steep, and cut through by the water.' said 'True at line 27' -> 'True at lines 27 and 28'; r2-C's hint and walk carried. Not changed: the round-2 reviewer also noted the option reaches past the stem's window (lines 26 and 27); the brief named only the line fix.",
+  "ENG-010-JE-12: techniqueKey and answerShape described the old key -> techniqueKey 'the-light-is-named-as-what-lets-her-see-clearly', answerShape 'light-given-as-the-cause-of-a-clear-sight' (kebab-case device names as in audit:technique-keys; no near-duplicate in its registry). Nothing else changed."
+ ]
+}
