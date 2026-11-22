@@ -1,0 +1,37 @@
+{
+ "door": "english-rewrite/calibration/r2",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "rebuild:ENG-028-PR-03",
+   "verdict": "ATTEST",
+   "reason": "Only the hint changes. The stem, options and walk script match round 1 word for word, and I attested those then. I re-checked them against lines 9 to 12 and 26 to 28. The new hint is 'Read his reply on line 10 slowly. What do his words do to Mum's message?' It has 7 and 9 words and ends on '.' and '?'. It is true: line 10 is Grandad's spoken reply to line 9, and line 11 is his hands and the door, not a reply. It offers no yes/no choice whose halves are options. It names no attitude and reuses no wording from the key ('puts it aside', 'sayings') or from A ('agrees'). It sends the child to the right words and leaves the inference to them. Clearing hintAuthoredBy and hintAuthority is needed: the hint is no longer the authored text."
+  },
+  {
+   "ref": "seat:cmsw2f4v500cztmbvgx5mwntn",
+   "verdict": "ATTEST",
+   "reason": "Carried unchanged from round 1. I re-read lines 1 to 49 and found no weather anywhere. The scene is the cupboard, the corridor and the noticeboard. The stem does not rule it out, since weather would show a feeling, not tell it. The execution's line numbers are right: the jumper is put low and pushed flat at 33 to 34, and the paper is put back unopened at 35 to 36. en-plausible-not-stated fits: it is a stock technique the passage never uses."
+  },
+  {
+   "ref": "seat:cmsw2f4v500d0tmbvzy5u8zfn",
+   "verdict": "ATTEST",
+   "reason": "'By comparing him to something else, like a dried leaf.' Line 21 reads 'Reuben held up a swimming hat that had perished into something like a dried leaf'. So the leaf is the HAT's. I read every line, 1 to 49, for a comparison made of Reuben himself and found none. The other likenesses are the names gone 'the colour of weak tea' (line 12) and Miss Bhatt folding it 'the way he had folded it' (lines 48 to 49). That second one compares her action to his, not him to a thing. The stem does not rule this option out, because a comparison shows a feeling rather than telling it. en-attribute-transfer names the mistake: the hat's detail is moved to the boy. The execution is true at lines 21, 33 to 34 and 35 to 36. It also gives this distractor a passage example of its own, so the key no longer stands alone with 'like ...' examples."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-028-PR-03",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "reason": "The original hold is fixed (option A, walk script). A 'He agrees to leave the grass alone.' is wrong: line 10 brushes the message aside, and lines 26 to 28 ('Mower out', 'I do, love') state the opposite. The walk script now reaches the key and is true of lines 9 and 10. Round 1's hintCore hold is fixed too. The new hint coaches nothing (see the change note). Only the key answers what he does with her words. B is true at line 11 but is about the bolt and door, not her words, which en-within-span-wrong-element names. D is stated nowhere: lines 31 to 32 mention wheels, never time. No option is ruled out by the stem alone. The lengths are close, nothing echoes the stem, and every sentence is 16 words or fewer in British English. The precheck passes.",
+   "faultField": null
+  },
+  {
+   "itemId": "ENG-007-LP-12",
+   "verdict": "HOLD",
+   "holdFixed": false,
+   "reason": "Both seats are good, and the near-twin and the concrete-example cue are gone. But the original calibration reason named TWO options as ruled out by the stem: card A and card B. Only B, 'The writer tells us he is sad', was replaced. Card A is unchanged: 'He describes only the old clothes, and so we get nothing else.' The stem says the writer DOES let us know ('How does the writer let us know anyway?'). This option says we get nothing, so it is ruled out without the technique skill. It is also now the only option that is not a 'By ...' answer to 'How', so it stands out by its form. Its 'He' is unclear too: it could be the writer or Reuben. This option must be replaced with a method a child might pick that only the passage rules out. The rest of the row is sound: the key is the only defensible answer, the hint does not coach, the walk script fits lines 33 to 36, and the precheck passes.",
+   "faultField": "options"
+  }
+ ]
+}

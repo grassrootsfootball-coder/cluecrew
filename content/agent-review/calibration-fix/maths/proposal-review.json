@@ -1,0 +1,30 @@
+{
+ "door": "calibration-fix/maths",
+ "reviewer": "rev-agent-01",
+ "precheck": "--door=calibration-fix/maths --precheck --from-live: 2 rows touched, 2 pass every gate, 0 fail. Gate pass taken as necessary, not as grounds to attest.",
+ "changes": [
+  {
+   "ref": "seat:cmteo82lw00fftmmjdv96280j",
+   "verdict": "REFUSE",
+   "reason": "The tag does not produce 51 on this question. maths-114's described mistake (652 for the 6 in 4,652) keeps the digits from the named digit to the end IN THEIR COLUMNS; in 6.351 that gives 0.051, not 51. Reaching 51 also needs the digits read as a whole number, ignoring the decimal point, which is a second slip (face value, maths-62's territory, already on the row as '5'). The execution's story is fitted to the value, not produced by the tag. The hint ('Keep that digit in its column and change all the other digits to zeros') fits a value-of-a-digit question, but the value/tag pairing is wrong."
+  },
+  {
+   "ref": "seat:cmteo829j007ztmmjauekyay6",
+   "verdict": "ATTEST",
+   "reason": "Recomputed: 483 - 176 = 307. Without exchanging, ones 3 < 6 written as 0, tens 8 - 7 = 1, hundreds 4 - 1 = 3, giving 310; this is exactly maths-12's described mistake ('leaving the column as a zero'). The hint ('If the top column does not have enough, you need to exchange from the next one') is true of this bare column subtraction. 310 is wrong, distinct from 307/313/407, not a marker-acceptable near-answer. Execution's numbers all correct."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "MC04-NPV-05",
+   "verdict": "HOLD",
+   "reason": "The proposed seat is refused (51 is not what maths-114 produces; that tag gives 0.051), so the maths-07 option '50' and its ill-fitting 'compare' hint remain. Separately, the calibration's second finding is unresolved by the proposer's own note: option '0.5' carries maths-61, whose hint lists only whole-number columns ('Ones, tens, hundreds, thousands') for a tenths-versus-hundredths slip. Key 0.05 is correct (the 5 is in the hundredths) and the only correct option, but two tag hints still do not fit the question."
+  },
+  {
+   "itemId": "MC03-CALC-02",
+   "verdict": "SIGN",
+   "reason": "Read as it will stand: 307 (key), 313, 407, 310. Key 483 - 176 = 307 correct and the only correct option. 313 = smaller-from-larger per column (3, 1, 3), maths-11 hint fits; 407 = 483 - 76, maths-98 hint fits column work; 310 = no exchange, maths-12 hint fits. Key rank unchanged (smallest before and after); 310 sits between 307 and 313, so the new value does not isolate the key on one side. Executions all at least 40 characters and arithmetic correct; vocabulary suitable."
+  }
+ ],
+ "counts": { "changes": 2, "attested": 1, "refused": 1, "rows": 2, "signed": 1, "held": 1 }
+}

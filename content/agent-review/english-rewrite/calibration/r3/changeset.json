@@ -1,0 +1,63 @@
+{
+ "door": "english-rewrite/calibration/r3",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-007-LP-12",
+   "passageRef": "stream-b-04",
+   "hold": {
+    "reason": "not a held row: english-rewrite/calibration/r3",
+    "faultField": "execution"
+   },
+   "reviewerNote": "I read the row as the child meets it, with all four options as they will stand: weather (52 characters), dried leaf (54), face and tears (63), and the key, 'By showing what he does with things, like the jumper and the paper.' (67). All earlier hold reasons are fixed. (1) The calibration near-twin, Reuben against Ilya, is gone: no distractor shares the key's frame. (2) The two options the stem ruled out on its own are both replaced: the 'tells us he is sad' option and the 'nothing else' option. (3) Round 1's 'only the key has concrete examples' cue is gone: the leaf and tears options carry 'like ...' examples too. (4) Round 2's form cue is gone: all four options now begin 'By ...'. No option can be ruled out by the stem alone. The key is the only answer that survives every reading: the jumper is pushed flat at lines 33 to 34 and the paper put back unopened at lines 35 to 36. The passage has no weather, compares no thing to Reuben, and describes no face or tears. Nothing singles out the key. Its length is in line with the others. Its verb is 'showing', where the others use 'describing', 'comparing' and 'describing'. The only shared frame is between two distractors, which points away from the key. The weather and face options share en-plausible-not-stated. I find this acceptable, not a fault. The tag truly names the mistake behind each: a stock technique picked for sounding right, with no line to prove it. The two options test different techniques (setting and the body), so they are not a near-identical pair. The hint served for either, 'Sounding sensible is not enough. Find the line that proves it.', is correct for both. Forcing a different tag would be a story fitted to the row, which the procedure forbids. The drafter's reasons for rejecting the other routes hold. A 'wrong-element' option would pair with the key. A cue from the laugh at line 26 or the look at line 48 would be half supported by the text. The cost is diagnostic, not correctness: the row tests one mistake twice. The diversity cap applies to a generated bank, not to one hand-built row. The hint and walk script are unchanged and were sound in round 2. The hint does not coach. The walk script matches lines 33 to 36. 'Hides the jumper low down' fairly reads line 33's 'low down, underneath the swimming things'. All wording is plain British English for a 9 to 11-year-old. Precheck --from-live: 1 row touched, 1 passes every gate, 0 fail.",
+   "landedAt": "2026-11-22T16:10:54.976Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4v500cztmbvgx5mwntn).value",
+     "before": "The writer tells us he is sad, and then shows us only the reasons for it.",
+     "after": "By describing the weather outside to match his mood."
+    },
+    {
+     "field": "option A (cmsw2f4v500cztmbvgx5mwntn).tag",
+     "before": "en-whole-text-absence-asserted",
+     "after": "en-plausible-not-stated"
+    },
+    {
+     "field": "option A (cmsw2f4v500cztmbvgx5mwntn).execution",
+     "before": "Reads past the absence; the passage never states a feeling anywhere.",
+     "after": "No weather is described anywhere in lines 1 to 45; the scene is indoors, in the lost-property cupboard. Reuben's feeling is carried by what he handles: the jumper pushed flat at lines 33 and 34, the paper put back unopened at lines 35 and 36."
+    },
+    {
+     "field": "option B (cmsw2f4v500d0tmbvzy5u8zfn).value",
+     "before": "By showing what Ilya does with things, like the sock he finds.",
+     "after": "By comparing him to something else, like a dried leaf."
+    },
+    {
+     "field": "option B (cmsw2f4v500d0tmbvzy5u8zfn).tag",
+     "before": "en-minimal-pair-skim",
+     "after": "en-attribute-transfer"
+    },
+    {
+     "field": "option B (cmsw2f4v500d0tmbvzy5u8zfn).execution",
+     "before": "Keeps the key's frame and changes one detail, Reuben to Ilya. Ilya finding a Manchester United sock and becoming busy with it at line 28 tells us nothing of what Reuben feels; the child matches on gist and misses who is doing the handling.",
+     "after": "The dried leaf belongs to the swimming hat, not to Reuben: at line 21 he holds up a hat that 'had perished into something like a dried leaf'. No line likens Reuben himself to anything. The child moves the comparison from the hat to the boy holding it. His feeling is carried by what he does with the jumper (lines 33 and 34) and the paper (lines 35 and 36)."
+    },
+    {
+     "field": "option C (cmsw2f4v500d1tmbvh5lshs9v).value",
+     "before": "He describes only the old clothes, and so we get nothing else.",
+     "after": "By describing his face, like the tears that come into his eyes."
+    },
+    {
+     "field": "option C (cmsw2f4v500d1tmbvh5lshs9v).tag",
+     "before": "en-contradicted-by-the-text",
+     "after": "en-plausible-not-stated"
+    },
+    {
+     "field": "option C (cmsw2f4v500d1tmbvh5lshs9v).execution",
+     "before": "The passage describes much more than old clothes: Ilya's talk, Miss Bhatt, the football sheet at lines 37 to 39 and the folded paper at lines 35 and 36. The child claims the telling gives clothes and nothing else, which the passage contradicts, and so misses that Reuben's feeling is carried by what he handles.",
+     "after": "No line describes Reuben's face or eyes, and nobody cries anywhere in lines 1 to 49. At line 48 Miss Bhatt looks at him, but we are not told what she sees. His feeling is carried by what he does with the jumper (lines 33 and 34) and the paper (lines 35 and 36)."
+    }
+   ]
+  }
+ ]
+}

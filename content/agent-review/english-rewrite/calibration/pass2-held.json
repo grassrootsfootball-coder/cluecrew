@@ -1,0 +1,41 @@
+{
+ "door": "english-rewrite/calibration",
+ "mode": "APPLIED",
+ "landed": [
+  "ENG-001-WIW-20",
+  "ENG-021-ED-11",
+  "ENG-017-CR-01"
+ ],
+ "held": [
+  {
+   "itemId": "ENG-007-LP-12",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmsw2f4v500d0tmbvzy5u8zfn",
+     "verdict": "REFUSE",
+     "reason": "'By letting Ilya say out loud how Reuben must feel.' A character saying aloud how Reuben feels would be telling us his feeling, and the stem already says 'We are never told what Reuben is feeling'. So the stem rules this option out, which is the second half of the calibration finding again: an option disposed of by the stem, not by the technique skill. en-plausible-not-stated also does not name the mistake that produces it; the passage never stating it is not why a child would reject it."
+    }
+   ],
+   "row": {
+    "itemId": "ENG-007-LP-12",
+    "verdict": "HOLD",
+    "holdFixed": false,
+    "reason": "The near-twin giveaway is gone, but the stem-elimination half of the calibration finding is not fixed. The new option 'By letting Ilya say out loud how Reuben must feel.' is ruled out by the stem's own 'We are never told what Reuben is feeling', so it tests nothing. The key is also now the only option giving concrete passage examples ('like the jumper and the paper'), a surface cue. A replacement must be ruled out by reading the passage, not by the stem.",
+    "faultField": "options"
+   }
+  },
+  {
+   "itemId": "ENG-028-PR-03",
+   "gateFaults": [],
+   "unattested": [],
+   "row": {
+    "itemId": "ENG-028-PR-03",
+    "verdict": "HOLD",
+    "holdFixed": true,
+    "reason": "The original faults are fixed: one defensible answer and a walk script that reaches the key. The unchanged hintCore 'He does say something back. Does he take it seriously?' now coaches (R572). Its yes/no question is a choice whose 'no' half is the key paraphrased ('puts it aside' means not taking it seriously). Its 'yes' half is exactly the new option A ('agrees'). So the hint reduces the row to A or C and hands the child the inference the item tests. It needs a hint that sends the child to line 10's wording without naming Grandad's attitude.",
+    "faultField": "hintCore"
+   }
+  }
+ ]
+}

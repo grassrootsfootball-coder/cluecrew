@@ -1,0 +1,25 @@
+{
+ "door": "calibration-fix/maths",
+ "mode": "APPLIED",
+ "landed": [
+  "MC03-CALC-02"
+ ],
+ "held": [
+  {
+   "itemId": "MC04-NPV-05",
+   "gateFaults": [],
+   "unattested": [
+    {
+     "ref": "seat:cmteo82lw00fftmmjdv96280j",
+     "verdict": "REFUSE",
+     "reason": "The tag does not produce 51 on this question. maths-114's described mistake (652 for the 6 in 4,652) keeps the digits from the named digit to the end IN THEIR COLUMNS; in 6.351 that gives 0.051, not 51. Reaching 51 also needs the digits read as a whole number, ignoring the decimal point, which is a second slip (face value, maths-62's territory, already on the row as '5'). The execution's story is fitted to the value, not produced by the tag. The hint ('Keep that digit in its column and change all the other digits to zeros') fits a value-of-a-digit question, but the value/tag pairing is wrong."
+    }
+   ],
+   "row": {
+    "itemId": "MC04-NPV-05",
+    "verdict": "HOLD",
+    "reason": "The proposed seat is refused (51 is not what maths-114 produces; that tag gives 0.051), so the maths-07 option '50' and its ill-fitting 'compare' hint remain. Separately, the calibration's second finding is unresolved by the proposer's own note: option '0.5' carries maths-61, whose hint lists only whole-number columns ('Ones, tens, hundreds, thousands') for a tenths-versus-hundredths slip. Key 0.05 is correct (the 5 is in the hundredths) and the only correct option, but two tag hints still do not fit the question."
+   }
+  }
+ ]
+}

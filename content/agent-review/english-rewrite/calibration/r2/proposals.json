@@ -1,0 +1,76 @@
+{
+ "door": "english-rewrite/calibration/r2",
+ "proposer": "agent",
+ "seats": [
+  {
+   "optionId": "cmsw2f4v500cztmbvgx5mwntn",
+   "itemId": "ENG-007-LP-12",
+   "oldValue": "The writer tells us he is sad, and then shows us only the reasons for it.",
+   "tag": "en-plausible-not-stated",
+   "newValue": "By describing the weather outside to match his mood.",
+   "execution": "No weather is described anywhere in lines 1 to 45; the scene is indoors, in the lost-property cupboard. Reuben's feeling is carried by what he handles: the jumper pushed flat at lines 33 and 34, the paper put back unopened at lines 35 and 36."
+  },
+  {
+   "optionId": "cmsw2f4v500d0tmbvzy5u8zfn",
+   "itemId": "ENG-007-LP-12",
+   "oldValue": "By showing what Ilya does with things, like the sock he finds.",
+   "tag": "en-attribute-transfer",
+   "newValue": "By comparing him to something else, like a dried leaf.",
+   "execution": "The dried leaf belongs to the swimming hat, not to Reuben: at line 21 he holds up a hat that 'had perished into something like a dried leaf'. No line likens Reuben himself to anything. The child moves the comparison from the hat to the boy holding it. His feeling is carried by what he does with the jumper (lines 33 and 34) and the paper (lines 35 and 36)."
+  }
+ ],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-028-PR-03",
+   "why": "Round 2 of a calibration REFUSE then HOLD. Round 1's rebuild is kept unchanged: option A ('He agrees to leave the grass alone.') is contradicted by line 10, and the walk script reaches the key. Round 1 HELD the row on hintCore: 'He does say something back. Does he take it seriously?' offered a yes/no choice whose halves were option A and the key. The new hint sends the child to Grandad's reply on line 10 and asks what his words do to Mum's message. It offers no choice, names no attitude, and uses no option's wording. The hint Annie authored is replaced, so her authorship marker is cleared (R94), exactly as for ENG-001-WIW-20: the new hint is machine-written and is served only once a reader is named.",
+   "stem": {
+    "text": "Look at lines 9 to 12. What does Grandad do with what Priya tells him?",
+    "quotes": [],
+    "passageRef": "stream-b-01",
+    "orderAnchor": 9
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f50p019ktmbv708rz6re",
+     "value": "He agrees to leave the grass alone.",
+     "isKey": false,
+     "tag": "en-contradicted-by-the-text",
+     "execution": "Line 10 has him answer that her mum says a lot of things on her way out of the door. That brushes her words aside; he agrees to nothing, and at lines 10 and 11 he carries on with the bolt."
+    },
+    {
+     "optionId": "cmsw2f50p019ltmbv087icdax",
+     "value": "He wipes his hands down his shirt and looks at the door.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 11, where he wipes his hands down his shirt and looks at the door. That is what he does next about the bolt, not what he does with her words; line 10 is where he brushes those aside."
+    },
+    {
+     "optionId": "cmsw2f50p019mtmbv6qwa1yc9",
+     "value": "He puts it aside as one of her mother’s many sayings.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f50p019ntmbvs9hcn3dj",
+     "value": "He tells her the mower will not take him long.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "No line has him say how long it will take."
+    }
+   ],
+   "explanationPatch": {
+    "hintCore": "Read his reply on line 10 slowly. What do his words do to Mum's message?",
+    "walkScript": "Line 9 has Priya pass on what Mum said. Line 10 has Grandad answer that her mum says a lot of things. He treats it as one more saying and goes back to the bolt. So he puts her words aside.",
+    "hintAuthoredBy": null,
+    "hintAuthority": null,
+    "_previousHintCore": "He does say something back. Does he take it seriously?"
+   }
+  }
+ ],
+ "notes": {
+  "ENG-007-LP-12": "Round 2. The weather seat (cmsw2f4v500cztmbvgx5mwntn) is carried unchanged from round 1, where it was ATTESTED. The REFUSED Ilya seat (cmsw2f4v500d0tmbvzy5u8zfn) is replaced. 'By comparing him to something else, like a dried leaf.' is not ruled out by the stem: a comparison would SHOW a feeling, not tell it, so 'We are never told what Reuben is feeling' leaves it standing. It is wrong under every reading because the only dried-leaf comparison in the passage is of the swimming hat at line 21, and no line compares Reuben to anything. en-attribute-transfer names the mistake: a detail the text gives to one thing (the hat) is given to another (Reuben). It also gives this distractor a passage detail of its own, so the key is no longer the only option with a concrete example. The key, the 'old clothes' option, the hint and the walk script are unchanged.",
+  "ENG-028-PR-03": "Round 2. Only the hint changes from round 1's rebuild; stem, all four options and the walk script are as round 1 proposed and the reviewer attested. The new hint points at the reply on line 10 (the right line; it is speech, so it also turns the child away from the hands and the door at line 11) and names the move, what his words do to the message, without saying what they do."
+ }
+}

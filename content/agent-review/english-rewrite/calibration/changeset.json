@@ -1,0 +1,77 @@
+{
+ "door": "english-rewrite/calibration",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-001-WIW-20",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: english-rewrite/calibration",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Both hold faults are gone. The hint no longer leads to the key by its words. The walk script no longer asserts the Rat's position. Key 'The back part of the boat.' is the only correct sense at line 65. The dominant-sense look, the oars (sculls at lines 63 and 66), the cushioned seat (not in the text) and the rope (line 59) are each wrong as tagged. Every sentence is 16 words or fewer, ends on a full stop, and is in British English.",
+   "landedAt": "2026-11-22T16:02:14.309Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "He is seated inside it. So it is a part of what?",
+     "after": "Read line 65 again. Here the word is about a boat, not a face."
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Look at 'in' on line 65. He sits 'in the stern', the Rat at the other end. So the stern is the boat's back. A stern look is the other sense.",
+     "after": "Line 65 puts the Mole in the stern of a boat. So here the word names a part of the boat. The stern is the back part. A stern look is a different sense of the word."
+    },
+    {
+     "field": "explanation.hintAuthority",
+     "before": "annie-seventieth-return.md, sha256 535eeb43343d476f168dcdbd459d1f0091879a28fa8de99553837789202bf7dc",
+     "after": null
+    },
+    {
+     "field": "explanation.hintAuthoredBy",
+     "before": "Annie",
+     "after": null
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": "He is seated IN it. So it is a part of what?",
+     "after": "He is seated inside it. So it is a part of what?"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-021-ED-11",
+   "passageRef": "stream-a-09-eighty-days",
+   "hold": {
+    "reason": "not a held row: english-rewrite/calibration",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Option C's execution is now one coherent, true claim. Key 'Uneasy feelings about whether a thing is right.' is the only sense that fits 'scruples about betting under conditions so difficult to their friend' (lines 77 to 78). The weight sense, the stake value (the thing named as not the cause, lines 76 to 77) and the scrape lookalike are each wrong as tagged. The hint points to what line 77 rules out, not to the key.",
+   "landedAt": "2026-11-22T16:02:14.309Z",
+   "changes": [
+    {
+     "field": "option A (cmsw2f4yz00zftmbv5i56i04x).execution",
+     "before": "A real sense of the word, and one a dictionary gives first. RETAGGED 2026-08-15: A genuine sense of the word, but not the one that arrives first for an eleven-year-old. The execution note defended it as the sense a DICTIONARY gives first, and the library's boundary is about children.",
+     "after": "'Scruple' is also an old measure of weight, a real sense of the word but not the one meant here. Lines 76 to 78 use it for the uneasy feelings his friends had about betting on such hard conditions."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-017-CR-01",
+   "passageRef": "stream-a-17-cranford",
+   "hold": {
+    "reason": "not a held row: english-rewrite/calibration",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The cards are now placed at line 2. Key 'numbers of a book coming out in parts' matches line 4 and the bracket at lines 4 to 5. Each distractor is wrong as tagged: the cards and talk are already happening at lines 1 to 2, the Bath scene is at line 23 outside the window, and no newspaper appears. The hint does not name the key.",
+   "landedAt": "2026-11-22T16:02:14.309Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 3 says he sported a bit of literature. Line 4 gives the thing itself: the numbers of a book. The cards and the trays at line 1 are what was there before.",
+     "after": "Line 3 says he sported a bit of literature. Line 4 gives the thing itself: the numbers of a book. The trays at line 1 and the cards at line 2 were there before."
+    }
+   ]
+  }
+ ]
+}

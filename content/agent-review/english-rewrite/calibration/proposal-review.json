@@ -1,0 +1,74 @@
+{
+ "door": "english-rewrite/calibration",
+ "reviewer": "rev-agent-01",
+ "precheck": "Run from packages/db with --precheck --from-live: 5 rows touched, 5 pass every gate, 0 fail. A gate pass was not taken as a reason to attest.",
+ "changes": [
+  {
+   "ref": "rebuild:ENG-001-WIW-20",
+   "verdict": "ATTEST",
+   "reason": "Only hintCore, walkScript and the authorship markers change; stem and all five options are unchanged. The stem quote 'seated in the stern of a real boat' is exact at line 65. The new hint contains no option's wording, and 'boat' also appears in the oars and rope options, so it no longer points to one option. The walk script states only what line 65 gives and no longer says the Rat sat at the other end. hintAuthoredBy and hintAuthority are cleared because the new hint is machine-written (R94)."
+  },
+  {
+   "ref": "redraft:cmsw2f4yz00zftmbv5i56i04x",
+   "verdict": "ATTEST",
+   "reason": "Only the execution changes; the value is identical. It now makes one claim with no self-contradiction: 'scruple' is a real, old apothecaries' measure of weight and is not the sense meant. Lines 76 to 78 ('some scruples about betting under conditions so difficult to their friend') support the restatement. The weight sense is neither the commonest sense nor the sense the passage fixes, and 'scruples about betting' rules it out decisively, so en-vocab-neighbouring-sense fits."
+  },
+  {
+   "ref": "rebuild:ENG-017-CR-01",
+   "verdict": "ATTEST",
+   "reason": "Only walkScript changes. It now puts the trays at line 1 ('When the trays re-appeared') and the cards at line 2 ('comparing of cards'), and both are correct. 'Line 3 says he sported a bit of literature' and 'Line 4 gives ... the numbers of a book' are also correct. Stem and options are unchanged."
+  },
+  {
+   "ref": "rebuild:ENG-028-PR-03",
+   "verdict": "ATTEST",
+   "reason": "The old option A, a true literal account of line 10, is replaced with 'He agrees to leave the grass alone.' That option is false: at line 10 he brushes Mum's message aside, and at lines 26 to 28 he states the contrary ('Mower out', 'I do, love'), so en-contradicted-by-the-text fits. Its execution is true of lines 10 and 11. The walk script now reaches the key and no longer ends on the bolt fact. Stem, key and other options are unchanged."
+  },
+  {
+   "ref": "seat:cmsw2f4v500cztmbvgx5mwntn",
+   "verdict": "ATTEST",
+   "reason": "'By describing the weather outside to match his mood.' No weather word appears in lines 1 to 49; I scanned every line. The scene is indoors (the cupboard, the corridor noticeboard). The execution's line refs are right: the jumper pushed flat is at lines 33 to 34 and the paper put back unopened at lines 35 to 36. A child reaches for a stock technique the passage never uses, which en-plausible-not-stated names."
+  },
+  {
+   "ref": "seat:cmsw2f4v500d0tmbvzy5u8zfn",
+   "verdict": "REFUSE",
+   "reason": "'By letting Ilya say out loud how Reuben must feel.' A character saying aloud how Reuben feels would be telling us his feeling, and the stem already says 'We are never told what Reuben is feeling'. So the stem rules this option out, which is the second half of the calibration finding again: an option disposed of by the stem, not by the technique skill. en-plausible-not-stated also does not name the mistake that produces it; the passage never stating it is not why a child would reject it."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "ENG-001-WIW-20",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "reason": "Both hold faults are gone. The hint no longer leads to the key by its words. The walk script no longer asserts the Rat's position. Key 'The back part of the boat.' is the only correct sense at line 65. The dominant-sense look, the oars (sculls at lines 63 and 66), the cushioned seat (not in the text) and the rope (line 59) are each wrong as tagged. Every sentence is 16 words or fewer, ends on a full stop, and is in British English.",
+   "faultField": null
+  },
+  {
+   "itemId": "ENG-021-ED-11",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "reason": "Option C's execution is now one coherent, true claim. Key 'Uneasy feelings about whether a thing is right.' is the only sense that fits 'scruples about betting under conditions so difficult to their friend' (lines 77 to 78). The weight sense, the stake value (the thing named as not the cause, lines 76 to 77) and the scrape lookalike are each wrong as tagged. The hint points to what line 77 rules out, not to the key.",
+   "faultField": null
+  },
+  {
+   "itemId": "ENG-017-CR-01",
+   "verdict": "SIGN",
+   "holdFixed": true,
+   "reason": "The cards are now placed at line 2. Key 'numbers of a book coming out in parts' matches line 4 and the bracket at lines 4 to 5. Each distractor is wrong as tagged: the cards and talk are already happening at lines 1 to 2, the Bath scene is at line 23 outside the window, and no newspaper appears. The hint does not name the key.",
+   "faultField": null
+  },
+  {
+   "itemId": "ENG-028-PR-03",
+   "verdict": "HOLD",
+   "holdFixed": true,
+   "reason": "The original faults are fixed: one defensible answer and a walk script that reaches the key. The unchanged hintCore 'He does say something back. Does he take it seriously?' now coaches (R572). Its yes/no question is a choice whose 'no' half is the key paraphrased ('puts it aside' means not taking it seriously). Its 'yes' half is exactly the new option A ('agrees'). So the hint reduces the row to A or C and hands the child the inference the item tests. It needs a hint that sends the child to line 10's wording without naming Grandad's attitude.",
+   "faultField": "hintCore"
+  },
+  {
+   "itemId": "ENG-007-LP-12",
+   "verdict": "HOLD",
+   "holdFixed": false,
+   "reason": "The near-twin giveaway is gone, but the stem-elimination half of the calibration finding is not fixed. The new option 'By letting Ilya say out loud how Reuben must feel.' is ruled out by the stem's own 'We are never told what Reuben is feeling', so it tests nothing. The key is also now the only option giving concrete passage examples ('like the jumper and the paper'), a surface cue. A replacement must be ruled out by reading the passage, not by the stem.",
+   "faultField": "options"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "door": "calibration-fix/vr",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "seat:gen-vr-04-closest-meaning-18-opt2",
+      "verdict": "ATTEST",
+      "reason": "Checked independently: 'proud' is the antonym of 'humble' in its main sense (not thinking yourself better than others), so it is clearly wrong; it is not correct in the other senses either (low in rank or status, as in a humble cottage; the verb 'to humble', to make less proud). Tag vr04-opposite-pull ('Chose the opposite by mistake') names exactly the mistake that produces this value. The execution quotes only what is on the row (key 'modest', value 'proud') and is accurate. Removing 'meek' takes away the near-synonym the calibration flagged."
+    },
+    {
+      "ref": "rebuild:bank-vr-06-missing-word-36",
+      "verdict": "ATTEST",
+      "reason": "Counted myself: 'The boy was told off.' is 5 words and 'He glared in a ___IANT way and refused to say sorry.' is 11 words. Both end in a full stop and neither uses a dash. The meaning is kept (he was told off, then glared defiantly and would not apologise). Losing 'Even after' only removes the stress on the contrast, not the sense. The gap ___IANT, the key DEF and the options DEF/RAD/REL and their tags are identical to the packet row. DEFIANT is the only completion that fits: RADIANT and RELIANT are real words but do not describe a glare given while refusing to say sorry. Other three-letter completions, such as VALIANT, do not fit either, and none is offered."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-04-closest-meaning-18",
+      "verdict": "SIGN",
+      "reason": "Bare card HUMBLE with modest (key), proud, quiet and grateful. Ran the two-part screen. (a) Other senses of humble: low in rank or status, and the verb to humble. (b) No distractor is correct in any sense: quiet is one sign of humility, grateful only keeps company with it, and proud is its opposite. 'modest' is the only defensible answer under every reading. Every word is familiar to a 9 to 11-year-old in Britain, and no option pattern gives the key away. Precheck passes."
+    },
+    {
+      "itemId": "bank-vr-06-missing-word-36",
+      "verdict": "SIGN",
+      "reason": "Read as rebuilt. There are two sentences (5 and 11 words) ending in full stops. DEF -> DEFIANT is the only option that fits a boy who glares and refuses to say sorry, and RAD (RADIANT) and REL (RELIANT) make real words that do not fit. The walk script ('The boy refuses to say sorry... Add “def” and you get “defiant”') still matches the new stem. The words suit British children aged 9 to 11. Precheck passes. A family-level note, not a hold on this row: the prompt 'Three letters that make a word are missing' could be read as saying the three letters are a word on their own. None of DEF, RAD or REL is a word, so on this row that reading gives no rival answer."
+    }
+  ]
+}

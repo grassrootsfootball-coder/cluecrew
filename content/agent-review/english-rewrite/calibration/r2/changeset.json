@@ -1,0 +1,58 @@
+{
+ "door": "english-rewrite/calibration/r2",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-028-PR-03",
+   "passageRef": "stream-b-01",
+   "hold": {
+    "reason": "not a held row: english-rewrite/calibration/r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "The original hold is fixed (option A, walk script). A 'He agrees to leave the grass alone.' is wrong: line 10 brushes the message aside, and lines 26 to 28 ('Mower out', 'I do, love') state the opposite. The walk script now reaches the key and is true of lines 9 and 10. Round 1's hintCore hold is fixed too. The new hint coaches nothing (see the change note). Only the key answers what he does with her words. B is true at line 11 but is about the bolt and door, not her words, which en-within-span-wrong-element names. D is stated nowhere: lines 31 to 32 mention wheels, never time. No option is ruled out by the stem alone. The lengths are close, nothing echoes the stem, and every sentence is 16 words or fewer in British English. The precheck passes.",
+   "landedAt": "2026-11-22T16:07:06.846Z",
+   "changes": [
+    {
+     "field": "explanation.hintCore",
+     "before": "He does say something back. Does he take it seriously?",
+     "after": "Read his reply on line 10 slowly. What do his words do to Mum's message?"
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 9 has Priya say Mum said leave the grass. Line 10 has him answer about what her mum says. Line 10 says the bolt moves half a centimetre.",
+     "after": "Line 9 has Priya pass on what Mum said. Line 10 has Grandad answer that her mum says a lot of things. He treats it as one more saying and goes back to the bolt. So he puts her words aside."
+    },
+    {
+     "field": "explanation.hintAuthority",
+     "before": "annie-seventieth-return.md, sha256 535eeb43343d476f168dcdbd459d1f0091879a28fa8de99553837789202bf7dc",
+     "after": null
+    },
+    {
+     "field": "explanation.hintAuthoredBy",
+     "before": "Annie",
+     "after": null
+    },
+    {
+     "field": "explanation._previousHintCore",
+     "before": "The bolt is not the answer here.",
+     "after": "He does say something back. Does he take it seriously?"
+    },
+    {
+     "field": "option A (cmsw2f50p019ktmbv708rz6re).value",
+     "before": "He says her mum says a lot of things.",
+     "after": "He agrees to leave the grass alone."
+    },
+    {
+     "field": "option A (cmsw2f50p019ktmbv708rz6re).tag",
+     "before": "en-inference-literal-lookalike",
+     "after": "en-contradicted-by-the-text"
+    },
+    {
+     "field": "option A (cmsw2f50p019ktmbv708rz6re).execution",
+     "before": "Reuses line 10 and repeats him rather than saying what he does.",
+     "after": "Line 10 has him answer that her mum says a lot of things on her way out of the door. That brushes her words aside; he agrees to nothing, and at lines 10 and 11 he carries on with the bolt."
+    }
+   ]
+  }
+ ]
+}

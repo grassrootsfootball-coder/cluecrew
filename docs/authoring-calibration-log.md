@@ -29168,3 +29168,26 @@ carrier: it is the text the child reads to answer. Four LIVE vr-06 rows exceed 1
 `-35`, `-36` (drafted above) and `-40`. **Narrowing the exemption to vr-04 is a change to an approved
 rule, so it is David's call.** It would newly fail `-23`, `-35` and `-40`, which need the same split.
 The gate is unchanged, so no R149 baseline was needed.
+
+**FIXES LANDED, 2026-11-22.** 8 of the 9 flagged rows now carry a fix. Each was reviewed by a fresh
+agent that drafted nothing it reviewed, then landed `--from-live` and republished. All 9 are LIVE.
+- **Fixed in round 1:** VR-04-18 (meek → proud), VR-06-36 (the sentence split in two), CALC-02 (659 →
+  310, maths-12), WIW-20 (new hint, false walk claim removed), ED-11 (the execution made coherent),
+  CR-01 (walk-script line numbers).
+- **PR-03, round 2:** round 1 removed the second defensible answer. That left Annie's old hint as a
+  yes/no choice whose halves were the key and option A, so the hint was rewritten.
+- **LP-12, round 3:** round 1's Ilya option and the "old clothes" option could each be ruled out from
+  the stem alone. Both were replaced, and all four options are now "By ..." answers. The reviewer
+  accepted that two of them share `en-plausible-not-stated` (one mistake tested twice). That costs
+  the row some diagnostic power, not correctness.
+- **NOT FIXED: MC04-NPV-05.** Its proposed 51 (maths-114) was REFUSED, because 51 needs two slips at
+  once. Two hints on the row still do not fit it: maths-07's "compare" hint and maths-61's
+  whole-number-only hint. Fixing either means rewording a library hint other carriers share. That is
+  a library change and has not been made.
+- **OPEN FOR DAVID:** the August exemption of `stem.sentence` from the 16-word cap (commit `12f52c8`)
+  was meant for vr-04, where the sentence only picks the sense. It also covers vr-06, where the
+  sentence is what the child reads to answer. Three LIVE vr-06 rows are over the cap: -23, -35 and
+  -40. The gate is unchanged pending a ruling.
+- **For a later sweep of vr-06:** the reviewer noted that the prompt "Three letters that make a word
+  are missing" can be read as saying the three letters are themselves a word. Row -36's key DEF is
+  not a word.
