@@ -1,0 +1,353 @@
+{
+ "sample": "01",
+ "cardsDigest": "ebda446551d602e2",
+ "reviewerAsEntered": "calibration-agent (machine, not a person)",
+ "decided": 40,
+ "of": 40,
+ "signedAgree": 23,
+ "signedN": 32,
+ "heldAgree": 3,
+ "heldN": 8,
+ "disagreements": [
+  {
+   "card": 3,
+   "itemId": "ENG-001-WIW-20",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw387yi0012tmqblxscqxrg",
+    "cmsw387yi0013tmqbh79xnh65",
+    "cmsw387yi0015tmqbxnxt8aeg",
+    "cmsw387yi0011tmqbyuvnxx3o",
+    "cmsw387yi0014tmqbxbnp5u9b"
+   ],
+   "hers": {
+    "card": 3,
+    "verdict": "HOLD",
+    "faultAt": [
+     "hint",
+     "walk script"
+    ],
+    "reason": "Hint 'He is seated inside it. So it is a part of what?' leads to 'part of the boat', and C is the only option containing those words, so the hint singles out the key by surface. Walk script asserts 'the Rat at the other end', which the passage never states (lines 63 to 66 only have him scull and shove off).",
+    "complete": true
+   }
+  },
+  {
+   "card": 6,
+   "itemId": "ENG-004-AGG-09",
+   "kind": "HELD",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "HOLD",
+   "machineReason": "Held execution is fixed, and the 'three things' coaching is gone. But the hintCore now misdirects. 'The sentence that follows her decision' points past lines 47 to 49 to line 50, because the decision and the stand, bag and hand are all in the same sentence.",
+   "source": "content/agent-review/english-rewrite/G4/proposal-review.json",
+   "optionIdsInShownOrder": [
+    "cmsw2f4ud0086tmbv4bdclu1o",
+    "cmsw2f4ud0087tmbvo27kwpqk",
+    "cmsw2f4ud0084tmbviaml2rp3",
+    "cmsw2f4ud0085tmbvmnsgqkux"
+   ],
+   "hers": {
+    "card": 6,
+    "verdict": "SIGN",
+    "faultAt": [],
+    "reason": "Key, distractors, executions, arithmetic and line refs checked against the card.",
+    "complete": true
+   }
+  },
+  {
+   "card": 7,
+   "itemId": "ENG-021-ED-11",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-vocab",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4yz00zhtmbv35th6v97",
+    "cmsw2f4yz00zitmbvfcxpyy3g",
+    "cmsw2f4yz00zftmbv5i56i04x",
+    "cmsw2f4yz00zgtmbvf5qatrwp"
+   ],
+   "hers": {
+    "card": 7,
+    "verdict": "HOLD",
+    "faultAt": [
+     "option C"
+    ],
+    "reason": "Option C execution contradicts itself: its first sentence claims the weight sense is 'one a dictionary gives first' and the RETAGGED note that follows disowns that claim. Standard dictionaries give the moral-hesitation sense first, so the claim left on the note is false.",
+    "complete": true
+   }
+  },
+  {
+   "card": 10,
+   "itemId": "ENG-017-CR-01",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4xo00rttmbvb0dtwss9",
+    "cmsw2f4xo00rutmbvdr7mrnb3",
+    "cmsw2f4xo00rwtmbv8lrf3lfa",
+    "cmsw2f4xo00rvtmbvyu8aivpn"
+   ],
+   "hers": {
+    "card": 10,
+    "verdict": "HOLD",
+    "faultAt": [
+     "walk script"
+    ],
+    "reason": "Walk script says 'The cards and the trays at line 1'. The trays are at line 1 but the cards ('comparing of cards') are at line 2.",
+    "complete": true
+   }
+  },
+  {
+   "card": 12,
+   "itemId": "ENG-028-PR-03",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-inference",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f50p019ktmbv708rz6re",
+    "cmsw2f50p019mtmbv6qwa1yc9",
+    "cmsw2f50p019ltmbv087icdax",
+    "cmsw2f50p019ntmbvs9hcn3dj"
+   ],
+   "hers": {
+    "card": 12,
+    "verdict": "REFUSE",
+    "faultAt": [
+     "option A",
+     "walk script"
+    ],
+    "reason": "Two defensible answers. Option A 'He says her mum says a lot of things' is a literal, true account of what Grandad does with Priya's words at line 10, and the question 'What does Grandad do with what Priya tells him?' admits it. Its execution's 'rather than saying what he does' does not hold, because saying is what he does. The walk script also never reaches the key and ends on an irrelevant fact ('Line 10 says the bolt moves half a centimetre').",
+    "complete": true
+   }
+  },
+  {
+   "card": 14,
+   "itemId": "ENG-007-LP-12",
+   "kind": "SIGNED",
+   "district": "ENGLISH",
+   "questionType": "en-comp-technique",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmsw2f4v500d1tmbvh5lshs9v",
+    "cmsw2f4v500cztmbvgx5mwntn",
+    "cmsw2f4v600d2tmbv5vyp15p7",
+    "cmsw2f4v500d0tmbvzy5u8zfn"
+   ],
+   "hers": {
+    "card": 14,
+    "verdict": "HOLD",
+    "faultAt": [
+     "option D"
+    ],
+    "reason": "Near-twin giveaway: C and D are identical except 'Reuben' versus 'Ilya', and the stem names Reuben. A child can choose C by matching the stem's name, without using the technique skill. A and B are also eliminated by the stem itself ('We are never told what Reuben is feeling' rules out B), so nothing tests the skill.",
+    "complete": true
+   }
+  },
+  {
+   "card": 15,
+   "itemId": "ENG-007-LP-07",
+   "kind": "HELD",
+   "district": "ENGLISH",
+   "questionType": "en-comp-retrieval",
+   "machineVerdict": "HOLD",
+   "machineReason": "The hint fault is fixed. But the execution on 'Read it and then put it away again' (en-negation-dropped) says 'Line 36 says without opening it'. Line 36 is only 'opening it.' and the negative word 'without' is on line 35. The same line split was named in the original hold. A negation-dropped execution must put the negative word on the line it names, so this should cite lines 35 and 36.",
+   "source": "content/agent-review/english-rewrite/G2/proposal-review.json",
+   "optionIdsInShownOrder": [
+    "cmsw2f4v200citmbvawidrbpx",
+    "cmsw2f4v200chtmbvfivjosa9",
+    "cmsw2f4v200cftmbvz13535wn",
+    "cmsw2f4v200cgtmbvedt8ltf2"
+   ],
+   "hers": {
+    "card": 15,
+    "verdict": "SIGN",
+    "faultAt": [],
+    "reason": "Key, distractors, executions, arithmetic and line refs checked against the card.",
+    "complete": true
+   }
+  },
+  {
+   "card": 19,
+   "itemId": "MC04-NPV-05",
+   "kind": "SIGNED",
+   "district": "MATHS",
+   "questionType": "maths-npv",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmteo82lw00fftmmjdv96280j",
+    "cmteo82lw00fdtmmjzowwtxwv",
+    "cmteo82lw00fetmmjtbks5107",
+    "cmteo82lw00fctmmjtuevcx09"
+   ],
+   "hers": {
+    "card": 19,
+    "verdict": "HOLD",
+    "faultAt": [
+     "a tag"
+    ],
+    "reason": "Option A's tag child hint ('Compare the parts column by column, starting with the tenths') tells the child to compare, and this question compares nothing. Option C's hint lists only whole-number columns ('Ones, tens, hundreds, thousands') for a tenths-versus-hundredths slip. Neither hint fits this item.",
+    "complete": true
+   }
+  },
+  {
+   "card": 20,
+   "itemId": "MC03-CALC-02",
+   "kind": "SIGNED",
+   "district": "MATHS",
+   "questionType": "maths-calc",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmteo829j007xtmmjzswfh1hq",
+    "cmteo829j007ztmmjauekyay6",
+    "cmteo829j007wtmmjbds0co24",
+    "cmteo829j007ytmmjxqgbwci9"
+   ],
+   "hers": {
+    "card": 20,
+    "verdict": "HOLD",
+    "faultAt": [
+     "a tag"
+    ],
+    "reason": "Option B's tag child hint ('Look at the words in the question. Are things getting bigger, smaller, or being shared?') does not fit a bare calculation: 'Work out 483 - 176.' has no words to read and the minus sign is given. A child who picked 659 is told something untrue of this item.",
+    "complete": true
+   }
+  },
+  {
+   "card": 26,
+   "itemId": "gen-vr-04-closest-meaning-18",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-04-closest-meaning",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "gen-vr-04-closest-meaning-18-opt1",
+    "gen-vr-04-closest-meaning-18-opt3",
+    "gen-vr-04-closest-meaning-18-opt4",
+    "gen-vr-04-closest-meaning-18-opt2"
+   ],
+   "hers": {
+    "card": 26,
+    "verdict": "HOLD",
+    "faultAt": [
+     "option D"
+    ],
+    "reason": "'meek' is given as a synonym of 'humble' in standard dictionaries and thesauruses. 'Closest' then rests on a fine shade (meek tilting to timid) that a 9 to 11-year-old cannot be expected to draw, so D is close to a second defensible answer. Replace D with a distractor that is clearly not a synonym.",
+    "complete": true
+   }
+  },
+  {
+   "card": 27,
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "kind": "HELD",
+   "district": "VR",
+   "questionType": "vr-04-closest-meaning",
+   "machineVerdict": "HOLD",
+   "machineReason": "Same headword and same key as bank-30 after both rebuilds (exhausted, worn out), so the second row a child meets is answered from memory. The row is otherwise sound.",
+   "source": "content/agent-review/vr-04/proposal-review-round1.json",
+   "optionIdsInShownOrder": [
+    "gen-vr-04-closest-meaning-28-opt2",
+    "gen-vr-04-closest-meaning-28-opt3",
+    "gen-vr-04-closest-meaning-28-opt1",
+    "gen-vr-04-closest-meaning-28-opt4"
+   ],
+   "hers": {
+    "card": 27,
+    "verdict": "SIGN",
+    "faultAt": [],
+    "reason": "Key, distractors, executions, arithmetic and line refs checked against the card.",
+    "complete": true
+   }
+  },
+  {
+   "card": 31,
+   "itemId": "gen-vr-05-hidden-word-21",
+   "kind": "HELD",
+   "district": "VR",
+   "questionType": "vr-05-hidden-word",
+   "machineVerdict": "HOLD",
+   "machineReason": "The row is correct on its own terms: 'Dad drank tea and ate his toast.' is natural, 7 words, and the key, distractors and joins all check, with 'hist' not a second answer. But its key, date, repeats the key of live row 01, which uses the same Dad/'ate' construction. Re-key it to a word not used elsewhere in the door.",
+   "source": "content/agent-review/vr-05/proposal-review-round2.json",
+   "optionIdsInShownOrder": [
+    "gen-vr-05-hidden-word-21-opt3",
+    "gen-vr-05-hidden-word-21-opt1",
+    "gen-vr-05-hidden-word-21-opt2"
+   ],
+   "hers": {
+    "card": 31,
+    "verdict": "SIGN",
+    "faultAt": [],
+    "reason": "Key, distractors, executions, arithmetic and line refs checked against the card.",
+    "complete": true
+   }
+  },
+  {
+   "card": 39,
+   "itemId": "bank-vr-06-missing-word-36",
+   "kind": "SIGNED",
+   "district": "VR",
+   "questionType": "vr-06-missing-word",
+   "machineVerdict": "SIGN",
+   "machineReason": "",
+   "source": "LIVE row as it stands (latest item signature: rev-agent-01)",
+   "optionIdsInShownOrder": [
+    "cmscb15b2009jtmzv97tljlki",
+    "cmscb15b2009htmzvtame6juh",
+    "cmscb15b2009itmzvsral5u3z"
+   ],
+   "hers": {
+    "card": 39,
+    "verdict": "HOLD",
+    "faultAt": [
+     "question"
+    ],
+    "reason": "The child-facing stem sentence 'Even after he was told off, the boy glared in a ___IANT way and refused to say sorry.' is 18 words, over the 16-word reading-age cap. Split it into two sentences.",
+    "complete": true
+   }
+  },
+  {
+   "card": 40,
+   "itemId": "gen-vr-08-move-letter-08",
+   "kind": "HELD",
+   "district": "VR",
+   "questionType": "vr-08-move-letter",
+   "machineVerdict": "HOLD",
+   "machineReason": "As rebuilt (COAST/LONG), S also leaves two real words: COAT + LONGS. The key A is not the only letter that solves the row, so it is not answerable with one stated answer. Needs a different pair.",
+   "source": "content/agent-review/patterns/vr-08/proposal-review-round1.json",
+   "optionIdsInShownOrder": [
+    "gen-vr-08-move-letter-08-opt3",
+    "gen-vr-08-move-letter-08-opt2",
+    "gen-vr-08-move-letter-08-opt1"
+   ],
+   "hers": {
+    "card": 40,
+    "verdict": "SIGN",
+    "faultAt": [],
+    "reason": "Key A gives COST and ALONG. O and T fail as their notes say. Note: moving S (COAT, LONGS) also works but is not offered, so the item is still single-keyed.",
+    "complete": true
+   }
+  }
+ ]
+}
