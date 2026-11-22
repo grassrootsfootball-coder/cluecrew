@@ -26,6 +26,7 @@ import { canonicalOrderHash } from '../lib/pin-projection';
 import { loadChildLexicon } from '../lib/child-lexicon';
 import { canonicalJson } from '../lib/findings-digest';
 import { exportEnglishRewriteReturn, type RowChange } from './export-english-rewrite-return';
+import { exportAgentReviewReturn } from './export-agent-review-return';
 
 const DIR = pjoin(__dirname, '..', '..', 'content', 'agent-review');
 const arg = (k: string) => process.argv.find((a) => a.startsWith(`--${k}=`))?.slice(k.length + 3);
@@ -96,7 +97,7 @@ async function main() {
 
   // Build every touched row AS IT WILL BE.
   const touched = new Set<string>([...(prop.seats ?? []), ...(prop.redrafts ?? []), ...(prop.rebuilds ?? [])].map((x) => x.itemId));
-  const live = await prisma.item.findMany({ where: { id: { in: [...touched] } }, select: { id: true, status: true, questionTypeId: true, stem: true, explanation: true, lineRefs: true,
+  const live = await prisma.item.findMany({ where: { id: { in: [...touched] } }, select: { id: true, status: true, questionTypeId: true, stem: true, explanation: true, lineRefs: true, authoredBy: true,
     options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true }, orderBy: { id: 'asc' } } } });
   type Row = { id: string; type: string; stem: Record<string, unknown>; explanation: unknown; lineRefs: number[]; options: Opt[]; refs: string[] };
   const after = new Map<string, Row>();
@@ -291,15 +292,23 @@ async function main() {
     }
     // Every English rewrite door carries its changes back to the authoring store (R1023 condition 5);
     // only a door of HELD rows also clears holds.
-    const RETURNS = !!HOLDS || DOOR.startsWith('english-rewrite');
+    // R1033: WHETHER A DOOR RETURNS IS A FACT ABOUT WHO AUTHORED ITS ROWS, NOT ABOUT ITS NAME. Keying
+    // this on the `english-rewrite` prefix let four Cowork-authored vr-06 rows land with no return at
+    // all (calibration-fix/vr, calibration-fix/vr-06-cap) — "Cowork authors, the DB holds" broken by
+    // a door that happened to be named for its purpose. Any landed row Cowork authored now returns.
+    const coworkAuthored = live.filter((r) => land.includes(r.id) && /^ai-draft:cowork/.test(r.authoredBy ?? '')).map((r) => r.id);
+    const RETURNS = !!HOLDS || DOOR.startsWith('english-rewrite') || coworkAuthored.length > 0;
     if (RETURNS) {
       // 1. The changeset, captured now — the only moment the before value is still in hand. Appended across rounds.
       const csPath = pjoin(dir, 'changeset.json');
       const prior = existsSync(csPath) ? (JSON.parse(readFileSync(csPath, 'utf8')) as { rows: RowChange[] }).rows : [];
       const landedAt = new Date().toISOString();
-      const fresh: RowChange[] = land.map((id) => ({ itemId: id, passageRef: (after.get(id)!.stem.passageRef as string) ?? null, hold: HOLDS?.[id] ?? { reason: `not a held row: ${DOOR}`, faultField: 'execution' },
+      // Only rows the authoring store holds go back to it: a generated row in the same door (vr-04) is
+      // the generator's, and Cowork has no copy to merge it into.
+      const returning = DOOR.startsWith('english-rewrite') || HOLDS ? land : coworkAuthored;
+      const fresh: RowChange[] = returning.map((id) => ({ itemId: id, passageRef: (after.get(id)!.stem.passageRef as string) ?? null, hold: HOLDS?.[id] ?? { reason: `not a held row: ${DOOR}`, faultField: 'execution' },
         reviewerNote: signs.get(id)?.reason ?? '', landedAt, changes: changes.get(id)! }));
-      writeFileSync(csPath, JSON.stringify({ door: DOOR, ruling: 'R1023', rows: [...prior.filter((p) => !land.includes(p.itemId)), ...fresh] }, null, 1));
+      writeFileSync(csPath, JSON.stringify({ door: DOOR, ruling: 'R1023', rows: [...prior.filter((p) => !returning.includes(p.itemId)), ...fresh] }, null, 1));
     }
     if (HOLDS) {
       // 2. Clear the hold — only for rows the review that placed it has now re-read and signed with the fault fixed.
@@ -316,7 +325,8 @@ async function main() {
     }
     if (RETURNS) {
       // 3. The return leg follows the write automatically (CLAUDE.md: an applier re-exports as its final step).
-      exportEnglishRewriteReturn();
+      if (DOOR.startsWith('english-rewrite') || HOLDS) exportEnglishRewriteReturn();
+      else exportAgentReviewReturn();
     }
   }
   writeFileSync(pjoin(dir, 'pass2-held.json'), JSON.stringify({ door: DOOR, mode: APPLY ? 'APPLIED' : 'DRY RUN', landed: APPLY ? land : [], held: notLanded }, null, 1));

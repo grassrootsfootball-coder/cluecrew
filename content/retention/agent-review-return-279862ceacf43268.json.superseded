@@ -1,0 +1,106 @@
+{
+ "kind": "agent-review-return",
+ "ruling": "R1033 (2026-11-22): every change to a Cowork-authored row returns, whatever the door is called.",
+ "forCowork": "MERGE FIELD BY FIELD. For each change, apply `after` ONLY if your copy of that field still equals `before`. If it does not, both sides have moved: that change is a conflict to resolve by hand, never to apply. Fields not listed were not touched.",
+ "authorship": "Every `after` value was written by a drafting AGENT and attested by the machine reviewer rev-agent-01. No person wrote or read it. Do not attribute it to Annie or to Cowork.",
+ "stampedOver": "rows",
+ "generatedAt": "2026-11-22T16:18:11.623Z",
+ "sourceHash": "8366b3aec6102f21",
+ "hashSpec": {
+  "algorithm": "sha256",
+  "digestChars": 16,
+  "over": "the canonicalised declared projection named in stampedOver — NOT the file bytes",
+  "fileDigest": "DECLARED AT CROSSING: the .sha256 sidecar beside this file and the STAGED line, both computed over the file bytes at delivery — a file cannot contain its own digest, and null left the crossing bare"
+ },
+ "doors": [
+  "calibration-fix/vr",
+  "calibration-fix/vr-06-cap"
+ ],
+ "rowCount": 4,
+ "fieldChangeCount": 4,
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: calibration-fix/vr-06-cap",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Read as rebuilt: answerable, BUR (BURDEN) the only option making a real word that fits; GARDEN and SUDDEN real but wrong in the sentence; vocabulary (bricks, burden) suitable for a 9-11-year-old in British English; three distinct three-letter options give no positional pattern.",
+   "landedAt": "2026-11-22T00:00:00.000Z",
+   "backfilled": "R1033: this door landed before the lander returned by authorship; before = the door packet, after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "The heavy bag of bricks was a great ___DEN to carry all the way up the hill.",
+     "after": "The bag of bricks was very heavy. It was a great ___DEN to carry all the way up the hill."
+    }
+   ],
+   "door": "calibration-fix/vr-06-cap"
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: calibration-fix/vr-06-cap",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Read as rebuilt: answerable, ANX (ANXIOUS) the only fit, the butterflies clue supports it; OBVIOUS and VARIOUS real but wrong in the sentence; 'tummy' and 'butterflies' natural British English for the age group.",
+   "landedAt": "2026-11-22T00:00:00.000Z",
+   "backfilled": "R1033: this door landed before the lander returned by authorship; before = the door packet, after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "Waiting for her turn to sing on the stage, Mia felt very ___IOUS and her tummy was full of butterflies.",
+     "after": "Mia was waiting for her turn to sing on the stage. She felt very ___IOUS and her tummy was full of butterflies."
+    }
+   ],
+   "door": "calibration-fix/vr-06-cap"
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-36",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: calibration-fix/vr",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Read as rebuilt. There are two sentences (5 and 11 words) ending in full stops. DEF -> DEFIANT is the only option that fits a boy who glares and refuses to say sorry, and RAD (RADIANT) and REL (RELIANT) make real words that do not fit. The walk script ('The boy refuses to say sorry... Add “def” and you get “defiant”') still matches the new stem. The words suit British children aged 9 to 11. Precheck passes. A family-level note, not a hold on this row: the prompt 'Three letters that make a word are missing' could be read as saying the three letters are a word on their own. None of DEF, RAD or REL is a word, so on this row that reading gives no rival answer.",
+   "landedAt": "2026-11-22T00:00:00.000Z",
+   "backfilled": "R1033: this door landed before the lander returned by authorship; before = the door packet, after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "Even after he was told off, the boy glared in a ___IANT way and refused to say sorry.",
+     "after": "The boy was told off. He glared in a ___IANT way and refused to say sorry."
+    }
+   ],
+   "door": "calibration-fix/vr"
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: calibration-fix/vr-06-cap",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Read as rebuilt: answerable, FEE (FEEBLE) the only fit with 'could hardly stand'; MARBLE and TREBLE real but wrong in the sentence; wording suitable for 9-11 in British English.",
+   "landedAt": "2026-11-22T00:00:00.000Z",
+   "backfilled": "R1033: this door landed before the lander returned by authorship; before = the door packet, after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "After being ill in bed for a week, Grandad felt tired and ___BLE and could hardly stand.",
+     "after": "Grandad had been ill in bed for a week. He felt tired and ___BLE and could hardly stand."
+    }
+   ],
+   "door": "calibration-fix/vr-06-cap"
+  }
+ ],
+ "instrumentProvenance": {
+  "emittedBy": "export-agent-review-return.ts",
+  "carriedFixture": false,
+  "MARK": "FROM AN UNFIXTURED INSTRUMENT",
+  "meaning": "this emitter carries no fixture, so nothing in this run proves it can find what it claims to find or stay silent on what is clean. Read its figures accordingly (Annie's clause, R726).",
+  "remedy": "the emitter earns a carried fixture before its next emission crosses (R725)."
+ }
+}

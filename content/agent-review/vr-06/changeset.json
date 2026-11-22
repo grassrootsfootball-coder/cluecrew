@@ -1,0 +1,42 @@
+{
+ "door": "vr-06",
+ "ruling": "R1033",
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-15",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06",
+    "faultField": "stem"
+   },
+   "reviewerNote": "",
+   "landedAt": "2026-11-19T00:00:00.000Z",
+   "backfilled": "R1033: landed under R1021 before the lander returned by authorship; before = the door packet (its only version, 2026-11-19), after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "When I felt poorly, Mum took me to see the ___TOR at the surgery.",
+     "after": "When I felt ill, Mum took me to see the ___TOR at the surgery."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-17",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-06",
+    "faultField": "stem"
+   },
+   "reviewerNote": "",
+   "landedAt": "2026-11-19T00:00:00.000Z",
+   "backfilled": "R1033: landed under R1021 before the lander returned by authorship; before = the door packet (its only version, 2026-11-19), after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "You must have a special ___MIT to park your car on this busy road.",
+     "after": "Drivers need a special ___MIT to park a car on this busy road."
+    }
+   ]
+  }
+ ]
+}

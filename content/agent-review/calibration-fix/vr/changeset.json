@@ -1,0 +1,24 @@
+{
+ "door": "calibration-fix/vr",
+ "ruling": "R1033",
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-36",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: calibration-fix/vr",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Read as rebuilt. There are two sentences (5 and 11 words) ending in full stops. DEF -> DEFIANT is the only option that fits a boy who glares and refuses to say sorry, and RAD (RADIANT) and REL (RELIANT) make real words that do not fit. The walk script ('The boy refuses to say sorry... Add “def” and you get “defiant”') still matches the new stem. The words suit British children aged 9 to 11. Precheck passes. A family-level note, not a hold on this row: the prompt 'Three letters that make a word are missing' could be read as saying the three letters are a word on their own. None of DEF, RAD or REL is a word, so on this row that reading gives no rival answer.",
+   "landedAt": "2026-11-22T00:00:00.000Z",
+   "backfilled": "R1033: this door landed before the lander returned by authorship; before = the door packet, after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "Even after he was told off, the boy glared in a ___IANT way and refused to say sorry.",
+     "after": "The boy was told off. He glared in a ___IANT way and refused to say sorry."
+    }
+   ]
+  }
+ ]
+}

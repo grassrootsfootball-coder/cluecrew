@@ -1,0 +1,60 @@
+{
+ "door": "calibration-fix/vr-06-cap",
+ "ruling": "R1033",
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: calibration-fix/vr-06-cap",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Read as rebuilt: answerable, BUR (BURDEN) the only option making a real word that fits; GARDEN and SUDDEN real but wrong in the sentence; vocabulary (bricks, burden) suitable for a 9-11-year-old in British English; three distinct three-letter options give no positional pattern.",
+   "landedAt": "2026-11-22T00:00:00.000Z",
+   "backfilled": "R1033: this door landed before the lander returned by authorship; before = the door packet, after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "The heavy bag of bricks was a great ___DEN to carry all the way up the hill.",
+     "after": "The bag of bricks was very heavy. It was a great ___DEN to carry all the way up the hill."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: calibration-fix/vr-06-cap",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Read as rebuilt: answerable, ANX (ANXIOUS) the only fit, the butterflies clue supports it; OBVIOUS and VARIOUS real but wrong in the sentence; 'tummy' and 'butterflies' natural British English for the age group.",
+   "landedAt": "2026-11-22T00:00:00.000Z",
+   "backfilled": "R1033: this door landed before the lander returned by authorship; before = the door packet, after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "Waiting for her turn to sing on the stage, Mia felt very ___IOUS and her tummy was full of butterflies.",
+     "after": "Mia was waiting for her turn to sing on the stage. She felt very ___IOUS and her tummy was full of butterflies."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: calibration-fix/vr-06-cap",
+    "faultField": "stem"
+   },
+   "reviewerNote": "Read as rebuilt: answerable, FEE (FEEBLE) the only fit with 'could hardly stand'; MARBLE and TREBLE real but wrong in the sentence; wording suitable for 9-11 in British English.",
+   "landedAt": "2026-11-22T00:00:00.000Z",
+   "backfilled": "R1033: this door landed before the lander returned by authorship; before = the door packet, after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "stem.sentence",
+     "before": "After being ill in bed for a week, Grandad felt tired and ___BLE and could hardly stand.",
+     "after": "Grandad had been ill in bed for a week. He felt tired and ___BLE and could hardly stand."
+    }
+   ]
+  }
+ ]
+}

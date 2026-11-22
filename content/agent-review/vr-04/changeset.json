@@ -1,0 +1,29 @@
+{
+ "door": "vr-04",
+ "ruling": "R1033",
+ "rows": [
+  {
+   "itemId": "bank-vr-04-closest-meaning-30",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: vr-04",
+    "faultField": "stem"
+   },
+   "reviewerNote": "",
+   "landedAt": "2026-11-19T00:00:00.000Z",
+   "backfilled": "R1033: landed under R1021 before the lander returned by authorship; before = the door packet (its only version, 2026-11-19), after = the DB at backfill.",
+   "changes": [
+    {
+     "field": "option:cmscb15800044tmzvvcnae71u.value",
+     "before": "tired",
+     "after": "yawning"
+    },
+    {
+     "field": "option:cmscb15800044tmzvvcnae71u.tag",
+     "before": "vr04-wrong-strength",
+     "after": "vr04-one-feature-only"
+    }
+   ]
+  }
+ ]
+}

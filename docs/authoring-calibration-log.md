@@ -29228,3 +29228,27 @@ vr-06 has 40 of 40 LIVE. Re-diff against the baseline: blocked is back to 12, wi
 - Making it GL-faithful means rebuilding about 31 rows: a new target word whose missing letters
   spell a known three-letter word, with three-letter-word distractors.
 - That is a type-design decision and is left to David.
+
+## R1033 — A Cowork-authored row returns whatever its door is called (2026-11-22)
+
+**THE FAULT.** `land-proposals.ts` decided whether a door carries changes back to the authoring store
+by the door's NAME (`english-rewrite/*`). "Cowork authors, the DB holds" covers every Cowork-authored
+item, so **7 Cowork-authored VR rows landed with no return**:
+- `bank-vr-04-closest-meaning-30` (vr-04, R1021);
+- `bank-vr-06-missing-word-15` and `-17` (vr-06, R1021);
+- `bank-vr-06-missing-word-36` (calibration-fix/vr);
+- `bank-vr-06-missing-word-23`, `-35` and `-40` (calibration-fix/vr-06-cap).
+
+Found while preparing the vr-06 rebuild, which would have made it 40 rows.
+
+**THE FIX.** The lander now returns by AUTHORSHIP: any landed row whose `authoredBy` is
+`ai-draft:cowork*` goes into the door's `changeset.json`. A generated row in the same door (vr-04 `gen-*`)
+does not, because Cowork holds no copy of it. `export-agent-review-return.ts` delivers every changeset
+outside `english-rewrite/` as the `agent-review-return` family, finding doors by walking for
+`changeset.json` (R57), never from a list. All 7 rows were backfilled. Each door's packet has only
+one version, written before landing, so it is the true before state; after is the DB now. Each row is
+marked `backfilled` with that provenance. Delivered: 7 rows, 8 field changes.
+
+**NOT COVERED, STATED.** Maths rows are `authoredBy: maths staging import` or `amended maths source`,
+not Cowork, so they do not return. Whether maths has an authoring store that should receive them is
+unexamined.
