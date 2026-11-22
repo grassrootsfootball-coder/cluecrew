@@ -1,0 +1,2015 @@
+{
+ "batch": "vr-02",
+ "district": "VR",
+ "groups": [
+  "vr:vr-04-closest-meaning"
+ ],
+ "rowCount": 39,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "bank-vr-04-closest-meaning-30",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "exhausted"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmscb15800042tmzvx3lit16y",
+     "value": "worn out",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15800043tmzvbbdx88hz",
+     "value": "rested",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "The task is to find the word closest in meaning to 'exhausted', and the key is 'worn out'. 'rested' is the opposite of 'exhausted': it means no longer tired. A child who finds the right area of meaning but reverses it picks 'rested'."
+    },
+    {
+     "optionId": "cmscb15800044tmzvvcnae71u",
+     "value": "yawning",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'worn out'. An exhausted person may keep yawning, so 'yawning' names one visible sign of exhaustion, not what 'exhausted' means. A child who picks that visible sign picks 'yawning'."
+    },
+    {
+     "optionId": "cmscb15800045tmzvi4w0czzm",
+     "value": "sleep",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "tagDescription": "Chose an associated word rather than a synonym.",
+     "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test.",
+     "execution": "The key is 'worn out'. 'sleep' is what an exhausted person needs, so the two words go together, but 'sleep' does not mean 'exhausted' (it is not even a describing word). A child who takes goes-together for means-the-same picks 'sleep'."
+    }
+   ],
+   "hint": null,
+   "walkScript": "See the card word exhausted. This word means having no energy left. Worn out lands closest to it. Rested is the flip side. Yawning and sleep go with being tired but do not mean it."
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-01",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "brave"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-01-opt1",
+     "value": "fearless",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-01-opt2",
+     "value": "reckless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'fearless'. 'reckless' is from the same family but pushed too far: it means bold without any care for danger. A child who reaches for the strongest courage word picks 'reckless' instead of 'fearless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-01-opt3",
+     "value": "cowardly",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "The key is 'fearless'. 'cowardly' is the opposite of 'brave': it means easily frightened. A child who finds the area of courage but reverses it picks 'cowardly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-01-opt4",
+     "value": "loyal",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'fearless'. 'loyal' is another word of praise that turns up beside 'brave' when describing a hero, but it means faithful, not unafraid. A child who matches the company the words keep picks 'loyal'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-02",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "swift"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-02-opt1",
+     "value": "speedy",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-02-opt2",
+     "value": "instant",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'speedy'. 'instant' is from the same family of speed but far stronger: taking no time at all, where swift means moving fast. A child who reaches for the strongest speed word picks 'instant'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-02-opt3",
+     "value": "sudden",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'speedy'. 'sudden' shares the general area of quickness but tilts it towards happening without warning. A swift runner is fast; a sudden noise is unexpected. A child who hears only 'quick' picks 'sudden'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-02-opt4",
+     "value": "early",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'speedy'. 'early' shares the general area of quickness but tilts it towards when something happens rather than how fast it moves. A child who hears only 'in good time' picks 'early'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-03",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "damp"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-03-opt1",
+     "value": "moist",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-03-opt2",
+     "value": "soaked",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'moist', which is slightly wet, like 'damp'. 'soaked' is from the same family but far stronger: completely wet through. A child who matches wetness and ignores the strength picks 'soaked'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-03-opt3",
+     "value": "mouldy",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'moist'. Mould is one thing you can see on a damp wall, so 'mouldy' names a sign of damp, not what 'damp' means. A child who picks the visible sign picks 'mouldy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-03-opt4",
+     "value": "cold",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'moist'. 'cold' often turns up beside 'damp', as in a cold, damp day, but it is about temperature, not wetness. A child who matches the company the words keep picks 'cold'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-04",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "chilly"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-04-opt1",
+     "value": "cool",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-04-opt2",
+     "value": "freezing",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'cool', which is mildly cold, like 'chilly'. 'freezing' is from the same family but far stronger. A child who matches coldness and ignores the strength picks 'freezing'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-04-opt3",
+     "value": "shivery",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'cool'. Shivering is one thing a person does when it is chilly, so 'shivery' names a sign, not what 'chilly' means. A child who picks the visible sign picks 'shivery'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-04-opt4",
+     "value": "grey",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'cool'. 'grey' turns up beside 'chilly' in descriptions such as a chilly, grey morning, but it is a colour, not a temperature. A child who matches the company the words keep picks 'grey'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-05",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "shiny"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-05-opt1",
+     "value": "gleaming",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-05-opt2",
+     "value": "dazzling",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'gleaming'. 'dazzling' is from the same family of brightness but far stronger: so bright it hurts to look. A child who reaches for the strongest bright word picks 'dazzling' instead of 'gleaming'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-05-opt3",
+     "value": "smooth",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'gleaming'. A shiny surface is often smooth to touch, so 'smooth' names one feature that can come with shine, not what 'shiny' means. A child who picks that single feature picks 'smooth'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-05-opt4",
+     "value": "new",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'gleaming'. 'new' turns up beside 'shiny', as in a shiny new bike, but it means recently made, not giving off shine. A child who matches the company the words keep picks 'new'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-06",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "glad"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-06-opt1",
+     "value": "pleased",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-06-opt2",
+     "value": "overjoyed",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'pleased', which is as mild as 'glad'. 'overjoyed' is from the same family but far stronger. A child who matches happiness and ignores the strength picks 'overjoyed'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-06-opt3",
+     "value": "relieved",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'pleased'. 'relieved' is in the same area of happy feelings but tilts it: glad because a worry has ended. 'glad' needs no worry first. A child who hears only 'happy' picks 'relieved'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-06-opt4",
+     "value": "lucky",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'pleased'. 'lucky' turns up beside 'glad', as in glad it worked out, we were lucky, but it means fortunate, not happy. A child who matches the company the words keep picks 'lucky'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-07",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "hollow"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-07-opt1",
+     "value": "empty",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-07-opt2",
+     "value": "solid",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "The key is 'empty'. 'solid' is the opposite of 'hollow': filled all the way through. A child who finds the area but reverses it picks 'solid'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-07-opt3",
+     "value": "light",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'empty'. A hollow object often feels light when you lift it, so 'light' names one thing hollowness can lead to, not what 'hollow' means. A child who picks that feature picks 'light'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-07-opt4",
+     "value": "wooden",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'empty'. 'wooden' turns up beside 'hollow', as in a hollow wooden log or box, but it names what something is made of, not that it is empty inside. A child who matches the company picks 'wooden'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-08",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "huge"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-08-opt1",
+     "value": "enormous",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-08-opt2",
+     "value": "big",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'enormous', which matches how extreme 'huge' is. 'big' is from the same family but far weaker. A child who matches size and ignores the strength picks 'big'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-08-opt3",
+     "value": "tall",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'enormous'. 'tall' is big in one direction only, height, so it names one way a thing can look huge, not what 'huge' means. A child who picks that single feature picks 'tall'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-08-opt4",
+     "value": "heavy",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'enormous'. A huge thing is often heavy, so 'heavy' names one feature that can come with great size, not what 'huge' means. A child who picks that single feature picks 'heavy'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-09",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "rapid"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt1",
+     "value": "quick",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt2",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "The key is 'quick'. 'slow' is the opposite of 'rapid': taking a long time. A child who finds the area of speed but reverses it picks 'slow'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt3",
+     "value": "hurried",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'quick'. 'hurried' shares the area of speed but tilts it towards rushing because time is short, often carelessly. 'rapid' has no rush in it. A child who hears only 'fast' picks 'hurried'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt4",
+     "value": "race",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "tagDescription": "Chose an associated word rather than a synonym.",
+     "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test.",
+     "execution": "The key is 'quick'. A race is where things are rapid, so the two words go together, but 'race' names an event, not a speed. A child who takes goes-together for means-the-same picks 'race'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-10",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "generous"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-10-opt1",
+     "value": "giving",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-10-opt2",
+     "value": "extravagant",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'giving'. 'extravagant' pushes the same idea too far: spending or giving far more than is sensible. A child who reaches for the strongest generous word picks 'extravagant'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-10-opt3",
+     "value": "friendly",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'giving'. 'friendly' shares the general area of warmth towards others but tilts it: a friendly person is pleasant, not necessarily ready to give. A child who hears only 'nice' picks 'friendly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-10-opt4",
+     "value": "wealthy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'giving'. 'wealthy' turns up beside 'generous' in talk of rich donors, but it means having a lot of money, not sharing it. A child who matches the company the words keep picks 'wealthy'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-11",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "gloomy"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-11-opt1",
+     "value": "miserable",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-11-opt2",
+     "value": "despairing",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'miserable'. 'despairing' is from the same family of low feeling but far stronger: having lost all hope. A child who reaches for the strongest sad word picks 'despairing'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-11-opt3",
+     "value": "grumpy",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'miserable'. 'grumpy' shares the area of a bad mood but tilts it towards being cross and irritable rather than low. A child who hears only 'in a bad mood' picks 'grumpy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-11-opt4",
+     "value": "silent",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'miserable'. A gloomy person may go silent, so 'silent' names one thing gloominess can look like, not what 'gloomy' means. A child who picks that visible sign picks 'silent'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-12",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "timid"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-12-opt1",
+     "value": "shy",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-12-opt2",
+     "value": "terrified",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'shy'. 'terrified' is from the same family of fear but far stronger: a timid child holds back, a terrified one is overcome with fear. A child who matches fear and ignores the strength picks 'terrified'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-12-opt3",
+     "value": "quiet",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'shy'. A timid child is often quiet, so 'quiet' names one thing timidity can look like, not what 'timid' means. A child who picks that visible sign picks 'quiet'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-12-opt4",
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'shy'. 'polite' turns up beside 'timid' when describing a well-mannered, quiet child, but it means having good manners, not lacking confidence. A child who matches the company picks 'polite'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-13",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "rare"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-13-opt1",
+     "value": "uncommon",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-13-opt2",
+     "value": "unique",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'uncommon'. 'unique' is from the same family but far stronger: the only one of its kind, not just hard to find. A child who reaches for the strongest rare word picks 'unique'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-13-opt3",
+     "value": "strange",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'uncommon'. 'strange' shares the area of unusual but tilts it towards odd or puzzling. A rare stamp is hard to find, not weird. A child who hears only 'unusual' picks 'strange'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-13-opt4",
+     "value": "precious",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'uncommon'. 'precious' turns up beside 'rare', as in rare and precious jewels, but it means of great value, not hard to find. A child who matches the company the words keep picks 'precious'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-14",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "sturdy"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-14-opt1",
+     "value": "strong",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-14-opt2",
+     "value": "unbreakable",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'strong'. 'unbreakable' is from the same family but far stronger: it cannot be broken at all, where sturdy means strongly made. A child who reaches for the strongest word picks 'unbreakable'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-14-opt3",
+     "value": "heavy",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'strong'. 'heavy' shares the general area of solid objects but tilts it to weight: a sturdy chair need not be heavy. A child who hears only 'solid' picks 'heavy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-14-opt4",
+     "value": "wooden",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'strong'. 'wooden' turns up beside 'sturdy', as in a sturdy wooden table, but it names the material, not the strength. A child who matches the company the words keep picks 'wooden'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "bold"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt1",
+     "value": "daring",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt2",
+     "value": "reckless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'daring'. 'reckless' pushes the same idea too far: so bold that you ignore danger completely. A child who reaches for the strongest bold word picks 'reckless' instead of 'daring'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt3",
+     "value": "rude",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'daring'. 'rude' shares one area of 'bold', speaking out cheekily, but tilts it towards bad manners. A child who hears only 'forward' picks 'rude'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt4",
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'daring'. A bold person may speak up loudly, so 'loud' names one thing boldness can look like, not what 'bold' means. A child who picks that visible sign picks 'loud'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-16",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "ancient"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-16-opt1",
+     "value": "old",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-16-opt2",
+     "value": "prehistoric",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'old'. 'prehistoric' is from the same family but far stronger: from before history was written down. A child who reaches for the oldest-sounding word picks 'prehistoric'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-16-opt3",
+     "value": "ruined",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'old'. Ancient buildings are often ruined, so 'ruined' names one thing age can look like, not what 'ancient' means. A child who picks that visible sign picks 'ruined'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-16-opt4",
+     "value": "valuable",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'old'. 'valuable' turns up beside 'ancient', as in an ancient and valuable vase, but it means worth a lot, not very old. A child who matches the company the words keep picks 'valuable'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-17",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "hostile"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-17-opt1",
+     "value": "unfriendly",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-17-opt2",
+     "value": "murderous",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'unfriendly'. 'murderous' is from the same family of ill will but far stronger: wanting to kill. A child who reaches for the strongest hostile word picks 'murderous'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-17-opt3",
+     "value": "rude",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'unfriendly'. 'rude' shares the area of unpleasant behaviour but tilts it towards bad manners rather than ill will. A child who hears only 'not nice' picks 'rude'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-17-opt4",
+     "value": "cold",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'unfriendly'. A cold manner is one way hostility can show, so 'cold' names one sign of it, not what 'hostile' means. A child who picks that visible sign picks 'cold'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-19",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "vague"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt1",
+     "value": "unclear",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt2",
+     "value": "meaningless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'unclear'. 'meaningless' pushes the same idea too far: not just hard to make out, but having no meaning at all. A child who reaches for the strongest word picks 'meaningless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt3",
+     "value": "mysterious",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'unclear'. 'mysterious' shares the area of not being plain but tilts it towards something strange or secret. A vague answer lacks detail; it hides nothing. A child who hears only 'hard to make out' picks 'mysterious'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt4",
+     "value": "brief",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'unclear'. A vague answer is often short, so 'brief' names one thing vagueness can look like, not what 'vague' means. A child who picks that visible sign picks 'brief'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-20",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "feeble"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt1",
+     "value": "frail",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt2",
+     "value": "helpless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'frail'. 'helpless' is from the same family but far stronger: unable to do anything at all. A child who reaches for the strongest word in the family picks 'helpless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt3",
+     "value": "pale",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'frail'. A feeble person may look pale, so 'pale' names one visible sign of feebleness, not what 'feeble' means. A child who picks that sign picks 'pale'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt4",
+     "value": "elderly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'frail'. 'elderly' turns up beside 'feeble', as in a feeble elderly man, but it means old, not lacking strength. A child who matches the company the words keep picks 'elderly'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-21",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "genuine"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-21-opt1",
+     "value": "real",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-21-opt2",
+     "value": "fake",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "The key is 'real'. 'fake' is the opposite of 'genuine': made to look real when it is not. A child who reverses the meaning picks 'fake'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-21-opt3",
+     "value": "signed",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'real'. A signature is one thing that can show a painting or letter is genuine, so 'signed' names one sign, not what 'genuine' means. A child who picks that visible sign picks 'signed'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-21-opt4",
+     "value": "costly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "The key is 'real'. 'costly' turns up beside 'genuine', as in genuine leather costing more, but it means expensive, not real. A child who matches the company the words keep picks 'costly'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-22",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "reluctant"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-22-opt1",
+     "value": "unwilling",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-22-opt2",
+     "value": "opposed",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'unwilling'. 'opposed' is from the same family but far stronger: actively against something, not just not wanting to do it. A child who reaches for the strongest word picks 'opposed'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-22-opt3",
+     "value": "doubtful",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'unwilling'. 'doubtful' shares the area of holding back but tilts it towards being unsure. A reluctant person knows they do not want to; a doubtful one is not sure. A child who hears only 'hesitant' picks 'doubtful'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-22-opt4",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'unwilling'. A reluctant person may be slow to start, so 'slow' names one thing reluctance can look like, not what 'reluctant' means. A child who picks that visible sign picks 'slow'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-23",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "obedient"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt1",
+     "value": "well-behaved",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt2",
+     "value": "naughty",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "The key is 'well-behaved'. 'naughty' is the opposite of 'obedient': not doing as you are told. A child who finds the area of behaviour but reverses it picks 'naughty'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt3",
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'well-behaved'. 'polite' shares the area of good behaviour but tilts it towards good manners rather than doing as you are told. A child who hears only 'good' picks 'polite'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt4",
+     "value": "quiet",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'well-behaved'. An obedient child may be quiet, so 'quiet' names one thing obedience can look like, not what 'obedient' means. A child who picks that visible sign picks 'quiet'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-24",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which word is closest in meaning to the word on the card?",
+    "trivial"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-24-opt1",
+     "value": "unimportant",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-24-opt2",
+     "value": "worthless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "The key is 'unimportant'. 'worthless' is from the same family but far stronger: having no value at all, not just not mattering much. A child who reaches for the strongest word picks 'worthless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-24-opt3",
+     "value": "simple",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "The key is 'unimportant'. 'simple' shares the area of small matters but tilts it towards easy or not complicated. A trivial problem is one that does not matter, not one that is easy. A child who hears only 'nothing much' picks 'simple'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-24-opt4",
+     "value": "small",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "The key is 'unimportant'. A trivial matter is often a small one, so 'small' names one feature of it, not what 'trivial' means. A child who picks that single feature picks 'small'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-25",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "The crowd was JUBILANT when the final whistle blew.",
+    "jubilant"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-25-opt1",
+     "value": "overjoyed",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-25-opt2",
+     "value": "pleased",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'The crowd was JUBILANT when the final whistle blew', the key is 'overjoyed'. 'pleased' is from the same family of happiness but far weaker; a jubilant crowd is wild with joy. A child who matches happiness and ignores the strength picks 'pleased'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-25-opt3",
+     "value": "noisy",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "In the sentence, the key is 'overjoyed'. A jubilant crowd cheers, so 'noisy' names one thing jubilation can look like, not what 'jubilant' means. A child who picks the sound of the crowd picks 'noisy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-25-opt4",
+     "value": "relieved",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'overjoyed'. 'relieved' shares the area of happy feeling at the final whistle but tilts it: glad a worry is over. 'jubilant' is triumphant joy. A child who hears only 'happy it ended' picks 'relieved'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-26",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "They waited for the floodwater to RECEDE.",
+    "recede"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-26-opt1",
+     "value": "retreat",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-26-opt2",
+     "value": "vanish",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'They waited for the floodwater to RECEDE', the key is 'retreat'. 'vanish' pushes the same idea too far: to disappear completely, where receding water only draws back. A child who reaches for the strongest word picks 'vanish'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-26-opt3",
+     "value": "settle",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'retreat'. 'settle' shares the area of floodwater calming down but tilts it towards coming to rest and staying, the opposite of drawing back. A child who hears only 'calm down' picks 'settle'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-26-opt4",
+     "value": "fade",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "tagDescription": "Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in \"stayed HUMBLE after winning\" — the humble-cottage sense). T4/T5 only.",
+     "tagChildHint": "The word in capitals has more than one meaning. Read the sentence and pick the one it shows.",
+     "execution": "In the sentence, the key is 'retreat'. 'recede' has a real second meaning, to grow fainter, as when a sound or memory recedes, and 'fade' fits that sense. The sentence fixes the moving-back sense, since floodwater draws back. A child who picks the other sense picks 'fade'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-27",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "She tried to CONCEAL her disappointment from her friends.",
+    "conceal"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt1",
+     "value": "hide",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt2",
+     "value": "show",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "In the sentence, the key is 'hide'. 'show' is the opposite of 'conceal': to let others see the feeling. A child who finds the area but reverses it picks 'show'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt3",
+     "value": "ignore",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'hide'. 'ignore' shares the area of not dealing with a feeling but tilts it: to take no notice of something, rather than keep it from others. A child who hears only 'not show it' picks 'ignore'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt4",
+     "value": "pretend",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "In the sentence, the key is 'hide'. Concealing disappointment goes with pretending to be fine, so the two words turn up together, but 'pretend' means act as if, not hide. A child who matches the situation picks 'pretend'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-29",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "The teacher asked her to AMEND the last paragraph.",
+    "amend"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt1",
+     "value": "change",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt2",
+     "value": "rewrite",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'The teacher asked her to AMEND the last paragraph', the key is 'change'. 'rewrite' pushes the same idea too far: to write it all again, where amending means making some changes. A child who reaches for the biggest change picks 'rewrite'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt3",
+     "value": "shorten",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'change'. 'shorten' shares the area of altering a piece of writing but tilts it to one kind of change, making it shorter. Amending need not cut anything. A child who hears only 'edit it' picks 'shorten'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt4",
+     "value": "check",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "In the sentence, the key is 'change'. 'check' turns up beside 'amend' in the same classroom job, since you check work and then amend it, but it means look over, not alter. A child who matches the situation picks 'check'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-30",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "Their efforts to save the old tree proved FUTILE.",
+    "futile"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-30-opt1",
+     "value": "pointless",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-30-opt2",
+     "value": "impossible",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'Their efforts to save the old tree proved FUTILE', the key is 'pointless'. 'impossible' pushes the same idea too far: it could never be done at all, where futile means the efforts made no difference. A child who reaches for the strongest word picks 'impossible'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-30-opt3",
+     "value": "foolish",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'pointless'. 'foolish' shares the area of efforts that came to nothing but tilts it towards being silly. Trying to save a tree was not foolish, only useless. A child who hears only 'a waste' picks 'foolish'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-30-opt4",
+     "value": "successful",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "In the sentence, the key is 'pointless'. 'successful' is the opposite of 'futile': the efforts would have worked. A child who reverses the meaning picks 'successful'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-31",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "The new neighbour seemed AMIABLE from the first day.",
+    "amiable"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-31-opt1",
+     "value": "friendly",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-31-opt2",
+     "value": "grumpy",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "In the sentence, the key is 'friendly'. 'grumpy' is the opposite of 'amiable': bad-tempered and hard to get on with. A child who reverses the meaning picks 'grumpy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-31-opt3",
+     "value": "cheerful",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'friendly'. 'cheerful' shares the area of a pleasant manner but tilts it towards being in good spirits oneself, rather than warm towards others. A child who hears only 'nice to be around' picks 'cheerful'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-31-opt4",
+     "value": "chatty",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "In the sentence, the key is 'friendly'. An amiable neighbour may be chatty, so 'chatty' names one thing amiability can look like, not what 'amiable' means. A child who picks that visible sign picks 'chatty'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-32",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "Fish were ABUNDANT in the river that summer.",
+    "abundant"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-32-opt1",
+     "value": "plentiful",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-32-opt2",
+     "value": "endless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'Fish were ABUNDANT in the river that summer', the key is 'plentiful'. 'endless' pushes the same idea too far: so many there is no end to them. A child who reaches for the strongest word picks 'endless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-32-opt3",
+     "value": "large",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'plentiful'. 'large' shares the area of 'a lot' but tilts it from how many fish there were to how big each fish was. A child who hears only 'a lot' picks 'large'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-32-opt4",
+     "value": "rare",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "In the sentence, the key is 'plentiful'. 'rare' is the opposite of 'abundant': hardly any fish at all. A child who reverses the meaning picks 'rare'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-33",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "That road is NOTORIOUS for its sharp bends.",
+    "notorious"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-33-opt1",
+     "value": "infamous",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-33-opt2",
+     "value": "unknown",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "In the sentence, the key is 'infamous'. 'unknown' is the opposite of 'notorious', which means well known. A child who finds the area of fame but reverses it picks 'unknown'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-33-opt3",
+     "value": "famous",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In 'That road is NOTORIOUS for its sharp bends', the key is 'infamous'. 'famous' shares the area of being well known but drops the bad side: notorious means well known for something bad. A child who hears only 'well known' picks 'famous'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-33-opt4",
+     "value": "dangerous",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "In the sentence, the key is 'infamous'. 'dangerous' turns up beside 'notorious' when people talk about a road with sharp bends, but it describes the road itself, not its bad name. A child who matches the situation picks 'dangerous'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-34",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "The lace on the dress was EXQUISITE.",
+    "exquisite"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt1",
+     "value": "beautiful",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt2",
+     "value": "pretty",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'The lace on the dress was EXQUISITE', the key is 'beautiful'. 'pretty' is from the same family but far weaker; exquisite means extremely beautiful and finely made. A child who matches the family and ignores the strength picks 'pretty'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt3",
+     "value": "costly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "In the sentence, the key is 'beautiful'. 'costly' turns up beside 'exquisite', since finely made lace is often expensive, but it means costing a lot, not beautiful. A child who matches the company the words keep picks 'costly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt4",
+     "value": "sharp",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "tagDescription": "Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in \"stayed HUMBLE after winning\" — the humble-cottage sense). T4/T5 only.",
+     "tagChildHint": "The word in capitals has more than one meaning. Read the sentence and pick the one it shows.",
+     "execution": "In the sentence, the key is 'beautiful'. 'exquisite' has a real second meaning, intense and sharp, as in exquisite pain, and 'sharp' fits that sense. The sentence is about lace on a dress, which fixes the beautiful sense. A child who picks the other sense picks 'sharp'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-35",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "The school was founded by a BENEVOLENT farmer.",
+    "benevolent"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt1",
+     "value": "kind",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt2",
+     "value": "saintly",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'The school was founded by a BENEVOLENT farmer', the key is 'kind'. 'saintly' is from the same family of goodness but far stronger: as good as a saint. A child who reaches for the strongest good word picks 'saintly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt3",
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'kind'. 'polite' shares the area of behaving well towards others but tilts it towards good manners rather than wishing others well. A child who hears only 'nice' picks 'polite'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt4",
+     "value": "wealthy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "In the sentence, the key is 'kind'. 'wealthy' turns up beside 'benevolent' when someone pays to found a school, but it means rich, not kind. A child who matches the situation picks 'wealthy'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-36",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "She stayed STOIC when she heard the sad news.",
+    "stoic"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt1",
+     "value": "calm",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt2",
+     "value": "stubborn",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In 'She stayed STOIC when she heard the sad news', the key is 'calm'. 'stubborn' shares the area of holding firm but tilts it towards refusing to change your mind, where stoic means bearing something without showing feeling. A child who hears only 'stands firm' picks 'stubborn'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt3",
+     "value": "silent",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "In the sentence, the key is 'calm'. A stoic person may stay silent, so 'silent' names one thing stoicism can look like, not what 'stoic' means. A child who picks that visible sign picks 'silent'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt4",
+     "value": "tearful",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "tagDescription": "Chose the opposite by mistake.",
+     "tagChildHint": "That word points the other way. Read both meanings again.",
+     "execution": "In the sentence, the key is 'calm'. 'tearful' is the opposite of 'stoic': showing your feelings openly by crying. A child who links the sad news to the reaction it often brings, and so reverses the meaning, picks 'tearful'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-37",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "The innkeeper greeted them in a JOVIAL manner.",
+    "jovial"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt1",
+     "value": "cheerful",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt2",
+     "value": "ecstatic",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'The innkeeper greeted them in a JOVIAL manner', the key is 'cheerful'. 'ecstatic' is from the same family of happiness but far stronger: overwhelmed with joy. A child who reaches for the strongest happy word picks 'ecstatic'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt3",
+     "value": "silly",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'cheerful'. 'silly' shares the area of fun and laughter but tilts it towards acting foolishly. A jovial innkeeper is good-humoured, not foolish. A child who hears only 'full of fun' picks 'silly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt4",
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "In the sentence, the key is 'cheerful'. A jovial innkeeper may laugh loudly, so 'loud' names one thing joviality can sound like, not what 'jovial' means. A child who picks that sign picks 'loud'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-38",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "The lid was TRANSPARENT, so she could see the cake inside.",
+    "transparent"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-38-opt1",
+     "value": "clear",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-38-opt2",
+     "value": "thin",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "In the sentence, the key is 'clear'. Something thin, like paper or fine cloth, can let light through, so 'thin' names one feature that can go with being see-through, not what 'transparent' means. A child who picks that single feature picks 'thin'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-38-opt3",
+     "value": "shiny",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "In the sentence, the key is 'clear'. 'shiny' turns up beside 'transparent' when people talk about glass and plastic, but it means giving back light, not letting you see through. A child who matches the company the words keep picks 'shiny'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-38-opt4",
+     "value": "obvious",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "tagDescription": "Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in \"stayed HUMBLE after winning\" — the humble-cottage sense). T4/T5 only.",
+     "tagChildHint": "The word in capitals has more than one meaning. Read the sentence and pick the one it shows.",
+     "execution": "In the sentence, the key is 'clear'. 'transparent' has a real second meaning, easy to see through as in a transparent lie, and 'obvious' fits that sense. The sentence, about seeing the cake inside, fixes the see-through sense. A child who picks the other sense picks 'obvious'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-39",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "The dial on the watch was LUMINOUS in the dark.",
+    "luminous"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-39-opt1",
+     "value": "glowing",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-39-opt2",
+     "value": "blazing",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'The dial on the watch was LUMINOUS in the dark', the key is 'glowing'. 'blazing' is from the same family of light but far stronger: burning brightly like a fire. A child who reaches for the strongest bright word picks 'blazing'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-39-opt3",
+     "value": "pale",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "tagDescription": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+     "tagChildHint": "Close is not the same. Ask exactly what the word you were given means.",
+     "execution": "In the sentence, the key is 'glowing'. 'pale' shares the area of soft light but tilts it towards faint colour, rather than giving off light. A child who hears only 'soft and light' picks 'pale'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-39-opt4",
+     "value": "visible",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "In the sentence, the key is 'glowing'. A luminous dial can be seen in the dark, so 'visible' names one result of glowing, not what 'luminous' means. A child who picks that single feature picks 'visible'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-40",
+   "questionType": "vr-04-closest-meaning",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "A MELANCHOLY tune drifted from the piano.",
+    "melancholy"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-40-opt1",
+     "value": "sad",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-40-opt2",
+     "value": "heartbroken",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "tagDescription": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+     "tagChildHint": "Check how strong the word is. A quiet word needs a quiet answer.",
+     "execution": "In 'A MELANCHOLY tune drifted from the piano', the key is 'sad'. 'heartbroken' is from the same family but far stronger: overwhelmed by grief. A child who reaches for the strongest sad word picks 'heartbroken'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-40-opt3",
+     "value": "gentle",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "tagDescription": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+     "tagChildHint": "Both words could fit the same story. Ask whether they mean the same.",
+     "execution": "In the sentence, the key is 'sad'. 'gentle' turns up beside 'melancholy' in talk about soft, slow music, but it means mild and soft, not sad. A child who matches the company the words keep picks 'gentle'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-40-opt4",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "tagDescription": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+     "tagChildHint": "That is one sign of it. The word itself means something wider.",
+     "execution": "In the sentence, the key is 'sad'. A melancholy tune is often slow, so 'slow' names one feature of how it sounds, not what 'melancholy' means. A child who picks that single feature picks 'slow'."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  }
+ ]
+}

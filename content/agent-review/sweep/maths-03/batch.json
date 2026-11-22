@@ -1,0 +1,712 @@
+{
+ "batch": "maths-03",
+ "district": "MATHS",
+ "groups": [
+  "maths:maths-npv",
+  "maths:maths-stats"
+ ],
+ "rowCount": 14,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "MC01-NPV-02",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number is 100 more than 4,970?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo820n002otmmj9iqtavp2",
+     "value": "5070",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo820n002ptmmj069wrqyf",
+     "value": "4980",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child writes the 1 of 100 one column to the right, under the tens instead of the hundreds, so adds 10: 4,970 + 10 = 4,980. In 100 the 1 sits in the hundreds column, so the 9 hundreds become 10 and the answer is 5,070."
+    },
+    {
+     "optionId": "cmteo820n002qtmmjdlveifgw",
+     "value": "4870",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagDescription": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
+     "tagChildHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+     "execution": "The child takes 100 away instead of adding it, working out 4,970 - 100 = 4,870. The question asks for 100 more, so the answer is 4,970 + 100 = 5,070."
+    },
+    {
+     "optionId": "cmteo820n002rtmmjimurvrcf",
+     "value": "4070",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 but drops the carried 1. The thousands digit stays 4, so the answer reads 4,070 instead of 5,070."
+    }
+   ],
+   "hint": "Add in the hundreds column and watch the carry.",
+   "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. A common slip forgets to carry or adds to the next column along."
+  },
+  {
+   "itemId": "MC02-NPV-04",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Use the digits 4, 0, 0 and 7 once each. What is the smallest 4-digit number you can make?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82830074tmmjqfk4g9iu",
+     "value": "4007",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82830075tmmjv7m62q1u",
+     "value": "47",
+     "isKey": false,
+     "tag": "maths-64-leading-zero-ordering-slip",
+     "tagDescription": "Placing a zero first when building the smallest possible number.",
+     "tagChildHint": "A whole number cannot start with a zero. Pick the next smallest digit to lead.",
+     "execution": "The child puts both zeros first to make the number as small as possible, writing 0047, which is really the 2-digit number 47. A 4-digit number cannot start with zero, so the 4 leads and the answer is 4,007."
+    },
+    {
+     "optionId": "cmteo82830076tmmj65w263ca",
+     "value": "407",
+     "isKey": false,
+     "tag": "maths-67-dropped-internal-placeholder",
+     "tagDescription": "Forgetting the zero placeholder for an empty column when writing a number from parts.",
+     "tagChildHint": "Does a column have nothing in it? Use a zero to hold that empty space.",
+     "execution": "The child writes the 4, one zero and the 7, dropping the second zero, and gives 407. Both zeros are needed to hold the hundreds and tens, so the number is 4,007."
+    },
+    {
+     "optionId": "cmteo82830077tmmj5f9r6woc",
+     "value": "1000",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagDescription": "A number the question gives is never used at all.",
+     "tagChildHint": "List every number the question gives you. Check you have used each one.",
+     "execution": "The child gives 1,000, the smallest 4-digit number of all, and never uses the digits 4, 0, 0 and 7 the question gives. With those digits the 4 must lead and the two zeros come next, making 4,007."
+    }
+   ],
+   "hint": "Put the smallest digit that is not zero first.",
+   "walkScript": "Smallest numbers want the smallest digits at the front. But a number cannot begin with zero. So lead with 4, then 0, 0, 7, making 4,007. The trap lets zero lead or loses a placeholder."
+  },
+  {
+   "itemId": "MC03-NPV-01",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "In the number 7,283, what is the value of the digit 2?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82ej00astmmjapv149og",
+     "value": "200",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82ej00attmmj07lxhegn",
+     "value": "283",
+     "isKey": false,
+     "tag": "maths-114-read-from-the-digit-to-the-end",
+     "tagDescription": "Child gives 652 for the 6 in 4,652 where the answer is 600, taking the digits from the 6 to the end of the number as its value.",
+     "tagChildHint": "Keep that digit in its column and change all the other digits to zeros. The digits after it are not part of its value.",
+     "execution": "The child drops the 7 in front of the 2 but keeps the 8 and the 3 that follow it, giving 283 as the value of the 2. Only the 2 itself counts. It sits in the hundreds column of 7,283, so its value is 200."
+    },
+    {
+     "optionId": "cmteo82ej00autmmjabw1hq0y",
+     "value": "2",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagDescription": "Giving the face value of a digit while ignoring its place value completely.",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!",
+     "execution": "The child gives the digit itself, 2, and ignores the column it sits in. The 2 in 7,283 is in the hundreds column, so its value is 2 hundreds, or 200."
+    },
+    {
+     "optionId": "cmteo82ej00avtmmjb407wspc",
+     "value": "2000",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child reads the 2 as if it sat one column to the left, in the thousands, giving 2,000. In 7,283 the thousands digit is 7 and the 2 is in the hundreds column, so its value is 200."
+    }
+   ],
+   "hint": "Ask which column the digit sits in.",
+   "walkScript": "Find the column the 2 sits in. It stands in the hundreds place. So its value is two hundreds, which is 200. The trap reads the digit in a neighbouring column or at face value."
+  },
+  {
+   "itemId": "MC03-NPV-03",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number is 100 more than 3,940?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82ew00b0tmmjw7dmvi79",
+     "value": "4040",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82ew00b1tmmjrb1dml9f",
+     "value": "3950",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child writes the 1 of 100 one column to the right, under the tens instead of the hundreds, so adds 10: 3,940 + 10 = 3,950. In 100 the 1 sits in the hundreds column, so the 9 hundreds become 10 and the answer is 4,040."
+    },
+    {
+     "optionId": "cmteo82ew00b2tmmjbvhlgosc",
+     "value": "3040",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 but drops the carried 1. The thousands digit stays 3, so the answer reads 3,040 instead of 4,040."
+    },
+    {
+     "optionId": "cmteo82ew00b3tmmj33wgf98v",
+     "value": "3840",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagDescription": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
+     "tagChildHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+     "execution": "The child takes 100 away instead of adding it, working out 3,940 - 100 = 3,840. The question asks for 100 more, so the answer is 3,940 + 100 = 4,040."
+    }
+   ],
+   "hint": "Add in the hundreds column and mind the carry.",
+   "walkScript": "Find the hundreds column before you add. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 4,040. A common slip adds into a neighbouring column or drops the carry."
+  },
+  {
+   "itemId": "MC03-NPV-06",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "In the number 5.284, what is the value of the digit 8?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82fa00b8tmmjo3t1qmva",
+     "value": "0.08",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82fa00b9tmmjr8nmlq8f",
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagDescription": "Giving the face value of a digit while ignoring its place value completely.",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!",
+     "execution": "The child gives the digit's face value, 8, ignoring where it sits. In 5.284 the 8 is in the hundredths column, so its value is 0.08."
+    },
+    {
+     "optionId": "cmteo82fa00batmmj9gc19rpa",
+     "value": "0.8",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child reads the 8 one column to the left, in the tenths, and gives 0.8. The tenths digit of 5.284 is 2; the 8 is in the hundredths, worth 0.08."
+    },
+    {
+     "optionId": "cmteo82fa00bbtmmj82adxvft",
+     "value": "80",
+     "isKey": false,
+     "tag": "maths-07-decimals-as-two-separate-whole-numbers",
+     "tagDescription": "Thinking 3.12 is larger than 3.8 because 12 is bigger than 8.",
+     "tagChildHint": "The decimal point separates wholes from parts. Compare the parts column by column, starting with the tenths.",
+     "execution": "The child reads the digits after the point, 284, as a separate whole number, so the 8 sits in its tens and is worth 80. In 5.284 the 8 is in the hundredths column, so its value is 0.08."
+    }
+   ],
+   "hint": "Ask which decimal column the digit sits in.",
+   "walkScript": "Spot which column the 8 sits in. It stands in the hundredths place. So its value is eight hundredths, written 0.08. The trap slides the digit into a neighbouring decimal column."
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number is 100 more than 6,970?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82lb00f0tmmjgymta4re",
+     "value": "7070",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82lb00f1tmmjhfxzg4sd",
+     "value": "6980",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child writes the 1 of 100 one column to the right, under the tens instead of the hundreds, so adds 10: 6,970 + 10 = 6,980. In 100 the 1 sits in the hundreds column, so the answer is 7,070."
+    },
+    {
+     "optionId": "cmteo82lb00f2tmmjd1il61gp",
+     "value": "7970",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child writes the 1 of 100 one column to the left, under the thousands instead of the hundreds, so adds 1,000: 6,970 + 1,000 = 7,970. In 100 the 1 sits in the hundreds column, so the answer is 7,070."
+    },
+    {
+     "optionId": "cmteo82lc00f3tmmjlyn7o7jj",
+     "value": "6070",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 but drops the carried 1. The thousands digit stays 6, so the answer reads 6,070 instead of 7,070."
+    }
+   ],
+   "hint": "Add in the hundreds column and watch the carry.",
+   "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. The trap adds into a neighbouring column or drops the carry."
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number is 1,000 more than 9,400?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82li00f4tmmjuzyyx44j",
+     "value": "10400",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82li00f5tmmjraxjjor0",
+     "value": "9500",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child writes the 1 of 1,000 one column to the right, under the hundreds instead of the thousands, so adds 100: 9,400 + 100 = 9,500. In 1,000 the 1 sits in the thousands column, so the 9 thousands become 10 and the answer is 10,400."
+    },
+    {
+     "optionId": "cmteo82li00f6tmmjies79c06",
+     "value": "8400",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagDescription": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
+     "tagChildHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+     "execution": "The child takes 1,000 away instead of adding it, working out 9,400 - 1,000 = 8,400. The question asks for 1,000 more, so the answer is 9,400 + 1,000 = 10,400."
+    },
+    {
+     "optionId": "cmteo82li00f7tmmjf14y60iy",
+     "value": "400",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In the thousands column 9 + 1 makes 10; the child writes 0 but drops the carried 1. No ten-thousands digit is written, which leaves 400 where the answer is 10,400."
+    }
+   ],
+   "hint": "Add in the thousands column and watch the carry.",
+   "walkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column. The trap adds into a neighbouring column or loses the carry."
+  },
+  {
+   "itemId": "MC04-NPV-04",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Round 4,271 to the nearest 100."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82lq00f8tmmjk3d7ejuk",
+     "value": "4300",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82lq00f9tmmjpuslvty9",
+     "value": "4270",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagDescription": "Rounding to the nearest ten or thousand instead of the requested hundred.",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it.",
+     "execution": "The child rounds to the nearest ten instead of the nearest hundred, giving 4270. To the nearest 100, 4,271 is 4300."
+    },
+    {
+     "optionId": "cmteo82lq00fatmmj7ehhnrxu",
+     "value": "4000",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagDescription": "Rounding to the nearest ten or thousand instead of the requested hundred.",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it.",
+     "execution": "The child rounds to the nearest thousand instead of the nearest hundred, giving 4000. To the nearest 100, 4,271 is 4300."
+    },
+    {
+     "optionId": "cmteo82lq00fbtmmj7jr5c3qj",
+     "value": "4200",
+     "isKey": false,
+     "tag": "maths-09-rounding-misdirection",
+     "tagDescription": "Always rounding down regardless of the digit.",
+     "tagChildHint": "Look at the next digit along. If it is 5 or more, round up.",
+     "execution": "The child rounds down regardless of the tens digit, keeping 42 hundreds and giving 4200. The tens digit is 7, so 4,271 rounds up to 4300."
+    }
+   ],
+   "hint": "Look at the tens digit to decide up or down.",
+   "walkScript": "Rounding to the nearest hundred means checking the tens digit. Here it is seven, so round up. 4,271 becomes 4,300. The trap rounds to a different place or chops the end off."
+  },
+  {
+   "itemId": "MC05-NPV-01",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "In the number 8,473, what is the value of the digit 4?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82ra00istmmjvf4yjp7p",
+     "value": "400",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82ra00ittmmj070beim2",
+     "value": "473",
+     "isKey": false,
+     "tag": "maths-114-read-from-the-digit-to-the-end",
+     "tagDescription": "Child gives 652 for the 6 in 4,652 where the answer is 600, taking the digits from the 6 to the end of the number as its value.",
+     "tagChildHint": "Keep that digit in its column and change all the other digits to zeros. The digits after it are not part of its value.",
+     "execution": "The child drops the 8 in front of the 4 but keeps the 7 and the 3 that follow it, giving 473 as the value of the 4. Only the 4 itself counts. It sits in the hundreds column of 8,473, so its value is 400."
+    },
+    {
+     "optionId": "cmteo82ra00iutmmjlcdxtzzf",
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagDescription": "Giving the face value of a digit while ignoring its place value completely.",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!",
+     "execution": "The child gives the digit itself, 4, and ignores the column it sits in. The 4 in 8,473 is in the hundreds column, so its value is 4 hundreds, or 400."
+    },
+    {
+     "optionId": "cmteo82ra00ivtmmjqf0xz8js",
+     "value": "4000",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child reads the 4 as if it sat one column to the left, in the thousands, giving 4,000. In 8,473 the thousands digit is 8 and the 4 is in the hundreds column, so its value is 400."
+    }
+   ],
+   "hint": "Ask which column the digit sits in.",
+   "walkScript": "Find where the 4 sits. It stands in the hundreds column. So its value is four hundreds, which is 400. The trap reads a neighbouring column or its face value."
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number is 100 more than 5,960?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82rg00iwtmmjxaspll63",
+     "value": "6060",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82rg00ixtmmjn4i7tqmf",
+     "value": "5970",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child writes the 1 of 100 one column to the right, under the tens instead of the hundreds, so adds 10: 5,960 + 10 = 5,970. In 100 the 1 sits in the hundreds column, so the answer is 6,060."
+    },
+    {
+     "optionId": "cmteo82rg00iytmmjo5g83zax",
+     "value": "6960",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child writes the 1 of 100 one column to the left, under the thousands instead of the hundreds, so adds 1,000: 5,960 + 1,000 = 6,960. In 100 the 1 sits in the hundreds column, so the answer is 6,060."
+    },
+    {
+     "optionId": "cmteo82rg00iztmmjkshrh0zn",
+     "value": "5060",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In the hundreds column 9 + 1 makes 10; the child writes 0 but drops the carried 1. The thousands digit stays 5, so the answer reads 5,060 instead of 6,060."
+    }
+   ],
+   "hint": "Add in the hundreds column and watch the carry.",
+   "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands. The trap adds into a neighbouring column or drops the carry."
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number is 1,000 more than 9,500?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82rm00j0tmmj8ha9z9ai",
+     "value": "10500",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82rm00j1tmmjq78asvi4",
+     "value": "9600",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child writes the 1 of 1,000 one column to the right, under the hundreds instead of the thousands, so adds 100: 9,500 + 100 = 9,600. In 1,000 the 1 sits in the thousands column, so the answer is 10,500."
+    },
+    {
+     "optionId": "cmteo82rm00j2tmmjnyjv6p3v",
+     "value": "19500",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child writes the 1 of 1,000 one column to the left, under the ten thousands instead of the thousands, so adds 10,000: 9,500 + 10,000 = 19,500. In 1,000 the 1 sits in the thousands column, so the answer is 10,500."
+    },
+    {
+     "optionId": "cmteo82rm00j3tmmjjjh1l3pg",
+     "value": "500",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In the thousands column 9 + 1 makes 10; the child writes 0 but drops the carried 1. No ten-thousands digit is written, which leaves 500 where the answer is 10,500."
+    }
+   ],
+   "hint": "Add in the thousands column and watch the carry.",
+   "walkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column. The trap adds into a neighbouring column or loses the carry."
+  },
+  {
+   "itemId": "MC05-NPV-04",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Round 2,673 to the nearest 100."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82rr00j4tmmj409cd6a9",
+     "value": "2700",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82rr00j5tmmjl8s12m49",
+     "value": "2670",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagDescription": "Rounding to the nearest ten or thousand instead of the requested hundred.",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it.",
+     "execution": "The child rounds to the nearest ten instead of the nearest hundred, giving 2670. To the nearest 100, 2,673 is 2700."
+    },
+    {
+     "optionId": "cmteo82rr00j6tmmjx6vb1idr",
+     "value": "3000",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagDescription": "Rounding to the nearest ten or thousand instead of the requested hundred.",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it.",
+     "execution": "The child rounds to the nearest thousand instead of the nearest hundred, giving 3000. To the nearest 100, 2,673 is 2700."
+    },
+    {
+     "optionId": "cmteo82rr00j7tmmj571z3j1j",
+     "value": "2600",
+     "isKey": false,
+     "tag": "maths-09-rounding-misdirection",
+     "tagDescription": "Always rounding down regardless of the digit.",
+     "tagChildHint": "Look at the next digit along. If it is 5 or more, round up.",
+     "execution": "The child rounds down regardless of the tens digit, keeping 26 hundreds and giving 2600. The tens digit is 7, so 2,673 rounds up to 2700."
+    }
+   ],
+   "hint": "Look at the tens digit to decide up or down.",
+   "walkScript": "Rounding to the nearest hundred means checking the tens digit. Here it is seven, so round up. 2,673 becomes 2,700. The trap rounds to a different place or chops the end off."
+  },
+  {
+   "itemId": "MC05-NPV-05",
+   "questionType": "maths-npv",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "In the number 7.482, what is the value of the digit 8?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82rw00j8tmmjde1zcx2g",
+     "value": "0.08",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82rw00j9tmmjmy929qcx",
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagDescription": "Giving the face value of a digit while ignoring its place value completely.",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!",
+     "execution": "The child gives the digit's face value, 8, ignoring where it sits. In 7.482 the 8 is in the hundredths column, so its value is 0.08."
+    },
+    {
+     "optionId": "cmteo82rw00jatmmjh6686jms",
+     "value": "0.8",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagDescription": "Child gives 60 for the 6 in 4,652 where the answer is 600, reading the digit one column to the right; or 6,000, reading it one column to the left.",
+     "tagChildHint": "Check the columns carefully. Ones, tens, hundreds, thousands. Which column does that digit actually sit in?",
+     "execution": "The child reads the 8 one column to the left, in the tenths, and gives 0.8. The tenths digit of 7.482 is 4; the 8 is in the hundredths, worth 0.08."
+    },
+    {
+     "optionId": "cmteo82rw00jbtmmj66jyds6w",
+     "value": "80",
+     "isKey": false,
+     "tag": "maths-07-decimals-as-two-separate-whole-numbers",
+     "tagDescription": "Thinking 3.12 is larger than 3.8 because 12 is bigger than 8.",
+     "tagChildHint": "The decimal point separates wholes from parts. Compare the parts column by column, starting with the tenths.",
+     "execution": "The child reads the digits after the point, 482, as a separate whole number, so the 8 sits in its tens and is worth 80. In 7.482 the 8 is in the hundredths column, so its value is 0.08."
+    }
+   ],
+   "hint": "Ask which column the decimal digit sits in.",
+   "walkScript": "Find where the 8 sits. It stands in the hundredths column. So its value is eight hundredths, which is 0.08. The trap reads a neighbouring column or the plain digit."
+  },
+  {
+   "itemId": "MC01-STATS-04",
+   "questionType": "maths-stats",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The mean of five numbers is 6. Four of the numbers are 4, 8, 5 and 9. What is the fifth number?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo822f003ktmmjk1iucg0e",
+     "value": "6.5",
+     "isKey": false,
+     "tag": "maths-97-missing-value-mean-slip",
+     "tagDescription": "Averaging only the given numbers and ignoring the missing one.",
+     "tagChildHint": "Work backwards. Multiply the mean by the total number of items to find your grand total.",
+     "execution": "The child finds the mean of the four numbers given, (4 + 8 + 5 + 9) ÷ 4 = 26 ÷ 4 = 6.5, and ignores the missing fifth one. The question needs the total of all five, 5 x 6 = 30, less the 26 given, which is 4."
+    },
+    {
+     "optionId": "cmteo822f003ltmmjrbqoqjq3",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo822f003mtmmjm1g8m299",
+     "value": "30",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagDescription": "Completes part of the chain correctly and gives that intermediate result, without carrying on to the step the question asks for. In a backwards problem the completed part may be the last operation rather than the first.",
+     "tagChildHint": "You found part of it. Now read the question again and finish.",
+     "execution": "The child works out the total of all five numbers correctly, 5 x 6 = 30, and gives that as the answer. The step still to do is taking away the four given numbers, 30 - 26 = 4."
+    },
+    {
+     "optionId": "cmteo822f003ntmmjbdik8a73",
+     "value": "6",
+     "isKey": false,
+     "tag": "maths-110-missing-value-equals-the-average",
+     "tagDescription": "Assumes the unknown in a reverse-mean problem is the mean itself. Child gives 6 for the fifth number where four numbers are 4, 8, 5 and 9 and the mean is 6, and the answer is 4.",
+     "tagChildHint": "The mean is what they share out to. Any number can sit above or below it.",
+     "execution": "The child assumes the missing number must be the mean itself and gives 6. With 6 as the fifth number the total is 32, and 32 ÷ 5 is not 6; the fifth number must be 30 - 26 = 4."
+    }
+   ],
+   "hint": "Multiply the mean by 5 to get the total the numbers must reach.",
+   "walkScript": "Work back from the total. Five numbers with a mean of 6 must add to 30. The four you have add to 26. So the fifth number is 30 take away 26, which is 4."
+  }
+ ]
+}

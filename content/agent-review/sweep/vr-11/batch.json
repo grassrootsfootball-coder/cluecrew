@@ -1,0 +1,1061 @@
+{
+ "batch": "vr-11",
+ "district": "VR",
+ "groups": [
+  "vr:vr-20-complete-the-word"
+ ],
+ "rowCount": 25,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "gen-vr-20-complete-the-word-01",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "T_GER"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-01-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-01-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete T_GER, and the correct word is TIGER, so the key is I. The child drops in A, one of the most common letters in English, without reading the finished word back. That gives TAGER, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-01-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete T_GER, and the correct word is TIGER, so the key is I. The child hears the long I sound and writes Y, as in words like fly and dry. That gives TYGER, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-02",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "DAN_ER"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-02-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-02-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete DAN_ER, and the correct word is DANCER, so the key is C. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives DANTER, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-02-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete DAN_ER, and the correct word is DANCER, so the key is C. The child hears an S sound in the middle and writes S, the usual letter for that sound. That gives DANSER, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-03",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "_EVEN"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-03-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-03-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete _EVEN, and the correct word is SEVEN, so the key is S. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives TEVEN, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-03-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete _EVEN, and the correct word is SEVEN, so the key is S. The child hears an S sound and writes C, because C before E makes the S sound, as in centre. That gives CEVEN, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-04",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "MUS_LE"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-04-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-04-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete MUS_LE, and the correct word is MUSCLE, so the key is C. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives MUSTLE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-04-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete MUS_LE, and the correct word is MUSCLE, so the key is C. The C in this word makes no sound of its own, so the child writes the S sound they hear a second time. That gives MUSSLE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-05",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "P_RPLE"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-05-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-05-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete P_RPLE, and the correct word is PURPLE, so the key is U. The child drops in O, one of the most common letters in English, without reading the finished word back. That gives PORPLE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-05-opt3",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete P_RPLE, and the correct word is PURPLE, so the key is U. The child hears the 'er' sound and writes E, as in words like her and term. That gives PERPLE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-06",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "SI_VER"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-06-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-06-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete SI_VER, and the correct word is SILVER, so the key is L. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives SITVER, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-06-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete SI_VER, and the correct word is SILVER, so the key is L. The child drops in N, one of the most common letters in English, without reading the finished word back. That gives SINVER, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "_AMEL"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-07-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-07-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete _AMEL, and the correct word is CAMEL, so the key is C. The child drops in S, one of the most common letters in English, without reading the finished word back. That gives SAMEL, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-07-opt3",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete _AMEL, and the correct word is CAMEL, so the key is C. The child hears a K sound and writes K, which also makes that sound before A, as in kangaroo. That gives KAMEL, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-08",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "FEN_E"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-08-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-08-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete FEN_E, and the correct word is FENCE, so the key is C. The child drops in R, one of the most common letters in English, without reading the finished word back. That gives FENRE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-08-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete FEN_E, and the correct word is FENCE, so the key is C. The child hears an S sound before the final E and writes S, as in words like sense. That gives FENSE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-09",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "CR_STAL"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-09-opt1",
+     "value": "Y",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-09-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete CR_STAL, and the correct word is CRYSTAL, so the key is Y. The child drops in E, one of the most common letters in English, without reading the finished word back. That gives CRESTAL, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-09-opt3",
+     "value": "I",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete CR_STAL, and the correct word is CRYSTAL, so the key is Y. The child hears the short I sound and writes I, because I and Y can both make that sound. That gives CRISTAL, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-10",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "SP_DER"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-10-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-10-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete SP_DER, and the correct word is SPIDER, so the key is I. The child drops in O, one of the most common letters in English, without reading the finished word back. That gives SPODER, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-10-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete SP_DER, and the correct word is SPIDER, so the key is I. The child hears the long I sound and writes Y, because I and Y can both make that sound. That gives SPYDER, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-11",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "CAS_LE"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-11-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-11-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete CAS_LE, and the correct word is CASTLE, so the key is T. The child drops in E, one of the most common letters in English, without reading the finished word back. That gives CASELE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-11-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete CAS_LE, and the correct word is CASTLE, so the key is T. The T in this word is silent, so the child writes the S sound they hear a second time. That gives CASSLE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-12",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "_IRAFFE"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-12-opt1",
+     "value": "G",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-12-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete _IRAFFE, and the correct word is GIRAFFE, so the key is G. The child drops in S, one of the most common letters in English, without reading the finished word back. That gives SIRAFFE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-12-opt3",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete _IRAFFE, and the correct word is GIRAFFE, so the key is G. The child hears a J sound and writes J, because that is the usual letter for it; here G before I makes the sound. That gives JIRAFFE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-13",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "HOR_E"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-13-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-13-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete HOR_E, and the correct word is HORSE, so the key is S. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives HORTE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-13-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete HOR_E, and the correct word is HORSE, so the key is S. The child hears an S sound before the final E and writes C, as in words like force. That gives HORCE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-14",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "PO_KET"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-14-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-14-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete PO_KET, and the correct word is POCKET, so the key is C. The child drops in S, one of the most common letters in English, without reading the finished word back. That gives POSKET, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-14-opt3",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete PO_KET, and the correct word is POCKET, so the key is C. The child hears the K sound and writes K before the K that is already there. That gives POKKET, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-15",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "BI_YCLE"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-15-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-15-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete BI_YCLE, and the correct word is BICYCLE, so the key is C. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives BITYCLE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-15-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete BI_YCLE, and the correct word is BICYCLE, so the key is C. The child hears an S sound in the middle and writes S, the usual letter for that sound. That gives BISYCLE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-16",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "_ANGAROO"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-16-opt1",
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-16-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete _ANGAROO, and the correct word is KANGAROO, so the key is K. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives TANGAROO, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-16-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete _ANGAROO, and the correct word is KANGAROO, so the key is K. The child hears a K sound and writes C, which also makes that sound before A, as in cat. That gives CANGAROO, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-17",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "S_ATE"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-17-opt1",
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-17-opt2",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete S_ATE, and the correct word is SKATE, so the key is K. The child drops in N, one of the most common letters in English, without reading the finished word back. That gives SNATE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-17-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete S_ATE, and the correct word is SKATE, so the key is K. The child hears a K sound and writes C, which also makes that sound before A, as in cat. That gives SCATE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-18",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "CI_CUS"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-18-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-18-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete CI_CUS, and the correct word is CIRCUS, so the key is R. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives CITCUS, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-18-opt3",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete CI_CUS, and the correct word is CIRCUS, so the key is R. The child drops in A, one of the most common letters in English, without reading the finished word back. That gives CIACUS, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-19",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "TI_KET"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-19-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-19-opt2",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete TI_KET, and the correct word is TICKET, so the key is C. The child drops in N, one of the most common letters in English, without reading the finished word back. That gives TINKET, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-19-opt3",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete TI_KET, and the correct word is TICKET, so the key is C. The child hears the K sound and writes K before the K that is already there. That gives TIKKET, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-20",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "BRID_E"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-20-opt1",
+     "value": "G",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-20-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete BRID_E, and the correct word is BRIDGE, so the key is G. The child drops in S, one of the most common letters in English, without reading the finished word back. That gives BRIDSE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-20-opt3",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete BRID_E, and the correct word is BRIDGE, so the key is G. The ending makes a J sound, so the child writes J after the D instead of G. That gives BRIDJE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-21",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "L_NTERN"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-21-opt1",
+     "value": "A",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-21-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete L_NTERN, and the correct word is LANTERN, so the key is A. The child drops in E, one of the most common letters in English, without reading the finished word back. That gives LENTERN, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-21-opt3",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete L_NTERN, and the correct word is LANTERN, so the key is A. The child drops in O, one of the most common letters in English, without reading the finished word back. That gives LONTERN, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-22",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "MOU_E"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-22-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-22-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete MOU_E, and the correct word is MOUSE, so the key is S. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives MOUTE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-22-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete MOU_E, and the correct word is MOUSE, so the key is S. The child hears an S sound before the final E and writes C, as in words like bounce. That gives MOUCE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-23",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "TUN_EL"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-23-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-23-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete TUN_EL, and the correct word is TUNNEL, so the key is N. The child drops in E, one of the most common letters in English, without reading the finished word back. That gives TUNEEL, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-23-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete TUN_EL, and the correct word is TUNNEL, so the key is N. The child drops in R, one of the most common letters in English, without reading the finished word back. That gives TUNREL, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-24",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "EN_INE"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-24-opt1",
+     "value": "G",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-24-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete EN_INE, and the correct word is ENGINE, so the key is G. The child drops in T, one of the most common letters in English, without reading the finished word back. That gives ENTINE, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-24-opt3",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete EN_INE, and the correct word is ENGINE, so the key is G. The child hears a J sound and writes J, because that is the usual letter for it; here G before I makes the sound. That gives ENJINE, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-25",
+   "questionType": "vr-20-complete-the-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Which letter completes the word?",
+    "P_LOT"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-20-complete-the-word-25-opt1",
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-25-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagDescription": "Defaulted to a common letter without testing the word.",
+     "tagChildHint": "Try your letter in the gap and read the whole word.",
+     "execution": "The task is to complete P_LOT, and the correct word is PILOT, so the key is I. The child drops in A, one of the most common letters in English, without reading the finished word back. That gives PALOT, which is not a word."
+    },
+    {
+     "optionId": "gen-vr-20-complete-the-word-25-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagDescription": "Chose a letter that sounds right but spells a non-word.",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?",
+     "execution": "The task is to complete P_LOT, and the correct word is PILOT, so the key is I. The child hears the long I sound and writes Y, because I and Y can both make that sound. That gives PYLOT, which is not a word."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  }
+ ]
+}

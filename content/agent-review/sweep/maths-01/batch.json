@@ -1,0 +1,1262 @@
+{
+ "batch": "maths-01",
+ "district": "MATHS",
+ "groups": [
+  "maths:maths-calc",
+  "maths:maths-fdp"
+ ],
+ "rowCount": 25,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "MC01-CALC-02",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Work out 62 - 27."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmtereveq0006tmfzt8bzv2hl",
+     "value": "35",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmtereveq0007tmfzaoh3jahc",
+     "value": "45",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagDescription": "Child gives 42 − 17 = 35 where the answer is 25, taking the smaller digit from the larger in each column regardless of which sits on top.",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange.",
+     "execution": "In the ones column the child sees 2 and 7 and takes the smaller from the larger, 7 - 2 = 5, instead of exchanging a ten. The tens column then gives 6 - 2 = 4, so the answer reads 45 where 62 - 27 is 35."
+    },
+    {
+     "optionId": "cmtereveq0008tmfzflc0zzw2",
+     "value": "30",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagDescription": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too.",
+     "execution": "The child rounds 62 to 60 and 27 to 30, both to the nearest ten, and gives 60 - 30 = 30. Rounding 62 down took 2 off and rounding 27 up took 3 more away, so 5 has to be put back to reach 35; the child never does."
+    },
+    {
+     "optionId": "cmtereveq0009tmfzymqid2t9",
+     "value": "40",
+     "isKey": false,
+     "tag": "maths-12-forgetting-to-exchange",
+     "tagDescription": "Leaving the column as a zero or skipping it when the top number is smaller.",
+     "tagChildHint": "If the top column does not have enough, you need to exchange from the next one.",
+     "execution": "The top digit in the ones column, 2, is smaller than 7, so the child writes 0 there instead of exchanging a ten. The tens column gives 6 - 2 = 4, so the answer reads 40 where 62 - 27 is 35."
+    }
+   ],
+   "hint": "When the top digit is smaller, borrow a ten.",
+   "walkScript": "Line up tens and ones. In the ones, 2 is smaller than 7, so borrow a ten. Then 12 minus 7 is 5, and 5 minus 2 is 3, giving 35. The classic slip takes the smaller digit from the larger each time."
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A box holds 6 eggs. A cafe has 4 full boxes and 3 loose eggs. They use 15 eggs. How many eggs are left?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmterevf5000itmfz1ced4jtd",
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmterevf5000jtmfzee70si4w",
+     "value": "9",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagDescription": "A number the question gives is never used at all.",
+     "tagChildHint": "List every number the question gives you. Check you have used each one.",
+     "execution": "The child counts only the eggs in the boxes, 4 x 6 = 24, and never uses the 3 loose eggs. Taking away the 15 used gives 24 - 15 = 9, where 27 - 15 is 12."
+    },
+    {
+     "optionId": "cmterevf5000ktmfzyh1czb1a",
+     "value": "27",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagDescription": "Completes part of the chain correctly and gives that intermediate result, without carrying on to the step the question asks for. In a backwards problem the completed part may be the last operation rather than the first.",
+     "tagChildHint": "You found part of it. Now read the question again and finish.",
+     "execution": "The child works out the starting total correctly, 4 x 6 + 3 = 27, and gives it as the answer. The question asks how many are left after 15 are used, which is the step still to do: 27 - 15 = 12."
+    },
+    {
+     "optionId": "cmterevf5000ltmfz7ahl8wcc",
+     "value": "42",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagDescription": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
+     "tagChildHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+     "execution": "The child finds the starting total of 27 correctly, then adds the 15 eggs used instead of taking them away: 27 + 15 = 42. Eggs that are used are gone, so the count should fall to 12, not rise."
+    }
+   ],
+   "hint": "Total the eggs before taking any away.",
+   "walkScript": "First find how many eggs there are in total. Four sixes make 24, plus 3 loose eggs is 27. Take away the 15 used to leave 12. One slip forgets the loose eggs or adds what was used."
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "A stadium has 8,006 seats. On Saturday 3,478 seats were filled. How many seats were empty?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmterevfa000otmfzyjmi9ucs",
+     "value": "4528",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmterevfa000ptmfz0xxb5mvo",
+     "value": "4522",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagDescription": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too.",
+     "execution": "The child rounds 8,006 down to 8,000 and works out 8,000 - 3,478 = 4,522. Rounding took 6 seats off the total and the child never puts them back, so the answer is 4,528."
+    },
+    {
+     "optionId": "cmterevfa000qtmfz0b8dvk0f",
+     "value": "4500",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagDescription": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too.",
+     "execution": "The child rounds 8006 to 8000 and 3478 to 3500, both to the nearest hundred, and gives 8000 - 3500 = 4500. The 6 dropped from 8006 and the 22 added to 3478 both have to be put back, giving 4528; the child stops at the rounded result."
+    },
+    {
+     "optionId": "cmterevfa000rtmfzsvduiend",
+     "value": "4008",
+     "isKey": false,
+     "tag": "maths-12-forgetting-to-exchange",
+     "tagDescription": "Leaving the column as a zero or skipping it when the top number is smaller.",
+     "tagChildHint": "If the top column does not have enough, you need to exchange from the next one.",
+     "execution": "The child takes one thousand from the 8 and puts ten straight into the ones, so 16 - 8 = 8 and the thousands become 7. In the tens and hundreds the top digit 0 is smaller, so the child writes 0 in each instead of exchanging, and 7 - 3 = 4 gives 4,008 where 8,006 - 3,478 is 4,528."
+    }
+   ],
+   "hint": "Subtract, borrowing through the zeros.",
+   "walkScript": "Take the filled seats from the total seats. Line up the columns and borrow carefully across the zeros. 8006 minus 3478 is 4528. The classic slip takes each smaller digit from the larger, or adds instead."
+  },
+  {
+   "itemId": "MC02-CALC-04",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Tom has £10.00. He buys a comic for £3.45 and a drink for £1.80. How much change does he get?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82310040tmmjamry7wkt",
+     "value": "£4.75",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82310041tmmj8oy561hc",
+     "value": "£3.75",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagDescription": "Counting the carried '1' in addition as a full 10 or adding it twice.",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again.",
+     "execution": "Adding £3.45 + £1.80, the child works 4 + 8 = 12 in the tenths, writes 2 and carries 1, but adds the carried 1 twice: 3 + 1 + 1 + 1 = 6. That makes £6.25 instead of £5.25, and £10 - £6.25 = £3.75 instead of £4.75."
+    },
+    {
+     "optionId": "cmteo82310042tmmjl01lolmy",
+     "value": "£6.55",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagDescription": "A number the question gives is never used at all.",
+     "tagChildHint": "List every number the question gives you. Check you have used each one.",
+     "execution": "The child takes only the comic from £10, £10 - £3.45 = £6.55, and never uses the £1.80 drink. Both together cost £5.25, so the change is £4.75."
+    },
+    {
+     "optionId": "cmteo82310043tmmjemqehuw9",
+     "value": "£6.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "tagDescription": "Dropping the pence and subtracting whole pounds only, or misaligning the pence.",
+     "tagChildHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly.",
+     "execution": "The child drops the pence and works in whole pounds only: £3 + £1 = £4 and £10 - £4 = £6.00. The 45p and 80p add another £1.25, so the change is £4.75."
+    }
+   ],
+   "hint": "Total the spending, then subtract from £10.",
+   "walkScript": "Add the two prices to find the total spent. That comes to £5.25 altogether. Take it from £10.00 to leave £4.75. The trap forgets an item or rounds the prices."
+  },
+  {
+   "itemId": "MC02-CALC-08",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "A cafe buys 12 trays of eggs. Each tray holds 30 eggs. 48 eggs break. The rest are packed into boxes of 6. How many boxes are filled?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo823n004gtmmjf9ixddj9",
+     "value": "52",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo823n004htmmjy551z1lz",
+     "value": "60",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagDescription": "A number the question gives is never used at all.",
+     "tagChildHint": "List every number the question gives you. Check you have used each one.",
+     "execution": "The child never uses the 48 broken eggs and packs them all: 12 × 30 = 360 and 360 ÷ 6 = 60. Taking the 48 away first leaves 312, and 312 ÷ 6 = 52."
+    },
+    {
+     "optionId": "cmteo823n004itmmjnq29rvej",
+     "value": "68",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagDescription": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
+     "tagChildHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+     "execution": "The child adds the 48 broken eggs instead of taking them away: 360 + 48 = 408, and 408 ÷ 6 = 68. Broken eggs cannot be packed, so 360 - 48 = 312 and 312 ÷ 6 = 52."
+    },
+    {
+     "optionId": "cmteo823n004jtmmjrprlzviu",
+     "value": "312",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagDescription": "Completes part of the chain correctly and gives that intermediate result, without carrying on to the step the question asks for. In a backwards problem the completed part may be the last operation rather than the first.",
+     "tagChildHint": "You found part of it. Now read the question again and finish.",
+     "execution": "The child works out the eggs correctly, 12 × 30 = 360, takes away the 48 broken to get 312, and gives that. The question asks for boxes of 6, so 312 ÷ 6 = 52 is still to do."
+    }
+   ],
+   "hint": "Find the eggs left before boxing them.",
+   "walkScript": "Work out the total eggs first: twelve thirties make 360. Take off the 48 that break, leaving 312. Share 312 into boxes of six to get 52. A slip forgets a step or rounds the total."
+  },
+  {
+   "itemId": "MC03-CALC-01",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Work out 356 + 287."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo829c007stmmjjbp4cait",
+     "value": "643",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo829c007ttmmjn62l3vj4",
+     "value": "543",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In the ones 6 + 7 = 13, so 3 is written and 1 carried; in the tens 5 + 8 + 1 = 14, so 4 is written and 1 carried. The child drops that carried hundred, so the hundreds give 3 + 2 = 5 and the answer reads 543 instead of 643."
+    },
+    {
+     "optionId": "cmteo829d007utmmj4tz71cg0",
+     "value": "69",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagDescription": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
+     "tagChildHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+     "execution": "The child subtracts instead of adding, working out 356 - 287 = 69. The sign asks for a total: 356 + 287 = 643."
+    },
+    {
+     "optionId": "cmteo829d007vtmmjdc63bjxj",
+     "value": "443",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagDescription": "Child gives 234 + 158 = 292 where the answer is 392, setting the sum down with only part of one number.",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place.",
+     "execution": "The child drops the 2 hundreds of 287 and adds only 87: 356 + 87 = 443. Every digit of 287 must be added, giving 643."
+    }
+   ],
+   "hint": "Add the ones first and carry the ten.",
+   "walkScript": "Line up the columns and add from the right. Six plus seven makes 13, so carry the ten. Keep going carefully to reach 643. The trap rounds too soon or loses a digit."
+  },
+  {
+   "itemId": "MC03-CALC-04",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Tom buys a game for £8.75 and a case for £3.60. He pays with a £20 note. How much change does he get?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo829u0084tmmjizt279n1",
+     "value": "£7.65",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo829u0085tmmjtkpg1si2",
+     "value": "£6.65",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagDescription": "Counting the carried '1' in addition as a full 10 or adding it twice.",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again.",
+     "execution": "Adding £8.75 + £3.60, the child works 7 + 6 = 13 in the tenths, writes 3 and carries 1, but adds it twice: 8 + 3 + 1 + 1 = 13. That makes £13.35 instead of £12.35, and £20 - £13.35 = £6.65 instead of £7.65."
+    },
+    {
+     "optionId": "cmteo829u0086tmmjcksixs2i",
+     "value": "£16.40",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagDescription": "A number the question gives is never used at all.",
+     "tagChildHint": "List every number the question gives you. Check you have used each one.",
+     "execution": "The child takes only the £3.60 case from £20 and never uses the £8.75 game. That gives £20 − £3.60 = £16.40 instead of £20 − £12.35 = £7.65."
+    },
+    {
+     "optionId": "cmteo829u0087tmmj7v2vroi2",
+     "value": "£7.00",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagDescription": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too.",
+     "execution": "The child rounds £8.75 to £9 and £3.60 to £4, both to the nearest pound, and works out £20 - £13 = £7.00. Rounding added 25p and 40p, 65p in all, which the child never gives back, so the change is £7.65."
+    }
+   ],
+   "hint": "Total the spending, then subtract from £20.",
+   "walkScript": "First add the two prices to find the total spent. That comes to £12.35. Take it from £20 to leave £7.65. The catch rounds the prices or subtracts only one item."
+  },
+  {
+   "itemId": "MC03-CALC-07",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "A club buys 3 footballs at £6.50 each and 2 water bottles at £2.25 each. What is the total cost?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82ag008gtmmjog4bo80j",
+     "value": "£24.00",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82ag008htmmj6cizemrx",
+     "value": "£19.50",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagDescription": "A number the question gives is never used at all.",
+     "tagChildHint": "List every number the question gives you. Check you have used each one.",
+     "execution": "The child works out the footballs, 3 × £6.50 = £19.50, and never uses the 2 water bottles at £2.25 each. Adding 2 × £2.25 = £4.50 gives £24.00."
+    },
+    {
+     "optionId": "cmteo82ag008itmmj9m76zm09",
+     "value": "£17.50",
+     "isKey": false,
+     "tag": "maths-85-miscount-or-rounding-in-measures",
+     "tagDescription": "Adding the item count to the price or multiplying by one fewer item.",
+     "tagChildHint": "Use multiplication for repeated groups. Take the exact price and multiply by the exact count.",
+     "execution": "The child multiplies the football price by one fewer, 2 × £6.50 = £13.00, then adds 2 × £2.25 = £4.50 to get £17.50. There are 3 footballs, so the total is £19.50 + £4.50 = £24.00."
+    },
+    {
+     "optionId": "cmteo82ag008jtmmj4j2k5ddd",
+     "value": "£22.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "tagDescription": "Dropping the pence and subtracting whole pounds only, or misaligning the pence.",
+     "tagChildHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly.",
+     "execution": "The child drops the pence and multiplies whole pounds only: 3 × £6 = £18 and 2 × £2 = £4, giving £22.00. The 3 × 50p and 2 × 25p add £2.00 more, so the total is £24.00."
+    }
+   ],
+   "hint": "Work out each set before adding them.",
+   "walkScript": "Work out each set of items before adding. Three footballs cost £19.50; two bottles cost £4.50. Together that makes £24. One slip rounds the prices or leaves a set out."
+  },
+  {
+   "itemId": "MC03-CALC-08",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "A theatre sells 320 tickets at £15 each. The show costs £1,200 to put on. What is the profit?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82an008ktmmjc61pp68z",
+     "value": "£3600",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82an008ltmmjoxun40dq",
+     "value": "£4800",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagDescription": "A number the question gives is never used at all.",
+     "tagChildHint": "List every number the question gives you. Check you have used each one.",
+     "execution": "The child works out the ticket money, 320 × £15 = £4800, and never uses the £1200 the show costs. Taking the cost away gives the profit, £4800 - £1200 = £3600."
+    },
+    {
+     "optionId": "cmteo82an008mtmmj76gsl38l",
+     "value": "£720",
+     "isKey": false,
+     "tag": "maths-18-missing-long-multiplication-placeholder",
+     "tagDescription": "Forgetting the zero when multiplying the tens digit.",
+     "tagChildHint": "You are multiplying by a ten, not a one! What needs to go in the ones column to show this?",
+     "execution": "Multiplying 320 by 15, the child works 320 × 5 = 1600, then multiplies by the 1 ten but writes 320 without the zero that shows tens. That gives 1600 + 320 = 1920 instead of 4800, and £1920 - £1200 = £720 where the profit is £3600."
+    },
+    {
+     "optionId": "cmteo82an008ntmmj8q4rma7y",
+     "value": "£3300",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagDescription": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too.",
+     "execution": "The child rounds 320 tickets to 300 and works out 300 × £15 = £4500, then £4500 - £1200 = £3300. The 20 tickets rounded away are worth 20 × £15 = £300, which the child never adds back, so the profit is £3600."
+    }
+   ],
+   "hint": "Find the takings, then subtract the costs.",
+   "walkScript": "Find the total money taken before anything else. 320 tickets at £15 make £4,800. Take the £1,200 of costs to leave £3,600. The trap adds the costs or loses a digit."
+  },
+  {
+   "itemId": "MC04-CALC-03",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Work out 48 x 6."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82gr00c4tmmj6ikoz1lz",
+     "value": "288",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82gr00c5tmmjbdj1c5ty",
+     "value": "648",
+     "isKey": false,
+     "tag": "maths-63-misaligned-addition-carry",
+     "tagDescription": "Adding or losing a carried number into the wrong column.",
+     "tagChildHint": "Only carry into the very next column on the left. Do not skip a space.",
+     "execution": "6 × 8 = 48, so the child writes 8 and carries 4, but adds the 4 into the hundreds instead of the tens. The tens give 6 × 4 = 24, written as 4 tens and 2 hundreds, and the hundreds become 2 + 4 = 6, so the answer reads 648 instead of 288."
+    },
+    {
+     "optionId": "cmteo82gr00c6tmmjpkg2v53z",
+     "value": "2448",
+     "isKey": false,
+     "tag": "maths-70-two-digit-column-totals",
+     "tagDescription": "Writing the full two-digit total in a single column without carrying.",
+     "tagChildHint": "Only one digit can go in each column! Carry the extra over to the left.",
+     "execution": "The child writes each column's full product side by side: 6 × 4 = 24 and 6 × 8 = 48 make 2448. The 4 tens of 48 must carry into the 24 tens, giving 240 + 48 = 288."
+    },
+    {
+     "optionId": "cmteo82gr00c7tmmjn10j9vh6",
+     "value": "328",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagDescription": "Counting the carried '1' in addition as a full 10 or adding it twice.",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again.",
+     "execution": "The child carries the 4 from 6 × 8 = 48 but adds it twice: 6 × 4 = 24, then 24 + 4 + 4 = 32. That gives 328 instead of 288."
+    }
+   ],
+   "hint": "Multiply the ones and carry into the tens.",
+   "walkScript": "Multiply the ones first, then the tens. Eight sixes make forty-eight, so write eight and carry four. The tens give twenty-eight, so the answer is 288. The trap drops the carry or writes both products."
+  },
+  {
+   "itemId": "MC04-CALC-06",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Work out 4,002 - 1,375."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82hb00cgtmmj2sxt15o3",
+     "value": "2627",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82hb00chtmmjanoyx8rp",
+     "value": "2620",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagDescription": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too.",
+     "execution": "The child rounds 4,002 to 4,000 and 1,375 to 1,380, both to the nearest ten, and gives 4,000 - 1,380 = 2,620. Rounding 4,002 down took 2 off and rounding 1,375 up took 5 more away, so 7 has to be put back to reach 2,627; the child never does."
+    },
+    {
+     "optionId": "cmteo82hb00citmmjowgbvnr8",
+     "value": "2007",
+     "isKey": false,
+     "tag": "maths-12-forgetting-to-exchange",
+     "tagDescription": "Leaving the column as a zero or skipping it when the top number is smaller.",
+     "tagChildHint": "If the top column does not have enough, you need to exchange from the next one.",
+     "execution": "The child takes one thousand from the 4 and puts ten straight into the ones, so 12 - 5 = 7 and the thousands become 3. In the tens and hundreds the top digit 0 is smaller, so the child writes 0 in each instead of exchanging, and 3 - 1 = 2 gives 2,007 where 4,002 - 1,375 is 2,627."
+    },
+    {
+     "optionId": "cmteo82hb00cjtmmjubziyq4c",
+     "value": "2600",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagDescription": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too.",
+     "execution": "The child rounds 4,002 to 4,000 and 1,375 to 1,400, both to the nearest hundred, and gives 4,000 - 1,400 = 2,600. Rounding 4,002 down took 2 off and rounding 1,375 up took 25 more away, so 27 has to be put back to reach 2,627; the child never does."
+    }
+   ],
+   "hint": "Subtract, borrowing through the zeros.",
+   "walkScript": "Line up the columns and subtract from the right. Borrow carefully all the way across the zeros. 4,002 minus 1,375 is 2,627. The trap takes each smaller digit from the larger."
+  },
+  {
+   "itemId": "MC04-CALC-07",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "A club buys 4 packs of badges with 25 in each pack. They already had 30 badges. They give away 62 badges. How many badges are left?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82hi00cktmmj3unzbnhh",
+     "value": "68",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82hi00cltmmjzq97vuyr",
+     "value": "38",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagDescription": "A number the question gives is never used at all.",
+     "tagChildHint": "List every number the question gives you. Check you have used each one.",
+     "execution": "The child works out the packs, 4 × 25 = 100, and takes away the 62, but never uses the 30 badges they already had. That gives 100 - 62 = 38, where 100 + 30 - 62 is 68."
+    },
+    {
+     "optionId": "cmteo82hi00cmtmmjm9uyxv12",
+     "value": "48",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In 4 × 25 the child works 4 × 5 = 20, writes 0 and drops the carried 2, then 4 × 2 = 8, giving 80 instead of 100. Then 80 + 30 - 62 = 48, where 100 + 30 - 62 is 68."
+    },
+    {
+     "optionId": "cmteo82hi00cntmmjrxxi5vsd",
+     "value": "43",
+     "isKey": false,
+     "tag": "maths-85-miscount-or-rounding-in-measures",
+     "tagDescription": "Adding the item count to the price or multiplying by one fewer item.",
+     "tagChildHint": "Use multiplication for repeated groups. Take the exact price and multiply by the exact count.",
+     "execution": "The child multiplies by one pack too few, 3 × 25 = 75, then adds the 30 and takes away the 62: 75 + 30 - 62 = 43. There are 4 packs, so 100 + 30 - 62 = 68."
+    }
+   ],
+   "hint": "Total everything first, then take away.",
+   "walkScript": "First find the total badges the club now holds. Four packs of twenty-five plus thirty makes 130. Take away the sixty-two given out to leave 68. The trap skips a number or stops partway."
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Work out 465 + 218."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82n100g0tmmjmhpd7x1y",
+     "value": "683",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82n100g1tmmjsawab88q",
+     "value": "673",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In the ones 5 + 8 = 13, so the child writes 3 but drops the carried ten. The tens then give 6 + 1 = 7 instead of 8, so the answer reads 673 instead of 683."
+    },
+    {
+     "optionId": "cmteo82n100g2tmmjlsqj4zcz",
+     "value": "283",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagDescription": "Child gives 234 + 158 = 292 where the answer is 392, setting the sum down with only part of one number.",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place.",
+     "execution": "The child drops the 4 hundreds of 465 and adds only 65: 65 + 218 = 283. Every digit of 465 must be added, giving 683."
+    },
+    {
+     "optionId": "cmteo82n100g3tmmjrqrihba1",
+     "value": "247",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagDescription": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
+     "tagChildHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+     "execution": "The child subtracts instead of adding, working out 465 - 218 = 247. The sign asks for a total: 465 + 218 = 683."
+    }
+   ],
+   "hint": "Add the ones first and carry the ten.",
+   "walkScript": "Line up the columns and add from the right. Five plus eight makes thirteen, so carry the ten. Keep going to reach 683. The trap drops a carry or rounds the numbers."
+  },
+  {
+   "itemId": "MC05-CALC-02",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Work out 83 - 46."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82n800g4tmmjku9iil0l",
+     "value": "37",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82n800g5tmmjxr1jtbuy",
+     "value": "43",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagDescription": "Child gives 42 − 17 = 35 where the answer is 25, taking the smaller digit from the larger in each column regardless of which sits on top.",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange.",
+     "execution": "In the ones the child takes the smaller digit from the larger, 6 - 3 = 3, instead of exchanging a ten. The tens give 8 - 4 = 4, so the answer reads 43 where 83 - 46 is 37."
+    },
+    {
+     "optionId": "cmteo82n800g6tmmj8mp5c9eu",
+     "value": "129",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagDescription": "Adding instead of subtracting, multiplying instead of dividing, or vice versa.",
+     "tagChildHint": "Look at the words in the question. Are things getting bigger, smaller, or being shared?",
+     "execution": "The child adds instead of subtracting, working out 83 + 46 = 129. The sign asks for the difference: 83 - 46 = 37."
+    },
+    {
+     "optionId": "cmteo82n800g7tmmjpagk2ker",
+     "value": "77",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagDescription": "Child gives 234 + 158 = 292 where the answer is 392, setting the sum down with only part of one number.",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place.",
+     "execution": "The child drops the 4 tens of 46 and takes away only the 6: 83 - 6 = 77. All of 46 must come off, giving 37."
+    }
+   ],
+   "hint": "When the top digit is smaller, borrow a ten.",
+   "walkScript": "Line up the tens and ones. In the ones, three is smaller than six, so borrow a ten. Then the answer is 37. The trap takes the smaller digit from the larger each time."
+  },
+  {
+   "itemId": "MC05-CALC-03",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Work out 57 x 4."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82ne00g8tmmjpcmzjx97",
+     "value": "228",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82ne00g9tmmj5c0ukba4",
+     "value": "408",
+     "isKey": false,
+     "tag": "maths-63-misaligned-addition-carry",
+     "tagDescription": "Adding or losing a carried number into the wrong column.",
+     "tagChildHint": "Only carry into the very next column on the left. Do not skip a space.",
+     "execution": "4 × 7 = 28, so the child writes 8 and carries 2, but adds the 2 into the hundreds instead of the tens. The tens give 4 × 5 = 20, written as 0 tens and 2 hundreds, and the hundreds become 2 + 2 = 4, so the answer reads 408 instead of 228."
+    },
+    {
+     "optionId": "cmteo82ne00gatmmjhrvof4qy",
+     "value": "2028",
+     "isKey": false,
+     "tag": "maths-70-two-digit-column-totals",
+     "tagDescription": "Writing the full two-digit total in a single column without carrying.",
+     "tagChildHint": "Only one digit can go in each column! Carry the extra over to the left.",
+     "execution": "The child writes each column's full product side by side: 4 × 5 = 20 and 4 × 7 = 28 make 2028. The 2 tens of 28 must carry into the 20 tens, giving 200 + 28 = 228."
+    },
+    {
+     "optionId": "cmteo82ne00gbtmmjx1nhcqom",
+     "value": "248",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagDescription": "Counting the carried '1' in addition as a full 10 or adding it twice.",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again.",
+     "execution": "The child carries the 2 from 4 × 7 = 28 but adds it twice: 4 × 5 = 20, then 20 + 2 + 2 = 24. That gives 248 instead of 228."
+    }
+   ],
+   "hint": "Multiply the ones and carry into the tens.",
+   "walkScript": "Multiply the ones first, then the tens. Seven fours make twenty-eight, so write eight and carry two. The tens give twenty-two, so the answer is 228. The trap drops the carry or writes both products."
+  },
+  {
+   "itemId": "MC05-CALC-07",
+   "questionType": "maths-calc",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "A baker makes 5 trays of 24 muffins. She already had 18 muffins. She sells 96 muffins. How many muffins are left?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82o200gotmmj4wbf8zgn",
+     "value": "42",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82o200gptmmj9b8rrln8",
+     "value": "24",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagDescription": "A number the question gives is never used at all.",
+     "tagChildHint": "List every number the question gives you. Check you have used each one.",
+     "execution": "The child works out the 5 trays, 5 × 24 = 120, and takes away the 96 sold, but never uses the 18 muffins she already had. That gives 120 - 96 = 24, where 120 + 18 - 96 is 42."
+    },
+    {
+     "optionId": "cmteo82o200gqtmmjfqy76vny",
+     "value": "22",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagDescription": "Forgetting to add a carried ten or hundred to the next column's product or sum.",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column.",
+     "execution": "In 5 × 24 the child works 5 × 4 = 20, writes 0 and drops the carried 2, then 5 × 2 = 10, giving 100 instead of 120. Then 100 + 18 - 96 = 22, where 120 + 18 - 96 is 42."
+    },
+    {
+     "optionId": "cmteo82o200grtmmjcbdelo6t",
+     "value": "38",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagDescription": "Child gives 62 - 27 = 30 where the answer is 35, rounding both to the nearest ten and giving the rounded result.",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too.",
+     "execution": "The child finds 120 + 18 = 138, then rounds the 96 sold up to 100 to make the take-away easy: 138 - 100 = 38. Rounding took 4 too many away and the child never adds them back, so the answer is 42."
+    }
+   ],
+   "hint": "Total everything first, then take away.",
+   "walkScript": "First find the total muffins the baker now holds. Five trays of twenty-four plus eighteen makes 138. Take away the ninety-six sold to leave 42. The trap skips a number or stops partway."
+  },
+  {
+   "itemId": "MC01-FDP-02",
+   "questionType": "maths-fdp",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What is 2/3 of 12?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo81xe000stmmjn92j1io1",
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo81xe000ttmmjkjar2ch5",
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+     "tagChildHint": "A fraction is two numbers working together. Use both.",
+     "execution": "The child divides 12 by the bottom number 3 and stops there, giving 4 instead of 8. Only one of the two numbers in the fraction is used."
+    },
+    {
+     "optionId": "cmteo81xe000utmmjpwp1trs2",
+     "value": "24",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+     "tagChildHint": "A fraction is two numbers working together. Use both.",
+     "execution": "The child multiplies 12 by the top number 2 and never divides by the bottom number 3, giving 24 instead of 8. The fraction is treated as the single number 2. Using it upside down would give 12 × 3 ÷ 2 = 18, not 24."
+    },
+    {
+     "optionId": "cmteo81xe000vtmmjkv7zjme2",
+     "value": "18",
+     "isKey": false,
+     "tag": "maths-24-inverted-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 18 where the answer is 8, using three halves of 12 instead of two thirds.",
+     "tagChildHint": "Check which number is on top. Turning it over changes the fraction.",
+     "execution": "The child turns 2/3 upside down and finds three halves of 12, working out 12 × 3 ÷ 2 = 18. The answer is 12 ÷ 3 × 2 = 8."
+    }
+   ],
+   "hint": "Divide by the bottom, then times the top.",
+   "walkScript": "To find two thirds, first find one third. 12 divided by 3 is 4 for one part. Two parts make 4 times 2, which is 8. A common slip stops at one part or flips the fraction."
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "questionType": "maths-fdp",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "A bag holds 3/4 kg of rice. How many bags can be filled from 15 kg of rice?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo81y90018tmmj14wyllof",
+     "value": "20",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo81y90019tmmj24um9kyk",
+     "value": "11.25",
+     "isKey": false,
+     "tag": "maths-24-inverted-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 18 where the answer is 8, using three halves of 12 instead of two thirds.",
+     "tagChildHint": "Check which number is on top. Turning it over changes the fraction.",
+     "execution": "Dividing by 3/4 means multiplying by 4/3, but the child uses the fraction the wrong way up and works out 15 × 3 ÷ 4 = 11.25. The answer is 15 × 4 ÷ 3 = 20 bags."
+    },
+    {
+     "optionId": "cmteo81y9001atmmj24uav0ro",
+     "value": "5",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+     "tagChildHint": "A fraction is two numbers working together. Use both.",
+     "execution": "The child divides 15 by the top number 3 and stops there, giving 5. Only one number of the fraction is used; dividing by 3/4 gives 15 ÷ 3 × 4 = 20."
+    },
+    {
+     "optionId": "cmteo81y9001btmmjchv7coe1",
+     "value": "15",
+     "isKey": false,
+     "tag": "maths-79-dividing-by-a-fraction-error",
+     "tagDescription": "Adding the fraction or treating a half as one whole when dividing.",
+     "tagChildHint": "How many halves can you pour into one whole litre?",
+     "execution": "The child treats each 3/4 kg bag as if it held a whole kilogram, so 15 kg fills 15 bags. Each bag holds less than 1 kg, so more bags are needed: 15 ÷ 3/4 = 15 × 4 ÷ 3 = 20."
+    }
+   ],
+   "hint": "To divide by a fraction, flip it and multiply.",
+   "walkScript": "Dividing by 3/4 asks how many three-quarters fit in 15. Flip the divisor: 15 times 4/3 is 20 bags. The classic slip multiplies by the fraction, or misreads three-quarters."
+  },
+  {
+   "itemId": "MC02-FDP-02",
+   "questionType": "maths-fdp",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What is 3/4 of 24?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo823z004otmmjzv0n40ke",
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo823z004ptmmj6m72i30q",
+     "value": "6",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+     "tagChildHint": "A fraction is two numbers working together. Use both.",
+     "execution": "The child divides 24 by the bottom number 4 and stops there, giving 6 instead of 18. Only one of the two numbers in the fraction is used."
+    },
+    {
+     "optionId": "cmteo823z004qtmmjynjpnb3c",
+     "value": "32",
+     "isKey": false,
+     "tag": "maths-24-inverted-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 18 where the answer is 8, using three halves of 12 instead of two thirds.",
+     "tagChildHint": "Check which number is on top. Turning it over changes the fraction.",
+     "execution": "The child turns 3/4 upside down and finds four thirds of 24, working out 24 × 4 ÷ 3 = 32. The answer is 24 ÷ 4 × 3 = 18."
+    },
+    {
+     "optionId": "cmteo823z004rtmmj7lti23g0",
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+     "tagChildHint": "A fraction is two numbers working together. Use both.",
+     "execution": "The child divides 24 by the top number 3 and stops there, giving 8 instead of 18. The fraction is treated as the single number 3; three quarters of 24 is 24 ÷ 4 × 3 = 18."
+    }
+   ],
+   "hint": "Divide by the bottom, then multiply by the top.",
+   "walkScript": "Divide by the bottom first, then times the top. A quarter of 24 is 6, so three quarters is 18. One trap stops at one part. Another turns the fraction upside down."
+  },
+  {
+   "itemId": "MC02-FDP-03",
+   "questionType": "maths-fdp",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What is 40% of 60?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo8244004stmmjdjiuy3so",
+     "value": "6",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagDescription": "Completes part of the chain correctly and gives that intermediate result, without carrying on to the step the question asks for. In a backwards problem the completed part may be the last operation rather than the first.",
+     "tagChildHint": "You found part of it. Now read the question again and finish.",
+     "execution": "The child finds 10% of 60 correctly by dividing by 10, gets 6, and gives that as the answer. They stop before multiplying by 4 to reach 40%, which gives 24."
+    },
+    {
+     "optionId": "cmteo8244004ttmmjsm9xq3ab",
+     "value": "24",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo8244004utmmj1zscio7e",
+     "value": "20",
+     "isKey": false,
+     "tag": "maths-77-treating-a-percentage-as-money",
+     "tagDescription": "Subtracting the percentage digits directly as pounds or pence.",
+     "tagChildHint": "Percent means \"out of 100\". It is a proportion, not an exact amount of money!",
+     "execution": "The child takes the percentage figure straight off the amount, working out 60 − 40 = 20. The 40 is used as a quantity to subtract rather than as 40 out of every 100, which gives 24."
+    },
+    {
+     "optionId": "cmteo8244004vtmmjjf2b976n",
+     "value": "150",
+     "isKey": false,
+     "tag": "maths-24-inverted-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 18 where the answer is 8, using three halves of 12 instead of two thirds.",
+     "tagChildHint": "Check which number is on top. Turning it over changes the fraction.",
+     "execution": "The child uses 40% as 40/100 turned upside down, so works out 60 × 100 ÷ 40 = 150 instead of 60 × 40 ÷ 100 = 24. Multiplying by the bottom number and dividing by the top makes the answer bigger than 60 when 40% of it must be smaller."
+    }
+   ],
+   "hint": "Turn 40% into two fifths, then find the parts.",
+   "walkScript": "Percentages first become parts. One fifth of 60 is 12, so two fifths is 24. One trap stops at one part. Another treats the percent as pounds."
+  },
+  {
+   "itemId": "MC03-FDP-02",
+   "questionType": "maths-fdp",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What is 3/4 of 24?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82b5008stmmjanf8ahps",
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82b5008ttmmj6bod41h7",
+     "value": "6",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+     "tagChildHint": "A fraction is two numbers working together. Use both.",
+     "execution": "The child divides 24 by the bottom number 4 and stops there, giving 6 instead of 18. Only one of the two numbers in the fraction is used."
+    },
+    {
+     "optionId": "cmteo82b5008utmmj42w7yabk",
+     "value": "72",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+     "tagChildHint": "A fraction is two numbers working together. Use both.",
+     "execution": "The child multiplies 24 by the top number 3 and never divides by the bottom number 4, giving 72 instead of 18. The fraction is treated as the single number 3. Using it upside down would give 24 × 4 ÷ 3 = 32, not 72."
+    },
+    {
+     "optionId": "cmteo82b5008vtmmj5jc76tzn",
+     "value": "32",
+     "isKey": false,
+     "tag": "maths-24-inverted-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 18 where the answer is 8, using three halves of 12 instead of two thirds.",
+     "tagChildHint": "Check which number is on top. Turning it over changes the fraction.",
+     "execution": "The child turns 3/4 upside down and finds four thirds of 24, working out 24 × 4 ÷ 3 = 32. The answer is 24 ÷ 4 × 3 = 18."
+    }
+   ],
+   "hint": "Divide by the bottom, then times the top.",
+   "walkScript": "To find three quarters, first find one quarter. 24 shared by 4 is 6 for one part. Three parts make 6 times 3, which is 18. A common slip stops at one part or flips the fraction."
+  },
+  {
+   "itemId": "MC03-FDP-03",
+   "questionType": "maths-fdp",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What is 25% of £44?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82bc008wtmmjg29qwld3",
+     "value": "£11",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82bc008xtmmj60oiplsn",
+     "value": "£22",
+     "isKey": false,
+     "tag": "maths-78-percentage-fraction-confusion",
+     "tagDescription": "Child gives 25% of 80 = 40 where the answer is 20, treating 25% as a half rather than a quarter.",
+     "tagChildHint": "50% is a half. 25% is exactly half of that, which makes it one quarter!",
+     "execution": "The child treats 25% as a half rather than a quarter and works out £44 ÷ 2 = £22. 25% is one quarter, so the answer is £44 ÷ 4 = £11."
+    },
+    {
+     "optionId": "cmteo82bc008ytmmj8v2khcy0",
+     "value": "£19",
+     "isKey": false,
+     "tag": "maths-77-treating-a-percentage-as-money",
+     "tagDescription": "Subtracting the percentage digits directly as pounds or pence.",
+     "tagChildHint": "Percent means \"out of 100\". It is a proportion, not an exact amount of money!",
+     "execution": "The child takes the 25 straight off the amount as pounds, working out £44 - £25 = £19. 25% is a share of the £44, so the answer is £44 ÷ 4 = £11."
+    },
+    {
+     "optionId": "cmteo82bc008ztmmjpqdgjfde",
+     "value": "£1,100",
+     "isKey": false,
+     "tag": "percentage-never-divided-by-hundred",
+     "tagDescription": "multiplies by the percentage figure and never divides by one hundred, so the answer grows where it should shrink.",
+     "tagChildHint": "This answer treats the percentage as a whole number. A percentage is a share out of one hundred.",
+     "execution": "The child multiplies £44 by 25 and never divides by 100, giving £1,100. 25% is 25 out of every 100, so the answer is 44 × 25 ÷ 100 = £11."
+    }
+   ],
+   "hint": "25% is a quarter, so divide by four.",
+   "walkScript": "25% means one quarter. Find a quarter of 44 by sharing into four. That gives £11. The catch takes 25 off, halves instead, or rounds the amount first."
+  },
+  {
+   "itemId": "MC04-FDP-02",
+   "questionType": "maths-fdp",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What is 1/4 of 40?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82hw00cstmmj1a1ttfl6",
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82hw00cttmmjvquoywhh",
+     "value": "20",
+     "isKey": false,
+     "tag": "maths-111-halved-instead-of-quartered",
+     "tagDescription": "Child gives 20 for 1/4 of 40 where the answer is 10, finding half of the amount instead of a quarter of it.",
+     "tagChildHint": "A quarter is one of four equal parts, not one of two. Split the amount into four equal parts first.",
+     "execution": "The child finds half of 40 instead of a quarter, splitting it into two equal parts: 40 ÷ 2 = 20. A quarter is one of four equal parts, so 1/4 of 40 is 40 ÷ 4 = 10."
+    },
+    {
+     "optionId": "cmteo82hw00cutmmjmezh558x",
+     "value": "160",
+     "isKey": false,
+     "tag": "maths-24-inverted-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 18 where the answer is 8, using three halves of 12 instead of two thirds.",
+     "tagChildHint": "Check which number is on top. Turning it over changes the fraction.",
+     "execution": "The child turns 1/4 upside down and finds four lots of 40, working out 40 × 4 ÷ 1 = 160. The answer is 40 ÷ 4 × 1 = 10."
+    },
+    {
+     "optionId": "cmteo82hw00cvtmmjjmeeknsg",
+     "value": "40",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagDescription": "Child gives 2/3 of 12 = 24 where the answer is 8, using only the numerator; or 15 divided by 3/4 = 5 where the answer is 20, dividing by the numerator alone — treating the fraction as a single number.",
+     "tagChildHint": "A fraction is two numbers working together. Use both.",
+     "execution": "The child multiplies 40 by the top number 1 and never divides by the bottom number 4, giving 40 instead of 10. The fraction is treated as the single number 1."
+    }
+   ],
+   "hint": "A quarter means divide by four.",
+   "walkScript": "A quarter means sharing into four equal parts. Share 40 into four to get 10 each. So a quarter of 40 is 10. The trap flips the fraction or halves instead."
+  },
+  {
+   "itemId": "MC04-FDP-07",
+   "questionType": "maths-fdp",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "A box holds 32 chocolates. 3/8 of them are dark. Of the chocolates that are left, one quarter are white. How many white chocolates are there?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82ir00dctmmjaeamiwrp",
+     "value": "5",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82ir00ddtmmjjepsjkxt",
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-82-fraction-of-the-wrong-whole",
+     "tagDescription": "Halving the starting total instead of the remaining amount in a multi-step fraction problem.",
+     "tagChildHint": "Are you finding a fraction of the total, or of what is left?",
+     "execution": "The child takes one quarter of all 32 chocolates, 32 ÷ 4 = 8, instead of a quarter of the 20 left after the dark ones. A quarter of 20 is 5."
+    },
+    {
+     "optionId": "cmteo82ir00detmmj3jez6ch8",
+     "value": "10",
+     "isKey": false,
+     "tag": "maths-111-halved-instead-of-quartered",
+     "tagDescription": "Child gives 20 for 1/4 of 40 where the answer is 10, finding half of the amount instead of a quarter of it.",
+     "tagChildHint": "A quarter is one of four equal parts, not one of two. Split the amount into four equal parts first.",
+     "execution": "The child works out the dark chocolates correctly, 3/8 of 32 = 12, leaving 20, then takes half of the 20 instead of a quarter: 20 ÷ 2 = 10. A quarter of 20 is 20 ÷ 4 = 5 white chocolates."
+    },
+    {
+     "optionId": "cmteo82ir00dftmmjrlsnqnej",
+     "value": "20",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagDescription": "Completes part of the chain correctly and gives that intermediate result, without carrying on to the step the question asks for. In a backwards problem the completed part may be the last operation rather than the first.",
+     "tagChildHint": "You found part of it. Now read the question again and finish.",
+     "execution": "The child works out the dark chocolates correctly, 3/8 of 32 = 12, finds the 32 - 12 = 20 left, and gives that. The question asks for the white ones, a quarter of those 20, which is 5."
+    }
+   ],
+   "hint": "Find the rest, then take the fraction of the rest.",
+   "walkScript": "Find the dark ones first: three eighths of the box. Take those away to see how many are left. A quarter of the rest are white, giving 5. The trap uses the whole box or stops early."
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "questionType": "maths-fdp",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "A tank holds 40 litres of water. 3/5 of it is used on Monday. On Tuesday, one quarter of what is left is used. How many litres are left after Tuesday?"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "cmteo82ix00dgtmmjcjyoc8xe",
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteo82ix00dhtmmjpw997o8m",
+     "value": "6",
+     "isKey": false,
+     "tag": "maths-82-fraction-of-the-wrong-whole",
+     "tagDescription": "Halving the starting total instead of the remaining amount in a multi-step fraction problem.",
+     "tagChildHint": "Are you finding a fraction of the total, or of what is left?",
+     "execution": "The child takes Tuesday's quarter of the whole 40 litres, 40 ÷ 4 = 10, instead of a quarter of the 16 litres left after Monday. That gives 16 - 10 = 6 where 16 - 4 is 12."
+    },
+    {
+     "optionId": "cmteo82ix00ditmmjytg5m68n",
+     "value": "16",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagDescription": "Completes part of the chain correctly and gives that intermediate result, without carrying on to the step the question asks for. In a backwards problem the completed part may be the last operation rather than the first.",
+     "tagChildHint": "You found part of it. Now read the question again and finish.",
+     "execution": "The child works out Monday correctly, 3/5 of 40 = 24 litres used, and gives the 40 - 24 = 16 litres left. Tuesday is still to do: a quarter of 16 is 4, so 16 - 4 = 12 litres are left."
+    },
+    {
+     "optionId": "cmteo82ix00djtmmjeffdr6bx",
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-111-halved-instead-of-quartered",
+     "tagDescription": "Child gives 20 for 1/4 of 40 where the answer is 10, finding half of the amount instead of a quarter of it.",
+     "tagChildHint": "A quarter is one of four equal parts, not one of two. Split the amount into four equal parts first.",
+     "execution": "Monday uses 3/5 of 40 = 24 litres, leaving 16. On Tuesday the child takes half of the 16 instead of a quarter, 16 ÷ 2 = 8 litres used, and gives the 16 - 8 = 8 left. A quarter of 16 is 4, so 12 litres are left."
+    }
+   ],
+   "hint": "Each step uses what is left, not the start.",
+   "walkScript": "Take away Monday's share: 3/5 of 40 is 24, leaving 16. Now Tuesday uses a quarter of those 16, which is 4. So 12 litres are left. The trap fractions the first total."
+  }
+ ]
+}

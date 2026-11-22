@@ -1,0 +1,977 @@
+{
+ "batch": "vr-04",
+ "district": "VR",
+ "groups": [
+  "vr:vr-08-move-letter"
+ ],
+ "rowCount": 23,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "gen-vr-08-move-letter-01",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "HEART   (OLD)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-01-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-01-opt2",
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves H. Taking H out of HEART leaves EART, which is not a word — the first word breaks. The answer is T: HEAR and TOLD."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-01-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves R. HEART without R is HEAT, a real word — but OLD cannot take R anywhere and make a word; the best try is OLDR. The second word breaks. The answer is T: HEAR and TOLD."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-02",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "STICK   (EACH)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-02-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-02-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves S. STICK without S is TICK, a real word — but EACH cannot take S anywhere and make a word; the best try is SEACH. The second word breaks. The answer is T: SICK and TEACH."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-02-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves C. Taking C out of STICK leaves STIK, which is not a word — the first word breaks. The answer is T: SICK and TEACH."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-03",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "DRAWN   (DANCE)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-03-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-03-opt2",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves D. Taking D out of DRAWN leaves RAWN, which is not a word — the first word breaks. The answer is R: DAWN and DANCER."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-03-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves N. DRAWN without N is DRAW, a real word — but DANCE cannot take N anywhere and make a word; the best try is DANCEN. The second word breaks. The answer is R: DAWN and DANCER."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-04",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "TABLE   (OWN)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-04-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-04-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves A. Taking A out of TABLE leaves TBLE, which is not a word — the first word breaks. The answer is T: ABLE and TOWN."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-04-opt3",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves B. TABLE without B is TALE, a real word — but OWN cannot take B anywhere and make a word; the best try is OWNB. The second word breaks. The answer is T: ABLE and TOWN."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-05",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "SPEND   (SOON)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-05-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-05-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves E. Taking E out of SPEND leaves SPND, which is not a word — the first word breaks. The answer is P: SEND and SPOON."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-05-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves N. SPEND without N is SPED, a real word — but SOON cannot take N anywhere and make a word; the best try is SNOON. The second word breaks. The answer is P: SEND and SPOON."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-06",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "THANK   (SAME)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-06-opt1",
+     "value": "H",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-06-opt2",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves K. THANK without K is THAN, a real word — but SAME cannot take K anywhere and make a word; the best try is SAMEK. The second word breaks. The answer is H: TANK and SHAME."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-06-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves N. Taking N out of THANK leaves THAK, which is not a word — the first word breaks. The answer is H: TANK and SHAME."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-07",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "LADY   (PART)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-07-opt1",
+     "value": "Y",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-07-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves A. Taking A out of LADY leaves LDY, which is not a word — the first word breaks. The answer is Y: LAD and PARTY."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-07-opt3",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves D. LADY without D is LAY, a real word — but PART cannot take D anywhere and make a word; the best try is PARTD. The second word breaks. The answer is Y: LAD and PARTY."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-10",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "PLANE   (HUG)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-10-opt1",
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-10-opt2",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves N. Taking N out of PLANE leaves PLAE, which is not a word — the first word breaks. The answer is E: PLAN and HUGE."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-10-opt3",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves P. PLANE without P is LANE, a real word — but HUG cannot take P anywhere and make a word; the best try is HUGP. The second word breaks. The answer is E: PLAN and HUGE."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-11",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "LIKED   (MONEY)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-11-opt1",
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-11-opt2",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves D. LIKED without D is LIKE, a real word — but MONEY cannot take D anywhere and make a word; the best try is MONEYD. The second word breaks. The answer is K: LIED and MONKEY."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-11-opt3",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves E. Taking E out of LIKED leaves LIKD, which is not a word — the first word breaks. The answer is K: LIED and MONKEY."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-12",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "CUBE   (ONE)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-12-opt1",
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-12-opt2",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves C. Taking C out of CUBE leaves UBE, which is not a word — the first word breaks. The answer is B: CUE and BONE."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-12-opt3",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves E. CUBE without E is CUB, a real word — but ONE cannot take E anywhere and make a word; the best try is ONEE. The second word breaks. The answer is B: CUE and BONE."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-13",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "PLATE   (ART)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-13-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-13-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves A. Taking A out of PLATE leaves PLTE, which is not a word — the first word breaks. The answer is P: LATE and PART."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-13-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves L. PLATE without L is PATE, a real word — but ART cannot take L anywhere and make a word; the best try is ARTL. The second word breaks. The answer is P: LATE and PART."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-14",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "RANGE   (PACE)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-14-opt1",
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-14-opt2",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves N. RANGE without N is RAGE, a real word — but PACE cannot take N anywhere and make a word; the best try is PANCE. The second word breaks. The answer is E: RANG and PEACE."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-14-opt3",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves A. Taking A out of RANGE leaves RNGE, which is not a word — the first word breaks. The answer is E: RANG and PEACE."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-15",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "BREAD   (LOW)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-15-opt1",
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-15-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves R. BREAD without R is BEAD, a real word — but LOW cannot take R anywhere and make a word; the best try is LOWR. The second word breaks. The answer is B: READ and BLOW."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-15-opt3",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves A. BREAD without A is BRED, a real word — but LOW cannot take A anywhere and make a word; the best try is LOWA. The second word breaks. The answer is B: READ and BLOW."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-16",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "PLANET   (SEA)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-16-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-16-opt2",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves P. Taking P out of PLANET leaves LANET, which is not a word — the first word breaks. The answer is T: PLANE and SEAT."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-16-opt3",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves E. PLANET without E is PLANT, a real word — but SEA cannot take E anywhere and make a word; the best try is SEAE. The second word breaks. The answer is T: PLANE and SEAT."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-17",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "SHOUT   (COLD)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-17-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-17-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves S. Taking S out of SHOUT leaves HOUT, which is not a word — the first word breaks. The answer is U: SHOT and COULD."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-17-opt3",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves O. SHOUT without O is SHUT, a real word — but COLD cannot take O anywhere and make a word; the best try is COLDO. The second word breaks. The answer is U: SHOT and COULD."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-18",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "HEARD   (ROUND)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-18-opt1",
+     "value": "A",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-18-opt2",
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves H. Taking H out of HEARD leaves EARD, which is not a word — the first word breaks. The answer is A: HERD and AROUND."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-18-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves R. HEARD without R is HEAD, a real word — but ROUND cannot take R anywhere and make a word; the best try is ROUNDR. The second word breaks. The answer is A: HERD and AROUND."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-19",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "MEANT   (BAD)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-19-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-19-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves E. BAD could take E to make BEAD, but taking E out of MEANT leaves MANT, which is not a word — the first word breaks. The answer is N: MEAT and BAND."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-19-opt3",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves T. MEANT without T is MEAN, a real word — but BAD cannot take T anywhere and make a word; the best try is BADT. The second word breaks. The answer is N: MEAT and BAND."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-20",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "MINCE   (KIT)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-20-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-20-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves E. Taking E out of MINCE leaves MINC, which is not a word — the first word breaks. The answer is N: MICE and KNIT."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-20-opt3",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves C. MINCE without C is MINE, a real word — but KIT cannot take C anywhere and make a word; the best try is KITC. The second word breaks. The answer is N: MICE and KNIT."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-21",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "BRUSH   (RING)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-21-opt1",
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-21-opt2",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves U. Taking U out of BRUSH leaves BRSH, which is not a word — the first word breaks. The answer is B: RUSH and BRING."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-21-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves R. BRUSH without R is BUSH, a real word — but RING cannot take R anywhere and make a word; the best try is RINGR. The second word breaks. The answer is B: RUSH and BRING."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-22",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "SLIDE   (FOOD)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-22-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-22-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves S. Taking S out of SLIDE leaves LIDE, which is not a word — the first word breaks. The answer is L: SIDE and FLOOD."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-22-opt3",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves E. SLIDE without E is SLID, a real word — but FOOD cannot take E anywhere and make a word; the best try is FOODE. The second word breaks. The answer is L: SIDE and FLOOD."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-23",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "LEARN   (TIP)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-23-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-23-opt2",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves L. LEARN without L is EARN, a real word — but TIP cannot take L anywhere and make a word; the best try is TLIP. The second word breaks. The answer is R: LEAN and TRIP."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-23-opt3",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves E. Taking E out of LEARN leaves LARN, which is not a word — the first word breaks. The answer is R: LEAN and TRIP."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-24",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "WITCH   (HAIR)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-24-opt1",
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-24-opt2",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves W. WITCH without W is ITCH, a real word — but HAIR cannot take W anywhere and make a word; the best try is HAIRW. The second word breaks. The answer is C: WITH and CHAIR."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-24-opt3",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves T. Taking T out of WITCH leaves WICH, which is not a word — the first word breaks. The answer is C: WITH and CHAIR."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-25",
+   "questionType": "vr-08-move-letter",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "Move one letter from the first word to the second so both make new words.",
+    "PLACE   (AGE)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-08-move-letter-25-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-25-opt2",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagDescription": "Chose a letter whose removal does not leave a real first word.",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?",
+     "execution": "Move one letter so both words are real. This option moves C. Taking C out of PLACE leaves PLAE, which is not a word — the first word breaks. The answer is P: LACE and PAGE."
+    },
+    {
+     "optionId": "gen-vr-08-move-letter-25-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagDescription": "Chose a letter that does not make a real second word when added.",
+     "tagChildHint": "Pop the letter into the second word and say it aloud. Does it sound like a real word?",
+     "execution": "Move one letter so both words are real. This option moves L. PLACE without L is PACE, a real word — but AGE cannot take L anywhere and make a word; the best try is AGEL. The second word breaks. The answer is P: LACE and PAGE."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  }
+ ]
+}

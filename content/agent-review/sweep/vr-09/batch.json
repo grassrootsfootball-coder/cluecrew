@@ -1,0 +1,1235 @@
+{
+ "batch": "vr-09",
+ "district": "VR",
+ "groups": [
+  "vr:vr-17-complete-the-sum"
+ ],
+ "rowCount": 24,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "gen-vr-17-complete-the-sum-01",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "? + 3 = 9"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-01-opt1",
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-01-opt2",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 3 = 9, so the missing number is 6. This option is 7, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-01-opt3",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 6. This option is 9: the right side comes to 9, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-01-opt4",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 3 = 9, so the missing number is 6. This option is 8, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-02",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "7 + ? = 11"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-02-opt1",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-02-opt2",
+     "value": "2",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 7 + ? = 11, so the missing number is 4. This option is 2, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-02-opt3",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 4. This option is 11: the right side comes to 11, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-02-opt4",
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 7 + ? = 11, so the missing number is 4. This option is 3, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-03",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "8 + 5 − ? = 9"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-03-opt1",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-03-opt2",
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 8 + 5 − ? = 9, so the missing number is 4. This option is 6, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-03-opt3",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 4. This option is 13: the left side's visible terms, 8 + 5, come to 13, and the child stopped there instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-03-opt4",
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 8 + 5 − ? = 9, so the missing number is 4. This option is 3, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-04",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "9 + ? − 5 = 10"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-04-opt1",
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-04-opt2",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 9 + ? − 5 = 10, so the missing number is 6. This option is 5, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-04-opt3",
+     "value": "10",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 6. This option is 10: the right side comes to 10, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-04-opt4",
+     "value": "4",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 9 + ? − 5 = 10, so the missing number is 6. This option is 4, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-05",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "? + 7 = 17"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-05-opt1",
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-05-opt2",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 7 = 17, so the missing number is 10. This option is 8, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-05-opt3",
+     "value": "17",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 10. This option is 17: the right side comes to 17, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-05-opt4",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 7 = 17, so the missing number is 10. This option is 9, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-06",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "11 + ? = 19"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-06-opt1",
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-06-opt2",
+     "value": "10",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 11 + ? = 19, so the missing number is 8. This option is 10, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-06-opt3",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 8. This option is 19: the right side comes to 19, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-06-opt4",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 11 + ? = 19, so the missing number is 8. This option is 9, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-07",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "12 + 3 − ? = 11"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-07-opt1",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-07-opt2",
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 12 + 3 − ? = 11, so the missing number is 4. This option is 3, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-07-opt3",
+     "value": "15",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 4. This option is 15: the left side's visible terms, 12 + 3, come to 15, and the child stopped there instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-07-opt4",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 12 + 3 − ? = 11, so the missing number is 4. This option is 5, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-08",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "13 + ? − 5 = 12"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-08-opt1",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-08-opt2",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 13 + ? − 5 = 12, so the missing number is 4. This option is 5, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-08-opt3",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 4. This option is 8: the left side's visible terms, 13 − 5, come to 8, and the child stopped there instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-08-opt4",
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 13 + ? − 5 = 12, so the missing number is 4. This option is 6, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-09",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "? + 5 = 19"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-09-opt1",
+     "value": "14",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-09-opt2",
+     "value": "12",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 5 = 19, so the missing number is 14. This option is 12, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-09-opt3",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 14. This option is 19: the right side comes to 19, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-09-opt4",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 5 = 19, so the missing number is 14. This option is 13, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-10",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "15 + ? = 21"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-10-opt1",
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-10-opt2",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 15 + ? = 21, so the missing number is 6. This option is 7, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-10-opt3",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 6. This option is 21: the right side comes to 21, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-10-opt4",
+     "value": "4",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 15 + ? = 21, so the missing number is 6. This option is 4, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-11",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "16 + 7 − ? = 19"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-11-opt1",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-11-opt2",
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 16 + 7 − ? = 19, so the missing number is 4. This option is 6, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-11-opt3",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 4. This option is 19: the right side comes to 19, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-11-opt4",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 16 + 7 − ? = 19, so the missing number is 4. This option is 5, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-12",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "17 + ? − 5 = 20"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-12-opt1",
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-12-opt2",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 17 + ? − 5 = 20, so the missing number is 8. This option is 7, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-12-opt3",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 8. This option is 20: the right side comes to 20, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-12-opt4",
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 17 + ? − 5 = 20, so the missing number is 8. This option is 6, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-13",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "? + 3 = 21"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-13-opt1",
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-13-opt2",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 3 = 21, so the missing number is 18. This option is 20, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-13-opt3",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 18. This option is 21: the right side comes to 21, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-13-opt4",
+     "value": "16",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 3 = 21, so the missing number is 18. This option is 16, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-14",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "19 + ? = 23"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-14-opt1",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-14-opt2",
+     "value": "2",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 19 + ? = 23, so the missing number is 4. This option is 2, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-14-opt3",
+     "value": "23",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 4. This option is 23: the right side comes to 23, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-14-opt4",
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 19 + ? = 23, so the missing number is 4. This option is 6, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-15",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "20 + 5 − ? = 21"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-15-opt1",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-15-opt2",
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 20 + 5 − ? = 21, so the missing number is 4. This option is 3, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-15-opt3",
+     "value": "25",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 4. This option is 25: the left side's visible terms, 20 + 5, come to 25, and the child stopped there instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-15-opt4",
+     "value": "2",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 20 + 5 − ? = 21, so the missing number is 4. This option is 2, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-16",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "21 + ? − 5 = 22"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-16-opt1",
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-16-opt2",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 21 + ? − 5 = 22, so the missing number is 6. This option is 7, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-16-opt3",
+     "value": "22",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 6. This option is 22: the right side comes to 22, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-16-opt4",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 21 + ? − 5 = 22, so the missing number is 6. This option is 8, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-17",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "? + 7 = 29"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-17-opt1",
+     "value": "22",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-17-opt2",
+     "value": "24",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 7 = 29, so the missing number is 22. This option is 24, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-17-opt3",
+     "value": "29",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 22. This option is 29: the right side comes to 29, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-17-opt4",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 7 = 29, so the missing number is 22. This option is 21, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-18",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "23 + ? = 31"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-18-opt1",
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-18-opt2",
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 23 + ? = 31, so the missing number is 8. This option is 6, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-18-opt3",
+     "value": "31",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 8. This option is 31: the right side comes to 31, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-18-opt4",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 23 + ? = 31, so the missing number is 8. This option is 7, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-19",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "24 + 3 − ? = 23"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-19-opt1",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-19-opt2",
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 24 + 3 − ? = 23, so the missing number is 4. This option is 6, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-19-opt3",
+     "value": "23",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 4. This option is 23: the right side comes to 23, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-19-opt4",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 24 + 3 − ? = 23, so the missing number is 4. This option is 5, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-20",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "25 + ? − 5 = 24"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-20-opt1",
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-20-opt2",
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 25 + ? − 5 = 24, so the missing number is 4. This option is 3, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-20-opt3",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 4. This option is 20: the left side's visible terms, 25 − 5, come to 20, and the child stopped there instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-20-opt4",
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 25 + ? − 5 = 24, so the missing number is 4. This option is 6, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-21",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "? + 5 = 31"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-21-opt1",
+     "value": "26",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-21-opt2",
+     "value": "25",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 5 = 31, so the missing number is 26. This option is 25, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-21-opt3",
+     "value": "31",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 26. This option is 31: the right side comes to 31, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-21-opt4",
+     "value": "24",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 5 = 31, so the missing number is 26. This option is 24, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-22",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "27 + ? = 33"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-22-opt1",
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-22-opt2",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 27 + ? = 33, so the missing number is 6. This option is 7, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-22-opt3",
+     "value": "33",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 6. This option is 33: the right side comes to 33, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-22-opt4",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 27 + ? = 33, so the missing number is 6. This option is 8, which is 2 too many. The child over-counted at the last step by 2 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-24",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "29 + ? − 5 = 32"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-24-opt1",
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-24-opt2",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 29 + ? − 5 = 32, so the missing number is 8. This option is 9, which is 1 too many. The child over-counted at the last step by 1 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-24-opt3",
+     "value": "32",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 8. This option is 32: the right side comes to 32, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-24-opt4",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: 29 + ? − 5 = 32, so the missing number is 8. This option is 7, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-25",
+   "questionType": "vr-17-complete-the-sum",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "What number makes the sum correct?",
+    "? + 3 = 33"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-17-complete-the-sum-25-opt1",
+     "value": "30",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-25-opt2",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 3 = 33, so the missing number is 30. This option is 28, which is 2 too few. The child under-counted at the last step by 2 and stopped there."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-25-opt3",
+     "value": "33",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagDescription": "Solved one side of the equation and stopped.",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales.",
+     "execution": "The sum balances at 30. This option is 33: the right side comes to 33, and the child put that total in the gap instead of making both sides match."
+    },
+    {
+     "optionId": "gen-vr-17-complete-the-sum-25-opt4",
+     "value": "29",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagDescription": "Right method, arithmetic slip of one or two.",
+     "tagChildHint": "Your plan is right. Recount the last step slowly.",
+     "execution": "The method here is right: ? + 3 = 33, so the missing number is 30. This option is 29, which is 1 too few. The child under-counted at the last step by 1 and stopped there."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  }
+ ]
+}

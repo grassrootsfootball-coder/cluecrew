@@ -1,0 +1,1527 @@
+{
+ "batch": "vr-05",
+ "district": "VR",
+ "groups": [
+  "vr:vr-09-letter-series",
+  "vr:vr-11-number-series"
+ ],
+ "rowCount": 35,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "gen-vr-09-letter-series-01",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "C,  E,  G,  I, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt1",
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt2",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on M instead of K."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-01-opt3",
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter too far, on L instead of K."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter C to the letter E. You go up 2 letters each time. Count 2 on from the letter I to reach the letter K. The letter M takes the step twice. The letter L is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-02",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "J,  L,  N,  P, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt2",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on T instead of R."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-02-opt3",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter short, on Q instead of R."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter J to the letter L. You go up 2 letters each time. Count 2 on from the letter P to reach the letter R. The letter T takes the step twice. The letter Q is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-03",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "D,  G,  J,  M, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter D, giving A instead of P."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-03-opt3",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter too far, on Q instead of P."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter D to the letter G. You go up 3 letters each time. Count 3 on from the letter M to reach the letter P. The letter A runs backwards. The letter Q is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-04",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "E,  H,  K,  N, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt1",
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt2",
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter E, giving B instead of Q."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-04-opt3",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter short, on P instead of Q."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter E to the letter H. You go up 3 letters each time. Count 3 on from the letter N to reach the letter Q. The letter B runs backwards. The letter P is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-05",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "I,  K,  M,  O, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt1",
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt2",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on S instead of Q."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-05-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter too far, on R instead of Q."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter I to the letter K. You go up 2 letters each time. Count 2 on from the letter O to reach the letter Q. The letter S takes the step twice. The letter R is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-06",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "P,  R,  T,  V, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt1",
+     "value": "X",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt2",
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on Z instead of X."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-06-opt3",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter short, on W instead of X."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter P to the letter R. You go up 2 letters each time. Count 2 on from the letter V to reach the letter X. The letter Z takes the step twice. The letter W is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-07",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "F,  I,  L,  O, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt1",
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt2",
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter F, giving C instead of R."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-07-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter too far, on S instead of R."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter F to the letter I. You go up 3 letters each time. Count 3 on from the letter O to reach the letter R. The letter C runs backwards. The letter S is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-08",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "I,  L,  O,  R, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt2",
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter I, giving F instead of U."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-08-opt3",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter short, on T instead of U."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter I to the letter L. You go up 3 letters each time. Count 3 on from the letter R to reach the letter U. The letter F runs backwards. The letter T is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-09",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "O,  Q,  S,  U, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt1",
+     "value": "W",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt2",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on Y instead of W."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-09-opt3",
+     "value": "X",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter too far, on X instead of W."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter O to the letter Q. You go up 2 letters each time. Count 2 on from the letter U to reach the letter W. The letter Y takes the step twice. The letter X is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-10",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "D,  F,  H,  J, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt1",
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt2",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on N instead of L."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-10-opt3",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter short, on K instead of L."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter D to the letter F. You go up 2 letters each time. Count 2 on from the letter J to reach the letter L. The letter N takes the step twice. The letter K is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-11",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "H,  K,  N,  Q, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt2",
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter H, giving E instead of T."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-11-opt3",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter too far, on U instead of T."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter H to the letter K. You go up 3 letters each time. Count 3 on from the letter Q to reach the letter T. The letter E runs backwards. The letter U is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-12",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "G,  J,  M,  P, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt2",
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter G, giving D instead of S."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-12-opt3",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter short, on R instead of S."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter G to the letter J. You go up 3 letters each time. Count 3 on from the letter P to reach the letter S. The letter D runs backwards. The letter R is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-13",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "E,  G,  I,  K, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt1",
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt2",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on O instead of M."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-13-opt3",
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter too far, on N instead of M."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter E to the letter G. You go up 2 letters each time. Count 2 on from the letter K to reach the letter M. The letter O takes the step twice. The letter N is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-14",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "F,  H,  J,  L, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt1",
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt2",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on P instead of N."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-14-opt3",
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter short, on M instead of N."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter F to the letter H. You go up 2 letters each time. Count 2 on from the letter L to reach the letter N. The letter P takes the step twice. The letter M is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-15",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "J,  M,  P,  S, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt1",
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt2",
+     "value": "G",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter J, giving G instead of V."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-15-opt3",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter too far, on W instead of V."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter J to the letter M. You go up 3 letters each time. Count 3 on from the letter S to reach the letter V. The letter G runs backwards. The letter W is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-17",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "G,  I,  K,  M, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt1",
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt2",
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on Q instead of O."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-17-opt3",
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter too far, on P instead of O."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter G to the letter I. You go up 2 letters each time. Count 2 on from the letter M to reach the letter O. The letter Q takes the step twice. The letter P is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-18",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "L,  N,  P,  R, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt1",
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt2",
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on V instead of T."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-18-opt3",
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter short, on S instead of T."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter L to the letter N. You go up 2 letters each time. Count 2 on from the letter R to reach the letter T. The letter V takes the step twice. The letter S is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-19",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "L,  O,  R,  U, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt1",
+     "value": "X",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt2",
+     "value": "I",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter L, giving I instead of X."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-19-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter too far, on Y instead of X."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter L to the letter O. You go up 3 letters each time. Count 3 on from the letter U to reach the letter X. The letter I runs backwards. The letter Y is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-20",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "M,  P,  S,  V, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt1",
+     "value": "Y",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt2",
+     "value": "J",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter M, giving J instead of Y."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-20-opt3",
+     "value": "X",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter short, on X instead of Y."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter M to the letter P. You go up 3 letters each time. Count 3 on from the letter V to reach the letter Y. The letter J runs backwards. The letter X is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-21",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "K,  M,  O,  Q, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt1",
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt2",
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on U instead of S."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-21-opt3",
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter too far, on T instead of S."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter K to the letter M. You go up 2 letters each time. Count 2 on from the letter Q to reach the letter S. The letter U takes the step twice. The letter T is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-22",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "H,  J,  L,  N, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt1",
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt2",
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on R instead of P."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-22-opt3",
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter short, on O instead of P."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter H to the letter J. You go up 2 letters each time. Count 2 on from the letter N to reach the letter P. The letter R takes the step twice. The letter O is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-23",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "E,  I,  M,  Q, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt2",
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 4 back from the first letter E, giving A instead of U."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-23-opt3",
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 4 right but landed one letter too far, on V instead of U."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter E to the letter I. You go up 4 letters each time. Count 4 on from the letter Q to reach the letter U. The letter A runs backwards. The letter V is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-24",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "N,  Q,  T,  W, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt1",
+     "value": "Z",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt2",
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagDescription": "Moved backwards through the alphabet instead of forwards.",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters.",
+     "execution": "Ran the series backwards, 3 back from the first letter N, giving K instead of Z."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-24-opt3",
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 3 right but landed one letter short, on Y instead of Z."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter N to the letter Q. You go up 3 letters each time. Count 3 on from the letter W to reach the letter Z. The letter K runs backwards. The letter Y is one letter out."
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-25",
+   "questionType": "vr-09-letter-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "Which letter comes next?",
+    "M,  O,  Q,  S, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt1",
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt2",
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagDescription": "Applied the letter step twice, overshooting the target.",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once.",
+     "execution": "Applied the step of 2 twice from the last letter, landing on W instead of U."
+    },
+    {
+     "optionId": "gen-vr-09-letter-series-25-opt3",
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagDescription": "Correct rule, but landed one letter short or long.",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time.",
+     "execution": "Had the step of 2 right but landed one letter too far, on V instead of U."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Notice the space from the letter M to the letter O. You go up 2 letters each time. Count 2 on from the letter S to reach the letter U. The letter W takes the step twice. The letter V is one letter out."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-04",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "14,  19,  27,  38, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-04-opt1",
+     "value": "52",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-04-opt2",
+     "value": "49",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagDescription": "Reused the previous step instead of spotting that the step size changes.",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?",
+     "execution": "Reused the previous gap of 11 instead of letting it grow, giving 49 instead of 52."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-04-opt3",
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 51 instead of 52."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Watch 5, 33, 10, 31 closely. One chain climbs 5, 10; the other drops 33, 31. The climbing chain is next, reaching 15. Here 14 and 16 land one off; 20 runs too far."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-06",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "10,  12,  14,  16, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-06-opt1",
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-06-opt2",
+     "value": "17",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 17 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-06-opt3",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagDescription": "Added the step twice from the last term, usually after losing track of the gaps.",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first.",
+     "execution": "Added the step of 2 twice from the last term, giving 20 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-06-opt4",
+     "value": "30",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagDescription": "Read the series as each term being the sum of the two before it, and added the last pair.",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number.",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 30."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Find the jump from 7 to 9. The gaps widen: 2, 3, 4. A gap of 5 makes 16 into 21. Here 20 and 22 land one off; 23 stretches too far."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "18,  22,  29,  39, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-08-opt1",
+     "value": "52",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-08-opt2",
+     "value": "49",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagDescription": "Reused the previous step instead of spotting that the step size changes.",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?",
+     "execution": "Reused the previous gap of 10 instead of letting it grow, giving 49 instead of 52."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-08-opt3",
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 51 instead of 52."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look hard at 9, 37, 13, 35. One chain rises 9, 13; the other falls 37, 35. The rising chain follows, landing on 17. Both 16 and 18 miss by one; 21 adds an extra step."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-10",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "5,  11,  17,  23, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-10-opt1",
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-10-opt2",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-10-opt3",
+     "value": "35",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagDescription": "Added the step twice from the last term, usually after losing track of the gaps.",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first.",
+     "execution": "Added the step of 6 twice from the last term, giving 35 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-10-opt4",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagDescription": "Read the series as each term being the sum of the two before it, and added the last pair.",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number.",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 40."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Read 2, 8, 15 across. Each leap is one bigger: 6, 7, 8. A leap of 9 lifts 23 to 32. Then 31 and 33 miss by one; 38 bounds far past."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-12",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "13,  16,  22,  31, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-12-opt1",
+     "value": "43",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-12-opt2",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagDescription": "Reused the previous step instead of spotting that the step size changes.",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?",
+     "execution": "Reused the previous gap of 9 instead of letting it grow, giving 40 instead of 43."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-12-opt3",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 42 instead of 43."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Study 4, 41, 7, 39 with care. One chain steps up 4, 7; the other steps down 41, 39. The rising chain is next, reaching 10. Here 9 and 11 slip one place; 13 stretches too far."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-14",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "9,  14,  19,  24, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-14-opt1",
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-14-opt2",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-14-opt3",
+     "value": "34",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagDescription": "Added the step twice from the last term, usually after losing track of the gaps.",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first.",
+     "execution": "Added the step of 5 twice from the last term, giving 34 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-14-opt4",
+     "value": "43",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagDescription": "Read the series as each term being the sum of the two before it, and added the last pair.",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number.",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 43."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Point to 6 and 11. The gaps build: 5, 6, 7. Add 8 to 24 for 32. Nearby 31 comes short, 33 slips over; 37 sails too high."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "17,  19,  24,  32, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-16-opt1",
+     "value": "43",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-16-opt2",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagDescription": "Reused the previous step instead of spotting that the step size changes.",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?",
+     "execution": "Reused the previous gap of 8 instead of letting it grow, giving 40 instead of 43."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-16-opt3",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 42 instead of 43."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Read 8, 45, 10, 43 slowly. One chain grows 8, 10; the other shrinks 45, 43. The growing chain comes next, hitting 12. Then 11 and 13 land one off; 14 goes a step beyond."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-18",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "13,  17,  21,  25, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-18-opt1",
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-18-opt2",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 28 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-18-opt3",
+     "value": "33",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagDescription": "Added the step twice from the last term, usually after losing track of the gaps.",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first.",
+     "execution": "Added the step of 4 twice from the last term, giving 33 instead of 29."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-18-opt4",
+     "value": "46",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagDescription": "Read the series as each term being the sum of the two before it, and added the last pair.",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number.",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 46."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Start with 10 and 14. Each step gains one: 4, 5, 6. A step of 7 takes 25 to 32. Watch 31 dip and 33 rise; 36 overshoots."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "12,  18,  27,  39, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-20-opt1",
+     "value": "54",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-20-opt2",
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagDescription": "Reused the previous step instead of spotting that the step size changes.",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?",
+     "execution": "Reused the previous gap of 12 instead of letting it grow, giving 51 instead of 54."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-20-opt3",
+     "value": "53",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 53 instead of 54."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look twice at 3, 49, 9, 47. One chain jumps up 3, 9; the other jumps down 49, 47. The rising chain is next, reaching 15. Both 14 and 16 sit one off; 21 leaps too far."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-22",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "8,  11,  14,  17, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-22-opt1",
+     "value": "20",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-22-opt2",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 19 instead of 20."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-22-opt3",
+     "value": "23",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagDescription": "Added the step twice from the last term, usually after losing track of the gaps.",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first.",
+     "execution": "Added the step of 3 twice from the last term, giving 23 instead of 20."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-22-opt4",
+     "value": "31",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagDescription": "Read the series as each term being the sum of the two before it, and added the last pair.",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number.",
+     "execution": "Read the series as each term being the sum of the two before it, and added the last two terms to make 31."
+    }
+   ],
+   "hint": null,
+   "walkScript": "See the gap from 5 to 8. The gaps swell: 3, 4, 5. A gap of 6 makes 23. Both 22 and 24 sit a step off; 26 pushes far past."
+  },
+  {
+   "itemId": "gen-vr-11-number-series-24",
+   "questionType": "vr-11-number-series",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "What number comes next in the series?",
+    "16,  21,  29,  40, …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-11-number-series-24-opt1",
+     "value": "54",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-11-number-series-24-opt2",
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagDescription": "Reused the previous step instead of spotting that the step size changes.",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?",
+     "execution": "Reused the previous gap of 11 instead of letting it grow, giving 51 instead of 54."
+    },
+    {
+     "optionId": "gen-vr-11-number-series-24-opt3",
+     "value": "53",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagDescription": "Identified the rule but slipped by one when applying it.",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly.",
+     "execution": "Had the rule right but slipped by one on the last jump, giving 53 instead of 54."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Watch 7, 53, 12, 51 with care. One chain climbs 7, 12; the other sinks 53, 51. The climbing chain follows, landing on 17. Here 16 and 18 drift one place; 22 adds one step too many."
+  }
+ ]
+}

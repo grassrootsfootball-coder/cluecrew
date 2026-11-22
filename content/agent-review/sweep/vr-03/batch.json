@@ -1,0 +1,1150 @@
+{
+ "batch": "vr-03",
+ "district": "VR",
+ "groups": [
+  "vr:vr-05-hidden-word",
+  "vr:vr-07-letters-for-numbers"
+ ],
+ "rowCount": 24,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "gen-vr-05-hidden-word-02",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "She played her oboe in the band."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-02-opt1",
+     "value": "hero",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-02-opt2",
+     "value": "ship",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of ship are nearly in the sentence but not exactly: the closest run is \"shep\", which differs from ship by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-02-opt3",
+     "value": "play",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is play, and play sits whole inside the single word \"played\" — found by looking inside one word instead of across the join. The answer, hero, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-04",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "The crab and the gull raced."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-04-opt1",
+     "value": "band",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-04-opt2",
+     "value": "crag",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of crag are nearly in the sentence but not exactly: the closest run is \"crab\", which differs from crag by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-04-opt3",
+     "value": "race",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is race, and race sits whole inside the single word \"raced\" — found by looking inside one word instead of across the join. The answer, band, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-06",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "Her lesson goes well today."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-06-opt1",
+     "value": "song",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-06-opt2",
+     "value": "tell",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of tell are nearly in the sentence but not exactly: the closest run is \"well\", which differs from tell by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-06-opt3",
+     "value": "less",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is less, and less sits whole inside the single word \"lesson\" — found by looking inside one word instead of across the join. The answer, song, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-10",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "Both Emma and Jo came."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-10-opt1",
+     "value": "them",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-10-opt2",
+     "value": "name",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of name are nearly in the sentence but not exactly: the closest run is \"came\", which differs from name by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-10-opt3",
+     "value": "both",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is both, and both sits whole inside the single word \"Both\" — found by looking inside one word instead of across the join. The answer, them, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-11",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "The bus and the car waited."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-11-opt1",
+     "value": "sand",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-11-opt2",
+     "value": "busy",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of busy are nearly in the sentence but not exactly: the closest run is \"busa\", which differs from busy by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-11-opt3",
+     "value": "wait",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is wait, and wait sits whole inside the single word \"waited\" — found by looking inside one word instead of across the join. The answer, sand, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-16",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "A rope around the box snapped."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-16-opt1",
+     "value": "pear",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-16-opt2",
+     "value": "soap",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of soap are nearly in the sentence but not exactly: the closest run is \"snap\", which differs from soap by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-16-opt3",
+     "value": "snap",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is snap, and snap sits whole inside the single word \"snapped\" — found by looking inside one word instead of across the join. The answer, pear, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-18",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "The demo thrilled everyone."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-18-opt1",
+     "value": "moth",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-18-opt2",
+     "value": "hill",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of hill are nearly in the sentence but not exactly: the closest run is \"rill\", which differs from hill by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-18-opt3",
+     "value": "ever",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is ever, and ever sits whole inside the single word \"everyone\" — found by looking inside one word instead of across the join. The answer, moth, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-19",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "Mix our ingredients slowly."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-19-opt1",
+     "value": "ring",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-19-opt2",
+     "value": "four",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of four are nearly in the sentence but not exactly: the closest run is \"xour\", which differs from four by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-19-opt3",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is slow, and slow sits whole inside the single word \"slowly\" — found by looking inside one word instead of across the join. The answer, ring, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-20",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "We watch insects climb the wall."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-20-opt1",
+     "value": "chin",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-20-opt2",
+     "value": "itch",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of itch are nearly in the sentence but not exactly: the closest run is \"atch\", which differs from itch by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-20-opt3",
+     "value": "limb",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is limb, and limb sits whole inside the single word \"climb\" — found by looking inside one word instead of across the join. The answer, chin, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-22",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "The lamp landed with a bump."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-22-opt1",
+     "value": "plan",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-22-opt2",
+     "value": "wish",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of wish are nearly in the sentence but not exactly: the closest run is \"with\", which differs from wish by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-22-opt3",
+     "value": "land",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is land, and land sits whole inside the single word \"landed\" — found by looking inside one word instead of across the join. The answer, plan, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-24",
+   "questionType": "vr-05-hidden-word",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "A four-letter word is hiding at the join between two words. Find it.",
+    "The piano seemed loud."
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-05-hidden-word-24-opt1",
+     "value": "nose",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-24-opt2",
+     "value": "load",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagDescription": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching.",
+     "execution": "The letters of load are nearly in the sentence but not exactly: the closest run is \"loud\", which differs from load by 1 letter. Every letter must be there, touching, and one is not."
+    },
+    {
+     "optionId": "gen-vr-05-hidden-word-24-opt3",
+     "value": "seem",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagDescription": "Searched inside single words instead of across the join.",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet.",
+     "execution": "The hidden word must cross the gap between two words. This option is seem, and seem sits whole inside the single word \"seemed\" — found by looking inside one word instead of across the join. The answer, nose, runs from the end of one word into the start of the next."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-02",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 8, Q = 9, R = 4, S = 11, what is P + Q + R − S?",
+    "P + Q + R − S",
+    "P = 8,  Q = 9,  R = 4,  S = 11"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-02-opt1",
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-02-opt2",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used R's value 4 for Q, its neighbour in the code, so P + Q + R − S comes to 5 instead of 10."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-02-opt3",
+     "value": "32",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 32 instead of 10."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-02-opt4",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q + R − S and never used it, so the total comes to 21 instead of 10."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 8 + 9 + 4 − 11, which makes 10. 5 uses R's number for Q. 32 adds every number. 21 leaves S out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-03",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 11, Q = 5, R = 4, S = 7, what is P + Q + R − S?",
+    "P + Q + R − S",
+    "P = 11,  Q = 5,  R = 4,  S = 7"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-03-opt1",
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-03-opt2",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used P's value 11 for Q, its neighbour in the code, so P + Q + R − S comes to 19 instead of 13."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-03-opt3",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q + R − S, missing the minus sign, so the total comes to 27 instead of 13."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-03-opt4",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q + R − S and never used it, so the total comes to 20 instead of 13."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 11 + 5 + 4 − 7, which makes 13. 19 uses P's number for Q. 27 adds every number. 20 leaves S out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-06",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 5, Q = 6, R = 8, S = 9, what is P + Q − R + S?",
+    "P + Q − R + S",
+    "P = 5,  Q = 6,  R = 8,  S = 9"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-06-opt1",
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-06-opt2",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used P's value 5 for Q, its neighbour in the code, so P + Q − R + S comes to 11 instead of 12."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-06-opt3",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 28 instead of 12."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-06-opt4",
+     "value": "3",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 3 instead of 12."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 5 + 6 − 8 + 9, which makes 12. 11 uses P's number for Q. 28 adds every number. 3 leaves S out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-07",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 12, Q = 8, R = 11, S = 6, what is P + Q − R + S?",
+    "P + Q − R + S",
+    "P = 12,  Q = 8,  R = 11,  S = 6"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-07-opt1",
+     "value": "15",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-07-opt2",
+     "value": "19",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used P's value 12 for Q, its neighbour in the code, so P + Q − R + S comes to 19 instead of 15."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-07-opt3",
+     "value": "37",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 37 instead of 15."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-07-opt4",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 9 instead of 15."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 12 + 8 − 11 + 6, which makes 15. 19 uses P's number for Q. 37 adds every number. 9 leaves S out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-08",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 18, Q = 7, R = 5, S = 12, what is P + Q − R + S?",
+    "P + Q − R + S",
+    "P = 18,  Q = 7,  R = 5,  S = 12"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-08-opt1",
+     "value": "32",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-08-opt2",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used Q's value 7 for P, its neighbour in the code, so P + Q − R + S comes to 21 instead of 32."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-08-opt3",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 42 instead of 32."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-08-opt4",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 20 instead of 32."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 18 + 7 − 5 + 12, which makes 32. 21 uses Q's number for P. 42 adds every number. 20 leaves S out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-09",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 2, Q = 3, R = 4, what is P + Q − R?",
+    "P + Q − R",
+    "P = 2,  Q = 3,  R = 4"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-09-opt1",
+     "value": "1",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-09-opt2",
+     "value": "0",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used P's value 2 for Q, its neighbour in the code, so P + Q − R comes to 0 instead of 1."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-09-opt3",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R, missing the minus sign, so the total comes to 9 instead of 1."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-09-opt4",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q − R and never used it, so the total comes to 5 instead of 1."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q and R first. Then work out 2 + 3 − 4, which makes 1. 0 uses P's number for Q. 9 adds every number. 5 leaves R out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-10",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 11, Q = 3, R = 6, S = 4, what is P + Q + R − S?",
+    "P + Q + R − S",
+    "P = 11,  Q = 3,  R = 6,  S = 4"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-10-opt1",
+     "value": "16",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-10-opt2",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used Q's value 3 for P, its neighbour in the code, so P + Q + R − S comes to 8 instead of 16."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-10-opt3",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used Q's value 3 for R, its neighbour in the code, so P + Q + R − S comes to 13 instead of 16."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-10-opt4",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q + R − S and never used it, so the total comes to 20 instead of 16."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 11 + 3 + 6 − 4, which makes 16. 8 uses Q's number for P. 13 uses Q's number for R. 20 leaves S out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-13",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 7, Q = 4, R = 3, what is P + Q − R?",
+    "P + Q − R",
+    "P = 7,  Q = 4,  R = 3"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-13-opt1",
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-13-opt2",
+     "value": "5",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used Q's value 4 for P, its neighbour in the code, so P + Q − R comes to 5 instead of 8."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-13-opt3",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used P's value 7 for Q, its neighbour in the code, so P + Q − R comes to 11 instead of 8."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-13-opt4",
+     "value": "14",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R, missing the minus sign, so the total comes to 14 instead of 8."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q and R first. Then work out 7 + 4 − 3, which makes 8. 5 uses Q's number for P. 11 uses P's number for Q. 14 adds every number."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-14",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 8, Q = 4, R = 6, S = 9, what is P + Q − R + S?",
+    "P + Q − R + S",
+    "P = 8,  Q = 4,  R = 6,  S = 9"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-14-opt1",
+     "value": "15",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-14-opt2",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used Q's value 4 for P, its neighbour in the code, so P + Q − R + S comes to 11 instead of 15."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-14-opt3",
+     "value": "12",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used S's value 9 for R, its neighbour in the code, so P + Q − R + S comes to 12 instead of 15."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-14-opt4",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 27 instead of 15."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 8 + 4 − 6 + 9, which makes 15. 11 uses Q's number for P. 12 uses S's number for R. 27 adds every number."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-15",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 7, Q = 12, R = 10, S = 13, what is P + Q − R + S?",
+    "P + Q − R + S",
+    "P = 7,  Q = 12,  R = 10,  S = 13"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-15-opt1",
+     "value": "22",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-15-opt2",
+     "value": "17",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used P's value 7 for Q, its neighbour in the code, so P + Q − R + S comes to 17 instead of 22."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-15-opt3",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 42 instead of 22."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-15-opt4",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 9 instead of 22."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 7 + 12 − 10 + 13, which makes 22. 17 uses P's number for Q. 42 adds every number. 9 leaves S out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-16",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 5, Q = 12, R = 10, S = 11, what is P + Q − R + S?",
+    "P + Q − R + S",
+    "P = 5,  Q = 12,  R = 10,  S = 11"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-16-opt1",
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-16-opt2",
+     "value": "16",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used R's value 10 for Q, its neighbour in the code, so P + Q − R + S comes to 16 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-16-opt3",
+     "value": "38",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 38 instead of 18."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-16-opt4",
+     "value": "7",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 7 instead of 18."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 5 + 12 − 10 + 11, which makes 18. 16 uses R's number for Q. 38 adds every number. 7 leaves S out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-22",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 11, Q = 4, R = 3, S = 9, what is P + Q − R + S?",
+    "P + Q − R + S",
+    "P = 11,  Q = 4,  R = 3,  S = 9"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-22-opt1",
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-22-opt2",
+     "value": "14",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used Q's value 4 for P, its neighbour in the code, so P + Q − R + S comes to 14 instead of 21."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-22-opt3",
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 27 instead of 21."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-22-opt4",
+     "value": "12",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 12 instead of 21."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 11 + 4 − 3 + 9, which makes 21. 14 uses Q's number for P. 27 adds every number. 12 leaves S out."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-24",
+   "questionType": "vr-07-letters-for-numbers",
+   "passageRef": null,
+   "lineRefs": [],
+   "questionLines": [
+    "If P = 13, Q = 14, R = 5, S = 12, what is P + Q − R + S?",
+    "P + Q − R + S",
+    "P = 13,  Q = 14,  R = 5,  S = 12"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-24-opt1",
+     "value": "34",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-24-opt2",
+     "value": "33",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagDescription": "Substituted one letter with the neighbouring value.",
+     "tagChildHint": "Write each letter’s number above it before you add.",
+     "execution": "Used P's value 13 for Q, its neighbour in the code, so P + Q − R + S comes to 33 instead of 34."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-24-opt3",
+     "value": "44",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagDescription": "Added when the sum needed another operation.",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?",
+     "execution": "Added every term in P + Q − R + S, missing the minus sign, so the total comes to 44 instead of 34."
+    },
+    {
+     "optionId": "gen-vr-07-letters-for-numbers-24-opt4",
+     "value": "22",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagDescription": "Stopped before using every letter, usually leaving off the last term.",
+     "tagChildHint": "Check you have used every letter. Count them as you go.",
+     "execution": "Stopped before the last term of P + Q − R + S and never used it, so the total comes to 22 instead of 34."
+    }
+   ],
+   "hint": null,
+   "walkScript": "Look up P, Q, R and S first. Then work out 13 + 14 − 5 + 12, which makes 34. 33 uses P's number for Q. 44 adds every number. 22 leaves S out."
+  }
+ ]
+}

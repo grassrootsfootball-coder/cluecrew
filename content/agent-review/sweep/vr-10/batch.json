@@ -1,0 +1,1061 @@
+{
+ "batch": "vr-10",
+ "district": "VR",
+ "groups": [
+  "vr:vr-18-related-numbers"
+ ],
+ "rowCount": 25,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "gen-vr-18-related-numbers-01",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(2 [5] 3)    (4 [?] 2)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-01-opt1",
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-01-opt2",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 2 + 3 = 5, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 4 + 2 = 6. This option multiplied them instead: 4 x 2 = 8."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-01-opt3",
+     "value": "4",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 2 + 3 = 5, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 4 + 2 = 6. This option read a one-sided rule off the first group, add 2 to the right number (3 + 2 = 5), and applied it to 2 alone, leaving out 4: 2 + 2 = 4."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-02",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(6 [14] 8)    (10 [?] 6)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-02-opt1",
+     "value": "16",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-02-opt2",
+     "value": "60",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 6 + 8 = 14, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 10 + 6 = 16. This option multiplied them instead: 10 x 6 = 60."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-02-opt3",
+     "value": "18",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 6 + 8 = 14, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 10 + 6 = 16. This option read a one-sided rule off the first group, add 8 to the left number (6 + 8 = 14), and applied it to 10 alone, leaving out 6: 10 + 8 = 18."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-03",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(4 [20] 5)    (6 [?] 4)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-03-opt1",
+     "value": "24",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-03-opt2",
+     "value": "10",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 4 x 5 = 20, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 6 x 4 = 24. This option added them instead: 6 + 4 = 10."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-03-opt3",
+     "value": "30",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 4 x 5 = 20, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 6 x 4 = 24. This option read a one-sided rule off the first group, multiply the left number by 5 (4 x 5 = 20), and applied it to 6 alone, leaving out 4: 6 x 5 = 30."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-04",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(10 [120] 12)    (14 [?] 10)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-04-opt1",
+     "value": "140",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-04-opt2",
+     "value": "24",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 10 x 12 = 120, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 14 x 10 = 140. This option added them instead: 14 + 10 = 24."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-04-opt3",
+     "value": "168",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 10 x 12 = 120, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 14 x 10 = 140. This option read a one-sided rule off the first group, multiply the left number by 12 (10 x 12 = 120), and applied it to 14 alone, leaving out 10: 14 x 12 = 168."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-05",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(6 [13] 7)    (8 [?] 6)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-05-opt1",
+     "value": "14",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-05-opt2",
+     "value": "48",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 6 + 7 = 13, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 8 + 6 = 14. This option multiplied them instead: 8 x 6 = 48."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-05-opt3",
+     "value": "12",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 6 + 7 = 13, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 8 + 6 = 14. This option read a one-sided rule off the first group, add 6 to the right number (7 + 6 = 13), and applied it to 6 alone, leaving out 8: 6 + 6 = 12."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-06",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(14 [20] 6)    (8 [?] 14)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-06-opt1",
+     "value": "22",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-06-opt2",
+     "value": "112",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 14 + 6 = 20, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 8 + 14 = 22. This option multiplied them instead: 8 x 14 = 112."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-06-opt3",
+     "value": "28",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 14 + 6 = 20, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 8 + 14 = 22. This option read a one-sided rule off the first group, add 14 to the right number (6 + 14 = 20), and applied it to 14 alone, leaving out 8: 14 + 14 = 28."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-07",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(2 [8] 4)    (5 [?] 8)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-07-opt1",
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-07-opt2",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 2 x 4 = 8, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 5 x 8 = 40. This option added them instead: 5 + 8 = 13."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-07-opt3",
+     "value": "20",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 2 x 4 = 8, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 5 x 8 = 40. This option read a one-sided rule off the first group, multiply the left number by 4 (2 x 4 = 8), and applied it to 5 alone, leaving out 8: 5 x 4 = 20."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-08",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(6 [60] 10)    (12 [?] 4)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-08-opt1",
+     "value": "48",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-08-opt2",
+     "value": "16",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 6 x 10 = 60, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 12 x 4 = 48. This option added them instead: 12 + 4 = 16."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-08-opt3",
+     "value": "24",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 6 x 10 = 60, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 12 x 4 = 48. This option read a one-sided rule off the first group, multiply the right number by 6 (10 x 6 = 60), and applied it to 4 alone, leaving out 12: 4 x 6 = 24."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-09",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(4 [10] 6)    (7 [?] 3)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-09-opt1",
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-09-opt2",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 4 + 6 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 3 = 10. This option multiplied them instead: 7 x 3 = 21."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-09-opt3",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 4 + 6 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 3 = 10. This option read a one-sided rule off the first group, add 6 to the left number (4 + 6 = 10), and applied it to 7 alone, leaving out 3: 7 + 6 = 13."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-10",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(10 [24] 14)    (16 [?] 8)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-10-opt1",
+     "value": "24",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-10-opt2",
+     "value": "128",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 10 + 14 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 16 + 8 = 24. This option multiplied them instead: 16 x 8 = 128."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-10-opt3",
+     "value": "18",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 10 + 14 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 16 + 8 = 24. This option read a one-sided rule off the first group, add 10 to the right number (14 + 10 = 24), and applied it to 8 alone, leaving out 16: 8 + 10 = 18."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-11",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(6 [18] 3)    (4 [?] 5)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-11-opt1",
+     "value": "20",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-11-opt2",
+     "value": "9",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 6 x 3 = 18, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 4 x 5 = 20. This option added them instead: 4 + 5 = 9."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-11-opt3",
+     "value": "30",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 6 x 3 = 18, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 4 x 5 = 20. This option read a one-sided rule off the first group, multiply the right number by 6 (3 x 6 = 18), and applied it to 5 alone, leaving out 4: 5 x 6 = 30."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-12",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(14 [112] 8)    (10 [?] 12)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-12-opt1",
+     "value": "120",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-12-opt2",
+     "value": "22",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 14 x 8 = 112, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 10 x 12 = 120. This option added them instead: 10 + 12 = 22."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-12-opt3",
+     "value": "80",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 14 x 8 = 112, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 10 x 12 = 120. This option read a one-sided rule off the first group, multiply the left number by 8 (14 x 8 = 112), and applied it to 10 alone, leaving out 12: 10 x 8 = 80."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-13",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(2 [7] 5)    (6 [?] 7)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-13-opt1",
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-13-opt2",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 2 + 5 = 7, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 6 + 7 = 13. This option multiplied them instead: 6 x 7 = 42."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-13-opt3",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 2 + 5 = 7, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 6 + 7 = 13. This option read a one-sided rule off the first group, add 5 to the left number (2 + 5 = 7), and applied it to 6 alone, leaving out 7: 6 + 5 = 11."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-14",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(6 [18] 12)    (14 [?] 16)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-14-opt1",
+     "value": "30",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-14-opt2",
+     "value": "224",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 6 + 12 = 18, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 14 + 16 = 30. This option multiplied them instead: 14 x 16 = 224."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-14-opt3",
+     "value": "26",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 6 + 12 = 18, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 14 + 16 = 30. This option read a one-sided rule off the first group, add 12 to the left number (6 + 12 = 18), and applied it to 14 alone, leaving out 16: 14 + 12 = 26."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-15",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(4 [28] 7)    (8 [?] 2)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-15-opt1",
+     "value": "16",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-15-opt2",
+     "value": "10",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 4 x 7 = 28, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 8 x 2 = 16. This option added them instead: 8 + 2 = 10."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-15-opt3",
+     "value": "56",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 4 x 7 = 28, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 8 x 2 = 16. This option read a one-sided rule off the first group, multiply the left number by 7 (4 x 7 = 28), and applied it to 8 alone, leaving out 2: 8 x 7 = 56."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-16",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(10 [60] 6)    (8 [?] 5)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-16-opt1",
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-16-opt2",
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 10 x 6 = 60, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 8 x 5 = 40. This option added them instead: 8 + 5 = 13."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-16-opt3",
+     "value": "50",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 10 x 6 = 60, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 8 x 5 = 40. This option read a one-sided rule off the first group, multiply the right number by 10 (6 x 10 = 60), and applied it to 5 alone, leaving out 8: 5 x 10 = 50."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-17",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(6 [10] 4)    (7 [?] 2)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-17-opt1",
+     "value": "9",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-17-opt2",
+     "value": "14",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 6 + 4 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 2 = 9. This option multiplied them instead: 7 x 2 = 14."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-17-opt3",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 6 + 4 = 10, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 7 + 2 = 9. This option read a one-sided rule off the first group, add 4 to the left number (6 + 4 = 10), and applied it to 7 alone, leaving out 2: 7 + 4 = 11."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-18",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(14 [24] 10)    (12 [?] 9)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-18-opt1",
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-18-opt2",
+     "value": "108",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 14 + 10 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 12 + 9 = 21. This option multiplied them instead: 12 x 9 = 108."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-18-opt3",
+     "value": "23",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 14 + 10 = 24, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 12 + 9 = 21. This option read a one-sided rule off the first group, add 14 to the right number (10 + 14 = 24), and applied it to 9 alone, leaving out 12: 9 + 14 = 23."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-19",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(2 [12] 6)    (7 [?] 4)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-19-opt1",
+     "value": "28",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-19-opt2",
+     "value": "11",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 2 x 6 = 12, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 7 x 4 = 28. This option added them instead: 7 + 4 = 11."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-19-opt3",
+     "value": "42",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 2 x 6 = 12, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 7 x 4 = 28. This option read a one-sided rule off the first group, multiply the left number by 6 (2 x 6 = 12), and applied it to 7 alone, leaving out 4: 7 x 6 = 42."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-20",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(6 [84] 14)    (16 [?] 13)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-20-opt1",
+     "value": "208",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-20-opt2",
+     "value": "29",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 6 x 14 = 84, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 16 x 13 = 208. This option added them instead: 16 + 13 = 29."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-20-opt3",
+     "value": "224",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 6 x 14 = 84, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 16 x 13 = 208. This option read a one-sided rule off the first group, multiply the left number by 14 (6 x 14 = 84), and applied it to 16 alone, leaving out 13: 16 x 14 = 224."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-21",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(4 [7] 3)    (5 [?] 7)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-21-opt1",
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-21-opt2",
+     "value": "35",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 4 + 3 = 7, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 5 + 7 = 12. This option multiplied them instead: 5 x 7 = 35."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-21-opt3",
+     "value": "8",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 4 + 3 = 7, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 5 + 7 = 12. This option read a one-sided rule off the first group, add 3 to the left number (4 + 3 = 7), and applied it to 5 alone, leaving out 7: 5 + 3 = 8."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-22",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(10 [18] 8)    (9 [?] 4)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-22-opt1",
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-22-opt2",
+     "value": "36",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 10 + 8 = 18, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 9 + 4 = 13. This option multiplied them instead: 9 x 4 = 36."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-22-opt3",
+     "value": "17",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 10 + 8 = 18, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 9 + 4 = 13. This option read a one-sided rule off the first group, add 8 to the left number (10 + 8 = 18), and applied it to 9 alone, leaving out 4: 9 + 8 = 17."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-23",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(6 [30] 5)    (7 [?] 3)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-23-opt1",
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-23-opt2",
+     "value": "10",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 6 x 5 = 30, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 7 x 3 = 21. This option added them instead: 7 + 3 = 10."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-23-opt3",
+     "value": "18",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 6 x 5 = 30, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 7 x 3 = 21. This option read a one-sided rule off the first group, multiply the right number by 6 (5 x 6 = 30), and applied it to 3 alone, leaving out 7: 3 x 6 = 18."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-24",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(14 [168] 12)    (13 [?] 8)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-24-opt1",
+     "value": "104",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-24-opt2",
+     "value": "21",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 14 x 12 = 168, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 13 x 8 = 104. This option added them instead: 13 + 8 = 21."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-24-opt3",
+     "value": "112",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 14 x 12 = 168, so the middle number comes from multiplying the two outer numbers. The same rule on the second group gives 13 x 8 = 104. This option read a one-sided rule off the first group, multiply the right number by 14 (12 x 14 = 168), and applied it to 8 alone, leaving out 13: 8 x 14 = 112."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-25",
+   "questionType": "vr-18-related-numbers",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?",
+    "(2 [9] 7)    (8 [?] 5)"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-18-related-numbers-25-opt1",
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-25-opt2",
+     "value": "40",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagDescription": "Applied a nearby rule (added instead of multiplied).",
+     "tagChildHint": "Test your rule on the first group before using it on the second.",
+     "execution": "The first group settles the rule: 2 + 7 = 9, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 8 + 5 = 13. This option multiplied them instead: 8 x 5 = 40."
+    },
+    {
+     "optionId": "gen-vr-18-related-numbers-25-opt3",
+     "value": "15",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagDescription": "Used only one of the two outer numbers in the rule.",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?",
+     "execution": "The first group settles the rule: 2 + 7 = 9, so the middle number comes from adding the two outer numbers. The same rule on the second group gives 8 + 5 = 13. This option read a one-sided rule off the first group, add 7 to the left number (2 + 7 = 9), and applied it to 8 alone, leaving out 5: 8 + 7 = 15."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  }
+ ]
+}

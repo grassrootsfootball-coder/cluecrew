@@ -1,0 +1,977 @@
+{
+ "batch": "vr-01",
+ "district": "VR",
+ "groups": [
+  "vr:vr-03-related-words"
+ ],
+ "rowCount": 23,
+ "passages": {},
+ "cards": [
+  {
+   "itemId": "gen-vr-03-related-words-26",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "clock is to time as thermometer is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-26-opt1",
+     "value": "temperature",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-26-opt2",
+     "value": "doctor",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "A clock measures time, so a thermometer measures temperature. The child picks doctor because a thermometer belongs to the topic of being ill and seeing a doctor. A thermometer does not measure a doctor."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-26-opt3",
+     "value": "hour",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A clock measures time, so a thermometer measures temperature. The child stays with the first pair: an hour is a unit of time read off a clock. Hour belongs with clock and time, and the relationship is never carried across to thermometer."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-27",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "author is to novel as composer is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-27-opt1",
+     "value": "symphony",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-27-opt2",
+     "value": "piano",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "An author writes a novel, so a composer writes a symphony. The child picks piano because it belongs to the topic of music that the composer brings to mind. A composer does not write a piano, so the writer-to-work relationship is never applied."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-27-opt3",
+     "value": "note",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagDescription": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you.",
+     "execution": "An author writes a novel, a whole finished work, so a composer writes a symphony. The child gives note instead: one note is a small part of a symphony. The example named the whole work, and the child names a part of it."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-28",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "shepherd is to sheep as beekeeper is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-28-opt1",
+     "value": "bees",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-28-opt2",
+     "value": "sting",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagDescription": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you.",
+     "execution": "A shepherd looks after sheep, the whole animals, so a beekeeper looks after bees. The child gives sting instead: a sting is a part of a bee. The example named the animals themselves, and the child names a part of the animal."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-28-opt3",
+     "value": "wool",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A shepherd looks after sheep, so a beekeeper looks after bees. The child stays with the first pair: wool comes from sheep, which a shepherd tends. Wool belongs with shepherd and sheep, and the relationship is never carried across to beekeeper."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-29",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "library is to books as gallery is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-29-opt1",
+     "value": "paintings",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-29-opt2",
+     "value": "brush",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "A library holds books, so a gallery holds paintings. The child picks brush because it belongs to the topic of art and painting. A gallery does not hold brushes on its walls, so the holds relationship is never applied."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-29-opt3",
+     "value": "frame",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagDescription": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you.",
+     "execution": "A library holds books, whole objects, so a gallery holds paintings. The child gives frame instead: a frame is a part of a framed painting. The example named the whole things held, and the child names a part of one."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-30",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "drought is to rain as famine is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-30-opt1",
+     "value": "food",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-30-opt2",
+     "value": "crop",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "A drought is a lack of rain, so a famine is a lack of food. The child chooses crop because it belongs to the same topic as famine (farming and food supply). A famine is not a lack of crop in the way the pair works, so the topic is matched but not the relationship."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-30-opt3",
+     "value": "cloud",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A drought is a lack of rain, so a famine is a lack of food. The child stays with the first pair: rain falls from a cloud, so cloud belongs with drought and rain. The relationship is never carried across to famine."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-31",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "captain is to crew as conductor is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-31-opt1",
+     "value": "orchestra",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-31-opt2",
+     "value": "ship",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A captain leads a crew, so a conductor leads an orchestra. The child stays with the first pair: a captain and crew sail a ship. Ship belongs with captain and crew, and the relationship is never carried across to conductor."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-31-opt3",
+     "value": "violin",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagDescription": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you.",
+     "execution": "A captain leads a crew, a whole group, so a conductor leads an orchestra. The child gives violin instead: a violin is one part of an orchestra. The example named the whole group being led, and the child names a part of the group."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-32",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "recipe is to meal as blueprint is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-32-opt1",
+     "value": "building",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-32-opt2",
+     "value": "brick",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagDescription": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you.",
+     "execution": "A recipe is the plan for a meal, the whole finished thing, so a blueprint is the plan for a building. The child gives brick instead: a brick is a part of a building. The example named the whole result, and the child names a part of it."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-32-opt3",
+     "value": "kitchen",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A recipe is the plan for a meal, so a blueprint is the plan for a building. The child stays with the first pair: a recipe is used in a kitchen to make a meal. Kitchen belongs with recipe and meal and is never carried across to blueprint."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-33",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "chapter is to novel as scene is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-33-opt1",
+     "value": "play",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-33-opt2",
+     "value": "ticket",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "A chapter is one part of a novel, so a scene is one part of a play. The child picks ticket because it belongs to the topic of going to see a play. A scene is not part of a ticket, so the part-of-a-whole relationship is never applied."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-33-opt3",
+     "value": "line",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagDescription": "Applied the relationship backwards.",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round.",
+     "execution": "A chapter is a part of a novel, so a scene is a part of a play. The child runs the relationship the other way: a line is a part of a scene. That makes scene the whole and line the part, the reverse of chapter (part) to novel (whole)."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-34",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "warm is to scorching as damp is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-34-opt1",
+     "value": "soaked",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-34-opt2",
+     "value": "wet",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "tagDescription": "Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size).",
+     "tagChildHint": "You found the right link. Now check how big the change is.",
+     "execution": "Scorching is the extreme of warm, so soaked is the extreme of damp. The child moves the right way, from damp to wet, but stops at the ordinary middle step. Wet parallels hot, not scorching, so it is the right direction at the wrong size."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-34-opt3",
+     "value": "sunny",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "Scorching is the extreme of warm, so soaked is the extreme of damp. The child stays with the first pair: warm and scorching days are sunny. Sunny belongs with warm and scorching and is never carried across to damp."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-35",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "breeze is to gale as shower is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-35-opt1",
+     "value": "downpour",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-35-opt2",
+     "value": "kite",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A gale is a much stronger breeze, so a downpour is a much heavier shower. The child stays with the first pair: a kite flies in a breeze. Kite belongs with breeze and gale and is never carried across to shower."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-35-opt3",
+     "value": "drizzle",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagDescription": "Applied the relationship backwards.",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round.",
+     "execution": "Breeze to gale goes from lighter to stronger. Drizzle is lighter than a shower, so the child has applied the change backwards and moved down in strength instead of up."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-36",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "whisper is to shout as glance is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-36-opt1",
+     "value": "stare",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-36-opt2",
+     "value": "look",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "tagDescription": "Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size).",
+     "tagChildHint": "You found the right link. Now check how big the change is.",
+     "execution": "Whisper and shout are the quietest and loudest ways to speak, so glance and stare are the shortest and longest ways to look. The child moves the right way, from glance to look, but stops at the ordinary middle step. Look is the plain word, as talk is for whisper and shout, so it is the right direction at the wrong size."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-36-opt3",
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "Whisper and shout are the quietest and loudest ways to speak, so glance and stare are the shortest and longest ways to look. The child stays with the first pair: a shout is loud. Loud belongs with whisper and shout and is never carried across to glance."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-37",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "whisper is to scream as whimper is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-37-opt1",
+     "value": "wail",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-37-opt2",
+     "value": "cry",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "tagDescription": "Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size).",
+     "tagChildHint": "You found the right link. Now check how big the change is.",
+     "execution": "Whisper and scream are the quietest and loudest voices, so whimper and wail are the quietest and loudest crying. The child moves the right way, from whimper to cry, but stops at the ordinary middle step. Cry is the plain word, as talk is for whisper and scream, so it is the wrong size."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-37-opt3",
+     "value": "tears",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "Whisper and scream are the quietest and loudest voices, so whimper and wail are the quietest and loudest crying. The child picks tears because they belong to the topic of crying. Tears are not a loud cry, so the quiet-to-loud relationship is never applied."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-38",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "annoyed is to furious as pleased is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-38-opt1",
+     "value": "delighted",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-38-opt2",
+     "value": "angry",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "Furious is a much stronger feeling than annoyed, so delighted is a much stronger feeling than pleased. The child stays with the first pair: angry belongs with annoyed and furious. It is never carried across to pleased."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-38-opt3",
+     "value": "happy",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "tagDescription": "Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size).",
+     "tagChildHint": "You found the right link. Now check how big the change is.",
+     "execution": "Furious is a much stronger feeling than annoyed, so delighted is a much stronger feeling than pleased. The child moves the right way, from pleased to happy, but stops at a small step. Happy parallels angry, not furious, so it is the right direction at the wrong strength."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-39",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "wheat is to flour as grape is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-39-opt1",
+     "value": "juice",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-39-opt2",
+     "value": "bread",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "Wheat is made into flour, so grapes are made into juice. The child stays with the first pair: flour is made into bread. Bread belongs with wheat and flour and is never carried across to grape."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-39-opt3",
+     "value": "vine",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagDescription": "Applied the relationship backwards.",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round.",
+     "execution": "Wheat is made into flour, so a grape is made into juice: the second word comes from the first. The child runs it the other way and gives vine, which a grape comes from. That makes vine the source of grape, the reverse of flour coming from wheat."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-40",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "sculptor is to marble as potter is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-40-opt1",
+     "value": "clay",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-40-opt2",
+     "value": "vase",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "A sculptor works with marble, so a potter works with clay. The child picks vase because it belongs to the topic of pottery: a vase is something a potter makes. Marble is the material, not the thing made, so the relationship is not applied."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-40-opt3",
+     "value": "statue",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A sculptor works in marble, so a potter works in clay. The child stays with the first pair: a sculptor carves marble into a statue. Statue belongs with sculptor and marble, and the relationship is never carried across to potter."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-41",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "herd is to cattle as flock is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-41-opt1",
+     "value": "sheep",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-41-opt2",
+     "value": "cow",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A herd is a group of cattle, so a flock is a group of sheep. The child stays with the first pair: a cow is one of the cattle. Cow belongs with herd and cattle and is never carried across to flock."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-41-opt3",
+     "value": "wool",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagDescription": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you.",
+     "execution": "A herd is a group of cattle, the whole animals, so a flock is a group of sheep. The child gives wool instead: wool is the coat that grows on a sheep. The example named the animals themselves, and the child names a part of the animal."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-43",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "dictionary is to word as atlas is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-43-opt1",
+     "value": "map",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-43-opt2",
+     "value": "library",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagDescription": "Applied the relationship backwards.",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round.",
+     "execution": "A dictionary is a book of words, so an atlas is a book of maps. The child runs the link backwards: a word is found in a dictionary, so the child names where an atlas is found. Library holds the atlas, where the example's second word is held by the first."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-43-opt3",
+     "value": "geography",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "A dictionary is a book of words, so an atlas is a book of maps. The child picks geography because an atlas belongs to that school subject. Geography is the subject an atlas is used for, not the thing it is made of, as words make up a dictionary."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-44",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "cowardice is to bravery as cruelty is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-44-opt1",
+     "value": "kindness",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-44-opt2",
+     "value": "violence",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "Bravery is the opposite of cowardice, so kindness is the opposite of cruelty. The child picks violence because it belongs to the same topic as cruelty. Violence goes with cruelty rather than against it, so the opposite relationship is never applied."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-44-opt3",
+     "value": "fear",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "Bravery is the opposite of cowardice, so kindness is the opposite of cruelty. The child stays with the first pair: a coward is full of fear. Fear belongs with cowardice and bravery and is never carried across to cruelty."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-45",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "witness is to trial as referee is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-45-opt1",
+     "value": "match",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-45-opt2",
+     "value": "judge",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A witness takes part in a trial, so a referee takes part in a match. The child stays with the first pair: a judge runs a trial. Judge belongs with witness and trial and is never carried across to referee."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-45-opt3",
+     "value": "goal",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "A witness takes part in a trial, so a referee takes part in a match. The child picks goal because it belongs to the topic of football that referee brings to mind. A referee does not take part in a goal, so the relationship is never applied."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-46",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "drop is to ocean as grain is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-46-opt1",
+     "value": "desert",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-46-opt2",
+     "value": "camel",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "A drop is a tiny piece of a vast ocean, so a grain is a tiny piece of a vast desert. The child picks camel because it belongs to the topic of deserts. A grain is not a tiny piece of a camel, so the relationship is never applied."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-46-opt3",
+     "value": "wave",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "A drop is a tiny piece of a vast ocean, so a grain is a tiny piece of a vast desert. The child stays with the first pair: waves move across the ocean. Wave belongs with drop and ocean and is never carried across to grain."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-47",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "sketch is to painting as draft is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-47-opt1",
+     "value": "essay",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-47-opt2",
+     "value": "outline",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagDescription": "Applied the relationship backwards.",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round.",
+     "execution": "A sketch comes before a painting, so a draft comes before an essay. The child runs the sequence backwards and names what comes before a draft: an outline."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-47-opt3",
+     "value": "pen",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "A sketch is the rough first version of a painting, so a draft is the rough first version of an essay. The child chooses pen because it belongs to the same topic as draft (writing). A draft is not a first version of a pen, so the topic is matched but not the relationship."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-48",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "forget is to remember as doubt is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-48-opt1",
+     "value": "believe",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-48-opt2",
+     "value": "memory",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagDescription": "Chose a word related to the first pair rather than applying the relationship to the second.",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word.",
+     "execution": "Remember is the opposite of forget, so believe is the opposite of doubt. The child stays with the first pair: forgetting and remembering are about memory. Memory belongs with forget and remember and is never carried across to doubt."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-48-opt3",
+     "value": "worry",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagDescription": "Chose a word from the same topic without the same relationship.",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second.",
+     "execution": "Remember is the opposite of forget, so believe is the opposite of doubt. The child picks worry because it belongs to the same topic of uneasy feelings as doubt. Worry is not the opposite of doubt, so the relationship is never applied."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-49",
+   "questionType": "vr-03-related-words",
+   "passageRef": null,
+   "lineRefs": null,
+   "questionLines": [
+    "The first pair go together in a certain way. Complete the second pair the same way.",
+    "apprentice is to master as sapling is to …"
+   ],
+   "otherStemFields": {},
+   "options": [
+    {
+     "optionId": "gen-vr-03-related-words-49-opt1",
+     "value": "oak",
+     "isKey": true,
+     "tag": null,
+     "tagDescription": null,
+     "tagChildHint": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-03-related-words-49-opt2",
+     "value": "branch",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagDescription": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you.",
+     "execution": "An apprentice grows into a master, the complete grown form, so a sapling grows into an oak. The child gives branch instead: a branch is a part of an oak. The example named the whole finished form, and the child names a part of it."
+    },
+    {
+     "optionId": "gen-vr-03-related-words-49-opt3",
+     "value": "acorn",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagDescription": "Applied the relationship backwards.",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round.",
+     "execution": "An apprentice grows into a master, the later stage, so a sapling grows into an oak. The child runs it the other way and gives acorn, which comes before a sapling. That moves from the later stage back to the earlier, the reverse of apprentice to master."
+    }
+   ],
+   "hint": null,
+   "walkScript": null
+  }
+ ]
+}
