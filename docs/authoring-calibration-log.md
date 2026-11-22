@@ -29463,3 +29463,51 @@ fault a second reader could name. In the fix rounds a fresh reviewer refused or 
 first drafts, and those catches were real, often things a gate cannot see: a hint pointing at a
 wrong option, an untouched walk left stale by a new key, an odd-one-out opening. **One reviewer is
 not enough. The second, independent reading is what found these, so it stays the standing check.**
+
+## R1038 — CI has been red since 2026-08-12; what it takes to make it green (David: "Yes, fix CI", 2026-11-22)
+
+**MEASURED, NOT ASSUMED.** CI was run end to end in a throwaway git worktree against fresh databases
+(`cluecrew_ci_test`, `cluecrew_ci_shadow`, en_US collation as CI has), with every step in order and
+none stopping the run. Result: 73 steps run, 33 failing. The last green CI was 2026-08-12. Since
+then, gates were added that nothing ever ran in CI, and code accumulated that each of them forbids.
+
+**FIXED (part 1, `6169ed2`):**
+- **lint and the scripts typecheck:** about 300 errors across about 110 files. Three agents worked on
+  disjoint file sets with no behaviour change, then the remainder by hand. The KNOWN_UNTYPED ratchet
+  did not grow.
+- **Real bugs the typechecker found:**
+  - `ContentFailure.message`, a field that never existed, read in four places; it should be `.detail`.
+  - `FixtureCounts.passed`, renamed `neverRefused` by R1000.
+  - `status: 'REJECTED'`, never an ItemStatus; it is now NEVER_SHIPPABLE, where all 13 rows already
+    stand.
+  - `@prisma/client` imported from the repo root, where it does not resolve (3 files).
+  - a `requirePopulation` call that could never fail.
+  - `import-reissued-items --apply` set no required `authoredBy`. It now refuses, because Cowork is
+    retired (R1034).
+  - `wholeness-census-and-142.ts` was deleted. It was a one-time census written against a function
+    since redefined, and nothing references it.
+- **Passages:** the 2026-08-16 import dropped `kind: "passage"` from 27 files and renamed the text
+  (`extract` / `text`). They failed validation unseen. `kind` is restored (one line per file), and
+  the validator accepts any of `body`, `extract` or `text`.
+
+**OPEN, NEEDING DAVID:**
+1. **CI HAS NO CONTENT.** 19 failing steps refuse an EMPTY population, and correctly so. CI builds its
+   database from migrations, seed and generator only. The imported and reviewed content, and every
+   signature, exists only in the dev database. Proposed: a deterministic content snapshot committed
+   to the repo and restored in CI after migrations, re-exported whenever content lands. That also
+   gives production its content path.
+2. **WORKING RECORDS IN TWO CONTENT SCANNERS.** `validate:content` and `scan:vocab` scan all of
+   `content/`, including `content/agent-review/` (review packets and proposals that quote faults by
+   name). Excluding it was REFUSED by the permission classifier as weakening oversight, so it waits
+   for David. The pilot-exclusion guard fails only because those two fail.
+3. **GOVERNANCE CHECKS THAT ROTTED WHILE CI WAS DOWN.** Each needs either code changed to the rule or a
+   declared, evidenced exemption:
+   - `check:signing-doors`: 7 one-shot scripts write SIGNED directly;
+   - `check:review-queries`: 4 files read `draftSelfAssessment`;
+   - `check:unordered-includes`: option includes with no order;
+   - `check:declared-unread`: Reviewer.heldFrom;
+   - `check:stamp-covers-payload`: one artefact;
+   - `check:outside-writes`: the e2e fixture item in a fresh database;
+   - `check:manifest-drift`: needs a committed manifest;
+   - `check:word-puzzles`: its frequency file is fetched, not committed, so CI cannot have it;
+   - `check:carriage-schema`.
