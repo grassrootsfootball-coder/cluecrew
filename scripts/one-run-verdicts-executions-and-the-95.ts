@@ -51,7 +51,7 @@ function loadVerified(path: string, expectPrefix?: string): { data: Record<strin
   const digest = fileSha(path);
   const sidecar = `${path}.sha256`;
   if (existsSync(sidecar)) {
-    const declared = readFileSync(sidecar, 'utf8').trim().split(/\s+/)[0];
+    const declared = readFileSync(sidecar, 'utf8').trim().split(/\s+/)[0]!;
     if (declared !== digest) throw new Error(`${path}: bytes do not match sidecar (${declared.slice(0, 16)} vs ${digest.slice(0, 16)})`);
   }
   if (expectPrefix && !digest.startsWith(expectPrefix)) {

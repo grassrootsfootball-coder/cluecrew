@@ -66,7 +66,7 @@ async function main() {
         next[t.field] = cur.replace(t.from, t.to);
       }
       const gate = [...checkMisconceptionProposal({ id: m.id, ...next }),
-        ...checkChildFacingText({ role: 'misconception-hint', label: `${m.id}.childHint`, text: next.childHint }).filter(isBlocking)];
+        ...checkChildFacingText({ role: 'hint', label: `${m.id}.childHint`, text: next.childHint }).filter(isBlocking)];
       const trim = refuseApprovedTrim({ id: m.id, before: m.childHint, after: next.childHint, row: m,
         approverRedraft: { approvedBy: `reviewer:${AGENT}`, authority: `${c.file} sha256 ${c.sha}` } });
       if (bad.length || gate.length || trim) { out.push({ id: v.id, outcome: 'held', bad, gate: gate.map((g) => `${g.rule}: ${g.detail}`), trim }); continue; }
@@ -95,7 +95,7 @@ async function main() {
       process.exitCode = 1;
     }
   }
-  const tally = out.reduce<Record<string, number>>((a, o) => { const k = String(o.outcome).split(':')[0]; a[k] = (a[k] ?? 0) + 1; return a; }, {});
+  const tally = out.reduce<Record<string, number>>((a, o) => { const k = String(o.outcome).split(':')[0] ?? ''; a[k] = (a[k] ?? 0) + 1; return a; }, {});
   console.log(`library — ${APPLY ? 'APPLY' : 'DRY RUN'}: ${JSON.stringify(tally)}`);
   for (const o of out) if (!String(o.outcome).startsWith('ATTESTED') && o.outcome !== 'TRANSFORMED + ATTESTED') console.log(`  ${o.id}: ${JSON.stringify(o).slice(0, 300)}`);
   writeFileSync(pjoin(DIR, `landed-${APPLY ? 'apply' : 'dry'}.json`), JSON.stringify(out, null, 1));

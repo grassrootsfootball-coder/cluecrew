@@ -14,7 +14,7 @@ async function main() {
   const t: Record<string, Record<string, number>> = {};
   for (const r of rows) {
     const k = r.questionTypeId; t[k] ??= { rows: 0 };
-    const bump = (f: string) => { t[k][f] = (t[k][f] ?? 0) + 1; };
+    const bump = (f: string) => { const row = t[k]!; row[f] = (row[f] ?? 0) + 1; };
     bump('rows');
     const sigs = await prisma.attributionEvent.findMany({ where: { recordId: r.id, action: 'SIGNED', reviewerId: { in: ['rev-0001', 'rev-agent-01'] }, subjectHash: { not: null } }, select: { subjectHash: true } });
     const hs = new Set(sigs.map((s) => s.subjectHash!));

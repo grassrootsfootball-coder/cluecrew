@@ -44,7 +44,7 @@ async function main() {
     const exemplars: Record<string, Array<{ itemId: string; option: string; execution: string }>> = {};
     for (const r of rows) for (const o of r.options) {
       if (!o.misconceptionId || !(o.misconceptionExecution ?? '').trim()) continue;
-      (exemplars[o.misconceptionId] ??= []).length < 3 && exemplars[o.misconceptionId]!.push({ itemId: r.id, option: val(o.content), execution: o.misconceptionExecution! });
+      if ((exemplars[o.misconceptionId] ??= []).length < 3) exemplars[o.misconceptionId]!.push({ itemId: r.id, option: val(o.content), execution: o.misconceptionExecution! });
     }
     const packet = {
       door: d, caseId: c.id, title: c.title, questionType: c.questionTypeId,

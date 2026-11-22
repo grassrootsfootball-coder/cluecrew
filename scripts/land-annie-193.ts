@@ -46,7 +46,7 @@ async function run() {
     { name: 'the two rival rules coincide on 3/4 — arithmetic cannot separate them', input: '3/4', mustBeCaught: true },
     { name: 'on 2/5 they part company, which is the discriminating item she asks for', input: '2/5', mustBeCaught: false },
   ], (f) => {
-    const [n, d] = f.split('/').map(Number);
+    const [n, d] = f.split('/').map(Number) as [number, number];
     const bottomAlone = 15 * d;                 // the rule her entry names
     const complement = 15 / (1 - n / d);        // the rival reading
     return Math.abs(bottomAlone - complement) < 1e-9;
@@ -72,7 +72,7 @@ async function run() {
   const live = await prisma.misconception.findUniqueOrThrow({ where: { id: ENTRY }, select: { childHint: true } });
   if (live.childHint !== REPLACED) refusals.push(`the entry's childHint is not the text her amendment replaces — live ${JSON.stringify(live.childHint)}`);
   const gate = checkChildFacingText({ role: 'hint', label: `${ENTRY}.childHint`, text: AUTHORED });
-  if (gate.length > 0) refusals.push(`her authored hint fails the child-facing gate: ${gate.map((f) => f.message).join(' | ')}`);
+  if (gate.length > 0) refusals.push(`her authored hint fails the child-facing gate: ${gate.map((f) => f.detail).join(' | ')}`);
 
   if (refusals.length === 0 && APPLY) {
     await prisma.$transaction(async (tx) => {
@@ -129,7 +129,7 @@ async function run() {
     THE_HINT_AMENDMENT: {
       target: `library:${ENTRY}:childHint`, replaced: REPLACED, authored: AUTHORED,
       assertedBeforeWriting: 'the live childHint was compared against her `replaced` text and matched byte for byte',
-      childFacingGate: gate.length === 0 ? 'PASSES' : gate.map((f) => f.message),
+      childFacingGate: gate.length === 0 ? 'PASSES' : gate.map((f) => f.detail),
       why: 'the replaced wording ASSERTS the mechanism and would lie to a complement child if one exists. R586 — a hint that asserts a feature must be true of every carrier, and this taxonomy has never been tested against its rival.',
     },
 

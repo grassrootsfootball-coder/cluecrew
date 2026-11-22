@@ -60,7 +60,7 @@ async function run() {
   requirePopulation('land:annie-197', { 'pair(s) she named': plan.length, 'untagged option(s) available': rows.flatMap((r) => r.options.filter((o) => !o.isCorrect && !o.misconceptionId)).length });
 
   const refusals: string[] = [];
-  if (gate.length) refusals.push(`her childHint fails the child-facing gate: ${gate.map((f) => f.message).join(' | ')}`);
+  if (gate.length) refusals.push(`her childHint fails the child-facing gate: ${gate.map((f) => f.detail).join(' | ')}`);
   for (const p of plan) if (p.hits.length !== 1) refusals.push(`${JSON.stringify(p.pair)} resolves to ${p.hits.length} untagged options, expected exactly 1`);
 
   if (refusals.length === 0 && APPLY) {
@@ -75,8 +75,8 @@ async function run() {
             servingSha256: sha(MINT.childHint) } },
         update: { description: MINT.description, childHint: MINT.childHint } });
       for (const p of plan) {
-        await tx.itemOption.update({ where: { id: p.hits[0].optionId }, data: { misconceptionId: p.tag } });
-        await tx.attributionEvent.create({ data: { recordType: 'item', recordId: p.hits[0].itemId, action: 'AMENDED',
+        await tx.itemOption.update({ where: { id: p.hits[0]!.optionId }, data: { misconceptionId: p.tag } });
+        await tx.attributionEvent.create({ data: { recordType: 'item', recordId: p.hits[0]!.itemId, action: 'AMENDED',
           reviewerId: 'rev-0001', actor: 'Annie', recordedBy: 'human:david', field: 'options[].misconceptionId', returnArtefact: RETURN_SHA,
           method: `her 197th: option ${JSON.stringify(p.pair)} tagged ${p.tag}, matched on option VALUE and not on row position`,
           note: p.tag === MINT.id
@@ -95,7 +95,7 @@ async function run() {
     return: 'annie-197-for-code.md', returnSha256: RETURN_SHA,
     returnSha256Spec: 'sha256 over the return file bytes exactly as delivered, unparsed',
     outcome: refusals.length ? 'REFUSED' : (APPLY ? 'LANDED' : 'WOULD LAND'), refusals,
-    THE_MINT: { ...MINT, carriers: TO_MINT, childFacingGate: gate.length === 0 ? 'PASSES' : gate.map((f) => f.message) },
+    THE_MINT: { ...MINT, carriers: TO_MINT, childFacingGate: gate.length === 0 ? 'PASSES' : gate.map((f) => f.detail) },
     THE_FIVE_TO_PARTIAL_GROUP: TO_PARTIAL,
     MATCHED_ON_VALUE_NOT_POSITION: 'she names the carriers by word pair; each resolved to exactly one untagged option by comparing stored values, and order is part of the value — a reversed pair does not match. Resolving by row index would have trusted my ordering to agree with her reading.',
     resolution: plan.map((p) => ({ pair: p.pair, tag: p.tag, resolvedTo: p.hits.map((h) => h.itemId) })),

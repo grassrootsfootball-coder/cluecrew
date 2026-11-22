@@ -31,7 +31,7 @@ import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { checkKeyPerformsStem, moveLetterOutcomes } from '../packages/core/src/key-gate';
 import { requirePopulation } from './lib/population';
-import { canonicalJson, findingsDigest, digestsBlock } from './lib/findings-digest';
+import { findingsDigest, digestsBlock } from './lib/findings-digest';
 import { deliver, stampedName } from './lib/export-destination';
 
 const REPO = pjoin(__dirname, '..');

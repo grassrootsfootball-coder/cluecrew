@@ -75,7 +75,6 @@ async function main() {
     .filter((i) => !isRuled(i.explanation))
     .map((i) => {
       const e = (i.explanation ?? {}) as Record<string, unknown>;
-      const key = i.options.find((o) => o.isCorrect);
       return {
         itemId: i.id,
         stem: [(i.stem as Record<string, unknown>).text, (i.stem as Record<string, unknown>).prompt,

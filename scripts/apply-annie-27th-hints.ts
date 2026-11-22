@@ -45,7 +45,10 @@ async function main() {
           `  Expected: "${r.authored}"`,
       );
     }
-    const gate = checkChildFacingText({ role: 'misconception-hint', label: r.item, text: r.authored }).filter(isBlocking);
+    // 'misconception-hint' was never a ContentRole; at run time it fell back to 'item-stem' (the gate's
+    // strictest-default path), which is what this script was gated under. Named here so the type is real.
+    // 'hint' carries the same caps but adds the stance-only bans, so it would not reproduce the run.
+    const gate = checkChildFacingText({ role: 'item-stem', label: r.item, text: r.authored }).filter(isBlocking);
     if (gate.length > 0) throw new Error(`apply-annie-27th ABORTED — ${r.item} fails the gate: ${gate.map((f) => f.detail).join('; ')}`);
   }
   console.log('all authored wordings located in her file and gated clean\n');

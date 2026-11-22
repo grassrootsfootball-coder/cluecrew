@@ -16,7 +16,6 @@ import {
   FIELD_DISPOSITIONS, NOTATION_BEARING_PATHS, capitalRunIsExempt,
   dispositionFor, gapMarkerSpans, isRetentionPath, isSymbolString,
 } from '../packages/core/src/index';
-import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';
 
 const REPO = join(__dirname, '..');

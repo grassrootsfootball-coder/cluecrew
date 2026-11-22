@@ -31,6 +31,7 @@ function main() {
   const bytes = readFileSync(THEIRS);
   const theirDigest = sha(bytes);
   if (!theirDigest.startsWith('ad22698d015b')) throw new Error(`their screen does not verify: ${theirDigest.slice(0, 16)}`);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- an external artefact read field by field; its shape is pinned by the digest above
   const theirs = JSON.parse(bytes.toString('utf8')) as Record<string, any>;
   const theirFlags: string[] = theirs.ONE_THE_SCREEN_AS_SHE_SPECIFIED_IT.AND_A_THIRD_OUTCOME_THE_FIXTURE_FORCED.theList;
   const theirRefusalsSeen: string[] = (theirs.THREE_THE_CROSSED_POPULATION_MEASURED_NEVER_SCREENED.REFUSED_BY_THIS_STORES_LIST ?? [])
@@ -82,7 +83,7 @@ function main() {
       source: APPROPRIATENESS_SOURCE,
       refuse: APPROPRIATENESS_FIXTURE.mustRefuse,
       flagWhenBare: APPROPRIATENESS_FIXTURE.mustFlagWhenBARE,
-      passFixture: APPROPRIATENESS_FIXTURE.mustPass,
+      neverRefusedFixture: APPROPRIATENESS_FIXTURE.mustNeverBeRefused, // R1000 renamed mustPass (may pass or flag, never refuse)
       passInASentence: APPROPRIATENESS_FIXTURE.mustPassInASentence,
       fixtureCases: fixture,
       andTHEREFUSELISTITSELF: 'hell, damn, crap, bugger, arse, bastard, bitch, lover, nude, sexy, lust, brothel, whisky, whiskey, vodka, brandy, booze, heroin, cocaine, corpse, suicide, slaughter, massacre, torture, hanged',
@@ -109,7 +110,7 @@ function main() {
   writeFileSync(pjoin(DL, name), readFileSync(pjoin(LANE, name)));
 
   console.log(`  their screen verifies at ${theirDigest.slice(0, 12)} (v${theirPin.version}: ${theirPin.refuseListSize} refuse, ${theirPin.passListSize} pass, ${theirPin.flagListSize} flag)`);
-  console.log(`  this store v${APPROPRIATENESS_VERSION}: ${fixture.refused} refuse-cases, ${fixture.flagged} flag, ${fixture.passed} pass, ${fixture.inASentence} sentence-resolved`);
+  console.log(`  this store v${APPROPRIATENESS_VERSION}: ${fixture.refused} refuse-cases, ${fixture.flagged} flag, ${fixture.neverRefused} never-refused, ${fixture.inASentence} sentence-resolved`);
   console.log(`  on their 19 flags: ${agreeFlags.length} agree, ${disagreeFlags.length} disagree (all PASS here)`);
   console.log(`  disagreements: ${disagreeFlags.map((d) => d.word).join(', ')}`);
   console.log(`\n  crossed: ${name}  (FILE ${fin.slice(0, 16)})`);

@@ -24,7 +24,7 @@ const REPO = pjoin(__dirname, '..');
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 const parseSum = (s: string) => {
   const m = s.match(/\((\d+) \[(\d+)\] (\d+)\)\s+\((\d+) \[\?\] (\d+)\)/);
-  return m ? { a1: +m[1], mid1: +m[2], c1: +m[3], a2: +m[4], c2: +m[5] } : null;
+  return m ? { a1: +m[1]!, mid1: +m[2]!, c1: +m[3]!, a2: +m[4]!, c2: +m[5]! } : null;
 };
 
 async function run() {

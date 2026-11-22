@@ -39,7 +39,6 @@ const COMPLETIONS: Record<string, { anchor: string; reading: string }> = {
 
 const readings: Array<Record<string, unknown>> = [];
 const perPassage = new Map<string, { flags: Array<Record<string, unknown>>; support: Array<Record<string, unknown>> }>();
-/* eslint-disable prefer-const */
 
 for (const b of blocks) {
   const entry = perPassage.get(b.pid) ?? { flags: [], support: [] };

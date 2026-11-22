@@ -9,7 +9,6 @@ import { deliver, stampedName } from './lib/export-destination';
 
 const REPO = join(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
-const DAVID = 'human:david@cluecrew.test';
 const BANKS = [
   { file: '/Users/davidb/Downloads/11+/items/vr-banks/vr02-bank.json', sha256: '7ce96804b4c4beb58e23ad232940300227fee619f7f4e0611836248d8de3f076', qt: 'vr-02-two-odd-ones-out' },
   { file: '/Users/davidb/Downloads/11+/items/vr-banks/vr06-bank.json', sha256: null as string | null, qt: 'vr-06-missing-word' },

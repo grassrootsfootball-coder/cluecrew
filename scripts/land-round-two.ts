@@ -18,7 +18,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join as pjoin } from 'node:path';
-import { prisma, recordSignature } from '../packages/db/src/index';
+import { prisma } from '../packages/db/src/index';
 import { checkKeyPerformsStem } from '../packages/core/src/key-gate';
 import { checkTagWrite } from '../packages/core/src/tag-write-gate';
 import { requirePopulation } from './lib/population';
@@ -77,7 +77,7 @@ async function main() {
 
   // ---- 2. THE EIGHTEEN EXECUTIONS BY NAMED ROUTE ----------------------------------------------
   console.log('2. The eighteen executions, through the landing rules and both gates.');
-  const eighteen = c49['TWO_EIGHTEEN_AUTHORED_BY_NAMED_ROUTE']['executions'] as Array<Record<string, unknown>>;
+  const eighteen = c49['TWO_EIGHTEEN_AUTHORED_BY_NAMED_ROUTE']!['executions'] as Array<Record<string, unknown>>;
   readFieldsByName('the eighteen', eighteen, ['itemId', 'optionValue', 'entryId', 'EXECUTION']);
   requirePopulation('round-two:executions', { execution: eighteen.length });
   for (const e of eighteen) {
@@ -108,14 +108,14 @@ async function main() {
 
   // ---- 3. THE TEN CONTINGENT ------------------------------------------------------------------
   console.log('3. The ten contingent, recorded with their named siblings; nothing lands.');
-  const ten = c49['THREE_TEN_HELD_CONTINGENT_ON_A_SIBLING']['held'] as Array<Record<string, unknown>>;
+  const ten = c49['THREE_TEN_HELD_CONTINGENT_ON_A_SIBLING']!['held'] as Array<Record<string, unknown>>;
   for (const h of ten) {
     rec('contingent', `${h.itemId}:${h.optionValue}`, 'HELD-CONTINGENT', `${h.entryId}: ${String(h.why).slice(0, 100)} — contingent on ${String(h.contingentOn).slice(0, 80)}; the execution is one line when the sibling resolves`, { entry: String(h.entryId) });
   }
 
   // ---- 4. THE TWENTY-ONE, under her mint ------------------------------------------------------
   console.log('4. The twenty-one land under her mint, her per-word refuters standing.');
-  const twentyOne = c49['ONE_A_MISLABEL_OWNED_BEFORE_ANYTHING_IS_AUTHORED']['theTwentyOne'] as Array<Record<string, unknown>>;
+  const twentyOne = c49['ONE_A_MISLABEL_OWNED_BEFORE_ANYTHING_IS_AUTHORED']!['theTwentyOne'] as Array<Record<string, unknown>>;
   const herRefuters: Record<string, string> = { generous: 'vr21-associated-not-same', ticket: 'vr21-associated-not-same', lend: 'RE-AUTHORS' };
   for (const m of twentyOne) {
     const val = String(m.optionValue);
@@ -185,7 +185,7 @@ async function main() {
       proposedValue: rel.crispReversalValue ?? 'AUTHORING-NEEDED — the reversal product is a semantic generation, proposed by the generator and refused or accepted by her reading',
       refuterPerRow: 'a reading that this row\'s relation does not run one way refutes its reversed-relation assignment',
     });
-    rec('vr10-reauthor', r.id, 'PROPOSED', `directional (${rel.relation.split('(')[0].trim()}); destination vr03-reversed-relation${rel.crispReversalValue ? `; crisp value "${rel.crispReversalValue}"` : ''}`, { door: 'vr-10' });
+    rec('vr10-reauthor', r.id, 'PROPOSED', `directional (${rel.relation.split('(')[0]!.trim()}); destination vr03-reversed-relation${rel.crispReversalValue ? `; crisp value "${rel.crispReversalValue}"` : ''}`, { door: 'vr-10' });
   }
   rec('mint', 'vr10-first-pair-word-returned', 'PROPOSED-NOT-CREATED', 'her mint stays a proposal: no childHint has been authored for it, and a library row requires one — creating it with an invented hint would be authoring, with an empty one a placeholder fault. It lands as a row when its hint crosses; wet is named as first carrier; her refuter recorded verbatim.', {});
 

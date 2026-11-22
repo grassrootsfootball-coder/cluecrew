@@ -138,10 +138,10 @@ async function run() {
   // ---- Phase 1: the 133rd (sitting six) ----
   console.log('— PHASE 1: the 133rd (sitting six), cured by the head declaration —');
   const amend133 = [...her133.matchAll(/target: library:([a-z0-9-]+)\n\s+replaced: (.+)\n\s+replacedSha256: reference: 851cc51ae835885f id ([a-z0-9-]+)\n\s+authored: (.+)/g)]
-    .map((m) => ({ id: m[1], replaced: m[2].trim(), short: m[3], authored: m[4].trim() }));
+    .map((m) => ({ id: m[1]!, replaced: m[2]!.trim(), short: m[3]!, authored: m[4]!.trim() }));
   if (amend133.length !== 4) throw new Error(`REFUSED — expected four 133rd amendments, found ${amend133.length}`);
   const conf133 = [...her133.matchAll(/confirmed: library:([a-z0-9-]+) \| approved as written(?:; ([^|]+?))? \| reference: 851cc51ae835885f id ([a-z0-9-]+)/g)]
-    .map((m) => ({ id: m[1], annotation: m[2]?.trim() ?? null, short: m[3] }));
+    .map((m) => ({ id: m[1]!, annotation: m[2]?.trim() ?? null, short: m[3]! }));
   if (conf133.length !== 8) throw new Error(`REFUSED — expected eight 133rd confirmations, found ${conf133.length}`);
   for (const a of amend133) {
     if (!a.id.startsWith(a.short)) throw new Error(`REFUSED — ${a.id}: reference short id ${a.short} does not resolve`);
@@ -163,13 +163,13 @@ async function run() {
   console.log('— PHASE 2: the 134th (sittings seven to ten) via the remainder map —');
   if (map.amendments.length !== 10 || map.approvals.length !== 27) throw new Error('REFUSED — map shape is not 10 + 27');
   const amend134 = [...her134.matchAll(/target: library:([a-z0-9-]+)\n\s+replaced: (.+)\n\s+replacedSha256: reference: 851cc51ae835885f id ([a-z0-9-]+)\n\s+authored: (.+)/g)]
-    .map((m) => ({ id: m[1], replaced: m[2].trim(), authored: m[4].trim() }));
+    .map((m) => ({ id: m[1]!, replaced: m[2]!.trim(), authored: m[4]!.trim() }));
   if (amend134.length !== 10) throw new Error(`REFUSED — expected ten 134th amendment blocks, found ${amend134.length}`);
   const conf134 = [...her134.matchAll(/confirmed: library:([a-z0-9-]+) \| ((?:approved as written|text approved)[^|]*?) \| id ([a-z0-9-]+)$/gm)]
     .map((m) => {
-      const seg = m[2].trim();
+      const seg = m[2]!.trim();
       const semi = seg.indexOf(';');
-      return { id: m[1], annotation: semi === -1 ? null : seg.slice(semi + 1).trim(), short: m[3] };
+      return { id: m[1]!, annotation: semi === -1 ? null : seg.slice(semi + 1).trim(), short: m[3]! };
     });
   if (conf134.length !== 27) throw new Error(`REFUSED — expected twenty-seven 134th confirmations, found ${conf134.length}`);
   for (const a of map.amendments) {

@@ -38,8 +38,8 @@ const citedLines = (t: string) => [...t.matchAll(/\bline[s]?\s+(\d+)(?:\s+and\s+
  * straight quote only where it does not follow a word character.
  */
 const quotedSpans = (t: string) => [
-  ...[...t.matchAll(/["“]([^"“”]{12,})["”]/g)].map((m) => m[1]),
-  ...[...t.matchAll(/(?<![A-Za-z])'([^']{12,})'/g)].map((m) => m[1]),
+  ...[...t.matchAll(/["“]([^"“”]{12,})["”]/g)].map((m) => m[1]!),
+  ...[...t.matchAll(/(?<![A-Za-z])'([^']{12,})'/g)].map((m) => m[1]!),
 ];
 
 async function run() {

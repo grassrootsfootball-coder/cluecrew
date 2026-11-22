@@ -1,6 +1,6 @@
 /** THE PUBLICATION SHAPE BOTH WAYS (R864). David rules which; this reports and publishes nothing. */
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { caseFaceServes, publishBlockers } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';

@@ -126,7 +126,7 @@ async function run() {
     { name: 'a code word WITH a repeat PERFORMS', input: JSON.stringify(['vr19-shared-letter-miss', { prompt: 'Using the code, what is the code for SEES?' }, '247', '246']), mustBeCaught: true },
     { name: 'an off-by-one PERFORMS arith-slip', input: JSON.stringify(['vr17-arith-slip', {}, '7', '6']), mustBeCaught: true },
     { name: 'an off-by-five REFUSES arith-slip', input: JSON.stringify(['vr17-arith-slip', {}, '11', '6']), mustBeCaught: false },
-  ], (raw) => { const [tag, stem, v, k] = JSON.parse(raw); return PREDICATES[tag](stem, v, k).verdict === 'PERFORMS'; });
+  ], (raw) => { const [tag, stem, v, k] = JSON.parse(raw); return PREDICATES[tag]!(stem, v, k).verdict === 'PERFORMS'; });
 
   const rows = await prisma.item.findMany({ where: { questionTypeId: { in: PAID }, status: 'DRAFT' },
     select: { id: true, questionTypeId: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });

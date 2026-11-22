@@ -56,7 +56,7 @@ async function run() {
   const rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-03-related-words' },
     select: { id: true, stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
 
-  const plan = []; const refused = [];
+  const plan: Array<{ artefactId: string; homedTo: string; rehomed: boolean; optionId: string; optionValue: unknown; text: string; file: string; digest: string; entryId: string | null }> = []; const refused = [];
   for (const r of recs) {
     const home = rows.find((x) => canonicalJson((x.stem as { pairA?: unknown }).pairA) === canonicalJson(r.pair)
       && String((x.stem as { stemWord?: unknown }).stemWord) === String(r.stemWord));

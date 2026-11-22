@@ -52,11 +52,11 @@ async function run() {
   for (const a of map.amendments) {
     const block = new RegExp(`target: library:${a.id}\\n\\s+replaced: (.+)\\n\\s+replacedSha256: .+\\n\\s+authored: (.+)`).exec(her);
     if (!block) throw new Error(`REFUSED — her 131st carries no amendment block for ${a.id}`);
-    if (block[1].trim() !== a.replaced || block[2].trim() !== a.authored) throw new Error(`REFUSED — her 131st's strings and the map's bytes disagree on ${a.id}`);
+    if (block[1]!.trim() !== a.replaced || block[2]!.trim() !== a.authored) throw new Error(`REFUSED — her 131st's strings and the map's bytes disagree on ${a.id}`);
     if (sha256(a.replaced) !== a.replacedSha256 || sha256(a.authored) !== a.authoredSha256) throw new Error(`REFUSED — the map's ${a.id} hashes do not match its own strings`);
   }
   const confirmedIds = [...her.matchAll(/confirmed: library:([a-z0-9-]+) \| approved as written \| reference: 851cc51ae835885f id ([a-z0-9-]+)/g)]
-    .map((m) => ({ full: m[1], short: m[2] }));
+    .map((m) => ({ full: m[1]!, short: m[2]! }));
   if (confirmedIds.length !== 10) throw new Error(`REFUSED — expected ten reference-shape confirmations, found ${confirmedIds.length}`);
   for (const c of confirmedIds) {
     if (!c.full.startsWith(c.short)) throw new Error(`REFUSED — reference id ${c.short} does not resolve to her confirmed ${c.full}`);

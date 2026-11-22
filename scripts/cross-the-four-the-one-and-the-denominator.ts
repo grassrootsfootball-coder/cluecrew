@@ -17,7 +17,7 @@ import { prisma } from '../packages/db/src/index';
 import { draftAssessmentSubjectHash } from '../packages/core/src/index';
 import { ORDERED_OPTION_READ, pinHashes } from './lib/pin-projection';
 import { requirePopulation } from './lib/population';
-import { canonicalJson, findingsDigest } from './lib/findings-digest';
+import { findingsDigest } from './lib/findings-digest';
 import { deliver, stampedName } from './lib/export-destination';
 
 const REPO = pjoin(__dirname, '..');

@@ -102,11 +102,6 @@ async function run() {
    * recomputable on arrival, with the serialisation that produces it NAMED — because the default
    * gives a different number and this store has already raised that false alarm once (R729).
    */
-  const canonical = (o: unknown): string => {
-    if (o === null || typeof o !== 'object') return JSON.stringify(o);
-    if (Array.isArray(o)) return `[${o.map(canonical).join(',')}]`;
-    return `{${Object.keys(o as object).sort().map((k) => `${JSON.stringify(k)}:${canonical((o as Record<string, unknown>)[k])}`).join(',')}}`;
-  };
   // R752: the subtree is named by the DOCUMENT'S OWN top-level keys; findingsDigest throws
   // if any named key is not present, so an alias fails here rather than at the far door.
   const artefact = { ...payload, ...findingsDigest(payload, ['ANSWER_ONE_theJoinsWithPrompts', 'ANSWER_TWO_theTwoStraightQuotes', 'ANSWER_THREE_theScreen']) };

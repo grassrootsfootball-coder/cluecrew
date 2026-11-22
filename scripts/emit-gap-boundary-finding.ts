@@ -1,6 +1,6 @@
 /** ARE THE 59–80 GAPS A LOSS OR A BOUNDARY? (R790) */
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';

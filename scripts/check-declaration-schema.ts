@@ -20,7 +20,7 @@ const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 /** Rules an exemption may name. Derived from the register, never hand-listed (R57). */
 function knownRules(): Set<string> {
   const log = readFileSync(join(REPO_ROOT, 'docs/authoring-calibration-log.md'), 'utf8');
-  return new Set([...log.matchAll(/^## (R\d+)/gm)].map((m) => m[1]));
+  return new Set([...log.matchAll(/^## (R\d+)/gm)].map((m) => m[1]!));
 }
 
 async function main() {

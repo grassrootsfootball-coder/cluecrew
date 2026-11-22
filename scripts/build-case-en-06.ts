@@ -109,7 +109,7 @@ async function run() {
   try {
     execSync('pnpm check:derived-writes', { cwd: REPO, stdio: 'pipe', encoding: 'utf8' });
     guardResult = 'GREEN — pnpm check:derived-writes exited 0 at report time';
-  } catch (e) {
+  } catch {
     throw new Error('REFUSED — the reviewed-content guard check failed; the wall is down');
   }
 

@@ -11,7 +11,7 @@
  *
  *   tsx scripts/agent-review/propose-from-generator.ts --type=vr-14-letter-connections --door=patterns/vr-14
  */
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, writeFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
 import { prisma } from '../../packages/db/src/index';
 import { GENERATORS } from '../../packages/db/prisma/generate-content';
@@ -25,13 +25,17 @@ const val = (c: unknown) => String((c as { value?: unknown })?.value ?? '');
 // becomes a whole-row rebuild, with the same option ids, instead of being refused.
 const ALLOW_REBUILD = process.argv.includes('--allow-rebuild');
 const L = (n: number) => String.fromCharCode(65 + (((n % 26) + 26) % 26));
+/** The generator's operands as these templates read them (each template assumes its own fields are present). */
+type GenOperands = { step: number; first: number; values: Record<string, number>; expr: string; prevStep: number };
+/** The generator's stem as the walk templates read it. */
+type GenStem = { code: Record<string, string>; sum: string; operands: GenOperands; series: string[]; pairA: string[]; stemWord: string };
 /**
  * EXECUTIONS BY TEMPLATE. These mistakes are computations, so each execution is written FROM the operands
  * that produce the value: correct by construction, not drafted. A reviewer still reads every one.
  * Returns null for a tag with no template, which leaves the execution for a person.
  */
-function executionFor(id: string, op: Record<string, any>, value: string, key: string): string | null {
-  const step = op.step, first = op.first, ans = op.answer;
+function executionFor(id: string, op: GenOperands, value: string, key: string): string | null {
+  const step = op.step, first = op.first;
   switch (id) {
     case 'vr07-value-slip': {
       // Name the swap (the reviewer refused the unnamed version: a sentence that fits every row checks nothing).
@@ -41,7 +45,7 @@ function executionFor(id: string, op: Record<string, any>, value: string, key: s
         const at = rows.indexOf(target);
         for (const source of [rows[at - 1], rows[at + 1]]) {
           if (!source) continue;
-          if (String(evalWith({ ...op.values, [target]: op.values[source] })) === value)
+          if (String(evalWith({ ...op.values, [target]: op.values[source]! })) === value)
             return `Used ${source}'s value ${op.values[source]} for ${target}, its neighbour in the code, so ${op.expr} comes to ${value} instead of ${key}.`;
         }
       }
@@ -69,14 +73,14 @@ function executionFor(id: string, op: Record<string, any>, value: string, key: s
  * where it named letters still present (vr-14 row 02 said "J moves two on to L" of a question that now
  * goes D → B, J → H). Every touched row gets a script written from its own stem and options.
  */
-function swapOf(op: Record<string, any>, value: string): [string, string] | null {
+function swapOf(op: GenOperands, value: string): [string, string] | null {
   const rows = Object.keys(op.values ?? {}); const toks = String(op.expr).replace(/[−–]/g, '-').match(/[A-Za-z]+|[+-]/g) ?? [];
   const ev = (vals: Record<string, number>) => { let t = 0, s = 1; for (const k of toks) { if (k === '+') s = 1; else if (k === '-') s = -1; else t += s * vals[k]!; } return t; };
   for (const target of [...new Set(toks.filter((k) => /[A-Za-z]/.test(k)))]) { const at = rows.indexOf(target);
-    for (const source of [rows[at - 1], rows[at + 1]]) if (source && String(ev({ ...op.values, [target]: op.values[source] })) === value) return [source, target]; }
+    for (const source of [rows[at - 1], rows[at + 1]]) if (source && String(ev({ ...op.values, [target]: op.values[source]! })) === value) return [source, target]; }
   return null;
 }
-function walkFor(type: string, stem: Record<string, any>, opts: Array<{ value: string; isKey: boolean; tag: string | null }>): string | null {
+function walkFor(type: string, stem: GenStem, opts: Array<{ value: string; isKey: boolean; tag: string | null }>): string | null {
   const key = opts.find((o) => o.isKey)!.value; const wrong = opts.filter((o) => !o.isKey);
   // R1030 round 2: a bare capital letter reads as a word ("A runs backwards", "so I moves"), so letters are "the letter X".
   const isLetter = /^[A-Z]$/.test(key); const L = (x: string) => (isLetter ? `the letter ${x}` : x); const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -130,9 +134,9 @@ async function main() {
       if (!r.options.find((x) => x.id === `${r.id}-opt1`)?.isCorrect || !g.it.options[0]!.isCorrect) { refused.push(`${r.id}: the key is not opt1 on both`); continue; }
       const genOps = (g.it.stem as { operands: Record<string, unknown> }).operands; const keyV = val(g.it.options.find((x) => x.isCorrect)!.content);
       const newOptions = g.it.options.map((o, n) => ({ optionId: `${r.id}-opt${n + 1}`, value: val(o.content), isKey: o.isCorrect, tag: o.isCorrect ? null : ((o as { mid?: string }).mid ?? null),
-          execution: o.isCorrect ? null : executionFor((o as { mid?: string }).mid ?? '', genOps, val(o.content), keyV) }));
+          execution: o.isCorrect ? null : executionFor((o as { mid?: string }).mid ?? '', genOps as GenOperands, val(o.content), keyV) }));
       const newStem = { ...(r.stem as Record<string, unknown>), ...(g.it.stem as Record<string, unknown>) };
-      const walk = walkFor(TYPE!, newStem as Record<string, any>, newOptions);
+      const walk = walkFor(TYPE!, newStem as GenStem, newOptions);
       rebuilds.push({ itemId: r.id, why: 'R1030: the generator now writes this row differently (question design or distractor choice) so the key\'s position and run tells are broken; whole row rebuilt from the generator, walk script rewritten from the row.',
         stem: newStem, options: newOptions,
         ...(walk ? { explanationPatch: { walkScript: walk, walkScriptBatch: 'R1030-TEMPLATE', walkScriptStatus: 'DRAFT' } } : {}),
@@ -149,13 +153,13 @@ async function main() {
       const nv = val(o.content); const ov = val(stored.content); const tag = (o as { mid?: string }).mid ?? null;
       if (nv === ov && tag === stored.misconceptionId) return;
       changed = true;
-      seats.push({ optionId: stored.id, itemId: r.id, oldValue: ov, tag, newValue: nv, execution: executionFor(tag ?? '', (r.stem as { operands: Record<string, unknown> }).operands, nv, val(g.it.options.find((x) => x.isCorrect)!.content)) ?? '' });
+      seats.push({ optionId: stored.id, itemId: r.id, oldValue: ov, tag, newValue: nv, execution: executionFor(tag ?? '', (r.stem as { operands: GenOperands }).operands, nv, val(g.it.options.find((x) => x.isCorrect)!.content)) ?? '' });
     });
     if (!changed) { unchanged++; continue; }
     // Every other distractor on a touched row needs an execution too (the lander refuses a row otherwise).
     const full = await prisma.itemOption.findMany({ where: { itemId: r.id }, select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } });
     for (const o of full) if (!o.isCorrect && !seats.some((s) => s.optionId === o.id) && (o.misconceptionExecution ?? '').trim().length < 40)
-      redrafts.push({ optionId: o.id, itemId: r.id, value: val(o.content), tag: o.misconceptionId, execution: executionFor(o.misconceptionId ?? '', (r.stem as { operands: Record<string, unknown> }).operands, val(o.content), val(r.options.find((x) => x.isCorrect)!.content)) ?? '' });
+      redrafts.push({ optionId: o.id, itemId: r.id, value: val(o.content), tag: o.misconceptionId, execution: executionFor(o.misconceptionId ?? '', (r.stem as { operands: GenOperands }).operands, val(o.content), val(r.options.find((x) => x.isCorrect)!.content)) ?? '' });
   }
   writeFileSync(pjoin(dir, 'proposals.skeleton.json'), JSON.stringify({ door: DOOR, proposer: 'generator (R1030) — executions to be written by a drafting agent', source: `GENERATORS['${TYPE}']`, seats, redrafts, rebuilds }, null, 1));
   const blank = [...seats, ...redrafts].filter((x) => !x.execution).length + rebuilds.flatMap((b) => (b.options as Array<{ isKey: boolean; execution: string | null }>)).filter((o) => !o.isKey && !o.execution).length;

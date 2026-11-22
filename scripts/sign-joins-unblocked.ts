@@ -111,7 +111,7 @@ async function run() {
     results.push({ itemId: r.id, outcome: APPLY ? 'SIGNED' : 'WOULD SIGN', blockerNow: blocker ?? 'none', comparison });
   }
 
-  const counts = results.reduce<Record<string, number>>((a, r) => { const k = String(r.outcome).split(' —')[0]; a[k] = (a[k] ?? 0) + 1; return a; }, {});
+  const counts = results.reduce<Record<string, number>>((a, r) => { const k = String(r.outcome).split(' —')[0]!; a[k] = (a[k] ?? 0) + 1; return a; }, {});
 
   /**
    * THE DISCRIMINATING DENOMINATOR (R889). How many rows can actually tell the two projections

@@ -24,7 +24,7 @@
  * version and is not what this is.
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, relative, resolve } from 'node:path';
+import { join, resolve } from 'node:path';
 import { requirePopulation } from './lib/population';
 
 const REPO = resolve(import.meta.dirname, '..');

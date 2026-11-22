@@ -72,7 +72,7 @@ async function main() {
   const rows = await prisma.item.findMany({ where: { id: { in: ids }, status: 'LIVE' }, orderBy: { id: 'asc' },
     select: { id: true, questionTypeId: true, stem: true, explanation: true, lineRefs: true, questionType: { select: { district: true } },
       options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
-  const liveMachine = machine.filter((e) => true).length;
+  const liveMachine = machine.filter((_e) => true).length;
   requirePopulation('sweep', { 'LIVE rows latest-signed by rev-agent-01 and not yet second-read': rows.length });
   const lib = new Map((await prisma.misconception.findMany({ select: { id: true, childHint: true, description: true } })).map((m) => [m.id, m]));
 

@@ -41,7 +41,7 @@ async function run() {
   const her = bytes.toString('utf8');
 
   const confirmations = [...her.matchAll(/confirmed: library:([a-z0-9-]+) \| (.+)/g)]
-    .map((m) => ({ id: m[1], line: m[2].trim(), hashPrefix: /\b([0-9a-f]{16})\b/.exec(m[2])?.[1] }));
+    .map((m) => ({ id: m[1]!, line: m[2]!.trim(), hashPrefix: /\b([0-9a-f]{16})\b/.exec(m[2]!)?.[1] }));
   if (confirmations.length !== 8) throw new Error(`REFUSED — expected eight confirmation lines, found ${confirmations.length}`);
 
   for (const c of confirmations) {

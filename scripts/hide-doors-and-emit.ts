@@ -130,7 +130,7 @@ async function run() {
       for (let k = 0; k < 12; k++) picked.add(Math.round((k * (byTier.length - 1)) / 11));
       let idx = 0;
       while (picked.size < 12) { if (!picked.has(idx)) picked.add(idx); idx++; }
-      proposal = [...picked].sort((x, y) => x - y).map((p) => String(byTier[p].id));
+      proposal = [...picked].sort((x, y) => x - y).map((p) => String(byTier[p]!.id));
     }
     for (let s = 0; s * 12 < rows.length; s++) {
       const slice = rows.slice(s * 12, s * 12 + 12);

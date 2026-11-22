@@ -78,7 +78,6 @@ async function main() {
     const key = String(((item.options.find((o) => o.isCorrect)?.content ?? {}) as { value?: string }).value ?? '');
     if (!key) continue;
     const keyLower = key.toLowerCase();
-    const keyStem = stem(key);
 
     for (const field of ['definitionChild', 'sentence'] as const) {
       const text = card[field];

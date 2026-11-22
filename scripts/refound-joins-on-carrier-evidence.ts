@@ -32,11 +32,11 @@ function arithmeticIn(working: string): { kind: 'tuple' | 'assertion' | 'bare'; 
   const norm = working.replace(/\bx\b/g, '*').replace(/\bdivided by\b/g, '/');
   const tuple = norm.match(/\(([^)]*[+\-*/][^)]*,[^)]*)\)/);
   if (tuple) {
-    const expr = tuple[1].split(',').map((c) => c.trim());
+    const expr = tuple[1]!.split(',').map((c) => c.trim());
     if (expr.every((c) => /^[\d\s.+\-*/()]+$/.test(c) && c !== '')) return { kind: 'tuple', expr, source: tuple[0] };
   }
   const a = norm.match(/([\d.()][\d\s.+\-*/()]*[+\-*/][\d\s.+\-*/()]*)=\s*(-?[\d.]+)/);
-  if (a && /^[\d\s.+\-*/()]+$/.test(a[1].trim())) return { kind: 'assertion', expr: [a[1].trim()], asserted: Number(a[2]), source: a[0].trim() };
+  if (a && /^[\d\s.+\-*/()]+$/.test(a[1]!.trim())) return { kind: 'assertion', expr: [a[1]!.trim()], asserted: Number(a[2]), source: a[0].trim() };
   const bare = norm.match(/[\d.]+(?:\s*[+\-*/]\s*[\d.()]+)+/);
   if (bare && /^[\d\s.+\-*/()]+$/.test(bare[0])) return { kind: 'bare', expr: [bare[0].trim()], source: bare[0].trim() };
   return null;
@@ -50,12 +50,12 @@ function verify(working: string, optionValue: string) {
   let got: number[];
   try { got = f.expr.map((e) => Function(`"use strict";return (${e})`)() as number); } catch { return { ran: false, agrees: false, detail: 'the extracted arithmetic did not evaluate' }; }
   if (f.kind === 'assertion') {
-    const holds = Math.abs(got[0] - (f.asserted as number)) < 1e-9;
+    const holds = Math.abs(got[0]! - (f.asserted as number)) < 1e-9;
     const inOption = want.some((w) => Math.abs(w - (f.asserted as number)) < 1e-9);
     return { ran: true, agrees: holds && inOption, form: 'assertion (weaker: result appears among the option components)', extracted: f.source,
       detail: `${f.expr[0]} = ${got[0]}, asserted ${f.asserted} — arithmetic ${holds ? 'holds' : 'DOES NOT HOLD'}; option ${JSON.stringify(want)} ${inOption ? 'contains' : 'DOES NOT CONTAIN'} it` };
   }
-  const agrees = got.length === want.length && got.every((g, i) => Math.abs(g - want[i]) < 1e-9);
+  const agrees = got.length === want.length && got.every((g, i) => Math.abs(g - want[i]!) < 1e-9);
   return { ran: true, agrees, form: `${f.kind} (reproduces the option)`, extracted: f.source, detail: `${JSON.stringify(f.expr)} = ${JSON.stringify(got)}; option ${JSON.stringify(want)} — ${agrees ? 'AGREES' : 'DISAGREES'}` };
 }
 

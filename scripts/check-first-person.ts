@@ -83,7 +83,7 @@ async function main() {
       pos.re.lastIndex = 0;
       for (const m of t.matchAll(pos.re)) {
         screenedSource++;
-        const s = m[1].trim();
+        const s = m[1]!.trim();
         if (!FIRST_PERSON.test(unquoted(s))) continue;
         refusals.push(`  ${f.replace(`${REPO}/`, '')}\n      ${pos.name}: "${s}"\n      REFUSED — first person in a refused position, and source carries no reviewer citation.`);
       }

@@ -28,8 +28,8 @@ async function run() {
     select: { isCorrect: true, misconceptionId: true, misconceptionExecution: true, item: { select: { status: true } } } });
   const distractors = opts.filter((o) => !o.isCorrect);
   const draftDistractors = distractors.filter((o) => o.item.status === 'DRAFT');
-  const perDistrict: Record<string, { withExecution: number; ofOptions: number }> = {};
-  for (const d of ['VR', 'ENGLISH', 'MATHS']) {
+  const perDistrict = {} as Record<'VR' | 'ENGLISH' | 'MATHS', { withExecution: number; ofOptions: number }>;
+  for (const d of ['VR', 'ENGLISH', 'MATHS'] as const) {
     perDistrict[d] = {
       withExecution: await prisma.itemOption.count({ where: { item: { questionType: { district: d } }, misconceptionExecution: { not: null } } }),
       ofOptions: await prisma.itemOption.count({ where: { item: { questionType: { district: d } } } }),

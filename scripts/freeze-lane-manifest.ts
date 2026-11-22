@@ -1,6 +1,6 @@
 /** Seed the lane manifest once, from the only order available, MARKED as the clock it is. */
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join as pjoin } from 'node:path';
 import { appendToManifest, readManifest, verifyManifest } from './lib/lane-manifest';

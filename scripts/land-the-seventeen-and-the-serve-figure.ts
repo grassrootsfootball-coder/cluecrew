@@ -52,7 +52,7 @@ async function main() {
 
   const c17sha = fileSha(pjoin(DL, 'cowork-seventeen-for-code.json'));
   if (c17sha !== '34cad1c61decedf22be261df965038b931bf52a3e151600cfccc4144d5089842') throw new Error('seventeen digest mismatch');
-  const c17 = JSON.parse(readFileSync(pjoin(DL, 'cowork-seventeen-for-code.json'), 'utf8')) as Record<string, never>;
+  const c17 = JSON.parse(readFileSync(pjoin(DL, 'cowork-seventeen-for-code.json'), 'utf8')) as Record<string, unknown>;
   const projection = String((c17['THREE_PROVISIONAL_ON_ONE_THING_NOW_NOT_TWO'] as Record<string, unknown>).projectionR729);
   console.log(`  seventeen verified at ${c17sha.slice(0, 12)}; provisional on projection ${projection.slice(0, 12)}`);
 

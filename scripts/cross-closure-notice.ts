@@ -65,6 +65,6 @@ async function run() {
   const name = stampedName('closure-notice', sha(json).slice(0, 16), 'json');
   writeFileSync(pjoin(REPO, 'content/exports', name), json);
   deliver(pjoin(REPO, 'content/exports', name), 'closure-notice');
-  for (const c of CLOSURES) console.log(`  ${c.CLOSED_AS.split('.')[0].padEnd(22)} ${c.question.slice(0, 70)}`);
+  for (const c of CLOSURES) console.log(`  ${c.CLOSED_AS.split('.')[0]!.padEnd(22)} ${c.question.slice(0, 70)}`);
 }
 run().catch((e) => { console.error(e); process.exit(1); });

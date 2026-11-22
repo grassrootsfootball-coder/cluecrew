@@ -102,9 +102,8 @@ function inbound(): void {
 }
 
 function main() {
-  let manifest: string;
   try {
-    manifest = readFileSync(MANIFEST, 'utf8');
+    readFileSync(MANIFEST, 'utf8');
   } catch {
     console.log(
       'check:manifest-diff: NO MANIFEST ON THIS SIDE — nothing compared, which is NOT "0 divergences".\n' +

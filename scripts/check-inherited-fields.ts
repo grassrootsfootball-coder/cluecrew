@@ -33,7 +33,8 @@ import { spawnSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { PrismaClient } from '@prisma/client';
+// R1038: '@prisma/client' resolves only inside packages/db; the db package re-exports it.
+import { PrismaClient } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
 const prisma = new PrismaClient();
@@ -53,7 +54,7 @@ if (ROOTS.length === 0) throw new Error(`no source roots under ${ROOT} — refus
 /** The door's own known keys, read out of the door (R57). Never a copy of them. */
 function schemaKnownKeys(): Set<string> {
   const src = readFileSync(join(ROOT, 'packages/core/src/item-stem.ts'), 'utf8');
-  const keys = [...src.matchAll(/'([a-zA-Z_][a-zA-Z0-9_]*)' in stem/g)].map((m) => m[1]);
+  const keys = [...src.matchAll(/'([a-zA-Z_][a-zA-Z0-9_]*)' in stem/g)].map((m) => m[1]!);
   if (keys.length === 0) throw new Error('stemSchema declares no known keys — shape changed (R173)');
   return new Set(keys);
 }

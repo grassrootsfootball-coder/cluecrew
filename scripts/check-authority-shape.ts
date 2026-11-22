@@ -43,11 +43,6 @@ const DECLARED_NON_INDIVIDUAL: Readonly<Record<string, string>> = {
 
 async function main(): Promise<void> {
   const reviewers = await prisma.reviewer.findMany({ select: { id: true, resolvesActor: true, displayName: true } });
-  const resolvable = new Set([
-    ...reviewers.map((r) => r.id),
-    ...reviewers.map((r) => r.resolvesActor).filter((a): a is string => a !== null),
-  ]);
-
   const items = await prisma.item.findMany({
     select: {
       id: true, reviewedBy: true, reviewRecordedBy: true,

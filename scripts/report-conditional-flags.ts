@@ -51,7 +51,7 @@ interface Row {
 function recommendationOf(flag: unknown): { rec: string; whole: string } | null {
   if (typeof flag === 'string') {
     const m = flag.match(/Recommendation:\s*(.*)$/is);
-    return m ? { rec: m[1].trim(), whole: flag } : null;
+    return m ? { rec: m[1]!.trim(), whole: flag } : null;
   }
   if (flag && typeof flag === 'object') {
     const f = flag as Record<string, unknown>;

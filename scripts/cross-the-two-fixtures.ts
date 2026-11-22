@@ -20,18 +20,26 @@ const DL = pjoin(homedir(), 'Downloads');
 const LANE = pjoin(DL, '11+', 'from-cluecrew');
 const sha = (s: string | Buffer) => createHash('sha256').update(typeof s === 'string' ? Buffer.from(s, 'utf8') : s).digest('hex');
 
+type TheirCase = { word: string; reason: string };
+type TheirFixture = {
+  TWO_THE_FIXTURE_AS_THE_THING_THAT_CROSSES: {
+    THE_ARTEFACT: { MUST_REFUSE: TheirCase[]; MUST_NOT_REFUSE: TheirCase[]; SUBSTRING_TRAPS: TheirCase[]; NEEDS_A_SENSE: TheirCase[] };
+    runAgainstTHISstoresList: { passing: number; of: number };
+  };
+};
+
 function main() {
   const theirBytes = readFileSync(pjoin(DL, 'cowork-fixture-for-code.json'));
   if (!sha(theirBytes).startsWith('7e0a5956e807184d')) throw new Error(`their fixture does not verify: ${sha(theirBytes).slice(0, 16)}`);
-  const theirs = JSON.parse(theirBytes.toString('utf8')) as any;
+  const theirs = JSON.parse(theirBytes.toString('utf8')) as TheirFixture;
   const A = theirs.TWO_THE_FIXTURE_AS_THE_THING_THAT_CROSSES.THE_ARTEFACT;
 
   /** Their cases, read from their artefact rather than transcribed. */
   const theirCases: Array<{ word: string; kind: CaseKind; reason: string }> = [
-    ...A.MUST_REFUSE.map((c: any) => ({ word: c.word, kind: 'MUST_REFUSE' as const, reason: c.reason })),
-    ...A.MUST_NOT_REFUSE.map((c: any) => ({ word: c.word, kind: 'MUST_NOT_REFUSE' as const, reason: c.reason })),
-    ...A.SUBSTRING_TRAPS.map((c: any) => ({ word: c.word, kind: 'SUBSTRING_TRAP' as const, reason: c.reason })),
-    ...A.NEEDS_A_SENSE.map((c: any) => ({ word: c.word, kind: 'NEEDS_A_SENSE' as const, reason: c.reason })),
+    ...A.MUST_REFUSE.map((c: TheirCase) => ({ word: c.word, kind: 'MUST_REFUSE' as const, reason: c.reason })),
+    ...A.MUST_NOT_REFUSE.map((c: TheirCase) => ({ word: c.word, kind: 'MUST_NOT_REFUSE' as const, reason: c.reason })),
+    ...A.SUBSTRING_TRAPS.map((c: TheirCase) => ({ word: c.word, kind: 'SUBSTRING_TRAP' as const, reason: c.reason })),
+    ...A.NEEDS_A_SENSE.map((c: TheirCase) => ({ word: c.word, kind: 'NEEDS_A_SENSE' as const, reason: c.reason })),
   ];
   requirePopulation('cross-the-fixtures', { 'their case(s)': theirCases.length, 'this store\'s case(s)': PORTABLE_CASES.length });
 

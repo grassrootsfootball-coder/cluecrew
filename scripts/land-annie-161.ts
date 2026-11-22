@@ -123,11 +123,6 @@ async function run() {
     },
     rows,
   };
-  const canonical = (o: unknown): string => {
-    if (o === null || typeof o !== 'object') return JSON.stringify(o);
-    if (Array.isArray(o)) return `[${o.map(canonical).join(',')}]`;
-    return `{${Object.keys(o as object).sort().map((k) => `${JSON.stringify(k)}:${canonical((o as Record<string, unknown>)[k])}`).join(',')}}`;
-  };
   // R752: the subtree is named by the DOCUMENT'S OWN top-level keys; findingsDigest throws
   // if any named key is not present, so an alias fails here rather than at the far door.
   const artefact = { ...payload, ...findingsDigest(payload, ['THE_PREDICATE_FINDING', 'theSubstitution', 'THE_OPTION_VALUE_RULING', 'forCowork']) };

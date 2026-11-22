@@ -70,6 +70,7 @@ async function main() {
     const r = rows.find((x) => x.id === itemId)!;
     const o = r.options.find((x) => seatOf(x.content) === seat)!;
     if ((o.misconceptionExecution ?? '').trim()) { console.log(`  ${itemId.slice(-2)} ${seat}: already occupied — nothing to restore`); continue; }
+    if (rec.executionWithdrawn === undefined) throw new Error(`${itemId} ${seat}: the retained record carries no executionWithdrawn — refusing to restore an absent text`);
     restore.push({ itemId, optionId: o.id, seat, text: rec.executionWithdrawn });
   }
 

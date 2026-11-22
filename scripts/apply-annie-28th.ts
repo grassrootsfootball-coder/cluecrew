@@ -26,7 +26,7 @@ async function main() {
   const her = readFileSync(FILE, 'utf8').replace(/\s*\n\s*/g, ' ');
   for (const w of WRITES) {
     if (!her.includes(w.authored)) throw new Error(`ABORTED — "${w.authored}" is not in ${FILE} verbatim.`);
-    const gate = checkChildFacingText({ role: 'misconception-hint', label: w.id, text: w.authored }).filter(isBlocking);
+    const gate = checkChildFacingText({ role: 'item-stem', label: w.id, text: w.authored }).filter(isBlocking);
     if (gate.length) throw new Error(`ABORTED — ${w.id} fails the gate: ${gate.map((f) => f.detail).join('; ')}`);
   }
   console.log(`4 wordings located in her file and gated clean\n  authority digest ${DIGEST.slice(0, 16)}…\n`);

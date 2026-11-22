@@ -20,14 +20,10 @@
  * an execution whose form it cannot parse it reports UNPARSED rather than clean, because 50 of 75
  * read as a clean zero is the subset fault (R595).
  */
-import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { homedir } from 'node:os';
-import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 import { assertFixture } from './lib/carried-fixture';
 
-const LANE = pjoin(homedir(), 'Downloads', '11+');
 
 /** Each form states the group and/or the odd pair. Whatever a form asserts is what gets compared. */
 const FORMS: Array<{ name: string; re: RegExp; group?: (m: RegExpExecArray) => string[]; odd: (m: RegExpExecArray) => string[] }> = [

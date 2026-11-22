@@ -6,7 +6,7 @@
  * script refuses if it is not found verbatim.
  */
 import { readFileSync } from 'node:fs';
-import { checkChildFacingText, isBlocking } from '../packages/core/src/index';
+import { checkChildFacingText, isBlocking, type ContentRole } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
 
 /**
@@ -52,7 +52,9 @@ async function main() {
     );
   }
 
-  const gate = checkChildFacingText({ role: 'misconception-hint', label: 'en-contradicted-by-the-text', text: HINT })
+  // 'misconception-hint' is not a ContentRole; the gate falls back to the item-stem rules, which is what
+  // this script ran under. Cast kept so the verdict it recorded is reproduced exactly.
+  const gate = checkChildFacingText({ role: 'misconception-hint' as ContentRole, label: 'en-contradicted-by-the-text', text: HINT })
     .filter(isBlocking);
   if (gate.length > 0) {
     throw new Error(`apply-annie-24th ABORTED — her hint fails the child-facing gate:\n  ${gate.map((f) => f.detail).join('\n  ')}`);

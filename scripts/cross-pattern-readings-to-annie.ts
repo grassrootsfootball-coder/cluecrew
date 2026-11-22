@@ -51,6 +51,7 @@ async function run() {
   const readings = [];
   for (const id of patterns) {
     const b = census.BY_PATTERN[id];
+    if (!b) throw new Error(`census has no BY_PATTERN entry for ${id} — refusing to cross a reading without its count`);
     const entry = lib.get(id)!;
     const opts = await prisma.itemOption.findMany({ where: { misconceptionId: id, item: { status: 'DRAFT' } },
       select: { content: true, item: { select: { id: true, stem: true, options: { select: { content: true, isCorrect: true } } } } }, take: 3 });
@@ -65,8 +66,8 @@ async function run() {
       verdict: id === 'vr19-shared-letter-miss' ? 'REPAIRED — 25 of 25 now perform' : `REFUSES on ${b.refuses} of ${b.carriers} carriers`,
       carriers: b.carriers, performs: b.performs, refuses: b.refuses,
       THREE_SAMPLE_CARRIERS: samples,
-      THE_GENERATORS_ACCOUNT: { function: ACCOUNTS[id].fn, how: ACCOUNTS[id].how, theLine: ACCOUNTS[id].theLine,
-        ...(ACCOUNTS[id].how.startsWith('CURATED') ? { andWHATTHATMEANS: BANK_NOTE } : {}) },
+      THE_GENERATORS_ACCOUNT: { function: ACCOUNTS[id]!.fn, how: ACCOUNTS[id]!.how, theLine: ACCOUNTS[id]!.theLine,
+        ...(ACCOUNTS[id]!.how.startsWith('CURATED') ? { andWHATTHATMEANS: BANK_NOTE } : {}) },
       THE_DEFAULT_PER_YOUR_199th: 'carriers regenerate to perform their entry\'s act; the exception is a family whose options share one real nameable act, which retags or mints under the one-act rule.',
     };
     readings.push({ ...body, readingSha256: sha(canonicalJson(body)),

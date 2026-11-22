@@ -43,7 +43,7 @@ async function main() {
     if (!her.includes(a.authored)) {
       throw new Error(`apply-unlanded ABORTED — "${a.authored}" is in no return file. A wording not in her hand is not hers.`);
     }
-    const gate = checkChildFacingText({ role: 'misconception-hint', label: a.id, text: a.authored }).filter(isBlocking);
+    const gate = checkChildFacingText({ role: 'item-stem', label: a.id, text: a.authored }).filter(isBlocking);
     if (gate.length > 0) throw new Error(`apply-unlanded ABORTED — ${a.id} fails the gate: ${gate.map((f) => f.detail).join('; ')}`);
   }
   console.log(`${AMENDMENTS.length} authored wording(s) located in her returns and gated clean\n`);

@@ -32,7 +32,7 @@ async function main() {
         'checkItemChildFacing — the one gate every door calls, so hand-authored, seeded, imported and regenerated rows all meet it',
         'check:appropriateness-sited — because a screen that lives on one path is the fault she named'],
       ONE_PREDICATE_TWO_SITES: 'the search calls the SAME exported function the gate calls. Two doors that enumerate separately will drift (R42, R55, R57), so neither carries a copy.',
-      THE_FIXTURE_IS_TWO_SIDED: { mustRefuse: fixture.refused, mustPass: fixture.passed, ...APPROPRIATENESS_FIXTURE },
+      THE_FIXTURE_IS_TWO_SIDED: { ...APPROPRIATENESS_FIXTURE },
       AND_ITS_FIRST_RUN_CORRECTED_IT: {
         what: 'the first draft refused tobacco, cigarette, bloody, drunk, mistress and affair.',
         caughtBy: 'the R149 baseline diff, on ENG-018-RB-02 — a walk script for Rebecca of Sunnybrook Farm reporting that Mr Cobb has tobacco in his cheek, which is exactly what a comprehension walk script is for.',
@@ -65,7 +65,7 @@ async function main() {
   const fin = sha(readFileSync(pjoin(LANE, name)));
   writeFileSync(pjoin(LANE, `${name}.sha256`), `${fin}  ${name}\n`);
   writeFileSync(pjoin(DL, name), readFileSync(pjoin(LANE, name)));
-  console.log(`  fixture: ${fixture.refused} must-refuse, ${fixture.passed} must-pass — both halves pass.`);
+  console.log(`  fixture: ${fixture.refused} must-refuse, ${fixture.neverRefused} must-pass — both halves pass.`);
   console.log(`  vr-08 as it actually is: ${distinct.size} distinct pair(s) across ${cut.length} slots.`);
   console.log(`\n  crossed: ${name}  (FILE ${fin.slice(0, 16)})`);
 }

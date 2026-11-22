@@ -87,7 +87,7 @@ async function main() {
     counts: { rows: rows.length, whole: rows.filter((r) => itemWholeness(r, attested, walkServes).whole).length,
       signed: signed.size, ready: ready.length, notReady: notReady.length, livePracticePoolNow: poolNow },
 
-    WHAT_EACH_ROW_IS_SHORT: notReady.map((r) => ({ itemId: r.id, status: r.status, shortOf: shortOf[r.id] })),
+    WHAT_EACH_ROW_IS_SHORT: notReady.map((r) => ({ itemId: r.id, status: r.status, shortOf: shortOf[r.id]! })),
     andTHESHAPEOFIT: (() => {
       const kinds = new Map<string, number>();
       for (const s of Object.values(shortOf).flat()) { const k = s.split(':')[0]!; kinds.set(k, (kinds.get(k) ?? 0) + 1); }

@@ -74,7 +74,7 @@ async function run() {
   // ---- vr13 ------------------------------------------------------------------------------------
   const v13 = await rowsOf('vr-13-make-a-word');
   const vr13 = v13.map((r) => {
-    const [w1, w2] = (r.stem as { words: string[] }).words;
+    const [w1, w2] = (r.stem as { words: [string, string] }).words;
     const key = val(r.options.find((o) => o.isCorrect)!.content);
     const c = r.options.find((o) => o.misconceptionId === 'vr13-not-a-word');
     if (!c) return null;

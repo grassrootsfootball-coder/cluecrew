@@ -5,7 +5,6 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
-import { Prisma } from '@prisma/client';
 import { prisma } from '../packages/db/src/index';
 import { publishBlockers, caseFaceServes } from '../packages/core/src/index';
 import { assertFixture } from './lib/carried-fixture';
@@ -23,7 +22,7 @@ const MINTS = '/Users/davidb/Downloads/maths-six-mints-for-code.json';
   * that decides membership, and until this commit the predicates lived inline where nothing
   * could catch them going blind.
   */
-const isBlocked = (opts: Array<{ isCorrect: boolean; misconceptionId: string | null }>, reviewedBy: string | null, authoredBy: string | null, flagged: Date | null) =>
+const isBlocked = (opts: Array<{ isCorrect: boolean; misconceptionId: string | null }>, reviewedBy: string | null, authoredBy: string, flagged: Date | null) =>
   publishBlockers(opts, reviewedBy, authoredBy, flagged) === 'missing-misconceptions';
 const isJoinedByMint = (misconceptionId: string | null, mintIds: readonly string[]) =>
   misconceptionId !== null && mintIds.includes(misconceptionId);
@@ -48,7 +47,7 @@ async function run() {
   });
 
   const mintBytes = readFileSync(MINTS);
-  const mints = JSON.parse(mintBytes.toString('utf8')) as { entries: Array<{ id: string; refinement?: string }> };
+  const mints = JSON.parse(mintBytes.toString('utf8')) as { entries: Array<{ id: string; refinement?: string; join?: { itemId: string; optionLabel?: string } }> };
 
   const rows = await prisma.item.findMany({
     where: { questionType: { district: 'MATHS' } },
@@ -102,6 +101,7 @@ async function run() {
   const signed = rows.filter((r) => r.reviewedBy).length;
   const live = rows.filter((r) => r.status === 'LIVE').length;
   const caseRow = await prisma.case.findUnique({ where: { id: 'case-maths-01' }, select: { title: true, narrativeIntro: true } });
+  if (!caseRow) throw new Error('case-maths-01 not found — refusing to report a case face for a case that is not there');
   const livePractice = await prisma.item.count({ where: { questionType: { district: 'MATHS' }, status: 'LIVE', pool: 'PRACTICE' } });
 
   const full = {

@@ -15,7 +15,7 @@ import { createHash } from 'node:crypto';
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  FAMILY_BY_TYPE, MECHANIC_FAMILIES, MODES,
+  MECHANIC_FAMILIES, MODES,
   checkItemChildFacing, familyForTypeOrNull, isBlocking,
 } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';
@@ -95,11 +95,11 @@ async function run() {
   };
   for (const i of drafts) {
     const faults = gateOf(i);
-    if (faults.length > 0) { buckets.gateFailing.rows.push({ id: i.id, detail: faults.map((f) => `${f.rule}: ${f.detail}`).join(' | ') }); continue; }
-    if (!i.reviewedBy) { buckets.unsigned.rows.push({ id: i.id }); continue; }
-    if (familyForTypeOrNull(i.questionType.id) === null) { buckets.orphanedSurface.rows.push({ id: i.id, detail: i.questionType.id }); continue; }
-    if (!caseByQt.has(i.questionType.id)) { buckets.noCase.rows.push({ id: i.id, detail: i.questionType.id }); continue; }
-    buckets.neverPublished.rows.push({ id: i.id });
+    if (faults.length > 0) { buckets.gateFailing!.rows.push({ id: i.id, detail: faults.map((f) => `${f.rule}: ${f.detail}`).join(' | ') }); continue; }
+    if (!i.reviewedBy) { buckets.unsigned!.rows.push({ id: i.id }); continue; }
+    if (familyForTypeOrNull(i.questionType.id) === null) { buckets.orphanedSurface!.rows.push({ id: i.id, detail: i.questionType.id }); continue; }
+    if (!caseByQt.has(i.questionType.id)) { buckets.noCase!.rows.push({ id: i.id, detail: i.questionType.id }); continue; }
+    buckets.neverPublished!.rows.push({ id: i.id });
   }
   const draftPartition = {
     population: `${drafts.length} DRAFT items of ${items.length} total (${Math.round((drafts.length / Math.max(1, items.length)) * 100)}%)`,

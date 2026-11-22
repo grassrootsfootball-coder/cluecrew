@@ -19,7 +19,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { artefactStamp, deliver, stampedName } from './lib/export-destination';
-import { FIELD_DISPOSITIONS, dispositionFor, isScreenedPath, type FieldDisposition } from '../packages/core/src/index';
+import { dispositionFor, isScreenedPath, type FieldDisposition } from '../packages/core/src/index';
 import { assertFixture } from './lib/carried-fixture';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';

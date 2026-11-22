@@ -48,18 +48,18 @@ async function run() {
   // The mint, from her 136th; the hint, from her 137th — replaced asserted against the mint.
   const mintMatch = /target: library:en-article-avoids-the-sound-choice\n\s+replaced: NONE\. New entry, minted this return\.\n\s+authored: (\{.+\})/.exec(her136);
   if (!mintMatch) throw new Error("REFUSED — the 136th's mint block not found");
-  const mint = JSON.parse(mintMatch[1]) as { id: string; description: string; childHint: string; mintedBy: string; mintedAt: string };
+  const mint = JSON.parse(mintMatch[1]!) as { id: string; description: string; childHint: string; mintedBy: string; mintedAt: string };
   const trimMatch = /target: library:en-article-avoids-the-sound-choice:childHint\n\s+replaced: (.+)\n\s+authored: (.+)/.exec(her137);
   if (!trimMatch) throw new Error("REFUSED — the 137th's trim block not found");
-  if (trimMatch[1].trim() !== mint.childHint) throw new Error("REFUSED — the 137th's replaced string is not the 136th's mint hint, exact");
-  const HINT = trimMatch[2].trim();
+  if (trimMatch[1]!.trim() !== mint.childHint) throw new Error("REFUSED — the 137th's replaced string is not the 136th's mint hint, exact");
+  const HINT = trimMatch[2]!.trim();
   const gate = checkChildFacingText({ role: 'hint', label: ENTRY_ID, text: HINT }).filter(isBlocking);
   if (gate.length > 0) throw new Error(`REFUSED — her trimmed hint fails the gate: ${gate.map((f) => f.detail).join('; ')}`);
 
   // The tag + execution for option D, from her 136th.
   const tagMatch = /target: item:ENG-003-A-CZ-A2:options:D\n\s+replaced: .+\n\s+authored: (\{.+\})/.exec(her136);
   if (!tagMatch) throw new Error("REFUSED — the 136th's option-D tag block not found");
-  const tag = JSON.parse(tagMatch[1]) as { misconceptionId: string; misconceptionExecution: string; misconceptionExecutionBasis: string };
+  const tag = JSON.parse(tagMatch[1]!) as { misconceptionId: string; misconceptionExecution: string; misconceptionExecutionBasis: string };
   if (tag.misconceptionId !== ENTRY_ID) throw new Error('REFUSED — the tag does not name the minted entry');
 
   // Option D's bytes, verified against the authoring emission's per-option digest.
@@ -87,7 +87,6 @@ async function run() {
   if (!APPLY) { console.log('DRY: all pre-flight assertions hold (entry mint, trim chain, option D bytes, 25 DRAFT). Run with --apply.'); await prisma.$disconnect(); return; }
 
   // ---- The one transaction ----
-  const openedAt = new Date();
   await prisma.$transaction(async (tx) => {
     await tx.misconception.create({
       data: {

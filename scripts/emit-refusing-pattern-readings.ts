@@ -6,11 +6,11 @@
  * Plus the vr-02 collision, reported and not resolved.
  */
 import { createHash } from 'node:crypto';
-import { writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { deliver, stampedName } from './lib/export-destination';
-import { digestOverText, findingsDigest } from './lib/findings-digest';
+import { findingsDigest } from './lib/findings-digest';
 import { requirePopulation } from './lib/population';
 
 const REPO = pjoin(__dirname, '..');
@@ -53,8 +53,8 @@ const ACCOUNT: Record<string, { how: string; theCode: string; andWHATTHATMEANS: 
 const valueOf = (c: unknown) => { const v = (c as { value?: unknown }).value; return Array.isArray(v) ? v.map(String) : String(v); };
 
 async function run() {
-  const census = JSON.parse(require('node:fs').readFileSync(
-    require('node:fs').readdirSync(pjoin(REPO, 'content/exports')).filter((f: string) => f.startsWith('carrier-performs-entry-census')).sort().pop()!
+  const census = JSON.parse(readFileSync(
+    readdirSync(pjoin(REPO, 'content/exports')).filter((f: string) => f.startsWith('carrier-performs-entry-census')).sort().pop()!
       .replace(/^/, pjoin(REPO, 'content/exports') + '/'), 'utf8')) as { THE_REFUSING_MEMBERSHIP: Array<{ itemId: string; tag: string; optionValue: string; key: string; why: string; entryBehaviour: string }> };
   const byTag = new Map<string, typeof census.THE_REFUSING_MEMBERSHIP>();
   for (const r of census.THE_REFUSING_MEMBERSHIP) byTag.set(r.tag, [...(byTag.get(r.tag) ?? []), r]);

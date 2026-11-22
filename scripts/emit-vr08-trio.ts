@@ -23,8 +23,6 @@ const REPO = pjoin(__dirname, '..');
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 const W = new Set(readFileSync('/usr/share/dict/web2', 'utf8').split('\n').map((w) => w.trim().toLowerCase()).filter(Boolean));
 const isWord = (s: string) => W.has(s.trim().toLowerCase());
-/** Words a child meets. Declared, not inferred — the reader can disagree with the list itself. */
-const COMMON = new Set(['bend', 'self', 'win', 'there', 'gain', 'rate', 'char', 'more', 'sow', 'hone', 'pump', 'lay', 'may', 'twi', 'plup', 'ridgel', 'thrain', 'herne', 'aly', 'amy']);
 const OBSCURE = new Set(['ridgel', 'thrain', 'herne', 'aly', 'plup', 'twi', 'amy']);
 
 async function run() {

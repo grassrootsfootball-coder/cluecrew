@@ -109,27 +109,10 @@ async function main() {
     return;
   }
 
-  for (const row of clean) {
-    const it = row.item;
-    await prisma.item.create({
-      data: {
-        id: row.itemId,
-        questionTypeId: String(it.questionTypeId),
-        difficultyTier: Number(it.difficultyTier),
-        stem: it.stem as object,
-        explanation: (it.explanation ?? {}) as object,
-        status: 'DRAFT',
-        options: {
-          create: (it.options as Array<Record<string, unknown>>).map((o) => ({
-            content: { value: o.value, ...(o.label ? { label: o.label } : {}) },
-            isCorrect: Boolean(o.isCorrect),
-            misconceptionId: (o.misconceptionId as string | null) ?? null,
-          })),
-        },
-      },
-    });
-    console.log(`  IMPORTED ${row.itemId} as DRAFT`);
-  }
+  // R1034/R1038: Cowork is retired, so there is no reissue to import, and this path could never have
+  // succeeded on the current schema (it set no `authoredBy`, which is required). The report-only gate
+  // above is still what emit-routing-report and land-annie-152 run; --apply now refuses with the reason.
+  throw new Error('import-reissued-items --apply is retired (R1034: Cowork is no longer an authoring store). Draft new content through the agent-review doors instead.');
 
   console.log(
     `\n${clean.length} imported as DRAFT. ${held.length} held at the door and NOT repaired here —\n` +

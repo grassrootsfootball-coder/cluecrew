@@ -8,7 +8,7 @@
  * are not in this file at all.
  */
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { assertFixture } from './lib/carried-fixture';
 import { deliver, stampedName } from './lib/export-destination';
@@ -24,7 +24,7 @@ const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
     */
    const OUT = '/Users/davidb/Downloads/11+/from-cluecrew';
    const SERVING = (() => {
-     const hits = require('node:fs').readdirSync(OUT).filter((f: string) => f.startsWith('serving-hint-half-') && f.endsWith('.json'));
+     const hits = readdirSync(OUT).filter((f: string) => f.startsWith('serving-hint-half-') && f.endsWith('.json'));
      if (hits.length !== 1) throw new Error(`expected exactly one serving-hint-half at the door, found ${hits.length}: ${hits.join(', ')} — refusing rather than guessing which (R173)`);
      return join(OUT, hits[0]!);
    })();
@@ -55,7 +55,7 @@ async function run() {
   const serves = new Map(serving.ROWS.filter((r) => r.source === 'ITEM').map((r) => [r.rowId, r.text]));
 
   const authored = new Map<string, Map<string, string[]>>(); // itemId -> text -> files
-  const walk = (dir: string, n = 0): string[] => n > 3 ? [] : (() => { try { return require('node:fs').readdirSync(dir, { withFileTypes: true }).flatMap((e: { isDirectory(): boolean; name: string }) => e.isDirectory() ? walk(join(dir, e.name), n + 1) : (e.name.endsWith('.json') ? [join(dir, e.name)] : [])); } catch { return []; } })();
+  const walk = (dir: string, n = 0): string[] => n > 3 ? [] : (() => { try { return readdirSync(dir, { withFileTypes: true }).flatMap((e) => e.isDirectory() ? walk(join(dir, e.name), n + 1) : (e.name.endsWith('.json') ? [join(dir, e.name)] : [])); } catch { return []; } })();
   for (const f of walk(DOWN)) {
     let d: unknown; try { d = JSON.parse(readFileSync(f, 'utf8')); } catch { continue; }
     const items = (d as { items?: unknown })?.items;

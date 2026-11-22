@@ -121,7 +121,7 @@ const PREDICATES: Record<string, (s: KeySubject, isWord: Lexicon) => KeyResult> 
     const sum = String(s.stem.sum ?? '');
     if (!sum) return und('no sum on the stem');
     const filled = sum.replace('?', s.keyValue);
-    const m = filled.match(/^\s*(-?\d+)\s*([+\-])\s*(-?\d+)\s*=\s*(-?\d+)\s*$/);
+    const m = filled.match(/^\s*(-?\d+)\s*([+-])\s*(-?\d+)\s*=\s*(-?\d+)\s*$/);
     if (!m) return und(`the sum shape "${sum}" is not a simple two-term equation`);
     const [, a, op, b, c] = m;
     const lhs = op === '+' ? Number(a) + Number(b) : Number(a) - Number(b);

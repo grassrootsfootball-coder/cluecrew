@@ -40,7 +40,7 @@ async function run() {
   const her = bytes.toString('utf8');
   const descMatch = /target: case:ashline-detective-register:description\n\s+replaced: .+\n\s+replacedSha256: .+\n\s+authored: (.+)/.exec(her);
   if (!descMatch) throw new Error('REFUSED — her amended description not found');
-  const DESC = descMatch[1].trim();
+  const DESC = descMatch[1]!.trim();
   const rows: Array<Record<string, unknown>> = [];
 
   // ---- Act 1: the face, attempted through the standing path ----

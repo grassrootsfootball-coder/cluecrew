@@ -31,12 +31,14 @@ const sha = (s: string | Buffer) => createHash('sha256').update(typeof s === 'st
 async function main() {
   const theirBytes = readFileSync(pjoin(DL, 'cowork-fixture-for-code.json'));
   if (!sha(theirBytes).startsWith('7e0a5956e807184d')) throw new Error('their fixture does not verify');
-  const A = (JSON.parse(theirBytes.toString('utf8')) as any).TWO_THE_FIXTURE_AS_THE_THING_THAT_CROSSES.THE_ARTEFACT;
+  type TheirCase = { word: string; reason?: unknown };
+  type TheirArtefact = Record<'MUST_REFUSE' | 'MUST_NOT_REFUSE' | 'SUBSTRING_TRAPS' | 'NEEDS_A_SENSE', TheirCase[]>;
+  const A = (JSON.parse(theirBytes.toString('utf8')) as { TWO_THE_FIXTURE_AS_THE_THING_THAT_CROSSES: { THE_ARTEFACT: TheirArtefact } }).TWO_THE_FIXTURE_AS_THE_THING_THAT_CROSSES.THE_ARTEFACT;
   const theirCases = [
-    ...A.MUST_REFUSE.map((c: any) => ({ ...c, kind: 'MUST_REFUSE' as CaseKind })),
-    ...A.MUST_NOT_REFUSE.map((c: any) => ({ ...c, kind: 'MUST_NOT_REFUSE' as CaseKind })),
-    ...A.SUBSTRING_TRAPS.map((c: any) => ({ ...c, kind: 'SUBSTRING_TRAP' as CaseKind })),
-    ...A.NEEDS_A_SENSE.map((c: any) => ({ ...c, kind: 'NEEDS_A_SENSE' as CaseKind })),
+    ...A.MUST_REFUSE.map((c) => ({ ...c, kind: 'MUST_REFUSE' as CaseKind })),
+    ...A.MUST_NOT_REFUSE.map((c) => ({ ...c, kind: 'MUST_NOT_REFUSE' as CaseKind })),
+    ...A.SUBSTRING_TRAPS.map((c) => ({ ...c, kind: 'SUBSTRING_TRAP' as CaseKind })),
+    ...A.NEEDS_A_SENSE.map((c) => ({ ...c, kind: 'NEEDS_A_SENSE' as CaseKind })),
   ];
   const R = new Set(APPROPRIATENESS_LISTS.refuse);
   const F = new Set([...APPROPRIATENESS_LISTS.flagAmbiguousSense, ...APPROPRIATENESS_LISTS.flagNeedsContext]);

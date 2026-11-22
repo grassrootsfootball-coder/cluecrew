@@ -39,7 +39,7 @@ async function run() {
 
   // ---- Thirteen entry amendments (single-line hybrid form) ----
   const amendments = [...her.matchAll(/target: library:([a-z0-9-]+) \| replaced: (.+?) \| authored: (.+)$/gm)]
-    .map((m) => ({ id: m[1], replaced: m[2].trim(), authored: m[3].trim() }))
+    .map((m) => ({ id: m[1]!, replaced: m[2]!.trim(), authored: m[3]!.trim() }))
     // The mint rides the same line form with replaced NONE — it is not an amendment.
     .filter((a) => !a.replaced.startsWith('NONE.'));
   if (amendments.length !== 13) throw new Error(`REFUSED — expected thirteen entry amendments, found ${amendments.length}`);
@@ -81,7 +81,7 @@ async function run() {
   // ---- The mint ----
   const mintMatch = /target: library:vr02-real-link-wrong-rule \| replaced: NONE\. New entry, minted this return\. \| authored: (\{.+\})/.exec(her);
   if (!mintMatch) throw new Error('REFUSED — mint block not found');
-  const mint = JSON.parse(mintMatch[1]) as { id: string; description: string; childHint: string };
+  const mint = JSON.parse(mintMatch[1]!) as { id: string; description: string; childHint: string };
   const gateM = checkChildFacingText({ role: 'hint', label: mint.id, text: mint.childHint }).filter(isBlocking);
   if (gateM.length > 0) throw new Error(`REFUSED — the mint's hint fails the gate: ${gateM.map((f) => f.detail).join('; ')}`);
   if (await prisma.misconception.findUnique({ where: { id: mint.id } })) throw new Error(`REFUSED — ${mint.id} already exists`);
@@ -140,10 +140,10 @@ async function run() {
   const wiw12 = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-001-WIW-12' }, select: { options: { select: { id: true, content: true, attractorQuote: true } } } });
   const optB = wiw12.options.find((o) => (o.content as { label?: string }).label === 'B');
   if (!optB) throw new Error('REFUSED — WIW-12 option B not found');
-  if (optB.attractorQuote !== trimMatch[1].trim()) throw new Error(`REFUSED — WIW-12 B attractorQuote is ${JSON.stringify(optB.attractorQuote)}, her replaced is ${JSON.stringify(trimMatch[1].trim())}`);
-  landingRows.push({ id: 'ENG-001-WIW-12', act: 'TRIMMED (attractorQuote)', before: optB.attractorQuote, after: trimMatch[2].trim(), branch: 'the cheaper branch, per the 143rd advance ruling: line 30 carries the pull whole, only the determiner fell outside', authority: AUTH });
+  if (optB.attractorQuote !== trimMatch[1]!.trim()) throw new Error(`REFUSED — WIW-12 B attractorQuote is ${JSON.stringify(optB.attractorQuote)}, her replaced is ${JSON.stringify(trimMatch[1]!.trim())}`);
+  landingRows.push({ id: 'ENG-001-WIW-12', act: 'TRIMMED (attractorQuote)', before: optB.attractorQuote, after: trimMatch[2]!.trim(), branch: 'the cheaper branch, per the 143rd advance ruling: line 30 carries the pull whole, only the determiner fell outside', authority: AUTH });
   if (APPLY) {
-    await prisma.itemOption.update({ where: { id: optB.id }, data: { attractorQuote: trimMatch[2].trim() } });
+    await prisma.itemOption.update({ where: { id: optB.id }, data: { attractorQuote: trimMatch[2]!.trim() } });
     await prisma.attributionEvent.create({
       data: {
         recordType: 'item', recordId: 'ENG-001-WIW-12', action: 'AMENDED',
@@ -155,7 +155,7 @@ async function run() {
   }
 
   // ---- Eight approvals by reference ----
-  const approvals = [...her.matchAll(/confirmed: library:([a-z0-9-]+) \| approved as written \| reference: b2b43a264c284ee0/g)].map((m) => m[1]);
+  const approvals = [...her.matchAll(/confirmed: library:([a-z0-9-]+) \| approved as written \| reference: b2b43a264c284ee0/g)].map((m) => m[1]!);
   if (approvals.length !== 8) throw new Error(`REFUSED — expected eight approvals, found ${approvals.length}`);
   for (const id of approvals) {
     const fileHint = entryHint.get(id);
@@ -200,7 +200,7 @@ async function run() {
   }
   landingRows.push({ act: 'SEED ROWS LEAVE THE POPULATION', ids: seeds.map((s) => s.id), to: 'REJECTED', ground: 'a row its author marked never shippable is not awaiting review (David\'s ruling on the notes artefact); REJECTED is the never-approved, unusable-by-items state — soft, reversible, and outside every review population' });
   if (APPLY) {
-    await prisma.item.updateMany({ where: { id: { startsWith: 'seed-vr08-' }, status: 'DRAFT' }, data: { status: 'REJECTED' } });
+    await prisma.item.updateMany({ where: { id: { startsWith: 'seed-vr08-' }, status: 'DRAFT' }, data: { status: 'NEVER_SHIPPABLE' } }); // R1038: 'REJECTED' was never an ItemStatus; R703 added NEVER_SHIPPABLE for these rows, which is where all 13 stand
     await prisma.attributionEvent.createMany({
       data: seeds.map((s) => ({
         recordType: 'item', recordId: s.id, action: 'AMENDED' as const,

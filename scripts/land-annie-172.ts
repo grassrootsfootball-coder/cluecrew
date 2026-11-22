@@ -150,7 +150,6 @@ async function run() {
     }
   }
 
-  const changed = rows.filter((r) => r.action !== 'ALREADY HER CHOICE' && !r.HELD);
   const heldRows = rows.filter((r) => r.HELD);
   const manifest = rows.map((r) => `${r.position}\t${r.herVerdict}\t${r.action}\t${r.targetId}`);
   const md = digestOverText('the LANDING_MANIFEST lines joined by \\n, no trailing newline, each "<position>\\t<verdict>\\t<action>\\t<targetId>"', manifest.join('\n'));

@@ -107,7 +107,7 @@ async function run() {
             foundInCrossedFiles: r.foundIn, sampleDigests: r.digests,
             andWHYITISHERE: 'the restore note said the unchosen variant was recorded on the row and it was not. The note is right and the row has caught up (R900).',
           },
-        } } });
+        } as object } });
         const after = await tx.item.findUniqueOrThrow({ where: { id: r.itemId as string }, select: { stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } } });
         const now = excluded(after);
         if (now !== r.excludedHashBefore) throw new Error(`${r.itemId}: the retention moved the pinned projection (${r.excludedHashBefore} -> ${now}) — rolling back`);

@@ -28,7 +28,7 @@ import { join as pjoin } from 'node:path';
 import { stagingQueue } from './lib/export-destination';
 import { requirePopulation } from './lib/population';
 import { assessRefusalShape, runRefusalShapeFixture, type ScreenedRow } from './lib/refusal-shape';
-import { canonicalJson, findingsDigest } from './lib/findings-digest';
+import { findingsDigest } from './lib/findings-digest';
 
 const REPO = pjoin(__dirname, '..');
 const DL = pjoin(homedir(), 'Downloads');

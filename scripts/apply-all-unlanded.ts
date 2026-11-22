@@ -8,7 +8,7 @@
  * cannot confirm the writes that correct it.
  */
 import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { checkChildFacingText, isBlocking, itemHintRulingPatch } from '../packages/core/src/index';
 import { prisma } from '../packages/db/src/index';

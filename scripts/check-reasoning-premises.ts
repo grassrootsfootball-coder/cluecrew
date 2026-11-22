@@ -55,7 +55,7 @@ function main() {
     for (const re of AUTHORED_SHAPES) {
       re.lastIndex = 0;
       for (const m of body.matchAll(re)) {
-        authored.push({ text: m[1].replace(/\s*\n\s*/g, ' ').trim().replace(/\.$/, ''), file: f, when });
+        authored.push({ text: m[1]!.replace(/\s*\n\s*/g, ' ').trim().replace(/\.$/, ''), file: f, when });
       }
     }
   }
@@ -72,7 +72,7 @@ function main() {
     for (const re of QUOTED_AS_LIVE) {
       re.lastIndex = 0;
       for (const m of body.matchAll(re)) {
-        const t = m[1].trim().replace(/\.$/, '');
+        const t = m[1]!.trim().replace(/\.$/, '');
         if (t.length > 25 && t.length < 200) quoted.add(t);
       }
     }

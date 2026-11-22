@@ -32,8 +32,12 @@ const V2 = pjoin(DL, 'cowork-forty-five-to-eight-for-code.json');
 function main() {
   const v1b = readFileSync(V1), v2b = readFileSync(V2);
   if (!sha(v2b).startsWith('adbeacaf26cc5f47')) throw new Error(`their v2.0 does not verify: ${sha(v2b).slice(0, 16)}`);
-  const v1 = JSON.parse(v1b.toString('utf8')) as any;
-  const v2 = JSON.parse(v2b.toString('utf8')) as any;
+  const v1 = JSON.parse(v1b.toString('utf8')) as {
+    ONE_THE_SCREEN_AS_SHE_SPECIFIED_IT: { AND_A_THIRD_OUTCOME_THE_FIXTURE_FORCED: { theList: string[] } };
+  };
+  const v2 = JSON.parse(v2b.toString('utf8')) as {
+    ONE_THEIR_RULE_APPLIED_TO_EVERY_WORD_NOT_JUST_THE_SIX: { THE_EIGHT_THAT_SURVIVE: string[]; THE_DEPARTURES_WITH_THEIR_REASONS: Record<string, string> };
+  };
 
   const theirRefuse: string[] = v2.ONE_THEIR_RULE_APPLIED_TO_EVERY_WORD_NOT_JUST_THE_SIX.THE_EIGHT_THAT_SURVIVE;
   const theirDepartures: Record<string, string> = v2.ONE_THEIR_RULE_APPLIED_TO_EVERY_WORD_NOT_JUST_THE_SIX.THE_DEPARTURES_WITH_THEIR_REASONS;

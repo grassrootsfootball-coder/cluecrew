@@ -48,7 +48,7 @@ async function main() {
     try { body = readFileSync(f, 'utf8'); } catch { continue; }
     CLAIM.lastIndex = 0;
     for (const m of body.matchAll(CLAIM)) {
-      claims.push({ file: f.split('/').pop()!, item: m[1], claimedKey: m[2].trim() });
+      claims.push({ file: f.split('/').pop()!, item: m[1]!, claimedKey: m[2]!.trim() });
     }
   }
 

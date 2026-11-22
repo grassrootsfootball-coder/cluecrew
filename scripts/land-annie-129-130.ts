@@ -133,12 +133,12 @@ async function run() {
   // ---- Phase A: her 129th ----
   console.log('— PHASE A: the 129th (tranche two) —');
   const amendments129 = [...her129.matchAll(/target: library:([a-z0-9-]+)\n\s+replaced: (.+)\n\s+replacedSha256: ([0-9a-f]{64})\n\s+authored: (.+)/g)]
-    .map((m) => ({ id: m[1], replaced: m[2].trim(), replacedSha256: m[3], authored: m[4].trim() }));
-  if (amendments129.length !== 2 || amendments129[0].id !== 'maths-11-commutative-subtraction' || amendments129[1].id !== 'maths-110-missing-value-equals-the-average') {
+    .map((m) => ({ id: m[1]!, replaced: m[2]!.trim(), replacedSha256: m[3]!, authored: m[4]!.trim() }));
+  if (amendments129.length !== 2 || amendments129[0]!.id !== 'maths-11-commutative-subtraction' || amendments129[1]!.id !== 'maths-110-missing-value-equals-the-average') {
     throw new Error(`REFUSED — expected the 129th's two amendments, found [${amendments129.map((a) => a.id).join(', ')}]`);
   }
   const conf129 = [...her129.matchAll(/confirmed: library:([a-z0-9-]+) \| (.+?) \| ([0-9a-f]{16})(?: \| (.+))?$/gm)]
-    .map((m) => ({ id: m[1], confirmed: m[2].trim(), hashPrefix: m[3], annotation: m[4]?.trim() ?? null }));
+    .map((m) => ({ id: m[1]!, confirmed: m[2]!.trim(), hashPrefix: m[3]!, annotation: m[4]?.trim() ?? null }));
   if (conf129.length !== 10) throw new Error(`REFUSED — expected ten 129th confirmations, found ${conf129.length}`);
   for (const a of amendments129) await amend(a.id, a.replaced, a.replacedSha256, a.authored, AUTH129, 'written review — her 129th return (resend), maths tranche two');
   for (const c of conf129) await approve(c.id, c.confirmed, (h) => h.startsWith(c.hashPrefix), c.hashPrefix, AUTH129, 'written review — her 129th return (resend), approved against serving bytes', c.annotation);
@@ -190,7 +190,7 @@ async function run() {
   console.log('— PHASE C: the 130th (tranche three) via the expansion map —');
   const her130Amend = /target: library:maths-22-adding-numerators-and-denominators\n\s+replaced: (.+)\n\s+replacedSha256: .+\n\s+authored: (.+)/.exec(her130);
   if (!her130Amend) throw new Error('REFUSED — her 130th\'s maths-22 amendment block not found');
-  if (her130Amend[1].trim() !== map.amendment.replaced || her130Amend[2].trim() !== map.amendment.authored) {
+  if (her130Amend[1]!.trim() !== map.amendment.replaced || her130Amend[2]!.trim() !== map.amendment.authored) {
     throw new Error('REFUSED — her 130th\'s strings and the expansion map\'s bytes disagree on maths-22');
   }
   if (sha256(map.amendment.authored) !== map.amendment.authoredSha256) throw new Error('REFUSED — map authoredSha256 does not match its own authored string');

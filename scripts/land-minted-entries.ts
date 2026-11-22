@@ -52,13 +52,6 @@ interface Mint {
   computesAs?: string; humanRuling?: string;
 }
 
-/** Numeric components of a value: "£2000" -> [2000]; "(8, 4)" -> [8,4]. Never re-orders them. */
-function componentsOf(v: string): number[] | null {
-  const parts = v.replace(/[()]/g, '').split(',').map((s) => s.trim());
-  const nums = parts.map((s) => Number(s.replace(/[^\d.-]/g, '')));
-  return nums.every((n) => !Number.isNaN(n)) && nums.length > 0 ? nums : null;
-}
-
 async function run() {
   const cutBeganAt = beginCut();
   assertFixture('join-determination', [
@@ -119,9 +112,9 @@ async function run() {
     const entryOk = gateOk && hint.trim() !== '' && (m.behaviour ?? m.description ?? '').trim() !== '';
     entryResults.push({
       entryId: m.id, outcome: entryOk ? (APPLY ? 'MINTED' : 'WOULD MINT') : 'REFUSED',
-      ...(entryOk ? {} : { why: gateOk ? 'the entry carries no behaviour or no child hint' : gate.map((f) => f.message) }),
+      ...(entryOk ? {} : { why: gateOk ? 'the entry carries no behaviour or no child hint' : gate.map((f) => f.detail) }),
       ...(m.refinement ? { refinementTaken: m.refinement, supersedes: 'the 189th\'s wording; the file\'s wording is what mints' } : {}),
-      childHintGate: gateOk ? 'PASSES' : `FAILS — ${gate.map((f) => f.message).join(' | ')}`,
+      childHintGate: gateOk ? 'PASSES' : `FAILS — ${gate.map((f) => f.detail).join(' | ')}`,
     });
     if (entryOk && APPLY) {
       await prisma.misconception.upsert({

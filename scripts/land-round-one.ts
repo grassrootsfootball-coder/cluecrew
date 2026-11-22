@@ -19,7 +19,7 @@
  * The three assertions a row serves on (R909): identity (pin), reading (verdict), authorship.
  */
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join as pjoin } from 'node:path';
 import { prisma, recordSignature } from '../packages/db/src/index';
@@ -221,7 +221,7 @@ async function main() {
 
   // ---- 3. THE TWENTY EXECUTIONS, through both gates -------------------------------------------
   console.log('3. LAND the twenty executions through the tag gate and the key gate.');
-  const executions = (cowork.data.COMPONENTS as Record<string, Record<string, unknown>>).C_THE_EXECUTIONS.executions as Array<Record<string, unknown>>;
+  const executions = (cowork.data.COMPONENTS as Record<string, Record<string, unknown>>).C_THE_EXECUTIONS!.executions as Array<Record<string, unknown>>;
   readFieldsByName('cowork executions', executions, ['itemId', 'optionValue', 'entryId', 'EXECUTION', 'determinesThisValueAndNoOther']);
   requirePopulation('round-one:executions', { execution: executions.length });
   for (const e of executions) {
@@ -246,7 +246,7 @@ async function main() {
     rec('execution', key, 'LANDED', `tag gate ${tg.verdict}, key gate ${kg.verdict}`, { entry });
   }
   // The 49 reading-holds and 356 not-its-entry are the authoring store's; recorded, not written.
-  const C = (cowork.data.COMPONENTS as Record<string, Record<string, unknown>>).C_THE_EXECUTIONS;
+  const C = (cowork.data.COMPONENTS as Record<string, Record<string, unknown>>).C_THE_EXECUTIONS!;
   rec('execution-class', 'HOLD_READING', 'HELD-AT-AUTHORING-STORE', `${(C.holdsReading as unknown[]).length} reading-holds: an execution is authoring, and the entry holds on the row — decided at the authoring store, not here`, {});
   rec('execution-class', 'HOLD_NOT_ITS_ENTRY', 'LEFT-BY-INSTRUCTION', `${(C.holdsNotItsEntrys as unknown[]).length} not-its-entry: the option's error is not its entry's; said and left, per the desk's instruction`, {});
 
@@ -306,7 +306,7 @@ async function main() {
 
   // ---- 5. REGENERATIONS through both gates, emitted PROPOSED ----------------------------------
   console.log('5. Regenerations through both gates (PROPOSED; no serving write).');
-  const D = (cowork.data.COMPONENTS as Record<string, Record<string, unknown>>).D_THE_REGENERATIONS_PROPOSED;
+  const D = (cowork.data.COMPONENTS as Record<string, Record<string, unknown>>).D_THE_REGENERATIONS_PROPOSED!;
   const gateProposedRow = (qt: string, stem: Record<string, unknown>, options: Array<{ value: string; isKey: boolean; tag: string | null }>) => {
     const keyVal = options.find((o) => o.isKey)?.value ?? '';
     const kg = checkKeyPerformsStem({ questionTypeId: qt, stem, keyValue: keyVal, optionValues: options.map((o) => o.value) }, isWord);
@@ -370,7 +370,6 @@ async function main() {
     const holdRecs = recs.filter((r) => (r.dims.case === qt || r.dims.door === qt) && isHold(r.state) && (r.kind === 'signature' || r.kind === 'pin'));
     const onAllThree = draft.filter((r) => signedIds.has(r.id) && r.sendHistory !== null && r.authoredBy).length;
     const heldWithReason = new Set(holdRecs.map((r) => r.target)).size;
-    const accountedFor = onAllThree + heldWithReason + rows.filter((r) => r.status === 'NEVER_SHIPPABLE').length + draft.filter((r) => r.answerFlaggedAt).length;
     const publishable = draft.every((r) => (signedIds.has(r.id) && r.sendHistory !== null && r.authoredBy) || holdRecs.some((h) => h.target === r.id) || r.answerFlaggedAt);
     const reasons: string[] = [];
     const unaccounted = draft.filter((r) => !(signedIds.has(r.id) && r.sendHistory !== null && r.authoredBy) && !holdRecs.some((h) => h.target === r.id) && !r.answerFlaggedAt);

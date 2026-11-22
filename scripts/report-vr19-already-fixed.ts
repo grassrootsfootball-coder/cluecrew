@@ -52,7 +52,7 @@ async function main() {
     return {
       itemId: r.id,
       theWordNOW: word, itRepeatsALetter: repeats(word),
-      theWordTHEYREAD: theirHold ? (theirHold.why.match(/\b([A-Z]{3,})\b/)?.[1] ?? 'see their hold') : 'not held by them',
+      theWordTHEYREAD: theirHold ? (theirHold.why!.match(/\b([A-Z]{3,})\b/)?.[1] ?? 'see their hold') : 'not held by them',
       theKeyNOW: val(key!),
       theSeat: seat ? val(seat) : null,
       seatCarriesAnExecutionAlready: !!seat?.misconceptionExecution,

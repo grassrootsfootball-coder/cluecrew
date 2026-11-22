@@ -56,14 +56,14 @@ async function run() {
 
   // AMENDMENTS: target / replaced / authored triplets, read from the block's own lines.
   const amendments = [...her.matchAll(/target: library:([a-z0-9-]+)\n\s+replaced: (.+)\n\s+authored: (.+)/g)]
-    .map((m) => ({ id: m[1], replaced: m[2].trim(), authored: m[3].trim() }));
-  if (amendments.length !== 2 || amendments[0].id !== 'vr07-operation-slip' || amendments[1].id !== 'vr07-term-dropped') {
+    .map((m) => ({ id: m[1]!, replaced: m[2]!.trim(), authored: m[3]!.trim() }));
+  if (amendments.length !== 2 || amendments[0]!.id !== 'vr07-operation-slip' || amendments[1]!.id !== 'vr07-term-dropped') {
     throw new Error(`REFUSED — expected the two vr07 amendments, found: ${amendments.map((a) => a.id).join(', ')}`);
   }
 
   // CONFIRMATIONS: six confirmed strings.
   const confirmations = [...her.matchAll(/confirmed: library:([a-z0-9-]+) \| (.+)/g)]
-    .map((m) => ({ id: m[1], confirmed: m[2].trim() }));
+    .map((m) => ({ id: m[1]!, confirmed: m[2]!.trim() }));
   if (confirmations.length !== 6) throw new Error(`REFUSED — expected six confirmations, found ${confirmations.length}`);
   const HELD_ID = 'vr07-value-slip';
   const toStamp = confirmations.filter((c) => c.id !== HELD_ID);

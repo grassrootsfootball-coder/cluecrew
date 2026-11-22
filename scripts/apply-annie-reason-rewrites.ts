@@ -64,7 +64,7 @@ for (const r of REWRITES) {
     flags[r.flagIndex] = flag.replace(r.faulty, r.replacement);
   } else {
     const f = flag as Record<string, string>;
-    f.reason = f.reason.replace(r.faulty, r.replacement);
+    f.reason = f.reason!.replace(r.faulty, r.replacement);
   }
 
   const faults = (j.flagRecordFaults ?? []) as Array<Record<string, unknown>>;

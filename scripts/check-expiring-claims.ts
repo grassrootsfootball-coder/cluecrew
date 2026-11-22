@@ -70,7 +70,7 @@ const OUR_NOUNS =
  * "one thing to try at home") far more often than a count, and including them added six false
  * positives and no true ones.
  */
-const QUANTITY = /(?<![\w£$.\-])(\d{1,4})(?![\w%.\-])|\b(three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|twenty|thirty)\b/gi;
+const QUANTITY = /(?<![\w£$.-])(\d{1,4})(?![\w%.-])|\b(three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|twenty|thirty)\b/gi;
 
 /**
  * NORMALISE FOR COMPARISON, and the three things here were each a false failure on the first run —

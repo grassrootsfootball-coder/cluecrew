@@ -22,7 +22,8 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { PrismaClient } from '@prisma/client';
+// R1038: '@prisma/client' resolves only inside packages/db; the db package re-exports it.
+import { PrismaClient } from '../packages/db/src/index';
 import { canonicalSubstance, canonicalSubstanceCandidates } from '../packages/core/src/index';
 import { requirePopulation } from './lib/population';
 import { assessRefusalShape, runRefusalShapeFixture } from './lib/refusal-shape';
@@ -87,7 +88,7 @@ async function main() {
   if (heads.length !== 1) {
     throw new Error(`${heads.length} standing notices after following the supersession chain — refusing to pick one (${notices.map((n) => `${n.file}=${n.sha256.slice(0, 12)}`).join(', ')})`);
   }
-  const standing = heads[0];
+  const standing = heads[0]!;
   const notice = standing.body;
   console.log(`  standing notice: ${standing.file} (${standing.sha256.slice(0, 16)}), superseding ${superseded.size} earlier notice(s)`);
   for (const d of declared.declarations) console.log(`    declared supersession: ${d.supersedes.slice(0, 16)} superseded by ${d.supersededBy.slice(0, 16)} — ${d.declaredBy}`);
@@ -125,7 +126,7 @@ async function main() {
     c3tried += 1;
     const built = canonicalSubstanceCandidates(row as never);
     if (built.some((b) => b === w.THE_EXACT_INPUT_STRING || b === w.THE_EXACT_REPLACEMENT_INPUT_STRING)) c3 += 1;
-    else if (c3fail.length < 3) c3fail.push(`${w.itemId}\n        built: ${built[0].slice(0, 150)}\n        theirs: ${w.THE_EXACT_INPUT_STRING.slice(0, 150)}`);
+    else if (c3fail.length < 3) c3fail.push(`${w.itemId}\n        built: ${built[0]!.slice(0, 150)}\n        theirs: ${w.THE_EXACT_INPUT_STRING.slice(0, 150)}`);
   }
 
   console.log(`\n  CANARY 1 — their worked probe reproduces as a string and a digest: ${c1 ? 'PASS' : 'FAIL'}`);

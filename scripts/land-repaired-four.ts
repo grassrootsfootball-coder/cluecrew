@@ -57,7 +57,7 @@ async function run() {
         mechanismLedger: (it.mechanismLedger ?? undefined) as object | undefined,
         options: {
           create: options.map((o) => ({
-            content: { label: o.label, value: o.value },
+            content: { label: o.label, value: o.value } as object,
             isCorrect: Boolean(o.isCorrect),
             misconceptionId: (o.misconceptionId as string) ?? null,
             misconceptionExecution: (o.misconceptionExecution as string) ?? null,

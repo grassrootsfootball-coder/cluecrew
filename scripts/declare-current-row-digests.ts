@@ -75,7 +75,6 @@ async function main() {
 
     const caseDigestNow = sha(canonicalJson([...nowById].sort().map(([itemId, rowSha256]) => ({ itemId, rowSha256 }))));
     const caseDigestThen = sha(canonicalJson([...thenById].sort().map(([itemId, rowSha256]) => ({ itemId, rowSha256 }))));
-    const bound = caseDigestNow === caseDigestThen;
     const contentUnchanged = moved.length === 0 && gone.length === 0;
 
     cases.push({

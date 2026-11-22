@@ -24,7 +24,11 @@ const sha = (s: string | Buffer) => createHash('sha256').update(typeof s === 'st
 async function main() {
   const bytes = readFileSync(THEIRS);
   if (!sha(bytes).startsWith('c8c28c8796b4')) throw new Error(`their artefact does not verify: ${sha(bytes).slice(0, 16)}`);
-  const theirs = JSON.parse(bytes.toString('utf8')) as any;
+  const theirs = JSON.parse(bytes.toString('utf8')) as {
+    TWO_THE_DOUBLING_ARITHMETIC_AND_THREE_FIGURES_ARE_WRONG_INCLUDING_TWO_OF_THIS_STORES: {
+      MEASURED_INDEPENDENTLY_ON_bb6be0d3: { theWithdrawn: Array<{ itemId: string; optionValue: unknown; entryId: string }> };
+    };
+  };
   const withdrawn: Array<{ itemId: string; optionValue: unknown; entryId: string }> =
     theirs.TWO_THE_DOUBLING_ARITHMETIC_AND_THREE_FIGURES_ARE_WRONG_INCLUDING_TWO_OF_THIS_STORES.MEASURED_INDEPENDENTLY_ON_bb6be0d3.theWithdrawn;
 

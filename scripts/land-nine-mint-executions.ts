@@ -52,7 +52,10 @@ async function run() {
   requirePopulation('land:nine-mint-executions', { 'declared change(s) in the projection': changes.length, 'execution(s)': execs.length });
 
   // ---- THE CONDITION: the nine rows must not differ from the projection -------------------------
-  const checks = [];
+  const checks: Array<{ itemId: string; act: Change['act']; projectionExpects: string[];
+    thisRowHasThatOption: boolean; itsTag: string | null; tagMatches: boolean;
+    displacedPairHasVacated: boolean; executionAlreadyPresent: boolean;
+    optionId: string | null; agrees: boolean }> = [];
   for (const c of changes) {
     const row = await prisma.item.findUnique({ where: { id: c.itemId },
       select: { options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });

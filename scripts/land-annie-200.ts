@@ -49,7 +49,7 @@ async function run() {
   ], (raw) => { const [a, b] = JSON.parse(raw); return same(a, b); });
 
   const refusals: string[] = [];
-  const plan = [];
+  const plan: Array<(typeof SEATS)[number] & { optionId: string; priorTag: string | null; words: string[]; key: string[] }> = [];
   for (const s of SEATS) {
     const row = await prisma.item.findUniqueOrThrow({ where: { id: s.itemId },
       select: { stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
@@ -60,7 +60,7 @@ async function run() {
     if (!s.authored.every((w) => words.includes(w))) { refusals.push(`${s.itemId}: authored pair is not entirely inside the stem's word list`); continue; }
     if (s.authored.some((w) => key.value.includes(w))) { refusals.push(`${s.itemId}: authored pair overlaps the KEY — it would not be two group members`); continue; }
     if (row.options.some((o) => same((o.content as { value: unknown }).value, s.authored))) { refusals.push(`${s.itemId}: the authored pair is already an option on this row`); continue; }
-    plan.push({ ...s, optionId: hits[0].id, priorTag: hits[0].misconceptionId, words, key: key.value });
+    plan.push({ ...s, optionId: hits[0]!.id, priorTag: hits[0]!.misconceptionId, words, key: key.value });
   }
   requirePopulation('land:annie-200', { 'seat(s) she re-authored': SEATS.length, 'seat(s) resolved': plan.length });
 

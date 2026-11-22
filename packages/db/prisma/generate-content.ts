@@ -16,28 +16,8 @@ import { assertNoReviewedRewrite, classifyDerivedWrites } from './reviewed-guard
 import { VR_EXECUTORS, buildDerivedVrDistractors, buildSpreadVrDistractors, checkVr04Row, flagNearSynonymHeadwords, selectVr04Distractors, type VrOperands, type Vr04Diagnosis, type Vr04Row } from '@cluecrew/core';
 
 /**
- * Derived distractors (reviewer audit, 2026-08-05): each is the value its
- * misconception PRODUCES on the operands, tagged with that id — not a fixed-slot
- * near-miss. Wraps the shared core builder into GenItem option shape.
- */
-function derivedOptions(
-  keyValue: string | number,
-  operands: VrOperands,
-  ids: string[],
-  forbidden: ReadonlySet<string> = new Set(),
-): Array<{ content: object; isCorrect: boolean; mid?: string }> {
-  return [
-    { content: { value: keyValue }, isCorrect: true },
-    ...buildDerivedVrDistractors(keyValue, operands, ids, forbidden).map((d) => ({
-      content: { value: d.value },
-      isCorrect: false,
-      mid: d.misconceptionId,
-    })),
-  ];
-}
-
-/**
- * R1030: the same, but choosing among every value the tags genuinely produce so the key's VALUE rank
+ * R1030: derived distractors (reviewer audit, 2026-08-05: each is the value its misconception
+ * PRODUCES on the operands, tagged with that id), choosing among every value the tags genuinely produce so the key's VALUE rank
  * spreads across the door (`rankCounts` is the door's running tally). Used by the orderable doors whose
  * legacy pick put the key at one rank on every row (vr-07, vr-09, vr-11, vr-14).
  */

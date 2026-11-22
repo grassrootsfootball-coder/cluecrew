@@ -212,7 +212,7 @@ async function main(): Promise<void> {
 
   console.log('THE RETURN LEG — what the platform holds that the authoring side works against.\n');
   for (const p of paths) {
-    const { carries, missing } = carriedBy(p.exportScript, p.fields);
+    const { missing } = carriedBy(p.exportScript, p.fields);
     const delivered = lastDelivered(p.family);
     const isCarried = p.exportScript !== null && missing.length === 0 && delivered !== null;
     const isStale = isCarried && p.newest !== null && delivered !== null && p.newest > delivered.at;

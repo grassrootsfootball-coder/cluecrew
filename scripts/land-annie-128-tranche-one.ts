@@ -39,14 +39,14 @@ async function run() {
   const her = bytes.toString('utf8');
 
   const amendments = [...her.matchAll(/target: library:([a-z0-9-]+)\n\s+replaced: (.+)\n\s+replacedSha256: ([0-9a-f]{64})\n\s+authored: (.+)/g)]
-    .map((m) => ({ id: m[1], replaced: m[2].trim(), replacedSha256: m[3], authored: m[4].trim() }));
+    .map((m) => ({ id: m[1]!, replaced: m[2]!.trim(), replacedSha256: m[3]!, authored: m[4]!.trim() }));
   if (amendments.length !== 5 || JSON.stringify(amendments.map((a) => a.id)) !== JSON.stringify(AMENDED_IDS)) {
     throw new Error(`REFUSED — expected the five amendments [${AMENDED_IDS.join(', ')}], found [${amendments.map((a) => a.id).join(', ')}]`);
   }
 
   // Segments: id | string | 16-hex hash [| annotation…]. Everything after the hash is annotation.
   const confirmations = [...her.matchAll(/confirmed: library:([a-z0-9-]+) \| (.+?) \| ([0-9a-f]{16})(?: \| (.+))?$/gm)]
-    .map((m) => ({ id: m[1], confirmed: m[2].trim(), hashPrefix: m[3], annotation: m[4]?.trim() ?? null }));
+    .map((m) => ({ id: m[1]!, confirmed: m[2]!.trim(), hashPrefix: m[3]!, annotation: m[4]?.trim() ?? null }));
   if (confirmations.length !== 7) throw new Error(`REFUSED — expected seven confirmations, found ${confirmations.length}`);
 
   const landingRows: Array<Record<string, unknown>> = [];

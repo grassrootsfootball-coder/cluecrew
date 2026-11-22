@@ -52,11 +52,11 @@ async function run() {
     const short = /^maths-\d+/.exec(a.id)?.[0];
     const block = new RegExp(`target: library:${a.id}\\n\\s+replaced: (.+)\\n\\s+replacedSha256: reference: ${REF_PREFIX} id (${short})\\n\\s+authored: (.+)`).exec(her);
     if (!block) throw new Error(`REFUSED — her 132nd carries no hybrid block for ${a.id} in the settled syntax`);
-    if (block[1].trim() !== a.replaced || block[3].trim() !== a.authored) throw new Error(`REFUSED — her 132nd's strings and the map's bytes disagree on ${a.id}`);
+    if (block[1]!.trim() !== a.replaced || block[3]!.trim() !== a.authored) throw new Error(`REFUSED — her 132nd's strings and the map's bytes disagree on ${a.id}`);
     if (sha256(a.replaced) !== a.replacedSha256 || sha256(a.authored) !== a.authoredSha256) throw new Error(`REFUSED — the map's ${a.id} hashes do not match its own strings`);
   }
   const confs = [...her.matchAll(/confirmed: library:([a-z0-9-]+) \| approved as written(?:; ([^|]+?))? \| reference: 851cc51ae835885f id ([a-z0-9-]+)/g)]
-    .map((m) => ({ full: m[1], annotation: m[2]?.trim() ?? null, short: m[3] }));
+    .map((m) => ({ full: m[1]!, annotation: m[2]?.trim() ?? null, short: m[3]! }));
   if (confs.length !== 8) throw new Error(`REFUSED — expected eight reference confirmations, found ${confs.length}`);
   for (const c of confs) {
     if (!c.full.startsWith(c.short)) throw new Error(`REFUSED — reference id ${c.short} does not resolve to ${c.full}`);

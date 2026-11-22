@@ -39,7 +39,7 @@ const hashOf = (stem: unknown, explanation: unknown, options: Array<{ content: u
 /** Rebuild the row as it stood BEFORE the amendment, from its own retention. */
 function priorOf(row: { stem: unknown; explanation: unknown; options: Array<{ content: Record<string, unknown>; isCorrect: boolean }> }) {
   const exp = { ...(row.explanation as Record<string, unknown>) };
-  let restored: string[] = [];
+  const restored: string[] = [];
   if (typeof exp._previousHintCore === 'string') { exp.hintCore = exp._previousHintCore; restored.push('explanation.hintCore'); }
   const options = row.options.map((o) => {
     const c = { ...o.content };

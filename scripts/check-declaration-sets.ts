@@ -189,7 +189,7 @@ export async function ourDeclarationSet(): Promise<Declaration[]> {
  * headline would be total disagreement between two stores that may largely agree.
  */
 function containerOf(fieldPath: string): string {
-  return fieldPath.split(/[.[]/)[0].trim();
+  return fieldPath.split(/[.[]/)[0]!.trim();
 }
 
 /** Cowork's set, as delivered. Same refusal discipline: an unknown wrapper throws. */

@@ -25,7 +25,7 @@ const WORDS = ['PIPS', 'SAPS', 'SPAS', 'ASPS', 'APPS', 'PAPA', 'PASTA', 'TAPAS',
 
 function build(i: number) {
   const map: Record<string, number> = { T: 1 + (i % 3), A: 4, P: 6, I: 7, S: 9 };
-  const word = WORDS[i % WORDS.length];
+  const word = WORDS[i % WORDS.length]!;
   const key = word.split('').map((l) => map[l]).join('');
   const reverse = key.split('').reverse().join('');
   const at = word.split('').findIndex((l, j) => word.indexOf(l) !== j);

@@ -23,7 +23,6 @@ import { homedir } from 'node:os';
 import { join as pjoin } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { checkChildFacingText } from '../packages/core/src/index';
-import { checkKeyPerformsStem } from '../packages/core/src/key-gate';
 import { checkTagWrite } from '../packages/core/src/tag-write-gate';
 import { itemWholeness } from './lib/item-wholeness';
 import { requirePopulation } from './lib/population';

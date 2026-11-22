@@ -44,6 +44,7 @@ async function main() {
     process.exitCode = 1; await prisma.$disconnect(); return;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- destructured only to drop them from `rest`
   const { _hintCoreDeliberatelyNotRepaired, _walkScriptKeptBecause, ...rest } = e as Record<string, unknown>;
   await prisma.item.update({
     where: { id: 'ENG-028-PR-04' },

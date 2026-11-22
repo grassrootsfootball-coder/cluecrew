@@ -44,8 +44,6 @@ async function run() {
   const totalAttempts = servedRows.reduce((n, r) => n + r.serveRecord.answeredServes, 0);
   // WHO the counts are about — derived, and decisive for the exposure reading.
   const children = await prisma.childProfile.findMany({ select: { id: true } });
-  const attemptChildIds = [...allChildrenPre()];
-  function allChildrenPre() { return new Set<string>(); }
   const identity = {
     everyChildInTheDatabase: children.map((c) => c.id),
     finding: children.every((c) => c.id.startsWith('seed-child-'))

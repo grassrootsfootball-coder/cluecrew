@@ -41,7 +41,7 @@ async function run() {
     // side, and the tranche cannot cut without it (the desk's addition, second emission).
     select: { id: true, childHint: true, description: true, status: true, approvedBy: true },
   });
-  requirePopulation(lib, 'MATHS library rows — the maths misconception library must not be empty');
+  requirePopulation('emit-maths-hint-membership', { 'MATHS library rows — the maths misconception library must not be empty': lib.length });
   const byStatus = lib.reduce((a: Record<string, number>, r) => ((a[r.status] = (a[r.status] ?? 0) + 1), a), {});
   console.log(`library population: ${lib.length} MATHS-district rows (${JSON.stringify(byStatus)})`);
 

@@ -57,7 +57,9 @@ async function run() {
   const events = await prisma.attributionEvent.count({ where: { recordId: { in: FIVE } } });
   const audit = await prisma.adminAuditLog.count({ where: { targetId: { in: FIVE } } });
   const writes = await prisma.contentWriteLog.count({ where: { recordId: { in: FIVE } } });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- the read (and its non-null assumption) is kept as run
   const logStart = (await prisma.contentWriteLog.findFirst({ orderBy: { at: 'asc' }, select: { at: true } }))!.at;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- the read is kept as run
   const deletesLogged = await prisma.contentWriteLog.count({ where: { op: 'DELETE', tableName: 'Item' } });
   const clusters: Record<string, unknown> = {};
   for (const p of ['ENG-015', 'ENG-018', 'ENG-019', 'ENG-023', 'ENG-027']) {

@@ -67,7 +67,13 @@ const passageFileSchema = z.object({
   provenance: z.string().optional(),
   sceneTitle: z.string().optional(),
   preamble: z.string().optional(),
-  body: z.string().min(1),
+  // THE TEXT HAS THREE NAMES IN THE STORE (R1038): `body` (the original shape), `extract` (Stream A
+  // after the 2026-08-16 import) and `text` (commissioned Stream B/C). That import also dropped `kind`,
+  // and this validator went unrun in CI from 2026-08-12, so 27 passages failed here unseen. Any one
+  // name satisfies; `numberedLines` below is what every citation actually resolves against.
+  body: z.string().min(1).optional(),
+  extract: z.string().min(1).optional(),
+  text: z.string().min(1).optional(),
   // `n: null` is a paragraph break — a real entry in the layout that carries
   // no line number, exactly as a printed paper prints one. The NUMBERING is
   // dense over the numbered entries; the array is longer than the line count,
@@ -181,6 +187,11 @@ for (const file of files) {
     for (const issue of parsed.error.issues) {
       console.error(`    ${issue.path.join('.') || '(root)'}: ${issue.message}`);
     }
+    failures++;
+    continue;
+  }
+  if (parsed.data.kind === 'passage' && !(parsed.data.body ?? parsed.data.extract ?? parsed.data.text)) {
+    console.error(`✗ ${label}:\n    (root): a passage needs its text under body, extract or text`);
     failures++;
     continue;
   }

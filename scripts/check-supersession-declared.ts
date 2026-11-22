@@ -22,7 +22,8 @@
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join as pjoin } from 'node:path';
-import { PrismaClient } from '@prisma/client';
+// R1038: '@prisma/client' resolves only inside packages/db; the db package re-exports it.
+import { PrismaClient } from '../packages/db/src/index';
 import { compareToPopulation, type BindableRow, type SupersessionNotice } from './lib/population-binding';
 import { requirePopulation } from './lib/population';
 import { assertFixture } from './lib/carried-fixture';

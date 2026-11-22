@@ -77,7 +77,6 @@ async function main() {
   console.log('\n  WRITE PATH CUT — this reports only. A snapshot is evidence, not a source (R484).');
   await prisma.$disconnect();
   return;
-  // eslint-disable-next-line no-unreachable
   await prisma.$transaction(writable.map(({ id, it }) => prisma.item.create({
     data: {
       id, questionTypeId: String(it.questionTypeId), difficultyTier: Number(it.difficultyTier ?? 3),

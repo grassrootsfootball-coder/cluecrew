@@ -13,8 +13,6 @@
  * here, so **the absent count is a floor, not a census** — and the amendments it cannot see are the
  * ones most likely to have been missed, since a value in prose is what R25 exists to refuse.
  */
-import { readFileSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
 import { prisma } from '../packages/db/src/index';
 import { declaredCounts, describeShapes, readAmendments, targetSyntaxCensus } from './lib/return-amendments';
 import { requirePopulation } from './lib/population';

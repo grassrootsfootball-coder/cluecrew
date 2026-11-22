@@ -50,9 +50,8 @@ async function main() {
    * does NOT fire is INERT and is refused whatever its declaration says (R60's second question,
    * made mechanical instead of remembered).
    */
-  const CANARIES: Record<string, { stem: unknown; options?: Array<{ content: unknown; isCorrect?: boolean }> }> = {
+  const CANARIES: Record<string, { stem: unknown; explanation?: unknown; options?: Array<{ content: unknown; isCorrect?: boolean }> }> = {
     'sentence-length': { stem: { prompt: 'One two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen.' } },
-    'four-syllable-words': { stem: { prompt: 'The extraordinary situation.' } },
     'banned-vocabulary': { stem: { prompt: 'You must be careless.' } },
     'subject-matter': { stem: {}, options: [{ content: { value: 'HELL' }, isCorrect: false }] },
     'internal-id-leak': { stem: { prompt: 'See en-plausible-not-stated for more.' } },

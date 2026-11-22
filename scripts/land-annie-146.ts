@@ -25,7 +25,7 @@ async function run() {
 
   // ---- Nine walk amendments: replaced SUBSTRINGS asserted against the live scripts ----
   const amendments = [...her.matchAll(/target: walk:([a-z0-9-]+) \| replaced: (.+?) \| authored: (.+)$/gm)]
-    .map((m) => ({ id: m[1], replaced: m[2].trim(), authored: m[3].trim() }));
+    .map((m) => ({ id: m[1]!, replaced: m[2]!.trim(), authored: m[3]!.trim() }));
   if (amendments.length !== 9) throw new Error(`REFUSED — expected nine walk amendments, found ${amendments.length}`);
   for (const a of amendments) {
     const item = await prisma.item.findUniqueOrThrow({ where: { id: a.id }, select: { explanation: true } });
@@ -56,7 +56,7 @@ async function run() {
   // ---- Sixteen approvals by reference ----
   const confLine = /confirmed: walks:approved-sixteen \| gen-vr-10-word-connections ([\d, ]+) approved as written/.exec(her);
   if (!confLine) throw new Error('REFUSED — the sixteen-approvals line not found');
-  const nums = confLine[1].split(',').map((n) => n.trim()).filter(Boolean);
+  const nums = confLine[1]!.split(',').map((n) => n.trim()).filter(Boolean);
   if (nums.length !== 16) throw new Error(`REFUSED — expected sixteen ids, found ${nums.length}`);
   for (const n of nums) {
     const id = `gen-vr-10-word-connections-${n.padStart(2, '0')}`;

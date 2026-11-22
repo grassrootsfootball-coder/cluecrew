@@ -34,13 +34,13 @@ async function run() {
   const her = bytes.toString('utf8');
 
   const amendments = [...her.matchAll(/target: library:([a-z0-9-]+)\n\s+replaced: (.+)\n\s+replacedSha256: ([0-9a-f]{64})\n\s+authored: (.+)/g)]
-    .map((m) => ({ id: m[1], replaced: m[2].trim(), replacedSha256: m[3], authored: m[4].trim() }));
-  if (amendments.length !== 2 || amendments[0].id !== 'vr03-same-topic' || amendments[1].id !== 'vr01-second-word-only') {
+    .map((m) => ({ id: m[1]!, replaced: m[2]!.trim(), replacedSha256: m[3]!, authored: m[4]!.trim() }));
+  if (amendments.length !== 2 || amendments[0]!.id !== 'vr03-same-topic' || amendments[1]!.id !== 'vr01-second-word-only') {
     throw new Error(`REFUSED — expected the desk's two amendments, found: ${amendments.map((a) => a.id).join(', ')}`);
   }
 
   const confirmations = [...her.matchAll(/confirmed: library:([a-z0-9-]+) \| (.+) \| ([0-9a-f]{16})/g)]
-    .map((m) => ({ id: m[1], confirmed: m[2].trim(), hashPrefix: m[3] }));
+    .map((m) => ({ id: m[1]!, confirmed: m[2]!.trim(), hashPrefix: m[3]! }));
   if (confirmations.length !== 7) throw new Error(`REFUSED — expected seven confirmations, found ${confirmations.length}`);
 
   const landingRows: Array<Record<string, unknown>> = [];

@@ -2,7 +2,6 @@
  * THE DOUBLED CLAUSE, TRACED TO ITS WRITE (David, 2026-08-22 — R633). For Annie's ruling; the row
  * is HELD UNTOUCHED and nothing further lands on this passage until it crosses.
  */
-import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
