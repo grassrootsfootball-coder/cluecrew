@@ -1,0 +1,167 @@
+{
+ "door": "calibration-fix/vr-06-cap",
+ "questionType": "vr",
+ "ruling": "R1032",
+ "entries": {
+  "vr06-ignores-sentence": {
+   "description": "Made a real word that does not fit the sentence.",
+   "childHint": "Read the whole sentence with your word in it. Does it make sense?"
+  }
+ },
+ "passages": {},
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The heavy bag of bricks was a great ___DEN to carry all the way up the hill."
+   },
+   "lineRefs": null,
+   "explanation": {
+    "walkScript": "Follow the line along to the space. A heavy bag is hard to carry. “bur” builds “burden”, a heavy load. The others build real words in the odd place.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Follow the line along to the space. A heavy bag is hard to carry. BUR builds BURDEN, a heavy load. The others build real words in the odd place.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "2408355daf8685fc4ec059b917da0a5c7b9d7c1e2eae92cf9529317969452985",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "finding": {
+    "from": "child-facing gate (machine, not a person)",
+    "ruling": "R1032",
+    "verdict": "FAIL",
+    "faultAt": [
+     "question"
+    ],
+    "reason": "The child-facing stem sentence 'The heavy bag of bricks was a great ___DEN to carry all the way up the hill.' is 17 words, over the 16-word vr-06 gap-sentence cap (R1032). Split or tighten it so every sentence is at most 16 words."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ad0081tmzvddzdce3f",
+     "value": "BUR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ad0082tmzvxl6x0rpc",
+     "value": "GAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (GARDEN)."
+    },
+    {
+     "optionId": "cmscb15ad0083tmzvka50j64a",
+     "value": "SUD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUDDEN)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Waiting for her turn to sing on the stage, Mia felt very ___IOUS and her tummy was full of butterflies."
+   },
+   "lineRefs": null,
+   "explanation": {
+    "walkScript": "Follow the line along to the space. Mia feels nervous before she sings. “anx” turns it into “anxious”, worried and nervous. The other letters give real words, but not this one.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "Follow the line along to the space. Mia feels nervous before she sings. ANX turns it into ANXIOUS, worried and nervous. The other letters give real words, but not this one.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "ce792717297befe12d662d02ac353ab887613162dc6950dbbf8dc5039484d8c8",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "finding": {
+    "from": "child-facing gate (machine, not a person)",
+    "ruling": "R1032",
+    "verdict": "FAIL",
+    "faultAt": [
+     "question"
+    ],
+    "reason": "The child-facing stem sentence 'Waiting for her turn to sing on the stage, Mia felt very ___IOUS and her tummy was full of butterflies.' is 20 words, over the 16-word vr-06 gap-sentence cap (R1032). Split or tighten it so every sentence is at most 16 words."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b0009dtmzviostj77b",
+     "value": "ANX",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b0009etmzvqcvdywy7",
+     "value": "OBV",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (OBVIOUS)."
+    },
+    {
+     "optionId": "cmscb15b0009ftmzvm80nqw86",
+     "value": "VAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (VARIOUS)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "questionType": "vr-06-missing-word",
+   "passageRef": null,
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "After being ill in bed for a week, Grandad felt tired and ___BLE and could hardly stand."
+   },
+   "lineRefs": null,
+   "explanation": {
+    "walkScript": "The word breaks open at ___BLE. After illness Grandad can hardly stand. With “fee” the word is “feeble”, meaning faint and shaky. Both other choices are real words, not the right ones.",
+    "walkScriptBatch": "VR-FINAL-FIVE-CASES",
+    "walkScriptStatus": "DRAFT",
+    "_walkScriptBefore": "The word breaks open at ___BLE. After illness Grandad can hardly stand. With FEE the word is FEEBLE, meaning faint and shaky. Both other choices are real words, not the right ones.",
+    "_walkScriptBeforeRule": "R739",
+    "_walkScriptBeforeSha256": "a6eaf9702e874185ec5343cdd100a9c15051c121473f9c5051d243951a36c16a",
+    "_walkScriptBeforeStampedAt": "2026-08-26"
+   },
+   "finding": {
+    "from": "child-facing gate (machine, not a person)",
+    "ruling": "R1032",
+    "verdict": "FAIL",
+    "faultAt": [
+     "question"
+    ],
+    "reason": "The child-facing stem sentence 'After being ill in bed for a week, Grandad felt tired and ___BLE and could hardly stand.' is 17 words, over the 16-word vr-06 gap-sentence cap (R1032). Split or tighten it so every sentence is at most 16 words."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ba009xtmzvjjbljeqv",
+     "value": "FEE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ba009ytmzvia60zuti",
+     "value": "MAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MARBLE)."
+    },
+    {
+     "optionId": "cmscb15ba009ztmzvzcdpu6oj",
+     "value": "TRE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (TREBLE)."
+    }
+   ]
+  }
+ ]
+}

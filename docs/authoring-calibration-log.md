@@ -29191,3 +29191,40 @@ agent that drafted nothing it reviewed, then landed `--from-live` and republishe
 - **For a later sweep of vr-06:** the reviewer noted that the prompt "Three letters that make a word
   are missing" can be read as saying the three letters are themselves a word. Row -36's key DEF is
   not a word.
+
+## R1032 — A sentence with a gap is the question: the 16-word cap applies to it (David, 2026-11-22)
+
+**THE RULING.** Asked whether vr-06's gap sentence should keep its exemption from the 16-word cap,
+David: *"whatever is best practice."* Best practice is that the cap protects what the child must read
+to answer. So: **a `stem.sentence` containing a gap marker (`___`) is the question and keeps the stem
+role and its cap. Only a gapless carrier sentence takes the word-card role.** The gapless carrier is
+vr-04's, which only picks the sense. The August exemption (`12f52c8`) was ruled for vr-04 and swept
+vr-06 in under "one field, one rule". The line is drawn on the CONTENT (is there a gap?), not on a
+list of question types, so a new gap-sentence type is capped without anyone remembering to add it.
+
+**INSTRUMENT CHANGE, BASELINED (R149).** `checkItemChildFacing`, before and after, over 1,227 items:
+- blocked went from 12 to 15;
+- newly failing: exactly `bank-vr-06-missing-word-23`, `-35` and `-40`, each a sentence-length fault;
+- 0 newly passing and 0 changed;
+- no vr-04 row moved.
+
+The test that asserted the old behaviour now asserts the new one, and a within-cap case is added.
+
+**THE THREE ROWS** were split into two sentences each, with the gap, key, options, tags and
+executions unchanged. A drafting agent proposed the splits; a separate reviewer counted every
+sentence itself, then attested and signed them. They landed `--from-live` and were republished, so
+vr-06 has 40 of 40 LIVE. Re-diff against the baseline: blocked is back to 12, with 0 newly failing.
+
+**FOUND ALONGSIDE, NOT ACTED ON: vr-06 IS NOT THE GL QUESTION TYPE ITS PROMPT DESCRIBES.**
+- The prompt says "Three letters that make a word are missing". GL's missing three-letter-word type
+  is built on that rule: the three missing letters are themselves a word (MO___ + USE = MOUSE), and
+  a child uses it as a strategy.
+- Of 40 LIVE keys, only about 9 are three-letter words a child knows: OUT, TON, ASH, PET, FOR, BIN,
+  SIN, FUR, FEE.
+- About 11 more are dictionary oddities: USH, BAS, GAR, PER, DON, BUR, OSE, LAR, OLE, SOL, DOC.
+- 20 are not words at all, for example EAD, PLA, CLE, SPO and DEF.
+- So the bank practises "complete the word in the sentence", a cloze-spelling skill, not the GL
+  type. Annie signed these rows under the same prompt, so this was the design, not a slip.
+- Making it GL-faithful means rebuilding about 31 rows: a new target word whose missing letters
+  spell a known three-letter word, with three-letter-word distractors.
+- That is a type-design decision and is left to David.

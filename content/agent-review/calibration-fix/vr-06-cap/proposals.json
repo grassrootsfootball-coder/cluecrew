@@ -1,0 +1,102 @@
+{
+ "door": "calibration-fix/vr-06-cap",
+ "proposer": "agent",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "why": "R1032 cap: the stem sentence was 17 words, over the 16-word vr-06 gap-sentence cap. Split into two sentences (7 and 12 words), each ending in a full stop; the gap, key, options, tags and executions are unchanged. The walk script paraphrases rather than quotes the sentence, so it is unchanged.",
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "The bag of bricks was very heavy. It was a great ___DEN to carry all the way up the hill."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ad0081tmzvddzdce3f",
+     "value": "BUR",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ad0082tmzvxl6x0rpc",
+     "value": "GAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (GARDEN)."
+    },
+    {
+     "optionId": "cmscb15ad0083tmzvka50j64a",
+     "value": "SUD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (SUDDEN)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "why": "R1032 cap: the stem sentence was 20 words, over the 16-word vr-06 gap-sentence cap. Split into two sentences (11 and 10 words), each ending in a full stop; the gap, key, options, tags and executions are unchanged. The walk script paraphrases rather than quotes the sentence, so it is unchanged.",
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Mia was waiting for her turn to sing on the stage. She felt very ___IOUS and her tummy was full of butterflies."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15b0009dtmzviostj77b",
+     "value": "ANX",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15b0009etmzvqcvdywy7",
+     "value": "OBV",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (OBVIOUS)."
+    },
+    {
+     "optionId": "cmscb15b0009ftmzvm80nqw86",
+     "value": "VAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (VARIOUS)."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "why": "R1032 cap: the stem sentence was 17 words, over the 16-word vr-06 gap-sentence cap. Split into two sentences (9 and 9 words), each ending in a full stop; the gap, key, options, tags and executions are unchanged. The walk script paraphrases rather than quotes the sentence, so it is unchanged.",
+   "stem": {
+    "prompt": "Three letters that make a word are missing. Which three?",
+    "sentence": "Grandad had been ill in bed for a week. He felt tired and ___BLE and could hardly stand."
+   },
+   "options": [
+    {
+     "optionId": "cmscb15ba009xtmzvjjbljeqv",
+     "value": "FEE",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15ba009ytmzvia60zuti",
+     "value": "MAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (MARBLE)."
+    },
+    {
+     "optionId": "cmscb15ba009ztmzvzcdpu6oj",
+     "value": "TRE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "execution": "Does not fit the sentence, although it makes a real word (TREBLE)."
+    }
+   ]
+  }
+ ],
+ "notes": {}
+}

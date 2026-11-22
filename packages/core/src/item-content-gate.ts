@@ -330,9 +330,16 @@ export function checkItemChildFacing(item: GatableItem): ContentFailure[] {
     // A carrier sentence disambiguates a meaning and can run long, so it takes
     // the word-card role (no length cap; the vocabulary ceiling ≤9 still holds,
     // and the headword stays exempt via testedTokens). Every other stem field
-    // keeps the item's stem role. One field, one rule — vr-06's existing
-    // sentence rides the same path, which is the point of the single gate.
-    const role = path === 'sentence' ? 'word-card' : stemRole;
+    // keeps the item's stem role.
+    //
+    // A SENTENCE WITH A GAP IN IT IS THE QUESTION, NOT A CARRIER (David, 2026-11-22 — R1032). The
+    // August exemption (12f52c8) was ruled for vr-04, where the sentence only picks a sense, and
+    // swept vr-06 in by "one field, one rule" — but vr-06's sentence holds the gap the child solves,
+    // so the child reads every word of it to answer. The line is a property of the CONTENT, not a
+    // list of question types: a gap marker (`___`) means the child must read the sentence to answer,
+    // so it keeps the stem role and its 16-word cap.
+    const isGapSentence = path === 'sentence' && /_{2,}/.test(text);
+    const role = path === 'sentence' && !isGapSentence ? 'word-card' : stemRole;
     failures.push(
       ...checkChildFacingText({
         role,

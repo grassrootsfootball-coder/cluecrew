@@ -54,14 +54,29 @@ describe('carrier sentence takes the word-card role', () => {
     expect(failures.map((f) => f.rule)).toContain('four-syllable-words');
   });
 
-  it("applies the same rule to vr-06's cloze sentence field", () => {
+  // R1032 (David, 2026-11-22): a sentence with a GAP is the question itself — the child reads every
+  // word of it to answer — so it keeps the 16-word cap. Only a gapless carrier takes the exemption.
+  it("caps vr-06's gap sentence, because the child reads it to answer", () => {
     const failures = checkItemChildFacing({
       id: 'vr06-x',
       mechanic: 'letter-slot',
       options: [{ content: { value: 'DOC' } }],
       stem: {
         prompt: 'Three letters that make a word are missing. Which three?',
-        sentence: 'When I felt poorly, Mum took me all the way across town to see the ___TOR at the surgery today.',
+        sentence: 'When I felt ill, Mum took me all the way across town to see the ___TOR at the surgery today.',
+      },
+    });
+    expect(failures.map((f) => f.rule)).toContain('sentence-length');
+  });
+
+  it('passes a vr-06 gap sentence within the cap', () => {
+    const failures = checkItemChildFacing({
+      id: 'vr06-y',
+      mechanic: 'letter-slot',
+      options: [{ content: { value: 'DOC' } }],
+      stem: {
+        prompt: 'Three letters that make a word are missing. Which three?',
+        sentence: 'When I felt ill, Mum took me to see the ___TOR.',
       },
     });
     expect(failures.filter((f) => f.rule === 'sentence-length')).toEqual([]);

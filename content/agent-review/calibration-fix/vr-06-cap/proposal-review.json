@@ -1,0 +1,38 @@
+{
+ "door": "calibration-fix/vr-06-cap",
+ "reviewer": "rev-agent-01",
+ "changes": [
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-23",
+   "verdict": "ATTEST",
+   "reason": "Fault fixed: 17-word sentence split into 7 and 13 words (the proposal's 'why' says 12; it is 13, still under the cap), both ending in a full stop, no dash. Meaning kept: the bag is heavy and hard to carry. BURDEN fits; 'a great GARDEN to carry' and 'a great SUDDEN to carry' do not, so BUR is the only fit. Prompt, options, key, tags and executions identical to the packet. Walk script ('A heavy bag is hard to carry') still matches. Precheck from live: pass."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-35",
+   "verdict": "ATTEST",
+   "reason": "Fault fixed: 20-word sentence split into 11 and 11 words (the proposal's 'why' says 10 for the second; it is 11, still under the cap), both ending in a full stop, no dash. Meaning kept: Mia waits to sing and is nervous. ANXIOUS fits; 'felt very OBVIOUS' and 'felt very VARIOUS' do not, so ANX is the only fit. Prompt, options, key, tags and executions identical to the packet. Walk script ('Mia feels nervous before she sings') still matches. Precheck from live: pass."
+  },
+  {
+   "ref": "rebuild:bank-vr-06-missing-word-40",
+   "verdict": "ATTEST",
+   "reason": "Fault fixed: 17-word sentence split into 9 and 9 words, both ending in a full stop, no dash. Meaning kept: after a week ill in bed Grandad is weak. FEEBLE fits; 'tired and MARBLE' and 'tired and TREBLE' do not, so FEE is the only fit. Prompt, options, key, tags and executions identical to the packet. Walk script ('After illness Grandad can hardly stand') still matches. Precheck from live: pass."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "verdict": "SIGN",
+   "reason": "Read as rebuilt: answerable, BUR (BURDEN) the only option making a real word that fits; GARDEN and SUDDEN real but wrong in the sentence; vocabulary (bricks, burden) suitable for a 9-11-year-old in British English; three distinct three-letter options give no positional pattern."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "verdict": "SIGN",
+   "reason": "Read as rebuilt: answerable, ANX (ANXIOUS) the only fit, the butterflies clue supports it; OBVIOUS and VARIOUS real but wrong in the sentence; 'tummy' and 'butterflies' natural British English for the age group."
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "verdict": "SIGN",
+   "reason": "Read as rebuilt: answerable, FEE (FEEBLE) the only fit with 'could hardly stand'; MARBLE and TREBLE real but wrong in the sentence; wording suitable for 9-11 in British English."
+  }
+ ]
+}
