@@ -30192,3 +30192,7 @@ not rewritten.
   gated files, and it passes at 90%.
 - **Measured:** core 797 and web 41 tests pass, typecheck and lint are clean, `pnpm build` passes,
   and the audit is down to deepmerge-ts (high, under Prisma), which the Prisma 7 upgrade clears.
+- **CORRECTION, the same day.** "Typecheck clean" above was true of the zod step and NOT re-run
+  after the vitest bump. Vitest 3 had been supplying `@types/node` to packages/core by accident; vitest
+  5 does not, so `3be5916` left core's typecheck failing (node:fs, process, console). Core now declares
+  `@types/node` itself, pinned at the version packages/db uses. All four packages typecheck.
