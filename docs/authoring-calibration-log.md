@@ -30362,3 +30362,29 @@ it automatically, and it needs its own review.
 **Number collision.** The two item events and the vault event say "R1053" in their method or note.
 That number was free when they ran and was taken by another session before this entry. Recorded
 here, not rewritten; the packet stays byte-identical to the sha256 its events record.
+
+## R1055 — the bare transparent card is re-tiered T5 → T3 through review (David: "Yes, re-tier it", 2026-11-23)
+
+R1054 left `bank-vr-04-closest-meaning-35` at T5. It is the bare transparent card: key clear,
+distractors opaque (opposite-pull), glass and window (associated-not-same). Its tier is AUTHORED,
+so the vault move to 3 could not align it automatically. Nothing routine rewrites it either:
+`import-vr-banks.ts` is manual, and vr-04 left it on 2026-08-06.
+
+rev-agent-01 reviewed the packet (`retier-bank-vr-04-closest-meaning-35-packet.json`) and ruled
+**RETIER_T3**:
+- The only hard thing on the card is knowing "transparent". "opaque" pulls only a child who half
+  knows the science pair. That is the same trap as "false" on genuine/real and "strong" on
+  feeble/frail, both at T3. No calibration item is tiered by how hard its distractor is.
+- A bare card and its carried twin normally share a tier (genuine, feeble, reluctant 3/3;
+  jubilant, conceal, exhausted 4/4; notorious, exquisite, benevolent 5/5), or differ by one step.
+  With gen-vr-04-closest-meaning-38 at T3 since R1054, T5 would be two steps from any pairing in the bank.
+
+Landed through `land-item-retier.ts`. The door refused unless the review was rev-agent-01's, the item
+LIVE, and the item byte-for-byte the packet's. Two events were written, AMENDED and APPROVED.
+The item has no signature; its one prior record is Annie's APPROVED of 2026-08-06 (rev-0001).
+That record covers content the re-tier does not touch, so it stands as it is. The new record sits
+beside it and does not speak for her.
+
+Both transparent items now serve at T3, matching the vault tier. Of the five transparent
+questions from R1045, only the card's two-sense status (the "transparent excuse" sense) remains.
+That is David's ruling to make.

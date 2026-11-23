@@ -1,0 +1,614 @@
+{
+  "task": "R1054 item re-tier",
+  "item": {
+    "id": "bank-vr-04-closest-meaning-35",
+    "status": "LIVE",
+    "pool": "PRACTICE",
+    "storedTier": 5,
+    "stem": {
+      "words": [
+        "transparent"
+      ],
+      "prompt": "Which word is closest in meaning to the word on the card?"
+    },
+    "servedHash": "cd063a509e3b0525c96b97ec58a05b9ef2c9fc2c0a19d6e1c3e11199510619c9",
+    "options": [
+      {
+        "value": "clear",
+        "isCorrect": true,
+        "tag": null,
+        "tagChildHint": null
+      },
+      {
+        "value": "opaque",
+        "isCorrect": false,
+        "tag": "vr04-opposite-pull",
+        "tagChildHint": "That word points the other way. Read both meanings again."
+      },
+      {
+        "value": "glass",
+        "isCorrect": false,
+        "tag": "vr04-associated-not-same",
+        "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
+      },
+      {
+        "value": "window",
+        "isCorrect": false,
+        "tag": "vr04-associated-not-same",
+        "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
+      }
+    ]
+  },
+  "derivation": {
+    "rule": "item tier = vocabTierOfSet([headword, key]) (generate-content.ts closestMeaningTyped)",
+    "headword": "transparent",
+    "key": "clear",
+    "keyTier": 1,
+    "withVaultFrom": {
+      "vault": 3,
+      "itemTier": 3
+    },
+    "withVaultTo": {
+      "vault": 3,
+      "itemTier": 3
+    }
+  },
+  "ratification": "Superseded 2026-08-02. Previous card — tier 5, definition: \"See-through, like clear glass.\", sentence: \"The stream was so transparent we could count the pebbles.\". Tier moved 5 → 3 on corpus evidence. Reason: replacement carries two senses (exact duplicate). David ratified the replacement (2026-08-02). | Tier 5 → 3 applied 2026-11-23 (R1050).",
+  "card": {
+    "headword": "transparent",
+    "tier": 3,
+    "definitionChild": "you can see straight through it",
+    "twoMeanings": true,
+    "senseB": "so easy to see the truth behind that nobody is fooled"
+  },
+  "vr04RuleText": "/**\n * vr-04 CLOSEST-MEANING — constructor machinery from annie's sitting (2026-08-06).\n *\n * Three rules, all enforced here so the constructor (and the import door) share one\n * implementation rather than drifting:\n *   · TWO-PART SCREEN (annie's correction, 2026-08-06) — a two-sense headword is NOT\n *     disqualified from a bare card. The ambiguity only becomes a WRONG answer when a\n *     distractor is correct in the OTHER sense. So (a) the headword may stay, (b) any\n *     distractor living in another sense is a hard block. dark is fine as a distractor\n *     in general but forbidden under GLOOMY (the \"gloomy room\" sense). Per-headword.\n *   · NEVER-ADD — a hard block on the words a near-synonym generator reaches for first\n *     that are a defensible second answer (calm/composed for stoic; drain for receding).\n *   · THE-OTHER-MEANING — a gate, not a guideline: OM only where a carrier sentence\n *     fixes the sense (T4-T5). On a bare card it is a second correct answer; refuse it.\n * Plus a SCARCITY-AWARE selector so OM (FOUR rows of 40 — the honest ceiling: recede,\n * exhausted, exquisite, transparent are the only headwords with two live senses AND a\n * T4/T5 slot) is never rotated out — the vr-03 reversed-relation lesson, built in.\n *\n * annie's tagging distinction (recorded with the entries): WRONG-SHADE shares the core\n * sense and tilts it (stoic and gloomy are both emotional states); KEEPS-THE-SAME-COMPANY\n * shares no sense at all, only the social setting (brave and loyal are both compliments).\n */\n\n/** Words that are a defensible second answer — never emitted as a vr-04 distractor. */",
+  "serving": "BUILD-PHASE-3: item selection chooses LIVE items of the type at the difficultyTier matching the child's estimated level, stepping one tier at a time.",
+  "calibration": [
+    {
+      "id": "bank-vr-04-closest-meaning-17",
+      "tier": 3,
+      "words": [
+        "hostile"
+      ],
+      "sentence": null,
+      "options": [
+        "unfriendly (key)",
+        "friendly",
+        "enemy",
+        "argument"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-18",
+      "tier": 3,
+      "words": [
+        "humble"
+      ],
+      "sentence": null,
+      "options": [
+        "modest (key)",
+        "proud",
+        "servant",
+        "bow"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-19",
+      "tier": 3,
+      "words": [
+        "vague"
+      ],
+      "sentence": null,
+      "options": [
+        "unclear (key)",
+        "clear",
+        "fog",
+        "hint"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-20",
+      "tier": 3,
+      "words": [
+        "feeble"
+      ],
+      "sentence": null,
+      "options": [
+        "frail (key)",
+        "strong",
+        "illness",
+        "cane"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-21",
+      "tier": 3,
+      "words": [
+        "genuine"
+      ],
+      "sentence": null,
+      "options": [
+        "real (key)",
+        "false",
+        "gold",
+        "antique"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-22",
+      "tier": 3,
+      "words": [
+        "reluctant"
+      ],
+      "sentence": null,
+      "options": [
+        "unwilling (key)",
+        "eager",
+        "chore",
+        "excuse"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-23",
+      "tier": 3,
+      "words": [
+        "obedient"
+      ],
+      "sentence": null,
+      "options": [
+        "well-behaved (key)",
+        "disobedient",
+        "dog",
+        "command"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-24",
+      "tier": 3,
+      "words": [
+        "trivial"
+      ],
+      "sentence": null,
+      "options": [
+        "unimportant (key)",
+        "important",
+        "detail",
+        "penny"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-20",
+      "tier": 3,
+      "words": [
+        "feeble"
+      ],
+      "sentence": null,
+      "options": [
+        "frail (key)",
+        "helpless",
+        "pale",
+        "elderly"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-21",
+      "tier": 3,
+      "words": [
+        "genuine"
+      ],
+      "sentence": null,
+      "options": [
+        "real (key)",
+        "fake",
+        "signed",
+        "costly"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-22",
+      "tier": 3,
+      "words": [
+        "reluctant"
+      ],
+      "sentence": null,
+      "options": [
+        "unwilling (key)",
+        "opposed",
+        "doubtful",
+        "slow"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-38",
+      "tier": 3,
+      "words": [
+        "transparent"
+      ],
+      "sentence": "The lid was TRANSPARENT, so she could see the cake inside.",
+      "options": [
+        "clear (key)",
+        "thin",
+        "shiny",
+        "obvious"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-25",
+      "tier": 4,
+      "words": [
+        "amiable"
+      ],
+      "sentence": null,
+      "options": [
+        "friendly (key)",
+        "unfriendly",
+        "neighbour",
+        "smile"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-26",
+      "tier": 4,
+      "words": [
+        "futile"
+      ],
+      "sentence": null,
+      "options": [
+        "useless (key)",
+        "useful",
+        "effort",
+        "waste"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-27",
+      "tier": 4,
+      "words": [
+        "abundant"
+      ],
+      "sentence": null,
+      "options": [
+        "plentiful (key)",
+        "scarce",
+        "harvest",
+        "supply"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-28",
+      "tier": 4,
+      "words": [
+        "conceal"
+      ],
+      "sentence": null,
+      "options": [
+        "hide (key)",
+        "show",
+        "spy",
+        "shadow"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-29",
+      "tier": 4,
+      "words": [
+        "jubilant"
+      ],
+      "sentence": null,
+      "options": [
+        "joyful (key)",
+        "dejected",
+        "party",
+        "trophy"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-30",
+      "tier": 4,
+      "words": [
+        "exhausted"
+      ],
+      "sentence": null,
+      "options": [
+        "worn out (key)",
+        "rested",
+        "yawning",
+        "sleep"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-31",
+      "tier": 4,
+      "words": [
+        "recede"
+      ],
+      "sentence": null,
+      "options": [
+        "retreat (key)",
+        "advance",
+        "tide",
+        "shore"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-32",
+      "tier": 4,
+      "words": [
+        "amend"
+      ],
+      "sentence": null,
+      "options": [
+        "improve (key)",
+        "worsen",
+        "law",
+        "vote"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-23",
+      "tier": 4,
+      "words": [
+        "obedient"
+      ],
+      "sentence": null,
+      "options": [
+        "well-behaved (key)",
+        "naughty",
+        "polite",
+        "quiet"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-25",
+      "tier": 4,
+      "words": [
+        "jubilant"
+      ],
+      "sentence": "The crowd was JUBILANT when the final whistle blew.",
+      "options": [
+        "overjoyed (key)",
+        "pleased",
+        "noisy",
+        "relieved"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-27",
+      "tier": 4,
+      "words": [
+        "conceal"
+      ],
+      "sentence": "She tried to CONCEAL her disappointment from her friends.",
+      "options": [
+        "hide (key)",
+        "show",
+        "ignore",
+        "pretend"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-28",
+      "tier": 4,
+      "words": [
+        "exhausted"
+      ],
+      "sentence": "After the long walk home they were EXHAUSTED.",
+      "options": [
+        "drained (key)",
+        "lively",
+        "sleepy",
+        "empty"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-32",
+      "tier": 4,
+      "words": [
+        "abundant"
+      ],
+      "sentence": "Fish were ABUNDANT in the river that summer.",
+      "options": [
+        "plentiful (key)",
+        "endless",
+        "large",
+        "rare"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-36",
+      "tier": 4,
+      "words": [
+        "stoic"
+      ],
+      "sentence": "She stayed STOIC when she heard the sad news.",
+      "options": [
+        "calm (key)",
+        "stubborn",
+        "silent",
+        "tearful"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-33",
+      "tier": 5,
+      "words": [
+        "benevolent"
+      ],
+      "sentence": null,
+      "options": [
+        "kind (key)",
+        "unkind",
+        "charity",
+        "donor"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-34",
+      "tier": 5,
+      "words": [
+        "stoic"
+      ],
+      "sentence": null,
+      "options": [
+        "unemotional (key)",
+        "emotional",
+        "pain",
+        "hardship"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-36",
+      "tier": 5,
+      "words": [
+        "melancholy"
+      ],
+      "sentence": null,
+      "options": [
+        "sad (key)",
+        "cheerful",
+        "rain",
+        "sigh"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-37",
+      "tier": 5,
+      "words": [
+        "luminous"
+      ],
+      "sentence": null,
+      "options": [
+        "bright (key)",
+        "dull",
+        "moon",
+        "lamp"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-38",
+      "tier": 5,
+      "words": [
+        "exquisite"
+      ],
+      "sentence": null,
+      "options": [
+        "beautiful (key)",
+        "ugly",
+        "jewel",
+        "lace"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-39",
+      "tier": 5,
+      "words": [
+        "notorious"
+      ],
+      "sentence": null,
+      "options": [
+        "infamous (key)",
+        "reputable",
+        "criminal",
+        "headline"
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-40",
+      "tier": 5,
+      "words": [
+        "jovial"
+      ],
+      "sentence": null,
+      "options": [
+        "merry (key)",
+        "joyless",
+        "laughter",
+        "feast"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-33",
+      "tier": 5,
+      "words": [
+        "notorious"
+      ],
+      "sentence": "That road is NOTORIOUS for its sharp bends.",
+      "options": [
+        "infamous (key)",
+        "unknown",
+        "famous",
+        "dangerous"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-34",
+      "tier": 5,
+      "words": [
+        "exquisite"
+      ],
+      "sentence": "The lace on the dress was EXQUISITE.",
+      "options": [
+        "beautiful (key)",
+        "pretty",
+        "costly",
+        "sharp"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-35",
+      "tier": 5,
+      "words": [
+        "benevolent"
+      ],
+      "sentence": "The school was founded by a BENEVOLENT farmer.",
+      "options": [
+        "kind (key)",
+        "saintly",
+        "polite",
+        "wealthy"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-37",
+      "tier": 5,
+      "words": [
+        "jovial"
+      ],
+      "sentence": "The innkeeper greeted them in a JOVIAL manner.",
+      "options": [
+        "cheerful (key)",
+        "ecstatic",
+        "silly",
+        "loud"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-39",
+      "tier": 5,
+      "words": [
+        "luminous"
+      ],
+      "sentence": "The dial on the watch was LUMINOUS in the dark.",
+      "options": [
+        "glowing (key)",
+        "blazing",
+        "pale",
+        "visible"
+      ]
+    },
+    {
+      "id": "gen-vr-04-closest-meaning-40",
+      "tier": 5,
+      "words": [
+        "melancholy"
+      ],
+      "sentence": "A MELANCHOLY tune drifted from the piano.",
+      "options": [
+        "sad (key)",
+        "heartbroken",
+        "gentle",
+        "slow"
+      ]
+    }
+  ]
+}
