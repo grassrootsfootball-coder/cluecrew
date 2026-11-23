@@ -30135,3 +30135,45 @@ found 20 high or critical advisories, 3 of them **unauthenticated remote code ex
 - **Measured:** audit at 2 critical and 2 high, all needing a major version (tinypool via vitest 4,
   deepmerge-ts via Prisma, zod 3→4). Typecheck is clean, core 797 and web 41 tests pass, and
   `pnpm build` compiles on 15.5.29.
+
+## R1050 — hollow takes its ratified tier; transparent's would move a LIVE item, so it waits (David: "Apply the ratified tiers to hollow and transparent", 2026-11-23)
+
+On 2026-08-02 David ratified two superseded vault cards' tier moves on corpus evidence: hollow
+1 → 2 and transparent 5 → 3. Each card's supersedeNote records the move, yet both rows still held
+the old tier.
+
+**Why they reverted.** The write log starts on 2026-08-16. From then on, every seed run wrote both
+rows with no column changes, so the old tiers were already back by then. The seed (`seedWords`)
+upserts every field of `content/words/words.json` over the store unconditionally, and that file
+still carried tier 1 and tier 5. The cause falls before the log can see (R62's boundary), but the
+seed is the only routine writer of those values. So **a tier fix must land in the store AND in
+words.json**, or the next seed undoes it. `scripts/apply-ratified-vault-tier.ts` writes both
+together and refuses unless the card's own note records a ratified move.
+
+**hollow: applied.** Store and words.json are both at tier 2, with one AMENDED event
+(actor `ruling:david`).
+- hollow is a VOCAB_BANK card (bank rarity 1, both halves). The guard holds (`VOCAB_GUARD_OK`
+  true → true), and `vocabTier` gives the same item tiers at rarity 1 or 2. So the family's output
+  is unchanged.
+- The bank's hardcoded rarity 1 now differs from the vault's 2, with identical output. It is left
+  alone because the bank is a signed family.
+- LIVE items: bank-vr-04-closest-meaning-07 has an authored tier, and gen-vr-04-closest-meaning-07
+  derives T2 → T2 (the key "empty" already sets it).
+
+**transparent: REFUSED by the door, so it needs a decision.** The generator derives item difficulty
+from words.json: `vocabTierOfSet([headword, key])`, read through `packages/db/prisma/difficulty.ts`.
+With transparent at 3, LIVE gen-vr-04-closest-meaning-38 ("clear") would derive **T3 instead of
+T5**. That is a change to a reviewed item, which the reviewed-content guard would fail in CI. The
+vault tier and the item tier are one decision: apply both, with the item re-tiered through review,
+or neither.
+
+**Found on the way, and not fixed here.** All 120 seed words' `definitionChild` in the store differ
+from words.json. The August house-style rewrite went into the store, never into the file. Any seed
+run, CI included, would rewrite them: 117 of them LIVE, and hollow's whole replacement card back to
+the 2026-08-02 card it superseded. It is the R62 class on Word, the table with no reviewed-content
+guard. It is a separate fix: either make `seedWords` create-only, or guard it with
+`classifyDerivedWrites`'s shape.
+
+**Number collision.** The event and the supersedeNote written for hollow say "R1048". That number
+was free when the script ran and was taken by another session before this entry. Recorded here,
+not rewritten.
