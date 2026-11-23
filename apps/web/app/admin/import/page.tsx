@@ -1,5 +1,21 @@
 import { bulkImportAction } from '@/lib/actions/admin-items';
 
+/**
+ * ONE MESSAGE PER REFUSAL (R1060). This page used to print "The payload did not validate" for every
+ * error code, including a similarity rejection and a broken index, so the person importing was told
+ * to fix the JSON when the JSON was fine.
+ */
+const MESSAGES: Record<string, string> = {
+  invalid: 'The payload did not validate — check the JSON shape and authoredBy values.',
+  solution: 'Blocked: a maths item’s solution expression does not produce its keyed option. Nothing was imported.',
+  similarity: 'Blocked: the similarity gate matched an item too closely to the source corpus. Nothing was imported (Addendum E §3).',
+  'similarity-index-unreadable':
+    'Blocked: a similarity index is configured (SIMILARITY_INDEX_PATH) but cannot be read, so nothing could be screened and nothing was imported. Restore the file or correct the path. Unset it only if no index has landed.',
+  'unapproved-misconception': 'Blocked: a misconception id in the batch is still PROPOSED. Approve it in the misconception queue first.',
+  'retired-misconception': 'Blocked: a misconception id in the batch is RETIRED. Retag those options onto its successor.',
+  'unknown-misconception': 'Blocked: a misconception id in the batch has no library row.',
+};
+
 export default async function ImportPage({
   searchParams,
 }: {
@@ -13,9 +29,7 @@ export default async function ImportPage({
         Paste a JSON array of items. Everything lands as DRAFT with provenance preserved —{' '}
         <code>ai-draft:&lt;model&gt;</code> imports can never skip human review (§5).
       </p>
-      {error ? (
-        <p role="alert">The payload did not validate — check the JSON shape and authoredBy values.</p>
-      ) : null}
+      {error ? <p role="alert">{MESSAGES[error] ?? `Blocked (${error}). Nothing was imported.`}</p> : null}
       <form className="cc-form" action={bulkImportAction} style={{ maxWidth: 720 }}>
         <label>
           Items JSON

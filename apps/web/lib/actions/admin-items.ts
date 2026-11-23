@@ -7,7 +7,7 @@ import mathsPlanContent from '../../../../content/maths-district-plan.json';
 
 const mathsPlan = mathsPlanFileSchema.parse(mathsPlanContent);
 import { prisma, recordSignature, type ItemStatus } from '@cluecrew/db';
-import { similarityIndexSource } from '@/lib/similarity-index';
+import { SimilarityIndexUnreadable, similarityIndexSource } from '@/lib/similarity-index';
 import { currentStaff, recordAudit, roleAllows } from '@/lib/staff';
 import { validateVerbalRecord } from '@/lib/review-provenance';
 import { writeReviewerReturn } from '@/lib/reviewer-return';
@@ -398,7 +398,16 @@ export async function bulkImportAction(formData: FormData): Promise<void> {
   // ADDENDUM-E §3: the similarity gate. Exact/near-exact anywhere rejects the
   // WHOLE batch, naming failures by batch position + type id only — matched
   // source text never appears anywhere in this flow, by construction.
-  const index = await similarityIndexSource().load();
+  // A configured index that cannot be read stops the WHOLE batch with its own code (R1060): nothing
+  // can be screened, so nothing may land as if it had been.
+  let index: Awaited<ReturnType<ReturnType<typeof similarityIndexSource>['load']>>;
+  try {
+    index = await similarityIndexSource().load();
+  } catch (error) {
+    if (!(error instanceof SimilarityIndexUnreadable)) throw error;
+    await recordAudit(staff.id, 'item.bulk_import_rejected', 'Item', 'batch', { similarityIndexUnreadable: error.message });
+    redirect('/admin/import?error=similarity-index-unreadable');
+  }
   const flagged = new Map<number, number>(); // batch position → score
   if (index) {
     const failures: string[] = [];

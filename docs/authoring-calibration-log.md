@@ -30476,9 +30476,8 @@ not accept as JSON, and apps/web's typecheck (which covers e2e/) failed on it. T
 when the Prisma worktree typechecked the same files; it is now `Prisma.InputJsonValue`.
 
 **Found on the way, not CI:** root `.env` points `SIMILARITY_INDEX_PATH` at `~/Downloads/11+/corpus/`,
-a folder that no longer exists, so locally `/admin/import` throws a server error. `similarity-index.ts`
-skips when the variable is UNSET and crashes when it is set but the file is missing; it should
-report and skip in both cases.
+a folder that no longer exists, so locally `/admin/import` throws a server error. Fixed under R1060.
+The suggestion first written here, "report and skip in both cases", was WRONG; see R1060.
 
 ## R1059 — transparent's card reviewed as one-sense, redrafted, and published (David: "Yes, review it", 2026-11-23)
 
@@ -30524,3 +30523,27 @@ there ("Stop the seed rewriting reviewed vault cards") is what closes it.
 `vr04-the-other-meaning` tag. The reviewer notes that the tag's hint tells the child the word "has
 more than one meaning", which the card now contradicts, and that the pull comes through the key
 ("clear" can mean obvious). It wants a different tag, or a ruling that keeps this one on purpose.
+
+## R1060 — a configured similarity index that cannot be read refuses by name, not by crash (David: "fix the similarity index crash too", 2026-11-23)
+
+On David's machine, root `.env` points `SIMILARITY_INDEX_PATH` at `~/Downloads/11+/corpus/`, and that
+folder is gone. "Import as DRAFT" therefore threw a bare ENOENT inside the server action, and the page
+showed Next's "Application error" with a digest. CI does not set the variable, so CI never saw it.
+
+**THE REFUSAL WAS RIGHT AND STAYS.** `similarity-index.ts` already said a configured index that fails
+to load "is an error, not a skip", because a skip would switch the gate off while everyone believed
+it was on. R1058's "report and skip" note was wrong on exactly that point, and is corrected. What was
+wrong was only how the refusal reached the person importing:
+- the index now raises `SimilarityIndexUnreadable` (with the path and the reason) for a missing,
+  unparseable or wrong-shape file;
+- `bulkImportAction` catches only that error, records `item.bulk_import_rejected`, imports nothing,
+  and redirects with `error=similarity-index-unreadable`;
+- the import page gives each refusal code its own message. Before, every code read "The payload did
+  not validate", including a similarity rejection, so a person was told to fix JSON that was fine.
+
+**Verified:** three unit tests (unset → null; missing path and wrong shape → the named refusal). Web
+tests 44/44; typecheck and lint clean. A build was served with the missing path, and "Import as
+DRAFT" landed on the explained refusal with 0 items imported.
+
+**Not changed, David's to decide:** the stale `SIMILARITY_INDEX_PATH` line in his root `.env`. Unset
+it if the index is gone for good, or point it at wherever the index now lives.

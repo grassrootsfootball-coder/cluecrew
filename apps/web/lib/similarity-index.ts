@@ -14,6 +14,18 @@
 import { readFileSync } from 'node:fs';
 import { similarityIndexSchema, type SimilarityIndex } from '@cluecrew/core';
 
+/**
+ * A CONFIGURED index that cannot be read (R1060). Still a refusal, never a skip: a silent skip would
+ * switch the gate off while everyone believed it on. But it is a NAMED refusal, so the import door
+ * can stop the batch and say why, where a bare ENOENT surfaced as "Application error" with a digest.
+ */
+export class SimilarityIndexUnreadable extends Error {
+  constructor(readonly path: string, readonly reason: string) {
+    super(`SIMILARITY_INDEX_PATH is set to ${path}, and it cannot be read: ${reason}`);
+    this.name = 'SimilarityIndexUnreadable';
+  }
+}
+
 export interface SimilarityIndexSource {
   /** The parsed index, or null when none has landed yet. */
   load(): Promise<SimilarityIndex | null>;
@@ -33,8 +45,15 @@ class EnvPathIndexSource implements SimilarityIndexSource {
     // A CONFIGURED index that fails to load is an error, not a skip — the
     // difference between "not landed yet" and "landed but broken" must never
     // be silent (the gate would be off while everyone believed it on).
-    const raw = JSON.parse(readFileSync(path, 'utf8'));
-    this.cached = similarityIndexSchema.parse(raw);
+    let raw: unknown;
+    try {
+      raw = JSON.parse(readFileSync(path, 'utf8'));
+    } catch (error) {
+      throw new SimilarityIndexUnreadable(path, (error as Error).message);
+    }
+    const parsed = similarityIndexSchema.safeParse(raw);
+    if (!parsed.success) throw new SimilarityIndexUnreadable(path, `not a similarity index (${parsed.error.issues[0]?.message ?? 'shape refused'})`);
+    this.cached = parsed.data;
     return this.cached;
   }
 }
