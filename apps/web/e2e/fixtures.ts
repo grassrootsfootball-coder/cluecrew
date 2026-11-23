@@ -25,7 +25,7 @@
  * parent or a staff admin.
  */
 import { hash } from '@node-rs/argon2';
-import { prisma, type StaffRole } from '@cluecrew/db';
+import { prisma, type Prisma, type StaffRole } from '@cluecrew/db';
 import { expect, request, type APIRequestContext, type Browser, type Page } from '@playwright/test';
 
 const BASE = `http://localhost:${process.env.E2E_PORT ?? 3100}`;
@@ -275,7 +275,7 @@ export async function completeFluency(
  */
 export async function englishItemTemplate(): Promise<{
   questionTypeId: string; difficultyTier: number; stem: object; explanation: object; lineRefs: number[];
-  options: Array<{ content: { value: unknown }; isCorrect: boolean; misconceptionId: string | null; misconceptionExecution: string | null }>;
+  options: Array<{ content: Prisma.InputJsonValue; isCorrect: boolean; misconceptionId: string | null; misconceptionExecution: string | null }>;
 }> {
   const candidates = await prisma.item.findMany({
     where: { status: 'LIVE', questionTypeId: 'en-comp-retrieval', id: { startsWith: 'ENG-' } },
@@ -288,7 +288,7 @@ export async function englishItemTemplate(): Promise<{
   return {
     questionTypeId: item!.questionTypeId, difficultyTier: item!.difficultyTier, stem: item!.stem as object,
     explanation: (item!.explanation ?? {}) as object, lineRefs: item!.lineRefs as number[],
-    options: item!.options.map((o) => ({ content: { value: (o.content as { value: unknown }).value }, isCorrect: o.isCorrect, misconceptionId: o.misconceptionId, misconceptionExecution: o.misconceptionExecution })),
+    options: item!.options.map((o) => ({ content: { value: (o.content as { value: Prisma.InputJsonValue }).value }, isCorrect: o.isCorrect, misconceptionId: o.misconceptionId, misconceptionExecution: o.misconceptionExecution })),
   };
 }
 

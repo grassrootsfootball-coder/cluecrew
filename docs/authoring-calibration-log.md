@@ -30471,6 +30471,10 @@ was a product fault. Each was diagnosed by running it and reading the actual res
 - **1 — the vault-card door test** belongs to the vault session's R1046 publication, which is
   handling it.
 
+**CORRECTION:** `1b0541e` typed the fixture's option `content` as `{ value: unknown }`, which Prisma does
+not accept as JSON, and apps/web's typecheck (which covers e2e/) failed on it. That was caught only
+when the Prisma worktree typechecked the same files; it is now `Prisma.InputJsonValue`.
+
 **Found on the way, not CI:** root `.env` points `SIMILARITY_INDEX_PATH` at `~/Downloads/11+/corpus/`,
 a folder that no longer exists, so locally `/admin/import` throws a server error. `similarity-index.ts`
 skips when the variable is UNSET and crashes when it is set but the file is missing; it should
