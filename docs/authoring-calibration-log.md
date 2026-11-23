@@ -30256,3 +30256,34 @@ ended her reviewing on 2026-11-22. Until that is corrected, no check can test th
 the role at the time. The content-hash pin is also not done. A recorded edit after an approval
 is caught, by event order. What a pin would add: catching an edit written with NO event, and an
 edit in the same millisecond as its approval (one landing writes both, so ties pass by design).
+
+## R1052 — Annie's reviewer tenure is closed at 2026-11-22 (David: "Close Annie's reviewer tenure at 2026-11-22", 2026-11-23)
+
+R1031 ended Annie's reviewing on 2026-11-22 ("no more annie"), but her Reviewer row (`rev-0001`)
+still had `heldUntil` null. So the store still said she held the role. R1051 raised this: until the
+row is closed, no check can ask whether an approver held the role at the time of an approval.
+
+**Done** through `scripts/close-reviewer-tenure.ts`, a one-shot door. It refuses before any write
+unless the row is open, the end falls after `heldFrom`, and **no attribution event names the
+reviewer at or after the end**: closing a tenure must never turn an existing act into one outside it.
+- `heldUntil` is now 2026-11-22T00:00:00Z.
+- This is DAY precision: the ruling's time of day is not recorded, so the close is the start of
+  that day (UTC). Annie's last recorded act is 2026-09-13 (AMENDED), and 0 events name her on or
+  after the end. The return dated 2026-11-22 in R1031 was read by a second machine reviewer, not by her.
+- The previous value is written into `evidence`, with one AMENDED event
+  (`recordType: reviewer`, actor `ruling:david`).
+- `staffEmail` is kept: it records who signed as whom, and is not a live permission once the tenure
+  is closed.
+
+**What changed, from a baseline captured before the write (R149):**
+- `check:authority-shape` no longer prints "Annie (rev-0001) signs as staff-reviewer@cluecrew.test".
+  That warning existed because anyone holding the shared login could sign as her. It is resolved
+  rather than hidden: the CMS signing door (`apps/web/lib/actions/admin-items.ts`) accepts only
+  reviewers with `heldUntil: null`, so that login no longer resolves to her.
+- `check:verdict-refusals` lists one fewer current reviewer, so its export digest moved. Nothing
+  else in either output changed.
+- The e2e suite is unaffected: it mints its own reviewer (R978) and never borrows hers.
+
+The snapshot was re-exported. Besides the Reviewer row and its event, it carries 16 write-log rows
+from this session's earlier Playwright runs of the R1051 door test: fixture insert/delete pairs on
+`zz-e2e-*` rows, which `check:outside-writes` counts as scaffolding.
