@@ -1025,7 +1025,7 @@ export async function submitAnswer(
   if (!correct) {
     const missed = await prisma.item.findUnique({
       where: { id: pending.itemId },
-      select: { solution: true, explanation: true, stem: true, options: { where: { isCorrect: true }, select: { content: true } } },
+      select: { solution: true, explanation: true, stem: true, options: { where: { isCorrect: true }, orderBy: { id: 'asc' }, select: { content: true } } },
     });
     // OPT-IN PER ITEM, THROUGH REVIEW (R1040, R1064). An item replays only when its explanation NAMES
     // a template, set by a reviewed door after a reviewer read that item's rendered replay. The
