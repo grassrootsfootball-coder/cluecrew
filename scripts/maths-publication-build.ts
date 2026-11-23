@@ -61,7 +61,7 @@ async function run() {
 
   const rows = await prisma.item.findMany({
     where: { questionType: { district: 'MATHS' } },
-    select: { id: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, stem: true, explanation: true, questionTypeId: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, stem: true, explanation: true, questionTypeId: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   requirePopulation('maths:publication-build', { 'maths rows': rows.length });
@@ -123,7 +123,7 @@ async function run() {
   });
 
   // ---- 5. THE CASE FACE ----
-  const kase = await prisma.case.findFirst({ where: { questionType: { district: 'MATHS' } }, select: { id: true, title: true, narrativeIntro: true, freeTier: true, mappedQuestionTypeIds: true, caseFiles: { select: { id: true } } } });
+  const kase = await prisma.case.findFirst({ where: { questionType: { district: 'MATHS' } }, select: { id: true, title: true, narrativeIntro: true, freeTier: true, mappedQuestionTypeIds: true, caseFiles: { orderBy: { id: 'asc' }, select: { id: true } } } });
   const facePath = join(REPO, 'scripts/lib/case-face.ts');
   const theFace = {
     caseId: kase?.id ?? null,

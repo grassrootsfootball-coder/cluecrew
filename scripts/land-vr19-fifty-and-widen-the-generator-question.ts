@@ -90,7 +90,7 @@ async function main() {
   const walkAsset = (caseRow.modes as Record<string, { assetRef?: string }>)?.walk;
   const walkServes = !!walkAsset?.assetRef && !walkAsset.assetRef.startsWith('placeholder/');
   const doorRows = await prisma.item.findMany({ where: { questionTypeId: 'vr-19-word-number-codes', status: 'DRAFT' },
-    select: { id: true, explanation: true, sendHistory: true, authoredBy: true, options: { select: { misconceptionId: true, misconceptionExecution: true } } } });
+    select: { id: true, explanation: true, sendHistory: true, authoredBy: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, misconceptionExecution: true } } } });
   const signed = new Set((await prisma.attributionEvent.findMany({ where: { recordId: { in: doorRows.map((r) => r.id) }, action: 'SIGNED', reviewerId: { not: null } }, select: { recordId: true } })).map((x) => x.recordId));
   const notWhole = doorRows.filter((r) => !itemWholeness(r, attested, walkServes).whole).map((r) => r.id);
   const unsigned = doorRows.filter((r) => !signed.has(r.id)).map((r) => r.id);
@@ -98,7 +98,7 @@ async function main() {
 
   // ---- TWO: THE GENERATOR QUESTION, WIDENED --------------------------------------------------
   const allVr08 = await prisma.item.findMany({ where: { questionTypeId: 'vr-08-move-letter' }, orderBy: { id: 'asc' },
-    select: { id: true, status: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+    select: { id: true, status: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
   const hintTest = (rows: typeof allVr08, entry: 'vr-move-letter-first-word-invalid' | 'vr-move-letter-second-word-invalid') => {
     const seats: Array<{ itemId: string; letter: string; word1: string; word2: string; leftover: string | null; made: string[]; verdict: 'SERVES' | 'FLATTERS' }> = [];
     for (const r of rows) {

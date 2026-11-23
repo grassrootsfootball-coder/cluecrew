@@ -26,7 +26,7 @@ async function run() {
   // ---- 1. The six unruled letter-count rows: stripped ----
   const stripped: Array<Record<string, unknown>> = [];
   for (const id of SIX_UNRULED) {
-    const item = await prisma.item.findUniqueOrThrow({ where: { id }, select: { options: { select: { id: true, content: true, misconceptionId: true, drafterDeclaredPull: true, isCorrect: true } } } });
+    const item = await prisma.item.findUniqueOrThrow({ where: { id }, select: { options: { orderBy: { id: 'asc' }, select: { id: true, content: true, misconceptionId: true, drafterDeclaredPull: true, isCorrect: true } } } });
     const target = item.options.filter((o) => !o.isCorrect && /letter-count/i.test(o.drafterDeclaredPull ?? ''));
     if (target.length !== 1) throw new Error(`REFUSED — ${id}: ${target.length} letter-count options, expected exactly 1`);
     const o = target[0]!;
@@ -41,7 +41,7 @@ async function run() {
   }
 
   // ---- 2. The twenty-five group rules, verbatim ----
-  const vr02 = await prisma.item.findMany({ where: { questionTypeId: 'vr-02-two-odd-ones-out' }, select: { id: true, stem: true, difficultyTier: true, drafterNote: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
+  const vr02 = await prisma.item.findMany({ where: { questionTypeId: 'vr-02-two-odd-ones-out' }, select: { id: true, stem: true, difficultyTier: true, drafterNote: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
   const missingNote = vr02.filter((i) => !i.drafterNote);
   if (missingNote.length) throw new Error(`REFUSED — ${missingNote.length} vr-02 rows carry no group rule; the crossing must be all twenty-five`);
   const groupRules = vr02.map((i) => ({

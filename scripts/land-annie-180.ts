@@ -27,7 +27,7 @@ async function run() {
   ], (v) => isBareNumber(v));
 
   // ---- ONE: the money-units class ----
-  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, stem: true, explanation: true, options: { select: { id: true, content: true, isCorrect: true } } } });
+  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true } } } });
   requirePopulation('land:annie-180', { 'maths rows': rows.length, 'sitting one ids': SITTING_ONE.length });
   const moneyItems = rows.filter((r) => {
     const stem = String((r.stem as { text?: string }).text ?? '');
@@ -60,7 +60,7 @@ async function run() {
   }
 
   // ---- TWO: sitting one, recorded AFTER the class so the hash is of the row she now governs ----
-  const after = await prisma.item.findMany({ where: { id: { in: SITTING_ONE } }, select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } }, orderBy: { id: 'asc' } });
+  const after = await prisma.item.findMany({ where: { id: { in: SITTING_ONE } }, select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } }, orderBy: { id: 'asc' } });
   const sitting = [] as Array<Record<string, unknown>>;
   for (const r of after) {
     const rowHash = sha(canonicalJson({ stem: r.stem, options: r.options.map((o) => ({ content: o.content, isCorrect: o.isCorrect })), explanation: r.explanation }));

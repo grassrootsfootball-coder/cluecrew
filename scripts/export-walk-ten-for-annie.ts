@@ -40,7 +40,7 @@ async function main() {
   const kase = await prisma.case.findUniqueOrThrow({ where: { id: CASE_ID }, select: { id: true, questionTypeId: true, title: true } });
   const items = await prisma.item.findMany({
     where: { questionTypeId: kase.questionTypeId, status: 'LIVE' },
-    select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   const withScript = items.filter((i) => {

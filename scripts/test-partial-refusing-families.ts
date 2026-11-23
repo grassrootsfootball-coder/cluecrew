@@ -69,7 +69,7 @@ async function run() {
 
   const val = (c: unknown) => String((c as { value: unknown }).value);
   const rowsOf = async (qt: string) => prisma.item.findMany({ where: { questionTypeId: qt, status: 'DRAFT' },
-    select: { id: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
 
   // ---- vr13 ------------------------------------------------------------------------------------
   const v13 = await rowsOf('vr-13-make-a-word');

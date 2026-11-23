@@ -18,11 +18,12 @@ export async function GET() {
       regionCode: true,
       targetSchools: true,
       createdAt: true,
-      consentLog: { select: { kind: true, version: true, createdAt: true } },
+      consentLog: { select: { kind: true, version: true, createdAt: true }, orderBy: [{ createdAt: 'asc' }, { id: 'asc' }] },
       subscription: {
         select: { tier: true, status: true, commitmentEndsAt: true, createdAt: true },
       },
       children: {
+        orderBy: [{ createdAt: 'asc' }, { id: 'asc' }],
         select: {
           id: true,
           crewName: true,
@@ -32,13 +33,15 @@ export async function GET() {
           settings: true,
           rank: true,
           createdAt: true,
-          caseFiles: { select: { caseId: true, masteryLevel: true, solvedAt: true } },
-          wordVault: { select: { wordId: true, collectedAt: true, masteryLevel: true } },
+          caseFiles: { select: { caseId: true, masteryLevel: true, solvedAt: true }, orderBy: { id: 'asc' } },
+          wordVault: { select: { wordId: true, collectedAt: true, masteryLevel: true }, orderBy: [{ collectedAt: 'asc' }, { id: 'asc' }] },
           attempts: {
+            orderBy: [{ createdAt: 'asc' }, { id: 'asc' }],
             select: { itemId: true, correct: true, latencyMs: true, context: true, createdAt: true },
           },
-          sessions: { select: { startedAt: true, endedAt: true, secondsActive: true } },
+          sessions: { select: { startedAt: true, endedAt: true, secondsActive: true }, orderBy: [{ startedAt: 'asc' }, { id: 'asc' }] },
           reviewSchedules: {
+            orderBy: [{ dueAt: 'asc' }, { id: 'asc' }],
             select: { unitKind: true, unitId: true, dueAt: true, intervalDays: true, lapses: true },
           },
         },

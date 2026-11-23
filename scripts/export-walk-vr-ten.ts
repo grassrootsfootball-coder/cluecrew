@@ -36,7 +36,7 @@ async function main() {
 
   const items = await prisma.item.findMany({
     where: { questionTypeId: chosen.questionTypeId, status: 'LIVE' },
-    select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   /** The third part of the set (R573): a tag id is a name, its childHint is the value. */

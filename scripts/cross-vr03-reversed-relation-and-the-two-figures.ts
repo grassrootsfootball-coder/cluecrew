@@ -28,7 +28,7 @@ async function main() {
   });
   // My second-seat figure, derived from the serving rows as they stand.
   const rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-10-word-connections', status: 'DRAFT' },
-    select: { id: true, options: { select: { misconceptionId: true, misconceptionExecution: true } } } });
+    select: { id: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, misconceptionExecution: true } } } });
   requirePopulation('cross-vr03:serving-rows', { 'vr-10 DRAFT row(s)': rows.length });
   const rowsWhereEveryTaggedSeatHasExecution = rows.filter((r) => r.options.filter((o) => o.misconceptionId).every((o) => o.misconceptionExecution)).length;
   const taggedSeats = rows.reduce((n, r) => n + r.options.filter((o) => o.misconceptionId).length, 0);

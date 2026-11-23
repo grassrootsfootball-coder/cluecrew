@@ -145,7 +145,7 @@ async function run() {
       const base = { entryId: m.id, carrier: `${j.itemId} ${j.optionLabel ?? '?'}=${JSON.stringify(j.optionValue)}`, kind };
       const refuse = (why: string, extra: Record<string, unknown> = {}) => joinResults.push({ ...base, outcome: 'REFUSED', why, ...extra });
 
-      const row = await prisma.item.findUnique({ where: { id: j.itemId }, select: { id: true, stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
+      const row = await prisma.item.findUnique({ where: { id: j.itemId }, select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
       if (!row) { refuse(`the named carrier row ${j.itemId} is not in this store`); continue; }
 
       const valueOf = (o: { content: unknown }) => String((o.content as { value: unknown }).value);

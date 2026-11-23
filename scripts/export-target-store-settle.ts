@@ -43,7 +43,7 @@ async function main() {
 
   const live = await prisma.item.findMany({
     where: { status: 'LIVE' },
-    select: { id: true, questionTypeId: true, options: { select: { misconceptionId: true, tags: { select: { misconceptionId: true } } } } },
+    select: { id: true, questionTypeId: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, tags: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } } } },
   });
   const carriers = new Map<string, { itemId: string; questionTypeId: string }[]>();
   for (const item of live) {

@@ -113,7 +113,7 @@ async function run() {
   // ---- The five retags (membership re-derived; her citation resolved to the entries artefact) ----
   const tier3 = await prisma.item.findMany({
     where: { questionTypeId: 'vr-02-two-odd-ones-out', difficultyTier: 3 },
-    select: { id: true, options: { select: { id: true, misconceptionId: true } } },
+    select: { id: true, options: { orderBy: { id: 'asc' }, select: { id: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   const retagRows = tier3.filter((r) => r.options.some((o) => o.misconceptionId === 'vr02-surface-link'));
@@ -137,7 +137,7 @@ async function run() {
   // ---- The WIW-12 trim ----
   const trimMatch = /target: item:ENG-001-WIW-12:options:B:attractorQuote \| replaced: (.+?) \| authored: (.+)$/m.exec(her);
   if (!trimMatch) throw new Error('REFUSED — the trim block not found');
-  const wiw12 = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-001-WIW-12' }, select: { options: { select: { id: true, content: true, attractorQuote: true } } } });
+  const wiw12 = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-001-WIW-12' }, select: { options: { orderBy: { id: 'asc' }, select: { id: true, content: true, attractorQuote: true } } } });
   const optB = wiw12.options.find((o) => (o.content as { label?: string }).label === 'B');
   if (!optB) throw new Error('REFUSED — WIW-12 option B not found');
   if (optB.attractorQuote !== trimMatch[1]!.trim()) throw new Error(`REFUSED — WIW-12 B attractorQuote is ${JSON.stringify(optB.attractorQuote)}, her replaced is ${JSON.stringify(trimMatch[1]!.trim())}`);

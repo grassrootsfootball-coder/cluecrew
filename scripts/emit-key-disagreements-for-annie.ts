@@ -99,7 +99,7 @@ async function run() {
 
     const serving = await prisma.item.findUnique({
       where: { id: itemId },
-      select: { status: true, options: { select: { content: true, isCorrect: true, misconceptionExecution: true } } },
+      select: { status: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionExecution: true } } },
     });
     const servingRow = serving
       ? {

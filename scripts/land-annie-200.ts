@@ -52,7 +52,7 @@ async function run() {
   const plan: Array<(typeof SEATS)[number] & { optionId: string; priorTag: string | null; words: string[]; key: string[] }> = [];
   for (const s of SEATS) {
     const row = await prisma.item.findUniqueOrThrow({ where: { id: s.itemId },
-      select: { stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
+      select: { stem: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
     const words = (row.stem as { words: string[] }).words;
     const key = row.options.find((o) => o.isCorrect)!.content as { value: string[] };
     const hits = row.options.filter((o) => !o.isCorrect && same((o.content as { value: unknown }).value, s.replaced));
@@ -82,7 +82,7 @@ async function run() {
 
   const after = await prisma.itemOption.count({ where: { misconceptionId: MINT } });
   const v02 = await prisma.item.findMany({ where: { questionTypeId: 'vr-02-two-odd-ones-out', status: 'DRAFT' },
-    select: { options: { select: { isCorrect: true, misconceptionId: true } } } });
+    select: { options: { orderBy: { id: 'asc' }, select: { isCorrect: true, misconceptionId: true } } } });
   const pgPerRow = v02.map((r) => r.options.filter((o) => o.misconceptionId === 'vr02-partial-group').length);
 
   const full = {

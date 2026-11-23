@@ -23,7 +23,7 @@ const valueOf = (c: unknown) => { const v = (c as { value?: unknown }).value; re
 async function run() {
   const rows = await prisma.item.findMany({ where: { questionTypeId: { in: PAID }, status: 'DRAFT' },
     select: { id: true, questionTypeId: true, difficultyTier: true, stem: true,
-      options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
   const lib = new Map((await prisma.misconception.findMany({ where: { district: 'VR' },
     select: { id: true, description: true, childHint: true, approvedBy: true, status: true } })).map((m) => [m.id, m]));
 

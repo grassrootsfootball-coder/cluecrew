@@ -28,7 +28,7 @@ const PASSAGES = resolve(import.meta.dirname, '../content/passages');
 async function exportVr04Sixteen(generatedAt: string): Promise<void> {
   const items = await prisma.item.findMany({
     where: { questionTypeId: 'vr-04-closest-meaning' },
-    select: { id: true, stem: true, status: true, difficultyTier: true, options: { select: { isCorrect: true, content: true } } },
+    select: { id: true, stem: true, status: true, difficultyTier: true, options: { orderBy: { id: 'asc' }, select: { isCorrect: true, content: true } } },
   });
   const headword = (i: (typeof items)[number]) =>
     String(((i.stem ?? {}) as { words?: string[] }).words?.[0] ?? '').toLowerCase();

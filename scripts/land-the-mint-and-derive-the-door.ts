@@ -73,7 +73,7 @@ async function main() {
   }
 
   // Wet's retag and execution.
-  const row23 = await prisma.item.findUniqueOrThrow({ where: { id: 'gen-vr-10-word-connections-23' }, select: { stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+  const row23 = await prisma.item.findUniqueOrThrow({ where: { id: 'gen-vr-10-word-connections-23' }, select: { stem: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
   const wet = row23.options.find((o) => String((o.content as { value?: unknown })?.value ?? '') === 'wet');
   if (!wet) throw new Error('no wet seat on row 23');
   const keyVal = String((row23.options.find((o) => o.isCorrect)?.content as { value?: unknown })?.value ?? '');
@@ -95,7 +95,7 @@ async function main() {
   const c = await prisma.case.findUniqueOrThrow({ where: { id: 'case-vr-10' }, select: { modes: true } });
   const walkAsset = (c.modes as Record<string, { assetRef?: string }>)?.walk;
   const walkServes = !!walkAsset?.assetRef && !walkAsset.assetRef.startsWith('placeholder/'); // R917
-  const rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-10-word-connections', status: 'DRAFT' }, select: { id: true, explanation: true, sendHistory: true, options: { select: { misconceptionId: true, misconceptionExecution: true } } } });
+  const rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-10-word-connections', status: 'DRAFT' }, select: { id: true, explanation: true, sendHistory: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, misconceptionExecution: true } } } });
   requirePopulation('door:vr-10', { 'DRAFT row(s)': rows.length });
   const signedIds = new Set((await prisma.attributionEvent.findMany({ where: { recordId: { in: rows.map((r) => r.id) }, action: 'SIGNED', reviewerId: { not: null } }, select: { recordId: true } })).map((e) => e.recordId));
   const notWhole: string[] = [];

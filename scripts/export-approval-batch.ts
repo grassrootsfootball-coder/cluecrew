@@ -23,7 +23,7 @@ const FAMILY = 'approval-batch-english';
 export async function exportApprovalBatch(): Promise<void> {
   const items = await prisma.item.findMany({
     where: { id: { startsWith: 'ENG-' } },
-    select: { id: true, options: { select: { misconceptionId: true } } },
+    select: { id: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } },
   });
   const proposed = await prisma.misconception.findMany({
     where: { status: 'PROPOSED', district: 'ENGLISH' },

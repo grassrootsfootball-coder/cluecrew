@@ -69,7 +69,7 @@ async function run() {
     where: { questionTypeId: { in: PAID }, status: 'DRAFT' },
     select: { id: true, questionTypeId: true, difficultyTier: true, pool: true, status: true,
       stem: true, explanation: true, solution: true,
-      options: { select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } },
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } },
   });
   const cases = await prisma.case.findMany({ where: { questionTypeId: { in: PAID } },
     select: { id: true, title: true, questionTypeId: true, orderInDistrict: true, freeTier: true, modes: true },

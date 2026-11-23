@@ -95,7 +95,7 @@ async function run() {
   }
 
   // ---- The estate walk: every item, every free-text field, marker phrases ----
-  const all = await prisma.item.findMany({ select: { id: true, status: true, stem: true, explanation: true, reviewNotes: true, solution: true, answerFlagNote: true, options: { select: { content: true, misconceptionExecution: true, a36Note: true } } } });
+  const all = await prisma.item.findMany({ select: { id: true, status: true, stem: true, explanation: true, reviewNotes: true, solution: true, answerFlagNote: true, options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionExecution: true, a36Note: true } } } });
   const MARKERS = /never shippable|synthetic seed|seed item|placeholder-only|do not ship|not for children|internal only|never serve|test row|dummy item/i;
   const found = all.filter((r) => MARKERS.test(JSON.stringify(r)));
   const walk = {

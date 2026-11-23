@@ -115,7 +115,7 @@ async function run() {
 
   for (const s of sources) {
     if (!OPTION_COLUMNS.has(s.key)) { if (s.key.startsWith('_')) outcome.retention++; else outcome.noColumn++; continue; }
-    const item = await prisma.item.findUnique({ where: { id: s.itemId }, select: { id: true, options: { select: { id: true, content: true, misconceptionExecution: true, tagStatus: true } } } });
+    const item = await prisma.item.findUnique({ where: { id: s.itemId }, select: { id: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, misconceptionExecution: true, tagStatus: true } } } });
     if (!item) { outcome.noMatchingRow++; unmatched.push(`${s.itemId} (no item)`); continue; }
     const match = item.options.find((o) => {
       const c = o.content as Record<string, unknown>;

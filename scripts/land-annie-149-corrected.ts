@@ -42,7 +42,7 @@ async function run() {
   ];
   const crossRows = [];
   for (const t of THREE) {
-    const db = await prisma.item.findUniqueOrThrow({ where: { id: t.id }, select: { stem: true, difficultyTier: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+    const db = await prisma.item.findUniqueOrThrow({ where: { id: t.id }, select: { stem: true, difficultyTier: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
     const words = (db.stem as { words: string[] }).words;
     const bankItem = bank.items.find((b) => JSON.stringify(b.stem.words) === JSON.stringify(words));
     if (!bankItem) throw new Error(`REFUSED — ${t.id}'s words not found in the bank`);
@@ -61,7 +61,7 @@ async function run() {
   const stands = [];
   for (const n of [11, 12, 13, 14]) {
     const id = `bank-vr-02-two-odd-ones-out-${n}`;
-    const db = await prisma.item.findUniqueOrThrow({ where: { id }, select: { stem: true, options: { select: { misconceptionId: true } } } });
+    const db = await prisma.item.findUniqueOrThrow({ where: { id }, select: { stem: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } } });
     const words = (db.stem as { words: string[] }).words;
     const bankItem = bank.items.find((b) => JSON.stringify(b.stem.words) === JSON.stringify(words));
     const surfaceOpt = bankItem?.options.find((o) => o.misconceptionId === 'vr02-surface-link');

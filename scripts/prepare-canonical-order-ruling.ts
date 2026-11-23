@@ -72,7 +72,7 @@ async function main() {
 
   const rows = await prisma.item.findMany({ where: { id: { in: [...byItem.keys()] } },
     select: { id: true, stem: true, explanation: true, questionTypeId: true, status: true,
-      options: { select: { content: true, isCorrect: true, misconceptionExecution: true } } } });
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionExecution: true } } } });
 
   /**
    * `subjectHash` NAMES TWO DIFFERENT SUBJECTS AND NOTHING ON THE ROW SAYS WHICH (R970). Most

@@ -67,7 +67,7 @@ async function run() {
   for (const [tag, refusing] of [...byTag.entries()].sort((a, b) => b[1].length - a[1].length)) {
     const entry = lib.get(tag)!;
     const rows = await prisma.item.findMany({ where: { id: { in: refusing.slice(0, 3).map((r) => r.itemId) } },
-      select: { id: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+      select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
     const body = {
       kind: 'refusing-pattern-reading',
       THE_ENTRY: { id: tag, behaviour: entry.description, childHint: entry.childHint, signed: !!entry.approvedBy },
@@ -91,7 +91,7 @@ async function run() {
   // ---- THE COLLISION, REPORTED AND NOT RESOLVED -------------------------------------------------
   const FIVE = [['oval', 'star'], ['hen', 'dog'], ['soft', 'cold'], ['net', 'run'], ['tuna', 'seal']];
   const v02 = await prisma.item.findMany({ where: { questionTypeId: 'vr-02-two-odd-ones-out', status: 'DRAFT' },
-    select: { id: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
   const collisions = FIVE.map((pair) => {
     const row = v02.find((r) => r.options.some((o) => !o.isCorrect && JSON.stringify(valueOf(o.content)) === JSON.stringify(pair)))!;
     const key = valueOf(row.options.find((o) => o.isCorrect)!.content) as string[];

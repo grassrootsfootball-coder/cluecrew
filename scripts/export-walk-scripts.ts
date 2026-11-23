@@ -47,7 +47,7 @@ const HOUSE_STYLE = {
 async function main(): Promise<void> {
   const items = await prisma.item.findMany({
     where: { questionType: { district: DISTRICT } },
-    include: { questionType: true, options: { include: { misconception: true } } },
+    include: { questionType: true, options: { orderBy: { id: 'asc' }, include: { misconception: true } } },
     orderBy: { id: 'asc' },
   });
 

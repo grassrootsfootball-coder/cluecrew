@@ -122,7 +122,7 @@ async function main() {
   requirePopulation('one-run:vr19-verdicts', { 'vr19 regeneration row(s)': proposals.length });
   for (const p of proposals) {
     const itemId = String(p.itemId);
-    const row = await prisma.item.findUnique({ where: { id: itemId }, select: { stem: true, explanation: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
+    const row = await prisma.item.findUnique({ where: { id: itemId }, select: { stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
     if (!row) { hold('vr19-signature', itemId, 'proposal names an item this store does not hold', { door: 'vr-19', kind: 'verdict' }); continue; }
     const already = await prisma.attributionEvent.count({ where: { recordId: itemId, action: 'SIGNED', reviewerId: ANNIE } });
     if (already > 0) { land('verdict-signature', itemId, 'ALREADY', 'a SIGNED event by her already stands'); continue; }
@@ -497,7 +497,7 @@ async function main() {
   for (const qt of DOORS) {
     const rows = await prisma.item.findMany({
       where: { questionTypeId: qt, status: { in: ['DRAFT', 'NEVER_SHIPPABLE'] } },
-      select: { id: true, status: true, stem: true, explanation: true, authoredBy: true, answerFlaggedAt: true, sendHistory: true, options: { select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } },
+      select: { id: true, status: true, stem: true, explanation: true, authoredBy: true, answerFlaggedAt: true, sendHistory: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } },
     });
     const draft = rows.filter((r) => r.status === 'DRAFT');
     const namedByState = rows.filter((r) => r.status === 'NEVER_SHIPPABLE');

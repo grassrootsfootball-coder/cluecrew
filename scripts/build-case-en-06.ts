@@ -50,7 +50,7 @@ async function run() {
   // ---- Part two: the publication membership, derived ----
   const items = await prisma.item.findMany({
     where: { id: { startsWith: 'ENG-003' } },
-    select: { id: true, status: true, questionTypeId: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, status: true, questionTypeId: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   if (items.length !== 34) throw new Error(`REFUSED — expected the 34 signed ENG-003 items, found ${items.length}`);

@@ -59,7 +59,7 @@ async function run() {
   });
 
   // ---- Act 2: the WIW-19 retag, hybrid shape ----
-  const item = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-001-WIW-19' }, select: { options: { select: { id: true, content: true, misconceptionId: true, misconceptionExecution: true } } } });
+  const item = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-001-WIW-19' }, select: { options: { orderBy: { id: 'asc' }, select: { id: true, content: true, misconceptionId: true, misconceptionExecution: true } } } });
   const optB = item.options.find((o) => (o.content as Record<string, unknown>).label === 'B');
   if (!optB) throw new Error('REFUSED — WIW-19 option B not found');
   const REPLACED_TAG = 'en-vocab-neighbouring-sense';

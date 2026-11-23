@@ -40,7 +40,7 @@ async function main() {
 
   const items = await prisma.item.findMany({
     where: { questionTypeId: TYPE },
-    include: { options: true, questionType: { select: { mechanic: true } } },
+    include: { options: { orderBy: { id: 'asc' } }, questionType: { select: { mechanic: true } } },
     orderBy: { id: 'asc' },
   });
   if (items.length !== 9) throw new Error(`REFUSED: expected 9 ${TYPE} items, found ${items.length}.`);

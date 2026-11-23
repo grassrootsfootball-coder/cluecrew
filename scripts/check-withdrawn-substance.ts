@@ -152,7 +152,7 @@ async function main() {
   const withdrawn = new Map(notice.WITHDRAWN.map((e) => [e.substanceSha256, e]));
   const lifts = new Map(notice.WITHDRAWN.filter((e) => e.replacementSubstanceSha256).map((e) => [e.replacementSubstanceSha256!, e]));
   const rows = await prisma.item.findMany({ where: { status: 'LIVE', pool: 'PRACTICE' },
-    select: { id: true, stem: true, solution: true, options: { select: { content: true, isCorrect: true } } } });
+    select: { id: true, stem: true, solution: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
 
   const screened = rows.map((r) => {
     const donor = crossed.get(r.id);

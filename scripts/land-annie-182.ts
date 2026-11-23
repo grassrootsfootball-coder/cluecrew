@@ -35,7 +35,7 @@ async function run() {
   // ---- the two amendments ----
   const amendments: Array<Record<string, unknown>> = [];
   for (const id of LITRES) {
-    const r = await prisma.item.findUnique({ where: { id }, select: { id: true, stem: true, explanation: true, options: { select: { id: true, content: true, isCorrect: true } } } });
+    const r = await prisma.item.findUnique({ where: { id }, select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true } } } });
     if (!r) { amendments.push({ itemId: id, outcome: 'ROW ABSENT' }); continue; }
     const changes = r.options.filter((o) => /^\d+(\.\d+)?$/.test(String((o.content as { value: string }).value).trim()))
       .map((o) => ({ optionId: o.id, from: String((o.content as { value: string }).value), to: `${String((o.content as { value: string }).value)} litres` }));
@@ -50,12 +50,12 @@ async function run() {
   }
 
   // MC04-GEOM-05 — check rather than assume
-  const geom = await prisma.item.findUnique({ where: { id: 'MC04-GEOM-05' }, select: { options: { select: { content: true, isCorrect: true } } } });
+  const geom = await prisma.item.findUnique({ where: { id: 'MC04-GEOM-05' }, select: { options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
   const geomKey = geom?.options.find((o) => o.isCorrect);
   const geomState = geomKey ? String((geomKey.content as { value: string }).value) : 'ABSENT';
 
   // ---- sittings two to twenty-five ----
-  const rows = await prisma.item.findMany({ where: { id: { in: target } }, select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } }, orderBy: { id: 'asc' } });
+  const rows = await prisma.item.findMany({ where: { id: { in: target } }, select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } }, orderBy: { id: 'asc' } });
   const present = new Set(rows.map((r) => r.id));
   const refused = target.filter((id) => !present.has(id));
   const recorded: Array<Record<string, unknown>> = [];

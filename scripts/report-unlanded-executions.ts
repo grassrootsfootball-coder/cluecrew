@@ -83,7 +83,7 @@ async function run() {
   for (const f of found) uniq.set(sha(`${f.itemId}|${canonicalJson(f.optionValue)}|${f.text}`), f);
 
   const rows = await prisma.item.findMany({ where: { id: { in: [...new Set([...uniq.values()].map((f) => f.itemId))] } },
-    select: { id: true, questionType: { select: { district: true } }, options: { select: { content: true, misconceptionId: true, misconceptionExecution: true } } } });
+    select: { id: true, questionType: { select: { district: true } }, options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionId: true, misconceptionExecution: true } } } });
   const byId = new Map(rows.map((r) => [r.id, r]));
 
   const assessed = [...uniq.values()].map((f) => {

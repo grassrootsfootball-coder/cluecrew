@@ -22,7 +22,7 @@ const AFTER = "road!'";
 async function main() {
   const item = await prisma.item.findUniqueOrThrow({
     where: { id: ID },
-    include: { options: true, questionType: { select: { mechanic: true } } },
+    include: { options: { orderBy: { id: 'asc' } }, questionType: { select: { mechanic: true } } },
   });
   const explanation = { ...((item.explanation ?? {}) as Record<string, unknown>) };
   const script = explanation.walkScript;

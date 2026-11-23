@@ -25,7 +25,7 @@ const FRAGILE = /[“”‘’"'?!;:,.]/;
 async function main() {
   const items = await prisma.item.findMany({
     where: { questionTypeId: { in: TYPES } },
-    select: { id: true, stem: true, options: true },
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' } } },
     orderBy: { id: 'asc' },
   });
   requirePopulation('error-spot preview', { 'error-spot items': items.length });

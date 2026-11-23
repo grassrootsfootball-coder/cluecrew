@@ -45,7 +45,7 @@ async function run() {
     where: { questionType: { district: 'MATHS' } },
     select: { id: true, status: true, pool: true, stem: true, explanation: true, questionTypeId: true,
       reviewedBy: true, authoredBy: true, answerFlaggedAt: true,
-      options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
   });
   requirePopulation('publish:maths-district', { 'MATHS row(s)': rows.length });
 

@@ -126,7 +126,7 @@ async function main() {
   const pinnedOk = new Set<string>();
   for (const id of ruledIds) {
     const pr = popRows.get(id)!;
-    const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, explanation: true, sendHistory: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+    const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, explanation: true, sendHistory: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
     if (!row) { rec('pin', id, 'HOLD', 'row she ruled is not in this store', { case: pr.questionType as string }); continue; }
     // A pin is a HISTORICAL identity assertion, made once at reading time. A later ruled retag
     // (her 208th) legitimately changes the tag and so the identity projection — but it does NOT
@@ -156,7 +156,7 @@ async function main() {
       const before = pinHash(row);
       const history = { sends: [{ file: anchorName, sha256: anchorSha, role: 'reviewed population — pinned to her reading', pinnedProjectionSha256: dbIdProj(row) }], pinnedAt: '2026-09-01', pinnedBy: RECORDED_BY, boundPopulation: pop.sha256, note: 'identity asserted: the served bytes equal the bytes read at the named population' };
       await prisma.item.update({ where: { id }, data: { sendHistory: history } });
-      const after = await prisma.item.findUniqueOrThrow({ where: { id }, select: { stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } } });
+      const after = await prisma.item.findUniqueOrThrow({ where: { id }, select: { stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
       if (pinHash(after) !== before) throw new Error(`${id}: pin write moved the projection`);
     }
     rec('pin', id, 'PINNED', `identity asserted against ${anchorName}`, { case: pr.questionType as string });
@@ -170,7 +170,7 @@ async function main() {
     const pr = popRows.get(id)!;
     const qt = pr.questionType as string;
     if (qt === 'vr-19-word-number-codes') { rec('signature', id, 'ALREADY', 'signed last run against the accepted regeneration (73ce); her 208th verdict on the pre-repair bytes does not transfer to a slot', { case: qt }); continue; }
-    const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, explanation: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
+    const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
     if (!row) { rec('signature', id, 'HOLD', 'no row', { case: qt }); continue; }
     const keyVal = String((row.options.find((o) => o.isCorrect)?.content as { value?: unknown })?.value ?? '');
 
@@ -227,7 +227,7 @@ async function main() {
   for (const e of executions) {
     const id = String(e.itemId); const val = String(e.optionValue); const entry = String(e.entryId); const text = String(e.EXECUTION);
     const key = `${id}:${val}`;
-    const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+    const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
     if (!row) { rec('execution', key, 'HOLD', 'no such item', { entry }); continue; }
     const opt = row.options.find((o) => String((o.content as { value?: unknown })?.value ?? '') === val && o.misconceptionId === entry);
     if (!opt) { rec('execution', key, 'HOLD', `no option "${val}" carrying ${entry} on the row`, { entry }); continue; }
@@ -281,7 +281,7 @@ async function main() {
     { qt: 'vr-21-same-meaning', from: 'vr21-too-strong', to: 'vr21-opposite-pull', keepValues: [] as string[], redirect: { generous: 'vr21-associated-not-same', ticket: 'vr21-associated-not-same' }, holdValues: ['lend'] },
   ];
   for (const rr of retagRules) {
-    const opts = await prisma.itemOption.findMany({ where: { misconceptionId: rr.from, item: { questionTypeId: rr.qt } }, select: { id: true, itemId: true, content: true, item: { select: { stem: true, options: { select: { content: true, isCorrect: true } } } } } });
+    const opts = await prisma.itemOption.findMany({ where: { misconceptionId: rr.from, item: { questionTypeId: rr.qt } }, select: { id: true, itemId: true, content: true, item: { select: { stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } } } });
     for (const o of opts) {
       const val = String((o.content as { value?: unknown })?.value ?? '');
       const key = `${o.itemId}:${val}`;
@@ -361,7 +361,7 @@ async function main() {
   const doorReports: Array<Record<string, unknown>> = [];
   for (const qt of DOORS) {
     const rows = await prisma.item.findMany({ where: { questionTypeId: qt, status: { in: ['DRAFT', 'NEVER_SHIPPABLE'] } },
-      select: { id: true, status: true, authoredBy: true, answerFlaggedAt: true, sendHistory: true, options: { select: { misconceptionId: true, misconceptionExecution: true } } } });
+      select: { id: true, status: true, authoredBy: true, answerFlaggedAt: true, sendHistory: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, misconceptionExecution: true } } } });
     const draft = rows.filter((r) => r.status === 'DRAFT');
     const signedIds = new Set((await prisma.attributionEvent.findMany({ where: { recordId: { in: draft.map((r) => r.id) }, action: 'SIGNED', reviewerId: { not: null } }, select: { recordId: true } })).map((e) => e.recordId));
     const pinned = draft.filter((r) => r.sendHistory !== null).map((r) => r.id);

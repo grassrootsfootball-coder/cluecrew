@@ -34,7 +34,7 @@ async function run() {
   // ---- ONE: the four broken items ---------------------------------------------------------------
   const broken = [];
   for (const id of BROKEN) {
-    const r = await prisma.item.findUniqueOrThrow({ where: { id }, select: { id: true, status: true, pool: true, questionTypeId: true, stem: true, options: { select: { content: true, isCorrect: true } } } });
+    const r = await prisma.item.findUniqueOrThrow({ where: { id }, select: { id: true, status: true, pool: true, questionTypeId: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
     const c = await prisma.case.findFirstOrThrow({ where: { questionTypeId: r.questionTypeId }, select: { id: true, title: true, freeTier: true, orderInDistrict: true } });
     broken.push({ itemId: r.id, status: r.status, pool: r.pool, stem: r.stem,
       key: String((r.options.find((o) => o.isCorrect)!.content as { value: unknown }).value),
@@ -49,7 +49,7 @@ async function run() {
 
   // ---- TWO: the rival keys ----------------------------------------------------------------------
   const v08 = await prisma.item.findMany({ where: { questionTypeId: 'vr-08-move-letter', status: 'DRAFT' },
-    select: { id: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
   const rivals = v08.flatMap((r) => {
     const { word1: w1, word2: w2 } = r.stem as { word1: string; word2: string };
     return r.options.filter((o) => !o.isCorrect).flatMap((o) => {
@@ -70,7 +70,7 @@ async function run() {
 
   // ---- THREE: Cowork's vr13 inference ------------------------------------------------------------
   const v13 = await prisma.item.findMany({ where: { questionTypeId: 'vr-13-make-a-word', status: 'DRAFT' },
-    select: { id: true, stem: true, options: { select: { content: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
   const carriers = v13.flatMap((r) => r.options.filter((o) => o.misconceptionId === 'vr13-not-a-word')
     .map((o) => ({ itemId: r.id, value: String((o.content as { value: unknown }).value) })));
   const performers = carriers.filter((c) => !isWord(c.value)).map((c) => c.value);

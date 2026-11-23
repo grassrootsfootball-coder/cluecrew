@@ -26,7 +26,7 @@ async function main() {
 
   const items = await prisma.item.findMany({
     where: { id: { in: repairs.map((r) => r.itemId) } },
-    include: { options: true, questionType: { select: { mechanic: true } } },
+    include: { options: { orderBy: { id: 'asc' } }, questionType: { select: { mechanic: true } } },
   });
   if (items.length !== 4) throw new Error(`REFUSED: expected 4 items, found ${items.length}.`);
 

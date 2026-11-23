@@ -55,7 +55,7 @@ async function run() {
   const rows = await prisma.item.findMany({ where: { questionTypeId: TYPE }, orderBy: { id: 'asc' },
     select: { id: true, status: true, pool: true, stem: true, explanation: true, reviewedBy: true,
       authoredBy: true, answerFlaggedAt: true,
-      options: { select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
   requirePopulation('publish:vr-19', { 'vr-19 row(s)': rows.length });
 
   const refusals: string[] = [];

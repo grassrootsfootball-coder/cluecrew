@@ -101,7 +101,7 @@ async function run() {
       where: { questionTypeId: c.questionTypeId, status: 'DRAFT', reviewedBy: null },
       select: {
         id: true, stem: true, explanation: true, difficultyTier: true, calibratedDifficulty: true, questionTypeId: true,
-        options: { select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true, tagStatus: true } },
+        options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true, tagStatus: true } },
       },
       orderBy: { id: 'asc' },
     });
@@ -173,7 +173,7 @@ async function run() {
     if (id) byItem.set(id, [...(byItem.get(id) ?? []), l.trim()]);
   }
   const thirtyRows = await Promise.all([...byItem.entries()].map(async ([id, faults]) => {
-    const item = await prisma.item.findUniqueOrThrow({ where: { id }, select: { status: true, stem: true, options: { select: { content: true, attractorLine: true, defeaterLine: true, attractorQuote: true, defeaterQuote: true } } } });
+    const item = await prisma.item.findUniqueOrThrow({ where: { id }, select: { status: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, attractorLine: true, defeaterLine: true, attractorQuote: true, defeaterQuote: true } } } });
     return { id, status: item.status, theChecksOwnWords: faults, stem: item.stem, options: item.options, rowSha256: sha256(JSON.stringify({ id, faults, stem: item.stem })), asOf: ASOF };
   }));
   const thirtyArtefact = {

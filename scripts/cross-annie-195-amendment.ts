@@ -28,7 +28,7 @@ async function run() {
   if (sha(bytes) !== RETURN_SHA) throw new Error(`the return does not hash to ${RETURN_SHA} — refusing`);
 
   const row = await prisma.item.findUniqueOrThrow({ where: { id: 'MC02-RP-02' },
-    select: { id: true, status: true, stem: true, reviewedBy: true, options: { select: { content: true, isCorrect: true } } } });
+    select: { id: true, status: true, stem: true, reviewedBy: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
   const serving = String((row.stem as { text?: string }).text ?? '');
   requirePopulation('cross:annie-195', { 'amendment(s) to carry': 1, 'row(s) to assert against': 1 });
 

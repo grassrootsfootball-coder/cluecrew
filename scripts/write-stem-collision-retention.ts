@@ -80,7 +80,7 @@ async function run() {
   const results: Array<Record<string, unknown>> = [];
   const refusals: string[] = [];
   for (const id of IDS) {
-    const row = await prisma.item.findUniqueOrThrow({ where: { id }, select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } } });
+    const row = await prisma.item.findUniqueOrThrow({ where: { id }, select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
     const liveStem = stemTextOf(row.stem);
     const variants = variantsOf(id);
     if (variants.length !== 2) { refusals.push(`${id}: ${variants.length} variants in the crossed bytes, expected 2`); continue; }
@@ -97,7 +97,7 @@ async function run() {
   if (APPLY) {
     await prisma.$transaction(async (tx) => {
       for (const r of results) {
-        const row = await tx.item.findUniqueOrThrow({ where: { id: r.itemId as string }, select: { stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } } });
+        const row = await tx.item.findUniqueOrThrow({ where: { id: r.itemId as string }, select: { stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
         await tx.item.update({ where: { id: r.itemId as string }, data: { stem: {
           ...(row.stem as Record<string, unknown>),
           _stemCollisionResolved: {
@@ -108,7 +108,7 @@ async function run() {
             andWHYITISHERE: 'the restore note said the unchosen variant was recorded on the row and it was not. The note is right and the row has caught up (R900).',
           },
         } as object } });
-        const after = await tx.item.findUniqueOrThrow({ where: { id: r.itemId as string }, select: { stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } } });
+        const after = await tx.item.findUniqueOrThrow({ where: { id: r.itemId as string }, select: { stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
         const now = excluded(after);
         if (now !== r.excludedHashBefore) throw new Error(`${r.itemId}: the retention moved the pinned projection (${r.excludedHashBefore} -> ${now}) — rolling back`);
         await tx.attributionEvent.create({ data: {

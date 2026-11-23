@@ -25,7 +25,7 @@ async function run() {
     const walkServes = Boolean((c.modes as Record<string, unknown>).walk);
     const items = await prisma.item.findMany({
       where: { questionTypeId: c.questionTypeId, status: 'DRAFT', reviewedBy: null },
-      select: { id: true, stem: true, explanation: true, difficultyTier: true, options: { select: { misconceptionId: true, misconceptionExecution: true } } },
+      select: { id: true, stem: true, explanation: true, difficultyTier: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, misconceptionExecution: true } } },
       orderBy: { id: 'asc' },
     });
     let whole = 0, ta = 0, ex = 0, wk = 0;

@@ -52,7 +52,7 @@ async function run() {
     return Math.abs(bottomAlone - complement) < 1e-9;
   });
 
-  const row = await prisma.item.findUniqueOrThrow({ where: { id: 'MC01-FDP-08' }, select: { id: true, stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
+  const row = await prisma.item.findUniqueOrThrow({ where: { id: 'MC01-FDP-08' }, select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
   const D = row.options.find((o) => (o.content as { label?: string }).label === 'D');
   const C = row.options.find((o) => (o.content as { label?: string }).label === 'C');
   if (!D || !C) throw new Error('MC01-FDP-08 has no option D or C — refusing a shape I cannot parse (R173)');

@@ -58,7 +58,7 @@ async function run() {
     optionId: string | null; agrees: boolean }> = [];
   for (const c of changes) {
     const row = await prisma.item.findUnique({ where: { id: c.itemId },
-      select: { options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+      select: { options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
     const want = (c.act === 'TAG' ? c.value : c.to) as string[];
     const opt = row?.options.find((o) => canonicalJson((o.content as { value: unknown }).value) === canonicalJson(want));
     const displacedGone = c.act !== 'RE-AUTHOR' || !row?.options.some((o) => canonicalJson((o.content as { value: unknown }).value) === canonicalJson(c.from));

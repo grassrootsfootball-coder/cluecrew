@@ -55,7 +55,7 @@ async function run() {
     const item = chosen.item as Record<string, unknown>;
 
     if (ruling.landed) {
-      const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, options: { select: { content: true, isCorrect: true } } } });
+      const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
       const landedKey = row?.options.find((o) => o.isCorrect);
       const stands = landedKey ? String((landedKey.content as { value: string }).value) === ruling.key : false;
       results.push({ itemId: id, outcome: stands ? 'STANDS UNCHANGED — the landed row already carries her variant' : 'MISMATCH — the landed row does not carry her key', variantCount, distinctItems, herKey: ruling.key, onTheRow: landedKey ? String((landedKey.content as { value: string }).value) : null, reason: ruling.reason });

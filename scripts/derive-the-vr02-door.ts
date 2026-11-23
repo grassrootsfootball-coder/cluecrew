@@ -34,7 +34,7 @@ async function main() {
 
   const rows = await prisma.item.findMany({ where: { questionTypeId: caseRow.questionTypeId }, orderBy: { id: 'asc' },
     select: { id: true, status: true, pool: true, stem: true, explanation: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true,
-      options: { select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
   requirePopulation('derive:vr-02', { 'row(s)': rows.length });
 
   const attested = new Set((await prisma.misconception.findMany({ where: { status: 'ACTIVE', approvedBy: `reviewer:${ANNIE}` }, select: { id: true } })).map((m) => m.id));

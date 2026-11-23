@@ -131,7 +131,7 @@ async function main(): Promise<void> {
     select: {
       id: true, itemModel: true, passageFlag: true, r4Note: true, banListException: true,
       banListExceptionResolved: true, importDoorFix: true, stemRedraft: true, draftingMethod: true,
-      options: { select: { id: true, content: true } },
+      options: { orderBy: { id: 'asc' }, select: { id: true, content: true } },
     },
   });
   const byId = new Map(rows.map((r) => [r.id, r]));

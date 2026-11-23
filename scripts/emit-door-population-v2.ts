@@ -30,7 +30,7 @@ async function run() {
       where: { questionTypeId: c.questionTypeId, status: 'DRAFT', reviewedBy: null },
       select: {
         id: true, stem: true, explanation: true, difficultyTier: true, calibratedDifficulty: true, questionTypeId: true,
-        options: { select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true, tagStatus: true } },
+        options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true, tagStatus: true } },
       },
       orderBy: { id: 'asc' },
     });

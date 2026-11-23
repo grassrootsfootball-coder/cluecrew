@@ -96,7 +96,7 @@ async function main(): Promise<void> {
     where: { id: { in: drafts.map((d) => String(d.itemId)) } },
     select: {
       id: true, stem: true, status: true, tierRationale: true, sourcedFrom: true, mechanismLedger: true,
-      options: { select: { id: true, content: true, senseTarget: true, misconceptionExecution: true } },
+      options: { orderBy: { id: 'asc' }, select: { id: true, content: true, senseTarget: true, misconceptionExecution: true } },
     },
   });
   const byId = new Map(rows.map((r) => [r.id, r]));
@@ -254,7 +254,7 @@ async function main(): Promise<void> {
     where: { id: { in: updates.map((u) => u.id) } },
     select: {
       id: true, stem: true, tierRationale: true, sourcedFrom: true, mechanismLedger: true,
-      options: { select: { content: true, misconceptionExecution: true, senseTarget: true } },
+      options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionExecution: true, senseTarget: true } },
     },
   });
   const srcById = new Map(drafts.map((d) => [String(d.itemId), d]));

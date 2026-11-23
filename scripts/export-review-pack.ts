@@ -97,7 +97,7 @@ async function misconceptionSection(): Promise<{ html: string; count: number }> 
 async function itemSection(): Promise<{ html: string; count: number; lowConfidence: number }> {
   const items = await prisma.item.findMany({
     where: { questionType: { district: DISTRICT }, status: { in: ['DRAFT', 'REVIEWED'] } },
-    include: { questionType: true, options: { include: { misconception: true } } },
+    include: { questionType: true, options: { orderBy: { id: 'asc' }, include: { misconception: true } } },
     orderBy: [{ id: 'asc' }],
   });
 

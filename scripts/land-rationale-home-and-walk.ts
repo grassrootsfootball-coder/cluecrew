@@ -29,7 +29,7 @@ async function run() {
     for (const it of bank.items) {
       const declared = it.options.filter((o) => typeof o.misconception === 'string' && o.misconception.trim());
       if (declared.length) withRationale++;
-      const items = await prisma.item.findMany({ where: { questionTypeId: b.qt }, select: { id: true, stem: true, options: { select: { id: true, content: true, drafterDeclaredPull: true } } } });
+      const items = await prisma.item.findMany({ where: { questionTypeId: b.qt }, select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, drafterDeclaredPull: true } } } });
       /**
        * A SIGNATURE REFUSES WHERE IT CANNOT IDENTIFY (own fault, caught dry — R707). The first
        * matcher compared `words ?? frame`, which vr-06 rows carry NEITHER of: two undefineds

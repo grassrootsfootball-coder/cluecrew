@@ -15,7 +15,7 @@ export async function runHardDelete(now = new Date()): Promise<{ parents: number
 
   const parents = await prisma.parentAccount.findMany({
     where: { deletedAt: { not: null, lt: cutoff } },
-    select: { id: true, children: { select: { id: true } } },
+    select: { id: true, children: { select: { id: true }, orderBy: { id: 'asc' } } },
   });
 
   let eventsDeleted = 0;

@@ -28,7 +28,7 @@ async function run() {
 
   const can = JSON.parse(readFileSync(CANARY, 'utf8')) as { A_CANARY_SO_A_STRIP_IS_SEEN_NOT_SUSPECTED: { fingerprints: Record<string, { glyphs: Record<string, number>; fingerprint: string }>; itemsInTheSend: number; itemsWithGlyphs: number } };
   const fps = can.A_CANARY_SO_A_STRIP_IS_SEEN_NOT_SUSPECTED.fingerprints;
-  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, stem: true, explanation: true, options: { select: { content: true } } } });
+  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true } } } });
   requirePopulation('emit:canary-result', { 'canary fingerprints': Object.keys(fps).length, 'landed maths rows': rows.length });
   const byId = new Map(rows.map((r) => [r.id, r]));
 

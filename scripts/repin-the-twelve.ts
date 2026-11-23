@@ -58,7 +58,7 @@ async function run() {
     { name: 'an empty row cannot', input: JSON.stringify({ options: [], explanation: {}, stem: {} }), mustBeCaught: false },
   ], (raw) => priorOf(JSON.parse(raw)).restoredFields.length > 0);
 
-  const rows = await prisma.item.findMany({ where: { id: { in: TWELVE } }, select: { id: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
+  const rows = await prisma.item.findMany({ where: { id: { in: TWELVE } }, select: { id: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
   requirePopulation('repin:the-twelve', { 'rows to re-pin': rows.length });
 
   const results: Array<Record<string, unknown>> = [];
@@ -99,7 +99,7 @@ async function run() {
     results.push({ itemId: r.id, outcome: !matched ? 'NOT RE-PINNABLE — back to her' : blocker ? `REFUSED — ${blocker}` : (APPLY ? 'RE-PINNED AND SIGNED' : 'WOULD RE-PIN AND SIGN'), comparison });
   }
 
-  const all = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { select: { isCorrect: true, misconceptionId: true } } } });
+  const all = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { orderBy: { id: 'asc' }, select: { isCorrect: true, misconceptionId: true } } } });
   const kase = await prisma.case.findFirst({ where: { questionType: { district: 'MATHS' } }, select: { title: true } });
   const cut = await sealCut(prisma, cutBeganAt);
   const payload = {

@@ -40,7 +40,7 @@ async function main() {
   // Carriers at EVERY status, so an unserved entry can still be ranked by how much content
   // depends on it. A LIVE-only count is all zeroes down there and orders nothing.
   const allItems = await prisma.item.findMany({
-    select: { id: true, options: { select: { misconceptionId: true, tags: { select: { misconceptionId: true } } } } },
+    select: { id: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, tags: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } } } },
   });
   const anyStatusCarriers = new Map<string, number>();
   for (const item of allItems) {
@@ -56,7 +56,7 @@ async function main() {
     select: {
       id: true,
       questionTypeId: true,
-      options: { select: { misconceptionId: true, tags: { select: { misconceptionId: true } } } },
+      options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, tags: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } } },
     },
   });
   requirePopulation('null-approver tranche', { 'LIVE items': liveItems.length });

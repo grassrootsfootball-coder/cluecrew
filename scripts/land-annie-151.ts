@@ -68,7 +68,7 @@ async function run() {
   // ---- 4. HER MINTED TEST, estate-wide over every rationale now held ----
   const all = await prisma.itemOption.findMany({
     where: { drafterDeclaredPull: { not: null } },
-    select: { id: true, content: true, drafterDeclaredPull: true, misconceptionId: true, item: { select: { id: true, questionTypeId: true, options: { select: { content: true, isCorrect: true } } } } },
+    select: { id: true, content: true, drafterDeclaredPull: true, misconceptionId: true, item: { select: { id: true, questionTypeId: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } } },
   });
   const results: Array<Record<string, unknown>> = [];
   for (const o of all) {
@@ -152,7 +152,7 @@ async function run() {
 
   // ---- 6. The three ordered reads ----
   const REISSUED = ['ENG-015-CC-12', 'ENG-018-RB-01', 'ENG-018-RB-11', 'ENG-019-BV-02', 'ENG-023-RT-08', 'ENG-027-RR-08'];
-  const reissuedItems = await prisma.item.findMany({ where: { id: { in: REISSUED } }, select: { id: true, tierRationale: true, lineRefs: true, sourcedFrom: true, mechanismLedger: true, authoredBy: true, options: { select: { attractorLine: true, attractorQuote: true, a36Note: true, windowClass: true, misconceptionExecution: true } } } });
+  const reissuedItems = await prisma.item.findMany({ where: { id: { in: REISSUED } }, select: { id: true, tierRationale: true, lineRefs: true, sourcedFrom: true, mechanismLedger: true, authoredBy: true, options: { orderBy: { id: 'asc' }, select: { attractorLine: true, attractorQuote: true, a36Note: true, windowClass: true, misconceptionExecution: true } } } });
   const occupancy = (name: string, filled: number, total: number) => ({ field: name, filledOnAffectedRows: filled, of: total, stillEmpty: filled === 0 });
   const optAll = reissuedItems.flatMap((i) => i.options);
   const reads = {

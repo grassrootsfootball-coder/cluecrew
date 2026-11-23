@@ -34,7 +34,7 @@ async function run() {
 
   const src = JSON.parse(readFileSync('/Users/davidb/Downloads/CALC04GENERATORANDTHE187.json', 'utf8')) as { THE_187_EXCEEDS_WHAT_THIS_STORE_SENT: { theTwentyFiveWithdrawnOnlyIds: string[] } };
   const withdrawn = src.THE_187_EXCEEDS_WHAT_THIS_STORE_SENT.theTwentyFiveWithdrawnOnlyIds;
-  const rows = await prisma.item.findMany({ where: { id: { in: withdrawn } }, select: { id: true, status: true, stem: true, explanation: true, difficultyTier: true, questionTypeId: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
+  const rows = await prisma.item.findMany({ where: { id: { in: withdrawn } }, select: { id: true, status: true, stem: true, explanation: true, difficultyTier: true, questionTypeId: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
   requirePopulation('withdraw:maths-rows', { 'withdrawn-only ids': withdrawn.length, 'of those landed here': rows.length });
 
   const attempts = await prisma.attempt.count({ where: { itemId: { in: rows.map((r) => r.id) } } });

@@ -30688,3 +30688,46 @@ seeding text a reviewer had replaced. All 120 lines were rewritten from the stor
 re-tier made through review in the store therefore does not reach the generator unless the file is
 edited too (R1050, R1054). The seed now names that drift on every run, but the coupling is still
 there. The fix is for difficulty.ts to read vault tiers from the store.
+
+## R1065 — check:unordered-includes reads select as well as include, at any depth, with the to-many list read from the schema (David: "Widen check:unordered-includes to catch select reads", 2026-11-23)
+
+**Why.** R1053's `check:verdict-option-last` read `select: { options: { select: {...} } }` with no
+`orderBy`. It got Postgres's physical order and reported 200 faults on a card every child is served
+correctly. `check:unordered-includes` exists for exactly that class, and it passed. Two reasons:
+- it matched only `include: { x: true }`;
+- its regex could not see past one level of nesting, so it read **18 objects in 864 files**.
+
+**Now.** A brace-balanced reader walks every `include` and `select` object, at any depth. It also
+walks through to-one relations' own selects. A to-many relation is flagged when it is read as `true`,
+or as an object with no top-level `orderBy`. `where: { x: { some } }` is a filter, not a read, and is
+not walked.
+- **The to-many names are read from `schema.prisma`** (fields typed `<Model>[]`): 20 names. The
+  hand-kept TO-ONE skip list is gone (R57).
+- The reader refuses if the schema read finds no `options` (R173).
+- It now reads **1,206 objects** and found **163 unordered reads** in 114 files: 149 `options`,
+  4 `tags`, and one or two each on 8 other relations. None were inside `_count`.
+
+**Fixed.**
+- **The parent data export** (`api/parent/export`, 7 relations): chronological by each relation's own
+  timestamp (`createdAt`, `collectedAt`, `startedAt`, `dueAt`), with `id` breaking ties. An export
+  read twice should not reorder itself.
+- **The hard-delete job** (`children` by `id`).
+- **155 reads in 111 scripts**, by an anchored transform that asserted each occurrence (R87). It
+  inserts `orderBy: { id: 'asc' }`, the order the serving path and `ORDERED_OPTION_READ` already use.
+  `typecheck:scripts` is unchanged: the same 74 known errors in the same 24 known-untyped files.
+- All 60 CI check steps were re-run against the store and compared with the earlier run (R149). No
+  verdict moved. `check:option-positions` and `check:vr-distractors` fail locally only in their
+  `--self-test` half, which runs without `.env`. Under Prisma 7 (R1049) the client throws without
+  `DATABASE_URL`; CI sets it.
+
+**Not fixed here: one hit in an uncommitted edit.** `apps/web/lib/crew/orchestrator.ts`, the replay
+lookup's `options: { where: { isCorrect: true }, select: { content: true } }`, belongs to another
+session's work in progress (R1064). That session has been told. The check will fail on it when it is
+committed without an order, which is the check doing its job.
+
+**Limit, unchanged and still printed:** the check asserts that an order was ASKED FOR, never that it
+is TOTAL.
+
+**A slip, recorded:** the first product edit truncated `packages/db/src/jobs/hard-delete.ts`, because a
+one-liner opened the file for writing before reading it. The file had no uncommitted changes. It was
+restored from HEAD and its final diff is the one intended line.

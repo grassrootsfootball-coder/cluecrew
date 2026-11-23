@@ -35,7 +35,7 @@ async function run() {
   const send = new Map([...rowsIn(JSON.parse(sendBytes))].map((r) => [r.itemId as string, r]));
 
   const rows = await prisma.item.findMany({ where: { id: { in: SIX } },
-    select: { id: true, status: true, stem: true, solution: true, options: { select: { content: true, isCorrect: true } } } });
+    select: { id: true, status: true, stem: true, solution: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
   requirePopulation('answer:withdrawal-notice', { 'id(s) in their inference': SIX.length, 'row(s) found here': rows.length });
 
   const bare = /\b\d[\d.,]*\s*pounds?\b/i;

@@ -35,7 +35,7 @@ async function run() {
   ], (s) => parseSum(s) !== null);
 
   const rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-18-related-numbers', status: 'DRAFT' },
-    select: { id: true, difficultyTier: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, difficultyTier: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' } });
   const entry = await prisma.misconception.findUniqueOrThrow({ where: { id: 'vr18-partial-rule' },
     select: { id: true, description: true, childHint: true, approvedBy: true } });

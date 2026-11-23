@@ -33,7 +33,7 @@ async function run() {
   ], (raw) => { const [l, m] = JSON.parse(raw) as [boolean, boolean]; return l && m; });
 
   const rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-08-move-letter', status: 'DRAFT' },
-    select: { id: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
   requirePopulation('emit:vr08-trio', { 'row(s)': rows.length });
 
   const carriers = rows.flatMap((r) => {

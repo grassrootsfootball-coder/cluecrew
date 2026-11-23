@@ -45,7 +45,7 @@ async function run() {
 
   const gate = checkChildFacingText({ role: 'hint', label: `${MINT.id}.childHint`, text: MINT.childHint });
   const rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-02-two-odd-ones-out', status: 'DRAFT' },
-    select: { id: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
+    select: { id: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
 
   const resolve = (pair: string[]) => {
     const hits = rows.flatMap((r) => r.options
@@ -87,7 +87,7 @@ async function run() {
   }
 
   const after = await prisma.item.findMany({ where: { questionTypeId: 'vr-02-two-odd-ones-out', status: 'DRAFT' },
-    select: { options: { select: { isCorrect: true, misconceptionId: true } } } });
+    select: { options: { orderBy: { id: 'asc' }, select: { isCorrect: true, misconceptionId: true } } } });
   const stillUntagged = after.flatMap((r) => r.options.filter((o) => !o.isCorrect && !o.misconceptionId)).length;
 
   const full = {

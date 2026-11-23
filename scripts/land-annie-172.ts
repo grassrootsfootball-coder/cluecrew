@@ -77,7 +77,7 @@ async function run() {
   for (const p of PLAN) {
     const chosen = src[p.file]!.get(p.takeId)!;
     const targetId = p.dbId ?? (p as { newId: string }).newId;
-    const prior = await prisma.item.findUnique({ where: { id: targetId }, select: { id: true, stem: true, options: { select: { content: true, isCorrect: true } } } });
+    const prior = await prisma.item.findUnique({ where: { id: targetId }, select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
     const priorStem = prior ? String((prior.stem as { text?: string }).text ?? '') : null;
 
     const gatable = {

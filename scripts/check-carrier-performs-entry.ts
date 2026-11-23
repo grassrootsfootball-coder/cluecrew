@@ -129,7 +129,7 @@ async function run() {
   ], (raw) => { const [tag, stem, v, k] = JSON.parse(raw); return PREDICATES[tag]!(stem, v, k).verdict === 'PERFORMS'; });
 
   const rows = await prisma.item.findMany({ where: { questionTypeId: { in: PAID }, status: 'DRAFT' },
-    select: { id: true, questionTypeId: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+    select: { id: true, questionTypeId: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
   const lib = new Map((await prisma.misconception.findMany({ where: { district: 'VR' }, select: { id: true, description: true } })).map((m) => [m.id, m.description]));
 
   const results = rows.flatMap((r) => {

@@ -43,7 +43,7 @@ async function main() {
     const walkAsset = (c.modes as Record<string, { assetRef?: string }>)?.walk;
     const walkServes = !!walkAsset?.assetRef && !walkAsset.assetRef.startsWith('placeholder/');   // R917
     const rows = await prisma.item.findMany({ where: { questionTypeId: qt, status: 'DRAFT' },
-      select: { id: true, explanation: true, answerFlaggedAt: true, options: { select: { misconceptionId: true, misconceptionExecution: true } } } });
+      select: { id: true, explanation: true, answerFlaggedAt: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, misconceptionExecution: true } } } });
     if (rows.length === 0) continue;
     const signed = new Set((await prisma.attributionEvent.findMany({ where: { recordId: { in: rows.map((r) => r.id) }, action: 'SIGNED', reviewerId: { not: null } }, select: { recordId: true } })).map((e) => e.recordId));
 

@@ -35,7 +35,7 @@ async function run() {
   requirePopulation('land:maths-dispositions-two', { 'edits to apply': EDITS.length });
   const applied: Array<Record<string, unknown>> = [];
   for (const e of EDITS) {
-    const row = await prisma.item.findUnique({ where: { id: e.itemId }, select: { id: true, stem: true, explanation: true, options: { select: { content: true } } } });
+    const row = await prisma.item.findUnique({ where: { id: e.itemId }, select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true } } } });
     if (!row) { applied.push({ ...e, outcome: 'ROW ABSENT' }); continue; }
     const stem = row.stem as Record<string, unknown>;
     const exp = (row.explanation ?? {}) as Record<string, unknown>;

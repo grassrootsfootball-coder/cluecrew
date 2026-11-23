@@ -62,7 +62,7 @@ async function main() {
   const ids = Object.keys(REPAIRS);
   const items = await prisma.item.findMany({
     where: { id: { in: ids } },
-    select: { id: true, status: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, status: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   requirePopulation('ENG-028 walk repairs', { 'ids asked about': ids.length, 'rows found': items.length });

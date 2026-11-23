@@ -42,7 +42,7 @@ async function run() {
   const rows = await prisma.item.findMany({
     where: { options: { some: { misconceptionId: { in: [M75, MINT] } } } },
     select: { id: true, stem: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true,
-      options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } },
+      options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } },
   });
   const m75 = await prisma.misconception.findUniqueOrThrow({ where: { id: M75 }, select: { childHint: true, description: true } });
   const mint = await prisma.misconception.findUniqueOrThrow({ where: { id: MINT }, select: { childHint: true, description: true } });

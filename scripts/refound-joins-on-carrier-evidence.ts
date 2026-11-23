@@ -84,7 +84,7 @@ async function run() {
   const rows = [];
   for (const [entryId, itemId, label] of SEVEN) {
     const entry = mints.entries.find((e) => e.id === entryId)!;
-    const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, select: { options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+    const item = await prisma.item.findUniqueOrThrow({ where: { id: itemId }, select: { options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
     const opt = item.options.find((o) => (o.content as { label?: string }).label === label)!;
     const value = String((opt.content as { value: unknown }).value);
     const own = carrierWorking(itemId, label);

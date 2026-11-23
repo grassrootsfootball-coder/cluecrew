@@ -39,7 +39,7 @@ async function main() {
 
   const items = await prisma.item.findMany({
     where: { status: { in: ['DRAFT', 'REVIEWED'] } },
-    include: { options: { select: { content: true } } },
+    include: { options: { orderBy: { id: 'asc' }, select: { content: true } } },
   });
 
   let fails = 0;

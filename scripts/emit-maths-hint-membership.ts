@@ -50,8 +50,8 @@ async function run() {
     where: { questionType: { district: 'MATHS' } },
     select: {
       id: true, status: true, explanation: true,
-      questionType: { select: { id: true, cases: { select: { id: true } } } },
-      options: { select: { misconceptionId: true } },
+      questionType: { select: { id: true, cases: { orderBy: { id: 'asc' }, select: { id: true } } } },
+      options: { orderBy: { id: 'asc' }, select: { misconceptionId: true } },
     },
   });
   console.log(`item population: ${items.length} MATHS-district items read (all statuses; reach counts LIVE only)`);

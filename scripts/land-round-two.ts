@@ -83,7 +83,7 @@ async function main() {
   for (const e of eighteen) {
     const id = String(e.itemId); const val = String(e.optionValue); const entry = String(e.entryId); const text = String(e.EXECUTION);
     const key = `${id}:${val}`;
-    const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, questionTypeId: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+    const row = await prisma.item.findUnique({ where: { id }, select: { stem: true, questionTypeId: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
     if (!row) { rec('execution', key, 'HOLD', 'no such item', { entry }); continue; }
     const opt = row.options.find((o) => String((o.content as { value?: unknown })?.value ?? '') === val);
     if (!opt) { rec('execution', key, 'HOLD', `no option "${val}" on the row`, { entry }); continue; }
@@ -138,7 +138,7 @@ async function main() {
 
   // ---- 5. VR10: THE DOUBLING FALLS; the re-authoring proposal ---------------------------------
   console.log('5. vr10: the doubling falls; the re-authoring PROPOSAL, per row, with refuters.');
-  const vr10rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-10-word-connections' }, orderBy: { id: 'asc' }, select: { id: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+  const vr10rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-10-word-connections' }, orderBy: { id: 'asc' }, select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
   requirePopulation('round-two:vr10', { 'vr10 row(s)': vr10rows.length });
   // Relations read per row by this store, under her delegation ("assignment per row is the
   // store's under the write gate; reversed-relation preferred where the relation runs one way").
@@ -212,7 +212,7 @@ async function main() {
   };
   for (const qt of DOORS) {
     const rows = await prisma.item.findMany({ where: { questionTypeId: qt, status: { in: ['DRAFT', 'NEVER_SHIPPABLE'] } },
-      select: { id: true, status: true, authoredBy: true, answerFlaggedAt: true, sendHistory: true, options: { select: { misconceptionId: true, misconceptionExecution: true } } } });
+      select: { id: true, status: true, authoredBy: true, answerFlaggedAt: true, sendHistory: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, misconceptionExecution: true } } } });
     const draft = rows.filter((r) => r.status === 'DRAFT');
     const signedIds = new Set((await prisma.attributionEvent.findMany({ where: { recordId: { in: draft.map((r) => r.id) }, action: 'SIGNED', reviewerId: { not: null } }, select: { recordId: true } })).map((e) => e.recordId));
     const window = await prisma.attempt.count({ where: { itemId: { in: rows.map((r) => r.id) } } });

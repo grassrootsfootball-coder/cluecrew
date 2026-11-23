@@ -36,7 +36,7 @@ async function run() {
   const nine = bound.FIVE_THE_NINE_MINT_EXECUTIONS.THE_EXECUTIONS;
   const held = [];
   for (const e of nine) {
-    const row = await prisma.item.findUnique({ where: { id: e.itemId }, select: { options: { select: { content: true, misconceptionExecution: true, misconceptionId: true } } } });
+    const row = await prisma.item.findUnique({ where: { id: e.itemId }, select: { options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionExecution: true, misconceptionId: true } } } });
     const opt = row?.options.find((o) => canonicalJson((o.content as { value: unknown }).value) === canonicalJson(e.optionValue));
     held.push({ itemId: e.itemId, optionValue: e.optionValue,
       theRowAndOptionExistHere: !!opt, tagHere: opt?.misconceptionId ?? null,

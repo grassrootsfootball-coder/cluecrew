@@ -29,7 +29,7 @@ async function run() {
   ], (t) => !caseFaceServes({ title: t }));
 
   const kase = await prisma.case.findFirst({ where: { questionType: { district: 'MATHS' } }, select: { id: true, title: true, narrativeIntro: true, modes: true, storyWrapper: true, freeTier: true, orderInDistrict: true, mappedQuestionTypeIds: true } });
-  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { select: { isCorrect: true, misconceptionId: true, content: true } } }, orderBy: { id: 'asc' } });
+  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { orderBy: { id: 'asc' }, select: { isCorrect: true, misconceptionId: true, content: true } } }, orderBy: { id: 'asc' } });
   requirePopulation('emit:face-and-untagged', { 'maths rows': rows.length, 'maths cases': kase ? 1 : 0 });
 
   const sendIds = new Set((JSON.parse(readFileSync(SEND, 'utf8')) as { items: Array<{ itemId: string }> }).items.map((i) => i.itemId));

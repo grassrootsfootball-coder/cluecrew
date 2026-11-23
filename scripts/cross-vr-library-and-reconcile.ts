@@ -47,7 +47,7 @@ async function run() {
     select: { misconceptionId: true, item: { select: { id: true } } } });
   const inUseAllVr = [...new Set(allVrOpts.map((o) => o.misconceptionId).filter((v): v is string => !!v))].sort();
   const bankRows = await prisma.item.findMany({ where: { questionType: { district: 'VR' }, id: { startsWith: 'bank-vr-' } },
-    select: { id: true, questionTypeId: true, options: { select: { misconceptionId: true } } } });
+    select: { id: true, questionTypeId: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } } });
 
   requirePopulation('cross:vr-library', {
     'VR library entry/entries': lib.length,
@@ -69,7 +69,7 @@ async function run() {
 
   // ---- TWO: THE NINE UNTAGGED vr-02 DISTRACTORS ------------------------------------------------
   const vr02 = await prisma.item.findMany({ where: { questionTypeId: 'vr-02-two-odd-ones-out', status: 'DRAFT' },
-    select: { id: true, difficultyTier: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+    select: { id: true, difficultyTier: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
   const untagged = vr02.filter((r) => r.options.some((o) => !o.isCorrect && !o.misconceptionId)).map((r) => ({
     itemId: r.id, tier: r.difficultyTier,
     stem: r.stem,

@@ -31,7 +31,7 @@ async function run() {
       id: true, status: true, pool: true, difficultyTier: true, reviewedBy: true,
       stem: true, explanation: true,
       questionType: { select: { id: true, district: true, mechanic: true } },
-      options: { select: { content: true, misconceptionId: true } },
+      options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionId: true } },
     },
     orderBy: { id: 'asc' },
   });

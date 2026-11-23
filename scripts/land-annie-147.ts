@@ -57,7 +57,7 @@ async function run() {
   }
   for (const n of [13, 14]) {
     const id = `bank-vr-02-two-odd-ones-out-${n}`;
-    const r = await prisma.item.findUniqueOrThrow({ where: { id }, select: { options: { select: { misconceptionId: true } } } });
+    const r = await prisma.item.findUniqueOrThrow({ where: { id }, select: { options: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } } });
     const tag = r.options.find((o) => o.misconceptionId?.startsWith('vr02-real'))?.misconceptionId;
     if (tag !== 'vr02-real-link-wrong-rule') throw new Error(`REFUSED — ${id} carries ${tag}; neither her replaced nor her authored state`);
     landing.push({ id, act: 'RETAG ALREADY IN AUTHORED STATE', note: 'her replaced (vr02-surface-link) is the state she read in the population file; the 145th\'s five-row sweep carried this row to the mint before her per-row ruling arrived. Convergent, no write — the reconciliation is the record (R599: re-run rather than stopping at the first fix).', authority: AUTH });
@@ -81,7 +81,7 @@ async function run() {
   });
 
   // ---- The marker-class walk, estate-wide ----
-  const items = await prisma.item.findMany({ select: { id: true, status: true, stem: true, explanation: true, reviewNotes: true, reviewedBy: true, options: { select: { content: true, misconceptionExecution: true } } } });
+  const items = await prisma.item.findMany({ select: { id: true, status: true, stem: true, explanation: true, reviewNotes: true, reviewedBy: true, options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionExecution: true } } } });
   const misc = await prisma.misconception.findMany({ select: { id: true, approvedBy: true, description: true, childHint: true } });
   const NEVER = /never shippable|synthetic seed|do not ship/i;
   const PLACEHOLDER = /\b(TBD|TODO|FIXME|XXX|PLACEHOLDER|lorem ipsum)\b/i;

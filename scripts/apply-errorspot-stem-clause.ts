@@ -31,7 +31,7 @@ const TYPES = ['en-spag-punct-spot', 'en-spag-spelling-spot'];
 async function main() {
   const items = await prisma.item.findMany({
     where: { questionTypeId: { in: TYPES } },
-    include: { options: true, questionType: { select: { mechanic: true } } },
+    include: { options: { orderBy: { id: 'asc' } }, questionType: { select: { mechanic: true } } },
     orderBy: { id: 'asc' },
   });
   if (items.length !== 18) throw new Error(`REFUSED: expected 18 error-spot items, found ${items.length}. A ruling whose target moved is reported, never adapted.`);

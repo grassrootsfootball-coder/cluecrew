@@ -37,7 +37,7 @@ async function run() {
     { name: 'nor does a near miss', input: REPLACED.replace('Notice both.', 'Notice both'), mustBeCaught: false },
   ], (t) => sha(t.trim()) === REPLACED_SHA);
 
-  const row = await prisma.item.findUnique({ where: { id: ITEM }, select: { id: true, status: true, stem: true, explanation: true, options: { select: { content: true } } } });
+  const row = await prisma.item.findUnique({ where: { id: ITEM }, select: { id: true, status: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true } } } });
   requirePopulation('land:annie-176-wiw22', { 'target rows': row ? 1 : 0 });
   const exp = (row!.explanation ?? {}) as Record<string, unknown>;
   const onTheRow = String(exp.hintCore ?? '').trim();

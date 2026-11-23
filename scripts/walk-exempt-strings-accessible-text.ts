@@ -126,7 +126,7 @@ async function run() {
   ], (t) => gapMarkerSpans(t).length > 0);
 
   const items = await prisma.item.findMany({
-    select: { id: true, status: true, questionTypeId: true, stem: true, explanation: true, options: { select: { content: true } } },
+    select: { id: true, status: true, questionTypeId: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true } } },
     orderBy: { id: 'asc' },
   });
   requirePopulation('walk:exempt-strings', { 'items in the corpus': items.length });

@@ -73,7 +73,7 @@ async function run() {
   if (optD.value !== 'the' || optD.isCorrect !== false) throw new Error('REFUSED — option D is not the expected distractor');
 
   // Pre-flight on the live rows.
-  const item = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-003-A-CZ-A2' }, select: { status: true, options: { select: { content: true } } } });
+  const item = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-003-A-CZ-A2' }, select: { status: true, options: { orderBy: { id: 'asc' }, select: { content: true } } } });
   if (item.status !== 'DRAFT') throw new Error(`REFUSED — CZ-A2 is ${item.status}, expected DRAFT`);
   if (item.options.length !== 3) throw new Error(`REFUSED — CZ-A2 holds ${item.options.length} options, expected 3 before transport`);
   const existingEntry = await prisma.misconception.findUnique({ where: { id: ENTRY_ID } });
@@ -149,7 +149,7 @@ async function run() {
   const caseRow = await prisma.case.findUniqueOrThrow({ where: { id: 'case-en-06' }, select: { title: true, questionTypeId: true, mappedQuestionTypeIds: true, freeTier: true } });
   const reachable = await prisma.item.findMany({
     where: { questionTypeId: { in: [caseRow.questionTypeId, ...caseRow.mappedQuestionTypeIds] }, status: 'LIVE', pool: 'PRACTICE' },
-    select: { id: true, questionTypeId: true, difficultyTier: true, options: { select: { id: true } } },
+    select: { id: true, questionTypeId: true, difficultyTier: true, options: { orderBy: { id: 'asc' }, select: { id: true } } },
     orderBy: { id: 'asc' },
   });
   const cza2Options = await prisma.itemOption.count({ where: { itemId: 'ENG-003-A-CZ-A2' } });

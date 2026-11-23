@@ -116,7 +116,7 @@ async function run() {
   }
 
   const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } },
-    select: { id: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } } });
+    select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
   requirePopulation('attach:send-history', { 'MATHS row(s)': rows.length, 'crossed send(s) scanned': all.length });
 
   const built = rows.map((r) => {
@@ -142,7 +142,7 @@ async function run() {
     await prisma.$transaction(async (tx) => {
       for (const b of built) {
         await tx.item.update({ where: { id: b.itemId }, data: { sendHistory: b.history } });
-        const after = await tx.item.findUniqueOrThrow({ where: { id: b.itemId }, select: { stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } } });
+        const after = await tx.item.findUniqueOrThrow({ where: { id: b.itemId }, select: { stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
         if (pinHash(after) !== b.pinBefore) throw new Error(`${b.itemId}: writing sendHistory moved the pinned projection — rolling back`);
       }
     });

@@ -22,7 +22,7 @@ async function run() {
     { name: 'an empty verdict does not', input: '', mustBeCaught: false },
   ], (b) => b !== '' && b !== 'CLEAR');
 
-  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { select: { isCorrect: true, misconceptionId: true, content: true } } }, orderBy: { id: 'asc' } });
+  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { orderBy: { id: 'asc' }, select: { isCorrect: true, misconceptionId: true, content: true } } }, orderBy: { id: 'asc' } });
   requirePopulation('emit:publication-shapes', { 'maths rows': rows.length });
 
   const blocked = rows.filter((r) => publishBlockers(r.options, r.reviewedBy, r.authoredBy, r.answerFlaggedAt) === 'missing-misconceptions');

@@ -31,7 +31,7 @@ const FAMILY = 'fifteen-headwords-for-annie';
 async function main() {
   const items = await prisma.item.findMany({
     where: { status: 'LIVE' },
-    select: { id: true, questionTypeId: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, questionTypeId: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   const headwordItems = items.filter((i) => tierRequirementApplies(i.questionTypeId) === true);

@@ -38,7 +38,7 @@ async function run() {
 
   const src = JSON.parse(readFileSync(STAGED, 'utf8')) as { items: Array<Record<string, unknown>> };
   const items = src.items;
-  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, stem: true, explanation: true, options: { select: { content: true } } } });
+  const rows = await prisma.item.findMany({ where: { questionType: { district: 'MATHS' } }, select: { id: true, stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true } } } });
   requirePopulation('apply:maths-dispositions', { 'staged items': items.length, 'rows landed': rows.length });
 
   // ---- THE GLYPH SCAN ----

@@ -58,7 +58,7 @@ async function run() {
   const rows = Array.from({ length: 25 }, (_, i) => derive(i));
   const check = refuter(rows);
   const live = await prisma.item.findMany({ where: { questionTypeId: 'vr-18-related-numbers', status: 'DRAFT' },
-    select: { id: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } }, orderBy: { id: 'asc' } });
   const entry = await prisma.misconception.findUniqueOrThrow({ where: { id: 'vr18-partial-rule' },
     select: { id: true, description: true, childHint: true, approvedBy: true } });
   requirePopulation('propose:vr18-regeneration', { 'row(s) proposed': rows.length, 'row(s) in the store': live.length });

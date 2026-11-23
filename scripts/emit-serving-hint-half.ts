@@ -39,7 +39,7 @@ async function run() {
 
   const items = await prisma.item.findMany({
     where: { status: 'LIVE' },
-    select: { id: true, explanation: true, options: { select: { misconceptionId: true } } },
+    select: { id: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   requirePopulation('emit:serving-hint-half', { 'LIVE items examined': items.length });

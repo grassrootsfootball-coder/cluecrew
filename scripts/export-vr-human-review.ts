@@ -69,7 +69,7 @@ async function main(): Promise<void> {
     const type = await prisma.questionType.findUnique({ where: { id: kase.questionTypeId } });
     const items = await prisma.item.findMany({
       where: { questionTypeId: kase.questionTypeId },
-      include: { options: { include: { misconception: true } } },
+      include: { options: { orderBy: { id: 'asc' }, include: { misconception: true } } },
       orderBy: [{ difficultyTier: 'asc' }, { id: 'asc' }],
     });
 

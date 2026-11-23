@@ -54,7 +54,7 @@ async function run() {
   requirePopulation('land:rehomed-executions', { 'record(s) carrying pair+stemWord': recs.length });
 
   const rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-03-related-words' },
-    select: { id: true, stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
 
   const plan: Array<{ artefactId: string; homedTo: string; rehomed: boolean; optionId: string; optionValue: unknown; text: string; file: string; digest: string; entryId: string | null }> = []; const refused = [];
   for (const r of recs) {

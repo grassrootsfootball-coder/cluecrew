@@ -43,7 +43,7 @@ async function run() {
   // ---- Act 1 + 2: the lead demotion, then the class walk over every LIVE item ----
   const liveItems = await prisma.item.findMany({
     where: { status: 'LIVE' },
-    select: { id: true, stem: true, explanation: true, questionType: { select: { id: true, mechanic: true, district: true } }, options: { select: { content: true } } },
+    select: { id: true, stem: true, explanation: true, questionType: { select: { id: true, mechanic: true, district: true } }, options: { orderBy: { id: 'asc' }, select: { content: true } } },
     orderBy: { id: 'asc' },
   });
   const gateWalk = liveItems.map((i) => ({
@@ -135,7 +135,7 @@ async function run() {
   // ---- Act 5: the batching ceiling, measured not guessed ----
   const packetRows = await prisma.item.findMany({
     where: { status: 'DRAFT', reviewedBy: null },
-    select: { id: true, stem: true, explanation: true, difficultyTier: true, questionTypeId: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, stem: true, explanation: true, difficultyTier: true, questionTypeId: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
   });
   const hypothetical = packetRows.map((r) => ({ ...r, rowSha256: sha256(JSON.stringify(r)) }));
   const fullBytes = Buffer.byteLength(JSON.stringify(hypothetical, null, 1), 'utf8');

@@ -52,7 +52,7 @@ async function run() {
   });
 
   const rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-19-word-number-codes' },
-    select: { id: true, status: true, reviewedBy: true, stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, status: true, reviewedBy: true, stem: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' } });
   requirePopulation('regenerate:vr19', { 'row(s) owned by this derivation': rows.length });
 

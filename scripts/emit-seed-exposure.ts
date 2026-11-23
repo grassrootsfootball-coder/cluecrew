@@ -19,7 +19,7 @@ async function run() {
   // ---- The twenty-five, verbatim, with serve counts ----
   const seeds = await prisma.item.findMany({
     where: { id: { startsWith: 'seed-vr' }, status: 'NEVER_SHIPPABLE', OR: [{ id: { startsWith: 'seed-vr09' } }, { id: { startsWith: 'seed-vr11' } }] },
-    select: { id: true, questionTypeId: true, stem: true, explanation: true, difficultyTier: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } },
+    select: { id: true, questionTypeId: true, stem: true, explanation: true, difficultyTier: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   const servedRows = [];

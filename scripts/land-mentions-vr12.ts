@@ -28,7 +28,7 @@ async function run() {
 
   const items = await prisma.item.findMany({
     where: { questionTypeId: 'vr-12-compound-words' },
-    select: { id: true, status: true, stem: true, explanation: true, questionType: { select: { mechanic: true } }, options: { select: { content: true, misconceptionId: true } } },
+    select: { id: true, status: true, stem: true, explanation: true, questionType: { select: { mechanic: true } }, options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   const rows: Array<Record<string, unknown>> = [];

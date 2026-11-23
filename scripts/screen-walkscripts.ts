@@ -28,7 +28,7 @@ async function run() {
     select: {
       id: true, status: true, questionTypeId: true, explanation: true, stem: true,
       questionType: { select: { mechanic: true } },
-      options: { select: { content: true, misconceptionId: true } },
+      options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionId: true } },
     },
     orderBy: { id: 'asc' },
   });

@@ -76,7 +76,7 @@ async function run() {
   for (const h of hits.values()) {
     const row = await prisma.item.findUnique({ where: { id: h.itemId },
       select: { id: true, questionType: { select: { district: true } }, stem: true,
-        options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+        options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
     // `undefined` vanishes through JSON.stringify and breaks the recompute guard — omit the key,
     // never set it to undefined (R88, third time this week).
     if (!row) { refused.push({ itemId: h.itemId, optionValue: h.optionValue, file: h.file, why: 'the row is not in this store' }); continue; }

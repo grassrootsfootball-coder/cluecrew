@@ -21,7 +21,7 @@ const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 async function run() {
   const mints = JSON.parse(readFileSync('/Users/davidb/Downloads/maths-six-mints-for-code.json', 'utf8')) as { entries: Array<{ id: string; behaviour: string; childHint: string; secondCarrierCandidate?: Record<string, unknown> }> };
   const entry = mints.entries.find((e) => e.id === 'fraction-part-used-alone')!;
-  const item = await prisma.item.findUniqueOrThrow({ where: { id: 'MC01-FDP-08' }, select: { stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+  const item = await prisma.item.findUniqueOrThrow({ where: { id: 'MC01-FDP-08' }, select: { stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
   const prose = carrierWorking('MC01-FDP-08', 'D');
   requirePopulation('cross:fdp08d-prose', { 'candidate carrier(s)': 1, 'crossed copies stating the prose': prose.copiesHoldingTheCarrier });
   if (prose.state !== 'PRESENT') throw new Error(`the prose is ${prose.state} — refusing to cross a reading with one text missing`);

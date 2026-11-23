@@ -54,7 +54,7 @@ async function run() {
     if (!b) throw new Error(`census has no BY_PATTERN entry for ${id} — refusing to cross a reading without its count`);
     const entry = lib.get(id)!;
     const opts = await prisma.itemOption.findMany({ where: { misconceptionId: id, item: { status: 'DRAFT' } },
-      select: { content: true, item: { select: { id: true, stem: true, options: { select: { content: true, isCorrect: true } } } } }, take: 3 });
+      select: { content: true, item: { select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } } }, take: 3 });
     const samples = opts.map((o) => ({
       itemId: o.item.id, stem: o.item.stem,
       theKey: o.item.options.filter((x) => x.isCorrect).map((x) => (x.content as { value: unknown }).value),

@@ -38,7 +38,7 @@ function passages(): Map<string, string> {
 
 async function main() {
   const source = passages();
-  const items = await prisma.item.findMany({ include: { options: true, questionType: { select: { mechanic: true } } } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } }, questionType: { select: { mechanic: true } } } });
 
   const plan: { id: string; explanation: Record<string, unknown>; added: string[] }[] = [];
   const unresolvable: string[] = [];

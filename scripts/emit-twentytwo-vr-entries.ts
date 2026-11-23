@@ -37,7 +37,7 @@ async function run() {
   // Carriage: the DRAFT unsigned rows carrying each tag, by id.
   const carriers = await prisma.item.findMany({
     where: { status: 'DRAFT', reviewedBy: null, options: { some: { misconceptionId: { in: allIds } } } },
-    select: { id: true, options: { select: { misconceptionId: true } } },
+    select: { id: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   const rowsByTag = new Map<string, string[]>();
@@ -65,7 +65,7 @@ async function run() {
   const surfaceLink = entries.find((e) => e.id === 'vr02-surface-link')!;
   const tier3 = await prisma.item.findMany({
     where: { questionTypeId: 'vr-02-two-odd-ones-out', difficultyTier: 3 },
-    select: { id: true, stem: true, options: { select: { content: true, misconceptionId: true } } },
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, misconceptionId: true } } },
     orderBy: { id: 'asc' },
   });
   const tier3SurfaceRows = tier3.map((r) => ({

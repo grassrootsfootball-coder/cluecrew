@@ -59,7 +59,7 @@ async function main() {
     select: {
       id: true,
       questionTypeId: true,
-      options: { select: { misconceptionId: true, tags: { select: { misconceptionId: true } } } },
+      options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, tags: { orderBy: { id: 'asc' }, select: { misconceptionId: true } } } },
     },
   });
   requirePopulation('cross-store census', { 'LIVE VR items': live.length });

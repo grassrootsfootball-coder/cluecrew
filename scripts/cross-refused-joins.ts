@@ -92,7 +92,7 @@ async function run() {
   const rows = [];
   for (const r of REFUSALS) {
     const entry = mints.entries.find((e) => e.id === r.entryId)!;
-    const item = await prisma.item.findUniqueOrThrow({ where: { id: r.itemId }, select: { id: true, stem: true, options: { select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+    const item = await prisma.item.findUniqueOrThrow({ where: { id: r.itemId }, select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
     const opt = item.options.find((o) => (o.content as { label?: string }).label === r.label)!;
     const senderWorking = r.label === (entry.secondCarrierCandidate?.optionLabel ?? '') ? entry.secondCarrierCandidate?.working : entry.join?.working;
     rows.push({

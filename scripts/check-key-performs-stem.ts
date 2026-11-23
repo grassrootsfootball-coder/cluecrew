@@ -36,7 +36,7 @@ async function run() {
   const rows = await prisma.item.findMany({
     select: { id: true, status: true, questionTypeId: true, stem: true,
       questionType: { select: { district: true } },
-      options: { select: { content: true, isCorrect: true } } },
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } },
   });
   requirePopulation('check:key-performs-stem', { 'item(s) in the estate': rows.length });
 

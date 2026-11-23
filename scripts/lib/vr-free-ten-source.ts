@@ -23,7 +23,7 @@ export async function buildFreeTenSource(prisma: PrismaClient): Promise<FreeTenC
   for (const kase of cases) {
     const items = await prisma.item.findMany({
       where: { questionTypeId: kase.questionTypeId },
-      include: { questionType: true, options: { include: { misconception: true } } },
+      include: { questionType: true, options: { orderBy: { id: 'asc' }, include: { misconception: true } } },
       orderBy: { id: 'asc' },
     });
     const records = items.map((item) => {

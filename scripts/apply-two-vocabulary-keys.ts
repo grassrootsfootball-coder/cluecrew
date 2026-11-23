@@ -39,7 +39,7 @@ async function main() {
   for (const edit of EDITS) {
     const item = await prisma.item.findUniqueOrThrow({
       where: { id: edit.itemId },
-      include: { options: true, questionType: { select: { mechanic: true } } },
+      include: { options: { orderBy: { id: 'asc' } }, questionType: { select: { mechanic: true } } },
     });
     const key = item.options.find((o) => o.isCorrect);
     if (!key) throw new Error(`REFUSED at ${edit.itemId}: no correct option.`);

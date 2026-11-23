@@ -54,7 +54,7 @@ async function run() {
   };
   const m75BytesBefore = sha(canonicalJson(JSON.parse(JSON.stringify(before.m75))));
 
-  const row = await prisma.item.findUniqueOrThrow({ where: { id: 'MC01-FDP-08' }, select: { id: true, stem: true, explanation: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
+  const row = await prisma.item.findUniqueOrThrow({ where: { id: 'MC01-FDP-08' }, select: { id: true, stem: true, explanation: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true } } } });
   const C = row.options.find((o) => (o.content as { label?: string }).label === 'C')!;
   const D = row.options.find((o) => (o.content as { label?: string }).label === 'D')!;
 
@@ -116,7 +116,7 @@ async function run() {
     m75: await prisma.misconception.findUniqueOrThrow({ where: { id: M75 } }),
     mint: await prisma.misconception.findUniqueOrThrow({ where: { id: MINT }, select: { id: true, status: true, childHint: true, rejectionNote: true } }),
   };
-  const rowAfter = await prisma.item.findUniqueOrThrow({ where: { id: 'MC01-FDP-08' }, select: { stem: true, explanation: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+  const rowAfter = await prisma.item.findUniqueOrThrow({ where: { id: 'MC01-FDP-08' }, select: { stem: true, explanation: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
   const projAfter = sha(canonicalJson(strip({ stem: rowAfter.stem, options: rowAfter.options.map((o) => ({ content: o.content, isCorrect: o.isCorrect })), explanation: rowAfter.explanation }) as object));
   const signedAfter = await prisma.item.count({ where: { questionType: { district: 'MATHS' }, reviewedBy: { not: null } } });
   const entries = await prisma.misconception.count({ where: { district: 'MATHS', status: 'ACTIVE', createdAt: { gte: new Date('2026-08-29') } } });

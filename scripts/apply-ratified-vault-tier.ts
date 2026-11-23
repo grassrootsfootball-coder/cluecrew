@@ -57,7 +57,7 @@ async function main() {
   console.log(`  vault-guard: ${g ? `VOCAB_BANK card (bank rarity ${g.bankRarity}, ${g.halves}); guard ${g.guardBefore} → ${g.guardAfter}` : 'not a VOCAB_BANK headword'}`);
 
   // Every LIVE item carrying the headword: the tier the generator would derive, before and after.
-  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, select: { id: true, difficultyTier: true, stem: true, options: { where: { isCorrect: true }, select: { content: true } } } });
+  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, select: { id: true, difficultyTier: true, stem: true, options: { orderBy: { id: 'asc' }, where: { isCorrect: true }, select: { content: true } } } });
   const carrying = items.filter((i) => ((i.stem as { words?: unknown[] }).words ?? []).map((w) => String(w).toLowerCase()).includes(HEAD));
   for (const it of carrying) {
     const key = String((it.options[0]?.content as { value?: string })?.value ?? '');

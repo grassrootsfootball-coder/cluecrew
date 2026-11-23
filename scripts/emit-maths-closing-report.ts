@@ -52,7 +52,7 @@ async function run() {
   const rows = await prisma.item.findMany({
     where: { questionType: { district: 'MATHS' } },
     select: { id: true, status: true, reviewedBy: true, authoredBy: true, answerFlaggedAt: true,
-      options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
   });
   requirePopulation('emit:maths-closing-report', { 'MATHS row(s)': rows.length });
 

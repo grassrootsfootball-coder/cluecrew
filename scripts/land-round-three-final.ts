@@ -70,7 +70,7 @@ async function main() {
   // ---- ONE: PIN AND SIGN VR-02 ----------------------------------------------------------------
   console.log('\nONE — pin and sign vr-02 against her 197th and 200th.');
   const vr02rows = await prisma.item.findMany({ where: { questionTypeId: 'vr-02-two-odd-ones-out', status: 'DRAFT' }, orderBy: { id: 'asc' },
-    select: { id: true, stem: true, explanation: true, sendHistory: true, answerFlaggedAt: true, options: { select: { content: true, isCorrect: true, misconceptionId: true } } } });
+    select: { id: true, stem: true, explanation: true, sendHistory: true, answerFlaggedAt: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } } });
   requirePopulation('round-three:vr02', { 'vr-02 DRAFT row(s)': vr02rows.length });
   for (const row of vr02rows) {
     if (row.answerFlaggedAt) { rec('vr02', row.id, 'HOLD', 'answer-flagged — a published hold', { case: 'vr-02' }); continue; }
@@ -87,7 +87,7 @@ async function main() {
         pinnedProjectionSha256: subjectHash, pinnedAt: '2026-09-02', pinnedBy: RECORDED_BY,
         note: 'the case was read complete before the population artefact existed; identity is pinned to the current projection with both reading records named, and the returns\' outcomes are asserted present via the store\'s own events citing them',
       } } });
-      const after = await prisma.item.findUniqueOrThrow({ where: { id: row.id }, select: { stem: true, explanation: true, options: { select: { content: true, isCorrect: true } } } });
+      const after = await prisma.item.findUniqueOrThrow({ where: { id: row.id }, select: { stem: true, explanation: true, options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true } } } });
       if (pinHash(after) !== before) throw new Error(`${row.id}: pin write moved the projection`);
     }
     rec('vr02-pin', row.id, pinnedAlready ? 'ALREADY' : 'PINNED', `projection ${subjectHash.slice(0, 12)}, both reading records named`, { case: 'vr-02' });
@@ -133,7 +133,7 @@ async function main() {
     const walkAsset = (c.modes as Record<string, { assetRef?: string }>)?.walk;
     const walkServes = !!walkAsset?.assetRef && !walkAsset.assetRef.startsWith('placeholder/');
     const rows = await prisma.item.findMany({ where: { questionTypeId: qt, status: 'DRAFT' },
-      select: { id: true, explanation: true, answerFlaggedAt: true, sendHistory: true, options: { select: { misconceptionId: true, misconceptionExecution: true } } } });
+      select: { id: true, explanation: true, answerFlaggedAt: true, sendHistory: true, options: { orderBy: { id: 'asc' }, select: { misconceptionId: true, misconceptionExecution: true } } } });
     const signedIds = new Set((await prisma.attributionEvent.findMany({ where: { recordId: { in: rows.map((r) => r.id) }, action: 'SIGNED', reviewerId: { not: null } }, select: { recordId: true } })).map((e) => e.recordId));
     let whole = 0, tagsBad = 0, execMissing = 0, walkMissing = 0, untaggedRows = 0;
     const unattestedEntries = new Set<string>();

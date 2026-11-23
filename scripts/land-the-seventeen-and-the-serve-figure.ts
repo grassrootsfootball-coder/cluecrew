@@ -58,7 +58,7 @@ async function main() {
 
   // ---- THE PROJECTION'S DECLARED CHANGES, ASSERTED AGAINST OUR ROWS FIRST ---------------------
   const vr16 = await prisma.item.findMany({ where: { questionTypeId: 'vr-16-opposite-meaning' }, orderBy: { id: 'asc' },
-    select: { id: true, stem: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
+    select: { id: true, stem: true, options: { orderBy: { id: 'asc' }, select: { id: true, content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true } } } });
   requirePopulation('seventeen:projection-assert', { 'vr-16 row(s)': vr16.length });
   const warmRow = vr16.find((r) => r.id === 'gen-vr-16-opposite-meaning-01');
   const warmSeat = warmRow?.options.find((o) => String((o.content as { value?: unknown })?.value ?? '') === 'warm');

@@ -70,7 +70,7 @@ async function run() {
   const rows = await prisma.item.findMany({
     where: { questionType: { district: 'MATHS' }, reviewedBy: null },
     select: { id: true, stem: true, explanation: true, status: true, authoredBy: true, answerFlaggedAt: true, reviewedBy: true,
-      options: { select: { content: true, isCorrect: true, misconceptionId: true } } },
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true } } },
   });
   requirePopulation('sign:joins-unblocked', { 'unsigned MATHS row(s)': rows.length });
 
