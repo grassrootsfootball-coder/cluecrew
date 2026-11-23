@@ -30119,3 +30119,19 @@ the same last heading.
 **The snapshot committed with this entry also carries the vault session's seven landed redrafts**
 (14 events and 7 write-log rows on `Word`), because it is a picture of the one store. Their register
 entry and scripts are theirs to commit.
+
+## R1049 — the dependency audit, first run against real CI in months (David: "Yes, patch it", 2026-11-23)
+
+The audit step had been skipped behind failing steps, so its first local run against the real setup
+found 20 high or critical advisories, 3 of them **unauthenticated remote code execution in Next.js
+15.5.22**.
+- **Next.js:** floor raised to `^15.5.29`, the latest 15.5 patch (2026-11-03), which carries every
+  fix from 15.5.28. `pnpm install` had left the lockfile on 15.5.22 while the manifest said
+  `^15.5.29`, and `--frozen-lockfile` did not notice. Only `pnpm add next@^15.5.29` moved the
+  resolved version, which is why the lockfile entry is now checked by eye.
+- **Patch-level transitive fixes**, under the existing override rule (2026-08-08: override, never
+  ignore, a patch that lands cleanly): sharp ≥0.35.5, brace-expansion (three lines), js-yaml ≥4.3.2,
+  source-map-js ≥1.2.2, vite ≥7.3.7, effect ≥3.22.1.
+- **Measured:** audit at 2 critical and 2 high, all needing a major version (tinypool via vitest 4,
+  deepmerge-ts via Prisma, zod 3→4). Typecheck is clean, core 797 and web 41 tests pass, and
+  `pnpm build` compiles on 15.5.29.
