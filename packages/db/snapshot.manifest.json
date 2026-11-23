@@ -1,7 +1,7 @@
 {
  "ruling": "R1039",
  "note": "Content tables of the dev database, for CI. Regenerate with `pnpm snapshot:export`; never hand-edit.",
- "latestMigration": "20260902190055_add_signature_subject",
+ "latestMigration": "20261123120000_superseded_outside_field",
  "tables": [
   {
    "table": "QuestionType",
@@ -166,13 +166,14 @@
     "draftingMethod",
     "clusterPosition",
     "drafterNote",
-    "sendHistory"
+    "sendHistory",
+    "superseded"
    ],
    "primaryKey": [
     "id"
    ],
    "rows": 1227,
-   "sha256": "22889c5bd9a664ee271e5a9c9c4909edd7505c9c60a284c687dea93a37782702"
+   "sha256": "9419fe5bb3d68d034bc2bbe40c21ad35feb6408af89f00d4d72c9502c77e5a5b"
   },
   {
    "table": "ItemOption",
@@ -193,13 +194,14 @@
     "a36Note",
     "defeatedByAbsence",
     "drafterDeclaredPull",
-    "drafterDeclaredPullVerdict"
+    "drafterDeclaredPullVerdict",
+    "superseded"
    ],
    "primaryKey": [
     "id"
    ],
    "rows": 4547,
-   "sha256": "5b2e6fea0b6fcd955af1a405dab1cc52887af41496366f4783188f08141049ea"
+   "sha256": "0f976e513ebbc5111c7af51ac275e358d8c96c0f0bd9daf1c0977b315e0941bf"
   },
   {
    "table": "ItemOptionTag",
@@ -256,8 +258,8 @@
    "primaryKey": [
     "id"
    ],
-   "rows": 7638,
-   "sha256": "d9a66ffcf4d91e8ed5c03fbd261a0dc7fcacf60031745ea1bf24668b047f2746"
+   "rows": 7879,
+   "sha256": "0e64ec6f6a90a2ba3511d21fc072824ac60ec97f2c1ebeffc2b7efdf596199eb"
   },
   {
    "table": "FamilyBankSignature",
@@ -311,8 +313,8 @@
    "primaryKey": [
     "id"
    ],
-   "rows": 30969,
-   "sha256": "124053fdd46265fdd3edafb3b61c6ffaa6aa51dc3ad87dabf50d739849c75ab5"
+   "rows": 31298,
+   "sha256": "d6295143abe544fd2c8e64303182b303434dbfffce61d58367447fc9edd8e79b"
   },
   {
    "table": "AdminAuditLog",
@@ -332,5 +334,5 @@
    "sha256": "b02651882e12e5fbe20d0082666b71152fb66a11ac4f308ce4009635827c83cf"
   }
  ],
- "digest": "8a3730277bfc6881"
+ "digest": "0cbe5d3db7e9df3d"
 }

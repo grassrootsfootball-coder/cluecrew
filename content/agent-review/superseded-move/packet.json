@@ -1,0 +1,4044 @@
+{
+  "door": "superseded-move",
+  "ruling": "R1042",
+  "note": "Each row as it will stand AFTER the move (stem, explanation, options), the entries that move out of it, and the stored hashes that will stop reproducing because they were taken over the retention-INCLUDED projection. The child-facing content does not change; the reviewer re-reads it as a child would and SIGNs or HOLDs.",
+  "rows": [
+    {
+      "itemId": "MC01-FDP-03",
+      "status": "LIVE",
+      "questionTypeId": "maths-fdp",
+      "preImageSha256": "7d866374a75052fa3f2034b47677b165ea484b5e3bd3af432e2b4ae34b91d7ca",
+      "before": {
+        "stem": {
+          "text": "What is 25% of £80?"
+        },
+        "explanation": {
+          "hintCore": "25% is a quarter, so divide by four.",
+          "walkScript": "25% means one quarter. Find a quarter of 80 by sharing into four. 80 divided by 4 is 20, so £20. The catch takes 25 off, forgets to divide by 100, or halves instead."
+        },
+        "options": [
+          {
+            "optionId": "cmteo81xn000wtmmji53fi4fa",
+            "content": {
+              "label": "A",
+              "value": "£20",
+              "_previousValue": "20"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo81xn000xtmmjokqqes2i",
+            "content": {
+              "label": "B",
+              "value": "£55",
+              "_previousValue": "55"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo81xo000ytmmjygeyxy3k",
+            "content": {
+              "label": "C",
+              "value": "£2000",
+              "_previousValue": "2000"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo81xo000ztmmjf7mlrqn4",
+            "content": {
+              "label": "D",
+              "value": "£40",
+              "_previousValue": "40"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "text": "What is 25% of £80?"
+        },
+        "explanation": {
+          "hintCore": "25% is a quarter, so divide by four.",
+          "walkScript": "25% means one quarter. Find a quarter of 80 by sharing into four. 80 divided by 4 is 20, so £20. The catch takes 25 off, forgets to divide by 100, or halves instead."
+        },
+        "options": [
+          {
+            "optionId": "cmteo81xn000wtmmji53fi4fa",
+            "content": {
+              "label": "A",
+              "value": "£20"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo81xn000xtmmjokqqes2i",
+            "content": {
+              "label": "B",
+              "value": "£55"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo81xo000ytmmjygeyxy3k",
+            "content": {
+              "label": "C",
+              "value": "£2000"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo81xo000ztmmjf7mlrqn4",
+            "content": {
+              "label": "D",
+              "value": "£40"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "20",
+          "optionId": "cmteo81xn000wtmmji53fi4fa"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "55",
+          "optionId": "cmteo81xn000xtmmjokqqes2i"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "2000",
+          "optionId": "cmteo81xo000ytmmjygeyxy3k"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "40",
+          "optionId": "cmteo81xo000ztmmjf7mlrqn4"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmteps9180009tmccwh6nomtk",
+          "action": "APPROVED",
+          "actor": "Annie",
+          "at": "2026-08-29T18:28:52.797Z",
+          "subjectHash": "9fea8856794467c1162128d5dac53bd9c05df20af09004686cc49ea4a01bd27c"
+        },
+        {
+          "eventId": "cmtexzxl10001tmrk7t7cy9jt",
+          "action": "SIGNED",
+          "actor": "Annie",
+          "at": "2026-08-29T22:18:48.134Z",
+          "subjectHash": "9fea8856794467c1162128d5dac53bd9c05df20af09004686cc49ea4a01bd27c"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "414e41590f210060282c9738abf9b52c7df586539f248d9b7d4d0a44e1dbf102"
+      }
+    },
+    {
+      "itemId": "MC01-GEOM-02",
+      "status": "LIVE",
+      "questionTypeId": "maths-geom",
+      "preImageSha256": "9d75e486f9651944636e5179f27d0f47ce13b4082122438a34b7fb2c8ebb5104",
+      "before": {
+        "stem": {
+          "text": "Two angles sit together on a straight line. One angle is 125°. What is the size of the other angle?"
+        },
+        "explanation": {
+          "hintCore": "Angles on a straight line add to 180°. Subtract from 180.",
+          "walkScript": "Angles on a straight line always add to 180°. Start with 180 and take away the 125° you know. The angle left is 55°. The trap answer subtracts the digits the other way.",
+          "_previousHintCore": "Angles on a straight line add to 180° — subtract from 180."
+        },
+        "options": [
+          {
+            "optionId": "cmteo81yq001gtmmjeak7uu0m",
+            "content": {
+              "label": "A",
+              "value": "235°"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo81yq001htmmjpxecv6al",
+            "content": {
+              "label": "B",
+              "value": "55°"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo81yq001itmmj7pk4fvw8",
+            "content": {
+              "label": "C",
+              "value": "35°"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo81yq001jtmmj9mszuju7",
+            "content": {
+              "label": "D",
+              "value": "65°"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "text": "Two angles sit together on a straight line. One angle is 125°. What is the size of the other angle?"
+        },
+        "explanation": {
+          "hintCore": "Angles on a straight line add to 180°. Subtract from 180.",
+          "walkScript": "Angles on a straight line always add to 180°. Start with 180 and take away the 125° you know. The angle left is 55°. The trap answer subtracts the digits the other way."
+        },
+        "options": [
+          {
+            "optionId": "cmteo81yq001gtmmjeak7uu0m",
+            "content": {
+              "label": "A",
+              "value": "235°"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo81yq001htmmjpxecv6al",
+            "content": {
+              "label": "B",
+              "value": "55°"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo81yq001itmmj7pk4fvw8",
+            "content": {
+              "label": "C",
+              "value": "35°"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo81yq001jtmmj9mszuju7",
+            "content": {
+              "label": "D",
+              "value": "65°"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "explanation._previousHintCore",
+          "container": "explanation",
+          "path": [],
+          "key": "_previousHintCore",
+          "value": "Angles on a straight line add to 180° — subtract from 180."
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmteps91d000jtmcc2u6n6lh7",
+          "action": "APPROVED",
+          "actor": "Annie",
+          "at": "2026-08-29T18:28:52.801Z",
+          "subjectHash": "a2f62aa7a5384f976d6020171bc5431a7a9548da592cc9746c7aedceed104c68"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "9a1ed1239d899a8ef1d3a63969abb989285f5f693bff6e8295361d0a38bfb319"
+      }
+    },
+    {
+      "itemId": "MC04-CALC-04",
+      "status": "LIVE",
+      "questionTypeId": "maths-calc",
+      "preImageSha256": "53aa439666d12b591c77eb7c31005c1c616fec8244d449b2bb8545660d4ce0fb",
+      "before": {
+        "stem": {
+          "text": "A game costs £8.40. Ravi also buys a controller for £5.75. He pays with a £20 note. How much change does he get?"
+        },
+        "explanation": {
+          "hintCore": "Total the spending, then subtract from £20.",
+          "walkScript": "First add the two prices to find the total spent. That comes to £14.15. Take it from £20 to leave £5.85. The trap uses one price only or stops at the total."
+        },
+        "options": [
+          {
+            "optionId": "cmteo82gx00c8tmmjwshq2vgg",
+            "content": {
+              "label": "A",
+              "value": "£5.85",
+              "_previousValue": "5.85"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo82gx00c9tmmj33cm5cpw",
+            "content": {
+              "label": "B",
+              "value": "£11.60",
+              "_previousValue": "11.60"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82gx00catmmjoqvk6659",
+            "content": {
+              "label": "C",
+              "value": "£14.15",
+              "_previousValue": "14.15"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82gx00cbtmmj5d3s5cu4",
+            "content": {
+              "label": "D",
+              "value": "£7.00",
+              "_previousValue": "7.00"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "text": "A game costs £8.40. Ravi also buys a controller for £5.75. He pays with a £20 note. How much change does he get?"
+        },
+        "explanation": {
+          "hintCore": "Total the spending, then subtract from £20.",
+          "walkScript": "First add the two prices to find the total spent. That comes to £14.15. Take it from £20 to leave £5.85. The trap uses one price only or stops at the total."
+        },
+        "options": [
+          {
+            "optionId": "cmteo82gx00c8tmmjwshq2vgg",
+            "content": {
+              "label": "A",
+              "value": "£5.85"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo82gx00c9tmmj33cm5cpw",
+            "content": {
+              "label": "B",
+              "value": "£11.60"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82gx00catmmjoqvk6659",
+            "content": {
+              "label": "C",
+              "value": "£14.15"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82gx00cbtmmj5d3s5cu4",
+            "content": {
+              "label": "D",
+              "value": "£7.00"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "5.85",
+          "optionId": "cmteo82gx00c8tmmjwshq2vgg"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "11.60",
+          "optionId": "cmteo82gx00c9tmmj33cm5cpw"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "14.15",
+          "optionId": "cmteo82gx00catmmjoqvk6659"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "7.00",
+          "optionId": "cmteo82gx00cbtmmj5d3s5cu4"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmteps93d0061tmccch2lc5do",
+          "action": "APPROVED",
+          "actor": "Annie",
+          "at": "2026-08-29T18:28:52.874Z",
+          "subjectHash": "3804e7e392755a732f09c2f8782ffdead8360754730b8a0d8439e577656a50be"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "3d4a18f123abd4ad39a8f2704e0046d6d0ef3694583f533670098977a35deaf0"
+      }
+    },
+    {
+      "itemId": "MC04-CALC-05",
+      "status": "LIVE",
+      "questionTypeId": "maths-calc",
+      "preImageSha256": "c466b24e10afe224f76384e4ddc6f930d283803041c847397fee01f69bacdf28",
+      "before": {
+        "stem": {
+          "text": "A 2 litre bottle of squash is shared equally between 8 children. How many litres of squash does each child get?"
+        },
+        "explanation": {
+          "hintCore": "Share the smaller amount into the larger group.",
+          "walkScript": "Share the two litres equally among eight children. Two divided by eight is one quarter, or 0.25. Each child gets 0.25 litres. The trap flips the sharing or changes the operation."
+        },
+        "options": [
+          {
+            "optionId": "cmteo82h300cctmmjpzxkdc6k",
+            "content": {
+              "label": "A",
+              "value": "0.25 litres",
+              "_previousValue": "0.25"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo82h300cdtmmjr7v9anb3",
+            "content": {
+              "label": "B",
+              "value": "4 litres",
+              "_previousValue": "4"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82h400cetmmjra6vkmx9",
+            "content": {
+              "label": "C",
+              "value": "16 litres",
+              "_previousValue": "16"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82h400cftmmjizpbes41",
+            "content": {
+              "label": "D",
+              "value": "2 litres",
+              "_previousValue": "2"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "text": "A 2 litre bottle of squash is shared equally between 8 children. How many litres of squash does each child get?"
+        },
+        "explanation": {
+          "hintCore": "Share the smaller amount into the larger group.",
+          "walkScript": "Share the two litres equally among eight children. Two divided by eight is one quarter, or 0.25. Each child gets 0.25 litres. The trap flips the sharing or changes the operation."
+        },
+        "options": [
+          {
+            "optionId": "cmteo82h300cctmmjpzxkdc6k",
+            "content": {
+              "label": "A",
+              "value": "0.25 litres"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo82h300cdtmmjr7v9anb3",
+            "content": {
+              "label": "B",
+              "value": "4 litres"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82h400cetmmjra6vkmx9",
+            "content": {
+              "label": "C",
+              "value": "16 litres"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82h400cftmmjizpbes41",
+            "content": {
+              "label": "D",
+              "value": "2 litres"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "0.25",
+          "optionId": "cmteo82h300cctmmjpzxkdc6k"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "4",
+          "optionId": "cmteo82h300cdtmmjr7v9anb3"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "16",
+          "optionId": "cmteo82h400cetmmjra6vkmx9"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "2",
+          "optionId": "cmteo82h400cftmmjizpbes41"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmteps93e0063tmcchvyq3ywg",
+          "action": "APPROVED",
+          "actor": "Annie",
+          "at": "2026-08-29T18:28:52.874Z",
+          "subjectHash": "2cbaf945b06ca3cd20d923afb02ab3956f6bcfa5efcd2b3613829d3be8aa0f4f"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "dc1efa10fe445bf00ab069b0d02d6e4f686745d770021de4c5db3ba8cd11e640"
+      }
+    },
+    {
+      "itemId": "MC05-CALC-04",
+      "status": "LIVE",
+      "questionTypeId": "maths-calc",
+      "preImageSha256": "ba6b58085b660f3d20f09427afe0d4aff8d4605ced369f02fa4e4894c0dc752c",
+      "before": {
+        "stem": {
+          "text": "A jigsaw costs £7.65. Mia also buys a pen for £2.80. She pays with a £20 note. How much change does she get?"
+        },
+        "explanation": {
+          "hintCore": "Total the spending, then subtract from £20.",
+          "walkScript": "First add the two prices to find the total spent. That comes to £10.45. Take it from £20 to leave £9.55. The trap uses one price only or stops at the total."
+        },
+        "options": [
+          {
+            "optionId": "cmteo82nk00gctmmjznecowka",
+            "content": {
+              "label": "A",
+              "value": "£9.55",
+              "_previousValue": "9.55"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo82nk00gdtmmjak4kdrg5",
+            "content": {
+              "label": "B",
+              "value": "£12.35",
+              "_previousValue": "12.35"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82nk00getmmj0kagu4ys",
+            "content": {
+              "label": "C",
+              "value": "£10.45",
+              "_previousValue": "10.45"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82nk00gftmmjfhdo9bz5",
+            "content": {
+              "label": "D",
+              "value": "£11.00",
+              "_previousValue": "11.00"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "text": "A jigsaw costs £7.65. Mia also buys a pen for £2.80. She pays with a £20 note. How much change does she get?"
+        },
+        "explanation": {
+          "hintCore": "Total the spending, then subtract from £20.",
+          "walkScript": "First add the two prices to find the total spent. That comes to £10.45. Take it from £20 to leave £9.55. The trap uses one price only or stops at the total."
+        },
+        "options": [
+          {
+            "optionId": "cmteo82nk00gctmmjznecowka",
+            "content": {
+              "label": "A",
+              "value": "£9.55"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo82nk00gdtmmjak4kdrg5",
+            "content": {
+              "label": "B",
+              "value": "£12.35"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82nk00getmmj0kagu4ys",
+            "content": {
+              "label": "C",
+              "value": "£10.45"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82nk00gftmmjfhdo9bz5",
+            "content": {
+              "label": "D",
+              "value": "£11.00"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "9.55",
+          "optionId": "cmteo82nk00gctmmjznecowka"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "12.35",
+          "optionId": "cmteo82nk00gdtmmjak4kdrg5"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "10.45",
+          "optionId": "cmteo82nk00getmmj0kagu4ys"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "11.00",
+          "optionId": "cmteo82nk00gftmmjfhdo9bz5"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmteps94b0089tmccob623v3j",
+          "action": "APPROVED",
+          "actor": "Annie",
+          "at": "2026-08-29T18:28:52.907Z",
+          "subjectHash": "dfde4d021ef56a5edc6f389afa619beeed6cc9b3f0b221960514305f4ac57f3d"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "fbefed8aeb287d425e813a32a5cec24120b351ef4ac5dbc259b16f1f1f7951f2"
+      }
+    },
+    {
+      "itemId": "MC05-CALC-05",
+      "status": "LIVE",
+      "questionTypeId": "maths-calc",
+      "preImageSha256": "698760e05e9a0345eb221b53901d739eba88132f153e6f9d330410b806ec6c7c",
+      "before": {
+        "stem": {
+          "text": "A 3 litre bottle of juice is shared equally between 6 children. How many litres of juice does each child get?"
+        },
+        "explanation": {
+          "hintCore": "Share the smaller amount into the larger group.",
+          "walkScript": "Share the three litres equally among six children. Three divided by six is one half, or 0.5. Each child gets 0.5 litres. The trap flips the sharing or changes the operation."
+        },
+        "options": [
+          {
+            "optionId": "cmteo82nq00ggtmmjo2bl8gh4",
+            "content": {
+              "label": "A",
+              "value": "0.5 litres",
+              "_previousValue": "0.5"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo82nq00ghtmmjhtpg9jb7",
+            "content": {
+              "label": "B",
+              "value": "2 litres",
+              "_previousValue": "2"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82nq00gitmmj87usbtoy",
+            "content": {
+              "label": "C",
+              "value": "18 litres",
+              "_previousValue": "18"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82nq00gjtmmjygvl0cwq",
+            "content": {
+              "label": "D",
+              "value": "3 litres",
+              "_previousValue": "3"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "text": "A 3 litre bottle of juice is shared equally between 6 children. How many litres of juice does each child get?"
+        },
+        "explanation": {
+          "hintCore": "Share the smaller amount into the larger group.",
+          "walkScript": "Share the three litres equally among six children. Three divided by six is one half, or 0.5. Each child gets 0.5 litres. The trap flips the sharing or changes the operation."
+        },
+        "options": [
+          {
+            "optionId": "cmteo82nq00ggtmmjo2bl8gh4",
+            "content": {
+              "label": "A",
+              "value": "0.5 litres"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "cmteo82nq00ghtmmjhtpg9jb7",
+            "content": {
+              "label": "B",
+              "value": "2 litres"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82nq00gitmmj87usbtoy",
+            "content": {
+              "label": "C",
+              "value": "18 litres"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "cmteo82nq00gjtmmjygvl0cwq",
+            "content": {
+              "label": "D",
+              "value": "3 litres"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "0.5",
+          "optionId": "cmteo82nq00ggtmmjo2bl8gh4"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "2",
+          "optionId": "cmteo82nq00ghtmmjhtpg9jb7"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "18",
+          "optionId": "cmteo82nq00gitmmj87usbtoy"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "3",
+          "optionId": "cmteo82nq00gjtmmjygvl0cwq"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmteps94b008btmcc26riyh6s",
+          "action": "APPROVED",
+          "actor": "Annie",
+          "at": "2026-08-29T18:28:52.908Z",
+          "subjectHash": "8e2d1a4fff100f27f1f565f2965343e4db373f60003203e9b51693ef52f822b0"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "4797b833d68f0b08fc40024aad26ee87384e969d42ff2d8cdd9b055f1f475ca8"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-01",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "438f35e82a0470234c154419c1e3808ffbdca18f307f4aa6d01cd72eee4b8282",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for PIPS?",
+          "_previousPrompt": "Using the code, what is the code for TAP?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-01-opt1",
+            "content": {
+              "value": "6769",
+              "_previousValue": "146"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-01-opt2",
+            "content": {
+              "value": "9676",
+              "_previousValue": "641"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-01-opt3",
+            "content": {
+              "value": "6779",
+              "_previousValue": "147"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for PIPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-01-opt1",
+            "content": {
+              "value": "6769"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-01-opt2",
+            "content": {
+              "value": "9676"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-01-opt3",
+            "content": {
+              "value": "6779"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for TAP?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "146",
+          "optionId": "gen-vr-19-word-number-codes-01-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "641",
+          "optionId": "gen-vr-19-word-number-codes-01-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "147",
+          "optionId": "gen-vr-19-word-number-codes-01-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akjm0001tmrb92vi3epv",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.314Z",
+          "subjectHash": "3d6e6c97f62db93643740a8ab71234eb1799fad17961205718eba3a4c011603d"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "c8cd4e1d72d5bd2f431b70eb835fdcef9f2616894f038a42f55e271784ea7968"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-02",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "d61a947a43064128c4f5f9badb7e0a69b3956652aedd9ba36496ce4e2fc2e65c",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for SAPS?",
+          "_previousPrompt": "Using the code, what is the code for PAT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-02-opt1",
+            "content": {
+              "value": "9469",
+              "_previousValue": "642"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-02-opt2",
+            "content": {
+              "value": "9649",
+              "_previousValue": "246"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-02-opt3",
+            "content": {
+              "value": "9460",
+              "_previousValue": "643"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for SAPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-02-opt1",
+            "content": {
+              "value": "9469"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-02-opt2",
+            "content": {
+              "value": "9649"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-02-opt3",
+            "content": {
+              "value": "9460"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PAT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "642",
+          "optionId": "gen-vr-19-word-number-codes-02-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "246",
+          "optionId": "gen-vr-19-word-number-codes-02-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "643",
+          "optionId": "gen-vr-19-word-number-codes-02-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akk80003tmrb5fitqz6y",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.336Z",
+          "subjectHash": "9c87d91fd20e65ece276ff491402be5aa4c065595df3bf4d47ca60c597bb385c"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "c2c44385ad7697ce9d013fa930215c7d2469ce7ea89b22283be03e1311308a26"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-03",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "e112cd632c501797ca0106168e6cdcf5599fa0e6c94cae37fd64ca125a71cda6",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for SPAS?",
+          "_previousPrompt": "Using the code, what is the code for TIP?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-03-opt1",
+            "content": {
+              "value": "9649",
+              "_previousValue": "376"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-03-opt2",
+            "content": {
+              "value": "9469",
+              "_previousValue": "673"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-03-opt3",
+            "content": {
+              "value": "9640",
+              "_previousValue": "377"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for SPAS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-03-opt1",
+            "content": {
+              "value": "9649"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-03-opt2",
+            "content": {
+              "value": "9469"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-03-opt3",
+            "content": {
+              "value": "9640"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for TIP?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "376",
+          "optionId": "gen-vr-19-word-number-codes-03-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "673",
+          "optionId": "gen-vr-19-word-number-codes-03-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "377",
+          "optionId": "gen-vr-19-word-number-codes-03-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akke0005tmrb3e0g6aci",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.342Z",
+          "subjectHash": "996b0efb901ea260ee8f4e8278ba4232bcf7dcf870cb9229ac6f5067af37e96b"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "2b93dfd403cd8adcd90f431df02de0b1a9a6513a1af5e135c59b33dd626fedd4"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-04",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "ef9657b72a094297f675131115070730192bcdbd19dc412e4e544c5306f860b7",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for ASPS?",
+          "_previousPrompt": "Using the code, what is the code for PIT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-04-opt1",
+            "content": {
+              "value": "4969",
+              "_previousValue": "671"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-04-opt2",
+            "content": {
+              "value": "9694",
+              "_previousValue": "176"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-04-opt3",
+            "content": {
+              "value": "4960",
+              "_previousValue": "672"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for ASPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-04-opt1",
+            "content": {
+              "value": "4969"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-04-opt2",
+            "content": {
+              "value": "9694"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-04-opt3",
+            "content": {
+              "value": "4960"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PIT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "671",
+          "optionId": "gen-vr-19-word-number-codes-04-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "176",
+          "optionId": "gen-vr-19-word-number-codes-04-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "672",
+          "optionId": "gen-vr-19-word-number-codes-04-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akkm0007tmrb29puqmc6",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.350Z",
+          "subjectHash": "bf167dc8b8b43eb1958487eb976c69ab0ea08fbbd9d9f142ddc1f44cf011fa6a"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "c8014819051eabace87d2b727dce52513ce3313949d417be9219c3d97f712864"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-05",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "2a5278937af2abfc74ad18e49ee9fb92dd5bf5b646a5dc865a6f028b8c5aa3f5",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for APPS?",
+          "_previousPrompt": "Using the code, what is the code for SIP?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-05-opt1",
+            "content": {
+              "value": "4669",
+              "_previousValue": "976"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-05-opt2",
+            "content": {
+              "value": "9664",
+              "_previousValue": "679"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-05-opt3",
+            "content": {
+              "value": "4679",
+              "_previousValue": "977"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for APPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-05-opt1",
+            "content": {
+              "value": "4669"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-05-opt2",
+            "content": {
+              "value": "9664"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-05-opt3",
+            "content": {
+              "value": "4679"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for SIP?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "976",
+          "optionId": "gen-vr-19-word-number-codes-05-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "679",
+          "optionId": "gen-vr-19-word-number-codes-05-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "977",
+          "optionId": "gen-vr-19-word-number-codes-05-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akkr0009tmrbgbgo47yv",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.356Z",
+          "subjectHash": "c3511be5be1298154d0ac5a42073e1181795103eb9341c7ebf8ecdc3aba23385"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "353845a5cf24090a4a3a8ca9833d2ccac655713963ec1e0ce7934c6f4b16bb85"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-06",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "1637c725a5496ae61302008671ccf6c54d86a1eeb82aee40f8a5b372c0785847",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for PAPA?",
+          "_previousPrompt": "Using the code, what is the code for SAT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-06-opt1",
+            "content": {
+              "value": "6464",
+              "_previousValue": "943"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-06-opt2",
+            "content": {
+              "value": "4646",
+              "_previousValue": "349"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-06-opt3",
+            "content": {
+              "value": "6474",
+              "_previousValue": "944"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for PAPA?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-06-opt1",
+            "content": {
+              "value": "6464"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-06-opt2",
+            "content": {
+              "value": "4646"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-06-opt3",
+            "content": {
+              "value": "6474"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for SAT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "943",
+          "optionId": "gen-vr-19-word-number-codes-06-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "349",
+          "optionId": "gen-vr-19-word-number-codes-06-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "944",
+          "optionId": "gen-vr-19-word-number-codes-06-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akkw000btmrbl5iwm076",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.360Z",
+          "subjectHash": "8aaddf09c2ab9c06553c233b6b02d390c20409952e2ab8de12045ed71c87c959"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "b17b20fe33939735b0a8617641428776a73b56ec8192120fb2560c8ca33bc2e5"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-07",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "1a02fc6c7d6e2ab5c92235cc4b3c87b8b7424eb572f00a02005f44812d4fe1e9",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for PASTA?",
+          "_previousPrompt": "Using the code, what is the code for TAPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-07-opt1",
+            "content": {
+              "value": "64914",
+              "_previousValue": "1469"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-07-opt2",
+            "content": {
+              "value": "41946",
+              "_previousValue": "9641"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-07-opt3",
+            "content": {
+              "value": "64915",
+              "_previousValue": "1460"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for PASTA?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-07-opt1",
+            "content": {
+              "value": "64914"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-07-opt2",
+            "content": {
+              "value": "41946"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-07-opt3",
+            "content": {
+              "value": "64915"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for TAPS?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "1469",
+          "optionId": "gen-vr-19-word-number-codes-07-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "9641",
+          "optionId": "gen-vr-19-word-number-codes-07-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "1460",
+          "optionId": "gen-vr-19-word-number-codes-07-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akl0000dtmrb8vc8psni",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.364Z",
+          "subjectHash": "1279fbb3e19d1ecbef5c198c215eefab263074f36176d060887ce9d53ac585cf"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "8c657ef2823fea72766f54f009fb55b558ec0c0d6dac3778f4ed6c516754374b"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-08",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "09144ffed5389470dc7ffbe5bb785218ba27e3bb5dbb4d7ff4e6bd4bb741ba87",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for TAPAS?",
+          "_previousPrompt": "Using the code, what is the code for PAST?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-08-opt1",
+            "content": {
+              "value": "24649",
+              "_previousValue": "6492"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-08-opt2",
+            "content": {
+              "value": "94642",
+              "_previousValue": "2946"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-08-opt3",
+            "content": {
+              "value": "24659",
+              "_previousValue": "6493"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for TAPAS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-08-opt1",
+            "content": {
+              "value": "24649"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-08-opt2",
+            "content": {
+              "value": "94642"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-08-opt3",
+            "content": {
+              "value": "24659"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PAST?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "6492",
+          "optionId": "gen-vr-19-word-number-codes-08-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "2946",
+          "optionId": "gen-vr-19-word-number-codes-08-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "6493",
+          "optionId": "gen-vr-19-word-number-codes-08-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akl5000ftmrbhzztrich",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.369Z",
+          "subjectHash": "d6f1b17bea36dd4635f7832f1e7cbb5216bd9d17afc24f135928547865ed12d9"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "32bf3f542cbc2cc2825ceb85fea1276da1ff7198196037a363223632369b08f5"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-09",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "faeb9a2236fb02f873c13a9398326d234d0c19821f2862a1cf77062df5681784",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for PAPAS?",
+          "_previousPrompt": "Using the code, what is the code for PITS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-09-opt1",
+            "content": {
+              "value": "64649",
+              "_previousValue": "6739"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-09-opt2",
+            "content": {
+              "value": "94646",
+              "_previousValue": "9376"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-09-opt3",
+            "content": {
+              "value": "64749",
+              "_previousValue": "6730"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for PAPAS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-09-opt1",
+            "content": {
+              "value": "64649"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-09-opt2",
+            "content": {
+              "value": "94646"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-09-opt3",
+            "content": {
+              "value": "64749"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PITS?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "6739",
+          "optionId": "gen-vr-19-word-number-codes-09-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "9376",
+          "optionId": "gen-vr-19-word-number-codes-09-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "6730",
+          "optionId": "gen-vr-19-word-number-codes-09-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akl9000htmrbiyl0pano",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.373Z",
+          "subjectHash": "7faae79240c9d9fed70c8e64224dcd0b8dfc876bfd7a5cbb2237f629d45d6a63"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "72456aeccd6af5640f39c617d72f509289cc017d1d35c73ca2e56339aa9f1c18"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-10",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "ee7e24163b32b163348cb16f12523655e06a65b4a88dfc47e4247536ada5d078",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for SPITS?",
+          "_previousPrompt": "Using the code, what is the code for SPIT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-10-opt1",
+            "content": {
+              "value": "96719",
+              "_previousValue": "9671"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-10-opt2",
+            "content": {
+              "value": "91769",
+              "_previousValue": "1769"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-10-opt3",
+            "content": {
+              "value": "96710",
+              "_previousValue": "9672"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for SPITS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-10-opt1",
+            "content": {
+              "value": "96719"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-10-opt2",
+            "content": {
+              "value": "91769"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-10-opt3",
+            "content": {
+              "value": "96710"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for SPIT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "9671",
+          "optionId": "gen-vr-19-word-number-codes-10-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "1769",
+          "optionId": "gen-vr-19-word-number-codes-10-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "9672",
+          "optionId": "gen-vr-19-word-number-codes-10-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akld000jtmrbymarw7sv",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.377Z",
+          "subjectHash": "9c1f2095db464df42b95f4a950b684b49a0178ffbbcef1f5c82c02b5803659b8"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "60c5fb9899b4d1478a677459eeee2bb751effb8f800424af7edfabbee5dd062a"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-11",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "a5fe8698b69c8390f0e32c5300fd053919ef4449220170acb64814970bc5d926",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for PIPS?",
+          "_previousPrompt": "Using the code, what is the code for TAP?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-11-opt1",
+            "content": {
+              "value": "6769",
+              "_previousValue": "246"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-11-opt2",
+            "content": {
+              "value": "9676",
+              "_previousValue": "642"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-11-opt3",
+            "content": {
+              "value": "6779",
+              "_previousValue": "247"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for PIPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-11-opt1",
+            "content": {
+              "value": "6769"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-11-opt2",
+            "content": {
+              "value": "9676"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-11-opt3",
+            "content": {
+              "value": "6779"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for TAP?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "246",
+          "optionId": "gen-vr-19-word-number-codes-11-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "642",
+          "optionId": "gen-vr-19-word-number-codes-11-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "247",
+          "optionId": "gen-vr-19-word-number-codes-11-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8aklg000ltmrb5ns2o17z",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.380Z",
+          "subjectHash": "edd12cd48aa97690cfd7b785a12dc214f7a2418cf3148cc0ea3f8c5145a5515e"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "1c355d0a020487f6218e98de5ffc3f649a4f63259d257db93b45777bad939914"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-12",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "39e42d92139237dc56ebd789e76c28cecdf24320bab74e5bc9fbd7b4ae01fccc",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for SAPS?",
+          "_previousPrompt": "Using the code, what is the code for PAT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-12-opt1",
+            "content": {
+              "value": "9469",
+              "_previousValue": "643"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-12-opt2",
+            "content": {
+              "value": "9649",
+              "_previousValue": "346"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-12-opt3",
+            "content": {
+              "value": "9460",
+              "_previousValue": "644"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for SAPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-12-opt1",
+            "content": {
+              "value": "9469"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-12-opt2",
+            "content": {
+              "value": "9649"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-12-opt3",
+            "content": {
+              "value": "9460"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PAT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "643",
+          "optionId": "gen-vr-19-word-number-codes-12-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "346",
+          "optionId": "gen-vr-19-word-number-codes-12-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "644",
+          "optionId": "gen-vr-19-word-number-codes-12-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8aklj000ntmrb3vqjmz2b",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.383Z",
+          "subjectHash": "c837dbe6f1f13506e2c0208bb7fc3d09ef8efb65ba37072da1beeefbeeec3a7e"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "9197bdce29a4b01d88da04029f746a9a0ec8213e4356c5414ceb5191956a46a4"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-13",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "56b9a24cda8113bf3547cb0204d792fa35f2f54872aa26af9e9cdcd20d7ecfb3",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for SPAS?",
+          "_previousPrompt": "Using the code, what is the code for TIP?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-13-opt1",
+            "content": {
+              "value": "9649",
+              "_previousValue": "176"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-13-opt2",
+            "content": {
+              "value": "9469",
+              "_previousValue": "671"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-13-opt3",
+            "content": {
+              "value": "9640",
+              "_previousValue": "177"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for SPAS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-13-opt1",
+            "content": {
+              "value": "9649"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-13-opt2",
+            "content": {
+              "value": "9469"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-13-opt3",
+            "content": {
+              "value": "9640"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for TIP?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "176",
+          "optionId": "gen-vr-19-word-number-codes-13-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "671",
+          "optionId": "gen-vr-19-word-number-codes-13-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "177",
+          "optionId": "gen-vr-19-word-number-codes-13-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akln000ptmrb20fkp786",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.387Z",
+          "subjectHash": "80ed5ffd1e464067e4664f26acbb18d1f2a88a9ad94a6ed814a02379dd4fae50"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "eb2c422ba571b9da6008635263ec2778fff5adaf05861fdb86da988ca6ef530e"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-14",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "dfcace0068c4fe6f7a86e8041e6d273a08b2f7dbea050fbe1159bae2a66a996d",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for ASPS?",
+          "_previousPrompt": "Using the code, what is the code for PIT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-14-opt1",
+            "content": {
+              "value": "4969",
+              "_previousValue": "672"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-14-opt2",
+            "content": {
+              "value": "9694",
+              "_previousValue": "276"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-14-opt3",
+            "content": {
+              "value": "4960",
+              "_previousValue": "673"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for ASPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-14-opt1",
+            "content": {
+              "value": "4969"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-14-opt2",
+            "content": {
+              "value": "9694"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-14-opt3",
+            "content": {
+              "value": "4960"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PIT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "672",
+          "optionId": "gen-vr-19-word-number-codes-14-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "276",
+          "optionId": "gen-vr-19-word-number-codes-14-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "673",
+          "optionId": "gen-vr-19-word-number-codes-14-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8aklr000rtmrb7pupudo3",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.391Z",
+          "subjectHash": "7e68a912e18f7caec545858b171cd56373e46324b9b5d6b643ebe80e851399e5"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "1f2962a954314bda8aaaf44936ad7d07b319ea23134dffcb5b712bee4c8dada5"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-15",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "4f846e359e66e80d5901d21796ea1c474d312948ab93cbb9022367c2c5bf1d7e",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for APPS?",
+          "_previousPrompt": "Using the code, what is the code for SIP?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-15-opt1",
+            "content": {
+              "value": "4669",
+              "_previousValue": "976"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-15-opt2",
+            "content": {
+              "value": "9664",
+              "_previousValue": "679"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-15-opt3",
+            "content": {
+              "value": "4679",
+              "_previousValue": "977"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for APPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-15-opt1",
+            "content": {
+              "value": "4669"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-15-opt2",
+            "content": {
+              "value": "9664"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-15-opt3",
+            "content": {
+              "value": "4679"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for SIP?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "976",
+          "optionId": "gen-vr-19-word-number-codes-15-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "679",
+          "optionId": "gen-vr-19-word-number-codes-15-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "977",
+          "optionId": "gen-vr-19-word-number-codes-15-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8aklu000ttmrbygpeyl5q",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.395Z",
+          "subjectHash": "bfc5296c75cdf1bb367a55613daefd8df456ef98ea11827d437e41bf12af078f"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "243ba8f7d117ed9963b21babe620cde2176f6d65672ae0757886c7f4b1276a85"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-16",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "c8c4ca4c3a046f937a35b47696c49c3e24e3b157ecd5303f11f89e28b6c67eac",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for PAPA?",
+          "_previousPrompt": "Using the code, what is the code for SAT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-16-opt1",
+            "content": {
+              "value": "6464",
+              "_previousValue": "941"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-16-opt2",
+            "content": {
+              "value": "4646",
+              "_previousValue": "149"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-16-opt3",
+            "content": {
+              "value": "6474",
+              "_previousValue": "942"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for PAPA?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-16-opt1",
+            "content": {
+              "value": "6464"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-16-opt2",
+            "content": {
+              "value": "4646"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-16-opt3",
+            "content": {
+              "value": "6474"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for SAT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "941",
+          "optionId": "gen-vr-19-word-number-codes-16-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "149",
+          "optionId": "gen-vr-19-word-number-codes-16-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "942",
+          "optionId": "gen-vr-19-word-number-codes-16-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akly000vtmrbht6ie0wy",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.398Z",
+          "subjectHash": "7a13d5a7b66e8d1435b239a8cf5063f5e493d7ab8c737e841feafae346ceccad"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "2f312a01dcce8fb23ec9fd22efd5f662f7b07a704ffb0fb4e0cf38ad50b1b12a"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-17",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "7e10a57336ffcf6d82b7d566bb49ae8e0774ba51952f6ad295b45f4e6323fb12",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for PASTA?",
+          "_previousPrompt": "Using the code, what is the code for TAPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-17-opt1",
+            "content": {
+              "value": "64924",
+              "_previousValue": "2469"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-17-opt2",
+            "content": {
+              "value": "42946",
+              "_previousValue": "9642"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-17-opt3",
+            "content": {
+              "value": "64925",
+              "_previousValue": "2460"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for PASTA?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-17-opt1",
+            "content": {
+              "value": "64924"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-17-opt2",
+            "content": {
+              "value": "42946"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-17-opt3",
+            "content": {
+              "value": "64925"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for TAPS?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "2469",
+          "optionId": "gen-vr-19-word-number-codes-17-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "9642",
+          "optionId": "gen-vr-19-word-number-codes-17-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "2460",
+          "optionId": "gen-vr-19-word-number-codes-17-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akm2000xtmrbthik6i5k",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.402Z",
+          "subjectHash": "e57ca760907029985038ae72a69390ef058dbe51717782fa5da8e8aadcc86175"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "7c2777a1a1320a88a21e26f27caceebf0bddd46256251a691eac93e3c7a435be"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-18",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "47e2546d92f750b093d6d846229c5883b32bdbebd47c35c03560ae98940db303",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for TAPAS?",
+          "_previousPrompt": "Using the code, what is the code for PAST?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-18-opt1",
+            "content": {
+              "value": "34649",
+              "_previousValue": "6493"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-18-opt2",
+            "content": {
+              "value": "94643",
+              "_previousValue": "3946"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-18-opt3",
+            "content": {
+              "value": "34659",
+              "_previousValue": "6494"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for TAPAS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-18-opt1",
+            "content": {
+              "value": "34649"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-18-opt2",
+            "content": {
+              "value": "94643"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-18-opt3",
+            "content": {
+              "value": "34659"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PAST?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "6493",
+          "optionId": "gen-vr-19-word-number-codes-18-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "3946",
+          "optionId": "gen-vr-19-word-number-codes-18-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "6494",
+          "optionId": "gen-vr-19-word-number-codes-18-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akm6000ztmrb59lq2esk",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.406Z",
+          "subjectHash": "a3b4681c516a57923e7469fca05606185340f9849036abda750d666e0c723f61"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "fc7f780a1d072f5287e110fd7633a44fa0d39c6d6f654bbf5880cf3032377d76"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-19",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "bfd6e1a2ecbb12650b628486b4209750b82ad6dc676aea7015b35b132bb5aee7",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for PAPAS?",
+          "_previousPrompt": "Using the code, what is the code for PITS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-19-opt1",
+            "content": {
+              "value": "64649",
+              "_previousValue": "6719"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-19-opt2",
+            "content": {
+              "value": "94646",
+              "_previousValue": "9176"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-19-opt3",
+            "content": {
+              "value": "64749",
+              "_previousValue": "6710"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for PAPAS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-19-opt1",
+            "content": {
+              "value": "64649"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-19-opt2",
+            "content": {
+              "value": "94646"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-19-opt3",
+            "content": {
+              "value": "64749"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PITS?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "6719",
+          "optionId": "gen-vr-19-word-number-codes-19-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "9176",
+          "optionId": "gen-vr-19-word-number-codes-19-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "6710",
+          "optionId": "gen-vr-19-word-number-codes-19-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akma0011tmrbiswxlpyu",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.410Z",
+          "subjectHash": "12a6b6efe4240edcd19e4f80f974f19cef255203622f793c837a9d03d4cce5c5"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "b1aebb4dd14ae8dd2c29eb87e880146bc9fe1049640ff196028f10d1c02a582a"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-20",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "816c7bf2f744d29858623fa24caac7b64d0a4fd9ac6f64a21129c2533c7a0b71",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for SPITS?",
+          "_previousPrompt": "Using the code, what is the code for SPIT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-20-opt1",
+            "content": {
+              "value": "96729",
+              "_previousValue": "9672"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-20-opt2",
+            "content": {
+              "value": "92769",
+              "_previousValue": "2769"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-20-opt3",
+            "content": {
+              "value": "96720",
+              "_previousValue": "9673"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for SPITS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-20-opt1",
+            "content": {
+              "value": "96729"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-20-opt2",
+            "content": {
+              "value": "92769"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-20-opt3",
+            "content": {
+              "value": "96720"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for SPIT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "9672",
+          "optionId": "gen-vr-19-word-number-codes-20-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "2769",
+          "optionId": "gen-vr-19-word-number-codes-20-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "9673",
+          "optionId": "gen-vr-19-word-number-codes-20-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akmd0013tmrb3c86o13l",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.414Z",
+          "subjectHash": "b249115da04d5cd65d3df3b6913d7916b42502a5d41be6dcc6919a61325621d6"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "4ef0e18a4180841d2e756544d346e93ccd81f919db9533de6c5eeb7683a40791"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-21",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "aa6185c548d4c03fe0095260f190fd57204020a28cd17a5cd0cf859476549195",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for PIPS?",
+          "_previousPrompt": "Using the code, what is the code for TAP?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-21-opt1",
+            "content": {
+              "value": "6769",
+              "_previousValue": "346"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-21-opt2",
+            "content": {
+              "value": "9676",
+              "_previousValue": "643"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-21-opt3",
+            "content": {
+              "value": "6779",
+              "_previousValue": "347"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for PIPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-21-opt1",
+            "content": {
+              "value": "6769"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-21-opt2",
+            "content": {
+              "value": "9676"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-21-opt3",
+            "content": {
+              "value": "6779"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for TAP?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "346",
+          "optionId": "gen-vr-19-word-number-codes-21-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "643",
+          "optionId": "gen-vr-19-word-number-codes-21-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "347",
+          "optionId": "gen-vr-19-word-number-codes-21-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akmh0015tmrbni4jhnye",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.418Z",
+          "subjectHash": "ab549c9032c536e50eeb0395e1880b176d6c573d1edebdbf679f24dbd6d0d6d2"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "fbb1419dcca83df41d689bd05c637a27f6aa312e3a85126fd56c82ef0c9b1015"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-22",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "00da39cf56d9c8cbbb50f6c464724c1c043aeee3a81559712bfaf5cc40a5f87a",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for SAPS?",
+          "_previousPrompt": "Using the code, what is the code for PAT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-22-opt1",
+            "content": {
+              "value": "9469",
+              "_previousValue": "641"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-22-opt2",
+            "content": {
+              "value": "9649",
+              "_previousValue": "146"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-22-opt3",
+            "content": {
+              "value": "9460",
+              "_previousValue": "642"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for SAPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-22-opt1",
+            "content": {
+              "value": "9469"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-22-opt2",
+            "content": {
+              "value": "9649"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-22-opt3",
+            "content": {
+              "value": "9460"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PAT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "641",
+          "optionId": "gen-vr-19-word-number-codes-22-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "146",
+          "optionId": "gen-vr-19-word-number-codes-22-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "642",
+          "optionId": "gen-vr-19-word-number-codes-22-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akmm0017tmrbsvtieyih",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.423Z",
+          "subjectHash": "9e2ff1c3636c6d47b3ca17ae63b407407027c77ace67821373e6908aaab53aeb"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "cd7496185928455da4b4ee1cb213c0eb3c8351cbe4e36e22e7dc5bf9f211e31f"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-23",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "174a4537887d8ebdde33bd558c843f7289f31d016f099553272853bb0da1711d",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for SPAS?",
+          "_previousPrompt": "Using the code, what is the code for TIP?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-23-opt1",
+            "content": {
+              "value": "9649",
+              "_previousValue": "276"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-23-opt2",
+            "content": {
+              "value": "9469",
+              "_previousValue": "672"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-23-opt3",
+            "content": {
+              "value": "9640",
+              "_previousValue": "277"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "2"
+          },
+          "prompt": "Using the code, what is the code for SPAS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-23-opt1",
+            "content": {
+              "value": "9649"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-23-opt2",
+            "content": {
+              "value": "9469"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-23-opt3",
+            "content": {
+              "value": "9640"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for TIP?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "276",
+          "optionId": "gen-vr-19-word-number-codes-23-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "672",
+          "optionId": "gen-vr-19-word-number-codes-23-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "277",
+          "optionId": "gen-vr-19-word-number-codes-23-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akmq0019tmrbrp9jbk4o",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.426Z",
+          "subjectHash": "4628fcd4c9b63f3dc4c5e5c3934559964689b3efcd2f061618450b51f571d478"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "bb9d321e33bd88cc9a4d64619a98210c6c896664f835adffc2caf56afcd26f5e"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-24",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "40e7b1223922aef63a7c9fbbb341eb5eaf87ec8dcbf5db5614fa0fe843514f4e",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for ASPS?",
+          "_previousPrompt": "Using the code, what is the code for PIT?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-24-opt1",
+            "content": {
+              "value": "4969",
+              "_previousValue": "673"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-24-opt2",
+            "content": {
+              "value": "9694",
+              "_previousValue": "376"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-24-opt3",
+            "content": {
+              "value": "4960",
+              "_previousValue": "674"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "3"
+          },
+          "prompt": "Using the code, what is the code for ASPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-24-opt1",
+            "content": {
+              "value": "4969"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-24-opt2",
+            "content": {
+              "value": "9694"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-24-opt3",
+            "content": {
+              "value": "4960"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for PIT?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "673",
+          "optionId": "gen-vr-19-word-number-codes-24-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "376",
+          "optionId": "gen-vr-19-word-number-codes-24-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "674",
+          "optionId": "gen-vr-19-word-number-codes-24-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akmu001btmrbkskj07xg",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.430Z",
+          "subjectHash": "a8d62f77a301a1dac27e7002c8cfe9c84c7a66cd423882cfaca1bd188f9a9d42"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "eeea30260069b9f09ebcb4903e06e0da2aeb6bb09aa45a6305e84f94ffe00908"
+      }
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-25",
+      "status": "LIVE",
+      "questionTypeId": "vr-19-word-number-codes",
+      "preImageSha256": "c1b1ff84bc6d47c0a43e8237175b0becf65c99bda91a3f80eb1a12e6eaca6359",
+      "before": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for APPS?",
+          "_previousPrompt": "Using the code, what is the code for SIP?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-25-opt1",
+            "content": {
+              "value": "4669",
+              "_previousValue": "976"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-25-opt2",
+            "content": {
+              "value": "9664",
+              "_previousValue": "679"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-25-opt3",
+            "content": {
+              "value": "4679",
+              "_previousValue": "977"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "after": {
+        "stem": {
+          "code": {
+            "A": "4",
+            "I": "7",
+            "P": "6",
+            "S": "9",
+            "T": "1"
+          },
+          "prompt": "Using the code, what is the code for APPS?"
+        },
+        "explanation": {},
+        "options": [
+          {
+            "optionId": "gen-vr-19-word-number-codes-25-opt1",
+            "content": {
+              "value": "4669"
+            },
+            "isCorrect": true
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-25-opt2",
+            "content": {
+              "value": "9664"
+            },
+            "isCorrect": false
+          },
+          {
+            "optionId": "gen-vr-19-word-number-codes-25-opt3",
+            "content": {
+              "value": "4679"
+            },
+            "isCorrect": false
+          }
+        ]
+      },
+      "movingOut": [
+        {
+          "at": "stem._previousPrompt",
+          "container": "stem",
+          "path": [],
+          "key": "_previousPrompt",
+          "value": "Using the code, what is the code for SIP?"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "976",
+          "optionId": "gen-vr-19-word-number-codes-25-opt1"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "679",
+          "optionId": "gen-vr-19-word-number-codes-25-opt2"
+        },
+        {
+          "at": "content._previousValue",
+          "container": "content",
+          "path": [],
+          "key": "_previousValue",
+          "value": "977",
+          "optionId": "gen-vr-19-word-number-codes-25-opt3"
+        }
+      ],
+      "hashesThatStopReproducing": [
+        {
+          "eventId": "cmtj8akmw001dtmrbv3f510ce",
+          "action": "SIGNED",
+          "actor": "annie",
+          "at": "2026-09-01T22:18:05.433Z",
+          "subjectHash": "9a3261eee580bb64ba251d6cc493da37b74a01ac8ab9da496bbc582da959bb5f"
+        }
+      ],
+      "newSubject": {
+        "name": "ROW_PROJECTION_CANONICAL_ORDER",
+        "hash": "54e0957fa30405d21dd92b88a53ab7c05a6a8ec8ac0f1e5332499717ac91e627"
+      }
+    }
+  ]
+}

@@ -34,6 +34,14 @@ export const isRetentionPath = (path: string): boolean =>
   path.split('.').some((seg) => seg.replace(/\[\d+\]/g, '').startsWith('_'));
 
 /**
+ * THE `superseded` COLUMN IS RETENTION BY ITS NAME (R1042). R358's migration moved every `_`-keyed
+ * before-image OUT of `stem`/`explanation`/option `content` into the sibling column `superseded` on
+ * `Item` and `ItemOption`. The values are the same before-images R715 rules read-only; they lost their
+ * underscore only because the column, not the key, now says what they are.
+ */
+export const isSupersededColumn = (key: string): boolean => /^(options\[\]\.)?superseded(\.|\[|$)/.test(key);
+
+/**
  * A QUESTION TYPE'S OWN ORTHOGRAPHY IS NOT EMPHASIS — AND THE EXEMPTION HAS A BOUNDARY
  * (Annie's 156th/157th, David's rulings, 2026-08-25 — R716, scoped R719).
  *
@@ -247,7 +255,7 @@ export const FIELD_DISPOSITIONS: Record<string, FieldDisposition> = {
  */
 export function dispositionFor(root: string, path: string): FieldDisposition | undefined {
   const key = dispositionKey(root, path);
-  if (isRetentionPath(key)) return 'retention';
+  if (isRetentionPath(key) || isSupersededColumn(key)) return 'retention';
   return FIELD_DISPOSITIONS[key];
 }
 

@@ -248,6 +248,13 @@ model Item {
   stem                    Json // structured content, never HTML strings
   options                 ItemOption[]
   explanation             Json // per-mode explanation asset refs (watch/walk/see/hear)
+  /// THE `_superseded` SIBLING (R358, R1042). Every value a later wording replaced, kept OUTSIDE the
+  /// field it replaced — never as `_previousText` inside `stem`, where anything walking the container
+  /// reads it as live. `{ version: 1, entries: [{ container, path, key, value }] }`: `container` is
+  /// `stem` or `explanation`, `path` the JSON path inside it to the object the key sat on (`[]` for the
+  /// top), `key` the `_`-prefixed name it was stored under. History, not content: nothing child-facing
+  /// reads it, and `check:superseded-inside-field` fails any `_`-key found back inside a container.
+  superseded              Json?
   status                  ItemStatus               @default(DRAFT) // DRAFT → REVIEWED → LIVE → RETIRED
   // ADDENDUM-B §1: which serving world this item belongs to. MOCK items are
   // new volume on top of the practice gates, never a reclassification of
@@ -427,6 +434,9 @@ model ItemOption {
   itemId          String
   item            Item            @relation(fields: [itemId], references: [id], onDelete: Cascade)
   content         Json
+  /// The `_superseded` sibling of `content` (R358, R1042): same shape as `Item.superseded`, with
+  /// `container: "content"`. A replaced option value lives here, never as `content._previousValue`.
+  superseded      Json?
   isCorrect       Boolean
   // The single legacy tag. Kept as the TOPIC tag's cache; the two-role model
   // below is the source of truth for maths (annie, 2026-08-06).

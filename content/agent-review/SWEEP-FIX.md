@@ -51,7 +51,9 @@ ITSELF is wrong for the option (a different mistake produces it), that IS a row 
 - **Never store the old text inside the field you replace** (`_previousText` in `stem`,
   `_previousWalkScript` in `explanation`). That is R358: anything walking the container reads the
   superseded value as live. Earlier rounds did this on this brief's instruction, and it was wrong.
-  The old value is already kept in the packet, the door's changeset and git (R1041).
+  The old value is already kept in the packet, the door's changeset and git (R1041). Stored history
+  lives in the row's `superseded` column, never inside the container, and `check:superseded-inside-field`
+  fails in CI on any `_`-key at any depth of stem, explanation or option content (R1042).
 - A row you cannot fix honestly: leave it out and say why in `notes`.
 
 ## Self-check

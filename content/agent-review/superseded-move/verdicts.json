@@ -1,0 +1,192 @@
+{
+  "door": "superseded-move",
+  "reviewer": "rev-agent-01",
+  "rows": [
+    {
+      "itemId": "MC01-FDP-03",
+      "preImageSha256": "7d866374a75052fa3f2034b47677b165ea484b5e3bd3af432e2b4ae34b91d7ca",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. 25% of £80 = £20, the only correct option; £55 (80-25), £2000 (25x80, no /100), £40 (half) all wrong; hint and walk true of this row."
+    },
+    {
+      "itemId": "MC01-GEOM-02",
+      "preImageSha256": "9d75e486f9651944636e5179f27d0f47ce13b4082122438a34b7fb2c8ebb5104",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. 180-125 = 55°, the only correct option; 235°, 35°, 65° all wrong (65° is the reversed-digit column subtraction the walk describes); hint and walk true."
+    },
+    {
+      "itemId": "MC04-CALC-04",
+      "preImageSha256": "53aa439666d12b591c77eb7c31005c1c616fec8244d449b2bb8545660d4ce0fb",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. 8.40+5.75 = 14.15, 20-14.15 = £5.85, the only correct option; £11.60 (one price), £14.15 (total), £7.00 (pence dropped) wrong; hint and walk true."
+    },
+    {
+      "itemId": "MC04-CALC-05",
+      "preImageSha256": "c466b24e10afe224f76384e4ddc6f930d283803041c847397fee01f69bacdf28",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. 2/8 = 0.25 litres, the only correct option; 4 (flipped), 16 (multiplied), 2 wrong; hint and walk true."
+    },
+    {
+      "itemId": "MC05-CALC-04",
+      "preImageSha256": "ba6b58085b660f3d20f09427afe0d4aff8d4605ced369f02fa4e4894c0dc752c",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. 7.65+2.80 = 10.45, 20-10.45 = £9.55, the only correct option; £12.35 (one price), £10.45 (total), £11.00 (pence dropped) wrong; hint and walk true."
+    },
+    {
+      "itemId": "MC05-CALC-05",
+      "preImageSha256": "698760e05e9a0345eb221b53901d739eba88132f153e6f9d330410b806ec6c7c",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. 3/6 = 0.5 litres, the only correct option; 2 (flipped), 18 (multiplied), 3 wrong; hint and walk true."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-01",
+      "preImageSha256": "438f35e82a0470234c154419c1e3808ffbdca18f307f4aa6d01cd72eee4b8282",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed PIPS = 6769 from the stem's code (one-to-one): it is the only correct option; distractors 9676, 6779 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-02",
+      "preImageSha256": "d61a947a43064128c4f5f9badb7e0a69b3956652aedd9ba36496ce4e2fc2e65c",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed SAPS = 9469 from the stem's code (one-to-one): it is the only correct option; distractors 9649, 9460 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-03",
+      "preImageSha256": "e112cd632c501797ca0106168e6cdcf5599fa0e6c94cae37fd64ca125a71cda6",
+      "verdict": "HOLD",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Content fault: the code arithmetic is right (SPAS = 9649, the only correct option), but the test word SPAS is a known British ableist playground slur (a variant of 'spaz'). It is unsuitable on a child-facing item, so replace the word."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-04",
+      "preImageSha256": "ef9657b72a094297f675131115070730192bcdbd19dc412e4e544c5306f860b7",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed ASPS = 4969 from the stem's code (one-to-one): it is the only correct option; distractors 9694, 4960 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-05",
+      "preImageSha256": "2a5278937af2abfc74ad18e49ee9fb92dd5bf5b646a5dc865a6f028b8c5aa3f5",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed APPS = 4669 from the stem's code (one-to-one): it is the only correct option; distractors 9664, 4679 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-06",
+      "preImageSha256": "1637c725a5496ae61302008671ccf6c54d86a1eeb82aee40f8a5b372c0785847",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed PAPA = 6464 from the stem's code (one-to-one): it is the only correct option; distractors 4646, 6474 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-07",
+      "preImageSha256": "1a02fc6c7d6e2ab5c92235cc4b3c87b8b7424eb572f00a02005f44812d4fe1e9",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed PASTA = 64914 from the stem's code (one-to-one): it is the only correct option; distractors 41946, 64915 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-08",
+      "preImageSha256": "09144ffed5389470dc7ffbe5bb785218ba27e3bb5dbb4d7ff4e6bd4bb741ba87",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed TAPAS = 24649 from the stem's code (one-to-one): it is the only correct option; distractors 94642, 24659 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-09",
+      "preImageSha256": "faeb9a2236fb02f873c13a9398326d234d0c19821f2862a1cf77062df5681784",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed PAPAS = 64649 from the stem's code (one-to-one): it is the only correct option; distractors 94646, 64749 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-10",
+      "preImageSha256": "ee7e24163b32b163348cb16f12523655e06a65b4a88dfc47e4247536ada5d078",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed SPITS = 96719 from the stem's code (one-to-one): it is the only correct option; distractors 91769, 96710 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-11",
+      "preImageSha256": "a5fe8698b69c8390f0e32c5300fd053919ef4449220170acb64814970bc5d926",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed PIPS = 6769 from the stem's code (one-to-one): it is the only correct option; distractors 9676, 6779 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-12",
+      "preImageSha256": "39e42d92139237dc56ebd789e76c28cecdf24320bab74e5bc9fbd7b4ae01fccc",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed SAPS = 9469 from the stem's code (one-to-one): it is the only correct option; distractors 9649, 9460 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-13",
+      "preImageSha256": "56b9a24cda8113bf3547cb0204d792fa35f2f54872aa26af9e9cdcd20d7ecfb3",
+      "verdict": "HOLD",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Content fault: the code arithmetic is right (SPAS = 9649, the only correct option), but the test word SPAS is a known British ableist playground slur (a variant of 'spaz'). It is unsuitable on a child-facing item, so replace the word."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-14",
+      "preImageSha256": "dfcace0068c4fe6f7a86e8041e6d273a08b2f7dbea050fbe1159bae2a66a996d",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed ASPS = 4969 from the stem's code (one-to-one): it is the only correct option; distractors 9694, 4960 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-15",
+      "preImageSha256": "4f846e359e66e80d5901d21796ea1c474d312948ab93cbb9022367c2c5bf1d7e",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed APPS = 4669 from the stem's code (one-to-one): it is the only correct option; distractors 9664, 4679 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-16",
+      "preImageSha256": "c8c4ca4c3a046f937a35b47696c49c3e24e3b157ecd5303f11f89e28b6c67eac",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed PAPA = 6464 from the stem's code (one-to-one): it is the only correct option; distractors 4646, 6474 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-17",
+      "preImageSha256": "7e10a57336ffcf6d82b7d566bb49ae8e0774ba51952f6ad295b45f4e6323fb12",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed PASTA = 64924 from the stem's code (one-to-one): it is the only correct option; distractors 42946, 64925 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-18",
+      "preImageSha256": "47e2546d92f750b093d6d846229c5883b32bdbebd47c35c03560ae98940db303",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed TAPAS = 34649 from the stem's code (one-to-one): it is the only correct option; distractors 94643, 34659 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-19",
+      "preImageSha256": "bfd6e1a2ecbb12650b628486b4209750b82ad6dc676aea7015b35b132bb5aee7",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed PAPAS = 64649 from the stem's code (one-to-one): it is the only correct option; distractors 94646, 64749 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-20",
+      "preImageSha256": "816c7bf2f744d29858623fa24caac7b64d0a4fd9ac6f64a21129c2533c7a0b71",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed SPITS = 96729 from the stem's code (one-to-one): it is the only correct option; distractors 92769, 96720 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-21",
+      "preImageSha256": "aa6185c548d4c03fe0095260f190fd57204020a28cd17a5cd0cf859476549195",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed PIPS = 6769 from the stem's code (one-to-one): it is the only correct option; distractors 9676, 6779 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-22",
+      "preImageSha256": "00da39cf56d9c8cbbb50f6c464724c1c043aeee3a81559712bfaf5cc40a5f87a",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed SAPS = 9469 from the stem's code (one-to-one): it is the only correct option; distractors 9649, 9460 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-23",
+      "preImageSha256": "174a4537887d8ebdde33bd558c843f7289f31d016f099553272853bb0da1711d",
+      "verdict": "HOLD",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Content fault: the code arithmetic is right (SPAS = 9649, the only correct option), but the test word SPAS is a known British ableist playground slur (a variant of 'spaz'). It is unsuitable on a child-facing item, so replace the word."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-24",
+      "preImageSha256": "40e7b1223922aef63a7c9fbbb341eb5eaf87ec8dcbf5db5614fa0fe843514f4e",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed ASPS = 4969 from the stem's code (one-to-one): it is the only correct option; distractors 9694, 4960 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-25",
+      "preImageSha256": "c1b1ff84bc6d47c0a43e8237175b0becf65c99bda91a3f80eb1a12e6eaca6359",
+      "verdict": "SIGN",
+      "reason": "Structure: after == before minus all _-keys (order-exact), movingOut verbatim and complete. Recomputed APPS = 4669 from the stem's code (one-to-one): it is the only correct option; distractors 9664, 4679 each decode wrong. No hint or walk on the row, so nothing to falsify."
+    }
+  ]
+}

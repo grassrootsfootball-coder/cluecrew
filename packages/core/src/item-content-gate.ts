@@ -123,6 +123,10 @@ const TOKEN_FIELDS = new Set([
  * and simply has not been exercised. The right shape is Cowork's — stamps OUTSIDE the field they
  * supersede — and `check:superseded-inside-field` reports the 36 as the population to move. Until
  * they move, the gate refuses to read them.
+ *
+ * R1042 moved them (216 rows by then, at every depth and in option content too) to the `superseded`
+ * sibling column, and the check now FAILS on any new one. The skip stays as defence in depth: a
+ * reader that refuses `_`-keys costs nothing, and the next writer to forget the rule is caught twice.
  */
 const isSuperseded = (path: string) => path.split('.').some((seg) => seg.startsWith('_'));
 

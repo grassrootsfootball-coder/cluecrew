@@ -285,6 +285,13 @@ jobs:
       - name: Every string field on every served row
         run: pnpm check:every-string-field
 
+      # R358/R1042: a superseded value stored INSIDE the field it replaced (`stem._previousText`,
+      # `content._previousValue`) is read as live by anything walking the container. They now live in
+      # the `superseded` sibling column; any `_`-key found back inside stem, explanation or option
+      # content, at any depth, fails.
+      - name: No superseded value inside the field it supersedes
+        run: pnpm check:superseded-inside-field
+
       # Quote fields are a THIRD CLASS: not child-facing (the reading-age cap over quoted Victorian
       # prose would fail Grahame on every line), not staff prose either — a record of what the
       # passage says, checked by exact match against it. Stronger than a punctuation sweep: a

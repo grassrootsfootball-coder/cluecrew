@@ -29786,3 +29786,86 @@ R1039. Each is listed below with its cause. Where a fix needed a ruling, David's
   that is not published. Authoring a vault card changes family composition (CLAUDE.md: a vault edit
   is not a data correction), so this is its own reviewed task, not a CI fix.
 - **SM-09 option …00fv** carries windowClass PULLS, but both drafter and reviewer read it as NOISE.
+
+## R1042 — superseded values leave the field they supersede: the migration R358 deferred
+
+**2026-11-23, carried out from the session working on CI (R1041).** R358 found old wordings stored
+INSIDE the field they replaced, so anything walking the container reads them as live. It skipped them
+in the gate, reported them, and deferred the move. The ruled target is Cowork's: the history goes in a
+`_superseded` SIBLING outside the container.
+
+**The population was larger than the check said, and in a place it did not look.** By 2026-11-23,
+`check:superseded-inside-field` reported only top-level keys of `stem` and `explanation`. Read at
+every depth, and in option `content` too (the gate's own rule, `isSuperseded`), the population was
+**216 items, all LIVE, 592 instances, 29 shapes**. That includes 116 options carrying
+`content._previousValue` and 14 carrying `content._previousMisconceptionId`, plus
+`stem.quotes[n]._previousText`. None of those were visible. Same fault as R595: a subset of a real
+population, indistinguishable from it because nothing showed what was excluded.
+
+**Storage: a sibling column, `superseded`, on `Item` and `ItemOption`** (migration
+`20261123120000_superseded_outside_field`). The shape is `{ version: 1, entries: [{ container, path,
+key, value }] }`: every value verbatim, with the exact path and key it sat under. Two alternatives were
+rejected:
+- **AttributionEvent provenance.** An event records an ACT, with an actor and a time, and most of
+  these values carry neither. R358's August 36 pre-date every changeset, so writing them as events
+  would invent the act (R98, R94).
+- **Door changesets.** They hold the R1037 rounds only, and they live in files, not the store.
+
+The column holds the history; `field-dispositions.ts` declares it RETENTION by name
+(`isSupersededColumn`), so `check:every-string-field` reads it as before-images (R715) and not as prose.
+
+**The migration classifies before writing (R62)** (`scripts/move-superseded-outside-field.ts`;
+helpers in `scripts/lib/superseded.ts`, which the check also calls, so the two cannot disagree). For
+each row it asserts all of the following before any write:
+- the lifted entries restore to the stored container exactly;
+- the retention-excluded and canonical-order hashes are unchanged;
+- no `_`-key survives the lift.
+
+It also classifies every stored `subjectHash` on the affected items, trying every option order (R936).
+The 361 hashes split three ways:
+- **158 reproduce over the excluded projection.** The move cannot touch them.
+- **171 reproduce under no projection today (UNKNOWN).** The move cannot change that either: after
+  the move a row's included projection equals its excluded one, and these hashes already fail to
+  match it. That is 119 SIGNED (all carrying the canonical-order spec), 32 APPROVED, 18 AMENDED and
+  2 UNATTRIBUTED. Most predate a later amendment, but they were not investigated here.
+- **32 were taken over the retention-INCLUDED projection, on 31 items.** These would stop reproducing.
+  26 were the item's only reproducing signature: 25 `gen-vr-19-word-number-codes` rows plus
+  `MC01-FDP-03`. The other 6 were approvals on 5 maths rows that also carry a safe signature.
+
+**Those 31 went through a reviewed door, not a silent void.** The script writes
+`content/agent-review/superseded-move/packet.json` with before, after, what moves out and the hashes
+that stop reproducing. A separate agent then reviewed it as `rev-agent-01`
+(`SUPERSEDED-MOVE-REVIEWER.md`): structure checked by its own script, every code and calculation
+recomputed, every row read as a child. It returned **28 SIGN and 3 HOLD**. Only a SIGN over the
+packet's pre-image digest lets a row move. The new signature is over the canonical-order subject,
+recorded through `recordSignature`.
+
+**THE THREE HOLDS ARE A LIVE CONTENT FAULT THE MIGRATION SURFACED, NOT CAUSED.**
+`gen-vr-19-word-number-codes-03`, `-13` and `-23` ask a child to encode **SPAS**, a British
+playground slur (a variant of "spaz"). They are LIVE, and `scan:vocab` does not know the word.
+- **They were not moved.** Moving them would stop their pin reproducing with nothing signed in its
+  place.
+- **They are frozen in `check:superseded-inside-field` by id and exact count.** Any new instance
+  fails. A change to a frozen count fails. A freeze that no longer matches its row fails as stale.
+- **Replacing the word is a reviewed authoring task**, and so is any decision to pull them from
+  serving. The word also belongs in the vocabulary scanner. Open.
+
+**Applied.** 213 items moved, with 580 entries now outside the containers (462 from stem and
+explanation, 116 options). Each moved item carries an AMENDED event (`migration:superseded-outside-field`),
+and 28 new SIGNED events were recorded by `rev-agent-01`. Verified afterwards:
+- every hash that reproduced before still reproduces (143 SIGNED, 11 APPROVED, 4 AMENDED);
+- the 29 included-projection pins on moved rows no longer reproduce, as predicted, and each of
+  those items carries a new reproducing signature.
+
+`check:outside-writes`, `signing-doors`, `authority-shape`, `db-content`, `every-string-field`,
+`source-quotes`, `walkscript-reach`, `declared-unread`, `db-invariants`, `migration-replay` and
+`derived-writes` all pass. The snapshot was re-exported, and its delta is exactly this change: 241
+events and 329 write-log rows.
+
+**Instance count: 0 outside the 3 held rows.** `check:superseded-inside-field` now FAILS, and runs in
+CI after `check:every-string-field`. `SWEEP-FIX.md` points drafters at the column. The gate's
+`isSuperseded` skip stays as defence in depth.
+
+**Open:** the three SPAS rows (above). There are also 50 moved LIVE items with no reproducing SIGNED
+hash under any declared subject. That was already true before the move and is unchanged by it, but
+nothing has read it as a population yet.
