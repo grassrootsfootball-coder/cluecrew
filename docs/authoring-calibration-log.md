@@ -29914,3 +29914,80 @@ fact, and demoting it to express a serving fact erases that fact. The demotion w
 attempted and blocked by the permission system. The rows stay DRAFT AND held until David decides;
 either way they do not serve. The script that made the demotion was deleted, because it
 implemented the pattern R208 forbids.
+
+## R1045 — every served headword has a vault tier: 46 cards authored, 4 drafts published (2026-11-23)
+
+`check:headword-tiers`, the last red CI step after R1041, now passes. It had found 47 occurrences
+of 46 distinct headwords on LIVE items with no Word row (vr-16 opposites, vr-21 same-meaning, and
+`glad` on vr-04), plus 29 occurrences of 15 headwords whose card existed but was DRAFT. After this
+entry: 0 with no card, 62 occurrences with a LIVE tier (was 54), 68 with a DRAFT tier.
+
+**The guard was measured before any write, and nothing served reads it.**
+`scripts/agent-review/vault-guard-audit.ts` calls the family's own `VOCAB_GUARD_OK`. It reads
+`Word.tier`, `status` and `likelierKnown` for all 35 VOCAB_BANK headwords, before the write and
+after it. The lander runs it against the state it would produce and refuses on any tier,
+likelierKnown or guard change.
+- Result: 0 moves. 0 bank headwords disagree with their declared rarity, before or after.
+- Stated loudly (R60): the store holds **0 `en-vocab-in-context` items**. The flip and guard have
+  no LIVE population, so no LIVE item's guard outcome could move. That is not a pass on the bank.
+- The composition that DID change: 5 of the new cards carry two senses (light A, appear A, odd B,
+  hot A, old A). Two-sense cards in the vault went 67 → 72, every new one DRAFT. Each is a future
+  seed for that family, and each passed a hard review of its second sense and its likelierKnown.
+
+**The 46 land reviewed but DRAFT. This is a serving decision, not a content one (the proposing
+session's call; David can overrule).** The warm-up (`apps/web/lib/crew/orchestrator.ts:364`)
+collects the lowest-tier uncollected LIVE cards, ordered by id. 45 of the 46 are tier 1, measured
+against the LIVE exemplars brave, brisk, swift and calm; `expand` is tier 2. Published, they would
+lead every child's collection: "big" would come before "brave" and "brisk". DRAFT satisfies the
+check, which fails only on a MISSING row, and changes nothing a child is served.
+**OPEN for David: whether and how the 46 should ever serve.** One option is a tier or ordering
+change in the warm-up so that common words do not lead. Another is a flag that keeps
+item-headword cards out of collection.
+
+**The 4 published DO change the warm-up, and only late.** recede, amiable, futile and stoic went
+LIVE. They enter the 123-card LIVE collection order at positions 82, 91, 102 and 122. The first 81
+cards any child collects are unchanged. Two child profiles exist on dev, with 4 vault entries between them.
+
+**The regime.**
+- A drafting agent proposed the cards (`content/agent-review/vault/cards-V1.json`; brief
+  `VAULT-DRAFTER.md`). A separate agent reviewed them as `rev-agent-01` (`review-V1.json`), over
+  three rounds; rounds 1 and 2 are kept beside it.
+- `land-vault-cards.ts` creates a card only if it is ATTESTED and passes `gate-vault-cards.ts`,
+  which wraps `checkWordCard`, the CMS publish door's own gate (vocabulary, UK spelling, reading
+  age). It publishes a draft only if it is PUBLISH, still DRAFT, and word-for-word the text the
+  reviewer was shown.
+- Every row carries machine provenance: `authoredBy: agent:drafter (R1042)` (sic — the label was set
+  before the number was known), `reviewedBy: reviewer:rev-agent-01`. 96 AttributionEvents were
+  written: AUTHORED and APPROVED per new card, APPROVED per publication. No person's name (R94).
+- A canary confirmed the gate bites: four-syllable words, "failed", "error", and a missing full stop.
+
+**An instrument fault in my own briefs, caught by the reviewer's holds (R149, R599).** The first
+briefs capped card sentences at 16 words. The Word door is role-aware by the 2026-08-02 ruling
+(`content-gates.ts:104`: `word-card` has `maxSentenceWords: null`, and a test asserts it). So 14
+round-1 HOLDs rested on a rule that does not exist. The briefs now carry the correction, and the
+re-read moved amiable, futile and stoic to PUBLISH. The verdicts moved and the cards did not, which
+is R599's sign of an instrument fault. The reviewer's other findings stood.
+
+**The 11 drafts still held, each for a fault other than length:**
+- **Wording faults** (an ordinary redraft): hostile, vague, trivial and amend (definition untrue,
+  too narrow, or not a definition); rapid and amend (sentence hard to follow); humble and genuine
+  (sense-B definition ends on a full stop, against house style); bold (sense-B sentence uses the
+  word as a noun under an adjective label).
+- **Composition faults** (each needs a ruling, because a vault tier or likelierKnown is family
+  composition):
+  - `hollow` (VOCAB_BANK rarity 1) and `transparent`: each card's own supersedeNote records a tier
+    move David ratified on 2026-08-02 (hollow 1 → 2, transparent 5 → 3), yet the stored tiers are
+    the OLD values. The move was never applied, or a later write reverted it. Git can tell which
+    (R62's worktree method). Not corrected here: moving hollow to tier 2 still passes the guard,
+    but it is a composition change.
+  - `transparent`: the reviewer finds its second sense (a transparent excuse) a figurative stretch,
+    and under it the distractor "obvious" on a LIVE item becomes correct.
+  - `bold`: likelierKnown A is questioned, because children use the formatting sense constantly.
+  - `fair`: three senses, and the vr04 machinery already retires FAIR from bare cards.
+    `bank-vr-04-closest-meaning-06` (FAIR, key "just") is nonetheless LIVE, which is worth a look
+    on its own.
+
+**Snapshot.** Re-exported as the lander's last step. Word went from 302 to 348 rows. The Item
+digest moved on an unchanged row count, plus 3 events and 3 write-log rows that are not this
+entry's: that is R1044's status demotion of the three SPAS items, which was in the store and
+unexported. The snapshot follows the store, so it carries both.
