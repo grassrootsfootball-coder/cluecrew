@@ -9,7 +9,22 @@
  */
 import { expect, test } from '@playwright/test';
 import { prisma } from '@cluecrew/db';
-import { cleanupFixtures, createStaff, staffContext } from './fixtures';
+import { cleanupFixtures, createStaff, englishItemTemplate, staffContext } from './fixtures';
+
+/**
+ * THE SUITE REVIEWS ONLY ROWS IT CREATED (R1050, extending R978 from reviewers to items). These tests
+ * were written while ENG-028 and ENG-001 sat DRAFT before publication, and they recorded verdicts on
+ * those real rows and then reset them to DRAFT. Both clusters are LIVE now: the verdict control is
+ * not offered on a LIVE row, and the reset would demote a signed, serving item. So each test reviews
+ * a DRAFT English item copied from a LIVE one, authored by a minted account the cleanup sweeps.
+ */
+async function fixtureEnglishDraft(authorEmail: string) {
+  const t = await englishItemTemplate();
+  return prisma.item.create({
+    data: { questionTypeId: t.questionTypeId, difficultyTier: t.difficultyTier, stem: t.stem, explanation: t.explanation,
+      lineRefs: t.lineRefs, status: 'DRAFT', authoredBy: `human:${authorEmail}`, options: { create: t.options } },
+  });
+}
 
 const PREFIX = 'zz-e2e-rs-';
 
@@ -214,14 +229,9 @@ test('a reviewer opens ENG-028, reads an item and records a verdict', async ({ b
 
   // ENG-028 is the packet cluster; ENG-001 is the one whose tags are all ACTIVE. Walk BOTH, so
   // the run separates "the path does not work" from "these nine tags are not approved yet".
-  const packet = await prisma.item.findFirstOrThrow({
-    where: { id: { startsWith: 'ENG-028' }, status: 'DRAFT' },
-    orderBy: { clusterPosition: 'asc' },
-  });
-  const approvedTags = await prisma.item.findFirstOrThrow({
-    where: { id: { startsWith: 'ENG-001' }, status: 'DRAFT' },
-    orderBy: { clusterPosition: 'asc' },
-  });
+  const author = await createStaff(`rs-author-${Date.now()}`, 'AUTHOR');
+  const packet = await fixtureEnglishDraft(author.email);
+  const approvedTags = await fixtureEnglishDraft(author.email);
 
   for (const target of [packet, approvedTags]) {
   // 2. THE SURFACE — the item as she has to judge it.
@@ -260,7 +270,7 @@ test('a reviewer opens ENG-028, reads an item and records a verdict', async ({ b
  * THE SIGN TEST. One item on ENG-028, end to end: open, verdict, SIGNED event with a reviewerId.
  * Reports pass or fail; it does not paper over either.
  */
-test('SIGN TEST: ENG-028 item reaches a SIGNED event with a reviewerId', async ({ browser }) => {
+test('SIGN TEST: an English item reaches a SIGNED event with a reviewerId', async ({ browser }) => {
   const reviewer = await createStaff(`rs-signtest-${Date.now()}`, 'REVIEWER');
   const page = await staffContext(browser, reviewer);
   // THE NAMING PATH. The staff account must resolve to a Reviewer row or the door refuses; this
@@ -293,8 +303,7 @@ test('SIGN TEST: ENG-028 item reaches a SIGNED event with a reviewerId', async (
   // are ALL tagged ACTIVE. Walking both separates "the door does not work" from "these tags are
   // not approved yet" — the door is ruled to refuse an unapproved tag, so the packet item SHOULD
   // stop at the verdict until Annie approves the nine.
-  const which = process.env.SIGN_TARGET ?? 'ENG-028-PR-02';
-  const target = await prisma.item.findFirstOrThrow({ where: { id: which } });
+  const target = await fixtureEnglishDraft((await createStaff(`rs-signauthor-${Date.now()}`, 'AUTHOR')).email);
 
   await page.goto(`/admin/items/${target.id}`);
   await expect(page.getByTestId('comprehension-review')).toBeVisible();

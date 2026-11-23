@@ -10,7 +10,7 @@
  * tapping was shortening the session.
  */
 import { expect, test, type APIRequestContext } from '@playwright/test';
-import { cleanupFixtures, createFamily, enterCrewMode, parentApi } from './fixtures';
+import { cleanupFixtures, createFamily, enterCrewMode, parentApi, completeFluency } from './fixtures';
 
 test.afterAll(cleanupFixtures);
 
@@ -30,6 +30,8 @@ async function walkToModeScreen(api: APIRequestContext, childId: string): Promis
       });
     } else if (current.kind === 'word_collect') {
       await api.post(`${session}/answer`, { data: { secondsElapsed: 3 } });
+    } else if (current.kind === 'fluency_round') {
+      await completeFluency(api, session, current as { questions?: unknown[] });
     } else break;
   }
   throw new Error('never reached the Mode screen');

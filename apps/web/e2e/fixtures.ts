@@ -246,6 +246,52 @@ export async function enterCrewMode(
   ]);
 }
 
+/**
+ * THE WARM-UP CAN OPEN WITH A FLUENCY ROUND (R1050). The orchestrator serves one whenever a Maths case
+ * exists (`mathsCases > 0`, orchestrator.ts), and `/session/answer` refuses it (`use_fluency_endpoint`).
+ * The seeded store had no Maths case, so every walk in this suite was written without it; the real
+ * store has one, and twelve tests stalled on the first activity. This completes the round exactly as
+ * the app's own screen does (play-runner.tsx → /session/fluency), every answer right.
+ */
+export async function completeFluency(
+  api: APIRequestContext,
+  sessionPath: string,
+  current: { questions?: unknown[] },
+): Promise<void> {
+  const questionCount = current.questions?.length ?? 0;
+  expect(questionCount, 'a fluency round carries its questions').toBeGreaterThan(0);
+  const response = await api.post(`${sessionPath}/fluency`, {
+    data: { correctCount: questionCount, questionCount, secondsElapsed: 4 * questionCount },
+  });
+  expect(response.ok(), `completing the fluency round (${response.status()})`).toBeTruthy();
+}
+
+/**
+ * AN ITEM THE REVIEW SURFACE CAN RENDER (R1050). The CMS review page renders ENGLISH only and refuses
+ * a verdict on anything else (R832, `reviewSurfaceRenders`), so a review-gate test built on a VR item
+ * meets `surface-cannot-render` before the gate it means to test. This copies a LIVE English
+ * retrieval item — stem, passage, window, options and their ACTIVE tags — so each test starts from a
+ * row every other gate accepts and breaks only the one thing it is testing.
+ */
+export async function englishItemTemplate(): Promise<{
+  questionTypeId: string; difficultyTier: number; stem: object; explanation: object; lineRefs: number[];
+  options: Array<{ content: { value: unknown }; isCorrect: boolean; misconceptionId: string | null; misconceptionExecution: string | null }>;
+}> {
+  const candidates = await prisma.item.findMany({
+    where: { status: 'LIVE', questionTypeId: 'en-comp-retrieval', id: { startsWith: 'ENG-' } },
+    orderBy: { id: 'asc' },
+    select: { questionTypeId: true, difficultyTier: true, stem: true, explanation: true, lineRefs: true,
+      options: { orderBy: { id: 'asc' }, select: { content: true, isCorrect: true, misconceptionId: true, misconceptionExecution: true, misconception: { select: { status: true } } } } },
+  });
+  const item = candidates.find((c) => c.options.every((o) => o.isCorrect || (o.misconceptionId && o.misconception?.status === 'ACTIVE' && o.misconceptionExecution)));
+  expect(item, 'a LIVE English retrieval item with every distractor ACTIVE-tagged').toBeTruthy();
+  return {
+    questionTypeId: item!.questionTypeId, difficultyTier: item!.difficultyTier, stem: item!.stem as object,
+    explanation: (item!.explanation ?? {}) as object, lineRefs: item!.lineRefs as number[],
+    options: item!.options.map((o) => ({ content: { value: (o.content as { value: unknown }).value }, isCorrect: o.isCorrect, misconceptionId: o.misconceptionId, misconceptionExecution: o.misconceptionExecution })),
+  };
+}
+
 /** Signs in through the real parent login form. */
 export async function signInAsParent(page: Page, email: string): Promise<void> {
   await page.goto('/login');

@@ -8,26 +8,27 @@
  * construction rather than by two seeded accounts that both tests shared.
  */
 import { expect, test } from '@playwright/test';
-import { cleanupFixtures, createStaff, staffContext } from './fixtures';
+import { cleanupFixtures, createStaff, englishItemTemplate, staffContext } from './fixtures';
 
 test.afterAll(cleanupFixtures);
 
 test('publish gate: misconceptions + independent reviewer are hard requirements', async ({
   browser,
 }) => {
-  // Author drafts an item whose distractor has NO misconception mapping.
+  // An ENGLISH item (R1050): the review surface renders English only and refuses a verdict on any
+  // other district (R832), so a VR item met `surface-cannot-render` before the gate under test.
+  // Copied from a LIVE row so every other gate accepts it; one distractor loses its mapping.
+  const template = await englishItemTemplate();
+  const asForm = (untag: boolean) => JSON.stringify(template.options.map((o, i) => ({
+    content: o.content, isCorrect: o.isCorrect,
+    misconceptionId: untag && i === template.options.findIndex((x) => !x.isCorrect) ? null : o.misconceptionId,
+  })));
   const author = await staffContext(browser, await createStaff('cms-author', 'AUTHOR'));
   await author.goto('/admin/items/new');
-  await author.selectOption('select[name="questionTypeId"]', 'vr-11-number-series');
-  await author.fill('input[name="difficultyTier"]', '2');
-  await author.fill('textarea[name="stem"]', JSON.stringify({ prompt: 'What number comes next?', series: [3, 6, 9, 12] }));
-  await author.fill(
-    'textarea[name="options"]',
-    JSON.stringify([
-      { content: { value: 15 }, isCorrect: true, misconceptionId: null },
-      { content: { value: 14 }, isCorrect: false, misconceptionId: null },
-    ]),
-  );
+  await author.selectOption('select[name="questionTypeId"]', template.questionTypeId);
+  await author.fill('input[name="difficultyTier"]', String(template.difficultyTier));
+  await author.fill('textarea[name="stem"]', JSON.stringify({ ...template.stem, lineRefs: template.lineRefs }));
+  await author.fill('textarea[name="options"]', asForm(true));
   await author.getByRole('button', { name: 'Save draft' }).click();
   await author.waitForURL(/\/admin\/items\/(?!new)[A-Za-z0-9]+$/);
   const itemUrl = author.url();
@@ -40,13 +41,7 @@ test('publish gate: misconceptions + independent reviewer are hard requirements'
 
   // Author fixes the mapping.
   await author.goto(itemUrl);
-  await author.fill(
-    'textarea[name="options"]',
-    JSON.stringify([
-      { content: { value: 15 }, isCorrect: true, misconceptionId: null },
-      { content: { value: 14 }, isCorrect: false, misconceptionId: 'vr-series-off-by-one' },
-    ]),
-  );
+  await author.fill('textarea[name="options"]', asForm(false));
   await author.getByRole('button', { name: 'Save changes (returns to DRAFT)' }).click();
   await author.waitForURL('**/admin/items/*');
 

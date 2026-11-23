@@ -89,6 +89,17 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
 
     if (await page.getByTestId('wind-down').isVisible().catch(() => false)) break;
 
+    // THE WARM-UP CAN OPEN WITH A FLUENCY ROUND (R1050): served whenever a Maths case exists, which the
+    // seeded store never had. Driven through the real number pad, one wrong answer per fact — so the
+    // round's miss feedback ("3 × 8 makes 24.") is exercised too, and the loop moves on when it closes.
+    const fluency = page.locator('section[aria-label="Warm-up facts"]');
+    if (await fluency.isVisible().catch(() => false)) {
+      lastBranch = 'fluency';
+      await tryClick(fluency.getByRole('button', { name: '1', exact: true }));
+      await tryClick(fluency.getByRole('button', { name: '✓' }));
+      continue;
+    }
+
     // A cold trail is recoverable, so recover — this loop used to burn its
     // whole budget polling a loading screen that would never resolve.
     if (await page.getByTestId('trouble').isVisible().catch(() => false)) {

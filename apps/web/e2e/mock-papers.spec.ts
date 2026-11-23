@@ -16,6 +16,7 @@ import {
   createFamily,
   enterCrewMode,
   parentApi,
+  completeFluency,
 } from './fixtures';
 
 const BLUEPRINT = JSON.parse(
@@ -141,6 +142,8 @@ test('mock items never reach practice, even when the pool is full of them', asyn
       });
     } else if (current.kind === 'word_collect') {
       await api.post(`${session}/answer`, { data: { secondsElapsed: 3 } });
+    } else if (current.kind === 'fluency_round') {
+      await completeFluency(api, session, current as { questions?: unknown[] });
     } else if (current.kind === 'mode_content') {
       await api.post(`${session}/mode`, { data: { mode: current.mode, action: 'decline' } });
     } else if (current.kind === 'teachback') {

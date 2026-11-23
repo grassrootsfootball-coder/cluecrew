@@ -11,7 +11,7 @@
  */
 import { expect, test } from '@playwright/test';
 import { prisma } from '@cluecrew/db';
-import { cleanupFixtures, createStaff, staffContext } from './fixtures';
+import { cleanupFixtures, createStaff, staffContext, englishItemTemplate } from './fixtures';
 
 const PROPOSED_ID = 'e2e-corpus-proposed-misconception';
 
@@ -27,23 +27,21 @@ test('a similarity-flagged item cannot be REVIEWED until cleared with a note', a
   const reviewer = await createStaff('corpus-reviewer', 'REVIEWER');
 
   // A DRAFT the gate flagged on import (the flag is what is under test here;
-  // the scoring itself is unit-tested in core).
+  // the scoring itself is unit-tested in core). ENGLISH, copied from a LIVE row (R1050): the review
+  // surface refuses a verdict on any district it cannot render (R832), which a VR item met first.
+  const template = await englishItemTemplate();
   const item = await prisma.item.create({
     data: {
-      questionTypeId: 'vr-11-number-series',
-      difficultyTier: 2,
-      stem: { prompt: 'Which number continues the pattern?', series: [4, 8, 12, 16] },
-      explanation: {},
+      questionTypeId: template.questionTypeId,
+      difficultyTier: template.difficultyTier,
+      stem: template.stem,
+      explanation: template.explanation,
+      lineRefs: template.lineRefs,
       status: 'DRAFT',
       authoredBy: `human:${author.email}`,
       similarityFlaggedAt: new Date(),
       similarityScore: 0.71,
-      options: {
-        create: [
-          { content: { value: 20 }, isCorrect: true },
-          { content: { value: 18 }, isCorrect: false, misconceptionId: 'vr-series-off-by-one' },
-        ],
-      },
+      options: { create: template.options },
     },
   });
 

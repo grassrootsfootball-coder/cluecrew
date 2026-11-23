@@ -14,7 +14,7 @@
  */
 import { expect, test, type APIRequestContext } from '@playwright/test';
 import { prisma } from '@cluecrew/db';
-import { cleanupFixtures, createFamily, parentApi } from './fixtures';
+import { cleanupFixtures, createFamily, parentApi, completeFluency } from './fixtures';
 
 test.afterAll(cleanupFixtures);
 
@@ -47,6 +47,8 @@ async function reachMode({ api, session }: Crew): Promise<string> {
       });
     } else if (current.kind === 'word_collect') {
       await api.post(`${session}/answer`, { data: { secondsElapsed: 3 } });
+    } else if (current.kind === 'fluency_round') {
+      await completeFluency(api, session, current as { questions?: unknown[] });
     } else break;
   }
   throw new Error('never reached the Mode screen');
@@ -139,6 +141,10 @@ test('two overlapping writes cannot both land', async () => {
       kind: string;
       options?: Array<{ id: string }>;
     };
+    if (current.kind === 'fluency_round') {
+      await completeFluency(it.api, it.session, current as { questions?: unknown[] });
+      continue;
+    }
     if (!['item', 'word_review', 'word_collect'].includes(current.kind)) break;
     const data = { optionId: current.options?.[0]?.id, secondsElapsed: 3 };
     // The same answer twice at once — a double tap that outran the client.

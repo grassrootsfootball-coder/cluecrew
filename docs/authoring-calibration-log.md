@@ -30447,3 +30447,31 @@ so it cannot restore the sense.
 **transparent's card is still DRAFT.** Every reason it was held in R1045 is now resolved: the tier
 (R1054), the second sense (here), and sense-B length, which was withdrawn in R1047. It still needs a
 review before publication, because the card as it now stands has not been read as a one-sense card.
+
+## R1050 — the e2e suites, run against real content for the first time (David: "fix the e2e failures", 2026-11-23)
+
+These suites had not run in CI since 2026-08-12. Against the restored store, 17 of 75 failed. Every
+failure was a TEST written against the seeded store or against code from before a later ruling. None
+was a product fault. Each was diagnosed by running it and reading the actual response.
+- **12 — the fluency round.** The warm-up opens with a fluency round whenever a Maths case exists
+  (`orchestrator.ts`: `mathsCases > 0`), and `/session/answer` refuses it (`use_fluency_endpoint`).
+  The seeded store had no Maths case, so every walk was written without the round. `completeFluency`
+  in `e2e/fixtures.ts` completes it exactly as `play-runner.tsx` does, and it is called from the
+  a11y, mock-papers, mode-screen and session-integrity walks. The daily loop drives the real number
+  pad, one wrong answer per fact, which also exercises the round's miss feedback.
+- **2 — the review surface renders English only (R832).** The publish-gate and similarity tests
+  built VR items and met `surface-cannot-render` before the gate under test. They now use
+  `englishItemTemplate()`: a copy of a LIVE English retrieval row with ACTIVE tags, so every other
+  gate accepts it, and each test breaks only what it is testing.
+- **2 — the suite reviewed real rows.** The reviewer-surface tests recorded verdicts on real ENG-028
+  and ENG-001 rows and then reset them to DRAFT. Both clusters are LIVE now, so the control is
+  absent, and the reset would have demoted signed, serving items. R978's rule ("the suite mints its
+  own reviewer") is extended to items: each test reviews DRAFT English items it created itself,
+  authored by a minted account the cleanup already sweeps.
+- **1 — the vault-card door test** belongs to the vault session's R1046 publication, which is
+  handling it.
+
+**Found on the way, not CI:** root `.env` points `SIMILARITY_INDEX_PATH` at `~/Downloads/11+/corpus/`,
+a folder that no longer exists, so locally `/admin/import` throws a server error. `similarity-index.ts`
+skips when the variable is UNSET and crashes when it is set but the file is missing; it should
+report and skip in both cases.

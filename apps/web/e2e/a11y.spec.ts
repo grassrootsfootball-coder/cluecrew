@@ -10,7 +10,7 @@
  */
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
-import { cleanupFixtures, copyCookies, createFamily, enterCrewMode, parentApi } from './fixtures';
+import { cleanupFixtures, copyCookies, createFamily, enterCrewMode, parentApi, completeFluency } from './fixtures';
 
 /** One case per mechanic family, so every engine's markup gets audited. */
 const FAMILY_CASES = [
@@ -140,6 +140,8 @@ for (const { family, caseId } of FAMILY_CASES) {
         });
       } else if (current.kind === 'word_collect') {
         await api.post(`${session}/answer`, { data: { secondsElapsed: 3 } });
+      } else if (current.kind === 'fluency_round') {
+        await completeFluency(api, session, current as { questions?: unknown[] });
       } else if (current.kind === 'mode_content') {
         // The mode matters: without it this is a 400 and the offer is never
         // actually declined, so the loop just polls the same screen until it
