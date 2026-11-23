@@ -29991,3 +29991,32 @@ is R599's sign of an instrument fault. The reviewer's other findings stood.
 digest moved on an unchanged row count, plus 3 events and 3 write-log rows that are not this
 entry's: that is R1044's status demotion of the three SPAS items, which was in the store and
 unexported. The snapshot follows the store, so it carries both.
+
+## R1046 — the 46 vault cards serve (David: "go ahead and land them", 2026-11-23)
+
+This settles R1045's open decision. The 46 cards that R1045 landed reviewed but DRAFT are now LIVE,
+through `scripts/agent-review/publish-vault-cards.ts`. That door refuses the whole batch unless
+every card meets all four conditions:
+- it is ATTESTED by rev-agent-01;
+- it is still DRAFT with `reviewedBy: reviewer:rev-agent-01`;
+- it is word-for-word the card that was reviewed;
+- it still passes `checkWordCard`, the CMS publish door's gate.
+
+The door requires the deciding words, `--ruling`, and stores them on each AttributionEvent. Result:
+46 of 46 cleared, 46 APPROVED events written. The vault-guard audit shows 0 VOCAB_BANK moves, and
+the store still holds 0 `en-vocab-in-context` items.
+
+**The serving change, measured before the write:**
+- LIVE tier-1 cards go from 21 to 66.
+- A new child's first twelve warm-up collections become: above accept angry appear arrive beam
+  begin big brave brisk broad build. They were: beam brave brisk calm chilly clatter curious damp
+  dart eager fetch gentle.
+- At three cards per warm-up, the 45 new tier-1 words make up most of a child's first ~22 warm-ups.
+
+This is the ordering effect R1045 named, now chosen. Its follow-up, a warm-up tier or ordering
+change so that common words do not lead, remains open as a product question. It is not a fault.
+
+`check:headword-tiers`: 109 occurrences now have a LIVE tier (was 62), 21 have a DRAFT tier (the
+11 held drafts), and 0 have no card. `check:db-content`: all 169 LIVE words pass. Its only failures
+are the three SPAS items, which R1044 expects while they are held at the door. Snapshot re-exported:
+Word content changed, AttributionEvent +46, ContentWriteLog +46, and nothing else.
