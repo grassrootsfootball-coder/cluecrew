@@ -30388,3 +30388,34 @@ beside it and does not speak for her.
 Both transparent items now serve at T3, matching the vault tier. Of the five transparent
 questions from R1045, only the card's two-sense status (the "transparent excuse" sense) remains.
 That is David's ruling to make.
+
+## R1056 — the outbound-folder checks declare an absent folder instead of crashing on it (David: "Fix them, commit and push", 2026-11-23)
+
+**CI runs 45282664483 and 45283002422 failed at `check:staged-digests` with `ENOENT` on
+`/Users/davidb/Downloads/11+/from-cluecrew`.** That is Cowork's old outbound staging folder. It exists
+only on David's machine, outside the repository. CI had never reached this step before: it stopped
+earlier at `check:headword-tiers` until R1045 fixed that.
+
+**This is R61's shape.** The check is correctly written, and its population cannot exist where it
+runs. Cowork is retired (R1034), and a CI checkout has no such folder.
+- `check:staged-digests` and `check:outbound-sidecars` (the latter aborted on the same read) now call
+  `declareMayBeEmpty` when the folder is ABSENT. On every such run they print that nothing was
+  asserted, and why.
+- A folder that is PRESENT but empty is still a pipeline failure (`requirePopulation`).
+- Locally, where the folder still holds history, nothing changed: 6 staged artefacts checked, 0
+  disagreeing.
+
+**Tested without touching the folder.** A preload made every path under `/Users/davidb/Downloads`
+read as absent. Under it, the 60 CI check steps that need no build, e2e run or database write were
+run:
+- Both checks now pass, declaring the gap.
+- `check:declaration-sets`, `check:witnesses` and `check:retag-releases` already handled the absent
+  folder.
+- The 5 steps that failed under the simulation are not CI failures. All of them come before this step
+  in CI, and CI passed them at 5cbee82:
+  - `typecheck` and `lint`: other sessions' uncommitted e2e and service-worker edits;
+  - `check:l2`: a git-ignored local export;
+  - `similarity:scan`: the preload blocked a write that CI makes;
+  - `check:review-queries`: a local agent worktree.
+
+**Not reached:** steps after the database checks (build, e2e, perf) are measured only by CI itself.

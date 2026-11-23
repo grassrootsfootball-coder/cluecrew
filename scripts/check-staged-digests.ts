@@ -17,8 +17,15 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { OUTBOUND_DIR } from './lib/export-destination';
-import { requirePopulation } from './lib/population';
+import { declareMayBeEmpty, requirePopulation } from './lib/population';
 
+// R61/R1056: absent folder = a declared-empty population, printed as such; a PRESENT folder with
+// nothing in it is still a pipeline failure (requirePopulation).
+if (!existsSync(OUTBOUND_DIR)) {
+  declareMayBeEmpty('check:staged-digests', `staged artefacts at ${OUTBOUND_DIR}`, 0,
+    "the outbound folder is Cowork's staging door on David's machine, outside the repository; Cowork is retired (R1034) and a CI checkout has no such folder (R1056). Where the folder exists, every staged artefact is still checked.");
+  process.exit(0);
+}
 const files = readdirSync(OUTBOUND_DIR).filter((f) => f.endsWith('.json'));
 requirePopulation('check:staged-digests', { 'staged artefacts at the outbound door': files.length });
 

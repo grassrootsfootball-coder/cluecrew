@@ -27,10 +27,10 @@
  * honest one — this catches the mechanism being SKIPPED, not the mechanism being FAKED.
  */
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { OUTBOUND_DIR } from './lib/export-destination';
-import { requirePopulation } from './lib/population';
+import { declareMayBeEmpty, requirePopulation } from './lib/population';
 
 /**
  * The instant `deliver()` began writing sidecars — commit `7dffe51`, 2026-08-19 23:59:07 +0100,
@@ -51,6 +51,13 @@ interface Finding {
 
 function main() {
   let entries: string[];
+  // R61/R1056: the folder ABSENT is declared legitimate and printed as such; any other read failure
+  // still aborts.
+  if (!existsSync(OUTBOUND_DIR)) {
+    declareMayBeEmpty('check:outbound-sidecars', `staged files at ${OUTBOUND_DIR}`, 0,
+      "the outbound folder is Cowork's staging door on David's machine, outside the repository; Cowork is retired (R1034) and a CI checkout has no such folder (R1056). Where the folder exists, every staged artefact is still checked.");
+    return;
+  }
   try {
     entries = readdirSync(OUTBOUND_DIR);
   } catch {
