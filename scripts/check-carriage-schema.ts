@@ -43,6 +43,9 @@ const PLATFORM_OWNED = new Set([
   // drafterDeclaredPullVerdict the reviewer's ruling on that claim (R708). With Cowork retired
   // (R1034) no field crosses into any column any more, so "carried" can only shrink from here.
   'Item.sendHistory', 'Item.drafterNote', 'ItemOption.drafterDeclaredPull', 'ItemOption.drafterDeclaredPullVerdict',
+  // R1042. The `superseded` history column: values a later wording replaced, moved OUT of stem /
+  // explanation / option content by this repo's own migration and doors. Nothing crosses into it.
+  'Item.superseded', 'ItemOption.superseded',
 ]);
 
 /** A JSON column's own existence is what can be asserted; the path inside it is data, not schema. */
