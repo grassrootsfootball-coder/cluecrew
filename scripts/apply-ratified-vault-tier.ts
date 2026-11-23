@@ -11,9 +11,12 @@
  *   · the card's own supersedeNote records "Tier moved <from> → <to>" and David's ratification;
  *   · the store and words.json both hold <from>;
  *   · the vault-guard audit shows no guard-outcome or likelierKnown change (it calls VOCAB_GUARD_OK);
- *   · no LIVE item carrying the headword would DERIVE a different tier (it calls the generator's own
- *     `vocabTierOfSet` and `vocabTier`, never a re-derivation). A move there is an item change that
- *     needs its own review, and the reviewed-content guard would fail CI on it.
+ *   · every LIVE generated item carrying the headword would DERIVE its STORED tier (it calls the
+ *     generator's own `vocabTierOfSet` and `vocabTier`, never a re-derivation). A disagreement does
+ *     NOT fail CI: `content:generate` skips reviewed rows whose stem and options are unchanged, so
+ *     the item would serve at its old tier while its own derivation said another, and nothing would
+ *     report it (R1054 corrects R1050's claim that the guard would catch it). Re-tier the item
+ *     through review first.
  *
  *   tsx scripts/apply-ratified-vault-tier.ts <headword> --ruling="<words>" [--apply]
  */
@@ -63,7 +66,11 @@ async function main() {
     const d1 = vocabTierOfSet([{ word: HEAD, familiar: isCommon(HEAD), vaultTier: to }, k]);
     const derived = it.id.startsWith('gen-');
     console.log(`  ${it.id}: stored T${it.difficultyTier}; ${derived ? `derived T${d0} → T${d1}` : 'authored tier (not derived)'}`);
-    if (derived && d0 !== d1) faults.push(`${it.id} would derive T${d0} → T${d1}: an item change, needs its own review`);
+    // What must hold is that the derivation AGREES WITH THE STORED TIER of each reviewed item (R1054).
+    // `content:generate` never rewrites a reviewed item's tier, so a disagreement here would sit
+    // silently: the item serves at its stored tier while its own derivation says another. Re-tier the
+    // item through review first (scripts/agent-review/land-item-retier.ts); then this passes.
+    if (derived && d1 !== it.difficultyTier) faults.push(`${it.id} would derive T${d1} but is stored at T${it.difficultyTier}: re-tier the item through review first`);
   }
   console.log(`ratified tier ${HEAD} ${from} → ${to} — ${APPLY ? 'APPLY' : 'DRY RUN'}: ${carrying.length} LIVE item(s) screened, ${faults.length} fault(s)`);
   for (const f of faults) console.log(`  ✗ ${f}`);

@@ -30312,3 +30312,53 @@ faults to 0. The verdict moved and the rows did not, so the fault was in the ins
 look at a `select: { options: { select } }` read. Widening it is a separate change. Also,
 `check:review-queries` fails locally only, because it scans an agent worktree under
 `.claude/worktrees/` that a CI checkout does not have.
+
+## R1054 — transparent takes its ratified tier, and its item is re-tiered T5 → T3 through review (David: "Apply transparent's tier and re-tier its item through review", 2026-11-23)
+
+**A CORRECTION TO R1050 FIRST.** R1050 said that moving transparent's vault tier would make the
+reviewed-content guard fail CI. That was wrong. `classifyDerivedWrites` compares stem and options
+only, and `content:generate` SKIPS a reviewed row whose stem and options are unchanged, so it never
+rewrites a reviewed item's `difficultyTier`. The real exposure was quieter. With the vault at 3, LIVE
+`gen-vr-04-closest-meaning-38` would have served at T5 while its own derivation said T3, and nothing
+would report the gap. That is R60's silent shape, not a loud failure. `apply-ratified-vault-tier.ts`
+now checks the thing that matters: the derivation must AGREE WITH THE STORED TIER of every reviewed
+generated item carrying the headword. Otherwise it refuses and points to the item door.
+
+**The item, reviewed.** `export-retier-packet.ts` cut a packet from the store: the item as served,
+its option tags with their hints, the derivation via the generator's own `vocabTierOfSet` (T5 → T3),
+the vr04 rule text, the ratification, and all 39 LIVE vr-04 items at T3–T5 as calibration.
+rev-agent-01 ruled **RETIER_T3**:
+- The carrier ("The lid was TRANSPARENT, so she could see the cake inside.") all but defines the
+  word, and the key "clear" is tier 1. It is no harder than the bare T3 cards: hostile, vague,
+  feeble, genuine, reluctant.
+- The vr04 phrase "OM only where a carrier sentence fixes the sense (T4-T5)" DESCRIBES where carrier
+  rows were authored. It is not a tier constraint. `checkVr04Row` checks only carrier-or-bare. The
+  other carrier items sit at T4–T5 because of their headwords' vault tiers, not their format.
+- Holding at T5 would leave the ratified vault, the derivation and the served tier disagreeing,
+  with a T5 child given one of the type's easiest items.
+- Its standing note, not a ground here: "obvious" is a weak OM trap, because transparent's
+  figurative sense is one children rarely meet. The card's two-sense status is still David's ruling to make.
+
+**Landed, item first:**
+- `land-item-retier.ts` refuses unless the review is rev-agent-01's, the item is LIVE, and the item
+  is byte-for-byte the one in the packet (served hash over stem, options and tier). It set
+  difficultyTier 5 → 3 and wrote AMENDED and APPROVED events.
+- **The signature stands.** `difficultyTier` is outside the signed projection {stem, options,
+  explanation}. Recomputed with `canonicalOrderHash`, the hash is `a4ea29145ec38d3b`, exactly the
+  latest SIGNED subjectHash.
+- `apply-ratified-vault-tier.ts transparent` then passed, because the derivation, T3, equals the
+  stored T3. Vault tier 5 → 3 is now set in the store AND in `content/words/words.json`, with one
+  AMENDED event (actor `ruling:david`).
+- transparent is not a VOCAB_BANK headword, so the vocab-in-context guard is untouched.
+
+**Serving effect.** One LIVE item moves from the T5 pool to the T3 pool. T3 children now meet the
+"Read the sentence…" carrier prompt for the first time in vr-04, a change of format, not of difficulty.
+
+**Not done, flagged by the reviewer.** `bank-vr-04-closest-meaning-35`, the authored bare
+transparent card at T5, belongs at T3 by the same vault ruling. It is a bare card on a T3 headword
+with a tier-1 key and no OM distractor. Its tier is authored rather than derived, so nothing aligns
+it automatically, and it needs its own review.
+
+**Number collision.** The two item events and the vault event say "R1053" in their method or note.
+That number was free when they ran and was taken by another session before this entry. Recorded
+here, not rewritten; the packet stays byte-identical to the sha256 its events record.
