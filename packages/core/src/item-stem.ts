@@ -20,7 +20,7 @@
  */
 import { z } from 'zod';
 
-export const stemSchema = z.record(z.unknown()).superRefine((stem, ctx) => {
+export const stemSchema = z.record(z.string(), z.unknown()).superRefine((stem, ctx) => {
   if ('passageRef' in stem) {
     const value = stem.passageRef;
     if (typeof value !== 'string' || value.trim() === '') {

@@ -53,7 +53,7 @@ const QUESTION_TYPES = ENGLISH_QUESTION_TYPES;
  * **AN IMPORT DOOR VALIDATES AN OPTION; IT NEVER FILTERS ONE** (R758 — R57 reaching the path it
  * never covered). R57 was written about STEMS and closed the allowlist there; this door went on
  * rebuilding each option from four named keys, with no index signature to make the loss visible.
- * The CMS door meanwhile takes `content: z.record(z.unknown())` and passes everything — **two
+ * The CMS door meanwhile takes `content: z.record(z.string(), z.unknown())` and passes everything — **two
  * doors enumerating separately, drifted, exactly as R57 predicted and R42/R55 already recorded.**
  * Measured across the 19 files in this door's own input shape: 553 authored values on four keys
  * would have been dropped, `misconceptionExecution` 499 of them — a REAL COLUMN, described in the
@@ -102,7 +102,7 @@ interface BatchItem {
    *
    * Added 2026-08-12, and the third instance of exactly one defect: this importer builds `stem`
    * from an explicit ALLOWLIST, so any declared field not named here is dropped in silence. The
-   * CMS import path does not have this problem — its `stemSchema` is `z.record(z.unknown())`, a
+   * CMS import path does not have this problem — its `stemSchema` is `z.record(z.string(), z.unknown())`, a
    * passthrough — so the two doors disagreed about what a stem may carry, which is R42's finding
    * again. `techniqueKey` had a live consumer already; an author declaring it on one of the
    * nineteen remaining clusters would have watched it vanish and the repetition cap silently stop

@@ -30177,3 +30177,18 @@ guard. It is a separate fix: either make `seedWords` create-only, or guard it wi
 **Number collision.** The event and the supersedeNote written for hollow say "R1048". That number
 was free when the script ran and was taken by another session before this entry. Recorded here,
 not rewritten.
+
+**zod 3 -> 4 and vitest 3 -> 5** (David: "upgrade zod to v4", "upgrade vitest and prisma too", 2026-11-23).
+- **zod 4.6.7** clears the memory-exhaustion advisory. That one mattered at runtime: zod parses
+  request bodies in 11 API routes, and no request-size cap was found. The one break the typechecker
+  reported was `z.record` with a single argument, so 16 call sites now pass an explicit
+  `z.string()` key (zod 3's implicit default), changed by a bracket-counting rewrite that leaves
+  two-argument calls alone.
+- **The zod checks still bite.** Errors are read through `.error.issues`, which zod 4 keeps. The
+  same 78 content files validate, the pilot-exclusion canary is still rejected, and a malformed
+  word file and a malformed case file are refused.
+- **vitest 5.1.1 and @vitest/coverage-v8 5.1.1** drop tinypool, which carried the 2 critical
+  advisories. The coverage gate was proved live: with a 100.1% line threshold it fails on all four
+  gated files, and it passes at 90%.
+- **Measured:** core 797 and web 41 tests pass, typecheck and lint are clean, `pnpm build` passes,
+  and the audit is down to deepmerge-ts (high, under Prisma), which the Prisma 7 upgrade clears.

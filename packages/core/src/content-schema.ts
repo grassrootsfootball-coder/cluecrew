@@ -242,7 +242,7 @@ export const caseFileSchema = z.object({
  */
 export const replayTemplatesFileSchema = z.object({
   kind: z.literal('replay-templates'),
-  templates: z.record(
+  templates: z.record(z.string(), 
     z.object({
       intro: z.string().min(1),
       step: z.string().includes('{operation}').includes('{value}'),
@@ -413,7 +413,7 @@ const tierEnvelopeSchema = z.object({
 export const batchMixFileSchema = z.object({
   kind: z.literal('batch-mix'),
   note: z.string(),
-  pools: z.record(
+  pools: z.record(z.string(), 
     z.object({
       tierMixPct: tierMixSchema.optional(),
       /** Paper-shape findings that are not a tier distribution (e.g. NVR). */
@@ -578,8 +578,8 @@ export const nvrGeneratorConfigFileSchema = z.object({
   optionCount: z.object({ value: z.number().int(), specDefault: z.number().int(), status: z.string() }),
   densityCaps: z.object({
     status: z.string(),
-    maxElementsByTier: z.record(z.number().int().positive()),
-    typicalElementsByTier: z.record(z.array(z.number()).length(2)),
+    maxElementsByTier: z.record(z.string(), z.number().int().positive()),
+    typicalElementsByTier: z.record(z.string(), z.array(z.number()).length(2)),
     designRule: z.string(),
   }),
   codesScaffold: z.object({

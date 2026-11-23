@@ -40,7 +40,7 @@ async function assertMisconceptionsActive(
 }
 
 const optionSchema = z.object({
-  content: z.record(z.unknown()),
+  content: z.record(z.string(), z.unknown()),
   isCorrect: z.boolean(),
   misconceptionId: z.string().nullable().optional(),
 });
@@ -64,7 +64,7 @@ const itemInputSchema = z.object({
   questionTypeId: z.string().min(1),
   difficultyTier: z.coerce.number().int().min(1).max(5),
   stem: stemSchema,
-  explanation: z.record(z.unknown()).default({}),
+  explanation: z.record(z.string(), z.unknown()).default({}),
   options: z.array(optionSchema).min(2).max(6),
   // BUILD-DISTRICT-MATHS §5: required for MATHS items, enforced below —
   // the key is computed from this, never asserted.

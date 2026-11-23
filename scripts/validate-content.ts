@@ -41,8 +41,8 @@ const voiceFileSchema = z.object({
   beat: z.string().min(1),
   note: z.string().optional(),
   variants: variantList.optional(),
-  byFamily: z.record(variantList).optional(),
-  beats: z.record(variantList).optional(),
+  byFamily: z.record(z.string(), variantList).optional(),
+  beats: z.record(z.string(), variantList).optional(),
 });
 
 /**
@@ -63,7 +63,7 @@ const passageFileSchema = z.object({
     .object({ author: z.string(), title: z.string(), firstPublished: z.number().optional(), authorDied: z.number().optional() })
     .optional(),
   commissioned: z.boolean().optional(),
-  copyrightCheck: z.record(z.unknown()).optional(),
+  copyrightCheck: z.record(z.string(), z.unknown()).optional(),
   provenance: z.string().optional(),
   sceneTitle: z.string().optional(),
   preamble: z.string().optional(),
@@ -103,10 +103,10 @@ const passageFileSchema = z.object({
   /** Cloze vehicles only: how many gaps the text carries. Its presence
    *  declares that citations into this passage count GAPS, not lines. */
   gapCount: z.number().int().positive().optional(),
-  metadata: z.record(z.unknown()).optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
   editorialCuts: z.array(z.string()).optional(),
-  verbatimVerification: z.record(z.unknown()).optional(),
-  similarityCheck: z.record(z.unknown()).optional(),
+  verbatimVerification: z.record(z.string(), z.unknown()).optional(),
+  similarityCheck: z.record(z.string(), z.unknown()).optional(),
 });
 
 const anyContentFile = z.discriminatedUnion('kind', [
