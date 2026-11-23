@@ -33,7 +33,11 @@ const valueOf = (option: { content: unknown }): unknown => {
 
 async function main() {
   const items = await prisma.item.findMany({
-    select: { id: true, questionTypeId: true, status: true, stem: true, options: { select: { id: true, content: true } } },
+    // The SERVING order (orchestrator.ts and mocks.ts read options `orderBy: { id: 'asc' }`). Read
+    // unordered, an ordered-by-construction item comes back in Postgres's physical order, which moves
+    // whenever an option row is rewritten: ENG-003-A-SP-08's OPT-D was, and the check reported 200
+    // faults on a card every child is served correctly (R1053).
+    select: { id: true, questionTypeId: true, status: true, stem: true, options: { select: { id: true, content: true }, orderBy: { id: 'asc' } } },
     orderBy: { id: 'asc' },
   });
   const carrying = items.filter((i) => i.options.some((o) => isVerdictOption(valueOf(o))));

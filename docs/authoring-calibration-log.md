@@ -30287,3 +30287,28 @@ reviewer at or after the end**: closing a tenure must never turn an existing act
 The snapshot was re-exported. Besides the Reviewer row and its event, it carries 16 write-log rows
 from this session's earlier Playwright runs of the R1051 door test: fixture insert/delete pairs on
 `zz-e2e-*` rows, which `check:outside-writes` counts as scaffolding.
+
+## R1053 — check:verdict-option-last read options in physical order; serving reads them by id (2026-11-23)
+
+**Found running CI's remaining steps locally, after CI run 45280682039 stopped at
+`check:carriage-schema`.** The carriage failure was R1042's: the two new `superseded` columns were
+neither declared destinations nor PLATFORM_OWNED. That was fixed in 3c8edf0.
+
+**`check:verdict-option-last` then reported 200 faults: one item, `ENG-003-A-SP-08`, for all 200
+simulated children.** In every fault, "No mistake" was served third of five. **The item is served
+correctly.**
+- Its stem declares `segmentsInOptions: true`, so its options are served exactly as read.
+- Every serving path (`orchestrator.ts`, `mocks.ts`) reads options `orderBy: { id: 'asc' }`, which
+  puts OPT-N last.
+- The check read them with no `orderBy`, which is Postgres's physical order. That moves whenever an
+  option row is rewritten. OPT-D's row had been (ctid 37,37, after OPT-N's 37,13), by a write
+  this session did not make: R1042 touched only this item's `stem`.
+
+**A check that says it imports the serving path read the options differently from it** (R80: the
+instrument was right, the clock was not). It now reads in serving order, and the result goes from 200
+faults to 0. The verdict moved and the rows did not, so the fault was in the instrument (R599).
+
+**Not reached:** `check:unordered-includes` exists for this class and passed, because it does not
+look at a `select: { options: { select } }` read. Widening it is a separate change. Also,
+`check:review-queries` fails locally only, because it scans an agent worktree under
+`.claude/worktrees/` that a CI checkout does not have.
