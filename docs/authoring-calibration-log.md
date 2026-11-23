@@ -30626,3 +30626,65 @@ Its "0 rows" refusal is correct, because vr-04 has no DRAFT rows.
   authored, not a tier limit (R1054).
 - Nothing in the code counts OM rows. The selector and `checkVr04Row` test only carrier-or-bare,
   and vr04 tests pass 5 of 5.
+
+## R1063 — the seed cannot rewrite a Word row: `seedWords` is create-only, and words.json is brought into line with the store (2026-11-23)
+
+R1050 found it and left it: `seedWords` upserted every field of `content/words/words.json` over
+the Word table, and CI runs the seed on top of the restored content snapshot. It is the R62 class
+on the one content table with no reviewed-content guard.
+
+**Measured before any change (dev, 2026-11-23).** All 120 seed words exist in the store, and every
+one differs from the file on `definitionChild` and on nothing else. Tiers already matched, after
+R1050 and R1054. A seed run would have rewritten 120 definitions: 117 LIVE and unattributed, 2 LIVE
+and attributed (genuine, transparent), and 1 DRAFT and attributed (hollow, whose superseding card
+would have taken back the 2026-08-02 definition). 100 of the 120 differ only in style (capital and
+full stop against the store's lowercase house style). 20 differ in wording, for example hollow,
+genuine and transparent. That is the August rewrite, which went into the store and never into the file.
+
+**Create-only, not the classifier.** `seedWords` now inserts only the ids the store does not hold,
+with `createMany({ skipDuplicates: true })`. That is ON CONFLICT DO NOTHING, so an existing row is
+not touched and the write log records nothing. The `classifyDerivedWrites` shape was rejected for
+two reasons:
+- These values are AUTHORED, not computed. R63's test is who authored the value, and no
+  derivation function is involved, so there is no code change for a classifier to catch.
+- A classifier fails whenever file and store differ. After every reviewed edit to a seed card, the
+  seed would fail until somebody also edited words.json. That makes the file a second write target,
+  which is the two-way drift R1034 retired.
+
+The DB is the only store, and words.json bootstraps an EMPTY one. The seed still reports file-against-store
+divergence by field on every run. It names any tier divergence, because difficulty.ts reads tiers
+from the file. It reports and never writes.
+
+**The other readers of words.json.**
+- `packages/db/prisma/difficulty.ts` reads headword and tier only. It builds the vault tier map
+  for `vocabTier` / `vocabTierOfSet`, used by generate-content, import-vr-banks,
+  apply-ratified-vault-tier and export-retier-packet.
+- `scripts/check-reading-age.mjs` lints definitionChild and sentence.
+- `apps/web/e2e/word-draft-door.spec.ts` reads the ids, to check the `seed` author label.
+- `scripts/apply-ratified-vault-tier.ts` reads and writes tier (R1050).
+
+**words.json brought into line, store → file, definitionChild only.** The lint was reading a copy
+that is not served (R60's third question). A fresh database, which CI's Lighthouse job builds, was
+seeding text a reviewer had replaced. All 120 lines were rewritten from the store through
+`tools/edit.py` `sub()`, one anchor per card, each matched exactly once (R87).
+- **No derived tier moves.** Every non-definition field is byte-identical before and after (id,
+  headword, tier, sentence, rootFamily, imageRef). The headword → tier map that difficulty.ts
+  builds, its only input from this file, is identical across all 120 pairs. So no item tier derived
+  from it, LIVE or otherwise, can move. This was proved on the input, not by sampling outputs.
+- The reading-age lint passes on the store's text, 120 words as before.
+
+**Done, measured.**
+- Seed on dev: `seedWords` reports 0 created, 120 left untouched, and words.json matching the
+  store. Write log after the run: no seed word written. The one Word row is `zz-e2e-fixture-word`
+  (seedE2eFixtures, 0 changed columns).
+- A fresh empty database (C collation, `migrate deploy`) seeds 120 DRAFT words with the house-style
+  text, and a second run creates 0.
+- `check:derived-writes`, `check:outside-writes` and `check:db-invariants` (13 of 13) pass, and
+  packages/db typechecks.
+- `check:snapshot` reports STALE after these seed runs. Not re-exported here, because the snapshot
+  files are shared with other sessions' landings.
+
+**Left open.** difficulty.ts still derives item tiers from the FILE's tier, not the store's. A
+re-tier made through review in the store therefore does not reach the generator unless the file is
+edited too (R1050, R1054). The seed now names that drift on every run, but the coupling is still
+there. The fix is for difficulty.ts to read vault tiers from the store.

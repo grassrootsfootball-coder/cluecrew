@@ -360,13 +360,58 @@ async function seedItems(): Promise<void> {
   }
 }
 
+/**
+ * CREATE-ONLY (R1063). words.json BOOTSTRAPS an empty store; it never speaks over a row that exists.
+ *
+ * This used to upsert every field of the file over the Word table, unconditionally, and CI runs the
+ * seed on top of the restored content snapshot. On 2026-11-23 the file differed from the store on
+ * all 120 seed words' `definitionChild` (the August house-style rewrite went into the store and
+ * never into the file), so any seed run would have reverted 117 LIVE definitions and hollow's
+ * superseding card. It is the likeliest way hollow's and transparent's ratified tiers were undone
+ * before 2026-08-16 (R1050).
+ *
+ * Why create-only and not `classifyDerivedWrites`' shape: the DB is the only store (R1034), and
+ * these values are AUTHORED, not computed by a derivation function (R63's test), so there is no
+ * code change for a classifier to catch. A classifier would instead fail the seed every time a
+ * reviewed card is edited through review until somebody also edits this file — making the file a
+ * second write target, which is the two-way drift R1034 retired. `createMany(skipDuplicates)` is
+ * ON CONFLICT DO NOTHING: an existing row is not even touched, so the write log records nothing.
+ *
+ * The file still matters to two readers that are not this one: `difficulty.ts` derives item tiers
+ * from its `tier`, and `check-reading-age.mjs` lints its text. So divergence from the store is
+ * REPORTED here, by field, on every run — never written, never silent.
+ */
 async function seedWords(): Promise<void> {
   const raw = JSON.parse(readFileSync(resolve(CONTENT_ROOT, 'words/words.json'), 'utf8'));
   const { words } = wordFileSchema.parse(raw);
   if (words.length < 60) throw new Error(`Expected at least 60 seed words, got ${words.length}`);
+  const existing = await prisma.word.findMany({ where: { id: { in: words.map((w) => w.id) } } });
+  const stored = new Map(existing.map((row) => [row.id, row]));
+  const toCreate = words.filter((w) => !stored.has(w.id));
+  if (toCreate.length > 0) await prisma.word.createMany({ data: toCreate, skipDuplicates: true });
+
+  const divergence = new Map<string, string[]>();
   for (const word of words) {
-    const { id, ...rest } = word;
-    await prisma.word.upsert({ where: { id }, create: { id, ...rest }, update: rest });
+    const row = stored.get(word.id);
+    if (!row) continue;
+    for (const [field, value] of Object.entries(word)) {
+      if ((row as Record<string, unknown>)[field] !== value) {
+        divergence.set(field, [...(divergence.get(field) ?? []), word.id]);
+      }
+    }
+  }
+  const summary = [...divergence].map(([field, ids]) => `${field} ${ids.length}`).join(', ');
+  console.log(
+    `  seedWords: ${words.length} in words.json · ${toCreate.length} created · ${existing.length} already ` +
+      `in the store, left untouched (create-only, R1063)` +
+      (existing.length > 0 ? ` · ${summary ? `words.json DIFFERS from the store: ${summary}` : 'words.json matches the store'}` : ''),
+  );
+  const tierDrift = divergence.get('tier');
+  if (tierDrift) {
+    console.warn(
+      `  ⚠ words.json tier differs from the store on ${tierDrift.join(', ')}. difficulty.ts derives item tiers ` +
+        'from the FILE, so the generator is reading a tier the store does not hold.',
+    );
   }
 }
 
