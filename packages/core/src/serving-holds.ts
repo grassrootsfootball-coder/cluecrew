@@ -270,10 +270,25 @@ export const LIFTED_HOLDS: readonly (ServingHold & { liftedOn: string; liftedByA
   },
 ];
 
+/**
+ * THE SPAS THREE (R1043). The superseded-move door (R1042) put these rows in front of the machine
+ * reviewer, which HELD them: the test word SPAS is a British playground slur (a variant of "spaz").
+ * The finding is rev-agent-01's; the instruction to stop serving is David's. Status stays LIVE (R208):
+ * the code is correct and the review record is true — what changed is that a child must not meet it.
+ */
+const SPAS_HOLD = {
+  heldBy: "David's instruction (\"Pull them now\", 2026-11-23) on rev-agent-01's HOLD in the superseded-move door (R1042)",
+  on: '2026-11-23',
+  reason: 'The test word SPAS is a British playground slur (a variant of "spaz"); unsuitable on a child-facing item. The code itself is correct (SPAS = 9649).',
+  liftedBy: 'The word replaced through a reviewed door and the row re-signed by rev-agent-01 over the canonical-order subject; its superseded keys move out with it (check:superseded-inside-field frozen entry deleted).',
+} as const;
+
 export const SERVING_HOLDS: readonly ServingHold[] = [
-  // Empty since 2026-08-24: the twenty-five seed holds (R703) LIFTED INTO THE STATE by David's
-  // never-shippable ruling (2498201221403df7…) — full records in LIFTED_HOLDS above. An empty
-  // list here is a fact, not a gap.
+  // The twenty-five seed holds (R703) LIFTED INTO THE STATE on 2026-08-24 by David's
+  // never-shippable ruling (2498201221403df7…) — full records in LIFTED_HOLDS above.
+  { itemId: 'gen-vr-19-word-number-codes-03', ...SPAS_HOLD },
+  { itemId: 'gen-vr-19-word-number-codes-13', ...SPAS_HOLD },
+  { itemId: 'gen-vr-19-word-number-codes-23', ...SPAS_HOLD },
 ];
 
 const HELD = new Set(SERVING_HOLDS.map((h) => h.itemId));

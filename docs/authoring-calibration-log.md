@@ -29869,3 +29869,27 @@ CI after `check:every-string-field`. `SWEEP-FIX.md` points drafters at the colum
 **Open:** the three SPAS rows (above). There are also 50 moved LIVE items with no reproducing SIGNED
 hash under any declared subject. That was already true before the move and is unchanged by it, but
 nothing has read it as a population yet.
+
+## R1043 — the SPAS three are held from serving (David: "Pull them now", 2026-11-23)
+
+**David's instruction, on rev-agent-01's HOLD in the R1042 door.** `gen-vr-19-word-number-codes-03`,
+`-13` and `-23` ask a child to encode SPAS, a British playground slur.
+
+**Held at the serving path, not demoted (R208).** All three are now in `SERVING_HOLDS`
+(`packages/core/src/serving-holds.ts`), with `heldBy` naming both halves: the instruction is David's,
+the finding is the machine reviewer's (R94). `status` stays LIVE. The code is correct, and the review
+record is a true fact about review; what changed is a fact about serving. Every item-selecting door
+consults the list (`orchestrator.ts`, `servable-cases.ts`, `mocks.ts`).
+
+**Measured with `check:serving-path`:** VR SERVABLE went from 618 to 615, and the census names all
+three holds. `gen-vr-19-word-number-codes` keeps 22 of its 25 items. Core tests (795) and the web
+typecheck pass.
+
+**Lift condition:** the word is replaced through a reviewed door, and the row is re-signed by
+`rev-agent-01` over the canonical-order subject. When that happens, its superseded keys move out,
+its frozen entry in `check:superseded-inside-field` is deleted, and the hold moves to
+`LIFTED_HOLDS` (never silently removed).
+
+**Seen in passing, not caused here:** `check:expiring-claims` reports BROKEN on the public copy
+"Every question type is taught five ways", because Cases carry 1 mode. The check is not in CI, and
+the copy belongs to David.
