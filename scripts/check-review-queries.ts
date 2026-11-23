@@ -71,6 +71,11 @@ export const DECLARED_DOORS: Readonly<Record<string, string>> = {
   'packages/core/src/english/cowork-item-keys.ts': 'names the column as the carriage destination for Cowork\'s preReview key',
   'packages/db/prisma/migrations/20260816120000_cowork_renames_and_content_keys/migration.sql': 'the rename to draftSelfAssessment',
   'scripts/emit-item-manifest.ts': 'records presence for the manifest; reads no value',
+  // R1041 — the four found when CI first ran this; each read before it was declared.
+  'packages/core/src/field-dispositions.ts': "classifies the draftSelfAssessment.* paths as 'staff' for the every-string-field sweep; reads no value",
+  'scripts/check-carriage-schema.ts': 'names Item.draftSelfAssessment / draftSelfAssessmentHash as carriage destinations; reads no value',
+  'scripts/import-english-clusters.ts': "the Cowork cluster import door: WRITES the imported claim (line 305) and never reads it to decide review. Cowork is retired (R1034), so it carries nothing now",
+  'scripts/land-annie-156.ts': 'names draftSelfAssessment.* inside a note string listing undisposed paths; reads no value',
 };
 
 export interface Violation { file: string; leg: 'A' | 'B'; detail: string }

@@ -36,7 +36,7 @@ const COUNT_CLAIM = /\b(one|two|three|four|both)\s+of\s+(these|them)\b/i;
 const NUMBER: Record<string, number> = { one: 1, two: 2, three: 3, four: 4, both: 2 };
 
 async function main() {
-  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: true } });
+  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: { orderBy: { id: 'asc' } } } });
   const withHint = items.filter((i) => {
     const h = (i.explanation as { hintCore?: unknown } | null)?.hintCore;
     return typeof h === 'string' && h.trim() !== '';

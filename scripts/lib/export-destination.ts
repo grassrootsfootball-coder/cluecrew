@@ -240,6 +240,15 @@ function restampToContent(sourcePath: string, family?: string): string {
 }
 
 export function deliver(sourcePathIn: string, family?: string): string {
+  // COWORK IS RETIRED (David, 2026-11-22 — R1034): nothing is exported to it, so nothing is staged in
+  // its outbound folder or the lane manifest. Twelve checks still call this; running one in CI wrote
+  // into ~/Downloads/11+ and content/lane-manifest.jsonl, and check:stamp-covers-payload then failed
+  // on the copy it had just staged (R1041). The artefact stays where its writer put it, and the
+  // delivery body below is kept for history, reachable only by an explicit opt-in.
+  if (process.env.CLUECREW_COWORK_DELIVERY !== '1') {
+    console.log(`  not delivered: Cowork is retired (R1034). The artefact stays at ${sourcePathIn}`);
+    return sourcePathIn;
+  }
   let sourcePath = sourcePathIn;
   mkdirSync(OUTBOUND_DIR, { recursive: true });
   let name = basename(sourcePath);

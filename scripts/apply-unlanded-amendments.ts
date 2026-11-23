@@ -48,7 +48,7 @@ async function main() {
   }
   console.log(`${AMENDMENTS.length} authored wording(s) located in her returns and gated clean\n`);
 
-  const carriers = await prisma.item.findMany({ include: { options: true } });
+  const carriers = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const countFor = (id: string) => {
     let live = 0; let all = 0;
     for (const i of carriers) for (const o of i.options) {

@@ -56,7 +56,7 @@ const tokens = (text: string) => text.toLowerCase().split(/[^a-z']+/).filter(Boo
 async function main() {
   const words = await prisma.word.findMany();
   const vault = new Map(words.map((w) => [w.headword.toLowerCase(), w]));
-  const items = await prisma.item.findMany({ include: { options: true }, orderBy: { id: 'asc' } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } }, orderBy: { id: 'asc' } });
   const vocab = items.filter((i) => tierRequirementApplies(i.questionTypeId) === true);
   requirePopulation('card-gives-key join', {
     'vault rows': words.length,

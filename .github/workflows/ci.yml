@@ -308,13 +308,6 @@ jobs:
       - name: Derived-write guard (computed values classify before writing)
         run: pnpm check:derived-writes
 
-      # The English cluster gates are pure-Python file readers with no route to this database, so
-      # they read an exported library copy. A copy that drifts is how an 81-entry snapshot came to
-      # be consulted for a whole verification round — real verdicts, scoped to a library predating
-      # the ruling under test. This compares the copies to the DB; it never repairs them.
-      - name: Exported gate libraries match the database
-        run: pnpm check:gate-library-fresh
-
       # ROOT SCRIPTS WERE NEVER TYPECHECKED -- `pnpm -r` visits workspace PACKAGES and scripts/ is
       # in none of them, so ~90 files that write to the database sat outside every type check.
       # Three wrong call signatures had shipped clean, one of them inside check:outside-writes.
@@ -326,6 +319,13 @@ jobs:
       # THE RETURN LEG STEP IS RETIRED (David, 2026-11-22 -- R1034): Cowork is no longer used, so
       # there is no authoring side to return anything to. The DB is the only store. The script stays
       # for history; nothing it measured is owed to anyone now.
+
+      # EIGHT MORE COWORK-CHANNEL STEPS RETIRED (David, 2026-11-22 -- R1041), as the return leg was.
+      # Each read the Cowork delivery/return folders under ~/Downloads/11+ or Cowork's own claims, so
+      # on a CI runner they could only fail and locally they watched a channel nothing travels any
+      # more: gate-library-fresh, item-population, reissue-completion, import-refusals,
+      # amendments-landed, stamp-covers-payload, draft-assessment, manifest-drift. The scripts stay
+      # runnable by hand; the step comments that explained them are in git history.
 
       # BOTH STORES GATE ON A DECLARED QUOTED SPAN AND NEITHER CAN SEE THE OTHER'S DECLARATIONS.
       # R339 found four texts here whose pass/fail turns on the declaration alone, swinging 11-14
@@ -345,50 +345,12 @@ jobs:
       - name: Outbound sidecars (nothing enters that folder except through the door)
         run: pnpm check:outbound-sidecars
 
-      # DO THE TWO STORES HOLD THE SAME ITEMS? check:declaration-sets found ENG-019-BV-02 missing
-      # here BY ACCIDENT -- it compares declarations and that item happened to carry two. Five items
-      # are named in Cowork artefacts with no row here, all five the outstanding half of a known
-      # six-item reissue that nothing was watching land. Reports OURS_NOT_MENTIONED as a count only:
-      # an item of ours no artefact of theirs names says nothing about whether they hold it.
-      - name: Item population (an item named there with no row here)
-        run: pnpm check:item-population
-
-      # AN ARTEFACT THAT DESCRIBES AN ACT IS NOT THE ACT. Every guard here watches whether content
-      # ARRIVES correctly; none watched whether a named, staged, agreed act COMPLETED.
-      # REISSUESIXITEMS.json named six items, one landed, five did not, and the only thing that
-      # noticed was a check built for something else. Fails ONLY on UNDISPOSED -- an id that is
-      # neither imported nor refused-with-a-reason. A legitimately-held item keeping this red is
-      # how it would get muted inside a week.
-      - name: Reissue completion (did a described act actually complete?)
-        run: pnpm check:reissue-completion
-
-      # THE INSTRUMENT BUILT TO WATCH THE SILENT-REFUSAL CLASS WAS THE CLEAREST MEMBER OF IT
-      # (Annie's 154th, David's ruling -- R712). check-outstanding-import-refusals PRINTED ONLY and
-      # ran nowhere: a check whose entire subject is refusals nobody routed, itself unrouted.
-      - name: Outstanding import refusals (a refusal nobody received is not a refusal)
-        run: pnpm check:import-refusals
-
       # A GENERATED ARTEFACT DECLARES ITS GENERATOR, AND THIS ASSERTS THEY AGREE (R747). Six rows
       # drifted in the authoring store with no record and nobody would have known but for an
       # unrelated search: a generated bank that no longer matches its generator has two sources of
       # truth and no way to say which is authoritative.
       - name: Generator agreement (declared, and reproducing)
         run: pnpm check:generator-agreement
-
-      # A RETURN'S AUTHORED WORDINGS ARE DECISIONS, AND NOTHING ASSERTED THEY REACHED THE STORE.
-      # 9 of 13 never did; the most carried hint in the product served a string she had replaced,
-      # and she reasoned in a later return from her own wording as though it were in force. Whole
-      # returns were the unit that failed, not half-batches. Bound on its face: it reads the shapes
-      # her returns use, so an amendment in running prose is invisible and the count is a floor.
-      - name: Amendments landed (did her rulings reach the store?)
-        run: pnpm check:amendments-landed
-
-      # AN ARTEFACT'S NAME MUST IDENTIFY ITS PAYLOAD. The misconception library shipped two
-      # materially different files under one hash because the stamp was computed over a five-field
-      # projection while the file carried seventeen. This recomputes each artefact's stamp from its
-      # own payload. It NAMES what it could not screen rather than counting it as passing.
-      - name: Stamp covers payload (a name that moves when the content moves)
-        run: pnpm check:stamp-covers-payload
 
       # THE DATABASE FACTS PRISMA DOES NOT KNOW. Six migrations hold SQL Prisma cannot express --
       # triggers, functions, named CHECKs, expression defaults -- and that set is exactly what a
@@ -430,21 +392,6 @@ jobs:
       - name: Review queries (a self-assessment is not a sign-off)
         run: pnpm check:review-queries
 
-      - name: Draft self-assessment subject (a claim still describes its item)
-        run: pnpm check:draft-assessment
-
-      # THE MANIFEST GUARD. Fails on REGRESSION -- a declarative field this store carried is
-      # carried less, or is carried somewhere else -- never on the 20-field backlog, which would
-      # be red from the first run and muted within a week. Also refuses when the manifest and the
-      # field registry disagree about which fields exist.
-      #
-      # DELIBERATELY NOT PRECEDED BY `emit:manifest`. The CI database holds only the Phase 1
-      # synthetic VR items, so re-emitting here would describe a DIFFERENT STORE and report every
-      # field as lost. This screens the committed artefact and the registry against each other;
-      # it says nothing about whether that artefact is current, and prints as much.
-      - name: Manifest drift (a declarative field is not lost silently)
-        run: pnpm check:manifest-drift
-
       - name: Database content gate (child-facing text in the DB)
         run: pnpm check:db-content
 
@@ -469,6 +416,13 @@ jobs:
       # own rule and counted, never asserted — the same discipline as the
       # Maths computed key. An item with more than one valid answer marks a
       # child wrong for being right.
+      # THE FREQUENCY FILE IS FETCHED, NEVER COMMITTED (David, 2026-11-22 -- R1041). SUBTLEX-UK's
+      # licence is unestablished, so the bytes stay out of git; the gate refuses any file whose
+      # sha256 differs from the digest pinned in packages/core/src/frequency-signal.ts. Without it
+      # the whole gate died in CI, single-answer checks included.
+      - name: Fetch the SUBTLEX-UK frequency file (pinned by digest)
+        run: curl -fsSL --retry 3 -o data/frequency/SUBTLEX-UK.txt.zip https://psychology.nottingham.ac.uk/subtlex-uk/SUBTLEX-UK.txt.zip
+
       - name: Word-puzzle gate (single answer, no label collisions)
         run: pnpm check:word-puzzles
 

@@ -1,0 +1,109 @@
+{
+ "door": "ci-fix/content-04",
+ "proposer": "agent",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "ENG-001-WIW-04",
+   "why": "lineRefs [8] -> [8, 9]: the declared quote and the walk script already cite the added line; stem, options and walk unchanged.",
+   "stem": {
+    "text": "Read line 8. What does 'bolted out of the house' mean here?",
+    "passageRef": "stream-a-03-wind-in-willows",
+    "orderAnchor": 4
+   },
+   "lineRefs": [
+    8,
+    9
+   ],
+   "options": [
+    {
+     "optionId": "cmsw387yc0001tmqbslx7g4os",
+     "value": "Ate something far too fast.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "To bolt food is a real second sense of the verb, and the passage gives him no food to bolt."
+    },
+    {
+     "optionId": "cmsw387yc0002tmqbc1cgig3y",
+     "value": "Slid a bolt across to lock the door.",
+     "isKey": false,
+     "tag": "en-vocab-dominant-sense",
+     "execution": "The door-fastening is the sense a child meets first, and 'bolted out of the house' puts a house and a door in the same clause to support it."
+    },
+    {
+     "optionId": "cmsw387yc0003tmqbftqzw6cq",
+     "value": "Climbed out slowly using a ladder.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "The ladders and steps are line 2, inside the house and before he leaves — true, and from a different part."
+    },
+    {
+     "optionId": "cmsw387yc0004tmqb9qsdh6kn",
+     "value": "Rushed out all of a sudden.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw387yc0005tmqb6nqdt9d3",
+     "value": "Shouted 'Hang spring-cleaning!' as he went.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "'Hang spring-cleaning!' is on line 8 itself. True, in the window, and it is what he said rather than how he left."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-02",
+   "why": "lineRefs [9, 10, 11, 12] -> [9, 10, 11, 12, 13]: the declared quote and the walk script already cite the added line; stem, options and walk unchanged.",
+   "stem": {
+    "text": "Look at lines 9 to 12. What does Fraulein Rottenmeier find in the wardrobe?",
+    "quotes": [],
+    "passageRef": "stream-a-19-heidi",
+    "orderAnchor": 9
+   },
+   "lineRefs": [
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "options": [
+    {
+     "optionId": "cmsw2f4yh00witmbv30wx10iq",
+     "value": "An expression of horror on her face.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 9, where she comes back with an expression of horror upon her face. That is how she looks, not what she finds; line 12 says she finds a heap of rolls at the bottom. Retagged from en-inference-literal-lookalike: the value is now a within-window detail answering a different question."
+    },
+    {
+     "optionId": "cmsw2f4yh00wjtmbvi3y4hub8",
+     "value": "An old straw hat left out on the table.",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "True at line 15, three lines past the end of this window, where Tinette is told to take it away."
+    },
+    {
+     "optionId": "cmsw2f4yh00wktmbvacb613mg",
+     "value": "Clothes that had grown too small for the child.",
+     "isKey": false,
+     "tag": "en-plausible-not-stated",
+     "execution": "She went up to see what to keep and what to throw away, which invites this."
+    },
+    {
+     "optionId": "cmsw2f4yh00wltmbvghnroy1f",
+     "value": "A heap of rolls at the bottom of it.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  }
+ ],
+ "notes": {
+  "ENG-001-WIW-04": "lineRefs [8] -> [8, 9]: the declared quote and the walk script already cite the added line; stem, options and walk unchanged.",
+  "ENG-020-HD-02": "lineRefs [9, 10, 11, 12] -> [9, 10, 11, 12, 13]: the declared quote and the walk script already cite the added line; stem, options and walk unchanged."
+ }
+}

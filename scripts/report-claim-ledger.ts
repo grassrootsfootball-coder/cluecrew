@@ -110,7 +110,7 @@ async function main() {
   const miscs = await prisma.misconception.findMany({ select: { id: true, description: true } });
   // Counted from the items we already hold rather than a groupBy, so the tag count and the option
   // rows come from one read of one source.
-  const withOptions = await prisma.item.findMany({ include: { options: true } });
+  const withOptions = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const tagCount = new Map<string, number>();
   for (const i of withOptions) {
     for (const o of i.options) {

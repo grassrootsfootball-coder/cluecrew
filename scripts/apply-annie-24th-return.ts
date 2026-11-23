@@ -85,7 +85,7 @@ async function main() {
   let moved = 0;
   for (const [entry, items] of Object.entries(ASSIGN)) {
     for (const id of items) {
-      const item = await prisma.item.findUnique({ where: { id }, include: { options: true } });
+      const item = await prisma.item.findUnique({ where: { id }, include: { options: { orderBy: { id: 'asc' } } } });
       const opt = item?.options.find((o) => (o as { misconceptionId?: string | null }).misconceptionId === 'en-plausible-not-stated');
       if (!opt) { console.log(`  SKIP ${id} — no option tagged en-plausible-not-stated`); continue; }
       if (entry === 'en-plausible-not-stated') { console.log(`  STAYS ${id} -> ${entry}`); continue; }

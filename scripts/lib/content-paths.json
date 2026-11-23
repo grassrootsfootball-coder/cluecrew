@@ -1,0 +1,49 @@
+{
+  "what": "THE ONE DECLARATION of what lives under content/ (R1041). validate:content schema-checks AUTHORED paths and fails on any top-level entry declared nowhere; scan:vocab skips only STAFF_RECORDS. Both read this file, so the two scanners cannot drift apart (R42). Adding a path to either list is a decision with a reason, printed with its file count on every run.",
+  "ruling": "R1041",
+  "authored": [
+    "passages", "cases", "chapters", "words", "voice", "blueprints",
+    "batch-mix.json", "regions.json", "replay-templates.json", "nvr-generator-config.json",
+    "english-district-plan.json", "maths-district-plan.json", "nvr-district-plan.json", "exam-technique-tree.json"
+  ],
+  "records": {
+    "exports": "generated reviewer packs; output of the repo (gitignored)",
+    "review-returns": "returned decisions files, checked at the point of use",
+    "pilot-review": "pilot item batches, gated by scripts/lib/pilot-review.ts on every write (R47)",
+    "agent-review": "agent drafting and review working files (R1031-R1040); what lands is gated in the DB by check:db-content and check:every-string-field",
+    "blind-keys": "unblinding keys for calibration samples",
+    "evidence": "evidence files cited by rulings",
+    "case-faces": "provenance records for case doorplates landed by landCaseFace; the face itself is gated at landing and in the DB",
+    "notices": "approved notice text with its authority; landed by the notice path",
+    "holds": "standing review holds",
+    "named-unknowns": "declared unknowns",
+    "rulings": "ruling records",
+    "standing-losses": "records of content lost and not recovered",
+    "supersessions": "case supersession records",
+    "withdrawals": "withdrawal notices and specs",
+    "retention": "superseded artefacts kept for provenance",
+    "wordlists": "plain word lists read by checks",
+    "appropriateness-clearances.json": "the reviewer's clearance record (R1005)",
+    "appropriateness-siting-backlog.json": "backlog record",
+    "blinded-readings-unblinding.json": "unblinding record",
+    "claim-ledger.jsonl": "claim ledger",
+    "derived-list-backlog.json": "backlog record",
+    "digest-subject-backlog.json": "backlog record",
+    "divergences-unblinding.json": "unblinding record",
+    "lane-manifest.jsonl": "lane manifest of staged artefacts",
+    "maths-noncomputable-keys.json": "declared non-numeric maths keys, read by verify:solutions (R1040)",
+    "reissue-dispositions.jsonl": "reissue dispositions",
+    "replaced-questions-unblinding.json": "unblinding record",
+    "ruled-empty-seats.json": "ruling record",
+    "shared-rule-ids.json": "rule-id registry",
+    "silent-rules.json": "rule registry",
+    "text-predicate-unblinding.json": "unblinding record",
+    "union-appropriateness-fixture.json": "test fixture for the appropriateness union",
+    "vr08-open-items.json": "open-items record",
+    "withdrawn-executions.json": "withdrawn executions record"
+  },
+  "staffRecordsNotScannedForVocab": [
+    "content/agent-review", "content/withdrawals", "content/standing-losses", "content/rulings", "content/holds",
+    "content/derived-list-backlog.json", "content/maths-noncomputable-keys.json", "content/vr08-open-items.json"
+  ]
+}

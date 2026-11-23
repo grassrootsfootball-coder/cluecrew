@@ -17,7 +17,7 @@ import { requirePopulation } from './lib/population';
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 async function main() {
-  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: true } });
+  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: { orderBy: { id: 'asc' } } } });
   const withUnserved = items.filter((i) => {
     const h = (i.explanation as { hintCore?: unknown } | null)?.hintCore;
     return typeof h === 'string' && h.trim() !== '' && chooseHint(i.explanation as never).serves === 'library';

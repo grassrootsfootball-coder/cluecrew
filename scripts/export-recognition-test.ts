@@ -28,7 +28,7 @@ const FAMILY = 'recognition-test-for-annie';
 async function main() {
   const words = await prisma.word.findMany();
   const vault = new Map(words.map((w) => [w.headword.toLowerCase(), w]));
-  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: true }, orderBy: { id: 'asc' } });
+  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: { orderBy: { id: 'asc' } } }, orderBy: { id: 'asc' } });
   const vocab = items.filter((i) => tierRequirementApplies(i.questionTypeId) === true);
   const joined = vocab.filter((i) => vault.has(String((((i.stem as { words?: unknown[] }).words ?? [])[0] ?? '')).toLowerCase()));
   requirePopulation('recognition test', { 'LIVE vocabulary items': vocab.length, 'joined to a card': joined.length });

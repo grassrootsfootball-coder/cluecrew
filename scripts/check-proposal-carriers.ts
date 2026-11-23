@@ -58,7 +58,7 @@ async function main() {
   });
 
   const ids = [...new Set(claims.map((c) => c.item))];
-  const rows = await prisma.item.findMany({ where: { id: { in: ids } }, include: { options: true } });
+  const rows = await prisma.item.findMany({ where: { id: { in: ids } }, include: { options: { orderBy: { id: 'asc' } } } });
   const byId = new Map(rows.map((r) => [r.id, r]));
 
   const wrong: string[] = [];

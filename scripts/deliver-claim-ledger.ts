@@ -67,7 +67,7 @@ async function main() {
     });
   }
 
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const liveBehind = new Map<string, number>();
   for (const i of items) {
     if (i.status !== 'LIVE') continue;

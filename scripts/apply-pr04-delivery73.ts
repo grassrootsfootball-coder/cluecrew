@@ -39,7 +39,7 @@ async function main() {
     note: 'Landed six days after the bank wrote it; the serving row held the pre-repair strings until now.',
   };
 
-  const i = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-028-PR-04' }, include: { options: true } });
+  const i = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-028-PR-04' }, include: { options: { orderBy: { id: 'asc' } } } });
   const stem = i.stem as Record<string, unknown>;
   const e = (i.explanation ?? {}) as Record<string, unknown>;
   const problems: string[] = [];
@@ -94,7 +94,7 @@ async function main() {
     data: { misconceptionExecution: bankA.misconceptionExecution } as never,
   });
 
-  const back = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-028-PR-04' }, include: { options: true } });
+  const back = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-028-PR-04' }, include: { options: { orderBy: { id: 'asc' } } } });
   const bs = back.stem as Record<string, unknown>;
   const be = back.explanation as Record<string, unknown>;
   const ba = back.options.find((o) => o.id === optA!.id)! as { misconceptionExecution?: string | null };

@@ -4,7 +4,7 @@
 statement and no redistribution grant; the one stated condition is citation. Rights are reserved by
 default, so the bytes stay out of git and the digest lives in source.
 
-## To fetch (one command, run by a person, not by CI)
+## To fetch (one command; CI runs the same one, David's ruling 2026-11-22 — R1041)
 
     curl -L -o data/frequency/SUBTLEX-UK.txt.zip \
       https://psychology.nottingham.ac.uk/subtlex-uk/SUBTLEX-UK.txt.zip

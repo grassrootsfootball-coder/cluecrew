@@ -1,0 +1,28 @@
+{
+  "door": "ci-fix/content-04",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-001-WIW-04",
+      "verdict": "REFUSE",
+      "reason": "The widening is true to the evidence but leaves the card contradicting itself. The quote 'without even waiting to put on his coat' runs from line 8 ('...without even waiting') onto line 9 ('to put on his coat.'). The hint 'He did not stop for his coat' and the walk 'Read on from line 8' both depend on line 9, so [8, 9] is the honest window. But lineRefs is what the child sees: comprehension.tsx highlights citedLines and renders a 'Go to lines 8-9' button, while the unchanged stem says 'Read line 8.' A 9-11-year-old gets two different instructions on one screen, and the stem is the one they are told to obey. Stem and window are one change. Re-propose with lineRefs [8, 9] AND the stem 'Read lines 8 and 9. What does 'bolted out of the house' mean here?'. All five executions stay true under [8, 9]: ladders at line 2 and 'Hang spring-cleaning!' on line 8 are both unaffected."
+    },
+    {
+      "ref": "rebuild:ENG-020-HD-02",
+      "verdict": "REFUSE",
+      "reason": "Two faults. (1) It breaks an execution. The straw-hat option (cmsw2f4yh00wjtmbv30wx10iq) says 'True at line 15, three lines past the end of this window'. With the window ending at 13, line 15 is two lines past, so the execution becomes false. 'Stems, options and walk scripts are unchanged' is exactly how this slipped. (2) The stem 'Look at lines 9 to 12' would disagree with the on-screen 'Go to lines 9-13' control and highlight. Also, widening is not needed for the evidence: the key 'a heap of rolls' is wholly on line 12, inside [9..12]. Line 13 only repeats it ('a whole pile of bread!'). The smaller honest fix is to keep [9..12], drop the line-13 span 'a whole pile of bread' from explanation.quotes, and drop the walk's second sentence. If the window is widened instead, the stem must say 'lines 9 to 13' and the straw-hat execution must say 'two lines past'."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-001-WIW-04",
+      "verdict": "HOLD",
+      "reason": "As it would land, the stem 'Read line 8' disagrees with the displayed window, lines 8-9. Otherwise the row is sound. The key 'Rushed out all of a sudden.' is the only correct sense. Lock, eat, ladder and shouting are each wrong, and each is explained truly."
+    },
+    {
+      "itemId": "ENG-020-HD-02",
+      "verdict": "HOLD",
+      "reason": "As it would land, the straw-hat execution ('three lines past the end of this window') is false against window 9-13, and the stem 'lines 9 to 12' disagrees with the displayed window. Otherwise the row is sound. The key 'A heap of rolls at the bottom of it.' is stated at line 12. The horror, straw-hat and outgrown-clothes options are wrong."
+    }
+  ]
+}

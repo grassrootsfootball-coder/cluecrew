@@ -17,71 +17,14 @@
  * passage but outside the item's own `lineRefs` window is a different fault — it cites a place the
  * child was not sent — and it is reported separately rather than folded into "found".
  */
-import { readFileSync, readdirSync } from 'node:fs';
-import { join, resolve } from 'node:path';
 import { prisma } from '../packages/db/src/index';
+import { flat, loadPassages as passages, windowText as window } from './lib/passage-window';
 import { requirePopulation } from './lib/population';
 
-const PASSAGES = resolve(import.meta.dirname, '../content/passages');
 
-/** The passage text, by id. A reader refuses a shape it cannot parse (R173). */
-function passages(): Map<string, { text: string; numbered: NumberedLine[] | null }> {
-  const out = new Map<string, { text: string; numbered: NumberedLine[] | null }>();
-  for (const name of readdirSync(PASSAGES).filter((n) => n.endsWith('.json'))) {
-    const parsed = JSON.parse(readFileSync(join(PASSAGES, name), 'utf8')) as
-      { id?: string; extract?: unknown; body?: unknown; text?: unknown; numberedLines?: unknown };
-    if (typeof parsed.id !== 'string') {
-      throw new Error(`${name}: no string id — refusing to report from a failed read (R173)`);
-    }
-    /*
-     * THREE SHAPES, ALL LEGITIMATE, AND THE READER NAMES THEM RATHER THAN COERCING. A stream-A
-     * comprehension extract carries `extract`; a cloze VEHICLE carries `body`; a stream-B passage
-     * carries `text`. The first version knew one and threw on the second, then knew two and threw
-     * on the third — **each refusal was correct and each taught me a shape I did not know the
-     * corpus had.** That is what a refusing reader buys: a `?? ''` here would have silently
-     * screened 819 quotes against an empty string and reported every one as NOT IN THE SOURCE.
-     */
-    const text = typeof parsed.extract === 'string' ? parsed.extract
-      : typeof parsed.body === 'string' ? parsed.body
-      : typeof parsed.text === 'string' ? parsed.text
-      : null;
-    if (text === null) {
-      throw new Error(`${name}: none of 'extract', 'body' or 'text' is a string — an unknown passage shape, reported rather than skipped`);
-    }
-    const numbered = Array.isArray(parsed.numberedLines)
-      ? (parsed.numberedLines as NumberedLine[]).filter((l) => typeof l?.n === 'number' && typeof l?.text === 'string')
-      : null;
-    out.set(parsed.id, { text, numbered });
-  }
-  if (out.size === 0) throw new Error('no passages parsed — refusing to report "all quotes match" from an empty read');
-  return out;
-}
+// The passage reader, the window and the whitespace fold live in scripts/lib/passage-window.ts,
+// shared with the option-lines lander so the door and this gate share one definition (R1041).
 
-/**
- * The declared window as text, **read from the passage's own `numberedLines`** — not derived by
- * splitting the extract on newlines.
- *
- * **MY FIRST VERSION DERIVED IT AND REPORTED ELEVEN LIVE QUOTES AS OUTSIDE THEIR WINDOW.** The
- * Wind in the Willows extract has 32 newlines and **83 numbered lines**: the file DECLARES its own
- * numbering and I recomputed a different one, so `lineRefs [5,6,7,8,9]` indexed into the wrong
- * text entirely. Every one of those eleven was the instrument.
- *
- * This is the standing instruction landing again — *a verifier calls the family's own function
- * rather than re-deriving the property* — and it is the second time in two turns. Line numbers are
- * an authored fact about a passage, not an artefact of where the newlines fell.
- */
-function window(numbered: NumberedLine[] | null, lineRefs: unknown): string | null {
-  if (!numbered || !Array.isArray(lineRefs) || lineRefs.length === 0) return null;
-  const wanted = new Set(lineRefs.filter((n): n is number => typeof n === 'number'));
-  if (wanted.size === 0) return null;
-  const picked = numbered.filter((l) => wanted.has(l.n)).map((l) => l.text);
-  return picked.length > 0 ? picked.join('\n') : null;
-}
-
-interface NumberedLine { n: number; text: string }
-
-/** Runs of whitespace to one space. A presentation difference, never a punctuation one. */
-const flat = (s: string) => s.replace(/\s+/g, ' ').trim();
 
 async function main() {
   const text = passages();
@@ -193,7 +136,7 @@ async function main() {
    * is a different event from one that grows because the content got worse**, and recording the
    * number without the reason would have made them look identical the next time someone read it.
    */
-  const OUTSIDE_WINDOW_BACKLOG = 31;
+  const OUTSIDE_WINDOW_BACKLOG = 0; // R1041: 36 -> 2 by ci-fix/lines-01, -> 0 by content-04-r2; a ratchet only moves down
   /**
    * THE ONE KNOWN DIVERGENCE, DECLARED WITH ITS QUESTION. `ENG-001-WIW-18`'s attractor quotes
    * *"it’s all very well to talk"*; the passage transcription reads *"its all very well to talk"*,
@@ -201,15 +144,12 @@ async function main() {
    * has the apostrophe, so this may be a transcription that dropped it rather than a quote that
    * invented one, and correcting the wrong side would put a fault into the passage itself.
    */
-  const DECLARED_DIVERGENCES = new Set([
-    'ENG-001-WIW-18|attractorQuote',
-    /**
-     * `ENG-025-LW-09` (DRAFT): quotes *"then take a quiet minute"*; Alcott's text reads **"than
-     * take a quiet minute"**. A one-word drift — and the clearest possible demonstration of why
-     * this check is not a punctuation sweep: no pattern of marks would ever have found it.
-     */
-    'ENG-025-LW-09|attractorQuote',
-  ]);
+  // R1041: both declarations retired. WIW-18's and LW-09's attractor quotes were shortened (door
+  // ci-fix/lines-01, attested) to words that read identically in the passage's text and its numbered
+  // lines, so neither declaration matched anything. The passages THEMSELVES still disagree with
+  // their own numbered lines at those two places ("its"/"it’s" in stream-a-03, "than"/"then" in
+  // stream-a-16) — a passage-file fault, not a quote fault, and not this check's to declare away.
+  const DECLARED_DIVERGENCES = new Set<string>([]);
   const notInSource = faults.filter((f) => f.includes('NOT IN THE SOURCE'));
   const outside = faults.filter((f) => f.includes('OUTSIDE lineRefs'));
 
@@ -229,8 +169,8 @@ async function main() {
   }
   if (outside.length > 0) {
     console.log(`\n  ${outside.length} quote(s) cite text OUTSIDE the item's declared lineRefs (backlog ${OUTSIDE_WINDOW_BACKLOG}):`);
-    for (const f of outside.slice(0, 6)) console.log(`      ${f}`);
-    if (outside.length > 6) console.log(`      … and ${outside.length - 6} more`);
+    // Printed IN FULL (R1041): the backlog is a count, so a truncated list cannot show which entry is new.
+    for (const f of outside) console.log(`      ${f}`);
     console.log('      Each needs a reviewer: a defeater outside its window may be correct authoring');
     console.log('      or a mis-cited window, and the check cannot tell those apart.');
   }

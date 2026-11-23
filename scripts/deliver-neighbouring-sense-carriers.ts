@@ -30,7 +30,7 @@ const FAMILY = 'neighbouring-sense-carriers';
 
 async function main() {
   const entry = await prisma.misconception.findUniqueOrThrow({ where: { id: ENTRY } });
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const lib = new Map((await prisma.misconception.findMany({ select: { id: true, childHint: true } }))
     .map((m) => [m.id, m.childHint]));
 

@@ -29,6 +29,11 @@ const HISTORICAL: Record<string, string> = {
   'scripts/apply-spag-signatures.ts': 'the SPaG signing sitting, 2026-08-08 (14 signatures)',
   'scripts/apply-maths-template-signatures.ts': 'the maths template sitting, 2026-08-07 (19 signatures)',
   'scripts/backfill-attribution.ts': 'the handover backfill, 2026-08-06 (276 provenance events)',
+  // R1041 — three one-shot appliers from the maths and joins sittings, each counted in the store by
+  // its own method string; every one resolves to rev-0001 (check:authority-shape passes on them).
+  'scripts/maths-publication-build.ts': "the maths publication sitting, 2026-08-29 (162 signatures, method 'signature landed from Annie, via her 180th, 182nd and 184th returns…')",
+  'scripts/repin-the-twelve.ts': "the re-pin of twelve, 2026-08-29 (11 signatures, method 'signature landed on the re-pinned hash')",
+  'scripts/sign-joins-unblocked.ts': "the joins unblocked, 2026-08-29 (5 signatures, method 'signature landed on her pin…')",
 };
 
 /**
@@ -45,9 +50,21 @@ const HISTORICAL: Record<string, string> = {
 /** True when at least one `action: 'SIGNED'` is NOT inside a `where:` clause. */
 function writesSigned(source: string): boolean {
   for (const m of source.matchAll(/action:\s*'SIGNED'/g)) {
-    // Look back a short way: a query reads `where: { ... action: 'SIGNED'`, a write does not.
-    const before = source.slice(Math.max(0, m.index! - 120), m.index!);
-    if (!/where:\s*\{[^{}]*$/s.test(before)) return true;
+    // Find the object literal that CONTAINS this property by walking back over balanced braces, then
+    // ask whether `where:` opens it. The old test looked back 120 characters for `where: {` with no
+    // brace in between, so a where clause holding a nested object (`recordId: { in: ids }, action:
+    // 'SIGNED'`) read as a WRITE — four query-only scripts failed this check on that (R1041).
+    let depth = 0;
+    let open = -1;
+    for (let i = m.index! - 1; i >= 0; i -= 1) {
+      const c = source[i];
+      if (c === '}') depth += 1;
+      else if (c === '{') {
+        if (depth === 0) { open = i; break; }
+        depth -= 1;
+      }
+    }
+    if (open < 0 || !/where:\s*$/.test(source.slice(Math.max(0, open - 40), open))) return true;
   }
   return false;
 }
@@ -89,6 +106,10 @@ function main(): void {
     const source = code(readFileSync(file, 'utf8'));
     const rel = relative(ROOT, file);
     if (rel === 'packages/db/prisma/reviewed-guard.ts') continue; // the door itself
+    if (rel === 'scripts/check-signing-doors.ts') continue; // this check names the door in its own strings
+    // A file that calls the door WRITES signatures, whatever its own literals say (R1041): with the
+    // nested-brace fix its SIGNED literals may all be queries, and it must still be listed as a writer.
+    if (USES_DOOR.test(source)) { writers.push({ file: rel, guarded: true, historical: HISTORICAL[rel] ?? null }); continue; }
     const mentionsSigned = /action:\s*'SIGNED'/.test(source);
     if (!mentionsSigned) continue;
     if (!writesSigned(source) || !IS_WRITE.test(source)) {

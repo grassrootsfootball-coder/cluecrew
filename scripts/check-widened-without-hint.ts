@@ -21,7 +21,7 @@ const WIDENING = /\bor\b|\band also\b|\bincluding\b|\bas well as\b|\beither\b|,\
 
 async function main() {
   const lib = await prisma.misconception.findMany({ select: { id: true, description: true, childHint: true } });
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const carriers = (id: string) => items.filter((i) => i.options.some((o) => (o as { misconceptionId?: string | null }).misconceptionId === id));
 
   requirePopulation('check:widened-without-hint', { 'library entr(y|ies)': lib.length });

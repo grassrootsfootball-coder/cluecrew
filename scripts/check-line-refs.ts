@@ -149,7 +149,7 @@ async function main(): Promise<void> {
       if (o.attractorLine == null && o.defeaterLine == null) continue;
       adChecked += 1;
       for (const reason of checkAttractorDefeater({
-        itemLineRefs: lineRefs, attractorLine: o.attractorLine, defeaterLine: o.defeaterLine,
+        itemLineRefs: lineRefs, attractorLine: o.attractorLine, defeaterLine: o.defeaterLine, defeatedByAbsence: o.defeatedByAbsence, windowClass: o.windowClass,
       })) {
         adFailures += 1;
         bucket.push({ where: `item:${item.id} option ${o.id}`, rule: 'attractor-defeater', detail: reason });

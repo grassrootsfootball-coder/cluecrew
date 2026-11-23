@@ -63,6 +63,11 @@ const DECLARED_UNREAD: Readonly<Record<string, string>> = {
     'Watch/Walk/See/Hear mode assets. Every Case declares one and NOTHING reads it — the modes are built shells with placeholder paths. This is R221: 704 authored walk scripts are the obvious content for the Walk slot, and wiring them is what makes walkScript child-reachable.',
   'Case.storyWrapper':
     'Validated by content-schema and read by no runtime path. Found by this check, not previously known. Awaiting a ruling on whether the wrapper is unbuilt or abandoned.',
+  // R1041 — the two that arrived undeclared, found when CI first ran this against the real store.
+  'Attempt.chosenOption':
+    'The Prisma RELATION object behind the FK. Runtime reads go through the scalar `chosenOptionId` (orchestrator, mocks, attempts route); the relation exists for the ON DELETE RESTRICT that keeps an attempted option from being deleted. Wakes if a reader ever needs the option row itself.',
+  'Reviewer.heldFrom':
+    'Tenure start, a provenance RECORD (R604): read by tooling only (export-reviewer-record orders by it; backfill-reviewer-identity set it), by no runtime path. Wakes if a signing door ever refuses a signature dated outside the reviewer\'s tenure — rev-agent-01 holds from 2026-11-18.',
 };
 
 /**

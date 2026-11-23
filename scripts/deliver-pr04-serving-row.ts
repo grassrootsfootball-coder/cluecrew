@@ -19,7 +19,7 @@ const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FAMILY = 'pr04-serving-row';
 
 async function main() {
-  const i = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-028-PR-04' }, include: { options: true } });
+  const i = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-028-PR-04' }, include: { options: { orderBy: { id: 'asc' } } } });
   const e = (i.explanation ?? {}) as Record<string, unknown>;
 
   const payload = {

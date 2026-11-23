@@ -30,7 +30,7 @@ const batchArg = process.argv.indexOf('--batch');
 const BATCH = batchArg === -1 ? null : Number(process.argv[batchArg + 1]);
 
 async function main() {
-  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: true } });
+  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: { orderBy: { id: 'asc' } } } });
   const libIds = new Set<string>();
   for (const i of items) for (const o of i.options) {
     const m = (o as { misconceptionId?: string | null }).misconceptionId;

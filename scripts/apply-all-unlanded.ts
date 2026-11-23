@@ -102,7 +102,7 @@ async function main() {
 
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true } });
   const held = new Map(lib.map((m) => [m.id, m.childHint]));
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const carriers = (id: string) => {
     let live = 0; let all = 0;
     for (const i of items) for (const o of i.options) {

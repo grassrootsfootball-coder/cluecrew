@@ -195,7 +195,14 @@ const EXCLUDED_SEGMENTS = ['node_modules', '.next', '.lighthouseci', 'e2e', 'tes
 // chmod 444 and hash-asserted by check:witnesses. A scanner hit in one is a fact about HISTORY —
 // and rewording it is not merely wrong, it is impossible without breaking the pin the file exists
 // to keep. Nothing in the directory reaches a child by any path.
-const EXCLUDED_PATHS = ['content/exports', 'content/review-returns', 'content/pilot-review', 'content/blind-keys', 'content/evidence'];
+// R1041 (David approved, 2026-11-22): staff records that quote faults in order to name them are
+// declared in scripts/lib/content-paths.json — the one list validate:content reads too — and the
+// scan prints what it skipped. What lands from them is gated in the DB (check:db-content,
+// check:every-string-field).
+const STAFF_RECORDS = JSON.parse(readFileSync(new URL('./lib/content-paths.json', import.meta.url), 'utf8')).staffRecordsNotScannedForVocab;
+if (!Array.isArray(STAFF_RECORDS)) throw new Error('scripts/lib/content-paths.json: expected staffRecordsNotScannedForVocab[] (R173)');
+console.log(`scan:vocab: ${STAFF_RECORDS.length} staff record path(s) not scanned, by declaration: ${STAFF_RECORDS.join(', ')}`);
+const EXCLUDED_PATHS = ['content/exports', 'content/review-returns', 'content/pilot-review', 'content/blind-keys', 'content/evidence', ...STAFF_RECORDS];
 const SOURCE_TEXT_PATHS = ['content/passages'];
 const EXCLUDED_SUFFIXES = ['.test.ts', '.test.tsx', '.d.ts'];
 

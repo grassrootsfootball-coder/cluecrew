@@ -27,7 +27,7 @@ const FAMILY = 'vr04-forty-ranks';
 async function main() {
   const bank = await prisma.item.findMany({
     where: { questionTypeId: 'vr-04-closest-meaning', id: { startsWith: 'bank-' } },
-    include: { options: true }, orderBy: { id: 'asc' },
+    include: { options: { orderBy: { id: 'asc' } } }, orderBy: { id: 'asc' },
   });
   const words = await prisma.word.findMany();
   const vault = new Map(words.map((w) => [w.headword.toLowerCase(), w]));

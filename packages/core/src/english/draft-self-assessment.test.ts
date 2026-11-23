@@ -173,11 +173,27 @@ describe('Addendum 36 — attractor and defeater', () => {
     expect(checkAttractorDefeater({ itemLineRefs: window })).toEqual([]);
   });
 
-  it.each([
-    ['only the attractor', { attractorLine: 11 }, 'both are required'],
-    ['only the defeater', { defeaterLine: 11 }, 'both are required'],
-  ])('refuses %s', (_l, partial, expected) => {
-    expect(checkAttractorDefeater({ itemLineRefs: window, ...partial }).join(' ')).toContain(expected);
+  // R1041: an attraction defeated by an absence or a relation has no defeater line to give.
+  it('accepts an attractor with no defeater line', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, attractorLine: 11 })).toEqual([]);
+    expect(checkAttractorDefeater({ itemLineRefs: window, attractorLine: 11, defeatedByAbsence: true })).toEqual([]);
+  });
+
+  it('refuses a defeater with nothing to defeat', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, defeaterLine: 11 }).join(' ')).toContain('no attractorLine');
+    expect(checkAttractorDefeater({ itemLineRefs: window, defeaterLine: 11, windowClass: 'PULLS' }).join(' ')).toContain('no attractorLine');
+  });
+
+  // A wrong-scope option's pull is outside the window by definition; its windowClass says so.
+  it('accepts a lone in-window defeater when windowClass declares the pull outside', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, defeaterLine: 11, windowClass: 'NOISE' })).toEqual([]);
+    expect(checkAttractorDefeater({ itemLineRefs: window, defeaterLine: 12, windowClass: 'ENTRAPMENT' })).toEqual([]);
+    expect(checkAttractorDefeater({ itemLineRefs: window, defeaterLine: 20, windowClass: 'NOISE' }).join(' ')).toContain('defeaterLine 20 is outside');
+  });
+
+  it('refuses an absence that also names a line', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, attractorLine: 11, defeaterLine: 12, defeatedByAbsence: true }).join(' '))
+      .toContain('an absence has no line');
   });
 
   it('refuses a line outside the item window', () => {
@@ -185,13 +201,12 @@ describe('Addendum 36 — attractor and defeater', () => {
     expect(out.join(' ')).toContain('attractorLine 9 is outside');
   });
 
-  // A defeater the child had already read and passed is not a defeater.
-  it('refuses a defeater before its attractor', () => {
-    expect(checkAttractorDefeater({ itemLineRefs: window, attractorLine: 13, defeaterLine: 11 }).join(' '))
-      .toContain('comes before');
+  it('refuses a defeater line outside the item window', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, attractorLine: 11, defeaterLine: 20 }).join(' ')).toContain('defeaterLine 20 is outside');
   });
 
-  it('still checks ordering when the item declares no window', () => {
-    expect(checkAttractorDefeater({ attractorLine: 13, defeaterLine: 11 })).toHaveLength(1);
+  // R1041: passage order is not reasoning order — pulled by a later line, corrected by an earlier one.
+  it('accepts a defeater before its attractor', () => {
+    expect(checkAttractorDefeater({ itemLineRefs: window, attractorLine: 13, defeaterLine: 11 })).toEqual([]);
   });
 });

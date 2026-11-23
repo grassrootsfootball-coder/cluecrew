@@ -24,7 +24,7 @@ async function main() {
   const words = await prisma.word.findMany({ select: { headword: true, tier: true, status: true } });
   const vault = new Map(words.map((w) => [w.headword.toLowerCase(), w]));
   const items = await prisma.item.findMany({
-    where: { questionTypeId: 'vr-21-same-meaning' }, include: { options: true }, orderBy: { id: 'asc' },
+    where: { questionTypeId: 'vr-21-same-meaning' }, include: { options: { orderBy: { id: 'asc' } } }, orderBy: { id: 'asc' },
   });
   requirePopulation('vr-21 comparison', { 'vr-21 items': items.length, 'vault rows': vault.size });
 

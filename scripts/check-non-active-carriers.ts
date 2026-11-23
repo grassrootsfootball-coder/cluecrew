@@ -15,7 +15,7 @@ import { declareMayBeEmpty, requirePopulation } from './lib/population';
 async function main() {
   const lib = await prisma.misconception.findMany({ select: { id: true, status: true, childHint: true } });
   const byId = new Map(lib.map((m) => [m.id, m]));
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
 
   let tagged = 0;
   const findings: string[] = [];

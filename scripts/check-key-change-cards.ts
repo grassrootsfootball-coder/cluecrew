@@ -23,7 +23,7 @@ export function cardGivesKey(card: string, key: string): boolean {
 }
 
 async function main() {
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const words = await prisma.word.findMany({ select: { id: true, headword: true, definitionChild: true } });
   const card = new Map(words.map((w) => [w.headword.toLowerCase(), w]));
 

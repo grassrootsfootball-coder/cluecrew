@@ -63,7 +63,7 @@ async function main() {
   const gate = checkChildFacingText({ role: 'hint', label: NEW_ID, text: NEW_HINT }).filter(isBlocking);
   if (gate.length) throw new Error(`ABORTED — her new hint fails the gate: ${gate.map((f) => f.detail).join('; ')}`);
 
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const carriers = items.filter((i) => i.options.some((o) => (o as { misconceptionId?: string | null }).misconceptionId === OLD));
 
   const byHeadword = new Map<string, typeof carriers>();
@@ -161,7 +161,7 @@ async function main() {
     },
   });
 
-  const after = await prisma.item.findMany({ include: { options: true } });
+  const after = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const nowOld = after.filter((i) => i.options.some((o) => (o as { misconceptionId?: string | null }).misconceptionId === OLD)).length;
   const nowNew = after.filter((i) => i.options.some((o) => (o as { misconceptionId?: string | null }).misconceptionId === NEW_ID)).length;
   console.log(`\n  ${moved} option(s) retagged.\n  READ BACK: ${OLD} now has ${nowOld} carrier(s), ${NEW_ID} has ${nowNew}.`);

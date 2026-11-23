@@ -19,7 +19,7 @@ const inCard = (card: string, v: string) => {
 export interface Collision { item: string; status: string; headword: string; card: string; value: string; role: 'KEY' | 'DISTRACTOR'; tag: string | null }
 
 export async function cardOptionSetCollisions(only?: string[]): Promise<{ collisions: Collision[]; screened: number }> {
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const words = await prisma.word.findMany({ select: { headword: true, definitionChild: true, status: true } });
   const card = new Map(words.map((w) => [w.headword.toLowerCase(), w]));
   const collisions: Collision[] = [];

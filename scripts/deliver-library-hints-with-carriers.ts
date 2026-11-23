@@ -62,7 +62,7 @@ function clauses(hint: string): Array<{ text: string; kind: 'MOVE' | 'ASSERTION'
 }
 
 async function main() {
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true, description: true } });
 
   readFieldsByName(

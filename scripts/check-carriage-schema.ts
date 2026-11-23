@@ -38,6 +38,11 @@ const PLATFORM_OWNED = new Set([
   'Item.answerFlaggedAt', 'Item.answerFlagNote', 'Item.solution',
   'Item.draftSelfAssessmentHash', 'Item.clusterPosition',
   'ItemOption.id', 'ItemOption.itemId',
+  // R1041. Written by this repo's own doors, never carried from another store: sendHistory is this
+  // side's record of what it sent; drafterNote and drafterDeclaredPull are a drafter's notes, and
+  // drafterDeclaredPullVerdict the reviewer's ruling on that claim (R708). With Cowork retired
+  // (R1034) no field crosses into any column any more, so "carried" can only shrink from here.
+  'Item.sendHistory', 'Item.drafterNote', 'ItemOption.drafterDeclaredPull', 'ItemOption.drafterDeclaredPullVerdict',
 ]);
 
 /** A JSON column's own existence is what can be asserted; the path inside it is data, not schema. */

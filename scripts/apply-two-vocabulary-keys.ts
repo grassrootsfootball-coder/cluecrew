@@ -76,7 +76,7 @@ async function main() {
 
   const back = await prisma.item.findMany({
     where: { id: { in: EDITS.map((e) => e.itemId) } },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
   });
   console.log('\nread back:');
   for (const i of back) {

@@ -118,7 +118,7 @@ async function main() {
   const doorTypes = new Set(cases.map((c) => c.questionTypeId));
   const items = await prisma.item.findMany({
     where: { status: 'LIVE', questionTypeId: { in: [...doorTypes] } },
-    include: { options: true },
+    include: { options: { orderBy: { id: 'asc' } } },
     orderBy: { id: 'asc' },
   });
   requirePopulation('every-string-field sweep', {

@@ -38,7 +38,7 @@ async function main() {
   if (!Array.isArray(carrierDoc.rows)) throw new Error('exposure-live: carrier artefact has no rows — refusing the shape (R173).');
   const ABOUT = new Set(carrierDoc.rows.filter((r) => r.theAssertingClauses.some((c) => c.aboutThisItem)).map((r) => r.entryId));
 
-  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: true } });
+  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: { orderBy: { id: 'asc' } } } });
   const rows = items
     .filter((i) => {
       const h = (i.explanation as { hintCore?: unknown } | null)?.hintCore;

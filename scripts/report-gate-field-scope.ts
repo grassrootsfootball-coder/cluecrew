@@ -53,7 +53,7 @@ function filesUnder(dir: string): string[] {
 }
 
 async function main() {
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const screened = new Map<string, number>();
   const norm = (p: string) => p.replace(/\[\d+\]/g, '[]');
   for (const i of items) {

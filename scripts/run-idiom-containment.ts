@@ -17,7 +17,7 @@ const STOP = new Set("a an the and or of in on at to for it is was were not no h
 async function main() {
   const card = await prisma.word.findUniqueOrThrow({ where: { id: 'gave-a-disgust' } });
   const cardText = `${card.headword} ${card.definitionChild} ${card.sentence}`.toLowerCase();
-  const items = await prisma.item.findMany({ where: { id: { startsWith: 'ENG-002-pp-' } }, include: { options: true }, orderBy: { id: 'asc' } });
+  const items = await prisma.item.findMany({ where: { id: { startsWith: 'ENG-002-pp-' } }, include: { options: { orderBy: { id: 'asc' } } }, orderBy: { id: 'asc' } });
   requirePopulation('idiom-containment', { 'P&P item(s)': items.length });
 
   const hits: string[] = [];

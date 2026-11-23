@@ -36,12 +36,19 @@ async function main(): Promise<void> {
   // recompute (R41): a plausible-looking property check that wasn't actually checking the property.
   const items = await prisma.item.findMany({
     where: { difficultyTier: 4, questionTypeId: { startsWith: 'en-comp-' } },
-    select: { id: true, status: true, stem: true },
+    select: { id: true, status: true, stem: true, lineRefs: true },
   });
 
+  // ITEM-LEVEL lineRefs (R1041). R77 (2026-08-16) moved lineRefs from the stem to Item.lineRefs and
+  // this audit kept reading `stem.lineRefs`, which is now absent on every row — so every T4 item read
+  // as whole-text-purpose, and 15 span items (lines 3 to 16 wide, "Read lines 33 to 46...") failed
+  // for a key they must not carry. R80: a migration and its consumers are one change. A row still
+  // carrying a stem copy is refused rather than read, so the two can never disagree silently.
+  const stale = items.filter((item) => (item.stem as { lineRefs?: unknown } | null)?.lineRefs !== undefined);
+  if (stale.length) throw new Error(`audit:technique-keys REFUSED — ${stale.length} row(s) still carry stem.lineRefs (R77 moved it to Item.lineRefs): ${stale.map((i) => i.id).join(', ')}`);
   const candidates = items.filter((item) => {
-    const stem = item.stem as { lineRefs?: unknown } | null;
-    return !stem?.lineRefs || (Array.isArray(stem.lineRefs) && stem.lineRefs.length === 0);
+    if (!Array.isArray(item.lineRefs)) throw new Error(`${item.id}: Item.lineRefs is not an array (R173)`);
+    return item.lineRefs.length === 0;
   });
 
   const missing = candidates.filter((item) => !techniqueKeyOf(item.stem));

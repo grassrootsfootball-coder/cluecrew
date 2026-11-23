@@ -70,7 +70,7 @@ function formSignal(headword: string): { branch: string; evidence: string } | nu
 async function main() {
   if (!ENTRY) throw new Error('deliver-entry-carriers: --entry <misconception-id> is required.');
   const entry = await prisma.misconception.findUniqueOrThrow({ where: { id: ENTRY } });
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const lib = new Map((await prisma.misconception.findMany({ select: { id: true, childHint: true } }))
     .map((m) => [m.id, m.childHint]));
 

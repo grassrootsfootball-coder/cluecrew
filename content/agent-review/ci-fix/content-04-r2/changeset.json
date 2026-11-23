@@ -1,0 +1,72 @@
+{
+ "door": "ci-fix/content-04-r2",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-001-WIW-04",
+   "passageRef": "stream-a-03-wind-in-willows",
+   "hold": {
+    "reason": "not a held row: ci-fix/content-04-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked as it will land. The stem and window [8, 9] agree. 'Rushed out all of a sudden.' is the only correct sense of 'bolted out of the house', and line 9's coat detail confirms it. The eating, door-locking, ladder and shouting options are each wrong. There is no positional or length pattern giving the key away. The words are suitable for 9-11-year-olds.",
+   "landedAt": "2026-11-23T17:56:50.121Z",
+   "changes": [
+    {
+     "field": "stem.text",
+     "before": "Read line 8. What does 'bolted out of the house' mean here?",
+     "after": "Read lines 8 and 9. What does 'bolted out of the house' mean here?"
+    },
+    {
+     "field": "lineRefs",
+     "before": [
+      8
+     ],
+     "after": [
+      8,
+      9
+     ]
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-020-HD-02",
+   "passageRef": "stream-a-19-heidi",
+   "hold": {
+    "reason": "not a held row: ci-fix/content-04-r2",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked as it will land. Answerable from lines 9-12. 'A heap of rolls at the bottom of it.' is stated at line 12 and is the only correct option. The horror option is how she looks, not what she finds. The straw hat is outside the window, on the table. Outgrown clothes are never stated. There is no pattern giving the key away, and the words are suitable for 9-11-year-olds.",
+   "landedAt": "2026-11-23T17:56:50.121Z",
+   "changes": [
+    {
+     "field": "explanation.quotes",
+     "before": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "what do I see at the bottom but a heap of rolls",
+       "passageRef": "stream-a-19-heidi"
+      },
+      {
+       "rule": "quoted-from-passage",
+       "text": "a whole pile of bread",
+       "passageRef": "stream-a-19-heidi"
+      }
+     ],
+     "after": [
+      {
+       "rule": "quoted-from-passage",
+       "text": "what do I see at the bottom but a heap of rolls",
+       "passageRef": "stream-a-19-heidi"
+      }
+     ]
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "Lines 11 and 12 ask 'what do I see at the bottom but a heap of rolls'. Line 13 says it again, calling it 'a whole pile of bread'.",
+     "after": "Lines 11 and 12 ask 'what do I see at the bottom but a heap of rolls'. So the thing she finds is a heap of rolls."
+    }
+   ]
+  }
+ ]
+}

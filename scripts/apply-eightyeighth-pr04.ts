@@ -33,7 +33,7 @@ async function main() {
     if (g.length) throw new Error(`ABORTED — ${label} fails the gate: ${g.map((f) => f.detail).join('; ')}`);
   }
 
-  const i = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-028-PR-04' }, include: { options: true } });
+  const i = await prisma.item.findUniqueOrThrow({ where: { id: 'ENG-028-PR-04' }, include: { options: { orderBy: { id: 'asc' } } } });
   const e = (i.explanation ?? {}) as Record<string, unknown>;
   const problems: string[] = [];
   if (e.hintCore !== PRIOR_HINT) problems.push(`hintCore holds ${JSON.stringify(e.hintCore)} — not the documented prior`);

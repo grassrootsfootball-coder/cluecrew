@@ -1,0 +1,28 @@
+{
+  "door": "ci-fix/content-04-r2",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-001-WIW-04",
+      "verdict": "ATTEST",
+      "reason": "The named fault is fixed. The declared quote 'without even waiting to put on his coat' (line 8 onto line 9) is now inside window [8, 9]. The stem 'Read lines 8 and 9.' now matches the window the screen highlights. 'bolted out of the house' is on line 8, inside the window. Nothing else broke. Line 9 ('to put on his coat. Something up above was calling him imperiously...') supports no distractor. All five executions are still true: no food anywhere, door-bolt sense from the clause, ladders at line 2, 'Hang spring-cleaning!' on line 8. The hint ('He did not stop for his coat') and the walk ('Read on from line 8') now both point inside the window."
+    },
+    {
+      "ref": "rebuild:ENG-020-HD-02",
+      "verdict": "ATTEST",
+      "reason": "Round 2b. `_previousWalkScript` is gone from explanationPatch, so nothing superseded sits inside explanation (R358), and the live explanation carried no `_` key before. Nothing else changed, as stated. The window stays 9-12, and the stem 'Look at lines 9 to 12' agrees with it. The only declared quote, 'what do I see at the bottom but a heap of rolls', is verbatim from line 11 onto line 12, inside the window, so 'Lines 11 and 12' is accurate. The out-of-window line-13 quote and citation are removed. The new walk names the thing she finds, which fits the hint 'One of these gives her feeling instead of the thing.'. All four executions are still true against 9-12: horror at line 9, heap of rolls at line 12, straw hat at line 15 (three lines past 12), and keep-or-throw-away at line 8."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-001-WIW-04",
+      "verdict": "SIGN",
+      "reason": "Checked as it will land. The stem and window [8, 9] agree. 'Rushed out all of a sudden.' is the only correct sense of 'bolted out of the house', and line 9's coat detail confirms it. The eating, door-locking, ladder and shouting options are each wrong. There is no positional or length pattern giving the key away. The words are suitable for 9-11-year-olds."
+    },
+    {
+      "itemId": "ENG-020-HD-02",
+      "verdict": "SIGN",
+      "reason": "Checked as it will land. Answerable from lines 9-12. 'A heap of rolls at the bottom of it.' is stated at line 12 and is the only correct option. The horror option is how she looks, not what she finds. The straw hat is outside the window, on the table. Outgrown clothes are never stated. There is no pattern giving the key away, and the words are suitable for 9-11-year-olds."
+    }
+  ]
+}

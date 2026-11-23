@@ -25,7 +25,7 @@ import { requirePopulation } from './lib/population';
 const AZ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 async function main() {
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const series = items.filter((i) => Array.isArray((i.stem as { series?: unknown })?.series));
   const step1: string[] = [];
   const collisions: string[] = [];

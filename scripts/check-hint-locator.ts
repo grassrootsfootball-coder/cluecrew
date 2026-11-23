@@ -75,7 +75,7 @@ function passages(): Map<string, string> {
 
 async function main() {
   const texts = passages();
-  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: true } });
+  const items = await prisma.item.findMany({ where: { status: 'LIVE' }, include: { options: { orderBy: { id: 'asc' } } } });
   const withHint = items.filter((i) => {
     const h = (i.explanation as { hintCore?: unknown } | null)?.hintCore;
     return typeof h === 'string' && h.trim() !== '' && chooseHint(i.explanation as never).serves === 'library';

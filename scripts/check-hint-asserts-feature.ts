@@ -121,7 +121,7 @@ function passages(): Map<string, string> {
 async function main() {
   const texts = passages();
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true } });
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
 
   const english = lib.filter((m) => m.id.startsWith('en-') && String(m.childHint ?? '').trim() !== '');
   const asserting = english.filter((m) => FEATURES.some((f) => f.assertedBy.test(String(m.childHint))));

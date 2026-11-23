@@ -29709,3 +29709,80 @@ and the declaration stood for three months because CI could not see them.
   comparison only for a key that is not one number. Baselined before the edit (R149): 54 rows
   removed, 0 added, every report unchanged.
 - **`solution` declared `staff`** in FIELD_DISPOSITIONS. It is not rendered while replays are opt-in.
+
+## R1041 — the older 23: what each was, and what was done (David: "Fix the old 23", 2026-11-22/23)
+
+Measured on fresh databases with the snapshot, 23 of 74 CI steps were failing, all of them before
+R1039. Each is listed below with its cause. Where a fix needed a ruling, David's words are quoted.
+
+**Instrument faults: the check was wrong.**
+- **audit:technique-keys.** It read `stem.lineRefs`, which R77 moved to `Item.lineRefs` on
+  2026-08-16 (R80 again: a migration and its consumers are one change). So every T4 item looked
+  whole-text, and 15 span items were asked for a key they must not carry. The drafter refused to
+  invent keys and found the fault itself. Now: 24 candidates, 0 missing. The check now refuses any
+  row that still carries a stem copy.
+- **check:signing-doors.** It looked back 120 characters for `where: {`, so a where-clause with a
+  nested object read as a WRITE, and four query-only scripts failed. The enclosing object is now
+  found by balancing braces. Any file that calls `recordSignature` is listed as a writer through the
+  door, which brought in the four agent-review landers and the CMS action that were never listed.
+  Three real one-shot signers are now declared HISTORICAL, with their sittings counted from the store
+  by method string: 162 + 11 + 5 signatures on 2026-08-29, all on rev-0001. Baselined (R149): the
+  diff is the four false positives removed plus the door callers added.
+- **check:maths-distractors** is covered under R1040.
+
+**Undeclared items: the check was right.**
+- **walkscript-reach:** three package readers were declared, each read first. All three CLASSIFY
+  the field and never render it.
+- **declared-unread:** `Attempt.chosenOption` (the FK relation; reads go through
+  `chosenOptionId`) and `Reviewer.heldFrom` (a tenure record, read only by tooling).
+- **review-queries:** four doors were declared with what each does with the column.
+- **carriage-schema:** `Item.sendHistory`, `Item.drafterNote`, `ItemOption.drafterDeclaredPull` and
+  `ItemOption.drafterDeclaredPullVerdict` are platform-owned. With Cowork retired, nothing is
+  carried any more.
+- **unordered-includes:** 36 `include: { options: true }` sites across 34 files now order by id.
+
+**Ruled by David, 2026-11-22/23.**
+- **The scanners read the working records** (validate:content failed 719 files, scan:vocab ~9,700
+  hits). The permission system blocked this edit twice as weakening oversight; it went in on David's
+  explicit approval. `scripts/lib/content-paths.json` is the ONE declaration: AUTHORED paths are
+  schema-checked; RECORD paths are counted and printed; an undeclared top-level entry FAILS. Eight
+  staff-record paths are not scanned for vocabulary, and the scan names them on every run. The
+  pilot-exclusion canary still bites in both scanners.
+- **outside-writes** ("Approve both"). 8,683 unattributed writes to reviewed rows, all from
+  2026-08-16 to 09-01 (the import weeks), are frozen BY LOG ID (≤ 34155) as a backlog. The backlog
+  is broken down by day, operation and column on every run. Any later unattributed write still
+  fails. 92 writes to e2e fixtures are counted as scaffolding. The closing line used to say "None
+  touched reviewed content", which was false, and now says what was actually tested (R591).
+- **Eight Cowork-channel checks retired from CI** ("Retire all eight"), as R1034 retired the return
+  leg: gate-library-fresh, item-population, reissue-completion, import-refusals, amendments-landed,
+  stamp-covers-payload, draft-assessment, manifest-drift. Each read `~/Downloads/11+` deliveries or
+  returns, or Cowork's own claims. No in-repo gate reads the exported library copies; only the
+  exporters and the retired corpus import do. `deliver()` now delivers nothing unless
+  `CLUECREW_COWORK_DELIVERY=1`: twelve checks still called it, and in CI every-string-field wrote
+  into the Cowork folder and the lane manifest.
+- **Addendum 36, amended** ("Amend the rules", then corrected: "Allow it").
+  - The old three rules failed 800 of 864 notes, which is R152's and R157's evidence that the rule
+    was the artefact.
+  - Now: a defeater needs an attractor, UNLESS the option's `windowClass` is NOISE or ENTRAPMENT,
+    whose pull is declared outside the window. Every line given sits inside the window.
+    `defeatedByAbsence` with a defeaterLine is a contradiction. The ordering rule is dropped.
+  - **The first amendment was wrong in a way the data exposed.** It made the drafter delete 38
+    defeaters, 18 of them true in-window lines on wrong-scope options. The drafter flagged it, and
+    the rule was corrected before anything landed.
+  - The 34 genuine faults that remained were fixed in `ci-fix/lines-01` through a new lander
+    (`land-option-lines.ts`: option notes only, attested only, the same gates as CI). The reviewer
+    refused 3 of 36 in round 1. Two of those quotes ran onto the next line, which matching against
+    the whole passage cannot see, so the lander now requires a quote to sit on its named line. All 36
+    landed. check:line-refs now passes, and the outside-window quote backlog went from 36 to 2. The
+    ratchet is now 2, and its two retired divergence declarations no longer match anything.
+  - The passages themselves still disagree with their own numbered lines at two places
+    (stream-a-03 "its"/"it’s", stream-a-16 "than"/"then"). That is a passage-file fault, open.
+- **The SUBTLEX-UK file** ("CI fetches it"). CI downloads it from the official URL, and the gate
+  checks it against the pinned digest. It is never committed. Without it the whole word-puzzle gate
+  had died in CI, single-answer checks included.
+
+**Open:**
+- **check:headword-tiers.** 47 headwords on LIVE items have no vault card, and 29 have a DRAFT card
+  that is not published. Authoring a vault card changes family composition (CLAUDE.md: a vault edit
+  is not a data correction), so this is its own reviewed task, not a CI fix.
+- **SM-09 option …00fv** carries windowClass PULLS, but both drafter and reviewer read it as NOISE.

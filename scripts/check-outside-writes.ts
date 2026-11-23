@@ -29,6 +29,20 @@ const WINDOW_MINUTES = 15;
 /** When the triggers went in. Everything before this is outside what the boundary can see. */
 const BOUNDARY_INSTALLED = new Date('2026-08-16T11:30:00Z');
 
+/**
+ * THE KNOWN BACKLOG, FROZEN BY LOG ID (David approved, 2026-11-22 — R1041). When CI first read the
+ * real store this check reported 8,775 unattributed writes to reviewed rows, every one dated
+ * 2026-08-16 to 2026-09-01: bulk delete-and-reinsert of clusters, clusterPosition renumbering,
+ * sendHistory stamps, sourcedFrom backfills. EVERY write after log id 34155 (2026-09-01 22:53Z) has a
+ * ruling behind it, today's landings included. The backlog is broken down on every run, never
+ * summarised away, and any unattributed write to reviewed content with a LATER id fails as before.
+ * Ids are the log's own sequence, so nothing joins the backlog by moving a clock.
+ */
+const KNOWN_BACKLOG_THROUGH_WRITE_ID = 34155n;
+/** e2e fixtures build and rewrite their own rows on every run (apps/web/e2e/fixtures.ts): test
+ *  scaffolding, not reviewed content, whatever status the fixture gives them. Counted and printed. */
+const FIXTURE_PREFIX = 'zz-e2e-';
+
 const RECORD_TYPE: Record<string, string> = {
   Item: 'item', ItemOption: 'item', Misconception: 'misconception', Word: 'word',
 };
@@ -111,8 +125,18 @@ async function main(): Promise<void> {
     where: { id: { in: unattributed.map((u) => u.target) } },
     select: { id: true, status: true },
   });
-  const reviewedIds = new Set(items.filter((i) => i.status === 'LIVE' || i.status === 'RETIRED').map((i) => i.id));
-  const serious = unattributed.filter((u) => reviewedIds.has(u.target));
+  const reviewedIds = new Set(items.filter((i) => (i.status === 'LIVE' || i.status === 'RETIRED') && !i.id.startsWith(FIXTURE_PREFIX)).map((i) => i.id));
+  const reviewedAll = unattributed.filter((u) => reviewedIds.has(u.target));
+  const backlog = reviewedAll.filter((u) => u.w.id <= KNOWN_BACKLOG_THROUGH_WRITE_ID);
+  const serious = reviewedAll.filter((u) => u.w.id > KNOWN_BACKLOG_THROUGH_WRITE_ID);
+  const fixture = unattributed.filter((u) => u.target.startsWith(FIXTURE_PREFIX)).length;
+  if (fixture) console.log(`\n${fixture} unattributed write(s) to e2e fixtures (${FIXTURE_PREFIX}*): test scaffolding, not reviewed content.`);
+  if (backlog.length) {
+    const byDay = new Map<string, number>();
+    for (const { w } of backlog) { const k = `${w.at.toISOString().slice(0, 10)} ${w.op} ${w.tableName} [${w.changedColumns.join(',') || '-'}]`; byDay.set(k, (byDay.get(k) ?? 0) + 1); }
+    console.log(`\nKNOWN BACKLOG: ${backlog.length} unattributed write(s) to reviewed content, all at or before log id ${KNOWN_BACKLOG_THROUGH_WRITE_ID}. Frozen, not cleared:`);
+    for (const [k, n] of [...byDay].sort()) console.log(`    ${String(n).padStart(5)}  ${k}`);
+  }
 
   console.log(`\n${unattributed.length} unattributed write(s):`);
   for (const { w, target } of unattributed.slice(0, 25)) {
@@ -129,7 +153,9 @@ async function main(): Promise<void> {
     await prisma.$disconnect();
     process.exit(1);
   }
-  console.log('\nNone touched reviewed content, so this is reported rather than blocking. It is still');
+  console.log(backlog.length
+    ? `\nNo write after log id ${KNOWN_BACKLOG_THROUGH_WRITE_ID} touched reviewed content without a ruling; the ${backlog.length} before it are the frozen backlog above. It is still`
+    : '\nNone touched reviewed content, so this is reported rather than blocking. It is still');
   console.log('a change nobody decided: every one should resolve to a door that records what it did.');
   await prisma.$disconnect();
 }

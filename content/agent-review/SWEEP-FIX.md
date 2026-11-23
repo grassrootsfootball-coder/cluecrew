@@ -47,8 +47,11 @@ ITSELF is wrong for the option (a different mistake produces it), that IS a row 
   - maths notation £5.00, 4°C, 48 cm²;
   - never tell a child to say something aloud or draw (not every child can).
 - If you rewrite a hint or walk script that carries an authorship marker (`hintAuthoredBy`,
-  `hintAuthority`, `walkScriptApprovedBy`, `_walkScriptAuthority`), clear the marker and keep the old
-  text under `_previous<Field>`, as earlier rounds did.
+  `hintAuthority`, `walkScriptApprovedBy`, `_walkScriptAuthority`), clear the marker.
+- **Never store the old text inside the field you replace** (`_previousText` in `stem`,
+  `_previousWalkScript` in `explanation`). That is R358: anything walking the container reads the
+  superseded value as live. Earlier rounds did this on this brief's instruction, and it was wrong.
+  The old value is already kept in the packet, the door's changeset and git (R1041).
 - A row you cannot fix honestly: leave it out and say why in `notes`.
 
 ## Self-check

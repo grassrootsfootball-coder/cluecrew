@@ -130,6 +130,13 @@ const DECLARED_PACKAGE_WALK_READERS: Record<string, string> = {
     'gathers walkScript into the child-facing gate so the scanners and the reading-age cap screen it. This is the field being TREATED as child-facing, which is the ruling.',
   'packages/core/src/walk-approval.ts':
     'SCREENS it. Holds the set of item ids whose walk script a reviewer has read, and answers walkScriptMayServe. Currently empty by design.',
+  // R1041 — three readers added after this list was written, each checked by reading the file:
+  'packages/core/src/ban-list-scope.ts':
+    'CLASSIFIES it. Names the path explanation.walkScript as IN the ban-list scope, so the ban list screens it. Names the field; never reads a value.',
+  'packages/core/src/field-dispositions.ts':
+    "CLASSIFIES it. Declares explanation.walkScript as 'child' and its sibling metadata paths as 'staff', so the every-string-field sweep screens it. Names the field; never reads a value.",
+  'packages/core/src/quoted-field-exemption.ts':
+    'CLASSIFIES it. Lists walkScript among AUTHORED_FIELDS, where the ban list and spelling rules apply in full (never the quotation exemption). Names the field; never reads a value.',
 };
 
 async function main() {

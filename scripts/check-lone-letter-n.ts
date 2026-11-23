@@ -16,7 +16,7 @@ import { requirePopulation } from './lib/population';
 const LONE_N = /(?<![A-Za-z0-9'’-])N(?![A-Za-z0-9'’-])/;
 
 async function main() {
-  const items = await prisma.item.findMany({ include: { options: true } });
+  const items = await prisma.item.findMany({ include: { options: { orderBy: { id: 'asc' } } } });
   const lib = await prisma.misconception.findMany({ select: { id: true, childHint: true, description: true } });
   const rows: Array<{ where: string; text: string }> = [];
 

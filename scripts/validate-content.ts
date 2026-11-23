@@ -149,12 +149,27 @@ const anyContentFile = z.discriminatedUnion('kind', [
  * append-only RULING-LOG.jsonl. A different gate, deliberately — the same
  * division as review-returns, whose shape is checked at the point of use.
  */
-const GENERATED_DIRS = new Set(['exports', 'review-returns', 'pilot-review']);
+/**
+ * WHAT IS VALIDATED IS DECLARED, NOT INFERRED (David, 2026-11-22 — R1041). content/ holds authored
+ * content AND the working records of review. The old rule — every .json except three generated
+ * dirs — failed 719 record files once CI could run it, while the 27 passages that genuinely broke on
+ * 2026-08-16 went unseen. So every TOP-LEVEL entry is declared in scripts/lib/content-paths.json as
+ * AUTHORED (schema-checked, every file) or a RECORD (counted and printed, never schema-checked). An
+ * entry declared in neither FAILS: a new directory arrives with its declaration, or the run refuses
+ * it. Inside an authored path nothing is skipped, so a passage that loses its `kind` fails here.
+ */
+const PATHS = JSON.parse(readFileSync(resolve(import.meta.dirname, 'lib/content-paths.json'), 'utf8')) as {
+  authored?: string[]; records?: Record<string, string>;
+};
+if (!Array.isArray(PATHS.authored) || typeof PATHS.records !== 'object' || PATHS.records === null) {
+  throw new Error('scripts/lib/content-paths.json: expected {authored[], records{}} (R173)');
+}
+const AUTHORED = new Set(PATHS.authored);
+const RECORDS = PATHS.records;
 
 function collectJsonFiles(dir: string): string[] {
   const out: string[] = [];
   for (const entry of readdirSync(dir)) {
-    if (GENERATED_DIRS.has(entry)) continue;
     const full = join(dir, entry);
     if (statSync(full).isDirectory()) out.push(...collectJsonFiles(full));
     else if (entry.endsWith('.json')) out.push(full);
@@ -162,7 +177,20 @@ function collectJsonFiles(dir: string): string[] {
   return out;
 }
 
-const files = collectJsonFiles(CONTENT_ROOT);
+const undeclared: string[] = [];
+const recordCounts: Array<[string, number]> = [];
+const files: string[] = [];
+for (const entry of readdirSync(CONTENT_ROOT).sort()) {
+  if (entry.startsWith('.')) continue;
+  const full = join(CONTENT_ROOT, entry);
+  const isDir = statSync(full).isDirectory();
+  if (AUTHORED.has(entry)) files.push(...(isDir ? collectJsonFiles(full) : entry.endsWith('.json') ? [full] : []));
+  else if (entry in RECORDS) recordCounts.push([entry, isDir ? collectJsonFiles(full).length : 1]);
+  else undeclared.push(entry);
+}
+console.log(`content/: ${AUTHORED.size} authored path(s) schema-checked · ${recordCounts.length} record path(s) NOT schema-checked, by declaration:`);
+for (const [entry, n] of recordCounts) console.log(`    ${entry} (${n}) — ${RECORDS[entry]}`);
+for (const entry of undeclared) console.error(`✗ content/${entry}: declared neither authored nor a record in scripts/lib/content-paths.json`);
 if (files.length === 0) {
   console.error('No content files found under /content — that is unexpected.');
   process.exit(1);
@@ -214,8 +242,9 @@ for (const file of files) {
   console.log(`✓ ${label}`);
 }
 
+failures += undeclared.length;
 if (failures > 0) {
-  console.error(`\nContent validation FAILED: ${failures} file(s) invalid.`);
+  console.error(`\nContent validation FAILED: ${failures} file(s) or path(s) invalid.`);
   process.exit(1);
 }
 console.log(

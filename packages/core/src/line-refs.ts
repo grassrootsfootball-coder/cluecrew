@@ -98,37 +98,58 @@ export function quoteLinesOutsideWindow(
  * ADDENDUM 36: THE ATTRACTOR AND THE DEFEATER.
  *
  * `attractorLine` is the line that makes a distractor attractive — what the child latches onto.
- * `defeaterLine` is the line a correct reading uses to rule it out. Three rules:
+ * `defeaterLine` is the line a correct reading uses to rule it out.
  *
- *   1. BOTH OR NEITHER. Half the pair states an attraction with no defeat, or a defeat with
- *      nothing to defeat; either is a claim that cannot be checked or acted on.
- *   2. BOTH INSIDE THE ITEM'S WINDOW. A line outside `lineRefs` sends a reviewer to text the item
- *      does not cover — the same fault the line-reference gate exists for, one level in.
- *   3. THE DEFEATER IS NOT BEFORE THE ATTRACTOR. A defeater earlier in the passage than the thing
- *      it defeats is not a defeater: it is a line the child had already read and passed. EQUAL is
- *      allowed — one line can carry both the pull and the correction.
+ * THE RULES, AS AMENDED (David, 2026-11-22 — R1041, on R152 and R157's evidence; Annie never ruled
+ * and is no longer reviewing). The original three failed 800 of 864 authored notes, and R140's
+ * signal held: the rule, not the content, was the artefact.
  *
- * Returns a reason per broken rule, empty when the pair is sound or absent.
+ *   1. A DEFEATER NEEDS AN ATTRACTOR — NOT THE REVERSE — UNLESS THE PULL IS DECLARED OUTSIDE THE
+ *      WINDOW. A defeat with nothing to defeat is a claim that cannot be checked. An attraction with
+ *      NO defeater line is the authored convention: the defeat may be an ABSENCE (`defeatedByAbsence`)
+ *      or a RELATION — "answers a different question", R157 — which has no site to number. 748 of 864
+ *      notes were written that way. And a wrong-scope option has its pull OUTSIDE the window by
+ *      definition (R157: "true at line X outside, answer at line Y inside"); its `windowClass` NOISE
+ *      or ENTRAPMENT says so, so its in-window defeater stands alone. (David, 2026-11-23: the first
+ *      amendment made a drafter delete 18 true in-window defeaters, the rule destroying its evidence.)
+ *   2. EVERY LINE GIVEN IS INSIDE THE ITEM'S WINDOW. A line outside `lineRefs` sends a reviewer to
+ *      text the item does not cover — the same fault the line-reference gate exists for.
+ *   3. AN ABSENCE HAS NO LINE. `defeatedByAbsence: true` together with a `defeaterLine` is two
+ *      contradictory accounts of one defeat.
+ *   DROPPED: "the defeater is not before the attractor". Passage order is not reasoning order — a
+ *   child can be pulled by line 36 and corrected by line 22 (R152).
+ *
+ * Returns a reason per broken rule, empty when the note is sound or absent.
  */
 export function checkAttractorDefeater(input: {
   itemLineRefs?: readonly number[] | null;
   attractorLine?: number | null;
   defeaterLine?: number | null;
+  defeatedByAbsence?: boolean | null;
+  windowClass?: string | null;
 }): string[] {
-  const { itemLineRefs, attractorLine: a, defeaterLine: d } = input;
+  const { itemLineRefs, attractorLine: a, defeaterLine: d, defeatedByAbsence, windowClass } = input;
   const out: string[] = [];
   if (a == null && d == null) return out;
-  if (a == null || d == null) {
-    out.push(`only ${a == null ? 'defeaterLine' : 'attractorLine'} is set — both are required or neither`);
+  if (a == null) {
+    if (windowClass === 'NOISE' || windowClass === 'ENTRAPMENT') {
+      // The pull is declared outside the window; the defeater must still sit inside it.
+      if (itemLineRefs?.length && d != null && !itemLineRefs.includes(d)) {
+        out.push(`defeaterLine ${d} is outside the item window ${itemLineRefs.join(', ')}`);
+      }
+      return out;
+    }
+    out.push('defeaterLine is set with no attractorLine, and windowClass does not declare the pull outside the window — a defeat needs something to defeat');
     return out;
+  }
+  if (d != null && defeatedByAbsence === true) {
+    out.push(`defeatedByAbsence is set together with defeaterLine ${d} — an absence has no line`);
   }
   if (itemLineRefs?.length) {
     const window = new Set(itemLineRefs);
     if (!window.has(a)) out.push(`attractorLine ${a} is outside the item window ${itemLineRefs.join(', ')}`);
-    if (!window.has(d)) out.push(`defeaterLine ${d} is outside the item window ${itemLineRefs.join(', ')}`);
+    if (d != null && !window.has(d)) out.push(`defeaterLine ${d} is outside the item window ${itemLineRefs.join(', ')}`);
   }
-  // Equal is legitimate; strictly earlier is not.
-  if (d < a) out.push(`defeaterLine ${d} comes before attractorLine ${a}`);
   return out;
 }
 
