@@ -30419,3 +30419,31 @@ run:
   - `check:review-queries`: a local agent worktree.
 
 **Not reached:** steps after the database checks (build, e2e, perf) are measured only by CI itself.
+
+## R1057 — transparent is a one-sense card (David: "Make transparent one-sense", 2026-11-23)
+
+The reviewer has held since R1045 that transparent's second sense, "so easy to see the truth behind
+that nobody is fooled" (a transparent excuse), is a figurative stretch a 9–11-year-old does not
+genuinely meet. David ruled it out. `scripts/make-vault-card-one-sense.ts` set `twoMeanings`
+false and cleared sense B, `likelierKnown` and its note, and the sense-B image prompt.
+- The removed sense is kept VERBATIM in `supersedeNote`.
+- Sense A ("you can see straight through it") and tier 3 are untouched.
+- One AMENDED event was written (actor `ruling:david`).
+
+**Composition, measured before the write.** transparent is not a VOCAB_BANK headword, so the
+vocab-in-context guard and flip do not move: the vault-guard audit shows 0 bank moves. The family's
+two-sense seed pool (`isTwoSenseSeed`) goes from 72 to 71. The seed does not write `twoMeanings`,
+so it cannot restore the sense.
+
+**Left as they are, and they now disagree with the vault:**
+- LIVE `gen-vr-04-closest-meaning-38` keeps "obvious" tagged `vr04-the-other-meaning`. The word
+  does carry that figurative sense in English, and the reviewer found it a weak trap but not a
+  correct answer (R1054). But its tag now names a sense the vault no longer recognises. Whether to
+  keep it, or replace it through review with a distractor of another kind, is a decision.
+- `packages/core/src/vr/vr04.ts` still names transparent among the four headwords "with two live
+  senses AND a T4/T5 slot". Since R1054 and this entry, both halves of that are false. The comment
+  describes the OM scarcity design, and correcting it belongs with the decision above.
+
+**transparent's card is still DRAFT.** Every reason it was held in R1045 is now resolved: the tier
+(R1054), the second sense (here), and sense-B length, which was withdrawn in R1047. It still needs a
+review before publication, because the card as it now stands has not been read as a one-sense card.
