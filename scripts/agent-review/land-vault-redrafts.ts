@@ -36,7 +36,7 @@ const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 
 type PacketCard = {
   fixed: { headword: string; tier: number; twoMeanings: boolean; likelierKnown: string | null };
-  current: { wordClass: string | null; definitionChild: string; sentence: string; senseB: { definition: string | null; sentence: string | null; wordClass: string | null } | null; likelierKnownNote: string | null };
+  current: { wordClass: string | null; definitionChild: string; sentence: string; senseB: { definition: string | null; sentence: string | null; wordClass: string | null } | null; likelierKnownNote: string | null; imagePrompt?: string | null };
 };
 
 async function main() {
@@ -63,14 +63,17 @@ async function main() {
     if (!row) f.push('no Word row');
     else {
       if (row.status !== 'DRAFT') f.push(`status ${row.status}`);
-      const stored = JSON.stringify([row.wordClass, row.definitionChild, row.sentence, row.twoMeanings ? [row.senseBDefinition, row.senseBSentence, row.senseBWordClass] : null, row.likelierKnownNote]);
-      const shown = JSON.stringify([p.current.wordClass, p.current.definitionChild, p.current.sentence, p.current.senseB ? [p.current.senseB.definition, p.current.senseB.sentence, p.current.senseB.wordClass] : null, p.current.likelierKnownNote]);
+      // A packet cut before R1059 carries no imagePrompt; then the stored prompt is not compared (and the card may not change it).
+      const ip = (v: string | null | undefined) => (p.current.imagePrompt === undefined ? null : v ?? null);
+      const stored = JSON.stringify([row.wordClass, row.definitionChild, row.sentence, row.twoMeanings ? [row.senseBDefinition, row.senseBSentence, row.senseBWordClass] : null, row.likelierKnownNote, ip(row.imagePrompt)]);
+      const shown = JSON.stringify([p.current.wordClass, p.current.definitionChild, p.current.sentence, p.current.senseB ? [p.current.senseB.definition, p.current.senseB.sentence, p.current.senseB.wordClass] : null, p.current.likelierKnownNote, ip(p.current.imagePrompt)]);
       if (stored !== shown) f.push('stored text changed since the packet was cut');
       if (row.tier !== p.fixed.tier || row.twoMeanings !== p.fixed.twoMeanings || row.likelierKnown !== p.fixed.likelierKnown) f.push('stored tier/twoMeanings/likelierKnown changed since the packet was cut');
     }
     if (c.tier !== p.fixed.tier) f.push(`tier changed ${p.fixed.tier} → ${c.tier} (composition: needs a ruling)`);
     if (c.twoMeanings !== p.fixed.twoMeanings) f.push('twoMeanings changed (composition: needs a ruling)');
     if ((c.twoMeanings ? c.likelierKnown ?? null : null) !== p.fixed.likelierKnown) f.push('likelierKnown changed (composition: needs a ruling)');
+    if (p.current.imagePrompt === undefined && c.imagePrompt !== undefined) f.push('imagePrompt given, but this packet does not carry the stored prompt to compare against');
     f.push(...gateCard(c));
     const v = verdict.get(h);
     if (v?.verdict !== 'ATTEST') f.push(`not attested (${v?.verdict ?? 'no verdict'}${v?.reason ? `: ${v.reason}` : ''})`);
@@ -100,9 +103,10 @@ async function main() {
         wordClass: c.wordClass, definitionChild: c.definitionChild, sentence: c.sentence,
         senseBDefinition: c.senseB?.definition ?? null, senseBSentence: c.senseB?.sentence ?? null, senseBWordClass: c.senseB?.wordClass ?? null,
         likelierKnownNote: c.twoMeanings ? c.likelierKnownNote ?? row.likelierKnownNote : null,
+        ...(c.imagePrompt !== undefined ? { imagePrompt: c.imagePrompt } : {}),
         supersedeNote: row.supersedeNote ? `${row.supersedeNote} | ${history}` : history,
         status: 'LIVE', reviewedBy: `reviewer:${AGENT}`, reviewNotes: null } });
-      await tx.attributionEvent.create({ data: { recordType: 'word', recordId: id, action: 'AMENDED', reviewerId: AGENT, actor: 'agent-drafter', recordedBy: RECORDED_BY, field: 'definitionChild/sentence/senseB', method, note: c.why } });
+      await tx.attributionEvent.create({ data: { recordType: 'word', recordId: id, action: 'AMENDED', reviewerId: AGENT, actor: 'agent-drafter', recordedBy: RECORDED_BY, field: c.imagePrompt !== undefined ? 'definitionChild/sentence/senseB/imagePrompt' : 'definitionChild/sentence/senseB', method, note: c.why } });
       await tx.attributionEvent.create({ data: { recordType: 'word', recordId: id, action: 'APPROVED', reviewerId: AGENT, actor: 'agent-reviewer', recordedBy: RECORDED_BY, field: 'status', method, note: verdict.get(c.headword)?.reason ?? null } });
     }
   });

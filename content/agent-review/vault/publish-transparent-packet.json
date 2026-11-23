@@ -1,0 +1,306 @@
+{
+  "task": "R1058 publish a held card",
+  "wordId": "transparent",
+  "cardHash": "f9d52bc28bc155b9053d87771e728078f877b7584abacf7ce4eea3f0cad8e5b6",
+  "card": {
+    "headword": "transparent",
+    "tier": 3,
+    "wordClass": "adjective",
+    "definitionChild": "you can see straight through it",
+    "sentence": "The stream was so transparent we could count the pebbles.",
+    "twoMeanings": false,
+    "senseBDefinition": null,
+    "senseBSentence": null,
+    "senseBWordClass": null,
+    "likelierKnown": null,
+    "imagePrompt": "A clear plastic lunchbox on a table with a leaking sandwich visible inside.",
+    "imagePromptB": null
+  },
+  "history": "Superseded 2026-08-02. Previous card — tier 5, definition: \"See-through, like clear glass.\", sentence: \"The stream was so transparent we could count the pebbles.\". Tier moved 5 → 3 on corpus evidence. Reason: replacement carries two senses (exact duplicate). David ratified the replacement (2026-08-02). | Tier 5 → 3 applied 2026-11-23 (R1050). | Made one-sense 2026-11-23 (R1057) on: \"Make transparent one-sense (David, 2026-11-23)\". Removed sense: {\"senseBDefinition\":\"so easy to see the truth behind that nobody is fooled\",\"senseBSentence\":\"His excuse about the late bus was transparent; Mr Hall had watched him walk past the window ten minutes earlier.\",\"senseBWordClass\":\"adjective\",\"likelierKnown\":\"A\",\"likelierKnownNote\":\"The see-through meaning turns up on packaging and in science lessons well before the one about excuses.\",\"imagePromptB\":\"A boy explaining himself to a teacher who is looking past him at the window.\"}.",
+  "preReviewVerdict": "FIXED_THEN_PASS",
+  "liveItems": [
+    {
+      "id": "gen-vr-04-closest-meaning-38",
+      "tier": 3,
+      "stem": {
+        "words": [
+          "transparent"
+        ],
+        "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+        "sentence": "The lid was TRANSPARENT, so she could see the cake inside."
+      },
+      "options": [
+        {
+          "value": "clear",
+          "isCorrect": true,
+          "tag": null
+        },
+        {
+          "value": "thin",
+          "isCorrect": false,
+          "tag": "vr04-one-feature-only"
+        },
+        {
+          "value": "shiny",
+          "isCorrect": false,
+          "tag": "vr04-keeps-the-same-company"
+        },
+        {
+          "value": "obvious",
+          "isCorrect": false,
+          "tag": "vr04-the-other-meaning"
+        }
+      ]
+    },
+    {
+      "id": "bank-vr-04-closest-meaning-35",
+      "tier": 3,
+      "stem": {
+        "words": [
+          "transparent"
+        ],
+        "prompt": "Which word is closest in meaning to the word on the card?"
+      },
+      "options": [
+        {
+          "value": "clear",
+          "isCorrect": true,
+          "tag": null
+        },
+        {
+          "value": "opaque",
+          "isCorrect": false,
+          "tag": "vr04-opposite-pull"
+        },
+        {
+          "value": "glass",
+          "isCorrect": false,
+          "tag": "vr04-associated-not-same"
+        },
+        {
+          "value": "window",
+          "isCorrect": false,
+          "tag": "vr04-associated-not-same"
+        }
+      ]
+    }
+  ],
+  "exemplarsAtTier": [
+    {
+      "headword": "abandon",
+      "definitionChild": "to leave something and not come back",
+      "sentence": "The crew had to abandon the leaky boat.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "astonish",
+      "definitionChild": "to surprise someone greatly",
+      "sentence": "The magician astonished the whole hall.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "baffled",
+      "definitionChild": "very puzzled",
+      "sentence": "The riddle left everyone baffled.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "bewilder",
+      "definitionChild": "to confuse someone completely",
+      "sentence": "The twisting paths bewildered the hikers.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "cautious",
+      "definitionChild": "very careful, watching out for danger",
+      "sentence": "Be cautious when you cross the icy playground.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "commotion",
+      "definitionChild": "noisy, excited fuss",
+      "sentence": "A squirrel in the hall caused a commotion.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "dazzling",
+      "definitionChild": "so bright it is hard to look at",
+      "sentence": "The dazzling headlights lit up the whole street.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "drenched",
+      "definitionChild": "completely soaked",
+      "sentence": "We were drenched after the storm.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "eerie",
+      "definitionChild": "strange in a spooky way",
+      "sentence": "An eerie mist covered the field.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "feeble",
+      "definitionChild": "without much strength",
+      "sentence": "The old torch gave a feeble light.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "genuine",
+      "definitionChild": "exactly what it claims to be, not a copy",
+      "sentence": "The museum keeps a genuine dinosaur bone.",
+      "twoMeanings": true
+    },
+    {
+      "headword": "gigantic",
+      "definitionChild": "enormously big",
+      "sentence": "A gigantic pumpkin won the show.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "hesitate",
+      "definitionChild": "to pause because you are not sure",
+      "sentence": "He hesitated before jumping into the pool.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "hoard",
+      "definitionChild": "a hidden store of things",
+      "sentence": "The dragon slept on a hoard of gold.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "hostile",
+      "definitionChild": "unfriendly and ready to argue or fight",
+      "sentence": "The neighbour's dog was hostile to anyone in a uniform, and the postman took to leaving parcels at number 12 instead.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "humble",
+      "definitionChild": "not boasting about yourself, even when you have done well",
+      "sentence": "Nadia stayed humble after the win and spent her whole interview talking about what the goalkeeper had done.",
+      "twoMeanings": true
+    },
+    {
+      "headword": "immense",
+      "definitionChild": "very great in size",
+      "sentence": "The whale is an immense animal.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "linger",
+      "definitionChild": "to stay a little longer",
+      "sentence": "The smell of toast lingered all morning.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "marvel",
+      "definitionChild": "to be amazed by something wonderful",
+      "sentence": "We marvelled at the fireworks.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "miniature",
+      "definitionChild": "a very small copy of something",
+      "sentence": "The model village had miniature houses and shops.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "nimble",
+      "definitionChild": "quick and light on your feet",
+      "sentence": "The nimble goat hopped from rock to rock.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "obedient",
+      "definitionChild": "doing what you are asked to do",
+      "sentence": "The obedient dog sat as soon as she whistled.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "obstacle",
+      "definitionChild": "something that blocks your way",
+      "sentence": "A fallen tree was the first obstacle.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "peculiar",
+      "definitionChild": "strange or unusual",
+      "sentence": "A peculiar smell came from the kitchen.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "reluctant",
+      "definitionChild": "not keen to do something",
+      "sentence": "Maya was reluctant to leave the funfair.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "sincere",
+      "definitionChild": "truly meant, honest",
+      "sentence": "He gave a sincere thank-you for the gift.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "summit",
+      "definitionChild": "the very top of a mountain",
+      "sentence": "They reached the summit at noon.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "thrive",
+      "definitionChild": "to grow strong and do well",
+      "sentence": "Tomatoes thrive in the sunshine.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "trivial",
+      "definitionChild": "not important enough to worry about",
+      "sentence": "Next to the flooded kitchen floor, a scratch on the table seemed trivial, and nobody mentioned it again.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "unearth",
+      "definitionChild": "to dig up or discover",
+      "sentence": "The dog unearthed an old boot.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "vacant",
+      "definitionChild": "empty, with nobody in it",
+      "sentence": "They parked in the last vacant space.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "vague",
+      "definitionChild": "not clear or exact",
+      "sentence": "Kemi's directions were vague, and when we rang to ask which turning she meant she just said it was near a big tree.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "venture",
+      "definitionChild": "to go somewhere a bit daring",
+      "sentence": "We ventured into the dark cave.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "weary",
+      "definitionChild": "very tired",
+      "sentence": "The weary travellers reached the inn at midnight.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "wither",
+      "definitionChild": "to dry up and droop",
+      "sentence": "The flowers withered without water.",
+      "twoMeanings": false
+    },
+    {
+      "headword": "yearn",
+      "definitionChild": "to want something very much",
+      "sentence": "She yearned for the summer holidays.",
+      "twoMeanings": false
+    }
+  ]
+}

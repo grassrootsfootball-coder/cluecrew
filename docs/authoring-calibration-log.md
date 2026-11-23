@@ -30479,3 +30479,48 @@ when the Prisma worktree typechecked the same files; it is now `Prisma.InputJson
 a folder that no longer exists, so locally `/admin/import` throws a server error. `similarity-index.ts`
 skips when the variable is UNSET and crashes when it is set but the file is missing; it should
 report and skip in both cases.
+
+## R1059 — transparent's card reviewed as one-sense, redrafted, and published (David: "Yes, review it", 2026-11-23)
+
+R1057 made transparent one-sense, which left the card DRAFT and unread in its new form.
+`publish-held-card.ts --cut` packed the card as it stands, with a hash over every field a child or
+the guard reads, its two LIVE items and the 36 LIVE T3 exemplars. rev-agent-01 **HELD** it on two
+wording faults that no ruling had touched:
+- the definition "you can see straight through it" is a clause, not an adjective phrase. That is
+  the fault trivial was held for and fixed for in R1047;
+- the image prompt ("a clear plastic lunchbox … with a leaking sandwich visible inside") reads as
+  mess, not as see-through, and shows a different scene from the card's own sentence.
+
+The house route followed. The drafter redrafted both (`cards-V3.json`). The reviewer ATTESTED
+(`review-V3.json`), and `land-vault-redrafts.ts` landed the text and published the card, with
+AMENDED and APPROVED events.
+- **Definition:** "letting light through, so you can see what is on the other side". It avoids
+  "glass" and "window", both distractors on bank-vr-04-closest-meaning-35. The reviewer finds its
+  echo of opaque's contrast a help: a child who fell for "opaque" meets the correction on the card.
+- **Image:** two children on a grassy bank pointing at pebbles seen through a shallow, clear
+  stream, which is the card's own sentence.
+- The sentence, tier 3 and one-sense status are unchanged. The card is LIVE and collected 123rd of
+  177 in the warm-up.
+
+**Instruments changed on the way.**
+- `gate-vault-cards.ts` now passes `imagePrompt` to `checkWordCard`, which already scans it at the
+  CMS door. A canary prompt containing "failed" is refused.
+- `land-vault-redrafts.ts` carries `imagePrompt`. A packet cut before this entry has no stored
+  prompt, so the door refuses a prompt change against it rather than comparing blind.
+- **A fault in my own exporter, caught by the drafter.** `export-vault-redraft-packet.ts` took each
+  card's LIVE items from `packet.json`, a copy cut at the start of R1045, so it showed both
+  transparent items at T5 after R1054 had moved them to T3. It now reads the store (R60's third
+  question: is it reading the artefact, or a copy of it?). The card text was unaffected, and the
+  packet was recut before review.
+- `publish-held-card.ts` has two paths. Only `--cut` has been run; its publish path is unused,
+  because the card needed a redraft.
+
+**The seed hazard is now sharper.** `content/words/words.json` still gives transparent the
+definition "See-through, like clear glass." Any `seedWords` run would put that over the LIVE card,
+and "glass" is a distractor on its own item. This is the R1050 finding, and the session proposed
+there ("Stop the seed rewriting reviewed vault cards") is what closes it.
+
+**Still open for transparent:** whether "obvious" on gen-vr-04-closest-meaning-38 keeps its
+`vr04-the-other-meaning` tag. The reviewer notes that the tag's hint tells the child the word "has
+more than one meaning", which the card now contradicts, and that the pull comes through the key
+("clear" can mean obvious). It wants a different tag, or a ruling that keeps this one on purpose.

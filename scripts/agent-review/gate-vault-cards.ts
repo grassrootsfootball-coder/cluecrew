@@ -19,6 +19,8 @@ export interface VaultCard {
   senseB?: { definition: string; sentence: string; wordClass: string } | null;
   likelierKnown?: 'A' | 'B' | null;
   likelierKnownNote?: string | null;
+  /** Becomes an illustration a child sees, so it is a scanned surface (checkWordCard). */
+  imagePrompt?: string | null;
   /** The sense the LIVE item(s) on this headword test, and why the tier is what it is. */
   why: string;
 }
@@ -45,7 +47,7 @@ export function gateCard(c: VaultCard): string[] {
   if (!c.twoMeanings && c.senseB) f.push('senseB without twoMeanings');
   if (c.twoMeanings && c.likelierKnown !== 'A' && c.likelierKnown !== 'B') f.push('two-sense card needs likelierKnown A or B');
   if (!c.twoMeanings && c.likelierKnown) f.push('likelierKnown on a one-sense card');
-  for (const x of checkWordCard({ id: slug(c.headword), headword: c.headword, definitionChild: c.definitionChild, sentence: c.sentence, senseBDefinition: c.senseB?.definition ?? null, senseBSentence: c.senseB?.sentence ?? null })) {
+  for (const x of checkWordCard({ id: slug(c.headword), headword: c.headword, definitionChild: c.definitionChild, sentence: c.sentence, senseBDefinition: c.senseB?.definition ?? null, senseBSentence: c.senseB?.sentence ?? null, imagePrompt: c.imagePrompt ?? null })) {
     f.push(`${x.rule}: ${x.detail}`);
   }
   return f;
