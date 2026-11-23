@@ -1,0 +1,41 @@
+{
+  "batch": "V2",
+  "reviewer": "rev-agent-01",
+  "cards": [
+    {
+      "headword": "hostile",
+      "verdict": "ATTEST",
+      "reason": "Checked field by field against the stored text: only definitionChild changed, and the fixed values (tier 3, one sense) were copied exactly. The named fault is fixed. 'unfriendly and ready to argue or fight' is true and plain, and it agrees with the key 'unfriendly' on both items. It makes no distractor right: 'argument' is a noun and an act, not a synonym of the adjective, and 'enemy', 'rude', 'murderous' and 'frowning' are not closest in meaning. The sentence I found sound is unchanged and fixes sense A. The gate passes."
+    },
+    {
+      "headword": "vague",
+      "verdict": "ATTEST",
+      "reason": "Checked field by field against the stored text: only definitionChild changed, and the fixed values (tier 3, one sense) were copied exactly. The named fault is fixed. 'not clear or exact' is plain and covers directions, shapes and memories. It agrees with the key 'unclear' and makes no distractor right: 'clear' is the opposite, and 'fog', 'hint', 'meaningless', 'mysterious' and 'brief' are not synonyms. The sound sentence is unchanged. The gate passes."
+    },
+    {
+      "headword": "trivial",
+      "verdict": "ATTEST",
+      "reason": "Checked field by field against the stored text: only definitionChild changed, and the fixed values (tier 3, one sense) were copied exactly. The named fault is fixed: 'not important enough to worry about' is a true, plain adjective definition, and it agrees with the key 'unimportant'. The drafter rightly declined my own wording, because 'small' is a distractor on gen-vr-04-closest-meaning-24. A definition built on it would have pulled a child toward a wrong answer, and the new one does not. It makes no distractor right: 'important' is the opposite, and 'detail', 'penny', 'worthless', 'simple' and 'small' are not closest in meaning. The sound sentence is unchanged. The gate passes."
+    },
+    {
+      "headword": "amend",
+      "verdict": "ATTEST",
+      "reason": "Checked field by field against the stored text: definitionChild and sentence changed, and the fixed values (tier 4, one sense) were copied exactly. Both named faults are fixed. (1) 'to change something a little, usually to make it better' now agrees with the sentence and with both keys, 'improve' and 'change'. 'a little' keeps 'rewrite' from becoming right, 'worsen' is the opposite, and 'law', 'vote', 'shorten' and 'check' are not synonyms. (2) 'The club amended its rules so that children in Year 4 could join too.' is one clear sentence, cause before result, with the tense agreeing. The gate passes."
+    },
+    {
+      "headword": "rapid",
+      "verdict": "ATTEST",
+      "reason": "Checked field by field against the stored text: only the sentence changed, and the fixed values (tier 2, one sense) were copied exactly. The named fault is fixed. 'The rapid change in the weather sent us all running for the bus shelter.' puts 'rapid' beside what was rapid, so the child no longer works backwards. It is better than my suggested wording. Sense A agrees with the keys 'speedy' and 'quick', and no distractor becomes correct. The sound definition is unchanged. The gate passes."
+    },
+    {
+      "headword": "humble",
+      "verdict": "ATTEST",
+      "reason": "Checked field by field against the stored text: only senseB.definition changed, losing its final full stop. That fixes the named fault, and every other field is byte-identical, including the fixed tier 3, twoMeanings true and likelierKnown A. Sense A agrees with the key 'modest', and none of the distractors (proud, servant, bow, quiet, grateful) becomes correct under either sense. The gate passes."
+    },
+    {
+      "headword": "genuine",
+      "verdict": "ATTEST",
+      "reason": "Checked field by field against the stored text: only senseB.definition changed, losing its final full stop. That fixes the named fault, and every other field is byte-identical, including the fixed tier 3, twoMeanings true, likelierKnown A and the recorded note. Sense A agrees with the key 'real', and none of the distractors (false, gold, antique, fake, signed, costly) becomes correct under either sense. The gate passes."
+    }
+  ]
+}

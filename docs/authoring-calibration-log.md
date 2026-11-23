@@ -30020,3 +30020,52 @@ change so that common words do not lead, remains open as a product question. It 
 11 held drafts), and 0 have no card. `check:db-content`: all 169 LIVE words pass. Its only failures
 are the three SPAS items, which R1044 expects while they are held at the door. Snapshot re-exported:
 Word content changed, AttributionEvent +46, ContentWriteLog +46, and nothing else.
+
+## R1047 — seven held vault cards redrafted and published (David: "Yes, redraft them", 2026-11-23)
+
+R1045 held 11 of 15 old drafts. Seven of them were held for WORDING faults only: hostile, vague,
+trivial, amend, rapid, humble and genuine. They are now redrafted, reviewed and LIVE.
+
+**Regime.**
+- `export-vault-redraft-packet.ts` cut a packet from the store: each card's current text, the
+  reviewer's round-2 hold reason verbatim, and its LIVE items.
+- The drafting agent rewrote `cards-V2.json`. The reviewing agent (rev-agent-01) attested all 7 in
+  `review-V2.json`.
+- `land-vault-redrafts.ts` refuses the whole batch unless every card meets all of these:
+  - it is attested;
+  - it is still DRAFT, with text word-for-word the packet's;
+  - its tier, twoMeanings and likelierKnown are UNCHANGED (a redraft does not move family composition);
+  - it passes `checkWordCard`;
+  - the vault-guard audit shows 0 tier, likelierKnown or guard moves.
+- The displaced text is appended verbatim to each row's `supersedeNote`. 14 events were written,
+  AMENDED and APPROVED per card.
+
+**What changed.**
+- Definitions: hostile, vague, trivial and amend.
+- Sentences: rapid and amend.
+- Trailing full stop removed from the sense-B definition: humble and genuine.
+- One drafter judgement the reviewer upheld: trivial does NOT use the suggested "so small that it
+  hardly matters". "small" is a distractor on gen-vr-04-closest-meaning-24, and a card defining
+  the key by it would pull a child towards the wrong answer.
+
+**Composition and serving, measured before the write.** humble and genuine are VOCAB_BANK cards
+(rarity 3, rare half only). They moved status only, with guard false before and after. The 7 enter
+the 176-card LIVE warm-up order at positions 81–134. `check:headword-tiers`: 123 occurrences with
+a LIVE tier, 7 with a DRAFT tier, and 0 with no card.
+
+**Snapshot NOT committed with this entry.** The re-export ran (`land-vault-redrafts.ts` calls it).
+But the store also held another session's in-flight, uncommitted vr-19 SPAS replacement: the Item
+and ItemOption digests moved, along with 6 events and 12 write-log rows that are not this entry's.
+Committing that snapshot would put content into git ahead of the code and review that wrote it.
+That session's lander re-exports at the end, and that export carries these 7 cards.
+
+**Still held, and each needs David's ruling** (a vault tier or likelierKnown is family composition):
+- hollow (VOCAB_BANK rarity 1) and transparent: each card's own supersedeNote records a tier move
+  David ratified on 2026-08-02 (1 → 2, 5 → 3), but the stored tier is the old value.
+- transparent: is its figurative second sense one a child meets? Under it, "obvious" on a LIVE
+  item becomes correct.
+- bold: likelierKnown A (brave) or B (the formatting sense)?
+- fair: which of its three senses does the card carry?
+
+Separately, the drafter noted that the gen- copies of hostile, vague, trivial, humble and amend
+sit at item tier 2 on tier-3 and tier-4 headwords. That is an item-tiering question, not a card fault.

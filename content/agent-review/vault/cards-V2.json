@@ -1,0 +1,98 @@
+{
+  "batch": "V2",
+  "drafter": "agent:drafter",
+  "cards": [
+    {
+      "headword": "hostile",
+      "tier": 3,
+      "wordClass": "adjective",
+      "definitionChild": "unfriendly and ready to argue or fight",
+      "sentence": "The neighbour's dog was hostile to anyone in a uniform, and the postman took to leaving parcels at number 12 instead.",
+      "twoMeanings": false,
+      "senseB": null,
+      "likelierKnown": null,
+      "likelierKnownNote": null,
+      "why": "Changed only the definition: the old one tied hostility to nobody having spoken yet, which is not what the word means, and it was not plain. I took the reviewer's wording because it is true, plain and agrees with the key 'unfriendly' without making 'rude', 'murderous' or 'frowning' right. Sentence kept: the reviewer found no fault in it."
+    },
+    {
+      "headword": "vague",
+      "tier": 3,
+      "wordClass": "adjective",
+      "definitionChild": "not clear or exact",
+      "sentence": "Kemi's directions were vague, and when we rang to ask which turning she meant she just said it was near a big tree.",
+      "twoMeanings": false,
+      "senseB": null,
+      "likelierKnown": null,
+      "likelierKnownNote": null,
+      "why": "Changed only the definition: the old one fitted spoken instructions only, while vague also describes shapes and memories. 'not clear or exact' is plain, covers every use and agrees with the key 'unclear' without making 'mysterious' or 'brief' right. Sentence kept: the reviewer found no fault in it."
+    },
+    {
+      "headword": "trivial",
+      "tier": 3,
+      "wordClass": "adjective",
+      "definitionChild": "not important enough to worry about",
+      "sentence": "Next to the flooded kitchen floor, a scratch on the table seemed trivial, and nobody mentioned it again.",
+      "twoMeanings": false,
+      "senseB": null,
+      "likelierKnown": null,
+      "likelierKnownNote": null,
+      "why": "Changed only the definition: the old one was a clause ('it hardly matters at all'), not an adjective's definition. I did not take the reviewer's 'so small that it hardly matters', because 'small' is a distractor on gen-vr-04-closest-meaning-24 and a definition built on it would lean a child towards that wrong answer. The new one agrees with the key 'unimportant'. Sentence kept: the reviewer found no fault in it."
+    },
+    {
+      "headword": "amend",
+      "tier": 4,
+      "wordClass": "verb",
+      "definitionChild": "to change something a little, usually to make it better",
+      "sentence": "The club amended its rules so that children in Year 4 could join too.",
+      "twoMeanings": false,
+      "senseB": null,
+      "likelierKnown": null,
+      "likelierKnownNote": null,
+      "why": "Changed both fields. The old definition meant correcting a mistake, but the sentence showed a rule change that fixed none; the new definition covers both keys, 'change' and 'improve', and does not make 'rewrite', 'shorten' or 'check' right. The old sentence put the result before the cause behind a semicolon. I used the reviewer's order of cause then result, but wrote 'could' so the tense agrees with 'amended' and said 'children in Year 4' so it reads plainly."
+    },
+    {
+      "headword": "rapid",
+      "tier": 2,
+      "wordClass": "adjective",
+      "definitionChild": "happening very fast, in a short amount of time",
+      "sentence": "The rapid change in the weather sent us all running for the bus shelter.",
+      "twoMeanings": false,
+      "senseB": null,
+      "likelierKnown": null,
+      "likelierKnownNote": null,
+      "why": "Changed only the sentence: the old one put the effect first and left 'rapid' to the last clause, so a child had to work backwards. I did not use the reviewer's 'made a rapid change', which is an awkward phrase; the new sentence puts 'rapid' first, next to what was rapid, and keeps the bus shelter. Definition kept: the reviewer found no fault in it."
+    },
+    {
+      "headword": "humble",
+      "tier": 3,
+      "wordClass": "adjective",
+      "definitionChild": "not boasting about yourself, even when you have done well",
+      "sentence": "Nadia stayed humble after the win and spent her whole interview talking about what the goalkeeper had done.",
+      "twoMeanings": true,
+      "senseB": {
+        "definition": "small and plain, not grand or expensive",
+        "sentence": "The restaurant began as a humble van on the seafront, with two cooks and one griddle between them.",
+        "wordClass": "adjective"
+      },
+      "likelierKnown": "A",
+      "likelierKnownNote": "Children hear it used about how people behave; the 'plain and simple' sense describes places and things.",
+      "why": "Changed only the senseB definition, removing its final full stop to match house style. Every other field kept: the reviewer found both senses, both sentences, likelierKnown A and tier 3 sound."
+    },
+    {
+      "headword": "genuine",
+      "tier": 3,
+      "wordClass": "adjective",
+      "definitionChild": "exactly what it claims to be, not a copy",
+      "sentence": "The museum keeps a genuine dinosaur bone.",
+      "twoMeanings": true,
+      "senseB": {
+        "definition": "honest about what you really feel, instead of pretending",
+        "sentence": "Her apology sounded genuine, so Malik stopped scowling and shifted along the bench to make room for her.",
+        "wordClass": "adjective"
+      },
+      "likelierKnown": "A",
+      "likelierKnownNote": "Corrected B→A (annie, 2026-08-08): \"Real, not fake\" is the child sense (genuine leather); honest-about-feelings is the later extension.",
+      "why": "Changed only the senseB definition, removing its final full stop to match house style. Every other field kept, including the recorded likelierKnownNote, which the reviewer confirmed matches likelierKnown A."
+    }
+  ]
+}
