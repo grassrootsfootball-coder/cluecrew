@@ -30196,3 +30196,63 @@ not rewritten.
   after the vitest bump. Vitest 3 had been supplying `@types/node` to packages/core by accident; vitest
   5 does not, so `3be5916` left core's typecheck failing (node:fs, process, console). Core now declares
   `@types/node` itself, pinned at the version packages/db uses. All four packages typecheck.
+
+## R1051 — the word-door e2e test asserted a proxy; it now asserts the reviewed act (2026-11-23)
+
+Reported by the product-build session. `apps/web/e2e/word-draft-door.spec.ts` "every imported vault
+card is DRAFT and names its author" failed on a database restored from a snapshot holding the R1045
+and R1047 publications. It asserted that no `ai-draft:cowork-okafor-v1` card is ever LIVE.
+
+**Ruling: the test was stale, not the door.** The spec's header and the CHECK
+`word_live_needs_reviewer`, added in the same 2026-08-02 change, both set up a REVIEW door for
+imported cards, and a door exists to be passed through. "Never LIVE" described the state on the day
+nothing had been reviewed. It was a proxy for the rule: nothing an agent drafted reaches a child
+unless a reviewer approved it.
+
+**The first rewrite was REFUSED by rev-agent-01, and rightly** (eight holes). It demanded evidence only
+for a `reviewer:` value, so any human-looking name passed on the bare field. That is R94 and R203: a
+name in a field asserts the review that the record is supposed to prove. Its self-review check
+compared strings from two different naming schemes and could never fire. It also screened by two
+author prefixes, so a mislabelled card escaped both the CHECK and the test, and it printed no
+population. The reviewer's findings are in `content/agent-review/vault/review-door-test-R1051.json`.
+
+**The test now (`servingDoorFaults`), after a second refusal.** Round 2 found three more holes, all
+closed. (1) A non-`reviewer:` value was accepted over ANY approval, so `reviewedBy: "Annie"` over a
+rev-agent-01 approval passed. That is a machine verdict wearing a person's name, R94 itself. (2)
+Fixtures were excluded by the `zz-e2e-` PREFIX, which any writer could pick. (3) `seed` passed
+unchecked, and the CHECK exempts it too. Over every LIVE card except this spec's two fixtures
+(excluded by id), 176 today:
+- `seed` is checked against the IDS the seed writes: the ids in `content/words/words.json` plus its
+  fixture card `zz-e2e-fixture-word`. 118 cards today. It checks ids only, not content: a `seed` card
+  whose text has drifted from the file still passes, which is the seed's own guard to fix (R1050);
+- `ai-draft:` and `agent:` are agent-authored (58 today). Any other author, null included, fails;
+- an agent-authored card needs `reviewedBy: reviewer:<id>` AND an APPROVED event under that same
+  Reviewer row. The event must come from an actor with no AUTHORED or AMENDED event on the card, and
+  must be no earlier than the card's last edit, so the approval covers the version that serves;
+- or the card is a NAMED exception, keyed by id, carrying its sign-off digest in `reviewNotes`, and
+  cited here.
+
+The population is printed, and an empty one fails (R60). A second test runs eight canaries inside a
+rolled-back transaction and asserts each one is caught:
+- a bare human name;
+- a machine reviewer with no event;
+- a self-approval;
+- an undeclared author;
+- a person's name over a machine approval;
+- an approval older than the last edit;
+- a false `seed` label;
+- the exception's digest removed.
+
+All three DB-only tests were run with Playwright (no web server) and pass. In round 1, before this
+entry existed, the main test failed on exactly the missing citation.
+
+**The one declared exception: `gave-a-disgust`.** Published 2026-08-22 by
+`scripts/run-idiom-containment.ts` on Annie's ninety-ninth return (sha256 `cb80fc2f…`, in the card's
+reviewNotes). That was before landers wrote attribution events, so its review exists as that
+signed return and not as an event.
+
+**Raised, not fixed:** Annie's Reviewer row (`rev-0001`) still has `heldUntil` null, though R1031
+ended her reviewing on 2026-11-22. Until that is corrected, no check can test that an approver held
+the role at the time. The content-hash pin is also not done. A recorded edit after an approval
+is caught, by event order. What a pin would add: catching an edit written with NO event, and an
+edit in the same millisecond as its approval (one landing writes both, so ties pass by design).
