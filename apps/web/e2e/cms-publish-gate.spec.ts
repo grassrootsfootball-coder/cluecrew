@@ -15,7 +15,7 @@ test.afterAll(cleanupFixtures);
 test('publish gate: misconceptions + independent reviewer are hard requirements', async ({
   browser,
 }) => {
-  // An ENGLISH item (R1050): the review surface renders English only and refuses a verdict on any
+  // An ENGLISH item (R1058): the review surface renders English only and refuses a verdict on any
   // other district (R832), so a VR item met `surface-cannot-render` before the gate under test.
   // Copied from a LIVE row so every other gate accepts it; one distractor loses its mapping.
   const template = await englishItemTemplate();

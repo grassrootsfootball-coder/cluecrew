@@ -12,7 +12,7 @@ import { prisma } from '@cluecrew/db';
 import { cleanupFixtures, createStaff, englishItemTemplate, staffContext } from './fixtures';
 
 /**
- * THE SUITE REVIEWS ONLY ROWS IT CREATED (R1050, extending R978 from reviewers to items). These tests
+ * THE SUITE REVIEWS ONLY ROWS IT CREATED (R1058, extending R978 from reviewers to items). These tests
  * were written while ENG-028 and ENG-001 sat DRAFT before publication, and they recorded verdicts on
  * those real rows and then reset them to DRAFT. Both clusters are LIVE now: the verdict control is
  * not offered on a LIVE row, and the reset would demote a signed, serving item. So each test reviews

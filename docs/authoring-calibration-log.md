@@ -30448,7 +30448,7 @@ so it cannot restore the sense.
 (R1054), the second sense (here), and sense-B length, which was withdrawn in R1047. It still needs a
 review before publication, because the card as it now stands has not been read as a one-sense card.
 
-## R1050 — the e2e suites, run against real content for the first time (David: "fix the e2e failures", 2026-11-23)
+## R1058 — the e2e suites, run against real content for the first time (David: "fix the e2e failures", 2026-11-23)
 
 These suites had not run in CI since 2026-08-12. Against the restored store, 17 of 75 failed. Every
 failure was a TEST written against the seeded store or against code from before a later ruling. None

@@ -247,7 +247,7 @@ export async function enterCrewMode(
 }
 
 /**
- * THE WARM-UP CAN OPEN WITH A FLUENCY ROUND (R1050). The orchestrator serves one whenever a Maths case
+ * THE WARM-UP CAN OPEN WITH A FLUENCY ROUND (R1058). The orchestrator serves one whenever a Maths case
  * exists (`mathsCases > 0`, orchestrator.ts), and `/session/answer` refuses it (`use_fluency_endpoint`).
  * The seeded store had no Maths case, so every walk in this suite was written without it; the real
  * store has one, and twelve tests stalled on the first activity. This completes the round exactly as
@@ -267,7 +267,7 @@ export async function completeFluency(
 }
 
 /**
- * AN ITEM THE REVIEW SURFACE CAN RENDER (R1050). The CMS review page renders ENGLISH only and refuses
+ * AN ITEM THE REVIEW SURFACE CAN RENDER (R1058). The CMS review page renders ENGLISH only and refuses
  * a verdict on anything else (R832, `reviewSurfaceRenders`), so a review-gate test built on a VR item
  * meets `surface-cannot-render` before the gate it means to test. This copies a LIVE English
  * retrieval item — stem, passage, window, options and their ACTIVE tags — so each test starts from a

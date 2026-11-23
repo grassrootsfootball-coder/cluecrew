@@ -27,7 +27,7 @@ test('a similarity-flagged item cannot be REVIEWED until cleared with a note', a
   const reviewer = await createStaff('corpus-reviewer', 'REVIEWER');
 
   // A DRAFT the gate flagged on import (the flag is what is under test here;
-  // the scoring itself is unit-tested in core). ENGLISH, copied from a LIVE row (R1050): the review
+  // the scoring itself is unit-tested in core). ENGLISH, copied from a LIVE row (R1058): the review
   // surface refuses a verdict on any district it cannot render (R832), which a VR item met first.
   const template = await englishItemTemplate();
   const item = await prisma.item.create({

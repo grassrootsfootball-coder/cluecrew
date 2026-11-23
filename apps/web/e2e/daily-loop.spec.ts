@@ -89,7 +89,7 @@ test('full Daily Loop: HQ → warm-up → case → plain closer → wind-down; m
 
     if (await page.getByTestId('wind-down').isVisible().catch(() => false)) break;
 
-    // THE WARM-UP CAN OPEN WITH A FLUENCY ROUND (R1050): served whenever a Maths case exists, which the
+    // THE WARM-UP CAN OPEN WITH A FLUENCY ROUND (R1058): served whenever a Maths case exists, which the
     // seeded store never had. Driven through the real number pad, one wrong answer per fact — so the
     // round's miss feedback ("3 × 8 makes 24.") is exercised too, and the loop moves on when it closes.
     const fluency = page.locator('section[aria-label="Warm-up facts"]');
