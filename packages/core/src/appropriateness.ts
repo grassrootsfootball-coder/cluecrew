@@ -36,7 +36,7 @@
  * screen that judges what someone wrote may not.**
  */
 
-export const APPROPRIATENESS_VERSION = 'v2-2026-09-05';
+export const APPROPRIATENESS_VERSION = 'v3-2026-11-23';
 
 export const APPROPRIATENESS_SOURCE = {
   version: APPROPRIATENESS_VERSION,
@@ -60,6 +60,12 @@ const REFUSED = [
   'nude', 'sexy', 'lust', 'brothel',
   'whisky', 'whiskey', 'vodka', 'brandy', 'booze', 'heroin', 'cocaine',
   'corpse', 'suicide', 'hanged',
+  // R1043 (David, 2026-11-23): a disability slur. The spelling that reached a child was "SPAS", the
+  // code word on three LIVE vr-19 items for eleven weeks. "spas" is also the plural of "spa", and that
+  // sense is given up in OUR OWN child-facing text: a FLAG holds only bare tokens, and the live
+  // instance sat in a sentence ("what is the code for SPAS?") that supplies no sense at all.
+  // Passages and quotations are outside this list's scope, so a source text is unaffected.
+  'spaz', 'spazz', 'spazzy', 'spas',
 ];
 
 /**

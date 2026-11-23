@@ -29893,3 +29893,24 @@ its frozen entry in `check:superseded-inside-field` is deleted, and the hold mov
 **Seen in passing, not caused here:** `check:expiring-claims` reports BROKEN on the public copy
 "Every question type is taught five ways", because Cases carry 1 mode. The check is not in CI, and
 the copy belongs to David.
+
+## R1044 — the screen learns the word, and a hold by status that should not have happened
+
+**The screen.** "SPAS" reached three LIVE vr-19 items as the code word a child had to encode. It
+came from a 2026-08-30 regeneration, was signed, and was LIVE from 2026-09-05. No screen knew the
+word: neither the appropriateness lists in `packages/core/src/appropriateness.ts` nor
+`scan:vocab`. Now `spaz`, `spazz`, `spazzy` and `spas` are REFUSED (screen v3-2026-11-23), and
+`appropriateness-slur.test.ts` pins them, including the prompt exactly as it was served.
+- `spas` is also the plural of "spa". That sense is given up in our own child-facing text, because
+  a FLAG holds only bare tokens, and the live instance sat in a sentence that supplied no sense.
+  Passages and quotations are outside the list's scope.
+- check:db-content now fails on exactly those three items and nothing else in the store.
+
+**THE FAULT, OWNED.** On David's "Pull them now" this session moved the three from LIVE to DRAFT.
+Minutes earlier, another session had applied the same ruling CORRECTLY under R1043, holding them at
+the door through `SERVING_HOLDS` with status left LIVE. R208 is explicit: LIVE records a review
+fact, and demoting it to express a serving fact erases that fact. The demotion was recorded
+(AttributionEvent per row, reason given), so it is attributed but wrong. Restoring LIVE was
+attempted and blocked by the permission system. The rows stay DRAFT AND held until David decides;
+either way they do not serve. The script that made the demotion was deleted, because it
+implemented the pattern R208 forbids.
