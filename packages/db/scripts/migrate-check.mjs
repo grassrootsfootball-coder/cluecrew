@@ -23,13 +23,13 @@ const result = spawnSync(
     'diff',
     '--from-migrations',
     './prisma/migrations',
-    '--to-schema-datamodel',
+    // Prisma 7 (R1049): `--to-schema` replaces `--to-schema-datamodel`, and the shadow database is
+    // read from prisma.config.ts, so it travels in the environment rather than as a flag.
+    '--to-schema',
     './prisma/schema.prisma',
-    '--shadow-database-url',
-    shadowUrl,
     '--exit-code',
   ],
-  { cwd: resolve(here, '..'), stdio: 'inherit' },
+  { cwd: resolve(here, '..'), stdio: 'inherit', env: { ...process.env, SHADOW_DATABASE_URL: shadowUrl } },
 );
 
 if (result.status !== 0) {

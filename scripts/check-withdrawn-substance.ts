@@ -23,13 +23,13 @@ import { homedir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 // R1038: '@prisma/client' resolves only inside packages/db; the db package re-exports it.
-import { PrismaClient } from '../packages/db/src/index';
+import { createPrismaClient } from '../packages/db/src/index';
 import { canonicalSubstance, canonicalSubstanceCandidates } from '../packages/core/src/index';
 import { requirePopulation } from './lib/population';
 import { assessRefusalShape, runRefusalShapeFixture } from './lib/refusal-shape';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const prisma = new PrismaClient();
+const prisma = createPrismaClient();
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 const DIR = join(ROOT, 'content/withdrawals');
 

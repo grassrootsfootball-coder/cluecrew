@@ -23,7 +23,7 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join as pjoin } from 'node:path';
 // R1038: '@prisma/client' resolves only inside packages/db; the db package re-exports it.
-import { PrismaClient } from '../packages/db/src/index';
+import { createPrismaClient } from '../packages/db/src/index';
 import { compareToPopulation, type BindableRow, type SupersessionNotice } from './lib/population-binding';
 import { requirePopulation } from './lib/population';
 import { assertFixture } from './lib/carried-fixture';
@@ -31,7 +31,7 @@ import { assertFixture } from './lib/carried-fixture';
 const REPO = pjoin(__dirname, '..');
 const LANE = pjoin(homedir(), 'Downloads', '11+', 'from-cluecrew');
 const NOTICES = pjoin(REPO, 'content', 'supersessions');
-const prisma = new PrismaClient();
+const prisma = createPrismaClient();
 
 interface PopSection { caseId: string; questionType: string; rows: Array<{ itemId: string; stem: unknown; solution?: unknown; options: Array<{ value: unknown; isKey: boolean }> }> }
 

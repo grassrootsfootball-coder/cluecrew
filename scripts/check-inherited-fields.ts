@@ -34,10 +34,10 @@ import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 // R1038: '@prisma/client' resolves only inside packages/db; the db package re-exports it.
-import { PrismaClient } from '../packages/db/src/index';
+import { createPrismaClient } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
 
-const prisma = new PrismaClient();
+const prisma = createPrismaClient();
 
 /**
  * REPO ROOT, RESOLVED — NEVER THE CWD. The first run went through `pnpm --filter @cluecrew/db`, so

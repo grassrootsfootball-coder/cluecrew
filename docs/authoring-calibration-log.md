@@ -30547,3 +30547,21 @@ DRAFT" landed on the explained refusal with 0 items imported.
 
 **Not changed, David's to decide:** the stale `SIMILARITY_INDEX_PATH` line in his root `.env`. Unset
 it if the index is gone for good, or point it at wherever the index now lives.
+
+**Prisma 6.19 → 7.10.1** (R1049 continued, David: "upgrade vitest and prisma too"). The latest Prisma 6
+still pins deepmerge-ts 7.1.5, the last high advisory; only Prisma 7 carries 8.x. The migration:
+- **Connection URLs** moved out of `schema.prisma` into `packages/db/prisma.config.ts`, read from the
+  environment the package scripts already load through dotenv. Prisma 7's CLI no longer reads `.env`.
+- **There is no query-engine binary**, so a client needs a driver adapter. `createPrismaClient()` in
+  `packages/db/src/index.ts` is the one place that builds one (PrismaPg, refusing an absent
+  DATABASE_URL). The shared client and the three scripts that constructed their own use it;
+  `launch-metrics.mjs` wires the adapter inline.
+- **`migrate diff` flags renamed:** `--to-schema` replaces `--to-schema-datamodel`, and the live
+  database is `--to-config-datasource`. Both callers were updated (db:migrate:check,
+  check:migration-replay). **Both still bite**: a canary column added to the live database failed
+  the replay, and a canary field added to the schema failed the drift check.
+- **Measured, combined with zod 4, vitest 5 and the R1058 e2e fixes, in a CI-style run on fresh
+  databases:** all 67 gates pass, the audit passes (1 moderate remains, no high or critical), the
+  build passes, e2e is 75 passed with 1 skipped, and story e2e is 3/3. The one failure was
+  `check:e2e-fixtures` on a test from another session (word-draft-door.spec.ts:80, a Word with no
+  sweepable marker), which went back to that session.

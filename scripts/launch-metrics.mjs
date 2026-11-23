@@ -20,8 +20,10 @@ for (const line of readFileSync(new URL('../.env', import.meta.url), 'utf8').spl
   if (match && !process.env[match[1]]) process.env[match[1]] = match[2].replace(/^"|"$/g, '');
 }
 
+// Prisma 7 needs a driver adapter (R1049).
 const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
+const { PrismaPg } = require('@prisma/adapter-pg');
+const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL }) });
 
 const since = new Date(Date.now() - 28 * 24 * 60 * 60 * 1000);
 

@@ -1,3 +1,4 @@
+import { PrismaPg } from '@prisma/adapter-pg';
 import { PrismaClient } from '@prisma/client';
 import { assertEvent, carriesApprovalMarker, checkChildFacingText, isBlocking, refuseApprovedTrim, type AnalyticsEvent } from '@cluecrew/core';
 
@@ -88,7 +89,18 @@ export function misconceptionWritesPending(): number {
 
 const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 
-const baseClient = globalForPrisma.prisma ?? new PrismaClient();
+/**
+ * PRISMA 7 HAS NO QUERY ENGINE BINARY (R1049): a client talks to Postgres through a driver adapter.
+ * Every client in this repo is built here, so the adapter and its connection string have one home.
+ * Refuses an absent DATABASE_URL rather than connecting to a default (R173).
+ */
+export function createPrismaClient(): PrismaClient {
+  const connectionString = process.env.DATABASE_URL;
+  if (!connectionString) throw new Error('DATABASE_URL is not set — the Prisma client has no database to connect to');
+  return new PrismaClient({ adapter: new PrismaPg({ connectionString }) });
+}
+
+const baseClient = globalForPrisma.prisma ?? createPrismaClient();
 
 /**
  * APPROVED TEXT IS NEVER SHORTENED — ENFORCED AT THE ONE DOOR (Annie's fifth return, 2026-08-19 —
