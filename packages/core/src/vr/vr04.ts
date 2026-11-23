@@ -11,10 +11,11 @@
  *   · NEVER-ADD — a hard block on the words a near-synonym generator reaches for first
  *     that are a defensible second answer (calm/composed for stoic; drain for receding).
  *   · THE-OTHER-MEANING — a gate, not a guideline: OM only where a carrier sentence
- *     fixes the sense (T4-T5). On a bare card it is a second correct answer; refuse it.
- * Plus a SCARCITY-AWARE selector so OM (FOUR rows of 40 — the honest ceiling: recede,
- * exhausted, exquisite, transparent are the only headwords with two live senses AND a
- * T4/T5 slot) is never rotated out — the vr-03 reversed-relation lesson, built in.
+ *     fixes the sense. On a bare card it is a second correct answer; refuse it. (The carrier
+ *     rows were authored at T4-T5; the gate checks carrier-or-bare, never tier — R1054.)
+ * Plus a SCARCITY-AWARE selector so OM (THREE rows of 40: recede, exhausted, exquisite;
+ * transparent left in R1062 when R1057 made it one-sense) is never rotated out — the vr-03
+ * reversed-relation lesson, built in.
  *
  * annie's tagging distinction (recorded with the entries): WRONG-SHADE shares the core
  * sense and tilts it (stoic and gloomy are both emotional states); KEEPS-THE-SAME-COMPANY

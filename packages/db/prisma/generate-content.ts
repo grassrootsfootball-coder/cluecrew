@@ -1054,7 +1054,9 @@ const VR04_ROWS: Vr04Row[] = ([
   ['benevolent', 'kind', [['saintly', 'WS'], ['polite', 'SH'], ['wealthy', 'SC']], 'The school was founded by a BENEVOLENT businessman.'],
   ['stoic', 'unemotional', [['patient', 'SH'], ['silent', 'OF'], ['brave', 'SC']], 'She remained STOIC throughout the long wait.'],
   ['jovial', 'cheerful', [['ecstatic', 'WS'], ['friendly', 'SH'], ['loud', 'OF']], 'The innkeeper greeted them in a JOVIAL manner.'],
-  ['transparent', 'clear', [['thin', 'SH'], ['shiny', 'OF'], ['obvious', 'OM']], 'The lid was TRANSPARENT, so she could see the cake inside.'],
+  // Diagnoses follow the store (R1037 re-seated thin and shiny; R1062 moved obvious from OM to SH when R1057 made
+  // transparent one-sense). The LIVE row is reviewed, so content:generate never rewrites it from here.
+  ['transparent', 'clear', [['thin', 'OF'], ['shiny', 'SC'], ['obvious', 'SH']], 'The lid was TRANSPARENT, so she could see the cake inside.'],
   ['luminous', 'glowing', [['blazing', 'WS'], ['pale', 'SH'], ['visible', 'OF']], 'The dial on the watch was LUMINOUS in the dark.'],
   ['melancholy', 'sad', [['heartbroken', 'WS'], ['gentle', 'SH'], ['slow', 'OF']], 'A MELANCHOLY tune drifted from the piano.'],
 ] as Array<[string, string, Array<[string, Vr04Diagnosis]>, string?]>).map(([headword, key, ds, carrier], i) => ({

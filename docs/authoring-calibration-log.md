@@ -30584,3 +30584,45 @@ stronger than the thing behind it. Fixed on both sides:
 `pnpm check:e2e-fixtures` passes, and the spec's three database tests pass (177 LIVE cards
 screened). Not fixed: the guard still does not check which TABLE a marker is swept for, so the same
 gap could open for another table. That would be a separate change to `check-e2e-fixtures.ts`.
+
+## R1062 — "obvious" on gen-vr-04-closest-meaning-38 retagged the-other-meaning → wrong-shade through review (David: "Retag obvious on gen-vr-04-38 through review", 2026-11-23)
+
+R1057 made transparent a one-sense card. That left this LIVE row's third distractor tagged
+`vr04-the-other-meaning`, whose hint tells the child "The word in capitals has more than one
+meaning", which the card now contradicts. The reviewer had also observed that the pull of "obvious"
+comes THROUGH THE KEY: "clear" means both see-through and obvious.
+
+**The house door, not a new one.** A tag carries an attested `misconceptionExecution`, so a retag is
+a seat change. `export-packets.ts --live --district-entries --doors=vr-04` cut
+`content/agent-review/patterns/vr-04/packet.json` (81 LIVE rows, 58 attested VR entries). A
+proposing agent wrote `proposals.json`, the reviewer wrote `proposal-review.json`, and
+`land-proposals.ts --door=patterns/vr-04 --from-live` landed the result. It lands a row only when
+every change is ATTESTED and the reviewer SIGNS the whole row.
+
+**Two rounds.**
+- Round 1: the reviewer agreed `vr04-wrong-shade` was the right tag, the same shape as "sudden" from
+  swift via "quick", and found nothing better among the 58. It REFUSED the execution, which said
+  "'transparent' carries only the see-through one". That is false: the word has the obvious sense.
+  R1057 kept that sense off the CARD because children do not meet it, not because the word lacks
+  it, and a staff record must not claim more than the ruling did (R591).
+- Round 2: the execution now names what the sentence fixes. Change ATTESTED, row SIGNED.
+
+Both rounds are kept as `*-round1.json`.
+
+**Landed.** opt4 "obvious" now carries `vr04-wrong-shade` and the attested execution. thin and shiny
+are untouched. The row stayed LIVE: `--from-live` takes a row out of service only for a REBUILD, and
+a seat on a LIVE row lands in place. The new SIGNED event's hash is `a4ea29145ec38d3b`, identical to
+the previous signature, because tags and executions are outside the signed projection {stem,
+options:[content,isCorrect], explanation}. `publish-door --ready` therefore had nothing to return.
+Its "0 rows" refusal is correct, because vr-04 has no DRAFT rows.
+
+**The code now says what the store says.**
+- `VR04_ROWS` (generate-content.ts) gave transparent's distractors as thin SH, shiny OF and
+  obvious OM. The store has carried thin and shiny differently since the 2026-11-19 re-seating, and
+  now obvious as well. The row now reads thin OF, shiny SC, obvious SH. `content:generate` skips
+  this reviewed row (stem and options unchanged), so nothing is written from it.
+- `vr04.ts`'s scarcity note said "FOUR rows of 40" and named transparent. It now says three
+  (recede, exhausted, exquisite). The "(T4-T5)" in the OM gate is marked as where carrier rows were
+  authored, not a tier limit (R1054).
+- Nothing in the code counts OM rows. The selector and `checkVr04Row` test only carrier-or-bare,
+  and vr04 tests pass 5 of 5.

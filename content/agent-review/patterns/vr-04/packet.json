@@ -1,0 +1,3854 @@
+{
+ "door": "vr-04",
+ "caseId": "case-vr-04",
+ "title": "The Word Twins",
+ "questionType": "vr-04-closest-meaning",
+ "entries": {
+  "vr04-opposite-pull": {
+   "description": "Chose the opposite by mistake.",
+   "childHint": "That word points the other way. Read both meanings again."
+  },
+  "vr04-associated-not-same": {
+   "description": "Chose an associated word rather than a synonym.",
+   "childHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
+  },
+  "vr04-one-feature-only": {
+   "description": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC — one thing a stoic person might do, not what stoic means).",
+   "childHint": "That is one sign of it. The word itself means something wider."
+  },
+  "vr04-wrong-strength": {
+   "description": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+   "childHint": "Some words say a lot and some say a little. Choose the answer that says just as much as the word you are given."
+  },
+  "vr04-keeps-the-same-company": {
+   "description": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE — another word of praise, not one that means unafraid).",
+   "childHint": "Both words could fit the same story. Ask whether they mean the same."
+  },
+  "vr04-wrong-shade": {
+   "description": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+   "childHint": "Close is not the same. Ask exactly what the word you were given means."
+  },
+  "vr04-the-other-meaning": {
+   "description": "Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in \"stayed HUMBLE after winning\" — the humble-cottage sense). T4/T5 only.",
+   "childHint": "The word in capitals has more than one meaning. Read the sentence and pick the one it shows."
+  },
+  "vr-move-letter-both-invalid": {
+   "description": "Chose a letter that makes neither word work.",
+   "childHint": "Test both halves: the first word without the letter, the second word with it."
+  },
+  "vr-letter-series-step-repeat": {
+   "description": "Applied the letter step twice, overshooting the target.",
+   "childHint": "One jump at a time! Count the step from the last letter just once."
+  },
+  "vr06-fits-gap-not-word": {
+   "description": "Chose three letters that are not a word and make a non-word in the gap.",
+   "childHint": "The missing three letters make a little word all by themselves."
+  },
+  "vr20-common-letter": {
+   "description": "Defaulted to a common letter without testing the word.",
+   "childHint": "Try your letter in the gap and read the whole word."
+  },
+  "vr19-letter-order": {
+   "description": "Matched code digits to letters in the reverse order.",
+   "childHint": "Line the code up under the word, letter by letter, left to right."
+  },
+  "vr05-almost-letters": {
+   "description": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+   "childHint": "Find the exact letters in order. Every letter must be there, touching."
+  },
+  "vr07-term-dropped": {
+   "description": "Stopped before using every letter, usually leaving off the last term.",
+   "childHint": "Check you have used every letter. Count them as you go."
+  },
+  "vr-series-step-applied-twice": {
+   "description": "Added the step twice from the last term, usually after losing track of the gaps.",
+   "childHint": "Take one jump from the last number, not two. Check the gaps first."
+  },
+  "vr02-real-link-wrong-rule": {
+   "description": "Paired two words by a genuine link, a shared property or a real association, that is not the rule the group of three uses.",
+   "childHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+  },
+  "vr03-wrong-link": {
+   "description": "Found a genuine relationship between the pair and applied it consistently, but not the one the example shows.",
+   "childHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+  },
+  "vr21-associated-not-same": {
+   "description": "Chose a goes-together word, not a means-the-same word.",
+   "childHint": "Could you swap one word for the other in a sentence? Twins can swap."
+  },
+  "vr03-part-for-kind": {
+   "description": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+   "childHint": "A part is not the same as a whole. Check what the first pair gave you."
+  },
+  "vr18-partial-rule": {
+   "description": "Used only one of the two outer numbers in the rule.",
+   "childHint": "The middle number is made from both outside numbers. How do they combine?"
+  },
+  "vr07-operation-slip": {
+   "description": "Added when the sum needed another operation.",
+   "childHint": "Look at the signs first. Is it plus, minus or times?"
+  },
+  "vr03-example-anchor": {
+   "description": "Chose a word related to the first pair rather than applying the relationship to the second.",
+   "childHint": "The first pair only shows the rule. Now use that rule on the new word."
+  },
+  "vr07-value-slip": {
+   "description": "Substituted one letter with the neighbouring value.",
+   "childHint": "Write each letter’s number above it before you add."
+  },
+  "vr03-same-topic": {
+   "description": "Chose a word from the same topic without the same relationship.",
+   "childHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+  },
+  "vr01-second-word-only": {
+   "description": "Chose a letter that completes only the second word.",
+   "childHint": "Check the first word too. Your letter must finish it as well."
+  },
+  "vr03-reversed-relation": {
+   "description": "Applied the relationship backwards.",
+   "childHint": "Check which way round the first pair goes. Keep your answer the same way round."
+  },
+  "vr06-ignores-sentence": {
+   "description": "Made a real word that does not fit the sentence.",
+   "childHint": "Read the whole sentence with your word in it. Does it make sense?"
+  },
+  "vr15-clue-flip": {
+   "description": "Read a comparison the reverse way (taller vs shorter).",
+   "childHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+  },
+  "vr01-completes-neither": {
+   "description": "Chose a letter that completes neither word.",
+   "childHint": "Say both finished words out loud. Are they both real?"
+  },
+  "vr12-meaning-not-word": {
+   "description": "Chose a pairing that makes sense but not a real compound word.",
+   "childHint": "The two halves must make one real word you have seen written."
+  },
+  "vr15-first-mention": {
+   "description": "Chose whoever was mentioned first rather than following the clues.",
+   "childHint": "Use every clue to put them in order before you answer."
+  },
+  "vr01-first-word-only": {
+   "description": "Chose a letter that completes only the first word.",
+   "childHint": "Your letter has to finish both words. Try it in each gap."
+  },
+  "vr02-partial-group": {
+   "description": "Found one odd word but paired it with a group member.",
+   "childHint": "Name the group first. Both odd ones sit outside it."
+  },
+  "vr21-opposite-pull": {
+   "description": "Gave the word’s opposite where its meaning was asked.",
+   "childHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+  },
+  "vr05-single-word-only": {
+   "description": "Searched inside single words instead of across the join.",
+   "childHint": "The hidden word loves to hide across two words. Check where they meet."
+  },
+  "vr13-not-a-word": {
+   "description": "Assembled letters that do not form a real word.",
+   "childHint": "Say your finished word out loud. Is it one you know?"
+  },
+  "vr16-synonym-pull": {
+   "description": "Chose a word meaning the same instead of the opposite.",
+   "childHint": "You found a twin. Now find the reverse."
+  },
+  "vr17-arith-slip": {
+   "description": "Right method, arithmetic slip of one or two.",
+   "childHint": "Your plan is right. Recount the last step slowly."
+  },
+  "vr17-one-side-only": {
+   "description": "Solved one side of the equation and stopped.",
+   "childHint": "Work out both sides. The answer makes them balance like scales."
+  },
+  "vr18-rule-swap": {
+   "description": "Applied a nearby rule (added instead of multiplied).",
+   "childHint": "Test your rule on the first group before using it on the second."
+  },
+  "vr02-answered-the-opposite": {
+   "description": "chooses two words that do go together by the group's own rule, answering which two belong instead of which two are odd.",
+   "childHint": "Those two do belong together. The question asks for the two that do not."
+  },
+  "vr20-sound-alike": {
+   "description": "Chose a letter that sounds right but spells a non-word.",
+   "childHint": "Spell the finished word letter by letter. Is that how it is really written?"
+  },
+  "vr21-too-strong": {
+   "description": "Chose a much stronger or weaker version of the meaning.",
+   "childHint": "Nearly! Match the size of the meaning too. Huge is more than big."
+  },
+  "vr-move-letter-first-word-invalid": {
+   "description": "Chose a letter whose removal does not leave a real first word.",
+   "childHint": "Take the letter out and read what is left. Is that first word a real word?"
+  },
+  "vr-move-letter-second-word-invalid": {
+   "description": "Chose a letter that does not make a real second word when added.",
+   "childHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+  },
+  "vr19-shared-letter-miss": {
+   "description": "Missed that repeated letters share one digit.",
+   "childHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+  },
+  "vr02-surface-link": {
+   "description": "Grouped by look or sound instead of meaning.",
+   "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+  },
+  "vr10-first-pair-word-returned": {
+   "description": "Gives back a word from the first pair instead of completing the second, copying what the question already shows.",
+   "childHint": "That word is already in the first pair. The second pair needs its own answer."
+  },
+  "vr-series-off-by-one": {
+   "description": "Identified the rule but slipped by one when applying it.",
+   "childHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+  },
+  "vr-series-step-carryover": {
+   "description": "Reused the previous step instead of spotting that the step size changes.",
+   "childHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+  },
+  "vr-series-sum-of-last-two": {
+   "description": "Read the series as each term being the sum of the two before it, and added the last pair.",
+   "childHint": "Look at the gap between each pair. The gap is what tells you the next number."
+  },
+  "vr03-wrong-degree": {
+   "description": "Applies the right relationship but at the wrong strength or scale (wet for damp→soaked — the right direction of change, not its size).",
+   "childHint": "You found the right link. Now check how big the change is."
+  },
+  "vr-letter-series-direction": {
+   "description": "Moved backwards through the alphabet instead of forwards.",
+   "childHint": "Which way is the series moving through the alphabet? Check the first two letters."
+  },
+  "vr14-step-size": {
+   "description": "Counted the jump one letter short or long.",
+   "childHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+  },
+  "vr-letter-series-off-by-one": {
+   "description": "Correct rule, but landed one letter short or long.",
+   "childHint": "Count along the alphabet again. Land one letter at a time."
+  },
+  "vr16-loose-opposite": {
+   "description": "Chose a loosely different word, not a true opposite.",
+   "childHint": "A true opposite flips the meaning exactly, like open and shut."
+  },
+  "vr14-step-direction": {
+   "description": "Moved the opposite way through the alphabet to the first pair.",
+   "childHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+  },
+  "vr13-wrong-pieces": {
+   "description": "Took letters from other places in the outer words instead of the positions the example shows.",
+   "childHint": "Look at where the example word takes its letters from. Copy those exact positions."
+  }
+ },
+ "houseFormExemplars": {
+  "vr04-opposite-pull": [
+   {
+    "itemId": "bank-vr-04-closest-meaning-30",
+    "option": "rested",
+    "execution": "The task is to find the word closest in meaning to 'exhausted', and the key is 'worn out'. 'rested' is the opposite of 'exhausted': it means no longer tired. A child who finds the right area of meaning but reverses it picks 'rested'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-01",
+    "option": "cowardly",
+    "execution": "The key is 'fearless'. 'cowardly' is the opposite of 'brave': it means easily frightened. A child who finds the area of courage but reverses it picks 'cowardly'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-07",
+    "option": "solid",
+    "execution": "The key is 'empty'. 'solid' is the opposite of 'hollow': filled all the way through. A child who finds the area but reverses it picks 'solid'."
+   }
+  ],
+  "vr04-one-feature-only": [
+   {
+    "itemId": "bank-vr-04-closest-meaning-30",
+    "option": "yawning",
+    "execution": "The key is 'worn out'. An exhausted person may keep yawning, so 'yawning' names one visible sign of exhaustion, not what 'exhausted' means. A child who picks that visible sign picks 'yawning'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-03",
+    "option": "mouldy",
+    "execution": "The key is 'moist'. Mould is one thing you can see on a damp wall, so 'mouldy' names a sign of damp, not what 'damp' means. A child who picks the visible sign picks 'mouldy'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-04",
+    "option": "shivery",
+    "execution": "The key is 'cool'. Shivering is one thing a person does when it is chilly, so 'shivery' names a sign, not what 'chilly' means. A child who picks the visible sign picks 'shivery'."
+   }
+  ],
+  "vr04-associated-not-same": [
+   {
+    "itemId": "bank-vr-04-closest-meaning-30",
+    "option": "sleep",
+    "execution": "The key is 'worn out'. 'sleep' is what an exhausted person needs, so the two words go together, but 'sleep' does not mean 'exhausted' (it is not even a describing word). A child who takes goes-together for means-the-same picks 'sleep'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-09",
+    "option": "race",
+    "execution": "The key is 'quick'. A race is where things are rapid, so the two words go together, but 'race' names an event, not a speed. A child who takes goes-together for means-the-same picks 'race'."
+   }
+  ],
+  "vr04-wrong-strength": [
+   {
+    "itemId": "gen-vr-04-closest-meaning-01",
+    "option": "reckless",
+    "execution": "The key is 'fearless'. 'reckless' is from the same family but pushed too far: it means bold without any care for danger. A child who reaches for the strongest courage word picks 'reckless' instead of 'fearless'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-02",
+    "option": "instant",
+    "execution": "The key is 'speedy'. 'instant' is from the same family of speed but far stronger: taking no time at all, where swift means moving fast. A child who reaches for the strongest speed word picks 'instant'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-03",
+    "option": "soaked",
+    "execution": "The key is 'moist', which is slightly wet, like 'damp'. 'soaked' is from the same family but far stronger: completely wet through. A child who matches wetness and ignores the strength picks 'soaked'."
+   }
+  ],
+  "vr04-keeps-the-same-company": [
+   {
+    "itemId": "gen-vr-04-closest-meaning-01",
+    "option": "loyal",
+    "execution": "The key is 'fearless'. 'loyal' is another word of praise that turns up beside 'brave' when describing a hero, but it means faithful, not unafraid. A child who matches the company the words keep picks 'loyal'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-03",
+    "option": "cold",
+    "execution": "The key is 'moist'. 'cold' often turns up beside 'damp', as in a cold, damp day, but it is about temperature, not wetness. A child who matches the company the words keep picks 'cold'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-04",
+    "option": "grey",
+    "execution": "The key is 'cool'. 'grey' turns up beside 'chilly' in descriptions such as a chilly, grey morning, but it is a colour, not a temperature. A child who matches the company the words keep picks 'grey'."
+   }
+  ],
+  "vr04-wrong-shade": [
+   {
+    "itemId": "gen-vr-04-closest-meaning-02",
+    "option": "sudden",
+    "execution": "The key is 'speedy'. 'sudden' shares the general area of quickness but tilts it towards happening without warning. A swift runner is fast; a sudden noise is unexpected. A child who hears only 'quick' picks 'sudden'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-02",
+    "option": "early",
+    "execution": "The key is 'speedy'. 'early' shares the general area of quickness but tilts it towards when something happens rather than how fast it moves. A child who hears only 'in good time' picks 'early'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-06",
+    "option": "relieved",
+    "execution": "The key is 'pleased'. 'relieved' is in the same area of happy feelings but tilts it: glad because a worry has ended. 'glad' needs no worry first. A child who hears only 'happy' picks 'relieved'."
+   }
+  ],
+  "vr04-the-other-meaning": [
+   {
+    "itemId": "gen-vr-04-closest-meaning-26",
+    "option": "fade",
+    "execution": "In the sentence, the key is 'retreat'. 'recede' has a real second meaning, to grow fainter, as when a sound or memory recedes, and 'fade' fits that sense. The sentence fixes the moving-back sense, since floodwater draws back. A child who picks the other sense picks 'fade'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-28",
+    "option": "empty",
+    "execution": "In the sentence, the key is 'drained'. 'exhausted' has a real second meaning, used up completely, as in exhausted supplies, and 'empty' fits that sense. The sentence is about people after a walk, which fixes the worn-out sense. A child who picks the other sense picks 'empty'."
+   },
+   {
+    "itemId": "gen-vr-04-closest-meaning-34",
+    "option": "sharp",
+    "execution": "In the sentence, the key is 'beautiful'. 'exquisite' has a real second meaning, intense and sharp, as in exquisite pain, and 'sharp' fits that sense. The sentence is about lace on a dress, which fixes the beautiful sense. A child who picks the other sense picks 'sharp'."
+   }
+  ]
+ },
+ "rows": [
+  {
+   "itemId": "bank-vr-04-closest-meaning-01",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "brave"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "fearless",
+   "options": [
+    {
+     "optionId": "cmscb155f0001tmzvm314i51g",
+     "value": "fearless",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb155f0002tmzvzjl16o8v",
+     "value": "cowardly",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb155f0003tmzvhlwqnrt0",
+     "value": "soldier",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb155f0004tmzvjz98ejln",
+     "value": "battle",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-02",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "swift"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "fast",
+   "options": [
+    {
+     "optionId": "cmscb15600006tmzvxnn5snao",
+     "value": "fast",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15600007tmzvvpx9wr6w",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15600008tmzv8jibhos8",
+     "value": "cheetah",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15600009tmzvn8vdxlw0",
+     "value": "race",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-03",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "damp"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "moist",
+   "options": [
+    {
+     "optionId": "cmscb1563000btmzv1jukc70p",
+     "value": "moist",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1563000ctmzv675f02od",
+     "value": "dry",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1563000dtmzvbdn1ygnu",
+     "value": "towel",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1563000etmzvzoekovbd",
+     "value": "puddle",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-04",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "chilly"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "cold",
+   "options": [
+    {
+     "optionId": "cmscb1566000gtmzv3t4fqqyk",
+     "value": "cold",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1566000htmzvanj83n79",
+     "value": "hot",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1566000itmzvhwjxwaym",
+     "value": "winter",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1566000jtmzvmdrqsbl0",
+     "value": "frost",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-05",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "shiny"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "bright",
+   "options": [
+    {
+     "optionId": "cmscb156b000ltmzvegyvp55s",
+     "value": "bright",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156b000mtmzviv1ubkoe",
+     "value": "dull",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156b000ntmzvl7nx5bmj",
+     "value": "mirror",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156b000otmzvzgaxcxcu",
+     "value": "gold",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-06",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "fair"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "just",
+   "options": [
+    {
+     "optionId": "cmscb156e000qtmzvmd5911oj",
+     "value": "just",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156e000rtmzvsgs62ho0",
+     "value": "unfair",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156e000stmzvd611h359",
+     "value": "referee",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156e000ttmzvyon0p20b",
+     "value": "rules",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-07",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "hollow"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "empty",
+   "options": [
+    {
+     "optionId": "cmscb156h000vtmzvch88upjf",
+     "value": "empty",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156h000wtmzv7hu3bgy1",
+     "value": "solid",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156h000xtmzvt6orvg1g",
+     "value": "log",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156h000ytmzv7w9sfrhv",
+     "value": "drum",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-08",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "huge"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "enormous",
+   "options": [
+    {
+     "optionId": "cmscb156j0010tmzv6osoouep",
+     "value": "enormous",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156j0011tmzv5bogyw5h",
+     "value": "small",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156j0012tmzvr5ladxg8",
+     "value": "elephant",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156j0013tmzvp0v2gajk",
+     "value": "mountain",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-09",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "rapid"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "speedy",
+   "options": [
+    {
+     "optionId": "cmscb156l0015tmzv6706sx66",
+     "value": "speedy",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156l0016tmzvj66w43bo",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156l0017tmzv3z3h9jsg",
+     "value": "river",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156l0018tmzvfduczhi5",
+     "value": "sprint",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-10",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "generous"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "giving",
+   "options": [
+    {
+     "optionId": "cmscb156o001atmzv89jhz5q7",
+     "value": "giving",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156o001btmzvaeaoqady",
+     "value": "stingy",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156o001ctmzvyl2q1hk2",
+     "value": "gift",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156o001dtmzv9vs35y1s",
+     "value": "charity",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-11",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "gloomy"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "dismal",
+   "options": [
+    {
+     "optionId": "cmscb156q001ftmzvroctqxi5",
+     "value": "dismal",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156q001gtmzvxy9i705f",
+     "value": "cheerful",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156q001htmzvqvrqbc9s",
+     "value": "cloud",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156q001itmzv6gsb7ldr",
+     "value": "rain",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-12",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "timid"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "shy",
+   "options": [
+    {
+     "optionId": "cmscb156t001ktmzvji32kjzi",
+     "value": "shy",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156t001ltmzv5gsdf4hh",
+     "value": "bold",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156t001mtmzv0xwih7gj",
+     "value": "mouse",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156t001ntmzv32whm1mw",
+     "value": "whisper",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-13",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "rare"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "scarce",
+   "options": [
+    {
+     "optionId": "cmscb156v001ptmzvcy5pjnw4",
+     "value": "scarce",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156v001qtmzvezk8jvdc",
+     "value": "common",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156v001rtmzvtuopc3bw",
+     "value": "coin",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156v001stmzv9xquls9h",
+     "value": "stamp",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-14",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "sturdy"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "tough",
+   "options": [
+    {
+     "optionId": "cmscb156y001utmzvwdy0dxok",
+     "value": "tough",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156y001vtmzv1j4i96tq",
+     "value": "frail",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156y001wtmzvbmupwcrz",
+     "value": "oak",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156y001xtmzv6woi3ka3",
+     "value": "brick",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-15",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "bold"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "brave",
+   "options": [
+    {
+     "optionId": "cmscb1571001ztmzvh7c9gl9j",
+     "value": "brave",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15710020tmzvuir7y58s",
+     "value": "timid",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15710021tmzvq2233167",
+     "value": "dare",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15710022tmzvfj7lp0om",
+     "value": "hero",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-16",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "ancient"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "old",
+   "options": [
+    {
+     "optionId": "cmscb15730024tmzvsc49fuxu",
+     "value": "old",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15730025tmzv646h77cs",
+     "value": "young",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15730026tmzvi0fw4low",
+     "value": "castle",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15730027tmzvek9b3lxr",
+     "value": "fossil",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-17",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "hostile"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "unfriendly",
+   "options": [
+    {
+     "optionId": "cmscb15750029tmzvatni2r76",
+     "value": "unfriendly",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1575002atmzvfxibs9o4",
+     "value": "friendly",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1575002btmzvh0x6halz",
+     "value": "enemy",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1575002ctmzve411ccx8",
+     "value": "argument",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-18",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "humble"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "modest",
+   "options": [
+    {
+     "optionId": "cmscb1578002etmzvq3pboj17",
+     "value": "modest",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1578002ftmzvm2hn7j07",
+     "value": "proud",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1578002gtmzvxdmcye4d",
+     "value": "servant",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1578002htmzviufuy07j",
+     "value": "bow",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-19",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "vague"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "unclear",
+   "options": [
+    {
+     "optionId": "cmscb157a002jtmzvzqnw5ntl",
+     "value": "unclear",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157a002ktmzv2r11hfq7",
+     "value": "clear",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157a002ltmzvg9ddu3tf",
+     "value": "fog",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157a002mtmzv8wrqmcz4",
+     "value": "hint",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-20",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "feeble"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "frail",
+   "options": [
+    {
+     "optionId": "cmscb157c002otmzvk7fiqrej",
+     "value": "frail",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157c002ptmzvehfsnodx",
+     "value": "strong",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157c002qtmzvtetnc0qj",
+     "value": "illness",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157c002rtmzvobrylusq",
+     "value": "cane",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-21",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "genuine"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "real",
+   "options": [
+    {
+     "optionId": "cmscb157f002ttmzvmc96ltsp",
+     "value": "real",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157f002utmzvlgsm9cq8",
+     "value": "false",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157f002vtmzvc3p4j6kf",
+     "value": "gold",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157f002wtmzva9rims5m",
+     "value": "antique",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-22",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "reluctant"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "unwilling",
+   "options": [
+    {
+     "optionId": "cmscb157h002ytmzvo0s7h82a",
+     "value": "unwilling",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157h002ztmzvkomossbk",
+     "value": "eager",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157h0030tmzvpty2ztmi",
+     "value": "chore",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157h0031tmzvymlya4sj",
+     "value": "excuse",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-23",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "obedient"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "well-behaved",
+   "options": [
+    {
+     "optionId": "cmscb157j0033tmzvxkmv2hq7",
+     "value": "well-behaved",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157j0034tmzvryj85s7j",
+     "value": "disobedient",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157j0035tmzv1mh6kiex",
+     "value": "dog",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157j0036tmzvaay4rcsi",
+     "value": "command",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-24",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "trivial"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "unimportant",
+   "options": [
+    {
+     "optionId": "cmscb157l0038tmzvi26g4q4x",
+     "value": "unimportant",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157l0039tmzvgocc4cc9",
+     "value": "important",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157l003atmzvb4fueqkg",
+     "value": "detail",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157l003btmzvoeyxxe8k",
+     "value": "penny",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-25",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "amiable"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "friendly",
+   "options": [
+    {
+     "optionId": "cmscb157o003dtmzvqdnjc2qy",
+     "value": "friendly",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157o003etmzvdafa9tcv",
+     "value": "unfriendly",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157o003ftmzvwk1muu4w",
+     "value": "neighbour",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157o003gtmzvodfip1za",
+     "value": "smile",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-26",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "futile"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "useless",
+   "options": [
+    {
+     "optionId": "cmscb157r003itmzvfej2kvay",
+     "value": "useless",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157r003jtmzv1nivi4rg",
+     "value": "useful",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157r003ktmzvh7x7c039",
+     "value": "effort",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157r003ltmzvcnl65w54",
+     "value": "waste",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-27",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "abundant"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "plentiful",
+   "options": [
+    {
+     "optionId": "cmscb157t003ntmzv4ozj96kn",
+     "value": "plentiful",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157t003otmzvvtkf9nzc",
+     "value": "scarce",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157t003ptmzvgf7iqoeq",
+     "value": "harvest",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157t003qtmzvkbbubus3",
+     "value": "supply",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-28",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "conceal"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "hide",
+   "options": [
+    {
+     "optionId": "cmscb157v003stmzvb3tqwa58",
+     "value": "hide",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157v003ttmzvulimpgu3",
+     "value": "show",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157w003utmzva33t34mt",
+     "value": "spy",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157w003vtmzvu2oh904f",
+     "value": "shadow",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-29",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "jubilant"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "joyful",
+   "options": [
+    {
+     "optionId": "cmscb157y003xtmzv7gclfg6k",
+     "value": "joyful",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157y003ytmzvf2c5ju1y",
+     "value": "dejected",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157y003ztmzvut6pmkhc",
+     "value": "party",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb157y0040tmzvhebygnmn",
+     "value": "trophy",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-30",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "exhausted"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "worn out",
+   "options": [
+    {
+     "optionId": "cmscb15800042tmzvx3lit16y",
+     "value": "worn out",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15800043tmzvbbdx88hz",
+     "value": "rested",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The task is to find the word closest in meaning to 'exhausted', and the key is 'worn out'. 'rested' is the opposite of 'exhausted': it means no longer tired. A child who finds the right area of meaning but reverses it picks 'rested'."
+    },
+    {
+     "optionId": "cmscb15800044tmzvvcnae71u",
+     "value": "yawning",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'worn out'. An exhausted person may keep yawning, so 'yawning' names one visible sign of exhaustion, not what 'exhausted' means. A child who picks that visible sign picks 'yawning'."
+    },
+    {
+     "optionId": "cmscb15800045tmzvi4w0czzm",
+     "value": "sleep",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": "The key is 'worn out'. 'sleep' is what an exhausted person needs, so the two words go together, but 'sleep' does not mean 'exhausted' (it is not even a describing word). A child who takes goes-together for means-the-same picks 'sleep'."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-31",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "recede"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "retreat",
+   "options": [
+    {
+     "optionId": "cmscb15820047tmzv7qb2dca6",
+     "value": "retreat",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15820048tmzv0o9soswp",
+     "value": "advance",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15820049tmzv4rfa982v",
+     "value": "tide",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1582004atmzvmdq40wax",
+     "value": "shore",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-32",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "amend"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "improve",
+   "options": [
+    {
+     "optionId": "cmscb1585004ctmzvcix6a1ok",
+     "value": "improve",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1585004dtmzvcasq9nkr",
+     "value": "worsen",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1585004etmzvkozm2zvq",
+     "value": "law",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1585004ftmzvpnj8i9j5",
+     "value": "vote",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-33",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "benevolent"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "kind",
+   "options": [
+    {
+     "optionId": "cmscb1587004htmzvfoldr6e7",
+     "value": "kind",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1587004itmzvmwix99sx",
+     "value": "unkind",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1587004jtmzvkmemp0s3",
+     "value": "charity",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1587004ktmzvtmkkg5rr",
+     "value": "donor",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-34",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "stoic"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "unemotional",
+   "options": [
+    {
+     "optionId": "cmscb1589004mtmzvd0zw6g8h",
+     "value": "unemotional",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1589004ntmzva2l86p7j",
+     "value": "emotional",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1589004otmzvp0ttsxwg",
+     "value": "pain",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb1589004ptmzv917ks1xw",
+     "value": "hardship",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-35",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "transparent"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "clear",
+   "options": [
+    {
+     "optionId": "cmscb158c004rtmzvut2f2gsy",
+     "value": "clear",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158c004stmzv2bwnnqc8",
+     "value": "opaque",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158c004ttmzvi0foz5n7",
+     "value": "glass",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158c004utmzvj4c99jqq",
+     "value": "window",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-36",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "melancholy"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "sad",
+   "options": [
+    {
+     "optionId": "cmscb158f004wtmzv66wr4iwa",
+     "value": "sad",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158f004xtmzv1i3mhvby",
+     "value": "cheerful",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158f004ytmzv380qahzl",
+     "value": "rain",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158f004ztmzvanqdsetr",
+     "value": "sigh",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-37",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "luminous"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "bright",
+   "options": [
+    {
+     "optionId": "cmscb158h0051tmzvyvuxg4ym",
+     "value": "bright",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158h0052tmzv5rupyww5",
+     "value": "dull",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158h0053tmzvkq20aubp",
+     "value": "moon",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158h0054tmzvis43pm1s",
+     "value": "lamp",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-38",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "exquisite"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "beautiful",
+   "options": [
+    {
+     "optionId": "cmscb158k0056tmzvhfu2v1hh",
+     "value": "beautiful",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158k0057tmzvg3osi6y4",
+     "value": "ugly",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158k0058tmzvegemvb8f",
+     "value": "jewel",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158k0059tmzv9z2w6inv",
+     "value": "lace",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-39",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "notorious"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "infamous",
+   "options": [
+    {
+     "optionId": "cmscb158m005btmzvezrd1v8f",
+     "value": "infamous",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158m005ctmzvej5nv61f",
+     "value": "reputable",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158m005dtmzv7kxesiic",
+     "value": "criminal",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158m005etmzv97qiamxr",
+     "value": "headline",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-40",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "words": [
+     "jovial"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "merry",
+   "options": [
+    {
+     "optionId": "cmscb158o005gtmzvzuidy81w",
+     "value": "merry",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158o005htmzvrpd672z3",
+     "value": "joyless",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158o005itmzv81t0fy2a",
+     "value": "laughter",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb158o005jtmzvzo4b3k3e",
+     "value": "feast",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-01",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "brave"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "fearless",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-01-opt1",
+     "value": "fearless",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-01-opt2",
+     "value": "reckless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'fearless'. 'reckless' is from the same family but pushed too far: it means bold without any care for danger. A child who reaches for the strongest courage word picks 'reckless' instead of 'fearless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-01-opt3",
+     "value": "cowardly",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The key is 'fearless'. 'cowardly' is the opposite of 'brave': it means easily frightened. A child who finds the area of courage but reverses it picks 'cowardly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-01-opt4",
+     "value": "loyal",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'fearless'. 'loyal' is another word of praise that turns up beside 'brave' when describing a hero, but it means faithful, not unafraid. A child who matches the company the words keep picks 'loyal'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-02",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "swift"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "speedy",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-02-opt1",
+     "value": "speedy",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-02-opt2",
+     "value": "instant",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'speedy'. 'instant' is from the same family of speed but far stronger: taking no time at all, where swift means moving fast. A child who reaches for the strongest speed word picks 'instant'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-02-opt3",
+     "value": "sudden",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'speedy'. 'sudden' shares the general area of quickness but tilts it towards happening without warning. A swift runner is fast; a sudden noise is unexpected. A child who hears only 'quick' picks 'sudden'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-02-opt4",
+     "value": "early",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'speedy'. 'early' shares the general area of quickness but tilts it towards when something happens rather than how fast it moves. A child who hears only 'in good time' picks 'early'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-03",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "damp"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "moist",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-03-opt1",
+     "value": "moist",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-03-opt2",
+     "value": "soaked",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'moist', which is slightly wet, like 'damp'. 'soaked' is from the same family but far stronger: completely wet through. A child who matches wetness and ignores the strength picks 'soaked'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-03-opt3",
+     "value": "mouldy",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'moist'. Mould is one thing you can see on a damp wall, so 'mouldy' names a sign of damp, not what 'damp' means. A child who picks the visible sign picks 'mouldy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-03-opt4",
+     "value": "cold",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'moist'. 'cold' often turns up beside 'damp', as in a cold, damp day, but it is about temperature, not wetness. A child who matches the company the words keep picks 'cold'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-04",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "chilly"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "cool",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-04-opt1",
+     "value": "cool",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-04-opt2",
+     "value": "freezing",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'cool', which is mildly cold, like 'chilly'. 'freezing' is from the same family but far stronger. A child who matches coldness and ignores the strength picks 'freezing'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-04-opt3",
+     "value": "shivery",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'cool'. Shivering is one thing a person does when it is chilly, so 'shivery' names a sign, not what 'chilly' means. A child who picks the visible sign picks 'shivery'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-04-opt4",
+     "value": "grey",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'cool'. 'grey' turns up beside 'chilly' in descriptions such as a chilly, grey morning, but it is a colour, not a temperature. A child who matches the company the words keep picks 'grey'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-05",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "shiny"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "gleaming",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-05-opt1",
+     "value": "gleaming",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-05-opt2",
+     "value": "dazzling",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'gleaming'. 'dazzling' is from the same family of brightness but far stronger: so bright it hurts to look. A child who reaches for the strongest bright word picks 'dazzling' instead of 'gleaming'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-05-opt3",
+     "value": "smooth",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'gleaming'. A shiny surface is often smooth to touch, so 'smooth' names one feature that can come with shine, not what 'shiny' means. A child who picks that single feature picks 'smooth'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-05-opt4",
+     "value": "new",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'gleaming'. 'new' turns up beside 'shiny', as in a shiny new bike, but it means recently made, not giving off shine. A child who matches the company the words keep picks 'new'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-06",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "glad"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "pleased",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-06-opt1",
+     "value": "pleased",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-06-opt2",
+     "value": "overjoyed",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'pleased', which is as mild as 'glad'. 'overjoyed' is from the same family but far stronger. A child who matches happiness and ignores the strength picks 'overjoyed'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-06-opt3",
+     "value": "relieved",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'pleased'. 'relieved' is in the same area of happy feelings but tilts it: glad because a worry has ended. 'glad' needs no worry first. A child who hears only 'happy' picks 'relieved'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-06-opt4",
+     "value": "lucky",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'pleased'. 'lucky' turns up beside 'glad', as in glad it worked out, we were lucky, but it means fortunate, not happy. A child who matches the company the words keep picks 'lucky'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-07",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "hollow"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "empty",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-07-opt1",
+     "value": "empty",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-07-opt2",
+     "value": "solid",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The key is 'empty'. 'solid' is the opposite of 'hollow': filled all the way through. A child who finds the area but reverses it picks 'solid'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-07-opt3",
+     "value": "light",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'empty'. A hollow object often feels light when you lift it, so 'light' names one thing hollowness can lead to, not what 'hollow' means. A child who picks that feature picks 'light'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-07-opt4",
+     "value": "wooden",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'empty'. 'wooden' turns up beside 'hollow', as in a hollow wooden log or box, but it names what something is made of, not that it is empty inside. A child who matches the company picks 'wooden'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-08",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "huge"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "enormous",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-08-opt1",
+     "value": "enormous",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-08-opt2",
+     "value": "big",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'enormous', which matches how extreme 'huge' is. 'big' is from the same family but far weaker. A child who matches size and ignores the strength picks 'big'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-08-opt3",
+     "value": "tall",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'enormous'. 'tall' is big in one direction only, height, so it names one way a thing can look huge, not what 'huge' means. A child who picks that single feature picks 'tall'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-08-opt4",
+     "value": "heavy",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'enormous'. A huge thing is often heavy, so 'heavy' names one feature that can come with great size, not what 'huge' means. A child who picks that single feature picks 'heavy'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-09",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "rapid"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "quick",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt1",
+     "value": "quick",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt2",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The key is 'quick'. 'slow' is the opposite of 'rapid': taking a long time. A child who finds the area of speed but reverses it picks 'slow'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt3",
+     "value": "hurried",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'quick'. 'hurried' shares the area of speed but tilts it towards rushing because time is short, often carelessly. 'rapid' has no rush in it. A child who hears only 'fast' picks 'hurried'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-09-opt4",
+     "value": "race",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": "The key is 'quick'. A race is where things are rapid, so the two words go together, but 'race' names an event, not a speed. A child who takes goes-together for means-the-same picks 'race'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-10",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "generous"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "giving",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-10-opt1",
+     "value": "giving",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-10-opt2",
+     "value": "extravagant",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'giving'. 'extravagant' pushes the same idea too far: spending or giving far more than is sensible. A child who reaches for the strongest generous word picks 'extravagant'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-10-opt3",
+     "value": "friendly",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'giving'. 'friendly' shares the general area of warmth towards others but tilts it: a friendly person is pleasant, not necessarily ready to give. A child who hears only 'nice' picks 'friendly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-10-opt4",
+     "value": "wealthy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'giving'. 'wealthy' turns up beside 'generous' in talk of rich donors, but it means having a lot of money, not sharing it. A child who matches the company the words keep picks 'wealthy'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-11",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "gloomy"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "miserable",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-11-opt1",
+     "value": "miserable",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-11-opt2",
+     "value": "despairing",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'miserable'. 'despairing' is from the same family of low feeling but far stronger: having lost all hope. A child who reaches for the strongest sad word picks 'despairing'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-11-opt3",
+     "value": "grumpy",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'miserable'. 'grumpy' shares the area of a bad mood but tilts it towards being cross and irritable rather than low. A child who hears only 'in a bad mood' picks 'grumpy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-11-opt4",
+     "value": "silent",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'miserable'. A gloomy person may go silent, so 'silent' names one thing gloominess can look like, not what 'gloomy' means. A child who picks that visible sign picks 'silent'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-12",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "timid"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "shy",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-12-opt1",
+     "value": "shy",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-12-opt2",
+     "value": "terrified",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'shy'. 'terrified' is from the same family of fear but far stronger: a timid child holds back, a terrified one is overcome with fear. A child who matches fear and ignores the strength picks 'terrified'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-12-opt3",
+     "value": "quiet",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'shy'. A timid child is often quiet, so 'quiet' names one thing timidity can look like, not what 'timid' means. A child who picks that visible sign picks 'quiet'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-12-opt4",
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'shy'. 'polite' turns up beside 'timid' when describing a well-mannered, quiet child, but it means having good manners, not lacking confidence. A child who matches the company picks 'polite'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-13",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "rare"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "uncommon",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-13-opt1",
+     "value": "uncommon",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-13-opt2",
+     "value": "unique",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'uncommon'. 'unique' is from the same family but far stronger: the only one of its kind, not just hard to find. A child who reaches for the strongest rare word picks 'unique'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-13-opt3",
+     "value": "strange",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'uncommon'. 'strange' shares the area of unusual but tilts it towards odd or puzzling. A rare stamp is hard to find, not weird. A child who hears only 'unusual' picks 'strange'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-13-opt4",
+     "value": "precious",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'uncommon'. 'precious' turns up beside 'rare', as in rare and precious jewels, but it means of great value, not hard to find. A child who matches the company the words keep picks 'precious'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-14",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "sturdy"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "strong",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-14-opt1",
+     "value": "strong",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-14-opt2",
+     "value": "unbreakable",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'strong'. 'unbreakable' is from the same family but far stronger: it cannot be broken at all, where sturdy means strongly made. A child who reaches for the strongest word picks 'unbreakable'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-14-opt3",
+     "value": "heavy",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'strong'. 'heavy' shares the general area of solid objects but tilts it to weight: a sturdy chair need not be heavy. A child who hears only 'solid' picks 'heavy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-14-opt4",
+     "value": "wooden",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'strong'. 'wooden' turns up beside 'sturdy', as in a sturdy wooden table, but it names the material, not the strength. A child who matches the company the words keep picks 'wooden'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-15",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "bold"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "daring",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt1",
+     "value": "daring",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt2",
+     "value": "reckless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'daring'. 'reckless' pushes the same idea too far: so bold that you ignore danger completely. A child who reaches for the strongest bold word picks 'reckless' instead of 'daring'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt3",
+     "value": "stubborn",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'daring'. 'stubborn' shares the area of a strong, firm character but tilts it towards refusing to change your mind. No sense of 'bold' (brave, cheeky, bright, or thick print) means stubborn. A child who hears only 'strong-willed' picks 'stubborn'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-15-opt4",
+     "value": "famous",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'daring'. 'famous' turns up beside 'bold' in the same stories, about explorers and heroes. But 'famous' means known by many people, not unafraid. No sense of 'bold' (brave, cheeky, bright, or thick print) means famous. A child who hears another explorer-story word picks 'famous' instead of 'daring'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-16",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "ancient"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "old",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-16-opt1",
+     "value": "old",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-16-opt2",
+     "value": "prehistoric",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'old'. 'prehistoric' is from the same family but far stronger: from before history was written down. A child who reaches for the oldest-sounding word picks 'prehistoric'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-16-opt3",
+     "value": "ruined",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'old'. Ancient buildings are often ruined, so 'ruined' names one thing age can look like, not what 'ancient' means. A child who picks that visible sign picks 'ruined'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-16-opt4",
+     "value": "valuable",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'old'. 'valuable' turns up beside 'ancient', as in an ancient and valuable vase, but it means worth a lot, not very old. A child who matches the company the words keep picks 'valuable'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-17",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "hostile"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "unfriendly",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-17-opt1",
+     "value": "unfriendly",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-17-opt2",
+     "value": "murderous",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'unfriendly'. 'murderous' is from the same family of ill will but far stronger: wanting to kill. A child who reaches for the strongest hostile word picks 'murderous'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-17-opt3",
+     "value": "rude",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'unfriendly'. 'rude' shares the area of unpleasant behaviour but tilts it towards bad manners rather than ill will. A child who hears only 'not nice' picks 'rude'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-17-opt4",
+     "value": "frowning",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'unfriendly'. A frown is one way hostility can show on a face, so 'frowning' names one sign of it, not what 'hostile' means. People also frown when worried or puzzled, and no sense of 'hostile' means frowning. A child who picks that visible sign picks 'frowning'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-18",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "humble"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "modest",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-18-opt1",
+     "value": "modest",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-18-opt2",
+     "value": "proud",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The key is 'modest'. 'proud' points the other way: a humble person does not think themselves better than others, and a proud one does. A child who catches only the topic, how someone sees themselves, picks 'proud'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-18-opt3",
+     "value": "quiet",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'modest'. A humble person may keep quiet about their success, so 'quiet' names one sign of humility, not what 'humble' means. A child who picks that visible sign picks 'quiet'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-18-opt4",
+     "value": "grateful",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'modest'. 'grateful' turns up beside 'humble', as in humble and grateful, but it means thankful, not modest. A child who matches the company the words keep picks 'grateful'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-19",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "vague"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "unclear",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt1",
+     "value": "unclear",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt2",
+     "value": "meaningless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'unclear'. 'meaningless' pushes the same idea too far: not just hard to make out, but having no meaning at all. A child who reaches for the strongest word picks 'meaningless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt3",
+     "value": "mysterious",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'unclear'. 'mysterious' shares the area of not being plain but tilts it towards something strange or secret. A vague answer lacks detail; it hides nothing. A child who hears only 'hard to make out' picks 'mysterious'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-19-opt4",
+     "value": "brief",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'unclear'. A vague answer is often short, so 'brief' names one thing vagueness can look like, not what 'vague' means. A child who picks that visible sign picks 'brief'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-20",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "feeble"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "frail",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt1",
+     "value": "frail",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt2",
+     "value": "helpless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'frail'. 'helpless' is from the same family but far stronger: unable to do anything at all. A child who reaches for the strongest word in the family picks 'helpless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt3",
+     "value": "pale",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'frail'. A feeble person may look pale, so 'pale' names one visible sign of feebleness, not what 'feeble' means. A child who picks that sign picks 'pale'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-20-opt4",
+     "value": "elderly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'frail'. 'elderly' turns up beside 'feeble', as in a feeble elderly man, but it means old, not lacking strength. A child who matches the company the words keep picks 'elderly'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-21",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "genuine"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "real",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-21-opt1",
+     "value": "real",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-21-opt2",
+     "value": "fake",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The key is 'real'. 'fake' is the opposite of 'genuine': made to look real when it is not. A child who reverses the meaning picks 'fake'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-21-opt3",
+     "value": "signed",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'real'. A signature is one thing that can show a painting or letter is genuine, so 'signed' names one sign, not what 'genuine' means. A child who picks that visible sign picks 'signed'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-21-opt4",
+     "value": "costly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "The key is 'real'. 'costly' turns up beside 'genuine', as in genuine leather costing more, but it means expensive, not real. A child who matches the company the words keep picks 'costly'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-22",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "reluctant"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "unwilling",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-22-opt1",
+     "value": "unwilling",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-22-opt2",
+     "value": "opposed",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'unwilling'. 'opposed' is from the same family but far stronger: actively against something, not just not wanting to do it. A child who reaches for the strongest word picks 'opposed'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-22-opt3",
+     "value": "doubtful",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'unwilling'. 'doubtful' shares the area of holding back but tilts it towards being unsure. A reluctant person knows they do not want to; a doubtful one is not sure. A child who hears only 'hesitant' picks 'doubtful'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-22-opt4",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'unwilling'. A reluctant person may be slow to start, so 'slow' names one thing reluctance can look like, not what 'reluctant' means. A child who picks that visible sign picks 'slow'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-23",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "obedient"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "well-behaved",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt1",
+     "value": "well-behaved",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt2",
+     "value": "naughty",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "The key is 'well-behaved'. 'naughty' is the opposite of 'obedient': not doing as you are told. A child who finds the area of behaviour but reverses it picks 'naughty'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt3",
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'well-behaved'. 'polite' shares the area of good behaviour but tilts it towards good manners rather than doing as you are told. A child who hears only 'good' picks 'polite'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-23-opt4",
+     "value": "quiet",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'well-behaved'. An obedient child may be quiet, so 'quiet' names one thing obedience can look like, not what 'obedient' means. A child who picks that visible sign picks 'quiet'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-24",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "trivial"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "solution": null,
+   "key": "unimportant",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-24-opt1",
+     "value": "unimportant",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-24-opt2",
+     "value": "worthless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "The key is 'unimportant'. 'worthless' is from the same family but far stronger: having no value at all, not just not mattering much. A child who reaches for the strongest word picks 'worthless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-24-opt3",
+     "value": "simple",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "The key is 'unimportant'. 'simple' shares the area of small matters but tilts it towards easy or not complicated. A trivial problem is one that does not matter, not one that is easy. A child who hears only 'nothing much' picks 'simple'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-24-opt4",
+     "value": "small",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "The key is 'unimportant'. A trivial matter is often a small one, so 'small' names one feature of it, not what 'trivial' means. A child who picks that single feature picks 'small'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-25",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "jubilant"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The crowd was JUBILANT when the final whistle blew."
+   },
+   "solution": null,
+   "key": "overjoyed",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-25-opt1",
+     "value": "overjoyed",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-25-opt2",
+     "value": "pleased",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The crowd was JUBILANT when the final whistle blew', the key is 'overjoyed'. 'pleased' is from the same family of happiness but far weaker; a jubilant crowd is wild with joy. A child who matches happiness and ignores the strength picks 'pleased'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-25-opt3",
+     "value": "noisy",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'overjoyed'. A jubilant crowd cheers, so 'noisy' names one thing jubilation can look like, not what 'jubilant' means. A child who picks the sound of the crowd picks 'noisy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-25-opt4",
+     "value": "relieved",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'overjoyed'. 'relieved' shares the area of happy feeling at the final whistle but tilts it: glad a worry is over. 'jubilant' is triumphant joy. A child who hears only 'happy it ended' picks 'relieved'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-26",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "recede"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "They waited for the floodwater to RECEDE."
+   },
+   "solution": null,
+   "key": "retreat",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-26-opt1",
+     "value": "retreat",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-26-opt2",
+     "value": "vanish",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'They waited for the floodwater to RECEDE', the key is 'retreat'. 'vanish' pushes the same idea too far: to disappear completely, where receding water only draws back. A child who reaches for the strongest word picks 'vanish'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-26-opt3",
+     "value": "settle",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'retreat'. 'settle' shares the area of floodwater calming down but tilts it towards coming to rest and staying, the opposite of drawing back. A child who hears only 'calm down' picks 'settle'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-26-opt4",
+     "value": "fade",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "execution": "In the sentence, the key is 'retreat'. 'recede' has a real second meaning, to grow fainter, as when a sound or memory recedes, and 'fade' fits that sense. The sentence fixes the moving-back sense, since floodwater draws back. A child who picks the other sense picks 'fade'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-27",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "conceal"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "She tried to CONCEAL her disappointment from her friends."
+   },
+   "solution": null,
+   "key": "hide",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt1",
+     "value": "hide",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt2",
+     "value": "show",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In the sentence, the key is 'hide'. 'show' is the opposite of 'conceal': to let others see the feeling. A child who finds the area but reverses it picks 'show'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt3",
+     "value": "ignore",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'hide'. 'ignore' shares the area of not dealing with a feeling but tilts it: to take no notice of something, rather than keep it from others. A child who hears only 'not show it' picks 'ignore'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-27-opt4",
+     "value": "pretend",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'hide'. Concealing disappointment goes with pretending to be fine, so the two words turn up together, but 'pretend' means act as if, not hide. A child who matches the situation picks 'pretend'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-28",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "exhausted"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "After the long walk home they were EXHAUSTED."
+   },
+   "solution": null,
+   "key": "drained",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-28-opt1",
+     "value": "drained",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-28-opt2",
+     "value": "lively",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In 'After the long walk home they were EXHAUSTED', the key is 'drained'. 'lively' is the opposite of 'exhausted': full of energy. A child who finds the area of energy but reverses it picks 'lively'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-28-opt3",
+     "value": "sleepy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'drained'. 'sleepy' turns up beside 'exhausted' at the end of a long day, but it means ready to sleep, not out of energy. A child who matches the situation picks 'sleepy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-28-opt4",
+     "value": "empty",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "execution": "In the sentence, the key is 'drained'. 'exhausted' has a real second meaning, used up completely, as in exhausted supplies, and 'empty' fits that sense. The sentence is about people after a walk, which fixes the worn-out sense. A child who picks the other sense picks 'empty'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-29",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "amend"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The teacher asked her to AMEND the last paragraph."
+   },
+   "solution": null,
+   "key": "change",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt1",
+     "value": "change",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt2",
+     "value": "rewrite",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The teacher asked her to AMEND the last paragraph', the key is 'change'. 'rewrite' pushes the same idea too far: to write it all again, where amending means making some changes. A child who reaches for the biggest change picks 'rewrite'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt3",
+     "value": "shorten",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'change'. 'shorten' shares the area of altering a piece of writing but tilts it to one kind of change, making it shorter. Amending need not cut anything. A child who hears only 'edit it' picks 'shorten'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-29-opt4",
+     "value": "check",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'change'. 'check' turns up beside 'amend' in the same classroom job, since you check work and then amend it, but it means look over, not alter. A child who matches the situation picks 'check'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-30",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "futile"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "Their efforts to save the old tree proved FUTILE."
+   },
+   "solution": null,
+   "key": "pointless",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-30-opt1",
+     "value": "pointless",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-30-opt2",
+     "value": "impossible",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'Their efforts to save the old tree proved FUTILE', the key is 'pointless'. 'impossible' pushes the same idea too far: it could never be done at all, where futile means the efforts made no difference. A child who reaches for the strongest word picks 'impossible'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-30-opt3",
+     "value": "foolish",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'pointless'. 'foolish' shares the area of efforts that came to nothing but tilts it towards being silly. Trying to save a tree was not foolish, only useless. A child who hears only 'a waste' picks 'foolish'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-30-opt4",
+     "value": "successful",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In the sentence, the key is 'pointless'. 'successful' is the opposite of 'futile': the efforts would have worked. A child who reverses the meaning picks 'successful'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-31",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "amiable"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The new neighbour seemed AMIABLE from the first day."
+   },
+   "solution": null,
+   "key": "friendly",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-31-opt1",
+     "value": "friendly",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-31-opt2",
+     "value": "grumpy",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In the sentence, the key is 'friendly'. 'grumpy' is the opposite of 'amiable': bad-tempered and hard to get on with. A child who reverses the meaning picks 'grumpy'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-31-opt3",
+     "value": "cheerful",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'friendly'. 'cheerful' shares the area of a pleasant manner but tilts it towards being in good spirits oneself, rather than warm towards others. A child who hears only 'nice to be around' picks 'cheerful'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-31-opt4",
+     "value": "chatty",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'friendly'. An amiable neighbour may be chatty, so 'chatty' names one thing amiability can look like, not what 'amiable' means. A child who picks that visible sign picks 'chatty'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-32",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "abundant"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "Fish were ABUNDANT in the river that summer."
+   },
+   "solution": null,
+   "key": "plentiful",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-32-opt1",
+     "value": "plentiful",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-32-opt2",
+     "value": "endless",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'Fish were ABUNDANT in the river that summer', the key is 'plentiful'. 'endless' pushes the same idea too far: so many there is no end to them. A child who reaches for the strongest word picks 'endless'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-32-opt3",
+     "value": "large",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'plentiful'. 'large' shares the area of 'a lot' but tilts it from how many fish there were to how big each fish was. A child who hears only 'a lot' picks 'large'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-32-opt4",
+     "value": "rare",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In the sentence, the key is 'plentiful'. 'rare' is the opposite of 'abundant': hardly any fish at all. A child who reverses the meaning picks 'rare'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-33",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "notorious"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "That road is NOTORIOUS for its sharp bends."
+   },
+   "solution": null,
+   "key": "infamous",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-33-opt1",
+     "value": "infamous",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-33-opt2",
+     "value": "unknown",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In the sentence, the key is 'infamous'. 'unknown' is the opposite of 'notorious', which means well known. A child who finds the area of fame but reverses it picks 'unknown'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-33-opt3",
+     "value": "famous",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In 'That road is NOTORIOUS for its sharp bends', the key is 'infamous'. 'famous' shares the area of being well known but drops the bad side: notorious means well known for something bad. A child who hears only 'well known' picks 'famous'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-33-opt4",
+     "value": "dangerous",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'infamous'. 'dangerous' turns up beside 'notorious' when people talk about a road with sharp bends, but it describes the road itself, not its bad name. A child who matches the situation picks 'dangerous'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-34",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "exquisite"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The lace on the dress was EXQUISITE."
+   },
+   "solution": null,
+   "key": "beautiful",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt1",
+     "value": "beautiful",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt2",
+     "value": "pretty",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The lace on the dress was EXQUISITE', the key is 'beautiful'. 'pretty' is from the same family but far weaker; exquisite means extremely beautiful and finely made. A child who matches the family and ignores the strength picks 'pretty'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt3",
+     "value": "costly",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'beautiful'. 'costly' turns up beside 'exquisite', since finely made lace is often expensive, but it means costing a lot, not beautiful. A child who matches the company the words keep picks 'costly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-34-opt4",
+     "value": "sharp",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "execution": "In the sentence, the key is 'beautiful'. 'exquisite' has a real second meaning, intense and sharp, as in exquisite pain, and 'sharp' fits that sense. The sentence is about lace on a dress, which fixes the beautiful sense. A child who picks the other sense picks 'sharp'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-35",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "benevolent"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The school was founded by a BENEVOLENT farmer."
+   },
+   "solution": null,
+   "key": "kind",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt1",
+     "value": "kind",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt2",
+     "value": "saintly",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The school was founded by a BENEVOLENT farmer', the key is 'kind'. 'saintly' is from the same family of goodness but far stronger: as good as a saint. A child who reaches for the strongest good word picks 'saintly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt3",
+     "value": "polite",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'kind'. 'polite' shares the area of behaving well towards others but tilts it towards good manners rather than wishing others well. A child who hears only 'nice' picks 'polite'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-35-opt4",
+     "value": "wealthy",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'kind'. 'wealthy' turns up beside 'benevolent' when someone pays to found a school, but it means rich, not kind. A child who matches the situation picks 'wealthy'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-36",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "stoic"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "She stayed STOIC when she heard the sad news."
+   },
+   "solution": null,
+   "key": "calm",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt1",
+     "value": "calm",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt2",
+     "value": "stubborn",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In 'She stayed STOIC when she heard the sad news', the key is 'calm'. 'stubborn' shares the area of holding firm but tilts it towards refusing to change your mind, where stoic means bearing something without showing feeling. A child who hears only 'stands firm' picks 'stubborn'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt3",
+     "value": "silent",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'calm'. A stoic person may stay silent, so 'silent' names one thing stoicism can look like, not what 'stoic' means. A child who picks that visible sign picks 'silent'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-36-opt4",
+     "value": "tearful",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": "In the sentence, the key is 'calm'. 'tearful' is the opposite of 'stoic': showing your feelings openly by crying. A child who links the sad news to the reaction it often brings, and so reverses the meaning, picks 'tearful'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-37",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "jovial"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The innkeeper greeted them in a JOVIAL manner."
+   },
+   "solution": null,
+   "key": "cheerful",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt1",
+     "value": "cheerful",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt2",
+     "value": "ecstatic",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The innkeeper greeted them in a JOVIAL manner', the key is 'cheerful'. 'ecstatic' is from the same family of happiness but far stronger: overwhelmed with joy. A child who reaches for the strongest happy word picks 'ecstatic'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt3",
+     "value": "silly",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'cheerful'. 'silly' shares the area of fun and laughter but tilts it towards acting foolishly. A jovial innkeeper is good-humoured, not foolish. A child who hears only 'full of fun' picks 'silly'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-37-opt4",
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'cheerful'. A jovial innkeeper may laugh loudly, so 'loud' names one thing joviality can sound like, not what 'jovial' means. A child who picks that sign picks 'loud'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-38",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "transparent"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The lid was TRANSPARENT, so she could see the cake inside."
+   },
+   "solution": null,
+   "key": "clear",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-38-opt1",
+     "value": "clear",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-38-opt2",
+     "value": "thin",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'clear'. Something thin, like paper or fine cloth, can let light through, so 'thin' names one feature that can go with being see-through, not what 'transparent' means. A child who picks that single feature picks 'thin'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-38-opt3",
+     "value": "shiny",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'clear'. 'shiny' turns up beside 'transparent' when people talk about glass and plastic, but it means giving back light, not letting you see through. A child who matches the company the words keep picks 'shiny'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-38-opt4",
+     "value": "obvious",
+     "isKey": false,
+     "tag": "vr04-the-other-meaning",
+     "execution": "In the sentence, the key is 'clear'. 'transparent' has a real second meaning, easy to see through as in a transparent lie, and 'obvious' fits that sense. The sentence, about seeing the cake inside, fixes the see-through sense. A child who picks the other sense picks 'obvious'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-39",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "luminous"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "The dial on the watch was LUMINOUS in the dark."
+   },
+   "solution": null,
+   "key": "glowing",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-39-opt1",
+     "value": "glowing",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-39-opt2",
+     "value": "blazing",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'The dial on the watch was LUMINOUS in the dark', the key is 'glowing'. 'blazing' is from the same family of light but far stronger: burning brightly like a fire. A child who reaches for the strongest bright word picks 'blazing'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-39-opt3",
+     "value": "pale",
+     "isKey": false,
+     "tag": "vr04-wrong-shade",
+     "execution": "In the sentence, the key is 'glowing'. 'pale' shares the area of soft light but tilts it towards faint colour, rather than giving off light. A child who hears only 'soft and light' picks 'pale'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-39-opt4",
+     "value": "visible",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'glowing'. A luminous dial can be seen in the dark, so 'visible' names one result of glowing, not what 'luminous' means. A child who picks that single feature picks 'visible'."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-04-closest-meaning-40",
+   "questionType": "vr-04-closest-meaning",
+   "signed": true,
+   "stem": {
+    "words": [
+     "melancholy"
+    ],
+    "prompt": "Read the sentence. Which word is closest in meaning to the word in capitals?",
+    "sentence": "A MELANCHOLY tune drifted from the piano."
+   },
+   "solution": null,
+   "key": "sad",
+   "options": [
+    {
+     "optionId": "gen-vr-04-closest-meaning-40-opt1",
+     "value": "sad",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-40-opt2",
+     "value": "heartbroken",
+     "isKey": false,
+     "tag": "vr04-wrong-strength",
+     "execution": "In 'A MELANCHOLY tune drifted from the piano', the key is 'sad'. 'heartbroken' is from the same family but far stronger: overwhelmed by grief. A child who reaches for the strongest sad word picks 'heartbroken'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-40-opt3",
+     "value": "gentle",
+     "isKey": false,
+     "tag": "vr04-keeps-the-same-company",
+     "execution": "In the sentence, the key is 'sad'. 'gentle' turns up beside 'melancholy' in talk about soft, slow music, but it means mild and soft, not sad. A child who matches the company the words keep picks 'gentle'."
+    },
+    {
+     "optionId": "gen-vr-04-closest-meaning-40-opt4",
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr04-one-feature-only",
+     "execution": "In the sentence, the key is 'sad'. A melancholy tune is often slow, so 'slow' names one feature of how it sounds, not what 'melancholy' means. A child who picks that single feature picks 'slow'."
+    }
+   ]
+  },
+  {
+   "itemId": "zz-e2e-fixture-item",
+   "questionType": "vr-04-closest-meaning",
+   "signed": false,
+   "stem": {
+    "prompt": "Which word is closest in meaning to brave?"
+   },
+   "solution": null,
+   "key": "courageous",
+   "options": [
+    {
+     "optionId": "zz-e2e-fixture-item-a",
+     "value": "courageous",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "zz-e2e-fixture-item-b",
+     "value": "cautious",
+     "isKey": false,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "zz-e2e-fixture-item-c",
+     "value": "curious",
+     "isKey": false,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "zz-e2e-fixture-item-d",
+     "value": "clumsy",
+     "isKey": false,
+     "tag": null,
+     "execution": null
+    }
+   ]
+  }
+ ]
+}

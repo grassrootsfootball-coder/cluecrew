@@ -1,0 +1,33 @@
+{
+ "door": "patterns/vr-04",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-38",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: patterns/vr-04",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read as it will be. The carrier 'The lid was TRANSPARENT, so she could see the cake inside.' fixes the see-through sense, so 'clear' is the only correct option under every reading. 'thin' (one-feature-only), 'shiny' (keeps-the-same-company) and 'obvious' (wrong-shade) are each wrong, each tag is distinct and true, and each execution is true of the row. No pattern gives the key away. Every word is known to a 9-11-year-old in Britain. Note for the record: vr-04 now has three the-other-meaning rows, so the 'FOUR rows' scarcity comment in vr04.ts should be updated.",
+   "landedAt": "2026-11-23T23:09:44.085Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-38-opt4 (gen-vr-04-closest-meaning-38-opt4).tag",
+     "before": "vr04-the-other-meaning",
+     "after": "vr04-wrong-shade"
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-38-opt4 (gen-vr-04-closest-meaning-38-opt4).execution",
+     "before": "In the sentence, the key is 'clear'. 'transparent' has a real second meaning, easy to see through as in a transparent lie, and 'obvious' fits that sense. The sentence, about seeing the cake inside, fixes the see-through sense. A child who picks the other sense picks 'obvious'.",
+     "after": "In the sentence, the key is 'clear'. 'obvious' shares the general area of being clear but tilts it from seeing through something to something being easy to notice or understand. 'clear' carries both senses, but the sentence, about seeing the cake inside, fixes the see-through one. A child who hears only 'clear' picks 'obvious'."
+    }
+   ]
+  }
+ ]
+}
