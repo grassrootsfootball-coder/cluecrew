@@ -42,7 +42,7 @@ function spreadOptions(
 
 const PROVENANCE = 'ai-draft:claude-fable-5';
 
-interface GenItem {
+export interface GenItem {
   n: number;
   tier: number;
   stem: object;
@@ -589,10 +589,13 @@ function lettersForNumbers(): GenItem[] {
  * so the words conform. The repeated-letter slip is the classic error of letter-substitution codes —
  * a coding case whose words cannot produce it has generated the pedagogy out of its own items.
  */
-function wordNumberCodes(): GenItem[] {
+export function wordNumberCodes(): GenItem[] {
+  // SPAS was the third word until 2026-11-23 (R1048): it is a British playground slur, and the
+  // appropriateness screen now refuses it (R1044). SITS replaces it — tier 1 like SPAS, repeats S so
+  // the shared-letter slip exists, codes to a non-palindrome, and is the first word to use T.
   // STATS codes to the palindrome 93439, which makes the letter-order distractor EQUAL the key —
   // a degenerate seat. PAPAS replaces it: repeats P and A, and its code reverses to a distinct value.
-  const words = ['PIPS', 'SAPS', 'SPAS', 'ASPS', 'APPS', 'PAPA', 'PASTA', 'TAPAS', 'PAPAS', 'SPITS'];
+  const words = ['PIPS', 'SAPS', 'SITS', 'ASPS', 'APPS', 'PAPA', 'PASTA', 'TAPAS', 'PAPAS', 'SPITS'];
   return Array.from({ length: 25 }, (_, i) => {
     const map: Record<string, number> = { T: 1 + (i % 3), A: 4, P: 6, I: 7, S: 9 };
     const word = words[i % words.length]!;

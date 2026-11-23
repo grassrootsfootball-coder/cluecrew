@@ -30,9 +30,8 @@ import { findInside, readColumn, describe, type SupersededEntry } from './lib/su
  * fails; an entry that no longer matches anything fails as stale, so the freeze cannot outlive its cause.
  */
 const HELD: Record<string, { instances: number; why: string }> = {
-  'gen-vr-19-word-number-codes-03': { instances: 4, why: 'reviewer HOLD: test word SPAS (R1042)' },
-  'gen-vr-19-word-number-codes-13': { instances: 4, why: 'reviewer HOLD: test word SPAS (R1042)' },
-  'gen-vr-19-word-number-codes-23': { instances: 4, why: 'reviewer HOLD: test word SPAS (R1042)' },
+  // Empty since 2026-11-23: the three SPAS rows were rewritten through the vr19-spas door (R1048)
+  // and their keys moved out with the rewrite. A new entry needs a named reviewer HOLD behind it.
 };
 
 async function main() {

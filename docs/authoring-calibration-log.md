@@ -30069,3 +30069,53 @@ That session's lander re-exports at the end, and that export carries these 7 car
 
 Separately, the drafter noted that the gen- copies of hostile, vague, trivial, humble and amend
 sit at item tier 2 on tier-3 and tier-4 headwords. That is an item-tiering question, not a card fault.
+
+## R1048 — the SPAS three: the word replaced, the rows re-signed, the hold lifted (David: "Replace the word in the three SPAS items", 2026-11-23)
+
+**The word is the family's, so it changed in the derivation first.** `gen-vr-19-word-number-codes-03`,
+`-13` and `-23` were the third slot of `wordNumberCodes` (generate-content.ts), which cycles ten words
+over 25 rows. Changing only the rows would have made `content:generate` fail on them under R62, or
+rewrite them back. **SPAS → SITS**, chosen under the family's own constraints:
+- it uses only the coded letters A I P S T;
+- it repeats a letter, so `vr19-shared-letter-miss` is a real act;
+- it codes to a non-palindrome, so key, reverse and slip are three distinct values;
+- it is vocab tier 1 like SPAS, so the family's tier ladder does not move. PITTA was the first
+  candidate and would have gone to tier 3;
+- it passes the appropriateness screen (v3-2026-11-23).
+
+SITS is also the first word in the family to use T, so each row's T digit (3, 1, 2) now matters.
+`regenerate-vr19.ts`, a historical script, gets the same list so the two derivations agree.
+
+**Through a reviewed door** (`scripts/agent-review/replace-vr19-spas.ts`, `content/agent-review/vr19-spas/`).
+- The lander takes stem and option values from `wordNumberCodes` itself (R429).
+- The drafter wrote the six executions in the family's house form.
+- A separate agent, as `rev-agent-01`, encoded every row itself: 9739/9379/9730, 9719/9179/9710 and
+  9729/9279/9720. It **attested 6 of 6 executions and signed 3 of 3 rows**.
+- The lander refuses on a moved pre-image, on a missing verdict, or on any blocking child-facing fault.
+- After landing, `classifyDerivedWrites` over all 25 rows reports **25 reviewed-and-unchanged, 0
+  blocked**, so `content:generate` stays a no-op.
+
+**History stays outside the container (R1042).** The August `_previousPrompt`/`_previousValue` keys
+moved into `superseded`, and the SPAS wording joined them there, stamped with this ruling and date.
+The replaced executions are verbatim in each AMENDED event's note.
+
+**The hold lifted (R1043).** All three moved from `SERVING_HOLDS` to `LIFTED_HOLDS`, never removed
+silently. VR SERVABLE went from 615 back to 618. `check:superseded-inside-field` has no frozen rows
+left: 0 instances, 604 entries in the column.
+
+**Checks.** `check:db-content` passes. It failed exactly these three rows under R1044, and now
+reports all 1660 serving rows pass. Also passing: `serving-path`, `every-string-field`,
+`outside-writes`, `signing-doors`, `authority-shape`, `vr-distractors`, `generator-agreement`,
+`db-invariants`, `snapshot`, `derived-writes` and 797 core tests.
+
+**A NUMBER COLLISION, RECORDED AND NOT REWRITTEN.** This door's six events (3 AMENDED and 3 SIGNED on
+the three rows) carry "R1047" in their `method`. The vault session took R1047 concurrently for
+its seven-card redraft, and both landed before either reached the register. Those events belong
+to THIS entry. They are not rewritten, because an attribution record is evidence (R65). The
+reviewed `packet.json` and `BRIEF.md` also say R1047 and are left byte-for-byte as reviewed.
+The lesson is R178's: a ruling number is looked up at the moment of writing. Two sessions read
+the same last heading.
+
+**The snapshot committed with this entry also carries the vault session's seven landed redrafts**
+(14 events and 7 write-log rows on `Word`), because it is a picture of the one store. Their register
+entry and scripts are theirs to commit.

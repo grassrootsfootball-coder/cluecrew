@@ -21,7 +21,9 @@ import { requirePopulation } from './lib/population';
 const REPO = pjoin(__dirname, '..');
 const APPLY = process.argv.includes('--apply');
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
-const WORDS = ['PIPS', 'SAPS', 'SPAS', 'ASPS', 'APPS', 'PAPA', 'PASTA', 'TAPAS', 'PAPAS', 'SPITS'];
+// SPAS -> SITS on 2026-11-23 (R1048), matching generate-content.ts. This script is historical: it
+// writes `_previous*` keys inside the containers, which check:superseded-inside-field now fails.
+const WORDS = ['PIPS', 'SAPS', 'SITS', 'ASPS', 'APPS', 'PAPA', 'PASTA', 'TAPAS', 'PAPAS', 'SPITS'];
 
 function build(i: number) {
   const map: Record<string, number> = { T: 1 + (i % 3), A: 4, P: 6, I: 7, S: 9 };

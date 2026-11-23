@@ -26,6 +26,9 @@ export interface SupersededEntry {
   /** The `_`-prefixed name it was stored under, verbatim. */
   key: string;
   value: unknown;
+  /** Present on entries written by a later replacement rather than lifted by the R1042 migration. */
+  ruling?: string;
+  supersededOn?: string;
 }
 
 export interface SupersededColumn {

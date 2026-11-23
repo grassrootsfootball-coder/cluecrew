@@ -1,0 +1,56 @@
+{
+  "door": "vr19-spas",
+  "reviewer": "rev-agent-01",
+  "executions": [
+    {
+      "optionId": "gen-vr-19-word-number-codes-03-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: S=9 I=7 T=3 S=9 gives 9739; 9379 is exactly 9739 reversed (SITS read as STIS). Quoted word and digits are on the row; wording matches the family's SPAS-form execution word for word."
+    },
+    {
+      "optionId": "gen-vr-19-word-number-codes-03-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: SITS has S in positions 1 and 4, both 9 by the code, key 9739; 9730 keeps the first three digits and gives the repeated S a different digit (0), which is the act the tag names. Same house form as the prior SPAS execution."
+    },
+    {
+      "optionId": "gen-vr-19-word-number-codes-13-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: S=9 I=7 T=1 S=9 gives 9719; 9179 is exactly 9719 reversed (SITS read as STIS). Quoted word and digits are on the row; wording matches the family's SPAS-form execution word for word."
+    },
+    {
+      "optionId": "gen-vr-19-word-number-codes-13-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: SITS has S in positions 1 and 4, both 9 by the code, key 9719; 9710 keeps the first three digits and gives the repeated S a different digit (0), which is the act the tag names. Same house form as the prior SPAS execution."
+    },
+    {
+      "optionId": "gen-vr-19-word-number-codes-23-opt2",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: S=9 I=7 T=2 S=9 gives 9729; 9279 is exactly 9729 reversed (SITS read as STIS). Quoted word and digits are on the row; wording matches the family's SPAS-form execution word for word."
+    },
+    {
+      "optionId": "gen-vr-19-word-number-codes-23-opt3",
+      "verdict": "ATTEST",
+      "reason": "Recomputed: SITS has S in positions 1 and 4, both 9 by the code, key 9729; 9720 keeps the first three digits and gives the repeated S a different digit (0), which is the act the tag names. Same house form as the prior SPAS execution."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "gen-vr-19-word-number-codes-03",
+      "preImageSha256": "22d8a465778aa5217e63234a457554d5f474d09ef3d767dd137167bb8edbdcca",
+      "verdict": "SIGN",
+      "reason": "Code maps S, I, T (all distinct digits; A and P unused, which is normal for the family); SITS encodes to 9739, the only correct option; 9379 (reversal) and 9730 (repeat miss) are both wrong and are what their tags say. SITS is an everyday word, suitable for 9-11 and plain British English."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-13",
+      "preImageSha256": "bb645814cc0ee05ea5d2f9d92553791d0033f02bd46f5ffac7a9bb009acd44ba",
+      "verdict": "SIGN",
+      "reason": "Code maps S, I, T (all distinct digits; A and P unused, which is normal for the family); SITS encodes to 9719, the only correct option; 9179 (reversal) and 9710 (repeat miss) are both wrong and are what their tags say. SITS is an everyday word, suitable for 9-11 and plain British English."
+    },
+    {
+      "itemId": "gen-vr-19-word-number-codes-23",
+      "preImageSha256": "88ca4c870fb40c24d207cd781a9cdc60b3e3f1cd76e821ebd795236dcea5b8d1",
+      "verdict": "SIGN",
+      "reason": "Code maps S, I, T (all distinct digits; A and P unused, which is normal for the family); SITS encodes to 9729, the only correct option; 9279 (reversal) and 9720 (repeat miss) are both wrong and are what their tags say. SITS is an everyday word, suitable for 9-11 and plain British English."
+    }
+  ]
+}
