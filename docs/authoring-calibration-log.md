@@ -30565,3 +30565,22 @@ still pins deepmerge-ts 7.1.5, the last high advisory; only Prisma 7 carries 8.x
   build passes, e2e is 75 passed with 1 skipped, and story e2e is 3/3. The one failure was
   `check:e2e-fixtures` on a test from another session (word-draft-door.spec.ts:80, a Word with no
   sweepable marker), which went back to that session.
+
+## R1061 — the word-door test's refused card is marked for the sweep, and the sweep now covers Words (2026-11-23)
+
+Found by the product-build session's full CI-style run: `check:e2e-fixtures` failed on
+`word-draft-door.spec.ts:80`, because the "refuses a two-sense card with no second sense" test
+creates a Word with no `authoredBy`. That row is meant to be refused by the CHECK, but if the CHECK
+ever accepted it, a crashed run would leave a card no sweep could find.
+
+**The check was satisfiable by a false claim.** The guard reads the markers `cleanupFixtures`
+sweeps and accepts any creation under them, whatever the table. But `cleanupFixtures` swept ITEM
+rows only, and there was no `prisma.word` in it at all. So marking the Word `human:e2e-…` alone
+would have turned the check green while the row stayed unswept. Same class as R591: the claim was
+stronger than the thing behind it. Fixed on both sides:
+- the spec's Word now carries `authoredBy: 'human:e2e-word-door'`;
+- `cleanupFixtures` now also deletes Word rows under `human:e2e-`. 0 real cards carry that prefix.
+
+`pnpm check:e2e-fixtures` passes, and the spec's three database tests pass (177 LIVE cards
+screened). Not fixed: the guard still does not check which TABLE a marker is swept for, so the same
+gap could open for another table. That would be a separate change to `check-e2e-fixtures.ts`.

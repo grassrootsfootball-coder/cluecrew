@@ -85,6 +85,9 @@ test('the database refuses a two-sense card with no second sense', async () => {
         sentence: 'y',
         tier: 1,
         twoMeanings: true, // …with no senseB
+        // Sweepable marker (cleanupFixtures): the CHECK should refuse this row, but if it ever
+        // didn't, a crashed run must not leave the card behind.
+        authoredBy: 'human:e2e-word-door',
       },
     }),
   ).rejects.toThrow();

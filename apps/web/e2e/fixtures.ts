@@ -199,6 +199,9 @@ export async function cleanupFixtures(): Promise<void> {
       OR: [{ authoredBy: { startsWith: 'human:e2e-' } }, { authoredBy: 'ai-draft:example-model' }],
     },
   });
+  // Word rows too (R1061). check:e2e-fixtures accepted a Word under this prefix as "swept" while
+  // this function swept only Items. The prefix is the same, and no real card carries it.
+  await prisma.word.deleteMany({ where: { authoredBy: { startsWith: 'human:e2e-' } } });
   await prisma.$disconnect();
 }
 
