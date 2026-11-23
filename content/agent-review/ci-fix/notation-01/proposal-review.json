@@ -1,0 +1,28 @@
+{
+  "door": "ci-fix/notation-01",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:MC04-NPV-06",
+      "verdict": "ATTEST",
+      "reason": "Fault fixed: all four values now carry U+2212 and U+00B0 (byte-checked) and are the same numbers as live (-3, 3, -2, -8 parse to -3, 3, -2, -8). Option ids, isKey (A) and all three tags match live; stem byte-identical; rebuild carries no explanation/lineRefs, so those stay as stored. solution '5 - 8' = -3 = key (evaluateSolution/optionNumericValue). Executions: B (maths-66, ignoring the minus or turning back at zero) gives 3, and 5 - 8 = -3 is right. C (maths-107) lands one step short toward zero: 8 steps down from 5 is -3, so -2 is one out. That is the tag's own direction (-4 for -5), though it does not name the zero-counted-as-a-step mechanism. D (maths-71, a given number never used) leaves out the 5 and counts 8 down from zero, giving -8; 5 - 8 = -3 is right. Every number checked."
+    },
+    {
+      "ref": "rebuild:MC05-NPV-06",
+      "verdict": "ATTEST",
+      "reason": "Fault fixed: all four values now carry U+2212 and U+00B0 (byte-checked) and are the same numbers as live (-4, 4, -3, -10). Option ids, isKey (A) and all three tags match live; stem byte-identical; explanation untouched. solution '6 - 10' = -4 = key. Executions: B (maths-66) 6 - 10 = -4, not 4, is right. C (maths-107) 10 steps down from 6 is -4, so -3 is one step short toward zero, which is the tag's direction. D (maths-71) leaves out the 6 and gives -10; 6 - 10 = -4 is right. Every number checked."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC04-NPV-06",
+      "verdict": "HOLD",
+      "reason": "Notation is now uniform, so the form (sign or degree mark) no longer gives the key away, and the key -3°C is the only correct option. But the VALUE pattern gives it away: the key is the only option linked to two others. 3°C is its sign twin and -2°C is one step from it. -8°C is linked to nothing. A child can pick the hub without working out 5 - 8. It is also the brief's named pattern: two options one apart, with the key the smaller (-3 and -2), and it is the same on the only other row built this way (MC05-NPV-06). The pattern was not introduced by this rebuild. It was on the live row already, and the notation fix is correct. Repair: redraft one distractor so the key is not the only option linked to two others."
+    },
+    {
+      "itemId": "MC05-NPV-06",
+      "verdict": "HOLD",
+      "reason": "Same fault as MC04-NPV-06. -4°C is correct and the only correct option, and the notation is uniform. But the key is the only option linked to two others: 4°C is its sign twin and -3°C is one step from it, while -10°C is linked to nothing. The adjacent pair has the key as the smaller on both rows of this design, so the key can be found without working out 6 - 10. This predates the rebuild. Repair: redraft one distractor so no single option is linked to two others."
+    }
+  ]
+}

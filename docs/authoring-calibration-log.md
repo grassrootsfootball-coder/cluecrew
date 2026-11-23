@@ -30731,3 +30731,70 @@ is TOTAL.
 **A slip, recorded:** the first product edit truncated `packages/db/src/jobs/hard-delete.ts`, because a
 one-liner opened the file for writing before reading it. The file had no uncommitted changes. It was
 restored from HEAD and its final diff is the one intended line.
+
+## R1064 — Maths worked examples turned on properly, the Maths case made playable, and the open issues (David: "turn on the Maths worked examples properly and fix any other issues", 2026-11-23)
+
+**THE MATHS CASE COULD NOT BE PLAYED AT ALL.** The new replay e2e test found it: starting a session on
+`case-maths-01` crashed with "no mechanic family for question type 'maths-calc'".
+- The Maths path in `orchestrator.ts` was taken only for ids starting `mq-`, the spec's naming. The
+  district was imported as `maths-calc`, `maths-fdp`…, so every Maths item fell to core's VR map,
+  which refuses unmapped types (R120). The district is now read from the QuestionType row.
+- A second fault of the same kind: the store's mechanics are `forge`, `datadesk`, `shapeshop`, but
+  the map knew only `number-forge`, `data-desk`…, and anything unknown fell SILENTLY to `workshop`.
+  Geometry and data items would have rendered in the wrong engine. Both spellings now map, an unknown
+  mechanic refuses, and `maths.test.ts` pins this.
+
+**THE REPLAY, REBUILT.** The old one printed "18 * 145 makes 2610." with no £ and no commas, plus an em
+dash and commerce wording in its templates.
+- `packages/core/src/maths/replay-render.ts` renders the same arithmetic in house notation: × ÷ −,
+  thousands commas, and £ tracked through the working (£ + £ and £ × count are money; £ ÷ £ is a
+  count). The last line gives the answer as the key shows it, in the working's style.
+- It REFUSES rather than approximates: bare values, fraction answers (a decimal walk teaches nothing
+  about fractions), items priced in pence (the walk mixes p and £ with no units), and any step that
+  cannot be shown exactly.
+- Its value must equal `evaluateSolution` (R41) and the key.
+- Templates are rewritten: no em dash, no commerce, short sentences.
+- The app and the review tooling share the one renderer.
+
+**TURNED ON PER ITEM, THROUGH REVIEW.** `land-replays.ts` re-renders and gates every line (role
+`hint`), sets `explanation.replayTemplate`, records an AMENDED event, and re-signs the row as
+`rev-agent-01`, because the explanation is inside the signed projection.
+- Of 169 LIVE Maths items with an expression, the renderer refused 41.
+- rev-agent-01 read the other 128 as a child would: 89 attested in round 1, 104 in round 2.
+- 23 expressions were reordered to follow each item's own walk script, each re-checked to give the
+  same value and the key:
+  - 8 percentages, walked by the 1% method;
+  - 4 "fraction of" items, which now divide first;
+  - 9 change and triangle items, which now add the total first;
+  - 2 angle loops, now bracketed.
+- **The 24 left without a replay, by the reviewer's judgement:**
+  - 18 one-line restatements of a bare "Work out" question;
+  - 2 place-value chains;
+  - 2 decimal divisions that contradict the item's own method;
+  - MC03-CALC-06 (the remainder is needed before dividing);
+  - MC04-FDP-08 (its walk needs a value twice).
+- The reviewer also caught its own name on reorder notes the proposer wrote (R94), which were
+  re-attributed before landing.
+- **Verified:** `maths-replay.spec.ts` walks a real child through the API until a miss returns
+  replay lines in house notation, and a screenshot of the play screen showed "12 ÷ 3 makes 4. 4 × 2
+  makes 8. So the answer is 8." after a miss on "What is 2/3 of 12?". All gates pass, including
+  serving-path on the re-signed rows.
+
+**TEMPERATURE NOTATION (MC04-NPV-06, MC05-NPV-06)** took three review rounds.
+- Round 1: notation correct, rows held, because the key was the only option linked to two others (a
+  test-wise giveaway).
+- Round 2: refused — the walk named a trap no longer on the row, and an execution gave 8°C for −8°C.
+- Round 3: signed. The options now read −3°C, 3°C, 13°C, −8°C (and −4°C, 4°C, 16°C, −10°C).
+- `optionNumericValue` reads a true minus sign.
+
+**OTHER FIXES:**
+- The Lighthouse job loads the content snapshot, so it measures real pages.
+- The stale `SIMILARITY_INDEX_PATH` line in David's local `.env` is commented out, with the reason;
+  the folder is gone.
+
+**OPEN:**
+- The two passages whose text and numbered lines disagree (stream-a-03 its/it's, stream-a-16
+  than/then) could not be checked: Project Gutenberg returned 503 for six hours. Children read the
+  numbered lines.
+- The Vercel deploy needs the hosted database migrated and loaded (see the go-live notes in the
+  session report).

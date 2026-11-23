@@ -1,0 +1,28 @@
+{
+  "door": "ci-fix/notation-01-r3",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:MC04-NPV-06",
+      "verdict": "ATTEST",
+      "reason": "Both round-2 faults are fixed. The explanationPatch replaces only the walkScript's last sentence; the first three are byte-identical to the stored walk and hintCore is untouched. The new sentence names exactly the three traps on the row: positive (3°C), adding (13°C) and not starting from five (−8°C). It is 16 words. The maths-71 execution now gives its own value: counting 8 down from zero gives −8°C, and 5 − 8 = −3. Diffed against round 2: stem, option ids, values, key and tags identical, and only that execution changed. Notation is U+2212/U+00B0. '5 - 8' = -3 = key."
+    },
+    {
+      "ref": "rebuild:MC05-NPV-06",
+      "verdict": "ATTEST",
+      "reason": "Both round-2 faults are fixed. The walkScript patch changes only the last sentence, which names the three traps on the row: positive (4°C), adding (16°C) and not starting from six (−10°C). The maths-71 execution counts 10 down from zero, giving −10°C, and 6 − 10 = −4. Diffed against round 2: everything else identical. '6 - 10' = -4 = key."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC04-NPV-06",
+      "verdict": "SIGN",
+      "reason": "Read as it will be. The stem is answerable. −3°C is the only correct option, and 3°C, 13°C and −8°C are each wrong. There is no one-apart pair and no hub: the key's only value link is its sign twin, and 3°C is at least as linked (13°C is 3 + 10). Notation is uniform. The hint and walk agree with the key and with the traps on the row. Words are suitable for 9 to 11."
+    },
+    {
+      "itemId": "MC05-NPV-06",
+      "verdict": "SIGN",
+      "reason": "Read as it will be. −4°C is the only correct option, and 4°C, 16°C and −10°C are each wrong. The only value link is the sign twin. There is no one-apart pair and no hub, and notation is uniform. The walk names the traps on the row and lands on minus four. Words are suitable for 9 to 11."
+    }
+  ]
+}

@@ -192,6 +192,9 @@ export const FIELD_DISPOSITIONS: Record<string, FieldDisposition> = {
   // R1040: the maths key-check expression. Not rendered: the replay that reads it runs only for an
   // item whose explanation names a template, and none does; a template would need its own gate.
   solution: 'staff',
+  // R1064: the replay template's ID ("money-chain"), never rendered. The replay text a child reads comes
+  // from content/replay-templates.json through renderReplay and is gated when the door turns it on.
+  'explanation.replayTemplate': 'staff',
 
   // --- QUOTATION: bound by fidelity to its source, never by house style (R711). ---
   'options[].attractorQuote': 'quotation', 'options[].defeaterQuote': 'quotation',

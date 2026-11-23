@@ -47,6 +47,7 @@ export * from './pricing';
 export * from './regions';
 export * from './billing';
 export * from './solution';
+export * from './maths/replay-render';
 export * from './nvr';
 export * from './english';
 export * from './maths';

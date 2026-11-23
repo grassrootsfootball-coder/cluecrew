@@ -1,0 +1,28 @@
+{
+  "door": "ci-fix/notation-01-r2",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:MC04-NPV-06",
+      "verdict": "REFUSE",
+      "reason": "Two faults. (1) Something else broke: the rebuild removes the miscount-across-zero option (-2°C) but sends no explanationPatch, so the stored walkScript still ends 'The trap keeps it positive or miscounts across zero.' The child is told about a trap no option on the row carries, and the new trap (adding, 13°C) goes unmentioned. Patch walkScript's last sentence to the traps actually on the row: keeping it positive (3°C), adding (13°C) and forgetting the start (-8°C). (2) The maths-71 execution's number is wrong for its value: 'gives the size of the fall, 8, as the new temperature' produces 8°C, but the option is −8°C. Name the mechanism that gives −8, for example 'counts 8 down from zero instead of from 5°C'. Checked and correct: notation (U+2212, U+00B0, byte-checked); key, option ids and the other values unchanged from round 1; '5 - 8' = -3 = key; maths-72 on 13°C names the mistake (5 + 8 = 13) and its numbers are right; maths-66 execution unchanged and right."
+    },
+    {
+      "ref": "rebuild:MC05-NPV-06",
+      "verdict": "REFUSE",
+      "reason": "Same two faults as MC04-NPV-06. (1) No explanationPatch: the stored walkScript still ends 'The trap keeps it positive or miscounts across zero.' The miscount option (-3°C) is gone and the adding trap (16°C) is not mentioned. (2) The maths-71 execution says the child gives '10' as the new temperature, which is 10°C, while the option is −10°C. Name the count-down-from-zero mechanism instead. Checked and correct: notation byte-checked; key, option ids and the other values unchanged; '6 - 10' = -4 = key; maths-72 on 16°C (6 + 10 = 16) right; maths-66 right."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "MC04-NPV-06",
+      "verdict": "HOLD",
+      "reason": "Held on the refused rebuild: the walkScript names a trap that is no longer on the row. The round-1 giveaway is fixed, and the options would be signable once the walkScript is patched. The options are −3°C, 3°C, 13°C and −8°C. The key is the only correct option and every distractor is wrong under any reading. There is no one-apart pair. The key is linked by value only to its sign twin (3°C), and 3°C is as linked as the key, because 13°C is 3 + 10. Picking the key from the twin pair still needs the child to know a fall below zero is negative, and that is the skill being tested, not a form cue. Words are suitable for 9 to 11."
+    },
+    {
+      "itemId": "MC05-NPV-06",
+      "verdict": "HOLD",
+      "reason": "Held on the refused rebuild, for the same reason: the walkScript names a trap no option carries. The options are −4°C, 4°C, 16°C and −10°C. The key is unique and correct. The only value link is the sign twin (−4/4); 16°C and −10°C are linked to nothing. No one-apart pair and no hub. Signable once the walkScript is patched and the maths-71 execution corrected."
+    }
+  ]
+}

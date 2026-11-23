@@ -6,7 +6,7 @@
  * from core, the phrasing is authored content, and nothing is generated
  * live (S3). No template or no solution → no replay, never a fallback.
  */
-import { solutionTrace } from '@cluecrew/core';
+import { renderReplay } from '@cluecrew/core';
 import replayContent from '../../../../content/replay-templates.json';
 
 interface ReplayTemplate {
@@ -17,10 +17,6 @@ interface ReplayTemplate {
 
 const TEMPLATES = (replayContent as { templates: Record<string, ReplayTemplate> }).templates;
 
-function fill(frame: string, operation: string, value: number): string {
-  return frame.replaceAll('{operation}', operation).replaceAll('{value}', String(value));
-}
-
 /**
  * Builds the replay lines for a missed item, or null when the item carries
  * no solution or names no known template. templateId comes from the item's
@@ -28,22 +24,14 @@ function fill(frame: string, operation: string, value: number): string {
  */
 export function buildReplay(
   solution: string | null,
-  templateId: string = 'arithmetic-chain',
+  templateId: string,
+  item: { stemText: string; keyDisplay: string },
 ): string[] | null {
   if (!solution) return null;
   const template = TEMPLATES[templateId];
   if (!template) return null;
-  let trace;
-  try {
-    trace = solutionTrace(solution);
-  } catch {
-    return null;
-  }
-  if (trace.length === 0) return null;
-  const last = trace[trace.length - 1]!;
-  return [
-    template.intro,
-    ...trace.map((step) => fill(template.step, step.operation, step.value)),
-    fill(template.outro, '', last.value),
-  ];
+  // One renderer for the app and the review tooling (packages/core, R1064): house notation, the key
+  // as displayed, and a refusal — no replay — wherever a step cannot be shown exactly.
+  const rendered = renderReplay(solution, template, item);
+  return rendered.ok ? rendered.lines : null;
 }

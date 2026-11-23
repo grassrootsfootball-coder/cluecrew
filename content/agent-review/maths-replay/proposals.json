@@ -1,0 +1,564 @@
+{
+ "door": "maths-replay",
+ "proposer": "agent",
+ "rows": [
+  {
+   "itemId": "MC01-CALC-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-FDP-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-FDP-03",
+   "template": "money-chain",
+   "solution": "80 / 100 * 25",
+   "why": "percentage walked by the 1% method: 80 ÷ 100, then × 25 (same value as \"80 * 25 / 100\")"
+  },
+  {
+   "itemId": "MC01-FDP-04",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-FDP-07",
+   "template": "arithmetic-chain",
+   "solution": "(30 - 30 / 5 * 2) / 2",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to divide first, as the walk finds a fraction of an amount"
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-GEOM-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-GEOM-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-GEOM-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-GEOM-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC01-MEAS-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-NPV-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-NPV-07",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-STATS-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-STATS-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC01-STATS-04",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-CALC-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-CALC-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-CALC-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-CALC-04",
+   "template": "money-chain",
+   "solution": "10.00 - (3.45 + 1.80)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to add the total first, as the walk does"
+  },
+  {
+   "itemId": "MC02-CALC-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-CALC-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-CALC-07",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-CALC-08",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-FDP-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-FDP-03",
+   "template": "arithmetic-chain",
+   "solution": "60 / 100 * 40",
+   "why": "percentage walked by the 1% method: 60 ÷ 100, then × 40 (same value as \"60 * 40 / 100\")"
+  },
+  {
+   "itemId": "MC02-FDP-07",
+   "template": "money-chain",
+   "solution": "80 - 80 / 100 * 25",
+   "why": "percentage walked by the 1% method: 80 ÷ 100, then × 25 (same value as \"80 - 80 * 25 / 100\")"
+  },
+  {
+   "itemId": "MC02-FDP-08",
+   "template": "arithmetic-chain",
+   "solution": "(40 - 40 / 8 * 3) / 5 * 2",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to divide first, as the walk finds a fraction of an amount"
+  },
+  {
+   "itemId": "MC02-GEOM-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-GEOM-02",
+   "template": "arithmetic-chain",
+   "solution": "180 - (58 + 67)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to follow the walk: the known angles together, then from 180"
+  },
+  {
+   "itemId": "MC02-GEOM-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-GEOM-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-GEOM-06",
+   "template": "arithmetic-chain",
+   "solution": "180 - ((180 - 110) + 25)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to follow the walk: the known angles together, then from 180"
+  },
+  {
+   "itemId": "MC02-MEAS-01",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC02-MEAS-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-MEAS-03",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC02-MEAS-04",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-MEAS-06",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC02-NPV-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-RP-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-STATS-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC02-STATS-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-CALC-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-CALC-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-CALC-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-CALC-04",
+   "template": "money-chain",
+   "solution": "20 - (8.75 + 3.60)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to add the total first, as the walk does"
+  },
+  {
+   "itemId": "MC03-CALC-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-CALC-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-CALC-07",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC03-CALC-08",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC03-FDP-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-FDP-03",
+   "template": "money-chain",
+   "solution": "44 / 100 * 25",
+   "why": "percentage walked by the 1% method: 44 ÷ 100, then × 25 (same value as \"44 * 25 / 100\")"
+  },
+  {
+   "itemId": "MC03-FDP-04",
+   "template": "money-chain",
+   "solution": "45 - 45 / 100 * 20",
+   "why": "percentage walked by the 1% method: 45 ÷ 100, then × 20 (same value as \"45 - 45 * 20 / 100\")"
+  },
+  {
+   "itemId": "MC03-FDP-07",
+   "template": "arithmetic-chain",
+   "solution": "(60 - 60 / 4) / 3 * 2",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to divide first, as the walk finds a fraction of an amount"
+  },
+  {
+   "itemId": "MC03-FDP-08",
+   "template": "money-chain",
+   "solution": "80 - 80 / 100 * 25 - 5",
+   "why": "percentage walked by the 1% method: 80 ÷ 100, then × 25 (same value as \"80 - 80 * 25 / 100 - 5\")"
+  },
+  {
+   "itemId": "MC03-GEOM-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-GEOM-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-GEOM-04",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-GEOM-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-GEOM-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC03-MEAS-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-MEAS-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-MEAS-05",
+   "template": "money-chain",
+   "solution": "10 - (2.65 + 1.75)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to add the total first, as the walk does"
+  },
+  {
+   "itemId": "MC03-MEAS-06",
+   "template": "arithmetic-chain",
+   "solution": "900 - (340 + 275)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to add the total first, as the walk does"
+  },
+  {
+   "itemId": "MC03-NPV-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-NPV-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-NPV-07",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-STATS-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC03-STATS-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-CALC-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-CALC-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-CALC-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-CALC-04",
+   "template": "money-chain",
+   "solution": "20 - (8.40 + 5.75)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to add the total first, as the walk does"
+  },
+  {
+   "itemId": "MC04-CALC-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-CALC-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-CALC-07",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-CALC-08",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-FDP-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-FDP-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-FDP-07",
+   "template": "arithmetic-chain",
+   "solution": "(32 - 32 / 8 * 3) / 4",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to divide first, as the walk finds a fraction of an amount"
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-GEOM-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-GEOM-03",
+   "template": "arithmetic-chain",
+   "solution": "180 - (65 + 48)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to follow the walk: the known angles together, then from 180"
+  },
+  {
+   "itemId": "MC04-GEOM-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-GEOM-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-MEAS-01",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC04-MEAS-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-MEAS-04",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC04-MEAS-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-MEAS-06",
+   "template": "money-chain",
+   "solution": "5 - (2.45 + 1.30)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to add the total first, as the walk does"
+  },
+  {
+   "itemId": "MC04-MEAS-07",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-NPV-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-STATS-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC04-STATS-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-CALC-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-CALC-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-CALC-04",
+   "template": "money-chain",
+   "solution": "20 - (7.65 + 2.80)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to add the total first, as the walk does"
+  },
+  {
+   "itemId": "MC05-CALC-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-CALC-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-CALC-07",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-CALC-08",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-FDP-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-FDP-04",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-FDP-05",
+   "template": "arithmetic-chain",
+   "solution": "48 - 48 / 100 * 25",
+   "why": "percentage walked by the 1% method: 48 ÷ 100, then × 25 (same value as \"48 - 48 * 25 / 100\")"
+  },
+  {
+   "itemId": "MC05-FDP-08",
+   "template": "money-chain",
+   "solution": "64 - 64 / 100 * 25",
+   "why": "percentage walked by the 1% method: 64 ÷ 100, then × 25 (same value as \"64 - 64 * 25 / 100\")"
+  },
+  {
+   "itemId": "MC05-GEOM-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-GEOM-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-GEOM-04",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-GEOM-05",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-GEOM-06",
+   "template": "arithmetic-chain",
+   "solution": "180 - ((180 - 140) + 30)",
+   "why": "round 2 (drafted by the proposer on rev-agent-01's suggestion): expression reordered to follow the walk: the known angles together, then from 180"
+  },
+  {
+   "itemId": "MC05-MEAS-01",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC05-MEAS-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-MEAS-03",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC05-MEAS-04",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-MEAS-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-MEAS-07",
+   "template": "money-chain"
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-NPV-06",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-STATS-01",
+   "template": "arithmetic-chain"
+  },
+  {
+   "itemId": "MC05-STATS-02",
+   "template": "arithmetic-chain"
+  }
+ ]
+}

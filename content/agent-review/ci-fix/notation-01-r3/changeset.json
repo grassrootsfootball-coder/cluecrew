@@ -1,0 +1,130 @@
+{
+ "door": "ci-fix/notation-01-r3",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "MC05-NPV-06",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/notation-01-r3",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read as it will be. −4°C is the only correct option, and 4°C, 16°C and −10°C are each wrong. The only value link is the sign twin. There is no one-apart pair and no hub, and notation is uniform. The walk names the traps on the row and lands on minus four. Words are suitable for 9 to 11.",
+   "landedAt": "2026-11-23T23:22:14.612Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at six and count downwards. Cross zero into the minus numbers. Ten steps down from six lands on minus four. The trap keeps it positive or miscounts across zero.",
+     "after": "Start at six and count downwards. Cross zero into the minus numbers. Ten steps down from six lands on minus four. The traps keep it positive, add instead of taking away, or forget to start from six."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option A (cmteoreiv0016tm2c3r0n3yir).value",
+     "before": "-4",
+     "after": "−4°C"
+    },
+    {
+     "field": "option B (cmteoreiv0017tm2cz1g3o3m5).value",
+     "before": "4",
+     "after": "4°C"
+    },
+    {
+     "field": "option B (cmteoreiv0017tm2cz1g3o3m5).execution",
+     "before": null,
+     "after": "The child loses the minus sign, or turns back at zero: 6 − 10 is −4, not 4. That gives 4°C instead of −4°C."
+    },
+    {
+     "field": "option C (cmteoreiv0018tm2chdbtcxna).value",
+     "before": "-3",
+     "after": "16°C"
+    },
+    {
+     "field": "option C (cmteoreiv0018tm2chdbtcxna).tag",
+     "before": "maths-107-miscounted-across-zero",
+     "after": "maths-72-wrong-operation-chosen"
+    },
+    {
+     "field": "option C (cmteoreiv0018tm2chdbtcxna).execution",
+     "before": null,
+     "after": "The child adds instead of taking away: 6 + 10 makes 16. A fall means taking away, so 6 − 10 is −4, which gives −4°C."
+    },
+    {
+     "field": "option D (cmteoreiv0019tm2ca7e7hbc3).value",
+     "before": "-10",
+     "after": "−10°C"
+    },
+    {
+     "field": "option D (cmteoreiv0019tm2ca7e7hbc3).execution",
+     "before": null,
+     "after": "The child counts 10 down from zero instead of from 6°C, so they never use the starting temperature. That gives −10°C. Starting at 6°C, a fall of 10 gives −4°C."
+    }
+   ]
+  },
+  {
+   "itemId": "MC04-NPV-06",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: ci-fix/notation-01-r3",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read as it will be. The stem is answerable. −3°C is the only correct option, and 3°C, 13°C and −8°C are each wrong. There is no one-apart pair and no hub: the key's only value link is its sign twin, and 3°C is at least as linked (13°C is 3 + 10). Notation is uniform. The hint and walk agree with the key and with the traps on the row. Words are suitable for 9 to 11.",
+   "landedAt": "2026-11-23T23:22:14.612Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Start at five and count downwards. Cross zero into the minus numbers. Eight steps down from five lands on minus three. The trap keeps it positive or miscounts across zero.",
+     "after": "Start at five and count downwards. Cross zero into the minus numbers. Eight steps down from five lands on minus three. The traps keep it positive, add instead of taking away, or forget to start from five."
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option A (cmteorei7000otm2c91e7nkr0).value",
+     "before": "-3",
+     "after": "−3°C"
+    },
+    {
+     "field": "option B (cmteorei7000ptm2c5h6bar7w).value",
+     "before": "3",
+     "after": "3°C"
+    },
+    {
+     "field": "option B (cmteorei7000ptm2c5h6bar7w).execution",
+     "before": null,
+     "after": "The child loses the minus sign, or turns back at zero: 5 − 8 is −3, not 3. That gives 3°C instead of −3°C."
+    },
+    {
+     "field": "option C (cmteorei7000qtm2coanpyddp).value",
+     "before": "-2",
+     "after": "13°C"
+    },
+    {
+     "field": "option C (cmteorei7000qtm2coanpyddp).tag",
+     "before": "maths-107-miscounted-across-zero",
+     "after": "maths-72-wrong-operation-chosen"
+    },
+    {
+     "field": "option C (cmteorei7000qtm2coanpyddp).execution",
+     "before": null,
+     "after": "The child adds instead of taking away: 5 + 8 makes 13. A fall means taking away, so 5 − 8 is −3, which gives −3°C."
+    },
+    {
+     "field": "option D (cmteorei7000rtm2cei3dj4ft).value",
+     "before": "-8",
+     "after": "−8°C"
+    },
+    {
+     "field": "option D (cmteorei7000rtm2cei3dj4ft).execution",
+     "before": null,
+     "after": "The child counts 8 down from zero instead of from 5°C, so they never use the starting temperature. That gives −8°C. Starting at 5°C, a fall of 8 gives −3°C."
+    }
+   ]
+  }
+ ]
+}

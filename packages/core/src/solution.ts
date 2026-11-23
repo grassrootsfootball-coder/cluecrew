@@ -119,7 +119,8 @@ export function optionNumericValue(content: unknown): number | null {
         ? String((content as Record<string, unknown>).value)
         : null;
   if (raw === null) return null;
-  const cleaned = raw.replace(/[£,]/g, '').trim();
+  // A true minus sign (−3°C, house notation) reads the same as a hyphen (R1064).
+  const cleaned = raw.replace(/[£,]/g, '').trim().replace(/^−/, '-');
   // FRACTIONS FIRST (R1040). The leading-number match below read "5/8" as 5 and "1 3/4" as 1, so a
   // fraction key would have "matched" any expression computing its numerator. Eleven LIVE maths
   // keys are fractions. A time ("4:15 pm") or a coordinate is NOT a number: refuse it rather than

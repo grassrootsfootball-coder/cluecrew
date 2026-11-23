@@ -16,19 +16,33 @@ export const MATHS_FAMILIES = [
 
 export type MathsFamily = (typeof MATHS_FAMILIES)[number];
 
+/**
+ * THE MECHANIC NAMES THE ENGINE, IN EITHER SPELLING THE STORE HAS USED (R1064). The spec named
+ * mechanics `number-forge`, `data-desk`…; the district as imported stores `forge`, `datadesk`… (the
+ * family names). Only the first spelling was mapped and anything else fell to `workshop`, so geometry
+ * and data items would have rendered in the wrong engine, silently — R120's fault again. Both
+ * spellings map now, and an unknown mechanic returns null for the caller to refuse.
+ */
 const FAMILY_BY_MECHANIC: Record<string, MathsFamily> = {
-  'number-forge': 'forge',
+  'number-forge': 'forge', forge: 'forge',
   workshop: 'workshop',
-  'mark-homework': 'markhomework',
-  'data-desk': 'datadesk',
-  'shape-shop': 'shapeshop',
+  'mark-homework': 'markhomework', markhomework: 'markhomework',
+  'data-desk': 'datadesk', datadesk: 'datadesk',
+  'shape-shop': 'shapeshop', shapeshop: 'shapeshop',
 };
 
-/** Maths QuestionType ids are `mq-` prefixed; the mechanic names the engine. */
+/**
+ * A Maths item's engine, or null when the type is not a Maths type or names no known engine.
+ * WHETHER IT IS MATHS IS A FACT ABOUT THE TYPE, NOT ITS NAME (R1064): the district was imported as
+ * `maths-calc`…, not the spec's `mq-*`, so a prefix test sent every Maths item to the VR map, which
+ * refuses unmapped types — and the Maths case could not be played at all.
+ */
 export function mathsFamilyForType(
   questionTypeId: string,
   mechanic: string | null | undefined,
+  district?: string | null,
 ): MathsFamily | null {
-  if (!questionTypeId.startsWith('mq-')) return null;
-  return FAMILY_BY_MECHANIC[mechanic ?? ''] ?? 'workshop';
+  const isMaths = district === 'MATHS' || questionTypeId.startsWith('mq-');
+  if (!isMaths) return null;
+  return FAMILY_BY_MECHANIC[mechanic ?? ''] ?? null;
 }

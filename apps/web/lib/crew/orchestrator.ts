@@ -715,14 +715,16 @@ async function serveItem(
   // wordweb (R120), and no `mq-*` type is in core's VR map — it never was, the default was carrying
   // them. Asking core first would now throw on every Maths item. Resolve the district that owns the
   // type, then fall back to core only for the types core actually holds.
+  // The district decides (R1064), read from the QuestionType row, never inferred from the id.
   let family: MechanicFamily | MathsFamily;
-  if (input.questionTypeId.startsWith('mq-')) {
-    const questionType = await prisma.questionType.findUnique({
-      where: { id: input.questionTypeId },
-      select: { mechanic: true },
-    });
-    const maths = mathsFamilyForType(input.questionTypeId, questionType?.mechanic);
-    if (!maths) throw new Error(`no maths family for '${input.questionTypeId}' — it must not become a VR type`);
+  const questionType = await prisma.questionType.findUnique({
+    where: { id: input.questionTypeId },
+    select: { mechanic: true, district: true },
+  });
+  const isMaths = questionType?.district === 'MATHS' || input.questionTypeId.startsWith('mq-');
+  if (isMaths) {
+    const maths = mathsFamilyForType(input.questionTypeId, questionType?.mechanic, questionType?.district);
+    if (!maths) throw new Error(`no maths engine for '${input.questionTypeId}' (mechanic '${questionType?.mechanic ?? ''}') — it must not become another engine`);
     family = maths;
   } else {
     family = familyForType(input.questionTypeId);
@@ -763,7 +765,7 @@ async function serveItem(
     // the Bar Model Builder and manipulatives ride the rail contract
     // (BUILD-DISTRICT-MATHS §3); Mark-the-Homework carries no side tool.
     rail: !plain &&
-      (input.questionTypeId.startsWith('mq-')
+      (isMaths
         ? family !== 'markhomework'
         : railAvailable(family as MechanicFamily, input.questionTypeId))
       ? state.engine.focus.itemsServed < 2
@@ -1023,16 +1025,17 @@ export async function submitAnswer(
   if (!correct) {
     const missed = await prisma.item.findUnique({
       where: { id: pending.itemId },
-      select: { solution: true, explanation: true },
+      select: { solution: true, explanation: true, stem: true, options: { where: { isCorrect: true }, select: { content: true } } },
     });
-    // OPT-IN, NEVER BY DEFAULT (R1040). A solution expression is a KEY CHECK first: the 187 maths
-    // items gain one so `verify:solutions` can recompute every key. The replay it would also feed
-    // prints the raw trace — "18 * 145 makes 2610.", no £, no commas, fractions as decimals — and
-    // that text passes no child-facing gate. So an item replays only when its explanation NAMES a
-    // template, which is a reviewed act per item; an expression alone serves nothing to a child.
+    // OPT-IN PER ITEM, THROUGH REVIEW (R1040, R1064). An item replays only when its explanation NAMES
+    // a template, set by a reviewed door after a reviewer read that item's rendered replay. The
+    // renderer (core `renderReplay`) shows house notation and ends on the key as displayed, and it
+    // refuses rather than approximates, so a named template on an item it cannot render serves nothing.
     const templateId = (missed?.explanation as { replayTemplate?: string } | null)?.replayTemplate;
-    if (missed?.solution && templateId) {
-      replaySteps = buildReplay(missed.solution, templateId) ?? undefined;
+    const keyDisplay = String((missed?.options[0]?.content as { value?: unknown } | undefined)?.value ?? '');
+    const stemText = String((missed?.stem as { text?: unknown } | null)?.text ?? '');
+    if (missed?.solution && templateId && keyDisplay) {
+      replaySteps = buildReplay(missed.solution, templateId, { stemText, keyDisplay }) ?? undefined;
     }
   }
 

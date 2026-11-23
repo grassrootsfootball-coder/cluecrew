@@ -584,6 +584,12 @@ jobs:
         run: pnpm --filter @cluecrew/db generate
       - name: Apply migrations
         run: pnpm --filter @cluecrew/db migrate:deploy
+      # R1064: the same content snapshot the checks job loads, so Lighthouse measures the pages
+      # children actually get, not the empty seeded store.
+      - name: Load the content snapshot
+        env:
+          SNAPSHOT_KEY: ${{ secrets.SNAPSHOT_KEY }}
+        run: pnpm snapshot:restore
       - name: Seed
         run: pnpm --filter @cluecrew/db seed
 

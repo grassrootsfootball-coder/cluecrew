@@ -1,0 +1,646 @@
+{
+ "door": "maths-replay",
+ "reviewer": "rev-agent-01",
+ "rows": [
+  {
+   "itemId": "MC01-CALC-02",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '62 − 27 makes 35.', which is the question's own calculation restated with the answer; the walk script's teaching (borrowing a ten in the ones) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "Replay 4 × 6 = 24, 24 + 3 = 27, 27 − 15 = 12 matches the walk (24 eggs in boxes, 27 total, 12 left) step for step; all correct; counts, no £."
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "Single line '8,006 − 3,478 makes 4,528' is the step the word problem asks for (filled from total) and matches the walk; correct; answer 4,528."
+  },
+  {
+   "itemId": "MC01-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "12 ÷ 3 = 4 then 4 × 2 = 8 is exactly the walk's 'one third, then two parts'; divide-first order, correct."
+  },
+  {
+   "itemId": "MC01-FDP-03",
+   "verdict": "ATTEST",
+   "reason": "Reorder 80 / 100 * 25 equals 80 * 25 / 100 (both 20) and replaces the meaningless '£80 × 25 makes £2,000' with '£80 ÷ 100 makes £0.80', '£0.80 × 25 makes £20': a real 1% walk, £ on money only, 25 left as a count. The walk teaches a quarter (÷ 4); a different route to the same £20, not a contradiction."
+  },
+  {
+   "itemId": "MC01-FDP-04",
+   "verdict": "REFUSE",
+   "reason": "'1 ÷ 2 makes 0.5' then '2 ÷ 0.5 makes 4': dividing by a decimal is not how the walk script teaches it ('Two halves make a litre, so 2 litres fill 4 glasses', i.e. 2 glasses per litre), and dividing by 0.5 is the very move the item's trap ('turn the half upside down') trips on. The 1 ÷ 2 line has no unit to tie it to the glass. Values correct; method contradicts the walk (criterion 4)."
+  },
+  {
+   "itemId": "MC01-FDP-07",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to (30 - 30 / 5 * 2) / 2 (same value, 9). Replay '30 ÷ 5 makes 6', '6 × 2 makes 12', '30 − 12 makes 18', '18 ÷ 2 makes 9' now finds two fifths by dividing first, exactly as the walk does (12 walk, 18 left, half is 9). Every number has a meaning; all correct; counts, no £."
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "verdict": "REFUSE",
+   "reason": "'3 ÷ 4 makes 0.75' then '15 ÷ 0.75 makes 20': the walk teaches flipping the divisor (15 × 4/3), and 15 ÷ 0.75 is not a step a 9 to 11-year-old would do mentally. Values correct; method contradicts the walk and the item's teaching (criteria 1 and 4)."
+  },
+  {
+   "itemId": "MC01-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "8 + 3 = 11, 2 × 11 = 22, answer 22 cm: matches the walk's 'add one long and one short, then double'. Correct."
+  },
+  {
+   "itemId": "MC01-GEOM-02",
+   "verdict": "ATTEST",
+   "reason": "'180 − 125 makes 55', answer 55°: the straight-line step the walk teaches; correct."
+  },
+  {
+   "itemId": "MC01-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "10 × 6 = 60, 4 × 3 = 12, 60 − 12 = 48, answer 48 cm²: same order as the walk (whole, cut-out, take away); correct."
+  },
+  {
+   "itemId": "MC01-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "180 − 40 = 140, 140 ÷ 2 = 70, answer 70°: matches the walk; correct."
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "'£5.00 − £3.50 makes £1.50' writes £5 as £5.00 exactly as the walk teaches; correct; £ on money."
+  },
+  {
+   "itemId": "MC01-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "'90 − 35 makes 55', answer 55 cm: the take-away the walk describes; correct."
+  },
+  {
+   "itemId": "MC01-NPV-02",
+   "verdict": "ATTEST",
+   "reason": "'4,970 + 100 makes 5,070': correct and agrees with the walk's answer. Light teaching (the carry into thousands is not shown), but it does translate '100 more than' into the operation; acceptable."
+  },
+  {
+   "itemId": "MC01-NPV-07",
+   "verdict": "ATTEST",
+   "reason": "'3,400 ÷ 100 makes 34' shows the method the walk names (groups of one hundred); correct."
+  },
+  {
+   "itemId": "MC01-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "6 + 3 = 9, 9 + 7 = 16, 16 + 4 = 20: a running total in table order, as the walk says; correct. (16 is a distractor but appears as a true partial total, fine.)"
+  },
+  {
+   "itemId": "MC01-STATS-03",
+   "verdict": "ATTEST",
+   "reason": "Running total 16, 22, 32 then 32 ÷ 4 = 8: the walk's 'total, then share'; correct; five step lines each meaningful."
+  },
+  {
+   "itemId": "MC01-STATS-04",
+   "verdict": "ATTEST",
+   "reason": "5 × 6 = 30, then 4 + 8 + 5 + 9 built up to 26, then 30 − 26 = 4: matches the walk (total 30, known 26, fifth 4); every number meaningful and correct."
+  },
+  {
+   "itemId": "MC02-CALC-01",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '456 + 237 makes 693.', which is the question's own calculation restated with the answer; the walk script's teaching (carrying the ten from 6 + 7) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC02-CALC-02",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '582 − 147 makes 435.', which is the question's own calculation restated with the answer; the walk script's teaching (borrowing in the ones) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC02-CALC-03",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '34 × 8 makes 272.', which is the question's own calculation restated with the answer; the walk script's teaching (4 × 8 = 32, carry 3, 3 × 8 + 3) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC02-CALC-04",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 10.00 - (3.45 + 1.80) (same value, £4.75). Replay '£3.45 + £1.80 makes £5.25', '£10.00 − £5.25 makes £4.75' is the walk's total-then-change, naming the walk's £5.25; distractor £6.55 no longer appears; correct."
+  },
+  {
+   "itemId": "MC02-CALC-05",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '4,872 ÷ 4 makes 1,218.', which is the question's own calculation restated with the answer; the walk script's teaching (sharing column by column, carrying leftovers) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC02-CALC-06",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '3,458 + 2,673 makes 6,131.', which is the question's own calculation restated with the answer; the walk script's teaching (carrying whenever a column passes nine) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC02-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "6 × 48 = 288, 288 − 95 = 193: the walk's two steps; correct counts."
+  },
+  {
+   "itemId": "MC02-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "12 × 30 = 360, 360 − 48 = 312, 312 ÷ 6 = 52: identical to the walk's three steps; correct."
+  },
+  {
+   "itemId": "MC02-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "24 ÷ 4 = 6, 6 × 3 = 18: 'divide by the bottom, times the top' as the walk says; correct."
+  },
+  {
+   "itemId": "MC02-FDP-03",
+   "verdict": "ATTEST",
+   "reason": "Reorder 60 / 100 * 40 equals 60 * 40 / 100 (both 24); replay '60 ÷ 100 makes 0.6', '0.6 × 40 makes 24' replaces the meaningless 2,400. No £ (not money), correct. Walk uses fifths (12, 24); a different route to 24, not a contradiction."
+  },
+  {
+   "itemId": "MC02-FDP-07",
+   "verdict": "ATTEST",
+   "reason": "Reorder 80 - 80 / 100 * 25 equals the original (60). Replay '£80 ÷ 100 makes £0.80', '£0.80 × 25 makes £20', '£80 − £20 makes £60' agrees with the walk's 'find the discount first, then take it off' (£20, then £60); £ correct, 25 a count."
+  },
+  {
+   "itemId": "MC02-FDP-08",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to (40 - 40 / 8 * 3) / 5 * 2 (same value, 10). Replay '40 ÷ 8 makes 5', '5 × 3 makes 15', '40 − 15 makes 25', '25 ÷ 5 makes 5', '5 × 2 makes 10' follows the walk (15 blue, 25 left, two fifths is 10). The meaningless 120 and 50 are gone; all correct."
+  },
+  {
+   "itemId": "MC02-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "9 + 5 = 14, 2 × 14 = 28, answer 28 cm: matches the walk; correct."
+  },
+  {
+   "itemId": "MC02-GEOM-02",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 180 - (58 + 67) (same value, 55). Replay '58 + 67 makes 125', '180 − 125 makes 55' is the walk word for word (58 and 67 make 125, take from 180); answer 55°; correct."
+  },
+  {
+   "itemId": "MC02-GEOM-03",
+   "verdict": "ATTEST",
+   "reason": "180 − 46 = 134, 134 ÷ 2 = 67, answer 67°: same as the walk; correct."
+  },
+  {
+   "itemId": "MC02-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "10 × 4 = 40, 3 × 5 = 15, 40 + 15 = 55, answer 55 cm²: matches the walk's split; correct."
+  },
+  {
+   "itemId": "MC02-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 180 - ((180 - 110) + 25) (same value, 85). Replay '180 − 110 makes 70', '70 + 25 makes 95', '180 − 95 makes 85': inside angle from the straight line, the two known triangle angles together, then from 180. No longer loops back to 110; agrees with the walk; correct."
+  },
+  {
+   "itemId": "MC02-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "'£8.00 − £2.60 makes £5.40': writes £8 as £8.00 as the walk teaches; correct."
+  },
+  {
+   "itemId": "MC02-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "'6,000 ÷ 1,000 makes 6', answer 6 kg: the conversion the walk teaches; correct."
+  },
+  {
+   "itemId": "MC02-MEAS-03",
+   "verdict": "ATTEST",
+   "reason": "'£4.35 + £2.50 makes £6.85': the column add the walk describes; correct, £ on money."
+  },
+  {
+   "itemId": "MC02-MEAS-04",
+   "verdict": "ATTEST",
+   "reason": "'85 − 48 makes 37', answer 37 cm: the difference the walk asks for; correct."
+  },
+  {
+   "itemId": "MC02-MEAS-06",
+   "verdict": "ATTEST",
+   "reason": "'3 × £1.45 makes £4.35' (3 a count, £ on the price) then '£10.00 − £4.35 makes £5.65': total first, as the walk says; correct."
+  },
+  {
+   "itemId": "MC02-NPV-02",
+   "verdict": "REFUSE",
+   "reason": "Six step lines adding place values: '5 × 1,000 makes 5,000', '0 × 100 makes 0', '5,000 + 0 makes 5,000', '3 × 10 makes 30', '5,000 + 30 makes 5,030', '5,030 + 8 makes 5,038'. All correct, but the walk teaches placing digits in columns and holding the empty hundreds with a zero; '0 × 100' and '+ 0' lines obscure exactly that (criterion 5)."
+  },
+  {
+   "itemId": "MC02-RP-01",
+   "verdict": "ATTEST",
+   "reason": "240 ÷ 3 = 80, 80 × 5 = 400, answer 400 g: the walk's 'one person first' unitary method; correct."
+  },
+  {
+   "itemId": "MC02-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "9 + 7 = 16, 16 − 8 = 8: the walk's 'add the two days, then compare'; correct."
+  },
+  {
+   "itemId": "MC02-STATS-02",
+   "verdict": "ATTEST",
+   "reason": "5 × 7 = 35, known numbers built up to 26, 35 − 26 = 9: matches the walk; all correct and meaningful."
+  },
+  {
+   "itemId": "MC03-CALC-01",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '356 + 287 makes 643.', which is the question's own calculation restated with the answer; the walk script's teaching (carrying from 6 + 7) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC03-CALC-02",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '483 − 176 makes 307.', which is the question's own calculation restated with the answer; the walk script's teaching (borrowing a ten) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC03-CALC-03",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '43 × 5 makes 215.', which is the question's own calculation restated with the answer; the walk script's teaching (3 × 5 = 15 carry, 4 × 5 + 1) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC03-CALC-04",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 20 - (8.75 + 3.60) (same value, £7.65). Replay '£8.75 + £3.60 makes £12.35', '£20.00 − £12.35 makes £7.65' matches the walk's £12.35 then £7.65; correct."
+  },
+  {
+   "itemId": "MC03-CALC-05",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '316 × 4 makes 1,264.', which is the question's own calculation restated with the answer; the walk script's teaching (ones, tens, hundreds with carries) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC03-CALC-06",
+   "verdict": "REFUSE",
+   "reason": "First line '74 − 2 makes 72' takes off the remainder before dividing; a child cannot know the 2 until they have divided, so the step presupposes the answer (criterion 1). Walk: three into seven twice, carry one ten, 24 each. 72 ÷ 3 = 24 is correct."
+  },
+  {
+   "itemId": "MC03-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "'3 × £6.50 makes £19.50', '2 × £2.25 makes £4.50', '£19.50 + £4.50 makes £24.00': each set then the total, as the walk says; counts without £, prices with; correct."
+  },
+  {
+   "itemId": "MC03-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "Round 2 re-read, last line changed: '320 × £15 makes £4,800', '£4,800 − £1,200 makes £3,600', 'So the answer is £3,600.' Takings then costs, as the walk says; 320 a count, £ on money; correct; the comma now matches the working."
+  },
+  {
+   "itemId": "MC03-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "24 ÷ 4 = 6, 6 × 3 = 18: one quarter then three parts, as the walk says; correct."
+  },
+  {
+   "itemId": "MC03-FDP-03",
+   "verdict": "ATTEST",
+   "reason": "Reorder 44 / 100 * 25 equals 44 * 25 / 100 (both 11) and removes '£44 × 25 makes £1,100', which is literally a distractor (£1,100). Replay '£44 ÷ 100 makes £0.44', '£0.44 × 25 makes £11' is correct and £-consistent. Walk shares into four; 1% is a longer route to the same £11 but does not contradict it."
+  },
+  {
+   "itemId": "MC03-FDP-04",
+   "verdict": "ATTEST",
+   "reason": "Reorder 45 - 45 / 100 * 20 equals the original (36). '£45 ÷ 100 makes £0.45', '£0.45 × 20 makes £9', '£45 − £9 makes £36' agrees with the walk (discount £9, then £36); 20 a count; correct."
+  },
+  {
+   "itemId": "MC03-FDP-07",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to (60 - 60 / 4) / 3 * 2 (same value, 30). Replay '60 ÷ 4 makes 15', '60 − 15 makes 45', '45 ÷ 3 makes 15', '15 × 2 makes 30' matches the walk (15 red, 45 left, two thirds is 30); the 90 is gone; all correct."
+  },
+  {
+   "itemId": "MC03-FDP-08",
+   "verdict": "ATTEST",
+   "reason": "Reorder 80 - 80 / 100 * 25 - 5 equals the original (55). '£80 ÷ 100 makes £0.80', '£0.80 × 25 makes £20', '£80 − £20 makes £60', '£60 − £5 makes £55' follows the walk's order (25% off to £60, then the voucher); correct."
+  },
+  {
+   "itemId": "MC03-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "'180 − 118 makes 62', answer 62°: the straight-line step; correct."
+  },
+  {
+   "itemId": "MC03-GEOM-03",
+   "verdict": "ATTEST",
+   "reason": "180 − 30 = 150, 150 − 40 = 110, 110 ÷ 2 = 55: the walk says take away 30° and 40° then split, same order; correct."
+  },
+  {
+   "itemId": "MC03-GEOM-04",
+   "verdict": "ATTEST",
+   "reason": "15 × 9 = 135, 6 × 7 = 42, 135 − 42 = 93, answer 93 cm²: matches the walk; correct."
+  },
+  {
+   "itemId": "MC03-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "30 ÷ 2 = 15, 15 − 9 = 6, 9 × 6 = 54, answer 54 cm²: exactly the walk (half perimeter, width, area); correct."
+  },
+  {
+   "itemId": "MC03-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "360 − 80 = 280, 280 − 110 = 170, 170 ÷ 2 = 85: walk takes away 80° and 110° then halves, same order; correct."
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "'£8.00 − £5.60 makes £2.40': £8 as £8.00 as the walk teaches; correct."
+  },
+  {
+   "itemId": "MC03-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "'75 − 28 makes 47', answer 47 cm: the take-away the walk describes; correct."
+  },
+  {
+   "itemId": "MC03-MEAS-03",
+   "verdict": "ATTEST",
+   "reason": "Round 2 re-read, last line changed: '6 × 1,000 makes 6,000', 'So the answer is 6,000 g.' The walk's 1 kg = 1000 g step; correct; comma now consistent."
+  },
+  {
+   "itemId": "MC03-MEAS-05",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 10 - (2.65 + 1.75) (same value, £5.60). Replay '£2.65 + £1.75 makes £4.40', '£10.00 − £4.40 makes £5.60' matches the walk's total spent £4.40; correct. (£4.40 is also a distractor, but here it is correctly labelled as the total spent, as in the walk.)"
+  },
+  {
+   "itemId": "MC03-MEAS-06",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 900 - (340 + 275) (same value, 285). Replay '340 + 275 makes 615', '900 − 615 makes 285' matches the walk's 615 m laid then 285 m left; correct."
+  },
+  {
+   "itemId": "MC03-NPV-02",
+   "verdict": "REFUSE",
+   "reason": "Six place-value lines: '3 × 1,000 makes 3,000', '0 × 100 makes 0', '3,000 + 0 makes 3,000', '6 × 10 makes 60', '3,000 + 60 makes 3,060', '3,060 + 4 makes 3,064'. Correct but poor teaching; the walk's point is the zero placeholder in the hundreds column, which the arithmetic chain buries (criterion 5)."
+  },
+  {
+   "itemId": "MC03-NPV-03",
+   "verdict": "ATTEST",
+   "reason": "'3,940 + 100 makes 4,040': correct, agrees with the walk's answer; light (carry not shown) but translates '100 more than' into the step; acceptable."
+  },
+  {
+   "itemId": "MC03-NPV-07",
+   "verdict": "ATTEST",
+   "reason": "'2,800 ÷ 100 makes 28': the walk's 'divide the whole number by 100'; correct."
+  },
+  {
+   "itemId": "MC03-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "22 + 30 = 52, 20 + 18 = 38, 52 − 38 = 14: 'add each pair before comparing' as the walk says; correct."
+  },
+  {
+   "itemId": "MC03-STATS-02",
+   "verdict": "ATTEST",
+   "reason": "6 × 7 = 42, the five numbers built up 14, 20, 28, 38, then 42 − 38 = 4: long (six step lines) but every line is a meaningful running total the walk names (42, 38, 4); correct."
+  },
+  {
+   "itemId": "MC04-CALC-01",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '517 + 265 makes 782.', which is the question's own calculation restated with the answer; the walk script's teaching (carrying from 7 + 5) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC04-CALC-02",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '74 − 38 makes 36.', which is the question's own calculation restated with the answer; the walk script's teaching (borrowing because 4 < 8) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC04-CALC-03",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '48 × 6 makes 288.', which is the question's own calculation restated with the answer; the walk script's teaching (8 × 6 = 48 carry 4, tens give 28) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC04-CALC-04",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 20 - (8.40 + 5.75) (same value, £5.85). Replay '£8.40 + £5.75 makes £14.15', '£20.00 − £14.15 makes £5.85' matches the walk; distractor £11.60 no longer appears; correct."
+  },
+  {
+   "itemId": "MC04-CALC-05",
+   "verdict": "ATTEST",
+   "reason": "'2 ÷ 8 makes 0.25', answer 0.25 litres: the sharing step the walk describes; correct."
+  },
+  {
+   "itemId": "MC04-CALC-06",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '4,002 − 1,375 makes 2,627.', which is the question's own calculation restated with the answer; the walk script's teaching (borrowing across the zeros) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC04-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "4 × 25 = 100, 100 + 30 = 130, 130 − 62 = 68: the walk's total-then-take-away; correct."
+  },
+  {
+   "itemId": "MC04-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "18 × 145 = 2,610, 2,610 + 320 = 2,930, 4,120 − 2,930 = 1,190: seats sold first, as the walk says; correct."
+  },
+  {
+   "itemId": "MC04-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "'40 ÷ 4 makes 10': sharing into four as the walk says; correct."
+  },
+  {
+   "itemId": "MC04-FDP-03",
+   "verdict": "ATTEST",
+   "reason": "'1 ÷ 2 makes 0.5' shows the walk's rule (a fraction line means divide); correct."
+  },
+  {
+   "itemId": "MC04-FDP-07",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to (32 - 32 / 8 * 3) / 4 (same value, 5). Replay '32 ÷ 8 makes 4', '4 × 3 makes 12', '32 − 12 makes 20', '20 ÷ 4 makes 5' matches the walk (dark first, the rest, a quarter of the rest); the 96 is gone; all correct."
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "verdict": "REFUSE",
+   "reason": "Nine step lines, and the first three ('40 × 3 makes 120', '120 ÷ 5 makes 24', '40 − 24 makes 16') are printed TWICE because the expression repeats (40 - 40 * 3 / 5). 120 litres is also meaningless in a 40-litre tank. Walk: 3/5 of 40 is 24, leaving 16; a quarter of 16 is 4; 12 left. Numbers right, walk confusing and repetitive (criteria 1 and 5)."
+  },
+  {
+   "itemId": "MC04-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "18 + 7 = 25, 2 × 25 = 50, answer 50 cm: matches the walk; correct."
+  },
+  {
+   "itemId": "MC04-GEOM-03",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 180 - (65 + 48) (same value, 67). Replay '65 + 48 makes 113', '180 − 113 makes 67' matches the walk's 113; distractor 115 no longer appears; answer 67 degrees; correct."
+  },
+  {
+   "itemId": "MC04-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "12 × 8 = 96, 4 × 7 = 28, 96 − 28 = 68, answer 68 cm²: matches the walk; correct."
+  },
+  {
+   "itemId": "MC04-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "180 − 50 = 130, 130 ÷ 2 = 65, answer 65 degrees: matches the walk; correct."
+  },
+  {
+   "itemId": "MC04-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "'£7.00 − £2.80 makes £4.20': £7 written as £7.00 as the walk teaches; correct."
+  },
+  {
+   "itemId": "MC04-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "'84 − 57 makes 27', answer 27 cm: the difference; correct."
+  },
+  {
+   "itemId": "MC04-MEAS-04",
+   "verdict": "ATTEST",
+   "reason": "'£10.00 − £6.05 makes £3.95': keeps the middle zero the walk stresses; correct."
+  },
+  {
+   "itemId": "MC04-MEAS-05",
+   "verdict": "ATTEST",
+   "reason": "Round 2 re-read, last line changed: '3 × 1,000 makes 3,000', '3,000 − 200 makes 2,800', 'So the answer is 2,800 g.' Convert then subtract, as the walk says; correct; commas consistent."
+  },
+  {
+   "itemId": "MC04-MEAS-06",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 5 - (2.45 + 1.30) (same value, £1.25; float 1.2499… renders exactly as £1.25). Replay '£2.45 + £1.30 makes £3.75', '£5.00 − £3.75 makes £1.25' matches the walk's 3.75 then 1.25; correct."
+  },
+  {
+   "itemId": "MC04-MEAS-07",
+   "verdict": "ATTEST",
+   "reason": "'3 × £2.35 makes £7.05', '£10.00 − £7.05 makes £2.95': the walk's two steps; count without £; correct."
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "verdict": "ATTEST",
+   "reason": "'6,970 + 100 makes 7,070': correct and agrees with the walk's answer; light but acceptable."
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "verdict": "ATTEST",
+   "reason": "'9,400 + 1,000 makes 10,400': correct, matches the walk's answer; acceptable."
+  },
+  {
+   "itemId": "MC04-NPV-06",
+   "verdict": "ATTEST",
+   "reason": "Round 2 re-read, last line changed: '5 − 8 makes −3', 'So the answer is −3.' Turns 'falls by 8' into the subtraction across zero the walk counts; correct; minus sign now consistent. Still no °C on the answer, inherited from the key's options; not misleading."
+  },
+  {
+   "itemId": "MC04-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "8 + 12 = 20, 20 + 9 = 29, 29 + 7 = 36: running total as the walk says; correct."
+  },
+  {
+   "itemId": "MC04-STATS-02",
+   "verdict": "ATTEST",
+   "reason": "Running total 14, 19, 28, 40 then 40 ÷ 5 = 8: the walk's 'total, then share'; correct."
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '465 + 218 makes 683.', which is the question's own calculation restated with the answer; the walk script's teaching (carrying from 5 + 8) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC05-CALC-02",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '83 − 46 makes 37.', which is the question's own calculation restated with the answer; the walk script's teaching (borrowing because 3 < 6) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC05-CALC-03",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '57 × 4 makes 228.', which is the question's own calculation restated with the answer; the walk script's teaching (7 × 4 = 28 carry 2) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC05-CALC-04",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 20 - (7.65 + 2.80) (same value, £9.55). Replay '£7.65 + £2.80 makes £10.45', '£20.00 − £10.45 makes £9.55' matches the walk's £10.45; distractor £12.35 no longer appears; correct."
+  },
+  {
+   "itemId": "MC05-CALC-05",
+   "verdict": "ATTEST",
+   "reason": "'3 ÷ 6 makes 0.5', answer 0.5 litres: the sharing step; correct."
+  },
+  {
+   "itemId": "MC05-CALC-06",
+   "verdict": "REFUSE",
+   "reason": "Replay is one line, '6,003 − 2,548 makes 3,455.', which is the question's own calculation restated with the answer; the walk script's teaching (borrowing across the zeros) is not in it. The intro promises 'one step at a time' and no step is shown, so for a child who got it wrong this is the key, not a walk. Arithmetic correct; refused on teaching value (criterion 5)."
+  },
+  {
+   "itemId": "MC05-CALC-07",
+   "verdict": "ATTEST",
+   "reason": "5 × 24 = 120, 120 + 18 = 138, 138 − 96 = 42: matches the walk; correct."
+  },
+  {
+   "itemId": "MC05-CALC-08",
+   "verdict": "ATTEST",
+   "reason": "16 × 120 = 1,920, 1,920 + 275 = 2,195, 3,150 − 2,195 = 955: seats sold first, as the walk says; correct."
+  },
+  {
+   "itemId": "MC05-FDP-02",
+   "verdict": "ATTEST",
+   "reason": "18 ÷ 3 = 6, 6 × 2 = 12: one third then two parts as the walk says; correct."
+  },
+  {
+   "itemId": "MC05-FDP-04",
+   "verdict": "ATTEST",
+   "reason": "'1 ÷ 5 makes 0.2': fraction as division; agrees with the walk's answer 0.2; correct."
+  },
+  {
+   "itemId": "MC05-FDP-05",
+   "verdict": "ATTEST",
+   "reason": "Reorder 48 - 48 / 100 * 25 equals the original (36). '48 ÷ 100 makes 0.48', '0.48 × 25 makes 12', '48 − 12 makes 36': sweets are counts and correctly carry no £; agrees with the walk (12 eaten, 36 left); correct."
+  },
+  {
+   "itemId": "MC05-FDP-08",
+   "verdict": "ATTEST",
+   "reason": "Reorder 64 - 64 / 100 * 25 equals the original (48). '£64 ÷ 100 makes £0.64', '£0.64 × 25 makes £16', '£64 − £16 makes £48' follows the walk (discount, then take it away); correct; removes the meaningless '£64 × 25 makes £1,600'."
+  },
+  {
+   "itemId": "MC05-GEOM-01",
+   "verdict": "ATTEST",
+   "reason": "18 + 9 = 27, 2 × 27 = 54, answer 54 cm: matches the walk; correct."
+  },
+  {
+   "itemId": "MC05-GEOM-02",
+   "verdict": "ATTEST",
+   "reason": "'180 − 137 makes 43', answer 43°: the straight-line step; correct."
+  },
+  {
+   "itemId": "MC05-GEOM-04",
+   "verdict": "ATTEST",
+   "reason": "48 ÷ 8 = 6, 8 + 6 = 14, 2 × 14 = 28, answer 28 cm: width first, then perimeter, as the walk says; correct."
+  },
+  {
+   "itemId": "MC05-GEOM-05",
+   "verdict": "ATTEST",
+   "reason": "12 × 8 = 96, 5 × 4 = 20, 96 − 20 = 76, answer 76 cm²: matches the walk; correct."
+  },
+  {
+   "itemId": "MC05-GEOM-06",
+   "verdict": "ATTEST",
+   "reason": "Round 2, reordered to 180 - ((180 - 140) + 30) (same value, 110). Replay '180 − 140 makes 40', '40 + 30 makes 70', '180 − 70 makes 110': straight line, then the known angles together, then from 180. The loop back to 140 is gone; agrees with the walk; correct."
+  },
+  {
+   "itemId": "MC05-MEAS-01",
+   "verdict": "ATTEST",
+   "reason": "'£8.00 − £3.40 makes £4.60': £8 as £8.00 as the walk teaches; correct."
+  },
+  {
+   "itemId": "MC05-MEAS-02",
+   "verdict": "ATTEST",
+   "reason": "'4,000 ÷ 1,000 makes 4', answer 4 kg: the walk's conversion; correct."
+  },
+  {
+   "itemId": "MC05-MEAS-03",
+   "verdict": "ATTEST",
+   "reason": "'£1.70 + £2.60 makes £4.30': correct and agrees with the walk's total; the pence carry the walk explains is not shown but nothing contradicts it."
+  },
+  {
+   "itemId": "MC05-MEAS-04",
+   "verdict": "ATTEST",
+   "reason": "'74 − 29 makes 45', answer 45 cm: the difference; correct."
+  },
+  {
+   "itemId": "MC05-MEAS-06",
+   "verdict": "ATTEST",
+   "reason": "'375 + 246 makes 621', answer 621 g: the addition the word problem asks for; correct."
+  },
+  {
+   "itemId": "MC05-MEAS-07",
+   "verdict": "ATTEST",
+   "reason": "'3 × £1.15 makes £3.45', '£5.00 − £3.45 makes £1.55': cost then change, as the walk says; correct."
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "verdict": "ATTEST",
+   "reason": "'5,960 + 100 makes 6,060': correct, agrees with the walk's answer; light but acceptable."
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "verdict": "ATTEST",
+   "reason": "'9,500 + 1,000 makes 10,500': correct, matches the walk's answer; acceptable."
+  },
+  {
+   "itemId": "MC05-NPV-06",
+   "verdict": "ATTEST",
+   "reason": "Round 2 re-read, last line changed: '6 − 10 makes −4', 'So the answer is −4.' Turns 'falls by 10' into the subtraction across zero; correct; minus sign now consistent. Still no °C, inherited from the key."
+  },
+  {
+   "itemId": "MC05-STATS-01",
+   "verdict": "ATTEST",
+   "reason": "14 + 10 = 24, 9 + 8 = 17, 24 − 17 = 7: 'add each group before you compare'; correct."
+  },
+  {
+   "itemId": "MC05-STATS-02",
+   "verdict": "ATTEST",
+   "reason": "Running total 15, 22, 32, 40 then 40 ÷ 5 = 8: total then share, as the walk says; correct."
+  }
+ ]
+}

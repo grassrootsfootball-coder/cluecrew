@@ -1,0 +1,92 @@
+{
+ "door": "ci-fix/notation-01-r3",
+ "proposer": "agent",
+ "seats": [],
+ "redrafts": [],
+ "rebuilds": [
+  {
+   "itemId": "MC04-NPV-06",
+   "why": "House notation: every option a temperature with the degree sign and a true minus sign (\"-3\" → \"−3°C\"). Same values, same tags; executions written for the three distractors, which had none. Round 2 (rev-agent-01): the one-step-off option −2°C (maths-107) is replaced by 13°C, the sum instead of the difference (maths-72), so no option is linked to two others and the key is not the smaller of a one-apart pair. The maths-71 execution now names the mechanism exactly. Round 3 (rev-agent-01): the walk's last sentence names the three traps now on the row (positive, adding, not starting from the temperature), and the maths-71 execution produces the option's own value (counting down from zero).",
+   "stem": {
+    "text": "The temperature is 5°C. It falls by 8°C. What is the new temperature?"
+   },
+   "options": [
+    {
+     "optionId": "cmteorei7000otm2c91e7nkr0",
+     "value": "−3°C",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteorei7000ptm2c5h6bar7w",
+     "value": "3°C",
+     "isKey": false,
+     "tag": "maths-66-negative-number-miscount",
+     "execution": "The child loses the minus sign, or turns back at zero: 5 − 8 is −3, not 3. That gives 3°C instead of −3°C."
+    },
+    {
+     "optionId": "cmteorei7000qtm2coanpyddp",
+     "value": "13°C",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child adds instead of taking away: 5 + 8 makes 13. A fall means taking away, so 5 − 8 is −3, which gives −3°C."
+    },
+    {
+     "optionId": "cmteorei7000rtm2cei3dj4ft",
+     "value": "−8°C",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "execution": "The child counts 8 down from zero instead of from 5°C, so they never use the starting temperature. That gives −8°C. Starting at 5°C, a fall of 8 gives −3°C."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start at five and count downwards. Cross zero into the minus numbers. Eight steps down from five lands on minus three. The traps keep it positive, add instead of taking away, or forget to start from five."
+   }
+  },
+  {
+   "itemId": "MC05-NPV-06",
+   "why": "House notation: every option a temperature with the degree sign and a true minus sign (\"-3\" → \"−3°C\"). Same values, same tags; executions written for the three distractors, which had none. Round 2 (rev-agent-01): the one-step-off option −3°C (maths-107) is replaced by 16°C, the sum instead of the difference (maths-72), so no option is linked to two others and the key is not the smaller of a one-apart pair. The maths-71 execution now names the mechanism exactly. Round 3 (rev-agent-01): the walk's last sentence names the three traps now on the row (positive, adding, not starting from the temperature), and the maths-71 execution produces the option's own value (counting down from zero).",
+   "stem": {
+    "text": "The temperature is 6°C. It falls by 10°C. What is the new temperature?"
+   },
+   "options": [
+    {
+     "optionId": "cmteoreiv0016tm2c3r0n3yir",
+     "value": "−4°C",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmteoreiv0017tm2cz1g3o3m5",
+     "value": "4°C",
+     "isKey": false,
+     "tag": "maths-66-negative-number-miscount",
+     "execution": "The child loses the minus sign, or turns back at zero: 6 − 10 is −4, not 4. That gives 4°C instead of −4°C."
+    },
+    {
+     "optionId": "cmteoreiv0018tm2chdbtcxna",
+     "value": "16°C",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "execution": "The child adds instead of taking away: 6 + 10 makes 16. A fall means taking away, so 6 − 10 is −4, which gives −4°C."
+    },
+    {
+     "optionId": "cmteoreiv0019tm2ca7e7hbc3",
+     "value": "−10°C",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "execution": "The child counts 10 down from zero instead of from 6°C, so they never use the starting temperature. That gives −10°C. Starting at 6°C, a fall of 10 gives −4°C."
+    }
+   ],
+   "explanationPatch": {
+    "walkScript": "Start at six and count downwards. Cross zero into the minus numbers. Ten steps down from six lands on minus four. The traps keep it positive, add instead of taking away, or forget to start from six."
+   }
+  }
+ ],
+ "notes": {
+  "MC04-NPV-06": "House notation: every option a temperature with the degree sign and a true minus sign (\"-3\" → \"−3°C\"). Same values, same tags; executions written for the three distractors, which had none. Round 2 (rev-agent-01): the one-step-off option −2°C (maths-107) is replaced by 13°C, the sum instead of the difference (maths-72), so no option is linked to two others and the key is not the smaller of a one-apart pair. The maths-71 execution now names the mechanism exactly. Round 3 (rev-agent-01): the walk's last sentence names the three traps now on the row (positive, adding, not starting from the temperature), and the maths-71 execution produces the option's own value (counting down from zero).",
+  "MC05-NPV-06": "House notation: every option a temperature with the degree sign and a true minus sign (\"-3\" → \"−3°C\"). Same values, same tags; executions written for the three distractors, which had none. Round 2 (rev-agent-01): the one-step-off option −3°C (maths-107) is replaced by 16°C, the sum instead of the difference (maths-72), so no option is linked to two others and the key is not the smaller of a one-apart pair. The maths-71 execution now names the mechanism exactly. Round 3 (rev-agent-01): the walk's last sentence names the three traps now on the row (positive, adding, not starting from the temperature), and the maths-71 execution produces the option's own value (counting down from zero)."
+ }
+}

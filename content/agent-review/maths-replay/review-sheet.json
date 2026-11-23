@@ -1,0 +1,3749 @@
+{
+ "door": "maths-replay",
+ "rows": [
+  {
+   "itemId": "MC01-CALC-02",
+   "questionType": "maths-calc",
+   "question": "Work out 62 - 27.",
+   "options": [
+    "35  ← key",
+    "45",
+    "30",
+    "40"
+   ],
+   "solution": "62 - 27",
+   "walkScript": "Line up tens and ones. In the ones, 2 is smaller than 7, so borrow a ten. Then 12 minus 7 is 5, and 5 minus 2 is 3, giving 35. The classic slip takes the smaller digit from the larger each time.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "62 − 27 makes 35.",
+    "So the answer is 35."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "62 − 27 makes 35.",
+    "So the answer is 35."
+   ]
+  },
+  {
+   "itemId": "MC01-CALC-07",
+   "questionType": "maths-calc",
+   "question": "A box holds 6 eggs. A cafe has 4 full boxes and 3 loose eggs. They use 15 eggs. How many eggs are left?",
+   "options": [
+    "12  ← key",
+    "9",
+    "27",
+    "42"
+   ],
+   "solution": "4 * 6 + 3 - 15",
+   "walkScript": "First find how many eggs there are in total. Four sixes make 24, plus 3 loose eggs is 27. Take away the 15 used to leave 12. One slip forgets the loose eggs or adds what was used.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "4 × 6 makes 24.",
+    "24 + 3 makes 27.",
+    "27 − 15 makes 12.",
+    "So the answer is 12."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "4 × 6 makes 24.",
+    "24 + 3 makes 27.",
+    "27 − 15 makes 12.",
+    "So the answer is 12."
+   ]
+  },
+  {
+   "itemId": "MC01-CALC-08",
+   "questionType": "maths-calc",
+   "question": "A stadium has 8,006 seats. On Saturday 3,478 seats were filled. How many seats were empty?",
+   "options": [
+    "4528  ← key",
+    "4522",
+    "4500",
+    "4008"
+   ],
+   "solution": "8006 - 3478",
+   "walkScript": "Take the filled seats from the total seats. Line up the columns and borrow carefully across the zeros. 8006 minus 3478 is 4528. The classic slip takes each smaller digit from the larger, or adds instead.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "8,006 − 3,478 makes 4,528.",
+    "So the answer is 4,528."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "8,006 − 3,478 makes 4,528.",
+    "So the answer is 4,528."
+   ]
+  },
+  {
+   "itemId": "MC01-FDP-02",
+   "questionType": "maths-fdp",
+   "question": "What is 2/3 of 12?",
+   "options": [
+    "8  ← key",
+    "4",
+    "24",
+    "18"
+   ],
+   "solution": "12 / 3 * 2",
+   "walkScript": "To find two thirds, first find one third. 12 divided by 3 is 4 for one part. Two parts make 4 times 2, which is 8. A common slip stops at one part or flips the fraction.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "12 ÷ 3 makes 4.",
+    "4 × 2 makes 8.",
+    "So the answer is 8."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "12 ÷ 3 makes 4.",
+    "4 × 2 makes 8.",
+    "So the answer is 8."
+   ]
+  },
+  {
+   "itemId": "MC01-FDP-03",
+   "questionType": "maths-fdp",
+   "question": "What is 25% of £80?",
+   "options": [
+    "£20  ← key",
+    "£55",
+    "£2000",
+    "£40"
+   ],
+   "solution": "80 * 25 / 100",
+   "walkScript": "25% means one quarter. Find a quarter of 80 by sharing into four. 80 divided by 4 is 20, so £20. The catch takes 25 off, forgets to divide by 100, or halves instead.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£80 × 25 makes £2,000.",
+    "£2,000 ÷ 100 makes £20.",
+    "So the answer is £20."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "80 / 100 * 25",
+   "reorderWhy": "percentage walked by the 1% method: 80 ÷ 100, then × 25 (same value as \"80 * 25 / 100\")",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£80 ÷ 100 makes £0.80.",
+    "£0.80 × 25 makes £20.",
+    "So the answer is £20."
+   ]
+  },
+  {
+   "itemId": "MC01-FDP-04",
+   "questionType": "maths-fdp",
+   "question": "A jug holds 4 litres of juice. Half of it is poured away. How many half-litre glasses can be filled from what is left?",
+   "options": [
+    "4  ← key",
+    "8",
+    "1",
+    "2"
+   ],
+   "solution": "4 / 2 / (1 / 2)",
+   "walkScript": "Start by taking half of the 4 litres poured away, which leaves 2 litres. Now share those 2 litres into half-litre glasses. Two halves make a litre, so 2 litres fill 4 glasses. The trap answers skip the pouring step or turn the half upside down.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "4 ÷ 2 makes 2.",
+    "1 ÷ 2 makes 0.5.",
+    "2 ÷ 0.5 makes 4.",
+    "So the answer is 4."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "4 ÷ 2 makes 2.",
+    "1 ÷ 2 makes 0.5.",
+    "2 ÷ 0.5 makes 4.",
+    "So the answer is 4."
+   ]
+  },
+  {
+   "itemId": "MC01-FDP-07",
+   "questionType": "maths-fdp",
+   "question": "In a class of 30 children, 2/5 walk to school. Of the children who are left, half come by car. How many children come by car?",
+   "options": [
+    "9  ← key",
+    "15",
+    "6",
+    "18"
+   ],
+   "solution": "(30 - 30 * 2 / 5) / 2",
+   "walkScript": "Name the groups first. Two fifths of 30 walk, which is 12. The other 18 are the rest, and half of them is 9. A slip halves the whole class, or the other group.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "30 × 2 makes 60.",
+    "60 ÷ 5 makes 12.",
+    "30 − 12 makes 18.",
+    "18 ÷ 2 makes 9.",
+    "So the answer is 9."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "(30 - 30 / 5 * 2) / 2",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to divide first, as the walk finds a fraction of an amount",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "30 ÷ 5 makes 6.",
+    "6 × 2 makes 12.",
+    "30 − 12 makes 18.",
+    "18 ÷ 2 makes 9.",
+    "So the answer is 9."
+   ]
+  },
+  {
+   "itemId": "MC01-FDP-08",
+   "questionType": "maths-fdp",
+   "question": "A bag holds 3/4 kg of rice. How many bags can be filled from 15 kg of rice?",
+   "options": [
+    "20  ← key",
+    "11.25",
+    "5",
+    "15"
+   ],
+   "solution": "15 / (3 / 4)",
+   "walkScript": "Dividing by 3/4 asks how many three-quarters fit in 15. Flip the divisor: 15 times 4/3 is 20 bags. The classic slip multiplies by the fraction, or misreads three-quarters.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "3 ÷ 4 makes 0.75.",
+    "15 ÷ 0.75 makes 20.",
+    "So the answer is 20."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "3 ÷ 4 makes 0.75.",
+    "15 ÷ 0.75 makes 20.",
+    "So the answer is 20."
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-01",
+   "questionType": "maths-geom",
+   "question": "A rectangle is 8 cm long and 3 cm wide. What is its perimeter?",
+   "options": [
+    "22 cm  ← key",
+    "24 cm",
+    "11 cm",
+    "19 cm"
+   ],
+   "solution": "2 * (8 + 3)",
+   "walkScript": "Perimeter is the distance all the way round. A rectangle has two long sides and two short sides. Add one long and one short, then double it. That gives 22 cm. The trap answer swaps perimeter for area.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "8 + 3 makes 11.",
+    "2 × 11 makes 22.",
+    "So the answer is 22 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "8 + 3 makes 11.",
+    "2 × 11 makes 22.",
+    "So the answer is 22 cm."
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-02",
+   "questionType": "maths-geom",
+   "question": "Two angles sit together on a straight line. One angle is 125°. What is the size of the other angle?",
+   "options": [
+    "235°",
+    "55°  ← key",
+    "35°",
+    "65°"
+   ],
+   "solution": "180 - 125",
+   "walkScript": "Angles on a straight line always add to 180°. Start with 180 and take away the 125° you know. The angle left is 55°. The trap answer subtracts the digits the other way.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 125 makes 55.",
+    "So the answer is 55°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 125 makes 55.",
+    "So the answer is 55°."
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-05",
+   "questionType": "maths-geom",
+   "question": "An L-shape is made from a rectangle 10 cm by 6 cm. A corner 4 cm by 3 cm is cut out. What is the area of the L-shape?",
+   "options": [
+    "60 cm²",
+    "32 cm²",
+    "12 cm²",
+    "48 cm²  ← key"
+   ],
+   "solution": "10 * 6 - 4 * 3",
+   "walkScript": "Get the totals first. The whole rectangle is 10 times 6, which is 60 cm². The cut-out corner is 4 times 3, which is 12 cm². Take the cut away to leave 48 cm². The trap answer measures round the edge instead.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "10 × 6 makes 60.",
+    "4 × 3 makes 12.",
+    "60 − 12 makes 48.",
+    "So the answer is 48 cm²."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "10 × 6 makes 60.",
+    "4 × 3 makes 12.",
+    "60 − 12 makes 48.",
+    "So the answer is 48 cm²."
+   ]
+  },
+  {
+   "itemId": "MC01-GEOM-06",
+   "questionType": "maths-geom",
+   "question": "A triangle has one angle of 40°. The other two angles are equal to each other. What is the size of each equal angle?",
+   "options": [
+    "140°",
+    "70°  ← key",
+    "160°",
+    "50°"
+   ],
+   "solution": "(180 - 40) / 2",
+   "walkScript": "The three angles in a triangle add to 180°. Take the 40° away to leave 140° for the two equal angles. Share that 140° into two. Each angle is 70°.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 40 makes 140.",
+    "140 ÷ 2 makes 70.",
+    "So the answer is 70°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 40 makes 140.",
+    "140 ÷ 2 makes 70.",
+    "So the answer is 70°."
+   ]
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "questionType": "maths-meas",
+   "question": "Sam has £5. He buys a book that costs £3.50. How much change does he get?",
+   "options": [
+    "£2.00",
+    "£1.00",
+    "£1.50  ← key",
+    "£2.50"
+   ],
+   "solution": "5 - 3.50",
+   "walkScript": "Change means the totals must line up. Put £5 as £5.00. Take the £3.50 away, pounds and pence together. That leaves £1.50.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£5.00 − £3.50 makes £1.50.",
+    "So the answer is £1.50."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£5.00 − £3.50 makes £1.50.",
+    "So the answer is £1.50."
+   ]
+  },
+  {
+   "itemId": "MC01-MEAS-02",
+   "questionType": "maths-meas",
+   "question": "A ribbon is 90 cm long. Mia cuts off 35 cm. How many cm are left?",
+   "options": [
+    "55 cm  ← key",
+    "65 cm",
+    "50 cm",
+    "60 cm"
+   ],
+   "solution": "90 - 35",
+   "walkScript": "This is a take-away. Start at 90 cm, the whole ribbon. Cut off 35 cm. What is left is 55 cm.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "90 − 35 makes 55.",
+    "So the answer is 55 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "90 − 35 makes 55.",
+    "So the answer is 55 cm."
+   ]
+  },
+  {
+   "itemId": "MC01-NPV-02",
+   "questionType": "maths-npv",
+   "question": "What number is 100 more than 4,970?",
+   "options": [
+    "5070  ← key",
+    "4980",
+    "4870",
+    "4070"
+   ],
+   "solution": "4970 + 100",
+   "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 5,070. A common slip forgets to carry or adds to the next column along.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "4,970 + 100 makes 5,070.",
+    "So the answer is 5,070."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "4,970 + 100 makes 5,070.",
+    "So the answer is 5,070."
+   ]
+  },
+  {
+   "itemId": "MC01-NPV-07",
+   "questionType": "maths-npv",
+   "question": "How many hundreds are there altogether in 3,400?",
+   "options": [
+    "34  ← key",
+    "4",
+    "340",
+    "3"
+   ],
+   "solution": "3400 / 100",
+   "walkScript": "How many hundreds fit into 3400? Share it into groups of one hundred. 3400 divided by 100 gives 34 hundreds. A slip reads one digit or divides by a different power of ten.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "3,400 ÷ 100 makes 34.",
+    "So the answer is 34."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "3,400 ÷ 100 makes 34.",
+    "So the answer is 34."
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-01",
+   "questionType": "maths-stats",
+   "question": "A table shows books read this week: Ava 6, Ben 3, Cara 7, Dev 4. How many books did they read in total?",
+   "options": [
+    "16",
+    "4",
+    "20  ← key",
+    "7"
+   ],
+   "solution": "6 + 3 + 7 + 4",
+   "walkScript": "Total means add every row. Take Ava's 6, Ben's 3, Cara's 7 and Dev's 4. Put them all together to make 20.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6 + 3 makes 9.",
+    "9 + 7 makes 16.",
+    "16 + 4 makes 20.",
+    "So the answer is 20."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6 + 3 makes 9.",
+    "9 + 7 makes 16.",
+    "16 + 4 makes 20.",
+    "So the answer is 20."
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-03",
+   "questionType": "maths-stats",
+   "question": "In four spelling tests Priya scored 7, 9, 6 and 10. What is her mean (average) score?",
+   "options": [
+    "32",
+    "16",
+    "4",
+    "8  ← key"
+   ],
+   "solution": "(7 + 9 + 6 + 10) / 4",
+   "walkScript": "Mean has two steps: total, then share. Add the four scores to get 32. There are 4 tests, so share 32 by 4. The mean is 8.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "7 + 9 makes 16.",
+    "16 + 6 makes 22.",
+    "22 + 10 makes 32.",
+    "32 ÷ 4 makes 8.",
+    "So the answer is 8."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "7 + 9 makes 16.",
+    "16 + 6 makes 22.",
+    "22 + 10 makes 32.",
+    "32 ÷ 4 makes 8.",
+    "So the answer is 8."
+   ]
+  },
+  {
+   "itemId": "MC01-STATS-04",
+   "questionType": "maths-stats",
+   "question": "The mean of five numbers is 6. Four of the numbers are 4, 8, 5 and 9. What is the fifth number?",
+   "options": [
+    "6.5",
+    "4  ← key",
+    "30",
+    "6"
+   ],
+   "solution": "5 * 6 - (4 + 8 + 5 + 9)",
+   "walkScript": "Work back from the total. Five numbers with a mean of 6 must add to 30. The four you have add to 26. So the fifth number is 30 take away 26, which is 4.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "5 × 6 makes 30.",
+    "4 + 8 makes 12.",
+    "12 + 5 makes 17.",
+    "17 + 9 makes 26.",
+    "30 − 26 makes 4.",
+    "So the answer is 4."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "5 × 6 makes 30.",
+    "4 + 8 makes 12.",
+    "12 + 5 makes 17.",
+    "17 + 9 makes 26.",
+    "30 − 26 makes 4.",
+    "So the answer is 4."
+   ]
+  },
+  {
+   "itemId": "MC02-CALC-01",
+   "questionType": "maths-calc",
+   "question": "Work out 456 + 237.",
+   "options": [
+    "693  ← key",
+    "293",
+    "683",
+    "6813"
+   ],
+   "solution": "456 + 237",
+   "walkScript": "Line up the columns and add from the right. Six plus seven makes thirteen, so carry the ten. Keep going to reach 693. The trap drops a carry or loses a whole digit.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "456 + 237 makes 693.",
+    "So the answer is 693."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "456 + 237 makes 693.",
+    "So the answer is 693."
+   ]
+  },
+  {
+   "itemId": "MC02-CALC-02",
+   "questionType": "maths-calc",
+   "question": "Work out 582 - 147.",
+   "options": [
+    "435  ← key",
+    "430",
+    "445",
+    "440"
+   ],
+   "solution": "582 - 147",
+   "walkScript": "Line up the tens and ones under each other. In the ones, borrow because 2 is under 7. Work each column to reach 435. A common slip takes the smaller digit from the larger.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "582 − 147 makes 435.",
+    "So the answer is 435."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "582 − 147 makes 435.",
+    "So the answer is 435."
+   ]
+  },
+  {
+   "itemId": "MC02-CALC-03",
+   "questionType": "maths-calc",
+   "question": "Work out 34 x 8.",
+   "options": [
+    "272  ← key",
+    "32",
+    "242",
+    "302"
+   ],
+   "solution": "34 * 8",
+   "walkScript": "Multiply the ones first, then the tens. Four times eight is 32, so carry the three. Three times eight plus three gives 27, making 272. A slip forgets the carry or uses one digit only.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "34 × 8 makes 272.",
+    "So the answer is 272."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "34 × 8 makes 272.",
+    "So the answer is 272."
+   ]
+  },
+  {
+   "itemId": "MC02-CALC-04",
+   "questionType": "maths-calc",
+   "question": "Tom has £10.00. He buys a comic for £3.45 and a drink for £1.80. How much change does he get?",
+   "options": [
+    "£4.75  ← key",
+    "£3.75",
+    "£6.55",
+    "£6.00"
+   ],
+   "solution": "10.00 - 3.45 - 1.80",
+   "walkScript": "Add the two prices to find the total spent. That comes to £5.25 altogether. Take it from £10.00 to leave £4.75. The trap forgets an item or rounds the prices.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£10.00 − £3.45 makes £6.55.",
+    "£6.55 − £1.80 makes £4.75.",
+    "So the answer is £4.75."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "10.00 - (3.45 + 1.80)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to add the total first, as the walk does",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£3.45 + £1.80 makes £5.25.",
+    "£10.00 − £5.25 makes £4.75.",
+    "So the answer is £4.75."
+   ]
+  },
+  {
+   "itemId": "MC02-CALC-05",
+   "questionType": "maths-calc",
+   "question": "Work out 4,872 divided by 4.",
+   "options": [
+    "1218  ← key",
+    "218",
+    "1210",
+    "1200"
+   ],
+   "solution": "4872 / 4",
+   "walkScript": "Share 4,872 into four equal groups, column by column. Carry each leftover to the next digit along. The answer is 1,218. A slip drops the leftovers or loses a whole digit.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "4,872 ÷ 4 makes 1,218.",
+    "So the answer is 1,218."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "4,872 ÷ 4 makes 1,218.",
+    "So the answer is 1,218."
+   ]
+  },
+  {
+   "itemId": "MC02-CALC-06",
+   "questionType": "maths-calc",
+   "question": "Work out 3,458 + 2,673.",
+   "options": [
+    "6131  ← key",
+    "3131",
+    "6031",
+    "6141"
+   ],
+   "solution": "3458 + 2673",
+   "walkScript": "Set the numbers in columns and add from the right. Carry a ten whenever a column passes nine. The total is 6,131. Watch for a dropped carry or a missing digit.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "3,458 + 2,673 makes 6,131.",
+    "So the answer is 6,131."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "3,458 + 2,673 makes 6,131.",
+    "So the answer is 6,131."
+   ]
+  },
+  {
+   "itemId": "MC02-CALC-07",
+   "questionType": "maths-calc",
+   "question": "A shop has 6 crates of apples. Each crate holds 48 apples. During the day 95 apples are sold. How many apples are left?",
+   "options": [
+    "193  ← key",
+    "288",
+    "383",
+    "200"
+   ],
+   "solution": "6 * 48 - 95",
+   "walkScript": "First find how many apples the crates hold. Six forty-eights make 288. Take away the 95 sold to leave 193. One slip skips the subtraction or rounds too soon.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6 × 48 makes 288.",
+    "288 − 95 makes 193.",
+    "So the answer is 193."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6 × 48 makes 288.",
+    "288 − 95 makes 193.",
+    "So the answer is 193."
+   ]
+  },
+  {
+   "itemId": "MC02-CALC-08",
+   "questionType": "maths-calc",
+   "question": "A cafe buys 12 trays of eggs. Each tray holds 30 eggs. 48 eggs break. The rest are packed into boxes of 6. How many boxes are filled?",
+   "options": [
+    "52  ← key",
+    "60",
+    "68",
+    "312"
+   ],
+   "solution": "(12 * 30 - 48) / 6",
+   "walkScript": "Work out the total eggs first: twelve thirties make 360. Take off the 48 that break, leaving 312. Share 312 into boxes of six to get 52. A slip forgets a step or rounds the total.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "12 × 30 makes 360.",
+    "360 − 48 makes 312.",
+    "312 ÷ 6 makes 52.",
+    "So the answer is 52."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "12 × 30 makes 360.",
+    "360 − 48 makes 312.",
+    "312 ÷ 6 makes 52.",
+    "So the answer is 52."
+   ]
+  },
+  {
+   "itemId": "MC02-FDP-02",
+   "questionType": "maths-fdp",
+   "question": "What is 3/4 of 24?",
+   "options": [
+    "18  ← key",
+    "6",
+    "32",
+    "8"
+   ],
+   "solution": "24 / 4 * 3",
+   "walkScript": "Divide by the bottom first, then times the top. A quarter of 24 is 6, so three quarters is 18. One trap stops at one part. Another turns the fraction upside down.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "24 ÷ 4 makes 6.",
+    "6 × 3 makes 18.",
+    "So the answer is 18."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "24 ÷ 4 makes 6.",
+    "6 × 3 makes 18.",
+    "So the answer is 18."
+   ]
+  },
+  {
+   "itemId": "MC02-FDP-03",
+   "questionType": "maths-fdp",
+   "question": "What is 40% of 60?",
+   "options": [
+    "6",
+    "24  ← key",
+    "20",
+    "150"
+   ],
+   "solution": "60 * 40 / 100",
+   "walkScript": "Percentages first become parts. One fifth of 60 is 12, so two fifths is 24. One trap finds only 10% and stops. Another takes 40 away from 60.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "60 × 40 makes 2,400.",
+    "2,400 ÷ 100 makes 24.",
+    "So the answer is 24."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "60 / 100 * 40",
+   "reorderWhy": "percentage walked by the 1% method: 60 ÷ 100, then × 40 (same value as \"60 * 40 / 100\")",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "60 ÷ 100 makes 0.6.",
+    "0.6 × 40 makes 24.",
+    "So the answer is 24."
+   ]
+  },
+  {
+   "itemId": "MC02-FDP-07",
+   "questionType": "maths-fdp",
+   "question": "A coat costs £80. In a sale it has 25% off. What is the sale price?",
+   "options": [
+    "£20",
+    "£55",
+    "£40",
+    "£60  ← key"
+   ],
+   "solution": "80 - 80 * 25 / 100",
+   "walkScript": "Find the discount first, then take it off. A quarter of £80 is £20, leaving £60. One trap gives the discount and stops. Another takes off £25 as pounds.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£80 × 25 makes £2,000.",
+    "£2,000 ÷ 100 makes £20.",
+    "£80 − £20 makes £60.",
+    "So the answer is £60."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "80 - 80 / 100 * 25",
+   "reorderWhy": "percentage walked by the 1% method: 80 ÷ 100, then × 25 (same value as \"80 - 80 * 25 / 100\")",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£80 ÷ 100 makes £0.80.",
+    "£0.80 × 25 makes £20.",
+    "£80 − £20 makes £60.",
+    "So the answer is £60."
+   ]
+  },
+  {
+   "itemId": "MC02-FDP-08",
+   "questionType": "maths-fdp",
+   "question": "A jar holds 40 marbles. 3/8 of them are blue. Two fifths of the marbles that are left are green. How many green marbles are there?",
+   "options": [
+    "16",
+    "10  ← key",
+    "15",
+    "25"
+   ],
+   "solution": "(40 - 40 * 3 / 8) * 2 / 5",
+   "walkScript": "Name the groups first. Three eighths of 40 are blue, which is 15. The other 25 remain, and two fifths of those is 10. A trap uses the whole 40, or stops early.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "40 × 3 makes 120.",
+    "120 ÷ 8 makes 15.",
+    "40 − 15 makes 25.",
+    "25 × 2 makes 50.",
+    "50 ÷ 5 makes 10.",
+    "So the answer is 10."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "(40 - 40 / 8 * 3) / 5 * 2",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to divide first, as the walk finds a fraction of an amount",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "40 ÷ 8 makes 5.",
+    "5 × 3 makes 15.",
+    "40 − 15 makes 25.",
+    "25 ÷ 5 makes 5.",
+    "5 × 2 makes 10.",
+    "So the answer is 10."
+   ]
+  },
+  {
+   "itemId": "MC02-GEOM-01",
+   "questionType": "maths-geom",
+   "question": "A rectangle is 9 cm long and 5 cm wide. What is its perimeter?",
+   "options": [
+    "28 cm  ← key",
+    "45 cm",
+    "14 cm",
+    "23 cm"
+   ],
+   "solution": "2 * (9 + 5)",
+   "walkScript": "Perimeter means the distance all the way round. A rectangle has two long sides and two short sides. Add one long and one short, then double: 28 cm. One trap gives the area, another leaves a side out.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "9 + 5 makes 14.",
+    "2 × 14 makes 28.",
+    "So the answer is 28 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "9 + 5 makes 14.",
+    "2 × 14 makes 28.",
+    "So the answer is 28 cm."
+   ]
+  },
+  {
+   "itemId": "MC02-GEOM-02",
+   "questionType": "maths-geom",
+   "question": "A triangle has two angles of 58 degrees and 67 degrees. What is the size of the third angle?",
+   "options": [
+    "55°  ← key",
+    "235°",
+    "65°",
+    "125°"
+   ],
+   "solution": "180 - 58 - 67",
+   "walkScript": "The three angles in a triangle always add to 180 degrees. Add the two you know: 58 and 67 make 125. Take 125 from 180 to leave 55 degrees. The trap stops at the sum or uses 360.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 58 makes 122.",
+    "122 − 67 makes 55.",
+    "So the answer is 55°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "180 - (58 + 67)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to follow the walk: the known angles together, then from 180",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "58 + 67 makes 125.",
+    "180 − 125 makes 55.",
+    "So the answer is 55°."
+   ]
+  },
+  {
+   "itemId": "MC02-GEOM-03",
+   "questionType": "maths-geom",
+   "question": "An isosceles triangle has a top angle of 46 degrees. The other two angles are equal. What is the size of each equal angle?",
+   "options": [
+    "67°  ← key",
+    "44°",
+    "12°",
+    "65°"
+   ],
+   "solution": "(180 - 46) / 2",
+   "walkScript": "Name the parts first: one top angle and two equal base angles. Take the 46 degrees from 180 to leave 134. Share that 134 into two equal angles: 67 each. One trap halves 180 first. Others round 46 to 50, or halve 134 one digit at a time.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 46 makes 134.",
+    "134 ÷ 2 makes 67.",
+    "So the answer is 67°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 46 makes 134.",
+    "134 ÷ 2 makes 67.",
+    "So the answer is 67°."
+   ]
+  },
+  {
+   "itemId": "MC02-GEOM-05",
+   "questionType": "maths-geom",
+   "question": "An L-shape is made from two rectangles joined together. The bottom rectangle is 10 cm by 4 cm. A smaller rectangle 3 cm by 5 cm sits on top at one end. What is the total area of the L-shape?",
+   "options": [
+    "55 cm²  ← key",
+    "40 cm²",
+    "90 cm²",
+    "22 cm²"
+   ],
+   "solution": "10 * 4 + 3 * 5",
+   "walkScript": "Split the L into two rectangles and total both areas. The bottom part is 10 times 4, or 40. The top part is 3 times 5, or 15. Together that makes 55 cm²; a trap stops after one part.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "10 × 4 makes 40.",
+    "3 × 5 makes 15.",
+    "40 + 15 makes 55.",
+    "So the answer is 55 cm²."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "10 × 4 makes 40.",
+    "3 × 5 makes 15.",
+    "40 + 15 makes 55.",
+    "So the answer is 55 cm²."
+   ]
+  },
+  {
+   "itemId": "MC02-GEOM-06",
+   "questionType": "maths-geom",
+   "question": "A triangle rests on a straight line. One angle of the triangle sits next to an angle of 110 degrees on that line. Another angle of the triangle is 25 degrees. What is the third angle of the triangle?",
+   "options": [
+    "85°  ← key",
+    "70°",
+    "265°",
+    "45°"
+   ],
+   "solution": "180 - (180 - 110) - 25",
+   "walkScript": "Two steps here: first the straight line, then the triangle. The angle inside the triangle is 180 minus 110, which is 70. Now the triangle's angles add to 180. Take away 70 and 25 to leave 85 degrees.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 110 makes 70.",
+    "180 − 70 makes 110.",
+    "110 − 25 makes 85.",
+    "So the answer is 85°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "180 - ((180 - 110) + 25)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to follow the walk: the known angles together, then from 180",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 110 makes 70.",
+    "70 + 25 makes 95.",
+    "180 − 95 makes 85.",
+    "So the answer is 85°."
+   ]
+  },
+  {
+   "itemId": "MC02-MEAS-01",
+   "questionType": "maths-meas",
+   "question": "Ben has £8. He buys a toy for £2.60. How much change does he get?",
+   "options": [
+    "£6.60",
+    "£6.00",
+    "£5.40  ← key",
+    "£10.60"
+   ],
+   "solution": "8 - 2.60",
+   "walkScript": "Line up the pounds and pence first. Write £8 as £8.00, then take £2.60 away. That leaves £5.40. One trap drops the pence.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£8.00 − £2.60 makes £5.40.",
+    "So the answer is £5.40."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£8.00 − £2.60 makes £5.40.",
+    "So the answer is £5.40."
+   ]
+  },
+  {
+   "itemId": "MC02-MEAS-02",
+   "questionType": "maths-meas",
+   "question": "A watermelon weighs 6000 g. What is its mass in kilograms?",
+   "options": [
+    "6 kg  ← key",
+    "60 kg",
+    "600 kg",
+    "6000000 kg"
+   ],
+   "solution": "6000 / 1000",
+   "walkScript": "A thousand grams make one kilogram. So share 6000 by 1000 to get 6 kg. One trap divides by too small a power of ten. Another multiplies instead of dividing.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6,000 ÷ 1,000 makes 6.",
+    "So the answer is 6 kg."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6,000 ÷ 1,000 makes 6.",
+    "So the answer is 6 kg."
+   ]
+  },
+  {
+   "itemId": "MC02-MEAS-03",
+   "questionType": "maths-meas",
+   "question": "A book costs £4.35 and a pen costs £2.50. What is the total cost?",
+   "options": [
+    "£2.85",
+    "£1.85",
+    "£6.00",
+    "£6.85  ← key"
+   ],
+   "solution": "4.35 + 2.50",
+   "walkScript": "Stack the pounds and pence in columns. Add £4.35 and £2.50 to make £6.85. One trap loses a whole digit from a column. Another drops the pence and adds only the pounds.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£4.35 + £2.50 makes £6.85.",
+    "So the answer is £6.85."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£4.35 + £2.50 makes £6.85.",
+    "So the answer is £6.85."
+   ]
+  },
+  {
+   "itemId": "MC02-MEAS-04",
+   "questionType": "maths-meas",
+   "question": "A blue ribbon is 85 cm long. A red ribbon is 48 cm long. How much longer is the blue ribbon?",
+   "options": [
+    "37 cm  ← key",
+    "43 cm",
+    "133 cm",
+    "35 cm"
+   ],
+   "solution": "85 - 48",
+   "walkScript": "This is a difference, so subtract. Take 48 from 85 to leave 37 cm. One trap adds the lengths instead. Another rounds 48 up and forgets to adjust.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "85 − 48 makes 37.",
+    "So the answer is 37 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "85 − 48 makes 37.",
+    "So the answer is 37 cm."
+   ]
+  },
+  {
+   "itemId": "MC02-MEAS-06",
+   "questionType": "maths-meas",
+   "question": "Amara buys 3 notebooks at £1.45 each. She pays with a £10 note. How much change does she get?",
+   "options": [
+    "£5.65  ← key",
+    "£8.55",
+    "£7.10",
+    "£14.35"
+   ],
+   "solution": "10 - 3 * 1.45",
+   "walkScript": "Total the cost before finding change. Three notebooks cost £4.35, so change is £5.65. One trap subtracts only one notebook. Another adds instead of taking away.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "3 × £1.45 makes £4.35.",
+    "£10.00 − £4.35 makes £5.65.",
+    "So the answer is £5.65."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "3 × £1.45 makes £4.35.",
+    "£10.00 − £4.35 makes £5.65.",
+    "So the answer is £5.65."
+   ]
+  },
+  {
+   "itemId": "MC02-NPV-02",
+   "questionType": "maths-npv",
+   "question": "A number is made from 5 thousands, 0 hundreds, 3 tens and 8 ones. What is the number?",
+   "options": [
+    "5038  ← key",
+    "538",
+    "50038",
+    "5308"
+   ],
+   "solution": "5 * 1000 + 0 * 100 + 3 * 10 + 8",
+   "walkScript": "Set out the columns from thousands down to ones. Place five, zero, three, eight in order. Hold the empty hundreds with a zero, giving 5,038. One slip drops that zero or shifts a digit across.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "5 × 1,000 makes 5,000.",
+    "0 × 100 makes 0.",
+    "5,000 + 0 makes 5,000.",
+    "3 × 10 makes 30.",
+    "5,000 + 30 makes 5,030.",
+    "5,030 + 8 makes 5,038.",
+    "So the answer is 5,038."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "5 × 1,000 makes 5,000.",
+    "0 × 100 makes 0.",
+    "5,000 + 0 makes 5,000.",
+    "3 × 10 makes 30.",
+    "5,000 + 30 makes 5,030.",
+    "5,030 + 8 makes 5,038.",
+    "So the answer is 5,038."
+   ]
+  },
+  {
+   "itemId": "MC02-RP-01",
+   "questionType": "maths-rp",
+   "question": "A recipe for 3 people uses 240 g of pasta. How much pasta is needed for 5 people?",
+   "options": [
+    "400 g  ← key",
+    "480 g",
+    "242 g",
+    "320 g"
+   ],
+   "solution": "240 / 3 * 5",
+   "walkScript": "Buy the relationship first: the pasta for one person. Share 240 g by 3 to get 80 g each. Five people need 80 g times 5, which is 400 g. A trap adds the extra people or scales by adding.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "240 ÷ 3 makes 80.",
+    "80 × 5 makes 400.",
+    "So the answer is 400 g."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "240 ÷ 3 makes 80.",
+    "80 × 5 makes 400.",
+    "So the answer is 400 g."
+   ]
+  },
+  {
+   "itemId": "MC02-STATS-01",
+   "questionType": "maths-stats",
+   "question": "A bar chart shows cakes sold: Monday 9, Tuesday 8, Wednesday 7. How many more cakes were sold on Monday and Wednesday together than on Tuesday?",
+   "options": [
+    "8  ← key",
+    "1",
+    "10",
+    "12"
+   ],
+   "solution": "9 + 7 - 8",
+   "walkScript": "Two moves: first add the two days, then compare. Monday and Wednesday together make 9 plus 7, or 16. Take Tuesday's 8 away to leave 8. A trap forgets a day or adds a different pair.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "9 + 7 makes 16.",
+    "16 − 8 makes 8.",
+    "So the answer is 8."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "9 + 7 makes 16.",
+    "16 − 8 makes 8.",
+    "So the answer is 8."
+   ]
+  },
+  {
+   "itemId": "MC02-STATS-02",
+   "questionType": "maths-stats",
+   "question": "The mean of five numbers is 7. Four of the numbers are 4, 9, 8 and 5. What is the fifth number?",
+   "options": [
+    "9  ← key",
+    "6.5",
+    "2",
+    "7"
+   ],
+   "solution": "5 * 7 - (4 + 9 + 8 + 5)",
+   "walkScript": "Work back from the total. Five numbers with a mean of 7 must add to 35. The four you have add to 26. So the fifth number is 35 minus 26, which is 9.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "5 × 7 makes 35.",
+    "4 + 9 makes 13.",
+    "13 + 8 makes 21.",
+    "21 + 5 makes 26.",
+    "35 − 26 makes 9.",
+    "So the answer is 9."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "5 × 7 makes 35.",
+    "4 + 9 makes 13.",
+    "13 + 8 makes 21.",
+    "21 + 5 makes 26.",
+    "35 − 26 makes 9.",
+    "So the answer is 9."
+   ]
+  },
+  {
+   "itemId": "MC03-CALC-01",
+   "questionType": "maths-calc",
+   "question": "Work out 356 + 287.",
+   "options": [
+    "643  ← key",
+    "543",
+    "69",
+    "443"
+   ],
+   "solution": "356 + 287",
+   "walkScript": "Line up the columns and add from the right. Six plus seven makes 13, so carry the ten. Keep going carefully to reach 643. The trap rounds too soon or loses a digit.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "356 + 287 makes 643.",
+    "So the answer is 643."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "356 + 287 makes 643.",
+    "So the answer is 643."
+   ]
+  },
+  {
+   "itemId": "MC03-CALC-02",
+   "questionType": "maths-calc",
+   "question": "Work out 483 - 176.",
+   "options": [
+    "307  ← key",
+    "313",
+    "407",
+    "310"
+   ],
+   "solution": "483 - 176",
+   "walkScript": "Set the tens and ones under each other. Borrow a ten when the top digit is smaller. Work through to get 307. The classic slip takes each smaller digit from the larger.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "483 − 176 makes 307.",
+    "So the answer is 307."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "483 − 176 makes 307.",
+    "So the answer is 307."
+   ]
+  },
+  {
+   "itemId": "MC03-CALC-03",
+   "questionType": "maths-calc",
+   "question": "Work out 43 x 5.",
+   "options": [
+    "215  ← key",
+    "205",
+    "15",
+    "225"
+   ],
+   "solution": "43 * 5",
+   "walkScript": "Multiply the ones first, then the tens. Three times five is 15, so carry the ten. Then four times five is 20, plus the carry, giving 215. Watch for a dropped carry or a forgotten tens part.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "43 × 5 makes 215.",
+    "So the answer is 215."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "43 × 5 makes 215.",
+    "So the answer is 215."
+   ]
+  },
+  {
+   "itemId": "MC03-CALC-04",
+   "questionType": "maths-calc",
+   "question": "Tom buys a game for £8.75 and a case for £3.60. He pays with a £20 note. How much change does he get?",
+   "options": [
+    "£7.65  ← key",
+    "£6.65",
+    "£16.40",
+    "£7.00"
+   ],
+   "solution": "20 - 8.75 - 3.60",
+   "walkScript": "First add the two prices to find the total spent. That comes to £12.35. Take it from £20 to leave £7.65. The catch rounds the prices or subtracts only one item.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£20.00 − £8.75 makes £11.25.",
+    "£11.25 − £3.60 makes £7.65.",
+    "So the answer is £7.65."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "20 - (8.75 + 3.60)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to add the total first, as the walk does",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£8.75 + £3.60 makes £12.35.",
+    "£20.00 − £12.35 makes £7.65.",
+    "So the answer is £7.65."
+   ]
+  },
+  {
+   "itemId": "MC03-CALC-05",
+   "questionType": "maths-calc",
+   "question": "Work out 316 x 4.",
+   "options": [
+    "1264  ← key",
+    "1244",
+    "64",
+    "1284"
+   ],
+   "solution": "316 * 4",
+   "walkScript": "Work through the ones, then tens, then hundreds. Six times four is 24, so carry the two. Add each carry as you move left to reach 1,264. A slip drops a carry or loses the hundreds digit.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "316 × 4 makes 1,264.",
+    "So the answer is 1,264."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "316 × 4 makes 1,264.",
+    "So the answer is 1,264."
+   ]
+  },
+  {
+   "itemId": "MC03-CALC-06",
+   "questionType": "maths-calc",
+   "question": "A teacher shares 74 pencils equally between 3 tables. How many whole pencils does each table get?",
+   "options": [
+    "24  ← key",
+    "21",
+    "24.2",
+    "222"
+   ],
+   "solution": "(74 - 2) / 3",
+   "walkScript": "Share 74 pencils equally into three groups. Three goes into seven twice, with one ten left over. Carry it on to reach 24 whole pencils each. The trap splits each digit alone or writes the remainder as a decimal.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "74 − 2 makes 72.",
+    "72 ÷ 3 makes 24.",
+    "So the answer is 24."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "74 − 2 makes 72.",
+    "72 ÷ 3 makes 24.",
+    "So the answer is 24."
+   ]
+  },
+  {
+   "itemId": "MC03-CALC-07",
+   "questionType": "maths-calc",
+   "question": "A club buys 3 footballs at £6.50 each and 2 water bottles at £2.25 each. What is the total cost?",
+   "options": [
+    "£24.00  ← key",
+    "£19.50",
+    "£17.50",
+    "£22.00"
+   ],
+   "solution": "3 * 6.50 + 2 * 2.25",
+   "walkScript": "Work out each set of items before adding. Three footballs cost £19.50; two bottles cost £4.50. Together that makes £24. One slip rounds the prices or leaves a set out.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "3 × £6.50 makes £19.50.",
+    "2 × £2.25 makes £4.50.",
+    "£19.50 + £4.50 makes £24.00.",
+    "So the answer is £24.00."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "3 × £6.50 makes £19.50.",
+    "2 × £2.25 makes £4.50.",
+    "£19.50 + £4.50 makes £24.00.",
+    "So the answer is £24.00."
+   ]
+  },
+  {
+   "itemId": "MC03-CALC-08",
+   "questionType": "maths-calc",
+   "question": "A theatre sells 320 tickets at £15 each. The show costs £1,200 to put on. What is the profit?",
+   "options": [
+    "£3600  ← key",
+    "£4800",
+    "£720",
+    "£3300"
+   ],
+   "solution": "320 * 15 - 1200",
+   "walkScript": "Find the total money taken before anything else. 320 tickets at £15 make £4,800. Take the £1,200 of costs to leave £3,600. The trap adds the costs or loses a digit.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "320 × £15 makes £4,800.",
+    "£4,800 − £1,200 makes £3,600.",
+    "So the answer is £3600."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "320 × £15 makes £4,800.",
+    "£4,800 − £1,200 makes £3,600.",
+    "So the answer is £3,600."
+   ]
+  },
+  {
+   "itemId": "MC03-FDP-02",
+   "questionType": "maths-fdp",
+   "question": "What is 3/4 of 24?",
+   "options": [
+    "18  ← key",
+    "6",
+    "72",
+    "32"
+   ],
+   "solution": "24 / 4 * 3",
+   "walkScript": "To find three quarters, first find one quarter. 24 shared by 4 is 6 for one part. Three parts make 6 times 3, which is 18. A common slip stops at one part or flips the fraction.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "24 ÷ 4 makes 6.",
+    "6 × 3 makes 18.",
+    "So the answer is 18."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "24 ÷ 4 makes 6.",
+    "6 × 3 makes 18.",
+    "So the answer is 18."
+   ]
+  },
+  {
+   "itemId": "MC03-FDP-03",
+   "questionType": "maths-fdp",
+   "question": "What is 25% of £44?",
+   "options": [
+    "£11  ← key",
+    "£22",
+    "£19",
+    "£1,100"
+   ],
+   "solution": "44 * 25 / 100",
+   "walkScript": "25% means one quarter. Find a quarter of 44 by sharing into four. That gives £11. The catch takes 25 off, halves instead, or rounds the amount first.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£44 × 25 makes £1,100.",
+    "£1,100 ÷ 100 makes £11.",
+    "So the answer is £11."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "44 / 100 * 25",
+   "reorderWhy": "percentage walked by the 1% method: 44 ÷ 100, then × 25 (same value as \"44 * 25 / 100\")",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£44 ÷ 100 makes £0.44.",
+    "£0.44 × 25 makes £11.",
+    "So the answer is £11."
+   ]
+  },
+  {
+   "itemId": "MC03-FDP-04",
+   "questionType": "maths-fdp",
+   "question": "A hoodie costs £45. In a sale it is reduced by 20%. What is the new price?",
+   "options": [
+    "£36  ← key",
+    "£9",
+    "£25",
+    "£44.80"
+   ],
+   "solution": "45 - 45 * 20 / 100",
+   "walkScript": "First find 20% of £45. A fifth of 45 is £9. Take the £9 off to get £36. One slip stops at the discount or subtracts £20.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£45 × 20 makes £900.",
+    "£900 ÷ 100 makes £9.",
+    "£45 − £9 makes £36.",
+    "So the answer is £36."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "45 - 45 / 100 * 20",
+   "reorderWhy": "percentage walked by the 1% method: 45 ÷ 100, then × 20 (same value as \"45 - 45 * 20 / 100\")",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£45 ÷ 100 makes £0.45.",
+    "£0.45 × 20 makes £9.",
+    "£45 − £9 makes £36.",
+    "So the answer is £36."
+   ]
+  },
+  {
+   "itemId": "MC03-FDP-07",
+   "questionType": "maths-fdp",
+   "question": "A car park holds 60 cars. 1/4 of them are red. 2/3 of the rest are blue. How many cars are blue?",
+   "options": [
+    "30  ← key",
+    "40",
+    "15",
+    "45"
+   ],
+   "solution": "(60 - 60 / 4) * 2 / 3",
+   "walkScript": "Name the groups first. A quarter of 60 are red, which is 15. The other 45 are the rest, and two thirds of them is 30. A slip uses the whole 60, or forgets the last step.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "60 ÷ 4 makes 15.",
+    "60 − 15 makes 45.",
+    "45 × 2 makes 90.",
+    "90 ÷ 3 makes 30.",
+    "So the answer is 30."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "(60 - 60 / 4) / 3 * 2",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to divide first, as the walk finds a fraction of an amount",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "60 ÷ 4 makes 15.",
+    "60 − 15 makes 45.",
+    "45 ÷ 3 makes 15.",
+    "15 × 2 makes 30.",
+    "So the answer is 30."
+   ]
+  },
+  {
+   "itemId": "MC03-FDP-08",
+   "questionType": "maths-fdp",
+   "question": "A coat costs £80. It has 25% off in a sale. Priya also has a £5 voucher. What is the final price?",
+   "options": [
+    "£55  ← key",
+    "£60",
+    "£50",
+    "£75"
+   ],
+   "solution": "80 - 80 * 25 / 100 - 5",
+   "walkScript": "Take the steps in order. First 25% off £80 is £20 off, leaving £60. Then take the £5 voucher to reach £55. One slip forgets a step or reads 25% as £25.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£80 × 25 makes £2,000.",
+    "£2,000 ÷ 100 makes £20.",
+    "£80 − £20 makes £60.",
+    "£60 − £5 makes £55.",
+    "So the answer is £55."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "80 - 80 / 100 * 25 - 5",
+   "reorderWhy": "percentage walked by the 1% method: 80 ÷ 100, then × 25 (same value as \"80 - 80 * 25 / 100 - 5\")",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£80 ÷ 100 makes £0.80.",
+    "£0.80 × 25 makes £20.",
+    "£80 − £20 makes £60.",
+    "£60 − £5 makes £55.",
+    "So the answer is £55."
+   ]
+  },
+  {
+   "itemId": "MC03-GEOM-01",
+   "questionType": "maths-geom",
+   "question": "Two angles sit together on a straight line. One angle is 118°. What is the size of the other angle?",
+   "options": [
+    "62°  ← key",
+    "242°",
+    "78°",
+    "70°"
+   ],
+   "solution": "180 - 118",
+   "walkScript": "Angles on a straight line always add to 180°. Take the known 118° away from 180°. The angle left is 62°. One trap uses a full turn instead.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 118 makes 62.",
+    "So the answer is 62°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 118 makes 62.",
+    "So the answer is 62°."
+   ]
+  },
+  {
+   "itemId": "MC03-GEOM-03",
+   "questionType": "maths-geom",
+   "question": "In a triangle two of the angles are 30° and 40°. A straight line splits the third angle into two equal parts. How big is each part?",
+   "options": [
+    "55°  ← key",
+    "110°",
+    "145°",
+    "75°"
+   ],
+   "solution": "(180 - 30 - 40) / 2",
+   "walkScript": "The three angles in a triangle add to 180°. Take away 30° and 40° to leave 110°. Split that 110° into two equal parts of 55°. One trap stops before the splitting step.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 30 makes 150.",
+    "150 − 40 makes 110.",
+    "110 ÷ 2 makes 55.",
+    "So the answer is 55°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 30 makes 150.",
+    "150 − 40 makes 110.",
+    "110 ÷ 2 makes 55.",
+    "So the answer is 55°."
+   ]
+  },
+  {
+   "itemId": "MC03-GEOM-04",
+   "questionType": "maths-geom",
+   "question": "An L-shape is made from a 15 cm by 9 cm rectangle. A 6 cm by 7 cm rectangle is cut from one corner. What is the area of the L-shape?",
+   "options": [
+    "93 cm²  ← key",
+    "135 cm²",
+    "48 cm²",
+    "177 cm²"
+   ],
+   "solution": "15 * 9 - 6 * 7",
+   "walkScript": "Get the two areas first. The whole rectangle is 135 cm² and the cut-out is 42 cm². Take the cut-out away to leave 93 cm². One trap forgets the cut-out altogether.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "15 × 9 makes 135.",
+    "6 × 7 makes 42.",
+    "135 − 42 makes 93.",
+    "So the answer is 93 cm²."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "15 × 9 makes 135.",
+    "6 × 7 makes 42.",
+    "135 − 42 makes 93.",
+    "So the answer is 93 cm²."
+   ]
+  },
+  {
+   "itemId": "MC03-GEOM-05",
+   "questionType": "maths-geom",
+   "question": "A rectangle has a perimeter of 30 cm and a length of 9 cm. Work out the width, then the area.",
+   "options": [
+    "54 cm²  ← key",
+    "135 cm²",
+    "6 cm²",
+    "15 cm²"
+   ],
+   "solution": "9 * (30 / 2 - 9)",
+   "walkScript": "Halve the perimeter to get 15, which is the length plus the width. Take the 9 cm length off to get a 6 cm width. The area is 9 times 6, which is 54 cm². One trap adds 9 and 6 instead of multiplying. Another uses 15 as the width.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "30 ÷ 2 makes 15.",
+    "15 − 9 makes 6.",
+    "9 × 6 makes 54.",
+    "So the answer is 54 cm²."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "30 ÷ 2 makes 15.",
+    "15 − 9 makes 6.",
+    "9 × 6 makes 54.",
+    "So the answer is 54 cm²."
+   ]
+  },
+  {
+   "itemId": "MC03-GEOM-06",
+   "questionType": "maths-geom",
+   "question": "A quadrilateral has two angles of 80° and 110°. The other two angles are equal to each other. What is the size of each equal angle?",
+   "options": [
+    "85°  ← key",
+    "170°",
+    "140°",
+    "115°"
+   ],
+   "solution": "(360 - 80 - 110) / 2",
+   "walkScript": "The four angles of a quadrilateral add to 360°. Take away 80° and 110° to leave 170°. Those last two angles match, so halve 170° to get 85°. One trap stops before the halving step.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "360 − 80 makes 280.",
+    "280 − 110 makes 170.",
+    "170 ÷ 2 makes 85.",
+    "So the answer is 85°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "360 − 80 makes 280.",
+    "280 − 110 makes 170.",
+    "170 ÷ 2 makes 85.",
+    "So the answer is 85°."
+   ]
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "questionType": "maths-meas",
+   "question": "Ben has £8. He buys a toy for £5.60. How much change does he get?",
+   "options": [
+    "£2.40  ← key",
+    "£3.00",
+    "£3.60",
+    "£13.60"
+   ],
+   "solution": "8 - 5.60",
+   "walkScript": "Change means the totals must line up. Write £8 as £8.00, then take £5.60 away. That leaves £2.40. One trap drops the pence.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£8.00 − £5.60 makes £2.40.",
+    "So the answer is £2.40."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£8.00 − £5.60 makes £2.40.",
+    "So the answer is £2.40."
+   ]
+  },
+  {
+   "itemId": "MC03-MEAS-02",
+   "questionType": "maths-meas",
+   "question": "A plank is 75 cm long. Dan saws off 28 cm. How many cm are left?",
+   "options": [
+    "47 cm  ← key",
+    "53 cm",
+    "103 cm",
+    "45 cm"
+   ],
+   "solution": "75 - 28",
+   "walkScript": "This is a take-away. Start at 75 cm, the whole length. Cut off 28 cm to leave 47 cm. The trap adds instead, or rounds the 28.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "75 − 28 makes 47.",
+    "So the answer is 47 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "75 − 28 makes 47.",
+    "So the answer is 47 cm."
+   ]
+  },
+  {
+   "itemId": "MC03-MEAS-03",
+   "questionType": "maths-meas",
+   "question": "Change 6 kg into grams.",
+   "options": [
+    "6000 g  ← key",
+    "600 g",
+    "60 g",
+    "60000 g"
+   ],
+   "solution": "6 * 1000",
+   "walkScript": "Name the relationship first: 1 kg is 1000 g. So 6 kg is 6 times 1000. That makes 6000 g. The trap uses too many or too few zeros.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6 × 1,000 makes 6,000.",
+    "So the answer is 6000 g."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6 × 1,000 makes 6,000.",
+    "So the answer is 6,000 g."
+   ]
+  },
+  {
+   "itemId": "MC03-MEAS-05",
+   "questionType": "maths-meas",
+   "question": "Sam buys a comic for £2.65 and a pen for £1.75. He pays with a £10 note. How much change does he get?",
+   "options": [
+    "£5.60  ← key",
+    "£4.40",
+    "£4.60",
+    "£5.50"
+   ],
+   "solution": "10 - 2.65 - 1.75",
+   "walkScript": "Get the total spent first. £2.65 plus £1.75 is £4.40. Take that from £10 to leave £5.60. One trap rounds the prices. Another carries a 1 twice.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£10.00 − £2.65 makes £7.35.",
+    "£7.35 − £1.75 makes £5.60.",
+    "So the answer is £5.60."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "10 - (2.65 + 1.75)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to add the total first, as the walk does",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£2.65 + £1.75 makes £4.40.",
+    "£10.00 − £4.40 makes £5.60.",
+    "So the answer is £5.60."
+   ]
+  },
+  {
+   "itemId": "MC03-MEAS-06",
+   "questionType": "maths-meas",
+   "question": "A path is being laid. On Monday 340 m is laid and on Tuesday 275 m. The whole path is 900 m. How many metres are left to lay?",
+   "options": [
+    "285 m  ← key",
+    "185 m",
+    "280 m",
+    "260 m"
+   ],
+   "solution": "900 - 340 - 275",
+   "walkScript": "Find the total laid first. 340 m plus 275 m is 615 m. Take that from 900 m to leave 285 m. One trap rounds 275 m and never puts the difference back. Another carries a 1 twice.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "900 − 340 makes 560.",
+    "560 − 275 makes 285.",
+    "So the answer is 285 m."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "900 - (340 + 275)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to add the total first, as the walk does",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "340 + 275 makes 615.",
+    "900 − 615 makes 285.",
+    "So the answer is 285 m."
+   ]
+  },
+  {
+   "itemId": "MC03-NPV-02",
+   "questionType": "maths-npv",
+   "question": "A number is made of 3 thousands, 0 hundreds, 6 tens and 4 ones. What is the number?",
+   "options": [
+    "3064  ← key",
+    "364",
+    "30064",
+    "3604"
+   ],
+   "solution": "3 * 1000 + 0 * 100 + 6 * 10 + 4",
+   "walkScript": "Name each part with its column first. Three thousands, no hundreds, six tens, four ones. Hold the empty hundreds with a zero to get 3,064. One slip drops that zero or squeezes an extra one in.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "3 × 1,000 makes 3,000.",
+    "0 × 100 makes 0.",
+    "3,000 + 0 makes 3,000.",
+    "6 × 10 makes 60.",
+    "3,000 + 60 makes 3,060.",
+    "3,060 + 4 makes 3,064.",
+    "So the answer is 3,064."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "3 × 1,000 makes 3,000.",
+    "0 × 100 makes 0.",
+    "3,000 + 0 makes 3,000.",
+    "6 × 10 makes 60.",
+    "3,000 + 60 makes 3,060.",
+    "3,060 + 4 makes 3,064.",
+    "So the answer is 3,064."
+   ]
+  },
+  {
+   "itemId": "MC03-NPV-03",
+   "questionType": "maths-npv",
+   "question": "What number is 100 more than 3,940?",
+   "options": [
+    "4040  ← key",
+    "3950",
+    "3040",
+    "3840"
+   ],
+   "solution": "3940 + 100",
+   "walkScript": "Find the hundreds column before you add. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 4,040. A common slip adds into a neighbouring column or drops the carry.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "3,940 + 100 makes 4,040.",
+    "So the answer is 4,040."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "3,940 + 100 makes 4,040.",
+    "So the answer is 4,040."
+   ]
+  },
+  {
+   "itemId": "MC03-NPV-07",
+   "questionType": "maths-npv",
+   "question": "How many hundreds are there altogether in 2,800?",
+   "options": [
+    "28  ← key",
+    "8",
+    "280",
+    "2"
+   ],
+   "solution": "2800 / 100",
+   "walkScript": "Think about sharing 2,800 into groups of one hundred. Divide the whole number by 100. That gives 28 hundreds altogether. A slip reads one digit or divides by a different power of ten.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "2,800 ÷ 100 makes 28.",
+    "So the answer is 28."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "2,800 ÷ 100 makes 28.",
+    "So the answer is 28."
+   ]
+  },
+  {
+   "itemId": "MC03-STATS-01",
+   "questionType": "maths-stats",
+   "question": "A table shows fruit sold: apples 22, pears 20, plums 30, kiwis 18. How many more were sold as apples and plums than as pears and kiwis?",
+   "options": [
+    "14  ← key",
+    "32",
+    "4",
+    "26"
+   ],
+   "solution": "(22 + 30) - (20 + 18)",
+   "walkScript": "Add each pair before comparing. Apples and plums make 52, pears and kiwis make 38. Take 38 from 52 to leave 14 more. One trap leaves a row out.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "22 + 30 makes 52.",
+    "20 + 18 makes 38.",
+    "52 − 38 makes 14.",
+    "So the answer is 14."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "22 + 30 makes 52.",
+    "20 + 18 makes 38.",
+    "52 − 38 makes 14.",
+    "So the answer is 14."
+   ]
+  },
+  {
+   "itemId": "MC03-STATS-02",
+   "questionType": "maths-stats",
+   "question": "The mean of six numbers is 7. Five of the numbers are 5, 9, 6, 8 and 10. What is the sixth number?",
+   "options": [
+    "4  ← key",
+    "7.6",
+    "7",
+    "16"
+   ],
+   "solution": "6 * 7 - (5 + 9 + 6 + 8 + 10)",
+   "walkScript": "Work back from the total. A mean of 7 across six numbers totals 42. The five given add to 38. The sixth is 42 minus 38, which is 4.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6 × 7 makes 42.",
+    "5 + 9 makes 14.",
+    "14 + 6 makes 20.",
+    "20 + 8 makes 28.",
+    "28 + 10 makes 38.",
+    "42 − 38 makes 4.",
+    "So the answer is 4."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6 × 7 makes 42.",
+    "5 + 9 makes 14.",
+    "14 + 6 makes 20.",
+    "20 + 8 makes 28.",
+    "28 + 10 makes 38.",
+    "42 − 38 makes 4.",
+    "So the answer is 4."
+   ]
+  },
+  {
+   "itemId": "MC04-CALC-01",
+   "questionType": "maths-calc",
+   "question": "Work out 517 + 265.",
+   "options": [
+    "782  ← key",
+    "772",
+    "282",
+    "792"
+   ],
+   "solution": "517 + 265",
+   "walkScript": "Line up the columns and add from the right. Seven plus five makes twelve, so carry the ten. Keep going to reach 782. The trap drops a carry or leaves out a digit.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "517 + 265 makes 782.",
+    "So the answer is 782."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "517 + 265 makes 782.",
+    "So the answer is 782."
+   ]
+  },
+  {
+   "itemId": "MC04-CALC-02",
+   "questionType": "maths-calc",
+   "question": "Work out 74 - 38.",
+   "options": [
+    "36  ← key",
+    "44",
+    "30",
+    "40"
+   ],
+   "solution": "74 - 38",
+   "walkScript": "Line up the tens and ones. In the ones, four is smaller than eight, so borrow a ten. Then the answer is 36. The trap takes the smaller digit from the larger each time.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "74 − 38 makes 36.",
+    "So the answer is 36."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "74 − 38 makes 36.",
+    "So the answer is 36."
+   ]
+  },
+  {
+   "itemId": "MC04-CALC-03",
+   "questionType": "maths-calc",
+   "question": "Work out 48 x 6.",
+   "options": [
+    "288  ← key",
+    "648",
+    "2448",
+    "328"
+   ],
+   "solution": "48 * 6",
+   "walkScript": "Multiply the ones first, then the tens. Eight sixes make forty-eight, so write eight and carry four. The tens give twenty-eight, so the answer is 288. The trap drops the carry or writes both products.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "48 × 6 makes 288.",
+    "So the answer is 288."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "48 × 6 makes 288.",
+    "So the answer is 288."
+   ]
+  },
+  {
+   "itemId": "MC04-CALC-04",
+   "questionType": "maths-calc",
+   "question": "A game costs £8.40. Ravi also buys a controller for £5.75. He pays with a £20 note. How much change does he get?",
+   "options": [
+    "£5.85  ← key",
+    "£11.60",
+    "£14.15",
+    "£7.00"
+   ],
+   "solution": "20 - 8.40 - 5.75",
+   "walkScript": "First add the two prices to find the total spent. That comes to £14.15. Take it from £20 to leave £5.85. The trap uses one price only or stops at the total.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£20.00 − £8.40 makes £11.60.",
+    "£11.60 − £5.75 makes £5.85.",
+    "So the answer is £5.85."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "20 - (8.40 + 5.75)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to add the total first, as the walk does",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£8.40 + £5.75 makes £14.15.",
+    "£20.00 − £14.15 makes £5.85.",
+    "So the answer is £5.85."
+   ]
+  },
+  {
+   "itemId": "MC04-CALC-05",
+   "questionType": "maths-calc",
+   "question": "A 2 litre bottle of squash is shared equally between 8 children. How many litres of squash does each child get?",
+   "options": [
+    "0.25 litres  ← key",
+    "4 litres",
+    "16 litres",
+    "2 litres"
+   ],
+   "solution": "2 / 8",
+   "walkScript": "Share the two litres equally among eight children. Two divided by eight is one quarter, or 0.25. Each child gets 0.25 litres. The trap flips the sharing or changes the operation.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "2 ÷ 8 makes 0.25.",
+    "So the answer is 0.25 litres."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "2 ÷ 8 makes 0.25.",
+    "So the answer is 0.25 litres."
+   ]
+  },
+  {
+   "itemId": "MC04-CALC-06",
+   "questionType": "maths-calc",
+   "question": "Work out 4,002 - 1,375.",
+   "options": [
+    "2627  ← key",
+    "2620",
+    "2007",
+    "2600"
+   ],
+   "solution": "4002 - 1375",
+   "walkScript": "Line up the columns and subtract from the right. Borrow carefully all the way across the zeros. 4,002 minus 1,375 is 2,627. The trap takes each smaller digit from the larger.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "4,002 − 1,375 makes 2,627.",
+    "So the answer is 2,627."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "4,002 − 1,375 makes 2,627.",
+    "So the answer is 2,627."
+   ]
+  },
+  {
+   "itemId": "MC04-CALC-07",
+   "questionType": "maths-calc",
+   "question": "A club buys 4 packs of badges with 25 in each pack. They already had 30 badges. They give away 62 badges. How many badges are left?",
+   "options": [
+    "68  ← key",
+    "38",
+    "48",
+    "43"
+   ],
+   "solution": "4 * 25 + 30 - 62",
+   "walkScript": "First find the total badges the club now holds. Four packs of twenty-five plus thirty makes 130. Take away the sixty-two given out to leave 68. The trap skips a number or stops partway.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "4 × 25 makes 100.",
+    "100 + 30 makes 130.",
+    "130 − 62 makes 68.",
+    "So the answer is 68."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "4 × 25 makes 100.",
+    "100 + 30 makes 130.",
+    "130 − 62 makes 68.",
+    "So the answer is 68."
+   ]
+  },
+  {
+   "itemId": "MC04-CALC-08",
+   "questionType": "maths-calc",
+   "question": "A stadium holds 4,120 people. For a concert, 18 blocks of 145 seats are sold. Another 320 tickets are sold at the door. How many seats are still empty?",
+   "options": [
+    "1190  ← key",
+    "1510",
+    "2930",
+    "2810"
+   ],
+   "solution": "4120 - (18 * 145 + 320)",
+   "walkScript": "First work out how many seats were sold. Eighteen blocks of 145 plus 320 makes 2,930. Take that from the 4,120 seats to leave 1,190. The trap forgets a number or stops before the end.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "18 × 145 makes 2,610.",
+    "2,610 + 320 makes 2,930.",
+    "4,120 − 2,930 makes 1,190.",
+    "So the answer is 1,190."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "18 × 145 makes 2,610.",
+    "2,610 + 320 makes 2,930.",
+    "4,120 − 2,930 makes 1,190.",
+    "So the answer is 1,190."
+   ]
+  },
+  {
+   "itemId": "MC04-FDP-02",
+   "questionType": "maths-fdp",
+   "question": "What is 1/4 of 40?",
+   "options": [
+    "10  ← key",
+    "20",
+    "160",
+    "40"
+   ],
+   "solution": "40 / 4",
+   "walkScript": "A quarter means sharing into four equal parts. Share 40 into four to get 10 each. So a quarter of 40 is 10. The trap flips the fraction or halves instead.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "40 ÷ 4 makes 10.",
+    "So the answer is 10."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "40 ÷ 4 makes 10.",
+    "So the answer is 10."
+   ]
+  },
+  {
+   "itemId": "MC04-FDP-03",
+   "questionType": "maths-fdp",
+   "question": "Write 1/2 as a decimal.",
+   "options": [
+    "0.5  ← key",
+    "0.2",
+    "1.2",
+    "2.0"
+   ],
+   "solution": "1 / 2",
+   "walkScript": "A fraction line means divide the top by the bottom. Work out 1 shared by 2, which is 0.5. So one half is 0.5. The trap reads the two numbers on their own.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "1 ÷ 2 makes 0.5.",
+    "So the answer is 0.5."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "1 ÷ 2 makes 0.5.",
+    "So the answer is 0.5."
+   ]
+  },
+  {
+   "itemId": "MC04-FDP-07",
+   "questionType": "maths-fdp",
+   "question": "A box holds 32 chocolates. 3/8 of them are dark. Of the chocolates that are left, one quarter are white. How many white chocolates are there?",
+   "options": [
+    "5  ← key",
+    "8",
+    "10",
+    "20"
+   ],
+   "solution": "(32 - 32 * 3 / 8) / 4",
+   "walkScript": "Find the dark ones first: three eighths of the box. Take those away to see how many are left. A quarter of the rest are white, giving 5. The trap uses the whole box or stops early.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "32 × 3 makes 96.",
+    "96 ÷ 8 makes 12.",
+    "32 − 12 makes 20.",
+    "20 ÷ 4 makes 5.",
+    "So the answer is 5."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "(32 - 32 / 8 * 3) / 4",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to divide first, as the walk finds a fraction of an amount",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "32 ÷ 8 makes 4.",
+    "4 × 3 makes 12.",
+    "32 − 12 makes 20.",
+    "20 ÷ 4 makes 5.",
+    "So the answer is 5."
+   ]
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "questionType": "maths-fdp",
+   "question": "A tank holds 40 litres of water. 3/5 of it is used on Monday. On Tuesday, one quarter of what is left is used. How many litres are left after Tuesday?",
+   "options": [
+    "12  ← key",
+    "6",
+    "16",
+    "8"
+   ],
+   "solution": "(40 - 40 * 3 / 5) - (40 - 40 * 3 / 5) / 4",
+   "walkScript": "Take away Monday's share: 3/5 of 40 is 24, leaving 16. Now Tuesday uses a quarter of those 16, which is 4. So 12 litres are left. The trap fractions the first total.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "40 × 3 makes 120.",
+    "120 ÷ 5 makes 24.",
+    "40 − 24 makes 16.",
+    "40 × 3 makes 120.",
+    "120 ÷ 5 makes 24.",
+    "40 − 24 makes 16.",
+    "16 ÷ 4 makes 4.",
+    "16 − 4 makes 12.",
+    "So the answer is 12."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "40 × 3 makes 120.",
+    "120 ÷ 5 makes 24.",
+    "40 − 24 makes 16.",
+    "40 × 3 makes 120.",
+    "120 ÷ 5 makes 24.",
+    "40 − 24 makes 16.",
+    "16 ÷ 4 makes 4.",
+    "16 − 4 makes 12.",
+    "So the answer is 12."
+   ]
+  },
+  {
+   "itemId": "MC04-GEOM-01",
+   "questionType": "maths-geom",
+   "question": "A rectangle is 18 cm long and 7 cm wide. What is its perimeter?",
+   "options": [
+    "126 cm",
+    "43 cm",
+    "50 cm  ← key",
+    "80 cm"
+   ],
+   "solution": "2 * (18 + 7)",
+   "walkScript": "Perimeter is the distance round the edge. Add one long side and one short side. Double that to reach 50 cm. The trap swaps in the area or drops a side.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "18 + 7 makes 25.",
+    "2 × 25 makes 50.",
+    "So the answer is 50 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "18 + 7 makes 25.",
+    "2 × 25 makes 50.",
+    "So the answer is 50 cm."
+   ]
+  },
+  {
+   "itemId": "MC04-GEOM-03",
+   "questionType": "maths-geom",
+   "question": "A triangle has two angles of 65 degrees and 48 degrees. What is the size of the third angle?",
+   "options": [
+    "247 degrees",
+    "115 degrees",
+    "73 degrees",
+    "67 degrees  ← key"
+   ],
+   "solution": "180 - 65 - 48",
+   "walkScript": "The three angles in a triangle add to 180 degrees. Add the two you know to make 113. Take that from 180 to leave 67 degrees. The trap uses 360 or leaves an angle out.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 65 makes 115.",
+    "115 − 48 makes 67.",
+    "So the answer is 67 degrees."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "180 - (65 + 48)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to follow the walk: the known angles together, then from 180",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "65 + 48 makes 113.",
+    "180 − 113 makes 67.",
+    "So the answer is 67 degrees."
+   ]
+  },
+  {
+   "itemId": "MC04-GEOM-05",
+   "questionType": "maths-geom",
+   "question": "An L-shape is made from a rectangle 12 cm by 8 cm. A corner 4 cm by 7 cm is cut out. What is the area of the L-shape?",
+   "options": [
+    "96 cm²",
+    "40 cm²",
+    "68 cm²  ← key",
+    "72 cm²"
+   ],
+   "solution": "12 * 8 - 4 * 7",
+   "walkScript": "Find the whole block first: 12 times 8 is 96. The cut-out corner is 4 times 7, which is 28. Take the cut away to leave 68 cm². The trap keeps the whole block or measures the edge.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "12 × 8 makes 96.",
+    "4 × 7 makes 28.",
+    "96 − 28 makes 68.",
+    "So the answer is 68 cm²."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "12 × 8 makes 96.",
+    "4 × 7 makes 28.",
+    "96 − 28 makes 68.",
+    "So the answer is 68 cm²."
+   ]
+  },
+  {
+   "itemId": "MC04-GEOM-06",
+   "questionType": "maths-geom",
+   "question": "An isosceles triangle has an apex angle of 50 degrees. Its two base angles are equal to each other. What is the size of each base angle?",
+   "options": [
+    "130 degrees",
+    "65 degrees  ← key",
+    "155 degrees",
+    "40 degrees"
+   ],
+   "solution": "(180 - 50) / 2",
+   "walkScript": "The three angles add to 180 degrees. Take the 50 degree apex away, leaving 130. Share 130 between the two equal base angles to get 65 degrees. The trap stops at 130 before sharing.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 50 makes 130.",
+    "130 ÷ 2 makes 65.",
+    "So the answer is 65 degrees."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 50 makes 130.",
+    "130 ÷ 2 makes 65.",
+    "So the answer is 65 degrees."
+   ]
+  },
+  {
+   "itemId": "MC04-MEAS-01",
+   "questionType": "maths-meas",
+   "question": "Ella has £7. She buys a pen for £2.80. How much change does she get?",
+   "options": [
+    "£4.20  ← key",
+    "£5.00",
+    "£5.80",
+    "£9.80"
+   ],
+   "solution": "7 - 2.80",
+   "walkScript": "Change means lining the amounts up and taking away. Write £7 as 7.00 first. Take 2.80 away to leave 4.20. The trap drops the pence or adds instead.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£7.00 − £2.80 makes £4.20.",
+    "So the answer is £4.20."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£7.00 − £2.80 makes £4.20.",
+    "So the answer is £4.20."
+   ]
+  },
+  {
+   "itemId": "MC04-MEAS-02",
+   "questionType": "maths-meas",
+   "question": "A blue string is 84 cm long. A green string is 57 cm long. How much longer is the blue string?",
+   "options": [
+    "27 cm  ← key",
+    "33 cm",
+    "141 cm",
+    "20 cm"
+   ],
+   "solution": "84 - 57",
+   "walkScript": "This asks for the difference, so subtract. Take 57 from 84. What is left is 27 cm. The trap adds the strings or rounds without fixing it.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "84 − 57 makes 27.",
+    "So the answer is 27 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "84 − 57 makes 27.",
+    "So the answer is 27 cm."
+   ]
+  },
+  {
+   "itemId": "MC04-MEAS-04",
+   "questionType": "maths-meas",
+   "question": "A pencil case costs £6.05. Priya pays with a £10 note. How much change does she get?",
+   "options": [
+    "£3.95  ← key",
+    "£4.00",
+    "£3.50",
+    "£16.05"
+   ],
+   "solution": "10 - 6.05",
+   "walkScript": "Change means taking the cost from the note. Write the price as 6.05 with the middle zero. Take it from 10 to leave 3.95. The trap drops a zero or adds.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£10.00 − £6.05 makes £3.95.",
+    "So the answer is £3.95."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£10.00 − £6.05 makes £3.95.",
+    "So the answer is £3.95."
+   ]
+  },
+  {
+   "itemId": "MC04-MEAS-05",
+   "questionType": "maths-meas",
+   "question": "A watermelon weighs 3 kg. An apple weighs 200 g. How much heavier is the watermelon, in grams?",
+   "options": [
+    "2800 g  ← key",
+    "100 g",
+    "3200 g",
+    "2980 g"
+   ],
+   "solution": "3 * 1000 - 200",
+   "walkScript": "First change 3 kg into grams, which is 3000. The apple is 200 grams already. Take 200 from 3000 to leave 2800 g. The trap uses 100 grams a kilo.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "3 × 1,000 makes 3,000.",
+    "3,000 − 200 makes 2,800.",
+    "So the answer is 2800 g."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "3 × 1,000 makes 3,000.",
+    "3,000 − 200 makes 2,800.",
+    "So the answer is 2,800 g."
+   ]
+  },
+  {
+   "itemId": "MC04-MEAS-06",
+   "questionType": "maths-meas",
+   "question": "Sam buys a sandwich for £2.45 and a drink for £1.30. He pays with a £5 note. How much change does he get?",
+   "options": [
+    "£1.25  ← key",
+    "£8.75",
+    "£2.00",
+    "£2.75"
+   ],
+   "solution": "5 - 2.45 - 1.30",
+   "walkScript": "Add the two prices first: 2.45 plus 1.30 is 3.75. Take that total from £5. The change is 1.25. The trap adds the note or drops pence.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£5.00 − £2.45 makes £2.55.",
+    "£2.55 − £1.30 makes £1.25.",
+    "So the answer is £1.25."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "5 - (2.45 + 1.30)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to add the total first, as the walk does",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£2.45 + £1.30 makes £3.75.",
+    "£5.00 − £3.75 makes £1.25.",
+    "So the answer is £1.25."
+   ]
+  },
+  {
+   "itemId": "MC04-MEAS-07",
+   "questionType": "maths-meas",
+   "question": "A shop sells notebooks at £2.35 each. Tom buys 3 notebooks and pays with a £10 note. How much change does he get?",
+   "options": [
+    "£2.95  ← key",
+    "£7.05",
+    "£5.30",
+    "£2.80"
+   ],
+   "solution": "10 - 3 * 2.35",
+   "walkScript": "Three notebooks cost £2.35 times 3, which is £7.05. Take £7.05 from the £10 note. The change is £2.95. The trap stops at the total or miscounts.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "3 × £2.35 makes £7.05.",
+    "£10.00 − £7.05 makes £2.95.",
+    "So the answer is £2.95."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "3 × £2.35 makes £7.05.",
+    "£10.00 − £7.05 makes £2.95.",
+    "So the answer is £2.95."
+   ]
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "questionType": "maths-npv",
+   "question": "What number is 100 more than 6,970?",
+   "options": [
+    "7070  ← key",
+    "6980",
+    "7970",
+    "6070"
+   ],
+   "solution": "6970 + 100",
+   "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 7,070. The trap adds into a neighbouring column or drops the carry.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6,970 + 100 makes 7,070.",
+    "So the answer is 7,070."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6,970 + 100 makes 7,070.",
+    "So the answer is 7,070."
+   ]
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "questionType": "maths-npv",
+   "question": "What number is 1,000 more than 9,400?",
+   "options": [
+    "10400  ← key",
+    "9500",
+    "8400",
+    "400"
+   ],
+   "solution": "9400 + 1000",
+   "walkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column to reach 10,400. The trap adds into a neighbouring column or loses the carry.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "9,400 + 1,000 makes 10,400.",
+    "So the answer is 10,400."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "9,400 + 1,000 makes 10,400.",
+    "So the answer is 10,400."
+   ]
+  },
+  {
+   "itemId": "MC04-NPV-06",
+   "questionType": "maths-npv",
+   "question": "The temperature is 5°C. It falls by 8°C. What is the new temperature?",
+   "options": [
+    "-3  ← key",
+    "3",
+    "-2",
+    "-8"
+   ],
+   "solution": "5 - 8",
+   "walkScript": "Start at five and count downwards. Cross zero into the minus numbers. Eight steps down from five lands on minus three. The trap keeps it positive or miscounts across zero.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "5 − 8 makes −3.",
+    "So the answer is -3."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "5 − 8 makes −3.",
+    "So the answer is −3."
+   ]
+  },
+  {
+   "itemId": "MC04-STATS-01",
+   "questionType": "maths-stats",
+   "question": "A table shows cakes baked: Monday 8, Tuesday 12, Wednesday 9, Thursday 7. How many cakes were baked in total?",
+   "options": [
+    "29",
+    "4",
+    "16",
+    "36  ← key"
+   ],
+   "solution": "8 + 12 + 9 + 7",
+   "walkScript": "A total means add every row. Take Monday's 8, Tuesday's 12, Wednesday's 9 and Thursday's 7. Put them all together to make 36. The trap leaves a row out or counts the days.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "8 + 12 makes 20.",
+    "20 + 9 makes 29.",
+    "29 + 7 makes 36.",
+    "So the answer is 36."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "8 + 12 makes 20.",
+    "20 + 9 makes 29.",
+    "29 + 7 makes 36.",
+    "So the answer is 36."
+   ]
+  },
+  {
+   "itemId": "MC04-STATS-02",
+   "questionType": "maths-stats",
+   "question": "In five spelling tests Leo scored 6, 8, 5, 9 and 12. What is his mean (average) score?",
+   "options": [
+    "8  ← key",
+    "40",
+    "10",
+    "7"
+   ],
+   "solution": "(6 + 8 + 5 + 9 + 12) / 5",
+   "walkScript": "The mean has two moves: total, then share. Add the five scores to make 40, then share by 5. That gives a mean of 8. The trap stops at the total or gives the range.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6 + 8 makes 14.",
+    "14 + 5 makes 19.",
+    "19 + 9 makes 28.",
+    "28 + 12 makes 40.",
+    "40 ÷ 5 makes 8.",
+    "So the answer is 8."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6 + 8 makes 14.",
+    "14 + 5 makes 19.",
+    "19 + 9 makes 28.",
+    "28 + 12 makes 40.",
+    "40 ÷ 5 makes 8.",
+    "So the answer is 8."
+   ]
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "questionType": "maths-calc",
+   "question": "Work out 465 + 218.",
+   "options": [
+    "683  ← key",
+    "673",
+    "283",
+    "247"
+   ],
+   "solution": "465 + 218",
+   "walkScript": "Line up the columns and add from the right. Five plus eight makes thirteen, so carry the ten. Keep going to reach 683. The trap drops a carry or rounds the numbers.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "465 + 218 makes 683.",
+    "So the answer is 683."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "465 + 218 makes 683.",
+    "So the answer is 683."
+   ]
+  },
+  {
+   "itemId": "MC05-CALC-02",
+   "questionType": "maths-calc",
+   "question": "Work out 83 - 46.",
+   "options": [
+    "37  ← key",
+    "43",
+    "129",
+    "77"
+   ],
+   "solution": "83 - 46",
+   "walkScript": "Line up the tens and ones. In the ones, three is smaller than six, so borrow a ten. Then the answer is 37. The trap takes the smaller digit from the larger each time.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "83 − 46 makes 37.",
+    "So the answer is 37."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "83 − 46 makes 37.",
+    "So the answer is 37."
+   ]
+  },
+  {
+   "itemId": "MC05-CALC-03",
+   "questionType": "maths-calc",
+   "question": "Work out 57 x 4.",
+   "options": [
+    "228  ← key",
+    "408",
+    "2028",
+    "248"
+   ],
+   "solution": "57 * 4",
+   "walkScript": "Multiply the ones first, then the tens. Seven fours make twenty-eight, so write eight and carry two. The tens give twenty-two, so the answer is 228. The trap drops the carry or writes both products.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "57 × 4 makes 228.",
+    "So the answer is 228."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "57 × 4 makes 228.",
+    "So the answer is 228."
+   ]
+  },
+  {
+   "itemId": "MC05-CALC-04",
+   "questionType": "maths-calc",
+   "question": "A jigsaw costs £7.65. Mia also buys a pen for £2.80. She pays with a £20 note. How much change does she get?",
+   "options": [
+    "£9.55  ← key",
+    "£12.35",
+    "£10.45",
+    "£11.00"
+   ],
+   "solution": "20 - 7.65 - 2.80",
+   "walkScript": "First add the two prices to find the total spent. That comes to £10.45. Take it from £20 to leave £9.55. The trap uses one price only or stops at the total.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£20.00 − £7.65 makes £12.35.",
+    "£12.35 − £2.80 makes £9.55.",
+    "So the answer is £9.55."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "20 - (7.65 + 2.80)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to add the total first, as the walk does",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£7.65 + £2.80 makes £10.45.",
+    "£20.00 − £10.45 makes £9.55.",
+    "So the answer is £9.55."
+   ]
+  },
+  {
+   "itemId": "MC05-CALC-05",
+   "questionType": "maths-calc",
+   "question": "A 3 litre bottle of juice is shared equally between 6 children. How many litres of juice does each child get?",
+   "options": [
+    "0.5 litres  ← key",
+    "2 litres",
+    "18 litres",
+    "3 litres"
+   ],
+   "solution": "3 / 6",
+   "walkScript": "Share the three litres equally among six children. Three divided by six is one half, or 0.5. Each child gets 0.5 litres. The trap flips the sharing or changes the operation.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "3 ÷ 6 makes 0.5.",
+    "So the answer is 0.5 litres."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "3 ÷ 6 makes 0.5.",
+    "So the answer is 0.5 litres."
+   ]
+  },
+  {
+   "itemId": "MC05-CALC-06",
+   "questionType": "maths-calc",
+   "question": "Work out 6,003 - 2,548.",
+   "options": [
+    "3455  ← key",
+    "4455",
+    "3005",
+    "3500"
+   ],
+   "solution": "6003 - 2548",
+   "walkScript": "Line up the columns and subtract from the right. Borrow carefully all the way across the zeros. 6,003 minus 2,548 is 3,455. The trap takes each smaller digit from the larger.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6,003 − 2,548 makes 3,455.",
+    "So the answer is 3,455."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6,003 − 2,548 makes 3,455.",
+    "So the answer is 3,455."
+   ]
+  },
+  {
+   "itemId": "MC05-CALC-07",
+   "questionType": "maths-calc",
+   "question": "A baker makes 5 trays of 24 muffins. She already had 18 muffins. She sells 96 muffins. How many muffins are left?",
+   "options": [
+    "42  ← key",
+    "24",
+    "22",
+    "38"
+   ],
+   "solution": "5 * 24 + 18 - 96",
+   "walkScript": "First find the total muffins the baker now holds. Five trays of twenty-four plus eighteen makes 138. Take away the ninety-six sold to leave 42. The trap skips a number or stops partway.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "5 × 24 makes 120.",
+    "120 + 18 makes 138.",
+    "138 − 96 makes 42.",
+    "So the answer is 42."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "5 × 24 makes 120.",
+    "120 + 18 makes 138.",
+    "138 − 96 makes 42.",
+    "So the answer is 42."
+   ]
+  },
+  {
+   "itemId": "MC05-CALC-08",
+   "questionType": "maths-calc",
+   "question": "A theatre has 3,150 seats. For a show, 16 rows of 120 seats are booked online. Another 275 seats are sold at the door. How many seats are still empty?",
+   "options": [
+    "955  ← key",
+    "1230",
+    "2195",
+    "1045"
+   ],
+   "solution": "3150 - (16 * 120 + 275)",
+   "walkScript": "First work out how many seats were sold. Sixteen rows of 120 plus 275 makes 2,195. Take that from the 3,150 seats to leave 955. The trap forgets a number or stops before the end.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "16 × 120 makes 1,920.",
+    "1,920 + 275 makes 2,195.",
+    "3,150 − 2,195 makes 955.",
+    "So the answer is 955."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "16 × 120 makes 1,920.",
+    "1,920 + 275 makes 2,195.",
+    "3,150 − 2,195 makes 955.",
+    "So the answer is 955."
+   ]
+  },
+  {
+   "itemId": "MC05-FDP-02",
+   "questionType": "maths-fdp",
+   "question": "What is 2/3 of 18?",
+   "options": [
+    "12  ← key",
+    "6",
+    "27",
+    "36"
+   ],
+   "solution": "18 / 3 * 2",
+   "walkScript": "Find one third of 18 first. Share 18 into three, giving 6 each. Two thirds means two of those parts, so 12. Some traps stop at one part or flip the fraction.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "18 ÷ 3 makes 6.",
+    "6 × 2 makes 12.",
+    "So the answer is 12."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "18 ÷ 3 makes 6.",
+    "6 × 2 makes 12.",
+    "So the answer is 12."
+   ]
+  },
+  {
+   "itemId": "MC05-FDP-04",
+   "questionType": "maths-fdp",
+   "question": "What is 1/5 written as a decimal?",
+   "options": [
+    "0.2  ← key",
+    "0.5",
+    "0.1",
+    "0.15"
+   ],
+   "solution": "1 / 5",
+   "walkScript": "One fifth means one whole shared into five. Ten tenths shared into five gives two tenths each. So 1/5 is 0.2. A trap copies a digit from the fraction instead.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "1 ÷ 5 makes 0.2.",
+    "So the answer is 0.2."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "1 ÷ 5 makes 0.2.",
+    "So the answer is 0.2."
+   ]
+  },
+  {
+   "itemId": "MC05-FDP-05",
+   "questionType": "maths-fdp",
+   "question": "There are 48 sweets in a jar. 25% of them are eaten. How many sweets are left?",
+   "options": [
+    "36  ← key",
+    "24",
+    "23",
+    "12"
+   ],
+   "solution": "48 - 48 * 25 / 100",
+   "walkScript": "First find 25% of 48, which is a quarter. A quarter of 48 is 12 sweets eaten. Take 12 from 48 to leave 36. A trap stops at the eaten amount, or halves instead.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "48 × 25 makes 1,200.",
+    "1,200 ÷ 100 makes 12.",
+    "48 − 12 makes 36.",
+    "So the answer is 36."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "48 - 48 / 100 * 25",
+   "reorderWhy": "percentage walked by the 1% method: 48 ÷ 100, then × 25 (same value as \"48 - 48 * 25 / 100\")",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "48 ÷ 100 makes 0.48.",
+    "0.48 × 25 makes 12.",
+    "48 − 12 makes 36.",
+    "So the answer is 36."
+   ]
+  },
+  {
+   "itemId": "MC05-FDP-08",
+   "questionType": "maths-fdp",
+   "question": "A coat costs £64. In a sale it is reduced by 25%. What is the sale price?",
+   "options": [
+    "£48  ← key",
+    "£39",
+    "£16",
+    "£32"
+   ],
+   "solution": "64 - 64 * 25 / 100",
+   "walkScript": "A quarter off means find one quarter of sixty-four pounds. Take that discount away from the sixty-four. The sale price is £48. The trap halves it, adds the percent, or stops.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£64 × 25 makes £1,600.",
+    "£1,600 ÷ 100 makes £16.",
+    "£64 − £16 makes £48.",
+    "So the answer is £48."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": "64 - 64 / 100 * 25",
+   "reorderWhy": "percentage walked by the 1% method: 64 ÷ 100, then × 25 (same value as \"64 - 64 * 25 / 100\")",
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£64 ÷ 100 makes £0.64.",
+    "£0.64 × 25 makes £16.",
+    "£64 − £16 makes £48.",
+    "So the answer is £48."
+   ]
+  },
+  {
+   "itemId": "MC05-GEOM-01",
+   "questionType": "maths-geom",
+   "question": "A rectangle is 18 cm long and 9 cm wide. What is its perimeter?",
+   "options": [
+    "54 cm  ← key",
+    "45 cm",
+    "162 cm",
+    "84 cm"
+   ],
+   "solution": "2 * (18 + 9)",
+   "walkScript": "Perimeter is the distance all the way round. Add a long side and a short side. Then double that total to reach 54 cm. One trap swaps in the area instead.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "18 + 9 makes 27.",
+    "2 × 27 makes 54.",
+    "So the answer is 54 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "18 + 9 makes 27.",
+    "2 × 27 makes 54.",
+    "So the answer is 54 cm."
+   ]
+  },
+  {
+   "itemId": "MC05-GEOM-02",
+   "questionType": "maths-geom",
+   "question": "Two angles sit together on a straight line. One angle is 137°. What is the size of the other angle?",
+   "options": [
+    "43°  ← key",
+    "223°",
+    "57°",
+    "50°"
+   ],
+   "solution": "180 - 137",
+   "walkScript": "Angles on a straight line always add to 180. Take the 137 away from 180. The angle left is 43 degrees. One trap uses the full-turn total.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 137 makes 43.",
+    "So the answer is 43°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 137 makes 43.",
+    "So the answer is 43°."
+   ]
+  },
+  {
+   "itemId": "MC05-GEOM-04",
+   "questionType": "maths-geom",
+   "question": "A rectangle has an area of 48 cm² and a length of 8 cm. First find its width, then work out its perimeter.",
+   "options": [
+    "28 cm  ← key",
+    "96 cm",
+    "22 cm",
+    "6 cm"
+   ],
+   "solution": "2 * (8 + 48 / 8)",
+   "walkScript": "Area is length times width, so width is 48 shared by 8, giving 6 cm. Now add 8 and 6, then double for the perimeter. That makes 28 cm. One trap stops at the width. Another adds only three sides.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "48 ÷ 8 makes 6.",
+    "8 + 6 makes 14.",
+    "2 × 14 makes 28.",
+    "So the answer is 28 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "48 ÷ 8 makes 6.",
+    "8 + 6 makes 14.",
+    "2 × 14 makes 28.",
+    "So the answer is 28 cm."
+   ]
+  },
+  {
+   "itemId": "MC05-GEOM-05",
+   "questionType": "maths-geom",
+   "question": "An L-shape is made from a rectangle 12 cm by 8 cm. A corner 5 cm by 4 cm is cut out. What is the area of the L-shape?",
+   "options": [
+    "76 cm²  ← key",
+    "96 cm²",
+    "40 cm²",
+    "116 cm²"
+   ],
+   "solution": "12 * 8 - 5 * 4",
+   "walkScript": "Find the whole block first: 12 times 8 is 96. The cut-out corner is 5 times 4, which is 20. Take the cut-out away to leave 76 cm². One trap forgets the cut-out.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "12 × 8 makes 96.",
+    "5 × 4 makes 20.",
+    "96 − 20 makes 76.",
+    "So the answer is 76 cm²."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "12 × 8 makes 96.",
+    "5 × 4 makes 20.",
+    "96 − 20 makes 76.",
+    "So the answer is 76 cm²."
+   ]
+  },
+  {
+   "itemId": "MC05-GEOM-06",
+   "questionType": "maths-geom",
+   "question": "A triangle rests on a straight line. One angle of the triangle sits next to an angle of 140° on that line. Another angle of the triangle is 30°. What is the third angle of the triangle?",
+   "options": [
+    "110°  ← key",
+    "40°",
+    "290°",
+    "10°"
+   ],
+   "solution": "180 - (180 - 140) - 30",
+   "walkScript": "The straight line gives the inside angle: 180 take 140 is 40. A triangle's angles add to 180. Take away 40 and 30 to leave 110 degrees. One trap stops before the last step.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 140 makes 40.",
+    "180 − 40 makes 140.",
+    "140 − 30 makes 110.",
+    "So the answer is 110°."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": "180 - ((180 - 140) + 30)",
+   "reorderWhy": "round 2 (rev-agent-01): expression reordered to follow the walk: the known angles together, then from 180",
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "180 − 140 makes 40.",
+    "40 + 30 makes 70.",
+    "180 − 70 makes 110.",
+    "So the answer is 110°."
+   ]
+  },
+  {
+   "itemId": "MC05-MEAS-01",
+   "questionType": "maths-meas",
+   "question": "Ravi has £8. He buys a book for £3.40. How much change does he get?",
+   "options": [
+    "£4.60  ← key",
+    "£5.00",
+    "£11.40",
+    "£4.00"
+   ],
+   "solution": "8 - 3.40",
+   "walkScript": "Change means you line the amounts up and subtract. Write £8 as £8.00 so the pence match. Take £3.40 away to leave £4.60. A trap adds the prices or drops the pence.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£8.00 − £3.40 makes £4.60.",
+    "So the answer is £4.60."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£8.00 − £3.40 makes £4.60.",
+    "So the answer is £4.60."
+   ]
+  },
+  {
+   "itemId": "MC05-MEAS-02",
+   "questionType": "maths-meas",
+   "question": "A bag of flour weighs 4000 g. What is its mass in kilograms?",
+   "options": [
+    "4 kg  ← key",
+    "4,000,000 kg",
+    "40 kg",
+    "400 kg"
+   ],
+   "solution": "4000 / 1000",
+   "walkScript": "A kilogram is much heavier than a gram. There are 1,000 grams in every kilogram. So share 4,000 by 1,000 to get 4 kg. A trap multiplies, or divides by a smaller number.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "4,000 ÷ 1,000 makes 4.",
+    "So the answer is 4 kg."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "4,000 ÷ 1,000 makes 4.",
+    "So the answer is 4 kg."
+   ]
+  },
+  {
+   "itemId": "MC05-MEAS-03",
+   "questionType": "maths-meas",
+   "question": "Anya buys a ruler for £1.70 and a pen for £2.60. What is the total cost?",
+   "options": [
+    "£4.30  ← key",
+    "£13.30",
+    "£3.30",
+    "£5.00"
+   ],
+   "solution": "1.70 + 2.60",
+   "walkScript": "Add the two prices, pounds and pence together. Seventy pence plus sixty pence makes £1.30. That carries to give £4.30 in total. A trap loses the carried pound, or counts it as ten pounds.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "£1.70 + £2.60 makes £4.30.",
+    "So the answer is £4.30."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "£1.70 + £2.60 makes £4.30.",
+    "So the answer is £4.30."
+   ]
+  },
+  {
+   "itemId": "MC05-MEAS-04",
+   "questionType": "maths-meas",
+   "question": "A blue rope is 74 cm long. A red rope is 29 cm long. How much longer is the blue rope?",
+   "options": [
+    "45 cm  ← key",
+    "103 cm",
+    "55 cm",
+    "65 cm"
+   ],
+   "solution": "74 - 29",
+   "walkScript": "How much longer means you find the difference. Take 29 cm away from 74 cm. That leaves 45 cm. A trap adds the two lengths instead.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "74 − 29 makes 45.",
+    "So the answer is 45 cm."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "74 − 29 makes 45.",
+    "So the answer is 45 cm."
+   ]
+  },
+  {
+   "itemId": "MC05-MEAS-06",
+   "questionType": "maths-meas",
+   "question": "One parcel weighs 375 g. Another parcel weighs 246 g. What is their total mass?",
+   "options": [
+    "621 g  ← key",
+    "421 g",
+    "521 g",
+    "631 g"
+   ],
+   "solution": "375 + 246",
+   "walkScript": "Line the digits up in their columns and add. Five plus six is eleven, so carry the ten. Keep going to reach 621 g. A trap drops a digit or a carried ten.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "375 + 246 makes 621.",
+    "So the answer is 621 g."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "375 + 246 makes 621.",
+    "So the answer is 621 g."
+   ]
+  },
+  {
+   "itemId": "MC05-MEAS-07",
+   "questionType": "maths-meas",
+   "question": "Leo buys 3 pens at £1.15 each. He pays with a £5 note. How much change does he get?",
+   "options": [
+    "£1.55  ← key",
+    "£3.45",
+    "£2.70",
+    "£2.00"
+   ],
+   "solution": "5 - 3 * 1.15",
+   "walkScript": "First find the cost of three pens. Three times £1.15 is £3.45 spent. Take that from £5 to leave £1.55. A trap stops at the total spent.",
+   "proposedTemplate": "money-chain",
+   "replay": [
+    "Let's work out the money together, one step at a time.",
+    "3 × £1.15 makes £3.45.",
+    "£5.00 − £3.45 makes £1.55.",
+    "So the answer is £1.55."
+   ],
+   "template": "money-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's work out the money together, one step at a time.",
+    "3 × £1.15 makes £3.45.",
+    "£5.00 − £3.45 makes £1.55.",
+    "So the answer is £1.55."
+   ]
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "questionType": "maths-npv",
+   "question": "What number is 100 more than 5,960?",
+   "options": [
+    "6060  ← key",
+    "5970",
+    "6960",
+    "5060"
+   ],
+   "solution": "5960 + 100",
+   "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 6,060. The trap adds into a neighbouring column or drops the carry.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "5,960 + 100 makes 6,060.",
+    "So the answer is 6,060."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "5,960 + 100 makes 6,060.",
+    "So the answer is 6,060."
+   ]
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "questionType": "maths-npv",
+   "question": "What number is 1,000 more than 9,500?",
+   "options": [
+    "10500  ← key",
+    "9600",
+    "19500",
+    "500"
+   ],
+   "solution": "9500 + 1000",
+   "walkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column to reach 10,500. The trap adds into a neighbouring column or loses the carry.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "9,500 + 1,000 makes 10,500.",
+    "So the answer is 10,500."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "9,500 + 1,000 makes 10,500.",
+    "So the answer is 10,500."
+   ]
+  },
+  {
+   "itemId": "MC05-NPV-06",
+   "questionType": "maths-npv",
+   "question": "The temperature is 6°C. It falls by 10°C. What is the new temperature?",
+   "options": [
+    "-4  ← key",
+    "4",
+    "-3",
+    "-10"
+   ],
+   "solution": "6 - 10",
+   "walkScript": "Start at six and count downwards. Cross zero into the minus numbers. Ten steps down from six lands on minus four. The trap keeps it positive or miscounts across zero.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6 − 10 makes −4.",
+    "So the answer is -4."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6 − 10 makes −4.",
+    "So the answer is −4."
+   ]
+  },
+  {
+   "itemId": "MC05-STATS-01",
+   "questionType": "maths-stats",
+   "question": "A table shows badges won. Red team won 10, Blue team 9, Green team 14 and Yellow team 8. How many more did Green and Red win together than Blue and Yellow together?",
+   "options": [
+    "7  ← key",
+    "15",
+    "4",
+    "13"
+   ],
+   "solution": "(14 + 10) - (9 + 8)",
+   "walkScript": "Add each group before you compare. Green and Red make 24; Blue and Yellow make 17. Take 17 from 24 to leave 7. One trap leaves a team out.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "14 + 10 makes 24.",
+    "9 + 8 makes 17.",
+    "24 − 17 makes 7.",
+    "So the answer is 7."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "14 + 10 makes 24.",
+    "9 + 8 makes 17.",
+    "24 − 17 makes 7.",
+    "So the answer is 7."
+   ]
+  },
+  {
+   "itemId": "MC05-STATS-02",
+   "questionType": "maths-stats",
+   "question": "In five spelling tests, Omar scored 6, 9, 7, 10 and 8. What is his mean (average) score?",
+   "options": [
+    "8  ← key",
+    "40",
+    "10",
+    "4"
+   ],
+   "solution": "(6 + 9 + 7 + 10 + 8) / 5",
+   "walkScript": "The mean has two steps: total, then share. Add the five scores to make 40. Share 40 between the 5 tests. The mean is 8; one trap stops before sharing.",
+   "proposedTemplate": "arithmetic-chain",
+   "replay": [
+    "Let's walk through this one together, one step at a time.",
+    "6 + 9 makes 15.",
+    "15 + 7 makes 22.",
+    "22 + 10 makes 32.",
+    "32 + 8 makes 40.",
+    "40 ÷ 5 makes 8.",
+    "So the answer is 8."
+   ],
+   "template": "arithmetic-chain",
+   "reorderedSolution": null,
+   "reorderWhy": null,
+   "replayAsTheChildSeesIt": [
+    "Let's walk through this one together, one step at a time.",
+    "6 + 9 makes 15.",
+    "15 + 7 makes 22.",
+    "22 + 10 makes 32.",
+    "32 + 8 makes 40.",
+    "40 ÷ 5 makes 8.",
+    "So the answer is 8."
+   ]
+  }
+ ]
+}

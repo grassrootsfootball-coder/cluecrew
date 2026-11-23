@@ -1,15 +1,16 @@
 {
   "kind": "replay-templates",
+  "_note": "R1064: rewritten for children. No em dash (banned in child copy), no commerce framing (D7), every sentence under 16 words; {value} in the outro is the answer exactly as the key shows it.",
   "templates": {
     "arithmetic-chain": {
-      "intro": "Let's walk this exact one together, one calm step at a time.",
+      "intro": "Let's walk through this one together, one step at a time.",
       "step": "{operation} makes {value}.",
-      "outro": "And there it is: {value}. Same question — it just needed taking in steps."
+      "outro": "So the answer is {value}."
     },
     "money-chain": {
-      "intro": "Let's price this job again, step by step.",
-      "step": "{operation} — that's {value} so far.",
-      "outro": "The job comes to {value}. Priced calmly, step by step."
+      "intro": "Let's work out the money together, one step at a time.",
+      "step": "{operation} makes {value}.",
+      "outro": "So the answer is {value}."
     }
   }
 }

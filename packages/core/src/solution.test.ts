@@ -41,6 +41,8 @@ describe('the solution evaluator (BUILD-DISTRICT-MATHS §5)', () => {
     expect(optionNumericValue('(5, 4)')).toBeNull();
     expect(optionNumericValue('1 h 30 min')).toBeNull();
     expect(optionNumericValue('48 cm²')).toBe(48);
+    expect(optionNumericValue('−3°C')).toBe(-3);
+    expect(optionNumericValue('-3°C')).toBe(-3);
   });
 });
 
