@@ -30798,3 +30798,33 @@ dash and commerce wording in its templates.
   numbered lines.
 - The Vercel deploy needs the hosted database migrated and loaded (see the go-live notes in the
   session report).
+
+## R1066 — the hosted database migrated and loaded with the reviewed content (David: "yes, migrate and load the content", then "approved", 2026-11-24)
+
+The hosted Neon database (Vercel project `cluecrew-staging`) had last been touched on 2026-08-01. It
+held 15 migrations, the August seed content (40 items, 21 cases, 120 words), and test-only family
+data: 4 test accounts (all `@cluecrew.test` or `e2e-`), 2 test children, 3 attempts, 1 session, 1 case
+file and 1 vault entry.
+- **Backup first:** every table (29 tables, 421 rows) was saved to `\copy` TSV at
+  `/Users/davidb/ClueCrew-backups/prod-20261124/`, together with the applied-migration list. Local
+  `pg_dump` is version 16 and the server is 17, so it refused to run.
+- **Migrated:** `prisma migrate deploy` brought it to `20261123120000_superseded_outside_field`. The
+  live schema then matched the migration history with no difference, and
+  `check:db-invariants` passed 13 of 13 hand-written facts.
+- **Cleared** in one transaction that checked itself before commit: the old content (all 14
+  snapshot tables) and the 4 test activity rows that point at it (Attempt, CaseFile, WordVaultEntry,
+  Session). The transaction raised and rolled back unless every content table was empty and the 4
+  accounts and 2 children remained. They did. ReviewSchedule (keyed to `vr-11-number-series`, which
+  the snapshot keeps) and 9 Event rows were also kept.
+- **Loaded:** `snapshot:restore` loaded 47,571 rows, faithful table by table, and the content
+  triggers were back on afterwards.
+- **The restore learned a non-superuser path.** A hosted database's owner is not a superuser, so
+  `session_replication_role = replica` is refused. The restore now disables only this repo's own
+  triggers (`DISABLE TRIGGER USER`, which an owner may do) and keeps foreign keys enforced, which is
+  safe because SNAPSHOT_TABLES lists every parent first. This was tested on a local non-superuser
+  role before production.
+- **Gates against production itself:** serving-path, db-content, verify:solutions, authority-shape,
+  headword-tiers, option-positions and line-refs all pass.
+- **Why production's health check failed:** the 114-day-old build runs Prisma 6, and production's
+  DATABASE_URL is Neon's pooler with `channel_binding=require`. Prisma 7 with the pg adapter connects
+  through that same URL, so a fresh build should come up healthy.

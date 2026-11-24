@@ -221,11 +221,17 @@ function restore(): void {
     if (sha(body) !== t.sha256) throw new Error(`${t.table}.tsv does not match its manifest digest`);
     writeFileSync(join(stage, `${t.table}.tsv`), body);
   }
-  // One transaction. Triggers off (session_replication_role = replica): the write log must hold the
-  // dev history, not 6,000 rows of "restore wrote this", and FK order is then not load-bearing.
-  const script = ['begin;', 'set session_replication_role = replica;',
+  // One transaction, with the content-write triggers off: the write log must hold the dev history, not
+  // 45,000 rows of "restore wrote this". A SUPERUSER switches every trigger off (session_replication_role
+  // = replica), so FK order is not load-bearing. A hosted database's OWNER is not a superuser (Neon,
+  // R1066): it disables only this repo's own triggers (DISABLE TRIGGER USER, which an owner may do) and
+  // the foreign keys stay ENFORCED — safe because SNAPSHOT_TABLES lists every parent before its children.
+  const superuser = q(`select rolsuper from pg_roles where rolname = current_user`) === 't';
+  const off = superuser ? ['set session_replication_role = replica;'] : m.tables.map((t) => `alter table ${ident(t.table)} disable trigger user;`);
+  const on = superuser ? ['set session_replication_role = origin;'] : m.tables.map((t) => `alter table ${ident(t.table)} enable trigger user;`);
+  const script = ['begin;', ...off,
     ...m.tables.map((t) => `\\copy ${ident(t.table)} (${t.columns.map(ident).join(', ')}) from '${join(stage, `${t.table}.tsv`).replace(/'/g, "''")}'`),
-    'set session_replication_role = origin;', 'commit;'].join('\n');
+    ...on, 'commit;'].join('\n');
   try { psql(['-q'], script); } finally { rmSync(stage, { recursive: true, force: true }); }
   // Serial columns: move each sequence past the restored maximum.
   for (const t of m.tables) {
