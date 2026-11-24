@@ -30828,3 +30828,7 @@ file and 1 vault entry.
 - **Why production's health check failed:** the 114-day-old build runs Prisma 6, and production's
   DATABASE_URL is Neon's pooler with `channel_binding=require`. Prisma 7 with the pg adapter connects
   through that same URL, so a fresh build should come up healthy.
+- **Deployed** (David: "Yes, promote it"): the `939046c` build was promoted to production
+  (`dpl_9aeUytahEguriexK7Cnim9tRHwQT`, Ready). `https://cluecrew-staging.vercel.app/api/health` now
+  returns `{"ok":true,"db":{"connected":true}}`, its first healthy reading since August, and `/`,
+  `/login`, `/signup`, `/crew` and `/admin` all respond 200. PRELAUNCH stays on.
