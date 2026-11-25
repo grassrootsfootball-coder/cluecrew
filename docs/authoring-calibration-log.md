@@ -31016,3 +31016,14 @@ Maths 179/179, English 379/379. Preview `cluecrew-staging-lk5hvcuvl` (GitHub tie
   every fast shares, and adding drink would make it false of fasts that allow water.
 - Guard audit: no VOCAB_BANK headword moves. Gates (dev): headword-tiers **0** (first green since this session began),
   db-content, serving-path, line-refs, option-positions, verify:solutions, authority-shape all pass; snapshot matches.
+
+## R1074 — production loaded with R1072 + R1073 and promoted to `de419a5` (David: "yes, write the fast and shy cards, then push and deploy", 2026-11-25)
+
+Same procedure as R1069/R1071. Production unchanged since R1071 (4 `@cluecrew.test` accounts, 2 children, no activity,
+migration current). Backup: 38 of 38 tables to `~/ClueCrew-backups/prod-20261125c/`. Self-checking clear committed.
+Restored 51,258 rows, digest `c60580739fa2e84b`, faithful and current with dev. **All seven gates pass against
+production, headword-tiers included** — the first time this session that production is fully green. Walk-throughs
+serving: VR 617/617, Maths 179/179, English 379/379. Preview `cluecrew-staging-jpo86vy0y` (GitHub ties it to
+`de419a5`) promoted; the production domain resolves to `dpl_92GRWN6YoEpU3SwV2JXLwC4yPVnv` (`cluecrew-staging-85yj05ydy`),
+Ready; `/api/health` `{"ok":true,"db":{"connected":true}}`; `/`, `/login`, `/signup`, `/crew`, `/admin` 200. PRELAUNCH
+unchanged.
