@@ -4,153 +4,69 @@
   "rows": [
     {
       "itemId": "gen-vr-07-letters-for-numbers-01",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Script quotes values not on the screen: \"They are 2, 3 and 4, which add to 9.\" The code is P = 2, Q = 5, R = 4 and the key is 3; \"10 or 8\" are not options (options are 3, 6, 11, 7) and the key is never reached."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-02",
-      "source": "existing",
+      "source": "draft",
       "verdict": "APPROVE",
-      "reason": "Values and working (8 + 9 + 4 − 11 = 10) match the screen; 5 = R's 4 for Q, 32 = all added, 21 = S left out all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-03",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "11 + 5 + 4 − 7 = 13 verified; 19 = P's 11 for Q, 27 = all added, 20 = S left out all verified; form OK."
+      "reason": "Values match the code; 2 + 5 − 4 worked step by step to the key 3; 11 (minus read as plus) and 7 (R left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 6, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-04",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Script is for a different question: \"Read the sum P + Q − R.\" The sum on screen is P + Q + R − S with 14, 11, 16, 8; \"5, 6 and 4 make 11, then 4 off gives 7\" is false and the key 33 never appears; 15, 8, 6 are not options."
+      "source": "draft",
+      "verdict": "APPROVE",
+      "reason": "Values match the code; 14 + 11 + 16 − 8 worked step by step to the key 33; 49 (minus read as plus) and 41 (S left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 30, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-05",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Wrong values: \"They stand for 2, 7 and 5, adding up to 14.\" The code is P = 7, Q = 6, R = 3 and the key is 10; it also treats the sum as all-plus, and \"15 or 13 ... 12\" do not match the options (10, 9, 16, 13)."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-06",
-      "source": "existing",
+      "source": "draft",
       "verdict": "APPROVE",
-      "reason": "5 + 6 − 8 + 9 = 12 verified; 11 = P's 5 for Q, 28 = all added, 3 = S left out all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-07",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "12 + 8 − 11 + 6 = 15 verified; 19 = P's 12 for Q, 37 = all added, 9 = S left out all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-08",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "18 + 7 − 5 + 12 = 32 verified; 21 = Q's 7 for P, 42 = all added, 20 = S left out all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-09",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "2 + 3 − 4 = 1 verified; 0 = P's 2 for Q, 9 = all added, 5 = R left out all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-10",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "11 + 3 + 6 − 4 = 16 verified; 8 = Q's 3 for P, 13 = Q's 3 for R, 20 = S left out all verified; form OK."
+      "reason": "Values match the code; 7 + 6 − 3 worked step by step to the key 10; 16 (minus read as plus) and 13 (R left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 9, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-11",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Script is for a different question: \"They are 4, 3 and 5, so 7 take 5 leaves 2.\" The code is P = 6, Q = 9, R = 14, S = 11 and the key is 18; S is never mentioned; 12, 3, 1 are not options."
+      "source": "draft",
+      "verdict": "APPROVE",
+      "reason": "Values match the code; 6 + 9 + 14 − 11 worked step by step to the key 18; 40 (minus read as plus) and 29 (S left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 21, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-12",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Script is for a different question: \"5, 4 and 6 give 9 take 6, landing on 3.\" The code is P = 8, Q = 13, R = 16, S = 6 and the key is 31; 15, 4, 2 are not options."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-13",
-      "source": "existing",
+      "source": "draft",
       "verdict": "APPROVE",
-      "reason": "7 + 4 − 3 = 8 verified; 5 = Q's 4 for P, 11 = P's 7 for Q, 14 = all added all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-14",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "8 + 4 − 6 + 9 = 15 verified; 11 = Q's 4 for P, 12 = S's 9 for R, 27 = all added all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-15",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "7 + 12 − 10 + 13 = 22 verified; 17 = P's 7 for Q, 42 = all added, 9 = S left out all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-16",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "5 + 12 − 10 + 11 = 18 verified; 16 = R's 10 for Q, 38 = all added, 7 = S left out all verified; form OK."
+      "reason": "Values match the code; 8 + 13 + 16 − 6 worked step by step to the key 31; 43 (minus read as plus) and 37 (S left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 36, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-17",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Wrong values: \"P is 2, Q is 4, R is 5, making 11.\" The code is Q = 7, R = 4 and the key is 5; it also adds R instead of subtracting it, and \"The 12 and 10\" misdescribes options (12 is not an option)."
+      "source": "draft",
+      "verdict": "APPROVE",
+      "reason": "Values match the code; 2 + 7 − 4 worked step by step to the key 5; 13 (minus read as plus) and 9 (R left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 10, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-18",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Wrong sum and values: \"Start with the sum P + Q + R. It uses 3, 5 and 6, which total 14.\" The sum is P + Q + R − S with 5, 10, 6, 9 and the key is 12; it then calls 12 (the key) \"a missed step\"."
+      "source": "draft",
+      "verdict": "APPROVE",
+      "reason": "Values match the code; 5 + 10 + 6 − 9 worked step by step to the key 12; 30 (minus read as plus) and 21 (S left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 17, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-19",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Script is for a different question: \"They are 4, 6 and 4, so 4 off 10 gives 6.\" The code is P = 10, Q = 12, R = 13, S = 11 and the key is 24; 14, 7, 5 are not options."
+      "source": "draft",
+      "verdict": "APPROVE",
+      "reason": "Values match the code; 10 + 12 + 13 − 11 worked step by step to the key 24; 46 (minus read as plus) and 35 (S left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 26, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-20",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Script is for a different question: \"They stand for 5, 7 and 5, so 12 take 5 leaves 7.\" The code is P = 16, Q = 15, R = 18, S = 6 and the key is 43; 17, 8, 6 are not options."
+      "source": "draft",
+      "verdict": "APPROVE",
+      "reason": "Values match the code; 16 + 15 + 18 − 6 worked step by step to the key 43; 55 (minus read as plus) and 49 (S left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 42, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-21",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Wrong values: \"P, Q and R are 2, 3 and 6, which come to 11.\" The code is Q = 7, R = 3 and the key is 6; it adds R instead of subtracting it, and \"The 12 and 10\" misdescribes options (10 is not an option)."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-22",
-      "source": "existing",
+      "source": "draft",
       "verdict": "APPROVE",
-      "reason": "11 + 4 − 3 + 9 = 21 verified; 14 = Q's 4 for P, 27 = all added, 12 = S left out all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-23",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "13 + 5 − 9 + 10 = 19 verified; 11 = Q's 5 for P, 27 = P's 13 for Q, 37 = all added all verified; form OK."
-    },
-    {
-      "itemId": "gen-vr-07-letters-for-numbers-24",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "13 + 14 − 5 + 12 = 34 verified; 33 = P's 13 for Q, 44 = all added, 22 = S left out all verified; form OK."
+      "reason": "Values match the code; 2 + 7 − 3 worked step by step to the key 6; 12 (minus read as plus) and 9 (R left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 11, which is acceptable."
     },
     {
       "itemId": "gen-vr-07-letters-for-numbers-25",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Wrong values: \"Those are 2, 7 and 4, which total 13.\" The code is P = 7, Q = 2, R = 3 and the key is 6; it adds R instead of subtracting it, and \"14 ... 11\" are not options (6, 1, 12, 9)."
+      "source": "draft",
+      "verdict": "APPROVE",
+      "reason": "Values match the code; 7 + 2 − 3 worked step by step to the key 6; 12 (minus read as plus) and 9 (R left out) verified; 5 sentences, max 16 words. Leaves out the value-slip option 1, which is acceptable."
     }
   ]
 }

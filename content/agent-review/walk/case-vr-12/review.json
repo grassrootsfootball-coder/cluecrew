@@ -3,154 +3,28 @@
   "reviewer": "rev-agent-01",
   "rows": [
     {
-      "itemId": "gen-vr-12-compound-words-01",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "True of the row: sun+flower = sunflower; suncloud and sungrass are not words. Shows the join; house form holds."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-02",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "rain+bow = rainbow; rainumbrella and rainsky are not words. Correct, shows the join, house form holds."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-03",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "tooth+brush = toothbrush; neither dentist nor mouth joins with tooth in either order. Correct and in house form."
-    },
-    {
       "itemId": "gen-vr-12-compound-words-04",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "\"The card gives you “cup” to build on.\" names a card the question is not shown to have; the stem is a prompt with one word, and no card can be checked on the screen. The rest (cupboard; plate and spoon form no word) is correct."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-05",
-      "source": "existing",
+      "source": "draft",
       "verdict": "APPROVE",
-      "reason": "butter+fly = butterfly; butterbread and butteryellow are not words. Correct, 4 sentences, house form holds."
+      "reason": "Correct: cup+board = cupboard; cupplate and cupspoon are not words. The card mention is gone. 4 sentences, each 11 words or fewer, house form holds."
     },
     {
       "itemId": "gen-vr-12-compound-words-06",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "\"House and old sound close, yet each stays a made-up word.\" says house and old are made-up words. They are real words; only grandhouse and grandold are not. The working (grandmother) is correct."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-07",
-      "source": "existing",
+      "source": "draft",
       "verdict": "APPROVE",
-      "reason": "news+paper = newspaper; newsstory and newsradio are not single words. Correct and in house form."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-08",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "skate+board = skateboard; wheel forms no word, and ice skate is written as two words or hyphenated, not one. Correct and in house form."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-09",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "snow+man = snowman; cold and winter form no single word with snow. Correct, 4 sentences, house form holds."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-10",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "star+fish = starfish; night and planet form no single word with star. Correct and in house form."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-11",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "Fault is in the QUESTION: fry gives a second defensible answer (panfry is a closed dictionary word, and frypan also exists, since the prompt does not fix the order). The script also leaves fry out entirely and says only \"Pot sounds sensible, but it never joins into one word.\""
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-12",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "hand+bag = handbag; finger and glove form no single word with hand. Correct, 4 sentences, house form holds."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-13",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "light+house = lighthouse; shadow and bright form no single word with light. Correct and in house form."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-14",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "foot+path = footpath; toe and ankle form no single word with foot. Correct and in house form."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-15",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "bed+room = bedroom; sleep and pillow form no single word with bed. Correct, 4 sentences, house form holds."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-16",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "play+ground = playground; toy and fun form no single word with play. Correct and in house form."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-17",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "day+dream = daydream; night and hour form no single word with day. Correct and in house form."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-18",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "moon+light = moonlight; star and round form no single word with moon. Correct and in house form."
+      "reason": "Correct: grand+mother = grandmother; grandhouse and grandold are now correctly named as the non-words. House and old are no longer called made-up. House form holds."
     },
     {
       "itemId": "gen-vr-12-compound-words-19",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "\"Seaweed is a real plant.\" is not a true claim: seaweed is algae, not a plant. The sentence adds nothing to the method and should be cut. seaweed itself and the wrong options (sand, wave) are handled correctly."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-20",
-      "source": "existing",
+      "source": "draft",
       "verdict": "APPROVE",
-      "reason": "fire+work = firework; flame and hot form no single word with fire. Correct, 4 sentences, house form holds."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-21",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "water+fall = waterfall; river and wet form no single word with water. Correct and in house form."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-22",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "air+port = airport; breeze and wind form no single word with air. Correct and in house form."
+      "reason": "Correct: sea+weed = seaweed; seasand and seawave are not words. The false plant claim is gone. 4 sentences, house form holds."
     },
     {
       "itemId": "gen-vr-12-compound-words-23",
-      "source": "existing",
-      "verdict": "REFUSE",
-      "reason": "\"Field and barn sound close, yet each stays a made-up word.\" says field and barn are made-up words. They are real words; only farmfield and farmbarn are not. farmyard is correct."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-24",
-      "source": "existing",
+      "source": "draft",
       "verdict": "APPROVE",
-      "reason": "book+case = bookcase; page and chapter form no single word with book. Correct and in house form."
-    },
-    {
-      "itemId": "gen-vr-12-compound-words-25",
-      "source": "existing",
-      "verdict": "APPROVE",
-      "reason": "arm+chair = armchair; elbow and sit form no single word with arm. Correct and in house form."
+      "reason": "Correct: farm+yard = farmyard; farmfield and farmbarn are now correctly named as the non-words. House form holds."
     }
   ]
 }
