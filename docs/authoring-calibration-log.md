@@ -30861,3 +30861,63 @@ approved by the reviewing agent, most after one or two rewrite rounds; all 608 p
 withheld. The 9 that do not are QUESTION faults no script can fix (`content/agent-review/walk/QUESTION-FAULTS.md`): four with
 a second defensible answer, four whose key or options are words the house bans in text to a child, one awaiting R1045/R1047. **Agreement between two agents measures
 agreement, not what a person would sign** — the reviewer here is a machine, recorded as one.
+
+## R1068 — English and Maths walk-throughs read and serving; a walk-through's quotations are checked against the passage, on the line it names (David: "then do the English and Maths walkthroughs", 2026-11-25)
+
+**THE POPULATION.** 558 stored scripts — 379 English (retrieval, inference, vocabulary in context,
+technique, punctuation, cloze and spelling), 179 Maths — none read under R1067, ten serving from
+Annie's August list. Exported in 14 part-packets (`export-walk-packets.ts --split`), each English part
+carrying its passages' `numberedLines` VERBATIM (R25), and read by `rev-agent-01` under
+`WALK-REVIEWER-EN-MATHS.md`: every line citation and quotation against the passage, no coaching
+(R572), SPaG claims as British English, every calculation redone, house notation.
+
+**FIRST PASS: 414 approved as stored, 144 refused** (one of them, `ENG-022-GK-10`, a question
+fault; `ENG-008-RC-07` surfaced in round 2). What the refusals were, in
+scripts nobody had read: English scripts that list line numbers and stop, never drawing the meaning
+(the commonest fault); line numbers naming the line BEFORE the words; "tells us" / "we" in the
+script's own voice; narrators and an author given a gender the text does not give; claims the passage
+does not make ("Nobody is in the kitchen at all", "a question about the leg"). Maths: money off the £
+sign; a "wrong option" described by a slip whose result is not among the choices ("drops the carry"
+where 248 is not offered); the method named and the answer announced with no working on the
+question's numbers.
+
+**REWRITE ROUNDS.** `walk-rewrite-round.ts` archives a pass (`round<N>/`) and writes `rewrite.json`:
+each refused row with its script and the reviewer's reason verbatim; rows named `--faults` are held as
+question faults, never sent for a script. Drafters work from `WALK-REWRITER-EN-MATHS.md`, whose
+"Rulings" section carries what the first pass applied — "us" is first person; a line number names the
+line that HOLDS the words; quote passage words; no unstated gender; describe a wrong option's slip
+only if that slip IS the option. Angles follow the screen: where a Maths item's own stem writes
+"degrees" in words a script doing the same is consistent (the two Maths parts had judged it
+differently; the second applied part 1's reading on re-review — **for David: whether angles should
+always carry ° is a house-notation question; `checkMathsNotation` covers temperatures only**).
+
+**A QUOTATION WAS CHECKED ONLY BY READING, UNTIL A DRAFTER SAID SO.** The precheck gated form and
+vocabulary; nothing mechanical compared a quoted span with the passage. `walk-quote-check.ts` now
+does, inside `land-walks` (precheck and apply) on `en-comp-*` rows: every quoted span on the screen
+word for word, and on the line(s) named — **a line named in one sentence governs the quotations after
+it until another is named**. The first version tied a quote only to a line named in the SAME sentence
+and swept clean; the reviewers' own reports named run-on citations it had passed ("Turn to line 18.
+The carol hits his 'dulled hearing'." — the words run to 19). That was the instrument agreeing for
+the wrong reason (R173): it found nothing because it could not see across a full stop. With
+carry-forward it held three APPROVED, served scripts (WIW-04, WIW-07, pp-04), which were redrafted and
+replaced; their old text served until the new was approved, so no row went dark. Scoped by the row's
+question type: spelling, punctuation and cloze scripts quote worked examples ("an hour", "its"), not
+the passage — measured, 11 such hits, all illustrative.
+
+**`check:walkscript-reach` printed "10 script(s) are approved to serve"** — the declared list's length
+— while over a thousand served by row approval. A sentence claiming a smaller population than the
+thing behind it (R591, inverted). It now counts what `walkApprovalOf` would serve over LIVE rows.
+
+**OUTCOME.** VR 617 of 617 serve (the 9 rebuilt questions' walk-throughs read and landed). Maths 179
+of 179. English 376 of 379 (`content/agent-review/walk/QUESTION-FAULTS.md`): two are QUESTION faults no
+script can fix — `ENG-022-GK-10`, whose key gives the poem's "I" a gender; `ENG-008-RC-07`, whose key
+("worried and in a hurry") the passage does not support — and one, `ENG-007-LP-08`, is a sound question
+held after SEVEN rounds: each drafter saw only the latest refusal, fixed it, and broke a thing an earlier
+round had fixed (round 6 followed round 5's reviewer's own advice into the fault). Handing round 7 the
+whole history did not converge either. **A rewrite loop that sees one reason at a time can oscillate;
+pass the history, and stop at a declared round rather than letting a loop decide.** Every
+serving script passes the child-facing gate; every English reading script passes the quote check
+(0 of the reading population fail). Also found, not blocking: `ENG-003-A-CZ-A4`'s stem ends "Dev
+shrugged." where its passage line does not. **Every approval here is a machine reviewer's, recorded as
+one (R94); agreement between two agents is agreement, not what a person would sign.** Production
+holds none of this until David says yes to a deploy and a content load.

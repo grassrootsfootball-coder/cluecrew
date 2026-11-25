@@ -1,0 +1,46 @@
+{
+  "door": "faults",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "gen-vr-21-same-meaning-25",
+      "why": "Fault: card simple and key easy are house-banned. New card SHY (not a card anywhere in vr-21) with key timid (vault tier 2, rarer than shy); bold is the opposite, and the adjectives lonely and polite go with shy without sharing its meaning. Round 2: BRAVE duplicated gen-vr-21-same-meaning-10. Round 3: blush and smile were not adjectives, so a child could drop them by word class.",
+      "stem": {
+        "words": [
+          "shy"
+        ],
+        "prompt": "Which word means the SAME as the word on the card?"
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt1",
+          "value": "timid",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt2",
+          "value": "bold",
+          "isKey": false,
+          "tag": "vr21-opposite-pull",
+          "execution": "The child finds the area of how confident a person is but reverses it. Bold means ready to step forward, the opposite of shy."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt3",
+          "value": "lonely",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "A shy child in a story is often lonely too, so the child links the two words. Lonely means feeling alone, not holding back from others, so it cannot swap with shy."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt4",
+          "value": "polite",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "Shy children are often described as polite, so the child picks polite. Polite means having good manners, not being nervous around people, so the two words do not mean the same."
+        }
+      ]
+    }
+  ]
+}

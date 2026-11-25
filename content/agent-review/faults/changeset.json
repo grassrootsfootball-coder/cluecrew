@@ -1,0 +1,510 @@
+{
+ "door": "faults",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "gen-vr-04-closest-meaning-09",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: faults",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked: there is one key (fast), commoner than rapid. Slow, early and race are each wrong in every sense of rapid. The tags fit and there are no banned words.",
+   "landedAt": "2026-11-25T19:07:10.626Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-09-opt1 (gen-vr-04-closest-meaning-09-opt1).value",
+     "before": "quick",
+     "after": "fast"
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-09-opt2 (gen-vr-04-closest-meaning-09-opt2).execution",
+     "before": "The key is 'quick'. 'slow' is the opposite of 'rapid': taking a long time. A child who finds the area of speed but reverses it picks 'slow'.",
+     "after": "The child finds the area of speed but reverses it. Slow means taking a long time, the opposite of rapid."
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-09-opt3 (gen-vr-04-closest-meaning-09-opt3).value",
+     "before": "hurried",
+     "after": "early"
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-09-opt3 (gen-vr-04-closest-meaning-09-opt3).execution",
+     "before": "The key is 'quick'. 'hurried' shares the area of speed but tilts it towards rushing because time is short, often carelessly. 'rapid' has no rush in it. A child who hears only 'fast' picks 'hurried'.",
+     "after": "The child hears something to do with time and picks early. Early is about when something happens, not how fast it moves, so the meaning has tilted away from speed."
+    },
+    {
+     "field": "option gen-vr-04-closest-meaning-09-opt4 (gen-vr-04-closest-meaning-09-opt4).execution",
+     "before": "The key is 'quick'. A race is where things are rapid, so the two words go together, but 'race' names an event, not a speed. A child who takes goes-together for means-the-same picks 'race'.",
+     "after": "A race is where things move at a rapid pace, so the two words go together. Race names an event, not a speed, and the child has taken goes-together for means-the-same."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-08",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: faults",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked: only helmet is worn on the head, matching king:crown. Castle and battle change the link. The walk-through is cleared.",
+   "landedAt": "2026-11-25T19:07:10.626Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Start with king and crown. A king wears a crown on his head. In the same way, a knight wears a helmet. Castle and sword go with knights, not head.",
+     "after": null
+    },
+    {
+     "field": "explanation.walkScriptStatus",
+     "before": "APPROVED — her 146th (4a0d56c98e58fcea)",
+     "after": null
+    },
+    {
+     "field": "explanation.walkScriptApprovedBy",
+     "before": "reviewer:rev-0001",
+     "after": null
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-10-word-connections-08-opt2 (gen-vr-10-word-connections-08-opt2).execution",
+     "before": "The first pair sets the relation: a king is who wears a crown on his head. Used on knight, that gives helmet. This option stays in knight's world but changes the link — a castle is where a knight belongs — and being in the same world is not the same as being joined the same way.",
+     "after": "The first pair shows what a king wears on his head. The child stays in the knight's world and picks castle, a place a knight belongs, so the link has changed from something worn to somewhere lived."
+    },
+    {
+     "field": "option gen-vr-10-word-connections-08-opt3 (gen-vr-10-word-connections-08-opt3).value",
+     "before": "sword",
+     "after": "battle"
+    },
+    {
+     "field": "option gen-vr-10-word-connections-08-opt3 (gen-vr-10-word-connections-08-opt3).execution",
+     "before": "The first pair sets the relation: a king is who wears a crown on his head. Used on knight, that gives helmet. This option stays in knight's world but changes the link — a sword is what a knight carries — and being in the same world is not the same as being joined the same way.",
+     "after": "The child picks a word from the same story world, since knights ride into battle. A battle is an event, not something worn on the head, so the link from the first pair has been dropped."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-11",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: faults",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked: only pancake is a word. Oven and lid make no word in either order. The tags fit and the walk-through is cleared.",
+   "landedAt": "2026-11-25T19:07:10.626Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Begin with the base word “pan”. Add “cake” to make pancake. Pot sounds sensible, but it never joins into one word.",
+     "after": null
+    },
+    {
+     "field": "explanation.walkScriptStatus",
+     "before": "DRAFT",
+     "after": null
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-12-compound-words-11-opt2 (gen-vr-12-compound-words-11-opt2).value",
+     "before": "pot",
+     "after": "oven"
+    },
+    {
+     "field": "option gen-vr-12-compound-words-11-opt2 (gen-vr-12-compound-words-11-opt2).execution",
+     "before": null,
+     "after": "A pan goes in or on the oven, so the child feels the two words belong. Put together they give panoven or ovenpan, and neither is a real word."
+    },
+    {
+     "field": "option gen-vr-12-compound-words-11-opt3 (gen-vr-12-compound-words-11-opt3).value",
+     "before": "fry",
+     "after": "lid"
+    },
+    {
+     "field": "option gen-vr-12-compound-words-11-opt3 (gen-vr-12-compound-words-11-opt3).execution",
+     "before": null,
+     "after": "A pan often has a lid, so the child picks the word that goes with it in meaning. Joined up it gives panlid or lidpan, which is not a word anyone has seen written."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-06",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: faults",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked: complete is the only synonym of finish, and the less everyday word. Begin, win and race are wrong and are not near-synonyms. No banned words.",
+   "landedAt": "2026-11-25T19:07:10.626Z",
+   "changes": [
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-06-opt1 (gen-vr-21-same-meaning-06-opt1).value",
+     "before": "end",
+     "after": "complete"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-06-opt2 (gen-vr-21-same-meaning-06-opt2).execution",
+     "before": "The task is to find the word that means the same as 'finish', and the key is 'end'. 'begin' is the opposite of 'finish'. A child who spots the meaning area but reverses it picks 'begin' instead of 'end'.",
+     "after": "The child finds the area of starting and stopping but reverses it. Begin is the opposite of finish, so the meaning has been flipped."
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-06-opt3 (gen-vr-21-same-meaning-06-opt3).execution",
+     "before": "The task is to find the word that means the same as 'finish', and the key is 'end'. 'Finish' and 'win' go together in a race, but winning means coming first, not ending. A child who picks a word that goes with 'finish', not one that means the same, picks 'win' instead of 'end'.",
+     "after": "Finish and win go together in a race, so the child links them. Winning means coming first, not bringing something to an end, so the two words do not swap in a sentence."
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-06-opt4 (gen-vr-21-same-meaning-06-opt4).value",
+     "before": "hurry",
+     "after": "race"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-06-opt4 (gen-vr-21-same-meaning-06-opt4).execution",
+     "before": "The task is to find the word that means the same as 'finish', and the key is 'end'. 'Hurry up and finish' is an everyday pairing, but 'hurry' means go faster, not stop. A child who picks a word that goes with 'finish', not one that means the same, picks 'hurry' instead of 'end'.",
+     "after": "People finish a race, so the child picks the word that goes with finish. Race means to move against others, not to end something, so it cannot stand in for finish."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-21",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: faults",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked: swift is the only synonym and is rarer than fast. Slow, asleep and loud are wrong in every sense of fast and are not near-synonyms. No banned words.",
+   "landedAt": "2026-11-25T19:07:10.626Z",
+   "changes": [
+    {
+     "field": "stem.words",
+     "before": [
+      "quick"
+     ],
+     "after": [
+      "fast"
+     ]
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-21-opt1 (gen-vr-21-same-meaning-21-opt1).value",
+     "before": "rapid",
+     "after": "swift"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-21-opt2 (gen-vr-21-same-meaning-21-opt2).execution",
+     "before": "The task is to find the word that means the same as 'quick', and the key is 'rapid'. 'slow' is the opposite of 'quick'. A child who spots the meaning area but reverses it picks 'slow' instead of 'rapid'.",
+     "after": "The child finds the area of speed but reverses it. Slow is the opposite of fast, so the meaning has been flipped."
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-21-opt3 (gen-vr-21-same-meaning-21-opt3).value",
+     "before": "easy",
+     "after": "asleep"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-21-opt3 (gen-vr-21-same-meaning-21-opt3).execution",
+     "before": "The task is to find the word that means the same as 'quick', and the key is 'rapid'. 'Quick and easy' is a common pair, but 'easy' means not hard, not fast. A child who picks a word that goes with 'quick', not one that means the same, picks 'easy' instead of 'rapid'.",
+     "after": "Fast asleep is a common phrase, so the child links the two words. Asleep is about sleeping, not speed, so it cannot swap with fast in a sentence about a runner."
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-21-opt4 (gen-vr-21-same-meaning-21-opt4).value",
+     "before": "quiet",
+     "after": "loud"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-21-opt4 (gen-vr-21-same-meaning-21-opt4).execution",
+     "before": "The task is to find the word that means the same as 'quick', and the key is 'rapid'. 'Quick and quiet' is an everyday pairing, but 'quiet' is about sound, not speed. A child who picks a word that goes with 'quick', not one that means the same, picks 'quiet' instead of 'rapid'.",
+     "after": "Fast and loud often go together for cars or music, so the child picks loud. Loud is about sound, not speed, so the two words do not share a meaning."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-06",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: faults",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked: happy is the only synonym and is not rarer than glad. No distractor is correct in the 'willing' sense. The GLAD duplicate is the bank/gen pairing the caller ruled intended.",
+   "landedAt": "2026-11-25T19:10:10.217Z",
+   "changes": [
+    {
+     "field": "stem.words",
+     "before": [
+      "fair"
+     ],
+     "after": [
+      "glad"
+     ]
+    },
+    {
+     "field": "explanation.walkScript",
+     "before": "The card in front shows fair. It means even, square and right. Just means the same thing. The opposite is unfair; referee and rules belong to games.",
+     "after": null
+    },
+    {
+     "field": "explanation.walkScriptStatus",
+     "before": "DRAFT",
+     "after": null
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb156e000qtmzvmd5911oj (cmscb156e000qtmzvmd5911oj).value",
+     "before": "just",
+     "after": "happy"
+    },
+    {
+     "field": "option cmscb156e000rtmzvsgs62ho0 (cmscb156e000rtmzvsgs62ho0).value",
+     "before": "unfair",
+     "after": "sad"
+    },
+    {
+     "field": "option cmscb156e000rtmzvsgs62ho0 (cmscb156e000rtmzvsgs62ho0).execution",
+     "before": null,
+     "after": "The child finds the area of feelings but lands on the opposite one. Sad points away from glad, so the meaning has been flipped."
+    },
+    {
+     "field": "option cmscb156e000stmzvd611h359 (cmscb156e000stmzvd611h359).value",
+     "before": "referee",
+     "after": "smile"
+    },
+    {
+     "field": "option cmscb156e000stmzvd611h359 (cmscb156e000stmzvd611h359).execution",
+     "before": null,
+     "after": "A glad person often smiles, so the two words turn up together. Smile names something a person does, not the feeling itself, and the child has taken goes-together for means-the-same."
+    },
+    {
+     "field": "option cmscb156e000ttmzvyon0p20b (cmscb156e000ttmzvyon0p20b).value",
+     "before": "rules",
+     "after": "party"
+    },
+    {
+     "field": "option cmscb156e000ttmzvyon0p20b (cmscb156e000ttmzvyon0p20b).execution",
+     "before": null,
+     "after": "A party is a place where people feel glad, so the child links the two. Party names an event, not a feeling, so it does not share the meaning of glad."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-22",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: faults",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked: [cow, lion] is the only correct option. Removing any wrong pair leaves no group. The wild-animal and four-leg readings reach no option. Tags and executions are true.",
+   "landedAt": "2026-11-25T19:10:10.217Z",
+   "changes": [
+    {
+     "field": "stem.words",
+     "before": [
+      "hen",
+      "cat",
+      "snake",
+      "dog",
+      "frog"
+     ],
+     "after": [
+      "hen",
+      "cow",
+      "snake",
+      "lion",
+      "frog"
+     ]
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15cz00cytmzvjh2gokya (cmscb15cz00cytmzvjh2gokya).value",
+     "before": "cat,dog",
+     "after": "[\"cow\", \"lion\"]"
+    },
+    {
+     "field": "option cmscb15cz00cztmzv61egwuja (cmscb15cz00cztmzv61egwuja).value",
+     "before": "cat,hen",
+     "after": "[\"cow\", \"frog\"]"
+    },
+    {
+     "field": "option cmscb15cz00cztmzv61egwuja (cmscb15cz00cztmzv61egwuja).execution",
+     "before": null,
+     "after": "The child spots that cow does not lay eggs and stops there. Frog is added as its partner, but frog lays eggs, so it belongs to the group and lion is left out of the answer."
+    },
+    {
+     "field": "option cmscb15cz00d0tmzvutkucgqn (cmscb15cz00d0tmzvutkucgqn).value",
+     "before": "dog,snake",
+     "after": "[\"hen\", \"lion\"]"
+    },
+    {
+     "field": "option cmscb15cz00d0tmzvutkucgqn (cmscb15cz00d0tmzvutkucgqn).execution",
+     "before": "The three that go together are hen, snake, frog, so the two that do not are cat and dog. This option pairs dog, which is one of the odd ones, with snake, which belongs to the group — one odd word found and the search stopped there.",
+     "after": "The child picks out lion as one odd word and pairs it with hen. Hen lays eggs like snake and frog, so it sits inside the group and cow is left out of the answer."
+    },
+    {
+     "field": "option cmscb15cz00d1tmzvnqgkmbk5 (cmscb15cz00d1tmzvnqgkmbk5).value",
+     "before": "snake,frog",
+     "after": "[\"hen\", \"frog\"]"
+    },
+    {
+     "field": "option cmscb15cz00d1tmzvnqgkmbk5 (cmscb15cz00d1tmzvnqgkmbk5).execution",
+     "before": "The question asks which two do NOT belong. The three that go together all lay eggs, so the two odd ones out are cat and dog. This option gives snake and frog, and both of them are inside that three — both egg-layers, a real pull inside the rule. The pull is real and it is the wrong answer: the child found something that truly goes together and answered which two belong instead of which two do not.",
+     "after": "The child notices that hen and frog both lay eggs and offers them. That is the rule of the group, so these two belong; the child has answered which words go together instead of which two do not."
+    }
+   ]
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-24",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: faults",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked: [ball, net] is the only correct option. 'Ball, swim, net' is not a group. The length split matches no option. Tags and executions are true.",
+   "landedAt": "2026-11-25T19:10:10.217Z",
+   "changes": [
+    {
+     "field": "stem.words",
+     "before": [
+      "jump",
+      "ball",
+      "kick",
+      "net",
+      "run"
+     ],
+     "after": [
+      "jump",
+      "ball",
+      "swim",
+      "net",
+      "run"
+     ]
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option cmscb15d400d8tmzvsku8d1iw (cmscb15d400d8tmzvsku8d1iw).value",
+     "before": "ball,net",
+     "after": "[\"ball\", \"net\"]"
+    },
+    {
+     "field": "option cmscb15d400d9tmzvbyirzief (cmscb15d400d9tmzvbyirzief).value",
+     "before": "ball,jump",
+     "after": "[\"ball\", \"jump\"]"
+    },
+    {
+     "field": "option cmscb15d400d9tmzvbyirzief (cmscb15d400d9tmzvbyirzief).execution",
+     "before": null,
+     "after": "The child sees that ball is a thing rather than an action and stops there. Jump is added as its partner, but jump is one of the three movement words, so net is left out of the answer."
+    },
+    {
+     "field": "option cmscb15d400datmzv617rqa9a (cmscb15d400datmzv617rqa9a).value",
+     "before": "net,kick",
+     "after": "[\"swim\", \"net\"]"
+    },
+    {
+     "field": "option cmscb15d400datmzv617rqa9a (cmscb15d400datmzv617rqa9a).execution",
+     "before": "The three that go together are jump, kick, run, so the two that do not are ball and net. This option pairs net, which is one of the odd ones, with kick, which belongs to the group — one odd word found and the search stopped there.",
+     "after": "The child finds net as one odd word but pairs it with swim, perhaps thinking of water. Swim is a way of moving like jump and run, so it belongs to the group of three."
+    },
+    {
+     "field": "option cmscb15d400dbtmzvkw569cl0 (cmscb15d400dbtmzvkw569cl0).value",
+     "before": "jump,run",
+     "after": "[\"jump\", \"run\"]"
+    },
+    {
+     "field": "option cmscb15d400dbtmzvkw569cl0 (cmscb15d400dbtmzvkw569cl0).execution",
+     "before": "The question asks which two do NOT belong. The three that go together are all things you do, so the two odd ones out are ball and net. This option gives jump and run, and both of them are inside that three — both continuous motions of the legs. The pull is real and it is the wrong answer: the child found something that truly goes together and answered which two belong instead of which two do not.",
+     "after": "The child notices that jump and run are both ways of moving and offers them. Those two follow the group's own rule, so the child has answered which words belong instead of which two are odd."
+    }
+   ]
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-25",
+   "passageRef": null,
+   "hold": {
+    "reason": "not a held row: faults",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Checked: timid is the only synonym and is rarer than shy. All options are adjectives. Bold, lonely and polite are each wrong in every sense of shy, and none of them are near-synonyms of each other. Words are known to 9-11-year-olds and none is banned.",
+   "landedAt": "2026-11-25T19:11:04.355Z",
+   "changes": [
+    {
+     "field": "stem.words",
+     "before": [
+      "simple"
+     ],
+     "after": [
+      "shy"
+     ]
+    },
+    {
+     "field": "lineRefs",
+     "before": null,
+     "after": []
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-25-opt1 (gen-vr-21-same-meaning-25-opt1).value",
+     "before": "easy",
+     "after": "timid"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-25-opt2 (gen-vr-21-same-meaning-25-opt2).value",
+     "before": "tricky",
+     "after": "bold"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-25-opt2 (gen-vr-21-same-meaning-25-opt2).execution",
+     "before": "The task is to find the word that means the same as 'simple', and the key is 'easy'. 'tricky' is the opposite of 'simple'. A child who spots the meaning area but reverses it picks 'tricky' instead of 'easy'.",
+     "after": "The child finds the area of how confident a person is but reverses it. Bold means ready to step forward, the opposite of shy."
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-25-opt3 (gen-vr-21-same-meaning-25-opt3).value",
+     "before": "short",
+     "after": "lonely"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-25-opt3 (gen-vr-21-same-meaning-25-opt3).execution",
+     "before": "The task is to find the word that means the same as 'simple', and the key is 'easy'. 'Short and simple' is a common pair, but 'short' is about length, not how hard it is. A child who picks a word that goes with 'simple', not one that means the same, picks 'short' instead of 'easy'.",
+     "after": "A shy child in a story is often lonely too, so the child links the two words. Lonely means feeling alone, not holding back from others, so it cannot swap with shy."
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-25-opt4 (gen-vr-21-same-meaning-25-opt4).value",
+     "before": "fun",
+     "after": "polite"
+    },
+    {
+     "field": "option gen-vr-21-same-meaning-25-opt4 (gen-vr-21-same-meaning-25-opt4).execution",
+     "before": "The task is to find the word that means the same as 'simple', and the key is 'easy'. 'Simple and fun' is a common pair for a game, but 'fun' means enjoyable, not easy. A child who picks a word that goes with 'simple', not one that means the same, picks 'fun' instead of 'easy'.",
+     "after": "Shy children are often described as polite, so the child picks polite. Polite means having good manners, not being nervous around people, so the two words do not mean the same."
+    }
+   ]
+  }
+ ]
+}

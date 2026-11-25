@@ -3,116 +3,7 @@
  "title": "The Matching Pair",
  "questionType": "vr-21-same-meaning",
  "free": false,
- "houseFormExemplars": [
-  {
-   "itemId": "gen-vr-10-word-connections-01",
-   "stem": {
-    "pairA": [
-     "winter",
-     "cold"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "summer"
-   },
-   "key": "warm",
-   "options": [
-    "warm",
-    "holiday",
-    "August"
-   ],
-   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-02",
-   "stem": {
-    "pairA": [
-     "minute",
-     "hour"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "hour"
-   },
-   "key": "day",
-   "options": [
-    "day",
-    "clock",
-    "week"
-   ],
-   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-03",
-   "stem": {
-    "pairA": [
-     "leaf",
-     "tree"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "petal"
-   },
-   "key": "flower",
-   "options": [
-    "flower",
-    "garden",
-    "stem"
-   ],
-   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-04",
-   "stem": {
-    "pairA": [
-     "captain",
-     "ship"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "pilot"
-   },
-   "key": "plane",
-   "options": [
-    "plane",
-    "airport",
-    "wing"
-   ],
-   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-05",
-   "stem": {
-    "pairA": [
-     "bee",
-     "honey"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "cow"
-   },
-   "key": "milk",
-   "options": [
-    "milk",
-    "farm",
-    "grass"
-   ],
-   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-06",
-   "stem": {
-    "pairA": [
-     "sheep",
-     "lamb"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "horse"
-   },
-   "key": "foal",
-   "options": [
-    "foal",
-    "stable",
-    "hay"
-   ],
-   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
-  }
- ],
+ "houseFormExemplars": [],
  "rows": [
   {
    "itemId": "gen-vr-21-same-meaning-01",
@@ -149,8 +40,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with broad. Find the word that could swap places with it. Wide means the same as broad, so wide fits. Narrow is its opposite. Long and tall describe size in another way.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-02",
@@ -187,8 +78,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with moist. Find the word that could swap places with it. Damp means the same, a little wet. Dry is its opposite. Warm and soft describe things, but not how wet they are.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-03",
@@ -225,8 +116,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with foolish. Find the word that could swap places with it. Silly means the same as foolish. Sensible is its opposite. Young and brave describe people, but mean something else.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-04",
@@ -263,8 +154,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with leap. Find the word that could swap places with it. Jump means the same as leap. Dance and run are other ways to move. Land is what comes after a leap.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-05",
@@ -301,8 +192,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with grab. Find the word that could swap places with it. Seize means the same, to take hold of. Release is its opposite. Pull and go are different actions.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-06",
@@ -312,10 +203,10 @@
     ],
     "prompt": "Which word means the SAME as the word on the card?"
    },
-   "key": "end",
+   "key": "complete",
    "options": [
     {
-     "value": "end",
+     "value": "complete",
      "isKey": true,
      "tag": null,
      "tagChildHint": null
@@ -333,7 +224,7 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     },
     {
-     "value": "hurry",
+     "value": "race",
      "isKey": false,
      "tag": "vr21-associated-not-same",
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
@@ -377,8 +268,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with build. Find the word that could swap places with it. Construct means the same as build. Demolish is its opposite. Hammer and plan go with building, but do not mean it.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-08",
@@ -415,8 +306,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with old. Find the word that could swap places with it. Elderly means the same as old. Young is its opposite. Good and wise describe a person in other ways.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-09",
@@ -453,8 +344,8 @@
      "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with rich. Find the word that could swap places with it. Wealthy means the same as rich. Penniless is its opposite. Famous and powerful often go with rich, but mean something else.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-10",
@@ -491,8 +382,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with brave. Find the word that could swap places with it. Courageous means the same as brave. Timid is its opposite. Loyal and kind describe a person in other ways.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-11",
@@ -529,8 +420,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with tired. Find the word that could swap places with it. Weary means the same as tired. Lively is its opposite. Hungry and grumpy are other feelings.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-12",
@@ -567,8 +458,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with happy. Find the word that could swap places with it. Glad means the same as happy. Gloomy is its opposite. Healthy and friendly describe a person in other ways.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-13",
@@ -605,8 +496,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with help. Find the word that could swap places with it. Assist means the same as help. Hinder is its opposite. Thank and share are different actions.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-14",
@@ -643,8 +534,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with choose. Find the word that could swap places with it. Select means the same as choose. Refuse means to say no. Buy and answer are different actions.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-15",
@@ -681,8 +572,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with odd. Strange means the same as odd, so it could swap places with it. Ordinary is its opposite. Even is the opposite of odd in numbers. Puzzled is a feeling.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-16",
@@ -719,8 +610,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with gift. Find the word that could swap places with it. Present means the same as gift. Birthday, ribbon and card go with a gift, but mean something else.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-17",
@@ -757,8 +648,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with speak. Find the word that could swap places with it. Talk means the same as speak. Shout means speak very loudly, so it is too strong. Listen and write are different actions.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-18",
@@ -795,8 +686,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with begin. Find the word that could swap places with it. Start means the same as begin. Finish is its opposite. Race and count are things that can begin.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-19",
@@ -833,8 +724,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with shut. Close means the same as shut, so it could swap places with it. Open is its opposite. Slam means shut hard, so it is too strong. Sleep is something else.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-20",
@@ -871,21 +762,21 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with big. Find the word that could swap places with it. Large means the same as big. Small is its opposite. Slow and heavy describe things in other ways.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-21",
    "stem": {
     "words": [
-     "quick"
+     "fast"
     ],
     "prompt": "Which word means the SAME as the word on the card?"
    },
-   "key": "rapid",
+   "key": "swift",
    "options": [
     {
-     "value": "rapid",
+     "value": "swift",
      "isKey": true,
      "tag": null,
      "tagChildHint": null
@@ -897,13 +788,13 @@
      "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
     },
     {
-     "value": "easy",
+     "value": "asleep",
      "isKey": false,
      "tag": "vr21-associated-not-same",
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     },
     {
-     "value": "quiet",
+     "value": "loud",
      "isKey": false,
      "tag": "vr21-associated-not-same",
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
@@ -947,8 +838,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with scared. Find the word that could swap places with it. Fearful means the same as scared. Bold is its opposite. Dark and alone can make someone scared, but mean something else.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-23",
@@ -985,8 +876,8 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with angry. Find the word that could swap places with it. Cross means the same as angry. Calm is its opposite. Red and loud can go with angry, but mean something else.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-24",
@@ -1023,39 +914,39 @@
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with silent. Find the word that could swap places with it. Quiet means the same as silent. Noisy is its opposite. Dark and empty describe a place in other ways.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-21-same-meaning-25",
    "stem": {
     "words": [
-     "simple"
+     "shy"
     ],
     "prompt": "Which word means the SAME as the word on the card?"
    },
-   "key": "easy",
+   "key": "timid",
    "options": [
     {
-     "value": "easy",
+     "value": "timid",
      "isKey": true,
      "tag": null,
      "tagChildHint": null
     },
     {
-     "value": "tricky",
+     "value": "bold",
      "isKey": false,
      "tag": "vr21-opposite-pull",
      "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
     },
     {
-     "value": "short",
+     "value": "lonely",
      "isKey": false,
      "tag": "vr21-associated-not-same",
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
     },
     {
-     "value": "fun",
+     "value": "polite",
      "isKey": false,
      "tag": "vr21-associated-not-same",
      "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."

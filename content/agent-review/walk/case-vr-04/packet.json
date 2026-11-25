@@ -3,116 +3,7 @@
  "title": "The Word Twins",
  "questionType": "vr-04-closest-meaning",
  "free": true,
- "houseFormExemplars": [
-  {
-   "itemId": "gen-vr-10-word-connections-01",
-   "stem": {
-    "pairA": [
-     "winter",
-     "cold"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "summer"
-   },
-   "key": "warm",
-   "options": [
-    "warm",
-    "holiday",
-    "August"
-   ],
-   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-02",
-   "stem": {
-    "pairA": [
-     "minute",
-     "hour"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "hour"
-   },
-   "key": "day",
-   "options": [
-    "day",
-    "clock",
-    "week"
-   ],
-   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-03",
-   "stem": {
-    "pairA": [
-     "leaf",
-     "tree"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "petal"
-   },
-   "key": "flower",
-   "options": [
-    "flower",
-    "garden",
-    "stem"
-   ],
-   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-04",
-   "stem": {
-    "pairA": [
-     "captain",
-     "ship"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "pilot"
-   },
-   "key": "plane",
-   "options": [
-    "plane",
-    "airport",
-    "wing"
-   ],
-   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-05",
-   "stem": {
-    "pairA": [
-     "bee",
-     "honey"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "cow"
-   },
-   "key": "milk",
-   "options": [
-    "milk",
-    "farm",
-    "grass"
-   ],
-   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-06",
-   "stem": {
-    "pairA": [
-     "sheep",
-     "lamb"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "horse"
-   },
-   "key": "foal",
-   "options": [
-    "foal",
-    "stable",
-    "hay"
-   ],
-   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
-  }
- ],
+ "houseFormExemplars": [],
  "rows": [
   {
    "itemId": "bank-vr-04-closest-meaning-01",
@@ -187,8 +78,8 @@
      "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
     }
    ],
-   "walkScript": "On the card you see swift. It points to very great speed. Fast matches that meaning quite closely. Slow is the opposite here; cheetah and race come from racing.",
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with swift. Swift means moving at great speed. Fast means the same, so it matches. Slow is the opposite. A cheetah and a race can be fast, but neither means fast.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "bank-vr-04-closest-meaning-03",
@@ -225,8 +116,8 @@
      "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
     }
    ],
-   "walkScript": "Look first at the word damp. It means a little bit wet. Moist says just the same thing. Dry means the reverse; towel and puddle are simply wet things.",
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with damp. Damp means a little wet. Moist also means a little wet, so it matches. Dry is the opposite. A towel and a puddle go with wetness, but neither means wet.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "bank-vr-04-closest-meaning-04",
@@ -308,38 +199,38 @@
    "itemId": "bank-vr-04-closest-meaning-06",
    "stem": {
     "words": [
-     "fair"
+     "glad"
     ],
     "prompt": "Which word is closest in meaning to the word on the card?"
    },
-   "key": "just",
+   "key": "happy",
    "options": [
     {
-     "value": "just",
+     "value": "happy",
      "isKey": true,
      "tag": null,
      "tagChildHint": null
     },
     {
-     "value": "unfair",
+     "value": "sad",
      "isKey": false,
      "tag": "vr04-opposite-pull",
      "tagChildHint": "That word points the other way. Read both meanings again."
     },
     {
-     "value": "referee",
+     "value": "smile",
      "isKey": false,
      "tag": "vr04-associated-not-same",
      "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
     },
     {
-     "value": "rules",
+     "value": "party",
      "isKey": false,
      "tag": "vr04-associated-not-same",
      "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
     }
    ],
-   "walkScript": "The card in front shows fair. It means even, square and right. Just means the same thing. The opposite is unfair; referee and rules belong to games.",
+   "walkScript": null,
    "walkScriptApprovedBy": null
   },
   {
@@ -377,8 +268,8 @@
      "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
     }
    ],
-   "walkScript": "Read the card word hollow. It means bare and quite unfilled. Empty points to that meaning. Solid works the opposite way; log and drum are hollow things.",
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with hollow. Hollow means having nothing inside. Empty also means nothing inside, so it matches. Solid is the opposite. A drum and a log are things, not words that mean empty.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "bank-vr-04-closest-meaning-08",
@@ -605,8 +496,8 @@
      "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
     }
    ],
-   "walkScript": "Your card holds the word rare. This word means fairly uncommon. Scarce means the same thing. Common means the reverse; coin and stamp are things people collect.",
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with rare. Rare means not found often. Scarce also means hard to find, so it matches. Common is the opposite. A coin and a stamp may be rare, but they are things, not meanings.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "bank-vr-04-closest-meaning-14",
@@ -985,8 +876,8 @@
      "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
     }
    ],
-   "walkScript": "The card in front shows obedient. It describes doing just as told. Dutiful carries that meaning too. Disobedient means the reverse; dog and command belong to obeying.",
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with obedient. Obedient means doing what you are told. Well-behaved is the closest, so it matches. Disobedient is the opposite. A dog can obey a command, but neither word means obedient.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "bank-vr-04-closest-meaning-24",
@@ -1517,8 +1408,8 @@
      "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
     }
    ],
-   "walkScript": "The word on the card is luminous. It describes strong and pouring light. Bright lands closest to it. Dull works the opposite way; moon and lamp give off light.",
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with luminous. Luminous means giving off light, often a soft glow. Bright is the closest, so it matches. Dull is the opposite. The moon and a lamp give light, but they are things, not meanings.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "bank-vr-04-closest-meaning-38",
@@ -1593,8 +1484,8 @@
      "tagChildHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
     }
    ],
-   "walkScript": "The card shows the word notorious. It stands for widely bad fame. Infamous carries that same dark meaning. Reputable turns it around; criminal and headline belong to crime news.",
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with notorious. Notorious means well known for something bad. Infamous means the same, so it matches. Reputable is the opposite, as it means having a good name. A criminal or a headline may be notorious, but neither word means it.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "bank-vr-04-closest-meaning-40",
@@ -1946,10 +1837,10 @@
     ],
     "prompt": "Which word is closest in meaning to the word on the card?"
    },
-   "key": "quick",
+   "key": "fast",
    "options": [
     {
-     "value": "quick",
+     "value": "fast",
      "isKey": true,
      "tag": null,
      "tagChildHint": null
@@ -1961,7 +1852,7 @@
      "tagChildHint": "That word points the other way. Read both meanings again."
     },
     {
-     "value": "hurried",
+     "value": "early",
      "isKey": false,
      "tag": "vr04-wrong-shade",
      "tagChildHint": "Close is not the same. Ask exactly what the word you were given means."
@@ -2087,8 +1978,8 @@
      "tagChildHint": "Both words could fit the same story. Ask whether they mean the same."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with timid. Timid means nervous around others. Shy means the same, so it matches. Terrified is far too strong. Quiet is only one part of timid, while polite means something else.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-04-closest-meaning-13",
@@ -2163,8 +2054,8 @@
      "tagChildHint": "Both words could fit the same story. Ask whether they mean the same."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with sturdy. Sturdy means built to be strong. Strong is the closest, so it matches. Unbreakable goes too far. Heavy or wooden things can be sturdy, but those words mean something else.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-04-closest-meaning-15",
@@ -2391,8 +2282,8 @@
      "tagChildHint": "Both words could fit the same story. Ask whether they mean the same."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with feeble. Feeble means having very little strength. Frail means the same, so it matches. Helpless goes too far. Pale or elderly people can be feeble, but those words mean something else.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-04-closest-meaning-21",
@@ -2816,8 +2707,8 @@
      "tagChildHint": "That is one sign of it. The word itself means something wider."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with AMIABLE in the sentence. It means friendly, warm in a kind way. Friendly is the closest, so it matches. Grumpy is the opposite. Cheerful means happy, while chatty is only one part of being friendly.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-04-closest-meaning-32",
@@ -2933,8 +2824,8 @@
      "tagChildHint": "The word in capitals has more than one meaning. Read the sentence and pick the one it shows."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with EXQUISITE in the sentence. It means very beautiful, with fine detail. Beautiful is the closest, so it matches. Pretty is not strong enough, while costly means something else. Sharp fits another meaning, as in a sharp pain.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-04-closest-meaning-35",
@@ -2972,8 +2863,8 @@
      "tagChildHint": "Both words could fit the same story. Ask whether they mean the same."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with BENEVOLENT in the sentence. It means caring about others, keen to do good. Kind means the same, so it matches. Saintly goes too far. Polite is about manners, while wealthy is about money.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-04-closest-meaning-36",
@@ -3050,8 +2941,8 @@
      "tagChildHint": "That is one sign of it. The word itself means something wider."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with JOVIAL in the sentence. It means cheerful in a warm, friendly way. Cheerful means the same, so it matches. Ecstatic is far too strong. Silly means foolish, while loud is only one part of it.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-04-closest-meaning-38",
@@ -3167,8 +3058,8 @@
      "tagChildHint": "That is one sign of it. The word itself means something wider."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Start with MELANCHOLY in the sentence. It means sad in a quiet, thoughtful way. Sad is the closest, so it matches. Heartbroken is far too strong. A gentle or slow tune is not always sad.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "zz-e2e-fixture-item",

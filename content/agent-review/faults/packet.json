@@ -1,0 +1,424 @@
+{
+ "door": "faults",
+ "questionType": "mixed",
+ "entries": {
+  "vr-move-letter-both-invalid": {
+   "description": "Chose a letter that makes neither word work.",
+   "childHint": "Test both halves: the first word without the letter, the second word with it."
+  },
+  "vr04-opposite-pull": {
+   "description": "Chose the opposite by mistake.",
+   "childHint": "That word points the other way. Read both meanings again."
+  },
+  "vr-letter-series-step-repeat": {
+   "description": "Applied the letter step twice, overshooting the target.",
+   "childHint": "One jump at a time! Count the step from the last letter just once."
+  },
+  "vr06-fits-gap-not-word": {
+   "description": "Chose three letters that are not a word and make a non-word in the gap.",
+   "childHint": "The missing three letters make a little word all by themselves."
+  },
+  "vr20-common-letter": {
+   "description": "Defaulted to a common letter without testing the word.",
+   "childHint": "Try your letter in the gap and read the whole word."
+  },
+  "vr19-letter-order": {
+   "description": "Matched code digits to letters in the reverse order.",
+   "childHint": "Line the code up under the word, letter by letter, left to right."
+  },
+  "vr05-almost-letters": {
+   "description": "Picked a word whose letters are nearly, not exactly, in the sentence.",
+   "childHint": "Find the exact letters in order. Every letter must be there, touching."
+  },
+  "vr07-term-dropped": {
+   "description": "Stopped before using every letter, usually leaving off the last term.",
+   "childHint": "Check you have used every letter. Count them as you go."
+  },
+  "vr-series-step-applied-twice": {
+   "description": "Added the step twice from the last term, usually after losing track of the gaps.",
+   "childHint": "Take one jump from the last number, not two. Check the gaps first."
+  },
+  "vr02-real-link-wrong-rule": {
+   "description": "Paired two words by a genuine link, a shared property or a real association, that is not the rule the group of three uses.",
+   "childHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+  },
+  "vr03-wrong-link": {
+   "description": "Found a genuine relationship between the pair and applied it consistently, but not the one the example shows.",
+   "childHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+  },
+  "vr04-one-feature-only": {
+   "description": "Picks a word naming one sign of the headword rather than what it means (silent for STOIC \u2014 one thing a stoic person might do, not what stoic means).",
+   "childHint": "That is one sign of it. The word itself means something wider."
+  },
+  "vr21-associated-not-same": {
+   "description": "Chose a goes-together word, not a means-the-same word.",
+   "childHint": "Could you swap one word for the other in a sentence? Twins can swap."
+  },
+  "vr03-part-for-kind": {
+   "description": "Gave a part of the second word where the example gave a kind, a whole, or a category.",
+   "childHint": "A part is not the same as a whole. Check what the first pair gave you."
+  },
+  "vr18-partial-rule": {
+   "description": "Used only one of the two outer numbers in the rule.",
+   "childHint": "The middle number is made from both outside numbers. How do they combine?"
+  },
+  "vr07-operation-slip": {
+   "description": "Added when the sum needed another operation.",
+   "childHint": "Look at the signs first. Is it plus, minus or times?"
+  },
+  "vr03-example-anchor": {
+   "description": "Chose a word related to the first pair rather than applying the relationship to the second.",
+   "childHint": "The first pair only shows the rule. Now use that rule on the new word."
+  },
+  "vr07-value-slip": {
+   "description": "Substituted one letter with the neighbouring value.",
+   "childHint": "Write each letter\u2019s number above it before you add."
+  },
+  "vr03-same-topic": {
+   "description": "Chose a word from the same topic without the same relationship.",
+   "childHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+  },
+  "vr01-second-word-only": {
+   "description": "Chose a letter that completes only the second word.",
+   "childHint": "Check the first word too. Your letter must finish it as well."
+  },
+  "vr03-reversed-relation": {
+   "description": "Applied the relationship backwards.",
+   "childHint": "Check which way round the first pair goes. Keep your answer the same way round."
+  },
+  "vr06-ignores-sentence": {
+   "description": "Made a real word that does not fit the sentence.",
+   "childHint": "Read the whole sentence with your word in it. Does it make sense?"
+  },
+  "vr15-clue-flip": {
+   "description": "Read a comparison the reverse way (taller vs shorter).",
+   "childHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+  },
+  "vr04-associated-not-same": {
+   "description": "Chose an associated word rather than a synonym.",
+   "childHint": "Goes-together is not the same as means-the-same. Swap the words in a sentence to test."
+  },
+  "vr01-completes-neither": {
+   "description": "Chose a letter that completes neither word.",
+   "childHint": "Say both finished words out loud. Are they both real?"
+  },
+  "vr12-meaning-not-word": {
+   "description": "Chose a pairing that makes sense but not a real compound word.",
+   "childHint": "The two halves must make one real word you have seen written."
+  },
+  "vr15-first-mention": {
+   "description": "Chose whoever was mentioned first rather than following the clues.",
+   "childHint": "Use every clue to put them in order before you answer."
+  },
+  "vr01-first-word-only": {
+   "description": "Chose a letter that completes only the first word.",
+   "childHint": "Your letter has to finish both words. Try it in each gap."
+  },
+  "vr02-partial-group": {
+   "description": "Found one odd word but paired it with a group member.",
+   "childHint": "Name the group first. Both odd ones sit outside it."
+  },
+  "vr21-opposite-pull": {
+   "description": "Gave the word\u2019s opposite where its meaning was asked.",
+   "childHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+  },
+  "vr05-single-word-only": {
+   "description": "Searched inside single words instead of across the join.",
+   "childHint": "The hidden word loves to hide across two words. Check where they meet."
+  },
+  "vr13-not-a-word": {
+   "description": "Assembled letters that do not form a real word.",
+   "childHint": "Say your finished word out loud. Is it one you know?"
+  },
+  "vr16-synonym-pull": {
+   "description": "Chose a word meaning the same instead of the opposite.",
+   "childHint": "You found a twin. Now find the reverse."
+  },
+  "vr17-arith-slip": {
+   "description": "Right method, arithmetic slip of one or two.",
+   "childHint": "Your plan is right. Recount the last step slowly."
+  },
+  "vr17-one-side-only": {
+   "description": "Solved one side of the equation and stopped.",
+   "childHint": "Work out both sides. The answer makes them balance like scales."
+  },
+  "vr18-rule-swap": {
+   "description": "Applied a nearby rule (added instead of multiplied).",
+   "childHint": "Test your rule on the first group before using it on the second."
+  },
+  "vr02-answered-the-opposite": {
+   "description": "chooses two words that do go together by the group's own rule, answering which two belong instead of which two are odd.",
+   "childHint": "Those two do belong together. The question asks for the two that do not."
+  },
+  "vr20-sound-alike": {
+   "description": "Chose a letter that sounds right but spells a non-word.",
+   "childHint": "Spell the finished word letter by letter. Is that how it is really written?"
+  },
+  "vr21-too-strong": {
+   "description": "Chose a much stronger or weaker version of the meaning.",
+   "childHint": "Nearly! Match the size of the meaning too. Huge is more than big."
+  },
+  "vr-move-letter-first-word-invalid": {
+   "description": "Chose a letter whose removal does not leave a real first word.",
+   "childHint": "Take the letter out and read what is left. Is that first word a real word?"
+  },
+  "vr-move-letter-second-word-invalid": {
+   "description": "Chose a letter that does not make a real second word when added.",
+   "childHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+  },
+  "vr19-shared-letter-miss": {
+   "description": "Missed that repeated letters share one digit.",
+   "childHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+  },
+  "vr02-surface-link": {
+   "description": "Grouped by look or sound instead of meaning.",
+   "childHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+  },
+  "vr10-first-pair-word-returned": {
+   "description": "Gives back a word from the first pair instead of completing the second, copying what the question already shows.",
+   "childHint": "That word is already in the first pair. The second pair needs its own answer."
+  },
+  "vr-series-off-by-one": {
+   "description": "Identified the rule but slipped by one when applying it.",
+   "childHint": "Your rule looks right \u2014 count the last jump one more time, nice and slowly."
+  },
+  "vr-series-step-carryover": {
+   "description": "Reused the previous step instead of spotting that the step size changes.",
+   "childHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+  },
+  "vr-series-sum-of-last-two": {
+   "description": "Read the series as each term being the sum of the two before it, and added the last pair.",
+   "childHint": "Look at the gap between each pair. The gap is what tells you the next number."
+  },
+  "vr04-wrong-shade": {
+   "description": "Picks a word that shares the general area of meaning but tilts it in a different direction (gloomy for STOIC, hearing sadness where the word means not showing feeling).",
+   "childHint": "Close is not the same. Ask exactly what the word you were given means."
+  },
+  "vr04-keeps-the-same-company": {
+   "description": "Picks a word that turns up in the same situations as the headword without sharing its meaning (loyal for BRAVE \u2014 another word of praise, not one that means unafraid).",
+   "childHint": "Both words could fit the same story. Ask whether they mean the same."
+  },
+  "vr04-the-other-meaning": {
+   "description": "Picks a genuine meaning of the headword, but not the sense the carrier sentence fixes (poor for HUMBLE in \"stayed HUMBLE after winning\" \u2014 the humble-cottage sense). T4/T5 only.",
+   "childHint": "The word in capitals has more than one meaning. Read the sentence and pick the one it shows."
+  },
+  "vr03-wrong-degree": {
+   "description": "Applies the right relationship but at the wrong strength or scale (wet for damp\u2192soaked \u2014 the right direction of change, not its size).",
+   "childHint": "You found the right link. Now check how big the change is."
+  },
+  "vr-letter-series-direction": {
+   "description": "Moved backwards through the alphabet instead of forwards.",
+   "childHint": "Which way is the series moving through the alphabet? Check the first two letters."
+  },
+  "vr14-step-size": {
+   "description": "Counted the jump one letter short or long.",
+   "childHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+  },
+  "vr-letter-series-off-by-one": {
+   "description": "Correct rule, but landed one letter short or long.",
+   "childHint": "Count along the alphabet again. Land one letter at a time."
+  },
+  "vr04-wrong-strength": {
+   "description": "Picks a word from the right family at the wrong intensity, far stronger or far weaker than the headword (terrified for TIMID; annoyed for FURIOUS).",
+   "childHint": "Some words say a lot and some say a little. Choose the answer that says just as much as the word you are given."
+  },
+  "vr16-loose-opposite": {
+   "description": "Chose a loosely different word, not a true opposite.",
+   "childHint": "A true opposite flips the meaning exactly, like open and shut."
+  },
+  "vr14-step-direction": {
+   "description": "Moved the opposite way through the alphabet to the first pair.",
+   "childHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+  },
+  "vr13-wrong-pieces": {
+   "description": "Took letters from other places in the outer words instead of the positions the example shows.",
+   "childHint": "Look at where the example word takes its letters from. Copy those exact positions."
+  }
+ },
+ "rows": [
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-22",
+   "questionType": "vr-02-two-odd-ones-out",
+   "status": "LIVE",
+   "stem": {
+    "words": [
+     "hen",
+     "cat",
+     "snake",
+     "dog",
+     "frog"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "explanationKeys": null,
+   "options": [
+    {
+     "optionId": "cmscb15cz00cytmzvjh2gokya",
+     "value": "[\"cat\", \"dog\"]",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15cz00cztmzv61egwuja",
+     "value": "[\"cat\", \"hen\"]",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15cz00d0tmzvutkucgqn",
+     "value": "[\"dog\", \"snake\"]",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "execution": "The three that go together are hen, snake, frog, so the two that do not are cat and dog. This option pairs dog, which is one of the odd ones, with snake, which belongs to the group \u2014 one odd word found and the search stopped there."
+    },
+    {
+     "optionId": "cmscb15cz00d1tmzvnqgkmbk5",
+     "value": "[\"snake\", \"frog\"]",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "execution": "The question asks which two do NOT belong. The three that go together all lay eggs, so the two odd ones out are cat and dog. This option gives snake and frog, and both of them are inside that three \u2014 both egg-layers, a real pull inside the rule. The pull is real and it is the wrong answer: the child found something that truly goes together and answered which two belong instead of which two do not."
+    }
+   ],
+   "fault": "Second defensible answer: hen, cat, dog are kept animals and snake, frog wild ones (row 18 teaches that rule). Change the word set so only one pair is odd."
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-24",
+   "questionType": "vr-02-two-odd-ones-out",
+   "status": "LIVE",
+   "stem": {
+    "words": [
+     "jump",
+     "ball",
+     "kick",
+     "net",
+     "run"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "explanationKeys": null,
+   "options": [
+    {
+     "optionId": "cmscb15d400d8tmzvsku8d1iw",
+     "value": "[\"ball\", \"net\"]",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15d400d9tmzvbyirzief",
+     "value": "[\"ball\", \"jump\"]",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb15d400datmzv617rqa9a",
+     "value": "[\"net\", \"kick\"]",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "execution": "The three that go together are jump, kick, run, so the two that do not are ball and net. This option pairs net, which is one of the odd ones, with kick, which belongs to the group \u2014 one odd word found and the search stopped there."
+    },
+    {
+     "optionId": "cmscb15d400dbtmzvkw569cl0",
+     "value": "[\"jump\", \"run\"]",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "execution": "The question asks which two do NOT belong. The three that go together are all things you do, so the two odd ones out are ball and net. This option gives jump and run, and both of them are inside that three \u2014 both continuous motions of the legs. The pull is real and it is the wrong answer: the child found something that truly goes together and answered which two belong instead of which two do not."
+    }
+   ],
+   "fault": "Second defensible answer: ball, kick, net is a football group, leaving jump, run. Change a word so only one pair is odd."
+  },
+  {
+   "itemId": "bank-vr-04-closest-meaning-06",
+   "questionType": "vr-04-closest-meaning",
+   "status": "LIVE",
+   "stem": {
+    "words": [
+     "fair"
+    ],
+    "prompt": "Which word is closest in meaning to the word on the card?"
+   },
+   "explanationKeys": [
+    "walkScript",
+    "walkScriptBatch",
+    "walkScriptStatus"
+   ],
+   "options": [
+    {
+     "optionId": "cmscb156e000qtmzvmd5911oj",
+     "value": "just",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156e000rtmzvsgs62ho0",
+     "value": "unfair",
+     "isKey": false,
+     "tag": "vr04-opposite-pull",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156e000stmzvd611h359",
+     "value": "referee",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    },
+    {
+     "optionId": "cmscb156e000ttmzvyon0p20b",
+     "value": "rules",
+     "isKey": false,
+     "tag": "vr04-associated-not-same",
+     "execution": null
+    }
+   ],
+   "fault": "FAIR as a bare card: its senses (just / light / fine weather) leave no safe key \u2014 the house two-part screen retires it. Rebuild with a different card word."
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-25",
+   "questionType": "vr-21-same-meaning",
+   "status": "LIVE",
+   "stem": {
+    "words": [
+     "simple"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "explanationKeys": null,
+   "options": [
+    {
+     "optionId": "gen-vr-21-same-meaning-25-opt1",
+     "value": "easy",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "gen-vr-21-same-meaning-25-opt2",
+     "value": "tricky",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "execution": "The task is to find the word that means the same as 'simple', and the key is 'easy'. 'tricky' is the opposite of 'simple'. A child who spots the meaning area but reverses it picks 'tricky' instead of 'easy'."
+    },
+    {
+     "optionId": "gen-vr-21-same-meaning-25-opt3",
+     "value": "short",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "execution": "The task is to find the word that means the same as 'simple', and the key is 'easy'. 'Short and simple' is a common pair, but 'short' is about length, not how hard it is. A child who picks a word that goes with 'simple', not one that means the same, picks 'short' instead of 'easy'."
+    },
+    {
+     "optionId": "gen-vr-21-same-meaning-25-opt4",
+     "value": "fun",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "execution": "The task is to find the word that means the same as 'simple', and the key is 'easy'. 'Simple and fun' is a common pair for a game, but 'fun' means enjoyable, not easy. A child who picks a word that goes with 'simple', not one that means the same, picks 'fun' instead of 'easy'."
+    }
+   ],
+   "fault": "Card word \"simple\" and key \"easy\" are both house-banned. Rebuild with a new card/key pair (key rarer than card, R323)."
+  }
+ ]
+}

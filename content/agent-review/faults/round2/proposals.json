@@ -1,0 +1,178 @@
+{
+  "door": "faults",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "bank-vr-02-two-odd-ones-out-22",
+      "why": "Fault: hen, cat, dog read as kept animals and left snake, frog as a second odd pair. Cat and dog become cow and lion, so the three egg-layers (hen, snake, frog) are the only group. Round 2: whale gave a legs reading, so lion replaces it; the offered pairs avoid hen+cow, whose removal would leave snake, lion, frog as wild animals.",
+      "stem": {
+        "words": [
+          "hen",
+          "cow",
+          "snake",
+          "lion",
+          "frog"
+        ],
+        "prompt": "Three of these words go together. Which two are the odd ones out?"
+      },
+      "options": [
+        {
+          "optionId": "cmscb15cz00cytmzvjh2gokya",
+          "value": "[\"cow\", \"lion\"]",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmscb15cz00cztmzv61egwuja",
+          "value": "[\"cow\", \"frog\"]",
+          "isKey": false,
+          "tag": "vr02-partial-group",
+          "execution": "The child spots that cow does not lay eggs and stops there. Frog is added as its partner, but frog lays eggs, so it belongs to the group and lion is left out of the answer."
+        },
+        {
+          "optionId": "cmscb15cz00d0tmzvutkucgqn",
+          "value": "[\"hen\", \"lion\"]",
+          "isKey": false,
+          "tag": "vr02-partial-group",
+          "execution": "The child picks out lion as one odd word and pairs it with hen. Hen lays eggs like snake and frog, so it sits inside the group and cow is left out of the answer."
+        },
+        {
+          "optionId": "cmscb15cz00d1tmzvnqgkmbk5",
+          "value": "[\"hen\", \"frog\"]",
+          "isKey": false,
+          "tag": "vr02-answered-the-opposite",
+          "execution": "The child notices that hen and frog both lay eggs and offers them. That is the rule of the group, so these two belong; the child has answered which words go together instead of which two do not."
+        }
+      ]
+    },
+    {
+      "itemId": "bank-vr-02-two-odd-ones-out-24",
+      "why": "Fault: ball, kick, net made a football group and left jump, run as a second odd pair. Kick is replaced by swim, so the only three sharing a rule are ways of moving your body (jump, swim, run) and no football reading remains. Round 2: hop made hop, net, run the only three-letter words; with swim the lengths split jump, ball, swim (4) against net, run (3), which no option matches.",
+      "stem": {
+        "words": [
+          "jump",
+          "ball",
+          "swim",
+          "net",
+          "run"
+        ],
+        "prompt": "Three of these words go together. Which two are the odd ones out?"
+      },
+      "options": [
+        {
+          "optionId": "cmscb15d400d8tmzvsku8d1iw",
+          "value": "[\"ball\", \"net\"]",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmscb15d400d9tmzvbyirzief",
+          "value": "[\"ball\", \"jump\"]",
+          "isKey": false,
+          "tag": "vr02-partial-group",
+          "execution": "The child sees that ball is a thing rather than an action and stops there. Jump is added as its partner, but jump is one of the three movement words, so net is left out of the answer."
+        },
+        {
+          "optionId": "cmscb15d400datmzv617rqa9a",
+          "value": "[\"swim\", \"net\"]",
+          "isKey": false,
+          "tag": "vr02-partial-group",
+          "execution": "The child finds net as one odd word but pairs it with swim, perhaps thinking of water. Swim is a way of moving like jump and run, so it belongs to the group of three."
+        },
+        {
+          "optionId": "cmscb15d400dbtmzvkw569cl0",
+          "value": "[\"jump\", \"run\"]",
+          "isKey": false,
+          "tag": "vr02-answered-the-opposite",
+          "execution": "The child notices that jump and run are both ways of moving and offers them. Those two follow the group's own rule, so the child has answered which words belong instead of which two are odd."
+        }
+      ]
+    },
+    {
+      "itemId": "bank-vr-04-closest-meaning-06",
+      "why": "Fault: FAIR is retired as a bare card (three senses, no safe key). Replaced by GLAD, the card vr04.ts names as FAIR's replacement at T1; key happy is commoner than glad, and no distractor is correct in glad's other sense (willing).",
+      "explanationPatch": {
+        "walkScript": null,
+        "walkScriptStatus": null
+      },
+      "stem": {
+        "words": [
+          "glad"
+        ],
+        "prompt": "Which word is closest in meaning to the word on the card?"
+      },
+      "options": [
+        {
+          "optionId": "cmscb156e000qtmzvmd5911oj",
+          "value": "happy",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmscb156e000rtmzvsgs62ho0",
+          "value": "sad",
+          "isKey": false,
+          "tag": "vr04-opposite-pull",
+          "execution": "The child finds the area of feelings but lands on the opposite one. Sad points away from glad, so the meaning has been flipped."
+        },
+        {
+          "optionId": "cmscb156e000stmzvd611h359",
+          "value": "smile",
+          "isKey": false,
+          "tag": "vr04-associated-not-same",
+          "execution": "A glad person often smiles, so the two words turn up together. Smile names something a person does, not the feeling itself, and the child has taken goes-together for means-the-same."
+        },
+        {
+          "optionId": "cmscb156e000ttmzvyon0p20b",
+          "value": "party",
+          "isKey": false,
+          "tag": "vr04-associated-not-same",
+          "execution": "A party is a place where people feel glad, so the child links the two. Party names an event, not a feeling, so it does not share the meaning of glad."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-25",
+      "why": "Fault: card simple and key easy are house-banned. New card SHY (not a card anywhere in vr-21) with key timid (vault tier 2, rarer than shy); bold is the opposite, and blush and smile go with shy without sharing its meaning. Round 2: BRAVE duplicated gen-vr-21-same-meaning-10.",
+      "stem": {
+        "words": [
+          "shy"
+        ],
+        "prompt": "Which word means the SAME as the word on the card?"
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt1",
+          "value": "timid",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt2",
+          "value": "bold",
+          "isKey": false,
+          "tag": "vr21-opposite-pull",
+          "execution": "The child finds the area of how confident a person is but reverses it. Bold means ready to step forward, the opposite of shy."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt3",
+          "value": "blush",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "A shy person often blushes, so the child links the two words. Blush means to go red in the face, not to hold back from others, so it cannot swap with shy."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt4",
+          "value": "smile",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "A shy smile is a common phrase, so the child picks smile. Smile names something a face does, not a way of feeling around people, so the two words do not mean the same."
+        }
+      ]
+    }
+  ]
+}

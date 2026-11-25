@@ -1,0 +1,15 @@
+{
+  "door": "faults",
+  "reviewer": "rev-agent-01",
+  "round": 3,
+  "changes": [
+    {
+      "ref": "rebuild:gen-vr-21-same-meaning-25",
+      "verdict": "ATTEST",
+      "reason": "Every fault named in rounds 1-2 is fixed: the banned simple/easy are gone, the BRAVE duplicate of gen-vr-21-10 is gone, and the word-class give-away is gone. SHY, timid, bold, lonely and polite are all adjectives, so no option can be dropped by word class. Timid (vault tier 2) is rarer than shy and is the only synonym. Bold is the opposite, and lonely and polite are adjectives that go with shy without meaning it. There is no near-synonym pair among the distractors. No distractor is correct in shy's other senses: 'shy of' meaning short of, and 'to shy' as a startled horse does. Every tag fits and every execution is true of the row. No banned words. The precheck passes with --from-live."
+    }
+  ],
+  "rows": [
+    { "itemId": "gen-vr-21-same-meaning-25", "verdict": "SIGN", "reason": "Checked: timid is the only synonym and is rarer than shy. All options are adjectives. Bold, lonely and polite are each wrong in every sense of shy, and none of them are near-synonyms of each other. Words are known to 9-11-year-olds and none is banned." }
+  ]
+}

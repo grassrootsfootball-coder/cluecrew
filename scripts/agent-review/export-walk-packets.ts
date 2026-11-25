@@ -6,13 +6,16 @@
  *
  *   tsx scripts/agent-review/export-walk-packets.ts --cases=case-vr-01,case-vr-03
  */
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join as pjoin } from 'node:path';
 import { prisma } from '../../packages/db/src/index';
 import { requirePopulation } from '../lib/population';
 
 const OUT = pjoin(__dirname, '..', '..', 'content', 'agent-review', 'walk');
 const CASES = (process.argv.find((a) => a.startsWith('--cases='))?.slice(8) ?? '').split(',').filter(Boolean);
+/** --split=N writes N part-folders (<case>-p1..pN) so several reviewers can read one large case. */
+const SPLIT = Number(process.argv.find((a) => a.startsWith('--split='))?.slice(8) ?? '1');
+const PASSAGES = pjoin(__dirname, '..', '..', 'content', 'passages');
 const val = (c: unknown) => { const x = (c as { value?: unknown })?.value; return Array.isArray(x) ? x.join(', ') : String(x); };
 
 async function main() {
@@ -23,19 +26,29 @@ async function main() {
   const exemplars = approved.slice(0, 6).map((r) => ({ itemId: r.id, stem: r.stem, key: val(r.options.find((o) => o.isCorrect)?.content),
     options: r.options.map((o) => val(o.content)), walkScript: (r.explanation as Record<string, unknown>).walkScript }));
   for (const caseId of CASES) {
-    const c = await prisma.case.findUniqueOrThrow({ where: { id: caseId }, select: { id: true, title: true, questionTypeId: true, freeTier: true } });
-    const rows = await prisma.item.findMany({ where: { questionTypeId: c.questionTypeId, status: 'LIVE', pool: 'PRACTICE' }, orderBy: { id: 'asc' },
+    const c = await prisma.case.findUniqueOrThrow({ where: { id: caseId }, select: { id: true, title: true, questionTypeId: true, mappedQuestionTypeIds: true, freeTier: true } });
+    const rows = await prisma.item.findMany({ where: { questionTypeId: { in: [c.questionTypeId, ...c.mappedQuestionTypeIds] }, status: 'LIVE', pool: 'PRACTICE', NOT: { id: { startsWith: 'zz-' } } }, orderBy: { id: 'asc' },
       select: { id: true, stem: true, explanation: true, options: { select: { id: true, content: true, isCorrect: true, misconceptionId: true }, orderBy: { id: 'asc' } } } });
     requirePopulation(`walk-packet:${caseId}`, { 'LIVE practice rows': rows.length });
-    const packet = { caseId: c.id, title: c.title, questionType: c.questionTypeId, free: c.freeTier, houseFormExemplars: exemplars,
-      rows: rows.map((r) => { const ex = (r.explanation ?? {}) as Record<string, unknown>; return {
+    const all = rows.map((r) => { const ex = (r.explanation ?? {}) as Record<string, unknown>; return {
         itemId: r.id, stem: r.stem, key: val(r.options.find((o) => o.isCorrect)?.content),
         options: r.options.map((o) => ({ value: val(o.content), isKey: o.isCorrect, tag: o.misconceptionId, tagChildHint: o.misconceptionId ? lib.get(o.misconceptionId) ?? null : null })),
         walkScript: typeof ex.walkScript === 'string' ? ex.walkScript : null,
-        walkScriptApprovedBy: ex.walkScriptApprovedBy ?? null }; }) };
-    mkdirSync(pjoin(OUT, caseId), { recursive: true });
-    writeFileSync(pjoin(OUT, caseId, 'packet.json'), JSON.stringify(packet, null, 1));
-    console.log(`${caseId}: ${rows.length} rows, ${packet.rows.filter((r) => r.walkScript).length} with a script, ${packet.rows.filter((r) => !r.walkScript).length} without`);
+        walkScriptApprovedBy: ex.walkScriptApprovedBy ?? null }; });
+    const size = Math.ceil(all.length / SPLIT);
+    for (let p = 0; p < SPLIT; p++) {
+      const part = all.slice(p * size, (p + 1) * size);
+      if (!part.length) continue;
+      // English rows cite a passage by line; the passage travels with the rows that cite it, VERBATIM (R25).
+      const refs = [...new Set(part.map((r) => (r.stem as { passageRef?: string }).passageRef).filter((x): x is string => typeof x === 'string'))];
+      const passages = Object.fromEntries(refs.map((ref) => { const f = pjoin(PASSAGES, `${ref}.json`); if (!existsSync(f)) throw new Error(`${ref}: passage file missing`);
+        const j = JSON.parse(readFileSync(f, 'utf8')) as Record<string, unknown>; return [ref, { sceneTitle: j.sceneTitle, preamble: j.preamble, numberedLines: j.numberedLines }]; }));
+      const name = SPLIT > 1 ? `${caseId}-p${p + 1}` : caseId;
+      const packet = { caseId: c.id, part: name, title: c.title, questionType: c.questionTypeId, free: c.freeTier, houseFormExemplars: exemplars, passages, rows: part };
+      mkdirSync(pjoin(OUT, name), { recursive: true });
+      writeFileSync(pjoin(OUT, name, 'packet.json'), JSON.stringify(packet, null, 1));
+      console.log(`${name}: ${part.length} rows, ${part.filter((r) => r.walkScript).length} with a script, ${part.filter((r) => !r.walkScript).length} without, ${refs.length} passage(s)`);
+    }
   }
 }
 main().catch((e) => { console.error(e); process.exitCode = 1; }).finally(() => prisma.$disconnect());

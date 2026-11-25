@@ -1,0 +1,546 @@
+{
+  "case": "case-maths-01-p1",
+  "reviewer": "rev-agent-01",
+  "rows": [
+    {
+      "itemId": "MC01-CALC-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "62-27: 12-7=5, 5-2=3, giving 35. The trap (7-2, 6-2) gives option 45. Form passes."
+    },
+    {
+      "itemId": "MC01-CALC-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "4×6=24, +3=27, -15=12. Forgetting the loose eggs gives 9 and adding gives 42, both on screen."
+    },
+    {
+      "itemId": "MC01-CALC-08",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Two faults. The method is never worked on these numbers: it says 'borrow carefully across the zeros' then announces '8006 minus 3478 is 4528' with no column shown. And 'The classic slip takes each smaller digit from the larger, or adds instead' describes no option on screen: those slips give 5472 and 11484, while the real distractors are 4522, 4500 and 4008."
+    },
+    {
+      "itemId": "MC01-FDP-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "3/5=24/40 and 3/8=15/40, so the key is 3/5. The bigger-bottom trap matches 3/8."
+    },
+    {
+      "itemId": "MC01-FDP-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "12÷3=4, ×2=8. Stopping at one part gives 4 and flipping gives 18 (3/2 of 12), both on screen."
+    },
+    {
+      "itemId": "MC01-FDP-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "25% is a quarter, and 80÷4=20, so £20. The traps 80-25=£55, 25×80=£2000 and halving to £40 all match."
+    },
+    {
+      "itemId": "MC01-FDP-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Half of 4 l leaves 2 l, which fills 4 half-litre glasses. Skipping the pouring gives 8 and 2×½ gives 1, both on screen."
+    },
+    {
+      "itemId": "MC01-FDP-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "2/5 of 30=12, the rest is 18, and half of that is 9. Halving 30 gives 15 and halving 12 gives 6, both match."
+    },
+    {
+      "itemId": "MC01-FDP-08",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "15÷3/4 = 15×4/3 = 20. Multiplying gives 11.25 and misreading as thirds gives 5, both on screen."
+    },
+    {
+      "itemId": "MC01-GEOM-01",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Doesn't use this question's numbers: 'Add one long and one short, then double it. That gives 22 cm.' never shows 8 + 3 = 11 and 11 doubled = 22. The maths addendum asks for the method on this question's numbers."
+    },
+    {
+      "itemId": "MC01-GEOM-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "180-125=55°. Subtracting the digits the wrong way round gives 65°, which matches."
+    },
+    {
+      "itemId": "MC01-GEOM-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "The square's corners line up, so the fourth takes x=5 and y=4, giving (5, 4). The reversed (4, 5) is on screen."
+    },
+    {
+      "itemId": "MC01-GEOM-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "10×6=60 cm², 4×3=12 cm², 60-12=48 cm². The edge measure is 2(10+6)=32 cm², which matches the trap."
+    },
+    {
+      "itemId": "MC01-GEOM-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "180-40=140, 140÷2=70°. Correct and in house form."
+    },
+    {
+      "itemId": "MC01-MEAS-01",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Opening claim is false and confusing: 'Change means the totals must line up.' This question has no totals. What lines up is the pounds and pence (£5.00 over £3.50). The working that follows is correct (£5.00 - £3.50 = £1.50)."
+    },
+    {
+      "itemId": "MC01-MEAS-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Take-away on the numbers: 90-35=55 cm. Correct."
+    },
+    {
+      "itemId": "MC01-MEAS-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "3×30p=90p, +40p=£1.30, £2-£1.30=£0.70. Correct."
+    },
+    {
+      "itemId": "MC01-NPV-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "The 6 is in the hundreds place, so its value is 600. The traps 6, 60 and 6000 are correctly described."
+    },
+    {
+      "itemId": "MC01-NPV-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "9 hundreds + 1 hundred = 10 hundreds, so carry: 5070. Forgetting the carry gives 4070 and adding a ten gives 4980, both on screen."
+    },
+    {
+      "itemId": "MC01-NPV-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "The zero can't lead, so 406. Zero leading gives 46 and building the biggest gives 640, both on screen."
+    },
+    {
+      "itemId": "MC01-NPV-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "The tens digit is 6, so round up to 3800. The traps 3760, 4000 and 3700 are correctly described."
+    },
+    {
+      "itemId": "MC01-NPV-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "3400÷100=34. Reading one digit gives 4 or 3, and another power of ten gives 340 or 3. All correct."
+    },
+    {
+      "itemId": "MC01-STATS-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "6+3+7+4=20. Correct."
+    },
+    {
+      "itemId": "MC01-STATS-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "7+9+6+10=32, 32÷4=8. Correct."
+    },
+    {
+      "itemId": "MC01-STATS-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "5×6=30, 4+8+5+9=26, 30-26=4. Correct."
+    },
+    {
+      "itemId": "MC02-CALC-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "6+7=13, carry 1. Tens 5+3+1=9, hundreds 6, giving 693. A dropped carry gives 683 and a lost digit gives 293, both on screen."
+    },
+    {
+      "itemId": "MC02-CALC-02",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "False position claim: 'In the ones, borrow because 2 is under 7.' In 582 - 147 the 2 sits ON TOP of the 7. Also 'Line up the tens and ones' ignores the hundreds, and the tens and hundreds columns are never worked ('Work each column to reach 435'). 582 - 147 = 435 is correct."
+    },
+    {
+      "itemId": "MC02-CALC-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "4×8=32, carry 3. 3×8+3=27, giving 272. Forgetting the carry gives 242 and one digit only gives 32, both on screen."
+    },
+    {
+      "itemId": "MC02-CALC-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "£3.45+£1.80=£5.25, £10-£5.25=£4.75. Forgetting an item gives £6.55 and rounding the prices down gives £6.00, both on screen."
+    },
+    {
+      "itemId": "MC02-CALC-05",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "No working on the numbers: 'Carry each leftover to the next digit along. The answer is 1,218.' never shows a step (4÷4=1, 8÷4=2, 7÷4=1 r3, 32÷4=8). The answer 1218 is correct."
+    },
+    {
+      "itemId": "MC02-CALC-06",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "No working on the numbers: 'Carry a ten whenever a column passes nine. The total is 6,131.' never shows a column (8+3=11, carry 1; 5+7+1=13, carry 1; 4+6+1=11, carry 1; 3+2+1=6). The answer 6131 is correct."
+    },
+    {
+      "itemId": "MC02-CALC-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "6×48=288, 288-95=193. Skipping the subtraction gives 288 and rounding (300-100) gives 200, both on screen."
+    },
+    {
+      "itemId": "MC02-CALC-08",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Describes a trap no option shows: 'A slip forgets a step or rounds the total.' Rounding the total gives none of 60, 68 or 312. 68 is (360+48)÷6, a wrong-operation slip the script leaves out. The working 12×30=360, 360-48=312, 312÷6=52 is correct."
+    },
+    {
+      "itemId": "MC02-FDP-01",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Says 'give both the same bottom number' but never does it: 'Then 2/5 is bigger than 2/9' just announces the answer. Needs, for example, 2/5 = 18/45 and 2/9 = 10/45. The key 2/5 is correct."
+    },
+    {
+      "itemId": "MC02-FDP-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "24÷4=6, ×3=18. One part gives 6 and the flipped fraction gives 32 (4/3 of 24), both on screen."
+    },
+    {
+      "itemId": "MC02-FDP-03",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Missing the key link: 'Percentages first become parts. One fifth of 60 is 12, so two fifths is 24.' It never says that 40% is two fifths, so the jump to fifths is unexplained. The arithmetic (60÷5=12, ×2=24) and both traps (10% gives 6; 60-40 gives 20) are correct."
+    },
+    {
+      "itemId": "MC02-FDP-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "1/4=2/8, and 2/8+3/8=5/8. Adding straight across gives 4/12, and the additive trap (1/4 to 5/8, then +3/8) gives 1. Both correct."
+    },
+    {
+      "itemId": "MC02-FDP-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "1/3 ×2/×2 = 2/6. Adding 2 to each part gives 3/5, and thirds mixed with tenths gives 3/10. Correct."
+    },
+    {
+      "itemId": "MC02-FDP-06",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Says 'make them match' but never does it: '4/5 is bigger than 4/7' just announces the answer. Needs, for example, 4/5 = 28/35 and 4/7 = 20/35. The key 4/5 is correct."
+    },
+    {
+      "itemId": "MC02-FDP-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "A quarter of £80 is £20, and £80-£20=£60. Stopping at the discount gives £20 and taking off £25 gives £55, both on screen."
+    },
+    {
+      "itemId": "MC02-FDP-08",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "3/8 of 40=15, the rest is 25, and 2/5 of 25=10. 2/5 of 40 gives 16 and stopping early gives 15, both on screen."
+    },
+    {
+      "itemId": "MC02-GEOM-01",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Doesn't use this question's numbers: 'Add one long and one short, then double: 28 cm.' never shows 9 + 5 = 14 and 14 doubled = 28. The traps (area 45; a side left out, 23 or 14) are correctly described."
+    },
+    {
+      "itemId": "MC02-GEOM-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "58+67=125, 180-125=55. Stopping at the sum gives 125 and using 360 gives 235, both on screen. The words 'degrees' match the stem."
+    },
+    {
+      "itemId": "MC02-GEOM-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "180-46=134, 134÷2=67. Halving first gives 44, rounding 46 to 50 gives 65, and halving digit by digit gives 12. All correct."
+    },
+    {
+      "itemId": "MC02-GEOM-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "3+4=7 and 2+1=3, giving (7, 3). Swapping gives (3, 7), which is on screen."
+    },
+    {
+      "itemId": "MC02-GEOM-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "10×4=40, 3×5=15, 40+15=55 cm². Stopping after one part gives 40. The semicolon sentence is 11 words, within the cap."
+    },
+    {
+      "itemId": "MC02-GEOM-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "180-110=70 inside the triangle, then 180-70-25=85. Correct two-step method."
+    },
+    {
+      "itemId": "MC02-MEAS-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "£8.00-£2.60=£5.40. Dropping the pence gives £6.00, which is on screen."
+    },
+    {
+      "itemId": "MC02-MEAS-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "6000÷1000=6 kg. The power-of-ten traps (60, 600) and multiplying (6000000) are correctly described."
+    },
+    {
+      "itemId": "MC02-MEAS-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "£4.35+£2.50=£6.85. A lost digit gives £2.85 and pounds only gives £6.00, both on screen."
+    },
+    {
+      "itemId": "MC02-MEAS-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "85-48=37 cm. Adding gives 133 and rounding 48 to 50 gives 35, both on screen."
+    },
+    {
+      "itemId": "MC02-MEAS-05",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Says 'Count on' but never counts on: 'From 7:50 to 9:20 is 1 hour 30 minutes' just announces the answer. Needs, for example, 7:50 to 8:50 is 1 hour, then 8:50 to 9:20 is 30 minutes. The key and both traps (base-100 gives 1 h 70 min; rounding 7:50 to 8:00 gives 1 h 20 min) are correct."
+    },
+    {
+      "itemId": "MC02-MEAS-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "3×£1.45=£4.35, £10-£4.35=£5.65. One notebook gives £8.55 and adding gives £14.35, both on screen."
+    },
+    {
+      "itemId": "MC02-MEAS-07",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Describes a trap no option shows: 'One trap leaves an item out.' Leaving out the juice gives £7.40, leaving out the apples gives £7.70, and counting one apple gives £7.05. None of these is on screen (the options are £4.90, £7.10, £5.75). The working 4×65p=£2.60, +£2.30=£4.90, £10-£4.90=£5.10 is correct but not shown step by step."
+    },
+    {
+      "itemId": "MC02-NPV-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "The 8 is in the hundreds place, so its value is 800. The traps 8, 80 and 8000 are correctly described."
+    },
+    {
+      "itemId": "MC02-NPV-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "5 thousands, 0 hundreds, 3 tens and 8 ones make 5038. Dropping the zero gives 538 and shifting a digit gives 5308, both on screen."
+    },
+    {
+      "itemId": "MC02-NPV-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "The smallest number without a leading zero is 4007. A leading zero gives 47 and a lost placeholder gives 407, both on screen."
+    },
+    {
+      "itemId": "MC02-NPV-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "The tens digit is 6, so round up to 4400. The traps 4360, 4000 and 4300 are correctly described."
+    },
+    {
+      "itemId": "MC02-NPV-07",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Doesn't follow its own method: 'Give every decimal the same number of places first. Then 0.60 beats 0.55, 0.40 and 0.049.' 0.049 has three places, so the padded forms should be 0.600, 0.550, 0.400 and 0.049. The key 0.6 is correct."
+    },
+    {
+      "itemId": "MC02-RP-01",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "First sentence makes no sense: 'Buy the relationship first: the pasta for one person.' ('Buy' should be something like 'Find'). The working 240÷3=80, 80×5=400 is correct."
+    },
+    {
+      "itemId": "MC02-RP-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "150p÷5=30p and 120p÷6=20p, so the difference is 10p. Comparing the packs gives 30p, which is on screen. The semicolon sentence is within the cap."
+    },
+    {
+      "itemId": "MC02-STATS-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "9+7=16, 16-8=8. Forgetting a day gives 1 and a different pair (9+8-7) gives 10. Correct."
+    },
+    {
+      "itemId": "MC02-STATS-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "5×7=35, 4+9+8+5=26, 35-26=9. Correct."
+    },
+    {
+      "itemId": "MC03-CALC-01",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Describes a trap no option shows: 'The trap rounds too soon or loses a digit.' Rounding gives none of 543, 69 or 443. 543 is a dropped carry and 69 is 356-287, a wrong operation. 356+287=643 is correct."
+    },
+    {
+      "itemId": "MC03-CALC-02",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "No working on the numbers: 'Borrow a ten when the top digit is smaller. Work through to get 307.' never shows a column (13-6=7; 7-7=0; 4-1=3). Also 'Set the tens and ones under each other' leaves out the hundreds. The key 307 and the 313 trap are correct."
+    },
+    {
+      "itemId": "MC03-CALC-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "3×5=15, carry 1. 4×5+1=21, giving 215. A dropped carry gives 205 and forgetting the tens gives 15, both on screen."
+    },
+    {
+      "itemId": "MC03-CALC-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "£8.75+£3.60=£12.35, £20-£12.35=£7.65. Rounding gives £20-£13=£7.00 and one item gives £16.40, both on screen."
+    },
+    {
+      "itemId": "MC03-CALC-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "6×4=24, carry 2. 1×4+2=6 and 3×4=12, giving 1264. A dropped carry gives 1244 and a lost hundreds digit gives 64, both on screen."
+    },
+    {
+      "itemId": "MC03-CALC-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "7÷3=2 r1, 14÷3=4 r2, giving 24 whole pencils. Digit by digit gives 21 and the remainder as a decimal gives 24.2, both on screen."
+    },
+    {
+      "itemId": "MC03-CALC-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "3×£6.50=£19.50 and 2×£2.25=£4.50, total £24. Leaving a set out gives £19.50 and rounding down gives £22.00. Semicolon sentence within the cap."
+    },
+    {
+      "itemId": "MC03-CALC-08",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Describes a trap wrongly: 'The trap adds the costs or loses a digit.' Adding the costs gives £6,000, which is not an option. £4,800 forgets to take the costs off at all. 320×15=4800 and 4800-1200=3600 are correct."
+    },
+    {
+      "itemId": "MC03-FDP-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "4/7=36/63 and 4/9=28/63, so the key is 4/7. The bigger-bottom trap matches 4/9."
+    },
+    {
+      "itemId": "MC03-FDP-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "24÷4=6, ×3=18. One part gives 6 and flipping gives 32, both on screen."
+    },
+    {
+      "itemId": "MC03-FDP-03",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Describes a trap no option shows: 'or rounds the amount first.' No option comes from rounding 44. £1,100 comes from never dividing by 100, which the script leaves out. 44÷4=11 is correct."
+    },
+    {
+      "itemId": "MC03-FDP-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "A fifth of £45 is £9, and £45-£9=£36. Stopping at the discount gives £9 and taking off £20 gives £25, both on screen."
+    },
+    {
+      "itemId": "MC03-FDP-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "7/8=35/40 and 7/10=28/40, so the key is 7/8. Both traps are correctly described."
+    },
+    {
+      "itemId": "MC03-FDP-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "1/4 of 60=15, the rest is 45, and 2/3 of 45=30. The whole 60 gives 40 and skipping the last step gives 45, both on screen."
+    },
+    {
+      "itemId": "MC03-FDP-08",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "£80-£20=£60, then -£5=£55. Forgetting a step gives £60 or £75, and £25 off gives £50. All correct."
+    },
+    {
+      "itemId": "MC03-GEOM-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "180-118=62°. A full turn gives 242°, which is on screen."
+    },
+    {
+      "itemId": "MC03-GEOM-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "2+5=7 and 1+3=4, giving (7, 4). Up before across gives (4, 7), which is on screen."
+    },
+    {
+      "itemId": "MC03-GEOM-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "180-30-40=110, 110÷2=55°. Stopping before splitting gives 110°, which is on screen."
+    },
+    {
+      "itemId": "MC03-GEOM-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "15×9=135 cm², 6×7=42 cm², 135-42=93 cm². Forgetting the cut-out gives 135, which is on screen."
+    },
+    {
+      "itemId": "MC03-GEOM-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "30÷2=15, 15-9=6, 9×6=54 cm². Adding gives 15 and using 15 as the width gives 135, both on screen."
+    },
+    {
+      "itemId": "MC03-GEOM-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "360-80-110=170, 170÷2=85°. Stopping before halving gives 170°, which is on screen."
+    },
+    {
+      "itemId": "MC03-MEAS-01",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Opening claim is false and confusing: 'Change means the totals must line up.' This question has no totals. What lines up is the pounds and pence (£8.00 over £5.60). £8.00 - £5.60 = £2.40 is correct."
+    },
+    {
+      "itemId": "MC03-MEAS-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "75-28=47 cm. Adding gives 103 and rounding 28 gives 45, both on screen."
+    },
+    {
+      "itemId": "MC03-MEAS-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "6×1000=6000 g. The zero-count traps (600, 60, 60000) are correctly described."
+    },
+    {
+      "itemId": "MC03-MEAS-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "23:50 plus 10 minutes is 00:00, plus 20 more is 00:20. Base 100 gives 23:80 and the midnight label gives 24:20, both on screen."
+    },
+    {
+      "itemId": "MC03-MEAS-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "£2.65+£1.75=£4.40, £10-£4.40=£5.60. Rounding to 10p gives £5.50 and carrying twice gives £4.60, both on screen."
+    },
+    {
+      "itemId": "MC03-MEAS-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "340+275=615, 900-615=285 m. Rounding gives 280 or 260 and carrying twice gives 185, all on screen."
+    }
+  ]
+}

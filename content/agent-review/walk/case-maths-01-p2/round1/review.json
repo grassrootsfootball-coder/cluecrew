@@ -1,0 +1,540 @@
+{
+  "case": "case-maths-01-p2",
+  "reviewer": "rev-agent-01",
+  "rows": [
+    {
+      "itemId": "MC03-MEAS-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 7 x 35p = £2.45, + £1.80 = £4.25, £10 - £4.25 = £5.75; traps £5.40 (40p rounding) and £6.10 (six pencils) match the closing line."
+    },
+    {
+      "itemId": "MC03-NPV-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 2 is in the hundreds column of 7,283, value 200; 2 and 2000 are the face-value and neighbouring-column traps."
+    },
+    {
+      "itemId": "MC03-NPV-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 3 thousands, 0 hundreds, 6 tens, 4 ones = 3,064; 364 drops the zero and 30064 adds one."
+    },
+    {
+      "itemId": "MC03-NPV-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 3,940 + 100 = 4,040 via ten hundreds carried; 3950 and 3040 match the neighbouring-column and dropped-carry traps."
+    },
+    {
+      "itemId": "MC03-NPV-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: tens digit of 5,873 is 7, so round up to 5,900; other options are other rounding places."
+    },
+    {
+      "itemId": "MC03-NPV-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 8 in 5.284 is in the hundredths column, 0.08; 0.8 is the neighbouring decimal column."
+    },
+    {
+      "itemId": "MC03-NPV-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 2,800 / 100 = 28 hundreds; 8, 2 and 280 are the one-digit and wrong-power traps."
+    },
+    {
+      "itemId": "MC03-RP-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 90p / 5 = 18p, x 8 = £1.44; £7.20 = 90p x 8 is the whole-90p trap as described."
+    },
+    {
+      "itemId": "MC03-RP-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 92p / 4 = 23p, 84p / 6 = 14p, difference 9p."
+    },
+    {
+      "itemId": "MC03-STATS-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 22 + 30 = 52, 20 + 18 = 38, 52 - 38 = 14; 32 leaves a row out."
+    },
+    {
+      "itemId": "MC03-STATS-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 6 x 7 = 42, 5+9+6+8+10 = 38, 42 - 38 = 4."
+    },
+    {
+      "itemId": "MC04-CALC-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 517 + 265 = 782 (7+5 = 12, carry); 772 drops the carry, 282 leaves out a digit."
+    },
+    {
+      "itemId": "MC04-CALC-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 74 - 38 = 36 with an exchange in the ones; 44 is smaller-from-larger in each column (8-4, 7-3)."
+    },
+    {
+      "itemId": "MC04-CALC-03",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Arithmetic right (48 x 6 = 288) but 'The trap drops the carry' describes no option: a dropped carry gives 248, which is not offered (648 misplaces the carry, 328 adds it twice). Also 'The tens give twenty-eight' hides the step 24 + carried 4."
+    },
+    {
+      "itemId": "MC04-CALC-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: £8.40 + £5.75 = £14.15, £20 - £14.15 = £5.85; £11.60 uses one price, £14.15 stops at the total."
+    },
+    {
+      "itemId": "MC04-CALC-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 2 / 8 = 0.25 litres; 4 flips the division, 16 multiplies."
+    },
+    {
+      "itemId": "MC04-CALC-06",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Key right (4,002 - 1,375 = 2,627) but 'The trap takes each smaller digit from the larger' describes no option: that slip gives 3,373; the tagged option 2007 is not produced by it. The working across the zeros is also only announced."
+    },
+    {
+      "itemId": "MC04-CALC-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 4 x 25 + 30 = 130, 130 - 62 = 68; 38 skips the 30."
+    },
+    {
+      "itemId": "MC04-CALC-08",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 18 x 145 = 2,610, + 320 = 2,930, 4,120 - 2,930 = 1,190; 1510 forgets the 320, 2930 stops early."
+    },
+    {
+      "itemId": "MC04-FDP-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 5/6 = 15/18, 5/9 = 10/18, so 5/6 is bigger; 5/9 is the bigger-bottom trap."
+    },
+    {
+      "itemId": "MC04-FDP-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 40 / 4 = 10; 160 flips (40 x 4), 20 halves."
+    },
+    {
+      "itemId": "MC04-FDP-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 1 / 2 = 0.5; 1.2 reads the two numbers on their own."
+    },
+    {
+      "itemId": "MC04-FDP-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 1/4 = 2/8, 1/8 + 2/8 = 3/8; 1/6 is (1+1)/(8+4) = 2/12 straight across."
+    },
+    {
+      "itemId": "MC04-FDP-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 12 / (2/3) = 12 x 3/2 = 18; 8 = 12 x 2/3 is the multiplying trap."
+    },
+    {
+      "itemId": "MC04-FDP-07",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Key right (3/8 of 32 = 12, 32 - 12 = 20, 20 / 4 = 5) but the script never states 12 or 20, so 'giving 5' is announced rather than reached on this question's numbers."
+    },
+    {
+      "itemId": "MC04-FDP-08",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Arithmetic right (24 used, 16 left, 4 used, 12 left) but 'The trap fractions the first total' uses 'fractions' as a verb, which a 9-11-year-old will not read easily; say what the trap does (takes a quarter of 40)."
+    },
+    {
+      "itemId": "MC04-GEOM-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: (18 + 7) x 2 = 50 cm; 126 cm is the area, 43 cm drops a side."
+    },
+    {
+      "itemId": "MC04-GEOM-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: (3+4, 1+5) = (7, 6); (6, 7) flips, (7, 1) moves one way only."
+    },
+    {
+      "itemId": "MC04-GEOM-03",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Working right (65 + 48 = 113, 180 - 113 = 67) but house notation requires degrees with ° and the script writes '180 degrees' and '67 degrees'. The question's own options also write 'degrees' in words, so the options need the ° form too (question notation fault)."
+    },
+    {
+      "itemId": "MC04-GEOM-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 12 x 8 = 96, 4 x 7 = 28, 96 - 28 = 68 cm²; 96 keeps the whole block, 40 is the perimeter."
+    },
+    {
+      "itemId": "MC04-GEOM-06",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Working right (180 - 50 = 130, 130 / 2 = 65) but house notation requires degrees with ° and the script writes '180 degrees', '50 degree' and '65 degrees'. The stem and options also write 'degrees' in words (question notation fault)."
+    },
+    {
+      "itemId": "MC04-MEAS-01",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Working right (£7.00 - £2.80 = £4.20) but money is not on £: '7.00', 'Take 2.80 away to leave 4.20' are bare amounts; house notation requires £7.00, £2.80, £4.20."
+    },
+    {
+      "itemId": "MC04-MEAS-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 84 - 57 = 27 cm; 141 adds, 20 = 80 - 60 rounds without compensating."
+    },
+    {
+      "itemId": "MC04-MEAS-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 50 + 25 = 75 minutes = 1 h 15, so 4:15 pm; 3:75 pm lets minutes pass 60."
+    },
+    {
+      "itemId": "MC04-MEAS-04",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Working right (£10 - £6.05 = £3.95) but money is not on £: 'as 6.05', 'Take it from 10 to leave 3.95'; house notation requires £6.05, £10, £3.95."
+    },
+    {
+      "itemId": "MC04-MEAS-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 3 kg = 3000 g, 3000 - 200 = 2800 g; 100 g = 300 - 200 uses 100 g per kilo."
+    },
+    {
+      "itemId": "MC04-MEAS-06",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Working right (£2.45 + £1.30 = £3.75, £5 - £3.75 = £1.25) but '2.45 plus 1.30 is 3.75' and 'The change is 1.25' are not on £; house notation requires the £ sign."
+    },
+    {
+      "itemId": "MC04-MEAS-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 3 x £2.35 = £7.05, £10 - £7.05 = £2.95; £7.05 stops at the total, £5.30 counts two notebooks."
+    },
+    {
+      "itemId": "MC04-NPV-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 9 in 5,914 is in the hundreds column, 900; 90 and 9 are the smaller-column and face-value traps."
+    },
+    {
+      "itemId": "MC04-NPV-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 6,970 + 100 = 7,070 via ten hundreds carried; 6980/7970 neighbouring columns, 6070 drops the carry."
+    },
+    {
+      "itemId": "MC04-NPV-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 9,400 + 1,000 = 10,400; 9500 neighbouring column, 400 loses the carry."
+    },
+    {
+      "itemId": "MC04-NPV-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: tens digit of 4,271 is 7, round up to 4,300; 4200 chops the end, 4270/4000 other places."
+    },
+    {
+      "itemId": "MC04-NPV-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 5 in 6.351 is in the hundredths column, 0.05."
+    },
+    {
+      "itemId": "MC04-NPV-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 5 - 8 = -3; 3°C stays positive, 13°C adds, -8°C starts from zero, as described."
+    },
+    {
+      "itemId": "MC04-NPV-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 3,650 is the halfway case; rounding half up gives 3,700, 3600 rounds the half down."
+    },
+    {
+      "itemId": "MC04-RP-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 48p / 4 = 12p, x 7 = 84p = £0.84; £1.44 = 48p x 3 (extra count), £0.48 the old count."
+    },
+    {
+      "itemId": "MC04-RP-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: £2.00 / 5 = 40p, £1.20 / 4 = 30p, difference 10p."
+    },
+    {
+      "itemId": "MC04-STATS-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 8 + 12 + 9 + 7 = 36; 29 leaves out a row, 4 counts the days."
+    },
+    {
+      "itemId": "MC04-STATS-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 6+8+5+9+12 = 40, / 5 = 8; 40 is the total, 7 = 12 - 5 is the range."
+    },
+    {
+      "itemId": "MC05-CALC-01",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Arithmetic right (465 + 218 = 683) but 'The trap ... rounds the numbers' describes no option: 673 drops the carry, 283 drops a digit, 247 subtracts; none is a rounding answer."
+    },
+    {
+      "itemId": "MC05-CALC-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 83 - 46 = 37 with an exchange in the ones; 43 is smaller-from-larger in each column (6-3, 8-4)."
+    },
+    {
+      "itemId": "MC05-CALC-03",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Arithmetic right (57 x 4 = 228) but 'The trap drops the carry' describes no option: a dropped carry gives 208, not offered (408 misplaces the carry, 248 adds it twice)."
+    },
+    {
+      "itemId": "MC05-CALC-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: £7.65 + £2.80 = £10.45, £20 - £10.45 = £9.55; £12.35 uses one price, £10.45 stops at the total."
+    },
+    {
+      "itemId": "MC05-CALC-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 3 / 6 = 0.5 litres; 2 flips the division, 18 multiplies."
+    },
+    {
+      "itemId": "MC05-CALC-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 6,003 - 2,548 = 3,455 (check 2,548 + 3,455 = 6,003); 4455 is exactly smaller-from-larger (8-3, 4-0, 5-0, 6-2)."
+    },
+    {
+      "itemId": "MC05-CALC-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 5 x 24 + 18 = 138, 138 - 96 = 42; 24 skips the 18."
+    },
+    {
+      "itemId": "MC05-CALC-08",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 16 x 120 = 1,920, + 275 = 2,195, 3,150 - 2,195 = 955; 1230 forgets the 275, 2195 stops early."
+    },
+    {
+      "itemId": "MC05-FDP-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 4/5 = 36/45, 4/9 = 20/45, so 4/5 is bigger."
+    },
+    {
+      "itemId": "MC05-FDP-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 18 / 3 = 6, x 2 = 12; 6 stops at one part, 27 flips the fraction."
+    },
+    {
+      "itemId": "MC05-FDP-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: ratio 1 : 3 gives 1 red in 4, so 1/4; 1/3 > 1/4 so Bag A; 'They are equal' reads 1 : 3 as 1/3."
+    },
+    {
+      "itemId": "MC05-FDP-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 1 / 5 = 0.2 (ten tenths shared by five); 0.5, 0.1 and 0.15 copy digits from the fraction."
+    },
+    {
+      "itemId": "MC05-FDP-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 25% of 48 = 12, 48 - 12 = 36; 12 stops at the eaten amount, 24 halves."
+    },
+    {
+      "itemId": "MC05-FDP-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 6 / (2/3) = 6 x 3/2 = 9; 4 = 6 x 2/3 multiplies by the fraction."
+    },
+    {
+      "itemId": "MC05-FDP-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 1/3 = 4/12, 1/4 = 3/12, sum 7/12; 2/7 adds straight across."
+    },
+    {
+      "itemId": "MC05-FDP-08",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Key right (64 / 4 = 16, 64 - 16 = 48) but 'sixty-four pounds' breaks house notation (money on £), the £16 discount is never stated, and 'adds the percent' is wrong: £39 = £64 - 25, which takes 25 off as pounds, it does not add."
+    },
+    {
+      "itemId": "MC05-GEOM-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: (18 + 9) x 2 = 54 cm; 162 cm is the area."
+    },
+    {
+      "itemId": "MC05-GEOM-02",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Working right (180 - 137 = 43) but the script writes '43 degrees' where the screen shows 43°; house notation requires degrees with °."
+    },
+    {
+      "itemId": "MC05-GEOM-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: (5+6, 2+4) = (11, 6); (-1, -2) moves the other way as described."
+    },
+    {
+      "itemId": "MC05-GEOM-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 48 / 8 = 6 cm, (8 + 6) x 2 = 28 cm; 6 stops at the width, 22 = 8+8+6 is three sides."
+    },
+    {
+      "itemId": "MC05-GEOM-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 12 x 8 = 96, 5 x 4 = 20, 96 - 20 = 76 cm²; 96 forgets the cut-out."
+    },
+    {
+      "itemId": "MC05-GEOM-06",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Working right (180 - 140 = 40, 180 - 40 - 30 = 110) but the script writes '110 degrees' where the screen shows 110°; house notation requires degrees with °."
+    },
+    {
+      "itemId": "MC05-MEAS-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: £8.00 - £3.40 = £4.60; £11.40 adds, £5.00 drops the pence."
+    },
+    {
+      "itemId": "MC05-MEAS-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 4000 g / 1000 = 4 kg; 4,000,000 multiplies, 40 and 400 divide by 100 and 10."
+    },
+    {
+      "itemId": "MC05-MEAS-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 70p + 60p = £1.30, so £1 + £2 + £1 = £4.30; £3.30 loses the carried pound, £13.30 counts it as ten."
+    },
+    {
+      "itemId": "MC05-MEAS-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 74 - 29 = 45 cm; 103 cm adds."
+    },
+    {
+      "itemId": "MC05-MEAS-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 2:45 + 15 min = 3:00, + 25 min = 3:25 pm; 2:85 pm passes sixty."
+    },
+    {
+      "itemId": "MC05-MEAS-06",
+      "source": "existing",
+      "verdict": "REFUSE",
+      "reason": "Key right (375 + 246 = 621) but the script shows only the ones carry and skips the second carry (7 + 4 + 1 = 12 tens); and the 521 trap drops a carried hundred, not 'a carried ten'."
+    },
+    {
+      "itemId": "MC05-MEAS-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 3 x £1.15 = £3.45, £5 - £3.45 = £1.55; £3.45 stops at the total."
+    },
+    {
+      "itemId": "MC05-NPV-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 4 in 8,473 is in the hundreds column, 400."
+    },
+    {
+      "itemId": "MC05-NPV-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 5,960 + 100 = 6,060 via ten hundreds carried; 5970/6960 neighbouring columns, 5060 drops the carry."
+    },
+    {
+      "itemId": "MC05-NPV-03",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 9,500 + 1,000 = 10,500; 9600/19500 neighbouring columns, 500 loses the carry."
+    },
+    {
+      "itemId": "MC05-NPV-04",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: tens digit of 2,673 is 7, round up to 2,700; 2600 chops the end."
+    },
+    {
+      "itemId": "MC05-NPV-05",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 8 in 7.482 is in the hundredths column, 0.08."
+    },
+    {
+      "itemId": "MC05-NPV-06",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 6 - 10 = -4; 4°C, 16°C and -10°C match the three traps named."
+    },
+    {
+      "itemId": "MC05-NPV-07",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 4,750 is the halfway case, rounds up to 4,800; 4700 rounds the half down."
+    },
+    {
+      "itemId": "MC05-RP-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 60p / 4 = 15p, x 6 = 90p = £0.90; £1.20 = 60p x 2 scales by the extra count."
+    },
+    {
+      "itemId": "MC05-RP-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 100p / 5 = 20p, 60p / 4 = 15p, difference 5p; 40p compares the packs."
+    },
+    {
+      "itemId": "MC05-STATS-01",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 14 + 10 = 24, 9 + 8 = 17, 24 - 17 = 7; 15 leaves a team out."
+    },
+    {
+      "itemId": "MC05-STATS-02",
+      "source": "existing",
+      "verdict": "APPROVE",
+      "reason": "Redone: 6+9+7+10+8 = 40, / 5 = 8; 40 stops before sharing."
+    }
+  ]
+}

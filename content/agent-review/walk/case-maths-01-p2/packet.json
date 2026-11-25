@@ -1,0 +1,3126 @@
+{
+ "caseId": "case-maths-01",
+ "part": "case-maths-01-p2",
+ "title": "The Ashline Working Register",
+ "questionType": "maths-calc",
+ "free": false,
+ "houseFormExemplars": [],
+ "passages": {},
+ "rows": [
+  {
+   "itemId": "MC03-MEAS-07",
+   "stem": {
+    "text": "Pencils cost 35p each. Mrs Lee buys 7 pencils and a notebook for £1.80. She pays with a £10 note. How much change does she get?"
+   },
+   "key": "£5.75",
+   "options": [
+    {
+     "value": "£5.75",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£5.40",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    },
+    {
+     "value": "£6.10",
+     "isKey": false,
+     "tag": "maths-85-miscount-or-rounding-in-measures",
+     "tagChildHint": "Count the groups or steps again before you work it out. Use the exact number, not one more or one fewer."
+    },
+    {
+     "value": "£4.25",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    }
+   ],
+   "walkScript": "Get the total spent first. Seven pencils at 35p is £2.45, plus £1.80 is £4.25. Take that from £10 to leave £5.75. The trap rounds the price or misses an item.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-NPV-01",
+   "stem": {
+    "text": "In the number 7,283, what is the value of the digit 2?"
+   },
+   "key": "200",
+   "options": [
+    {
+     "value": "200",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "283",
+     "isKey": false,
+     "tag": "maths-114-read-from-the-digit-to-the-end",
+     "tagChildHint": "Keep that digit in its column and change all the other digits to zeros. The digits after it are not part of its value."
+    },
+    {
+     "value": "2",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!"
+    },
+    {
+     "value": "2000",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    }
+   ],
+   "walkScript": "Find the column the 2 sits in. It stands in the hundreds place. So its value is two hundreds, which is 200. The trap reads the digit in a neighbouring column or at face value.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-NPV-02",
+   "stem": {
+    "text": "A number is made of 3 thousands, 0 hundreds, 6 tens and 4 ones. What is the number?"
+   },
+   "key": "3064",
+   "options": [
+    {
+     "value": "3064",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "364",
+     "isKey": false,
+     "tag": "maths-67-dropped-internal-placeholder",
+     "tagChildHint": "Does a column have nothing in it? Use a zero to hold that empty space."
+    },
+    {
+     "value": "30064",
+     "isKey": false,
+     "tag": "maths-02-zero-placeholder-added-incorrectly",
+     "tagChildHint": "Check your columns. Hundreds, tens, and ones should only take up three spaces, not four."
+    },
+    {
+     "value": "3604",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    }
+   ],
+   "walkScript": "Name each part with its column first. Three thousands, no hundreds, six tens, four ones. Hold the empty hundreds with a zero to get 3,064. One slip drops that zero or squeezes an extra one in.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-NPV-03",
+   "stem": {
+    "text": "What number is 100 more than 3,940?"
+   },
+   "key": "4040",
+   "options": [
+    {
+     "value": "4040",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "3950",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "3040",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    },
+    {
+     "value": "3840",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    }
+   ],
+   "walkScript": "Find the hundreds column before you add. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 4,040. A common slip adds into a neighbouring column or drops the carry.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-NPV-04",
+   "stem": {
+    "text": "Round 5,873 to the nearest 100."
+   },
+   "key": "5900",
+   "options": [
+    {
+     "value": "5900",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "5800",
+     "isKey": false,
+     "tag": "maths-09-rounding-misdirection",
+     "tagChildHint": "Look at the next digit along. If it is 5 or more, round up."
+    },
+    {
+     "value": "5870",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    },
+    {
+     "value": "6000",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    }
+   ],
+   "walkScript": "Rounding to the nearest hundred means checking the tens digit. Here it is 7, so round up. 5,873 becomes 5,900. Watch for rounding to a different place instead.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-NPV-06",
+   "stem": {
+    "text": "In the number 5.284, what is the value of the digit 8?"
+   },
+   "key": "0.08",
+   "options": [
+    {
+     "value": "0.08",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!"
+    },
+    {
+     "value": "0.8",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "80",
+     "isKey": false,
+     "tag": "maths-07-decimals-as-two-separate-whole-numbers",
+     "tagChildHint": "The decimal point separates wholes from parts. Read each digit after the point in its own column, not as one whole number."
+    }
+   ],
+   "walkScript": "Spot which column the 8 sits in. It stands in the hundredths place. So its value is eight hundredths, written 0.08. The trap slides the digit into a neighbouring decimal column.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-NPV-07",
+   "stem": {
+    "text": "How many hundreds are there altogether in 2,800?"
+   },
+   "key": "28",
+   "options": [
+    {
+     "value": "28",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!"
+    },
+    {
+     "value": "280",
+     "isKey": false,
+     "tag": "maths-68-wrong-power-of-ten-scaling",
+     "tagChildHint": "One hundred has two zeros. Make sure you divide by 100, not a different number."
+    },
+    {
+     "value": "2",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    }
+   ],
+   "walkScript": "Think about sharing 2,800 into groups of one hundred. Divide the whole number by 100. That gives 28 hundreds altogether. A slip reads one digit or divides by a different power of ten.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-RP-01",
+   "stem": {
+    "text": "5 apples cost 90p. How much do 8 apples cost at the same price?"
+   },
+   "key": "£1.44",
+   "options": [
+    {
+     "value": "£1.44",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£7.20",
+     "isKey": false,
+     "tag": "maths-92-unitary-proportion-slip",
+     "tagChildHint": "Find the cost of just one first. Then multiply that."
+    },
+    {
+     "value": "£0.93",
+     "isKey": false,
+     "tag": "maths-51-additive-scaling",
+     "tagChildHint": "Recipes scale up by multiplication. If you double the eggs, you need to double the cakes too."
+    },
+    {
+     "value": "£0.84",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    }
+   ],
+   "walkScript": "Find one apple first. Share 90p by 5 to get 18p each. Eight apples cost 18p times 8, which is £1.44. One trap uses the whole 90p as one apple.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-RP-02",
+   "stem": {
+    "text": "One shop sells 4 oranges for 92p. Another shop sells 6 oranges for 84p. How much cheaper is one orange at the second shop?"
+   },
+   "key": "9p",
+   "options": [
+    {
+     "value": "9p",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "8p",
+     "isKey": false,
+     "tag": "maths-93-comparing-prices-ignoring-quantity",
+     "tagChildHint": "The packs hold different amounts. Find the price of one first."
+    },
+    {
+     "value": "14p",
+     "isKey": false,
+     "tag": "maths-92-unitary-proportion-slip",
+     "tagChildHint": "Find the cost of just one first. Then multiply that."
+    },
+    {
+     "value": "11p",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    }
+   ],
+   "walkScript": "Put both shops into one-orange form first. Shop one is 92p by 4, or 23p each. Shop two is 84p by 6, or 14p each. The second shop saves 9p an orange.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-STATS-01",
+   "stem": {
+    "text": "A table shows fruit sold: apples 22, pears 20, plums 30, kiwis 18. How many more were sold as apples and plums than as pears and kiwis?"
+   },
+   "key": "14",
+   "options": [
+    {
+     "value": "14",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "32",
+     "isKey": false,
+     "tag": "maths-94-incomplete-statistical-total",
+     "tagChildHint": "Double-check the chart. Have you added together every single row or bar you need?"
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-95-reading-the-wrong-statistical-quantity",
+     "tagChildHint": "Look at the axis labels. Are you counting the right things?"
+    },
+    {
+     "value": "26",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    }
+   ],
+   "walkScript": "Add each pair before comparing. Apples and plums make 52, pears and kiwis make 38. Take 38 from 52 to leave 14 more. One trap leaves a row out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC03-STATS-02",
+   "stem": {
+    "text": "The mean of six numbers is 7. Five of the numbers are 5, 9, 6, 8 and 10. What is the sixth number?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "7.6",
+     "isKey": false,
+     "tag": "maths-97-missing-value-mean-slip",
+     "tagChildHint": "Work backwards. Multiply the mean by the total number of items to find your grand total."
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "maths-58-restrictive-mean",
+     "tagChildHint": "The mean is an average. Your final answer can be a decimal or a brand new number."
+    },
+    {
+     "value": "16",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    }
+   ],
+   "walkScript": "Work back from the total. A mean of 7 across six numbers totals 42. The five given add to 38. The sixth is 42 minus 38, which is 4.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-CALC-01",
+   "stem": {
+    "text": "Work out 517 + 265."
+   },
+   "key": "782",
+   "options": [
+    {
+     "value": "782",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "772",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    },
+    {
+     "value": "282",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place."
+    },
+    {
+     "value": "792",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again."
+    }
+   ],
+   "walkScript": "Line up the columns and add from the right. Seven plus five makes twelve, so carry the ten. Keep going to reach 782. The trap drops a carry or leaves out a digit.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-CALC-02",
+   "stem": {
+    "text": "Work out 74 - 38."
+   },
+   "key": "36",
+   "options": [
+    {
+     "value": "36",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "44",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    },
+    {
+     "value": "30",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    },
+    {
+     "value": "40",
+     "isKey": false,
+     "tag": "maths-12-forgetting-to-exchange",
+     "tagChildHint": "If the top column does not have enough, you need to exchange from the next one."
+    }
+   ],
+   "walkScript": "Line up the tens and ones. In the ones, four is smaller than eight, so borrow a ten. Then the answer is 36. The trap takes the smaller digit from the larger each time.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-CALC-03",
+   "stem": {
+    "text": "Work out 48 x 6."
+   },
+   "key": "288",
+   "options": [
+    {
+     "value": "288",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "648",
+     "isKey": false,
+     "tag": "maths-63-misaligned-addition-carry",
+     "tagChildHint": "Only carry into the very next column on the left. Do not skip a space."
+    },
+    {
+     "value": "2448",
+     "isKey": false,
+     "tag": "maths-70-two-digit-column-totals",
+     "tagChildHint": "Only one digit can go in each column! Carry the extra over to the left."
+    },
+    {
+     "value": "328",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again."
+    }
+   ],
+   "walkScript": "Multiply the ones first, then the tens. Eight sixes make forty-eight, so write eight and carry four. The tens give twenty-eight, so the answer is 288. The trap drops the carry or writes both products.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-CALC-04",
+   "stem": {
+    "text": "A game costs £8.40. Ravi also buys a controller for £5.75. He pays with a £20 note. How much change does he get?"
+   },
+   "key": "£5.85",
+   "options": [
+    {
+     "value": "£5.85",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£11.60",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    },
+    {
+     "value": "£14.15",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "£7.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "tagChildHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly."
+    }
+   ],
+   "walkScript": "First add the two prices to find the total spent. That comes to £14.15. Take it from £20 to leave £5.85. The trap uses one price only or stops at the total.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-CALC-05",
+   "stem": {
+    "text": "A 2 litre bottle of squash is shared equally between 8 children. How many litres of squash does each child get?"
+   },
+   "key": "0.25 litres",
+   "options": [
+    {
+     "value": "0.25 litres",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4 litres",
+     "isKey": false,
+     "tag": "maths-16-reversing-division",
+     "tagChildHint": "Order matters in division! Are you sharing 12 sweets between 3 people, or 3 sweets between 12 people?"
+    },
+    {
+     "value": "16 litres",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    },
+    {
+     "value": "2 litres",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    }
+   ],
+   "walkScript": "Share the two litres equally among eight children. Two divided by eight is one quarter, or 0.25. Each child gets 0.25 litres. The trap flips the sharing or changes the operation.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-CALC-06",
+   "stem": {
+    "text": "Work out 4,002 - 1,375."
+   },
+   "key": "2627",
+   "options": [
+    {
+     "value": "2627",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "2620",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    },
+    {
+     "value": "2007",
+     "isKey": false,
+     "tag": "maths-12-forgetting-to-exchange",
+     "tagChildHint": "If the top column does not have enough, you need to exchange from the next one."
+    },
+    {
+     "value": "2600",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    }
+   ],
+   "walkScript": "Line up the columns and subtract from the right. Borrow carefully all the way across the zeros. 4,002 minus 1,375 is 2,627. The trap takes each smaller digit from the larger.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-CALC-07",
+   "stem": {
+    "text": "A club buys 4 packs of badges with 25 in each pack. They already had 30 badges. They give away 62 badges. How many badges are left?"
+   },
+   "key": "68",
+   "options": [
+    {
+     "value": "68",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "38",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    },
+    {
+     "value": "48",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    },
+    {
+     "value": "43",
+     "isKey": false,
+     "tag": "maths-85-miscount-or-rounding-in-measures",
+     "tagChildHint": "Count the groups or steps again before you work it out. Use the exact number, not one more or one fewer."
+    }
+   ],
+   "walkScript": "First find the total badges the club now holds. Four packs of twenty-five plus thirty makes 130. Take away the sixty-two given out to leave 68. The trap skips a number or stops partway.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-CALC-08",
+   "stem": {
+    "text": "A stadium holds 4,120 people. For a concert, 18 blocks of 145 seats are sold. Another 320 tickets are sold at the door. How many seats are still empty?"
+   },
+   "key": "1190",
+   "options": [
+    {
+     "value": "1190",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "1510",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    },
+    {
+     "value": "2930",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "2810",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    }
+   ],
+   "walkScript": "First work out how many seats were sold. Eighteen blocks of 145 plus 320 makes 2,930. Take that from the 4,120 seats to leave 1,190. The trap forgets a number or stops before the end.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-FDP-01",
+   "stem": {
+    "text": "Which is the bigger fraction, 5/6 or 5/9?"
+   },
+   "key": "5/6",
+   "options": [
+    {
+     "value": "5/6",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "5/9",
+     "isKey": false,
+     "tag": "maths-21-larger-denominator-means-larger-fraction",
+     "tagChildHint": "The bottom number tells you how many slices the cake is cut into. If you cut it into more slices, what happens to the size of each slice?"
+    },
+    {
+     "value": "They are equal",
+     "isKey": false,
+     "tag": "maths-74-comparing-fractions-incorrectly",
+     "tagChildHint": "The top numbers match, so look at the bottoms. Smaller bottoms make bigger pieces."
+    },
+    {
+     "value": "Cannot tell",
+     "isKey": false,
+     "tag": "maths-101-unlike-denominators-cannot-be-compared",
+     "tagChildHint": "Any two fractions can be compared. Draw each one and see which covers more."
+    }
+   ],
+   "walkScript": "Give both fractions the same bottom number first. 5/6 becomes 15/18, and 5/9 becomes 10/18. So 5/6 is the bigger share. The trap thinks a bigger bottom means a bigger fraction.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-FDP-02",
+   "stem": {
+    "text": "What is 1/4 of 40?"
+   },
+   "key": "10",
+   "options": [
+    {
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "maths-111-halved-instead-of-quartered",
+     "tagChildHint": "A quarter is one of four equal parts, not one of two. Split the amount into four equal parts first."
+    },
+    {
+     "value": "160",
+     "isKey": false,
+     "tag": "maths-24-inverted-fraction-of-an-amount",
+     "tagChildHint": "Check which number is on top. Turning it over changes the fraction."
+    },
+    {
+     "value": "40",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagChildHint": "A fraction is two numbers working together. Use both."
+    }
+   ],
+   "walkScript": "A quarter means sharing into four equal parts. Share 40 into four to get 10 each. So a quarter of 40 is 10. The trap flips the fraction or halves instead.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-FDP-03",
+   "stem": {
+    "text": "Write 1/2 as a decimal."
+   },
+   "key": "0.5",
+   "options": [
+    {
+     "value": "0.5",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "0.2",
+     "isKey": false,
+     "tag": "maths-25-confusing-thirds-and-tenths",
+     "tagChildHint": "0.3 means three-tenths (3/10). Does one-third equal three-tenths?"
+    },
+    {
+     "value": "1.2",
+     "isKey": false,
+     "tag": "maths-28-fractions-as-two-separate-numbers",
+     "tagChildHint": "A fraction is a single number. The line in the middle just means \"divide\"."
+    },
+    {
+     "value": "2.0",
+     "isKey": false,
+     "tag": "maths-16-reversing-division",
+     "tagChildHint": "Order matters in division! Are you sharing 12 sweets between 3 people, or 3 sweets between 12 people?"
+    }
+   ],
+   "walkScript": "A fraction line means divide the top by the bottom. Work out 1 shared by 2, which is 0.5. So one half is 0.5. The trap reads the two numbers on their own.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-FDP-04",
+   "stem": {
+    "text": "Maya has 1/8 of a cake. Her brother gives her another 1/4 of a cake. What fraction of a cake does she have now?"
+   },
+   "key": "3/8",
+   "options": [
+    {
+     "value": "3/8",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "1/6",
+     "isKey": false,
+     "tag": "maths-22-adding-numerators-and-denominators",
+     "tagChildHint": "You can only add fractions when the bottom numbers are exactly the same. Find a common denominator first."
+    },
+    {
+     "value": "3/4",
+     "isKey": false,
+     "tag": "maths-23-additive-equivalent-fractions",
+     "tagChildHint": "Whatever you multiply the top by, you need to multiply the bottom by too."
+    },
+    {
+     "value": "1/4",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    }
+   ],
+   "walkScript": "Match the bottoms before adding. Change 1/4 into 2/8 so both are eighths. Then 1/8 plus 2/8 makes 3/8. The trap adds tops and bottoms straight across.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-FDP-05",
+   "stem": {
+    "text": "A bag holds 2/3 kg of rice. How many bags can be filled from 12 kg of rice?"
+   },
+   "key": "18",
+   "options": [
+    {
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-108-multiplied-instead-of-dividing-by-a-fraction",
+     "tagChildHint": "Ask how many fit inside. That is a sharing question, not a times."
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagChildHint": "A fraction is two numbers working together. Use both."
+    },
+    {
+     "value": "12",
+     "isKey": false,
+     "tag": "maths-79-dividing-by-a-fraction-error",
+     "tagChildHint": "Each bag or glass holds only part of one kilogram or litre. So do not count one bag or glass for each kilogram or litre."
+    }
+   ],
+   "walkScript": "Dividing asks how many two-thirds fit in 12. Flip the divisor and multiply: 12 times 3 over 2. That gives 18 bags. The trap multiplies or uses one number only.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-FDP-07",
+   "stem": {
+    "text": "A box holds 32 chocolates. 3/8 of them are dark. Of the chocolates that are left, one quarter are white. How many white chocolates are there?"
+   },
+   "key": "5",
+   "options": [
+    {
+     "value": "5",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-82-fraction-of-the-wrong-whole",
+     "tagChildHint": "Are you finding a fraction of the total, or of what is left?"
+    },
+    {
+     "value": "10",
+     "isKey": false,
+     "tag": "maths-111-halved-instead-of-quartered",
+     "tagChildHint": "A quarter is one of four equal parts, not one of two. Split the amount into four equal parts first."
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    }
+   ],
+   "walkScript": "Find the dark ones first: three eighths of the box. Take those away to see how many are left. A quarter of the rest are white, giving 5. The trap uses the whole box or stops early.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "stem": {
+    "text": "A tank holds 40 litres of water. 3/5 of it is used on Monday. On Tuesday, one quarter of what is left is used. How many litres are left after Tuesday?"
+   },
+   "key": "12",
+   "options": [
+    {
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "maths-82-fraction-of-the-wrong-whole",
+     "tagChildHint": "Are you finding a fraction of the total, or of what is left?"
+    },
+    {
+     "value": "16",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-111-halved-instead-of-quartered",
+     "tagChildHint": "A quarter is one of four equal parts, not one of two. Split the amount into four equal parts first."
+    }
+   ],
+   "walkScript": "Take away Monday's share: 3/5 of 40 is 24, leaving 16. Now Tuesday uses a quarter of those 16, which is 4. So 12 litres are left. The trap fractions the first total.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-GEOM-01",
+   "stem": {
+    "text": "A rectangle is 18 cm long and 7 cm wide. What is its perimeter?"
+   },
+   "key": "50 cm",
+   "options": [
+    {
+     "value": "126 cm",
+     "isKey": false,
+     "tag": "maths-39-perimeter-vs-area-multiplying",
+     "tagChildHint": "To find the perimeter, imagine walking around the very edge. Add up the whole journey."
+    },
+    {
+     "value": "43 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "tagChildHint": "Walk all the way round the shape. Count every side once."
+    },
+    {
+     "value": "50 cm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "80 cm",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again."
+    }
+   ],
+   "walkScript": "Perimeter is the distance round the edge. Add one long side and one short side. Double that to reach 50 cm. The trap swaps in the area or drops a side.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-GEOM-02",
+   "stem": {
+    "text": "A counter is at (3, 1) on a grid. It moves 4 squares right and 5 squares up. What are the new coordinates?"
+   },
+   "key": "(7, 6)",
+   "options": [
+    {
+     "value": "(6, 7)",
+     "isKey": false,
+     "tag": "maths-46-reversed-coordinates",
+     "tagChildHint": "Go along the corridor (x) before you go up the stairs (y)."
+    },
+    {
+     "value": "(7, 6)",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "(8, 5)",
+     "isKey": false,
+     "tag": "maths-46-reversed-coordinates",
+     "tagChildHint": "Go along the corridor (x) before you go up the stairs (y)."
+    },
+    {
+     "value": "(7, 1)",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    }
+   ],
+   "walkScript": "Start at the counter's spot (3, 1). Move 4 along, then 5 up. That lands on (7, 6). The trap flips the pair or moves just one way.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-GEOM-03",
+   "stem": {
+    "text": "A triangle has two angles of 65 degrees and 48 degrees. What is the size of the third angle?"
+   },
+   "key": "67 degrees",
+   "options": [
+    {
+     "value": "247 degrees",
+     "isKey": false,
+     "tag": "maths-89-wrong-angle-total",
+     "tagChildHint": "First ask what the angles make: a straight line, a triangle or a full turn. A line and a triangle both make 180°, and a full turn makes 360°."
+    },
+    {
+     "value": "115 degrees",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    },
+    {
+     "value": "73 degrees",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    },
+    {
+     "value": "67 degrees",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    }
+   ],
+   "walkScript": "The three angles in a triangle add to 180 degrees. Add the two you know to make 113. Take that from 180 to leave 67 degrees. The trap uses 360 or leaves an angle out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-GEOM-05",
+   "stem": {
+    "text": "An L-shape is made from a rectangle 12 cm by 8 cm. A corner 4 cm by 7 cm is cut out. What is the area of the L-shape?"
+   },
+   "key": "68 cm²",
+   "options": [
+    {
+     "value": "96 cm²",
+     "isKey": false,
+     "tag": "maths-90-composite-shape-area-slip",
+     "tagChildHint": "Find the area of the whole block first, then subtract the piece that was cut away."
+    },
+    {
+     "value": "40 cm²",
+     "isKey": false,
+     "tag": "maths-38-perimeter-vs-area-adding",
+     "tagChildHint": "Perimeter is the fence around the outside (add the sides). Area is the grass inside (multiply the length by the width)."
+    },
+    {
+     "value": "68 cm²",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "72 cm²",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    }
+   ],
+   "walkScript": "Find the whole block first: 12 times 8 is 96. The cut-out corner is 4 times 7, which is 28. Take the cut away to leave 68 cm². The trap keeps the whole block or measures the edge.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-GEOM-06",
+   "stem": {
+    "text": "An isosceles triangle has an apex angle of 50 degrees. Its two base angles are equal to each other. What is the size of each base angle?"
+   },
+   "key": "65 degrees",
+   "options": [
+    {
+     "value": "130 degrees",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "65 degrees",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "155 degrees",
+     "isKey": false,
+     "tag": "maths-89-wrong-angle-total",
+     "tagChildHint": "First ask what the angles make: a straight line, a triangle or a full turn. A line and a triangle both make 180°, and a full turn makes 360°."
+    },
+    {
+     "value": "40 degrees",
+     "isKey": false,
+     "tag": "maths-100-steps-out-of-order",
+     "tagChildHint": "Say the steps out loud in order. Then do them one at a time."
+    }
+   ],
+   "walkScript": "The three angles add to 180 degrees. Take the 50 degree apex away, leaving 130. Share 130 between the two equal base angles to get 65 degrees. The trap stops at 130 before sharing.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-MEAS-01",
+   "stem": {
+    "text": "Ella has £7. She buys a pen for £2.80. How much change does she get?"
+   },
+   "key": "£4.20",
+   "options": [
+    {
+     "value": "£4.20",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£5.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "tagChildHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly."
+    },
+    {
+     "value": "£5.80",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    },
+    {
+     "value": "£9.80",
+     "isKey": false,
+     "tag": "maths-84-adding-instead-of-finding-the-difference",
+     "tagChildHint": "Words like \"change\" or \"left\" usually mean subtraction. Take the amount away instead of adding."
+    }
+   ],
+   "walkScript": "Change means lining the amounts up and taking away. Write £7 as 7.00 first. Take 2.80 away to leave 4.20. The trap drops the pence or adds instead.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-MEAS-02",
+   "stem": {
+    "text": "A blue string is 84 cm long. A green string is 57 cm long. How much longer is the blue string?"
+   },
+   "key": "27 cm",
+   "options": [
+    {
+     "value": "27 cm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "33 cm",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    },
+    {
+     "value": "141 cm",
+     "isKey": false,
+     "tag": "maths-84-adding-instead-of-finding-the-difference",
+     "tagChildHint": "Words like \"change\" or \"left\" usually mean subtraction. Take the amount away instead of adding."
+    },
+    {
+     "value": "20 cm",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    }
+   ],
+   "walkScript": "This asks for the difference, so subtract. Take 57 from 84. What is left is 27 cm. The trap adds the strings or rounds without fixing it.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-MEAS-03",
+   "stem": {
+    "text": "A train leaves at 3:50 pm and the journey takes 25 minutes. What time does it arrive?"
+   },
+   "key": "4:15 pm",
+   "options": [
+    {
+     "value": "4:15 pm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "3:75 pm",
+     "isKey": false,
+     "tag": "maths-32-base-100-time",
+     "tagChildHint": "There are only 60 minutes in an hour. Once you hit 60, you need to roll over into the next hour."
+    },
+    {
+     "value": "4:20 pm",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    },
+    {
+     "value": "3:55 pm",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place."
+    }
+   ],
+   "walkScript": "Add the minutes to the start time. 50 plus 25 is 75 minutes, past a full hour. Roll 60 over to make 4:15. The trap lets minutes pass 60.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-MEAS-04",
+   "stem": {
+    "text": "A pencil case costs £6.05. Priya pays with a £10 note. How much change does she get?"
+   },
+   "key": "£3.95",
+   "options": [
+    {
+     "value": "£3.95",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£4.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "tagChildHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly."
+    },
+    {
+     "value": "£3.50",
+     "isKey": false,
+     "tag": "maths-31-dropping-the-zero-in-money",
+     "tagChildHint": "Money always needs two decimal places to show the pennies. Add a placeholder zero."
+    },
+    {
+     "value": "£16.05",
+     "isKey": false,
+     "tag": "maths-84-adding-instead-of-finding-the-difference",
+     "tagChildHint": "Words like \"change\" or \"left\" usually mean subtraction. Take the amount away instead of adding."
+    }
+   ],
+   "walkScript": "Change means taking the cost from the note. Write the price as 6.05 with the middle zero. Take it from 10 to leave 3.95. The trap drops a zero or adds.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-MEAS-05",
+   "stem": {
+    "text": "A watermelon weighs 3 kg. An apple weighs 200 g. How much heavier is the watermelon, in grams?"
+   },
+   "key": "2800 g",
+   "options": [
+    {
+     "value": "2800 g",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "100 g",
+     "isKey": false,
+     "tag": "maths-37-metric-prefix-confusion",
+     "tagChildHint": "\"Kilo\" always means one thousand. There are 1,000 grams in a kilogram."
+    },
+    {
+     "value": "3200 g",
+     "isKey": false,
+     "tag": "maths-84-adding-instead-of-finding-the-difference",
+     "tagChildHint": "Words like \"change\" or \"left\" usually mean subtraction. Take the amount away instead of adding."
+    },
+    {
+     "value": "2980 g",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place."
+    }
+   ],
+   "walkScript": "First change 3 kg into grams, which is 3000. The apple is 200 grams already. Take 200 from 3000 to leave 2800 g. The trap uses 100 grams a kilo.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-MEAS-06",
+   "stem": {
+    "text": "Sam buys a sandwich for £2.45 and a drink for £1.30. He pays with a £5 note. How much change does he get?"
+   },
+   "key": "£1.25",
+   "options": [
+    {
+     "value": "£1.25",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£8.75",
+     "isKey": false,
+     "tag": "maths-84-adding-instead-of-finding-the-difference",
+     "tagChildHint": "Words like \"change\" or \"left\" usually mean subtraction. Take the amount away instead of adding."
+    },
+    {
+     "value": "£2.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "tagChildHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly."
+    },
+    {
+     "value": "£2.75",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    }
+   ],
+   "walkScript": "Add the two prices first: 2.45 plus 1.30 is 3.75. Take that total from £5. The change is 1.25. The trap adds the note or drops pence.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-MEAS-07",
+   "stem": {
+    "text": "A shop sells notebooks at £2.35 each. Tom buys 3 notebooks and pays with a £10 note. How much change does he get?"
+   },
+   "key": "£2.95",
+   "options": [
+    {
+     "value": "£2.95",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£7.05",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "£5.30",
+     "isKey": false,
+     "tag": "maths-85-miscount-or-rounding-in-measures",
+     "tagChildHint": "Count the groups or steps again before you work it out. Use the exact number, not one more or one fewer."
+    },
+    {
+     "value": "£2.80",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    }
+   ],
+   "walkScript": "Three notebooks cost £2.35 times 3, which is £7.05. Take £7.05 from the £10 note. The change is £2.95. The trap stops at the total or miscounts.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-NPV-01",
+   "stem": {
+    "text": "In the number 5,914, what is the value of the digit 9?"
+   },
+   "key": "900",
+   "options": [
+    {
+     "value": "900",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "90",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!"
+    },
+    {
+     "value": "9000",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    }
+   ],
+   "walkScript": "Find where the 9 sits. It stands in the hundreds column. So its value is nine hundreds, which is 900. The trap reads it as a smaller column or its face value.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-NPV-02",
+   "stem": {
+    "text": "What number is 100 more than 6,970?"
+   },
+   "key": "7070",
+   "options": [
+    {
+     "value": "7070",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "6980",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "7970",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "6070",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    }
+   ],
+   "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 7,070. The trap adds into a neighbouring column or drops the carry.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-NPV-03",
+   "stem": {
+    "text": "What number is 1,000 more than 9,400?"
+   },
+   "key": "10400",
+   "options": [
+    {
+     "value": "10400",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9500",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "8400",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    },
+    {
+     "value": "400",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    }
+   ],
+   "walkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column to reach 10,400. The trap adds into a neighbouring column or loses the carry.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-NPV-04",
+   "stem": {
+    "text": "Round 4,271 to the nearest 100."
+   },
+   "key": "4300",
+   "options": [
+    {
+     "value": "4300",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4270",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    },
+    {
+     "value": "4000",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    },
+    {
+     "value": "4200",
+     "isKey": false,
+     "tag": "maths-09-rounding-misdirection",
+     "tagChildHint": "Look at the next digit along. If it is 5 or more, round up."
+    }
+   ],
+   "walkScript": "Rounding to the nearest hundred means checking the tens digit. Here it is seven, so round up. 4,271 becomes 4,300. The trap rounds to a different place or chops the end off.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-NPV-05",
+   "stem": {
+    "text": "In the number 6.351, what is the value of the digit 5?"
+   },
+   "key": "0.05",
+   "options": [
+    {
+     "value": "0.05",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "5",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!"
+    },
+    {
+     "value": "0.5",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "50",
+     "isKey": false,
+     "tag": "maths-07-decimals-as-two-separate-whole-numbers",
+     "tagChildHint": "The decimal point separates wholes from parts. Read each digit after the point in its own column, not as one whole number."
+    }
+   ],
+   "walkScript": "Find where the 5 sits. It stands in the hundredths column. So its value is five hundredths, which is 0.05. The trap reads a neighbouring column or the plain digit.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-NPV-06",
+   "stem": {
+    "text": "The temperature is 5°C. It falls by 8°C. What is the new temperature?"
+   },
+   "key": "−3°C",
+   "options": [
+    {
+     "value": "−3°C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "3°C",
+     "isKey": false,
+     "tag": "maths-66-negative-number-miscount",
+     "tagChildHint": "Count down past zero. The numbers keep going on the other side."
+    },
+    {
+     "value": "13°C",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    },
+    {
+     "value": "−8°C",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    }
+   ],
+   "walkScript": "Start at five and count downwards. Cross zero into the minus numbers. Eight steps down from five lands on minus three. The traps keep it positive, add instead of taking away, or forget to start from five.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-NPV-07",
+   "stem": {
+    "text": "Round 3,650 to the nearest 100."
+   },
+   "key": "3700",
+   "options": [
+    {
+     "value": "3700",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "3600",
+     "isKey": false,
+     "tag": "maths-10-rounding-exact-halves",
+     "tagChildHint": "Exactly halfway always rounds up. If it ends in 5, go up to the next number."
+    },
+    {
+     "value": "3650",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    },
+    {
+     "value": "4000",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    }
+   ],
+   "walkScript": "This number sits exactly halfway between two hundreds. The rule says round a halfway number up. So 3,650 becomes 3,700. The trap rounds the half down or picks another place.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-RP-01",
+   "stem": {
+    "text": "4 pencils cost 48p. How much do 7 pencils cost at the same price?"
+   },
+   "key": "£0.84",
+   "options": [
+    {
+     "value": "£3.36",
+     "isKey": false,
+     "tag": "maths-92-unitary-proportion-slip",
+     "tagChildHint": "Find the cost of just one first. Then multiply that."
+    },
+    {
+     "value": "£1.44",
+     "isKey": false,
+     "tag": "maths-102-scaled-by-the-difference",
+     "tagChildHint": "Multiply by how many you need now. Not by how many more."
+    },
+    {
+     "value": "£0.84",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£0.48",
+     "isKey": false,
+     "tag": "maths-103-scaled-by-the-original-count",
+     "tagChildHint": "You found one share. Now count how many you need."
+    }
+   ],
+   "walkScript": "Find the price of one pencil first. Share 48p by 4 to get 12p each. Seven pencils cost 12p times 7, which is 84p. The trap scales by the extra count or the old one.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-RP-02",
+   "stem": {
+    "text": "Shop A sells 5 pens for £2.00. Shop B sells 4 pens for £1.20. How much cheaper is one pen at Shop B than at Shop A?"
+   },
+   "key": "10p",
+   "options": [
+    {
+     "value": "80p",
+     "isKey": false,
+     "tag": "maths-93-comparing-prices-ignoring-quantity",
+     "tagChildHint": "The packs hold different amounts. Find the price of one first."
+    },
+    {
+     "value": "26p",
+     "isKey": false,
+     "tag": "maths-105-divided-by-the-other-quantity",
+     "tagChildHint": "Match each price to its own pack. Keep the pairs together."
+    },
+    {
+     "value": "30p",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "10p",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    }
+   ],
+   "walkScript": "Put both shops in the same form: one pen. Shop A is 40p each, Shop B is 30p each. Take the smaller from the larger. Shop B saves 10p a pen.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-STATS-01",
+   "stem": {
+    "text": "A table shows cakes baked: Monday 8, Tuesday 12, Wednesday 9, Thursday 7. How many cakes were baked in total?"
+   },
+   "key": "36",
+   "options": [
+    {
+     "value": "29",
+     "isKey": false,
+     "tag": "maths-94-incomplete-statistical-total",
+     "tagChildHint": "Double-check the chart. Have you added together every single row or bar you need?"
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-95-reading-the-wrong-statistical-quantity",
+     "tagChildHint": "Look at the axis labels. Are you counting the right things?"
+    },
+    {
+     "value": "16",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    },
+    {
+     "value": "36",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    }
+   ],
+   "walkScript": "A total means add every row. Take Monday's 8, Tuesday's 12, Wednesday's 9 and Thursday's 7. Put them all together to make 36. The trap leaves a row out or counts the days.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC04-STATS-02",
+   "stem": {
+    "text": "In five spelling tests Leo scored 6, 8, 5, 9 and 12. What is his mean (average) score?"
+   },
+   "key": "8",
+   "options": [
+    {
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "40",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "10",
+     "isKey": false,
+     "tag": "maths-96-mean-calculation-slip",
+     "tagChildHint": "Count how many numbers you added. Divide by that."
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "maths-104-gave-a-different-average",
+     "tagChildHint": "Mean means add them up, then share. Check which one is asked."
+    }
+   ],
+   "walkScript": "The mean has two moves: total, then share. Add the five scores to make 40, then share by 5. That gives a mean of 8. The trap stops at the total or gives the range.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "stem": {
+    "text": "Work out 465 + 218."
+   },
+   "key": "683",
+   "options": [
+    {
+     "value": "683",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "673",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    },
+    {
+     "value": "283",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place."
+    },
+    {
+     "value": "247",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    }
+   ],
+   "walkScript": "Line up the columns and add from the right. Five plus eight makes thirteen, so carry the ten. Keep going to reach 683. The trap drops a carry or rounds the numbers.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-CALC-02",
+   "stem": {
+    "text": "Work out 83 - 46."
+   },
+   "key": "37",
+   "options": [
+    {
+     "value": "37",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "43",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    },
+    {
+     "value": "129",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    },
+    {
+     "value": "77",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place."
+    }
+   ],
+   "walkScript": "Line up the tens and ones. In the ones, three is smaller than six, so borrow a ten. Then the answer is 37. The trap takes the smaller digit from the larger each time.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-CALC-03",
+   "stem": {
+    "text": "Work out 57 x 4."
+   },
+   "key": "228",
+   "options": [
+    {
+     "value": "228",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "408",
+     "isKey": false,
+     "tag": "maths-63-misaligned-addition-carry",
+     "tagChildHint": "Only carry into the very next column on the left. Do not skip a space."
+    },
+    {
+     "value": "2028",
+     "isKey": false,
+     "tag": "maths-70-two-digit-column-totals",
+     "tagChildHint": "Only one digit can go in each column! Carry the extra over to the left."
+    },
+    {
+     "value": "248",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again."
+    }
+   ],
+   "walkScript": "Multiply the ones first, then the tens. Seven fours make twenty-eight, so write eight and carry two. The tens give twenty-two, so the answer is 228. The trap drops the carry or writes both products.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-CALC-04",
+   "stem": {
+    "text": "A jigsaw costs £7.65. Mia also buys a pen for £2.80. She pays with a £20 note. How much change does she get?"
+   },
+   "key": "£9.55",
+   "options": [
+    {
+     "value": "£9.55",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£12.35",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    },
+    {
+     "value": "£10.45",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "£11.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "tagChildHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly."
+    }
+   ],
+   "walkScript": "First add the two prices to find the total spent. That comes to £10.45. Take it from £20 to leave £9.55. The trap uses one price only or stops at the total.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-CALC-05",
+   "stem": {
+    "text": "A 3 litre bottle of juice is shared equally between 6 children. How many litres of juice does each child get?"
+   },
+   "key": "0.5 litres",
+   "options": [
+    {
+     "value": "0.5 litres",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "2 litres",
+     "isKey": false,
+     "tag": "maths-16-reversing-division",
+     "tagChildHint": "Order matters in division! Are you sharing 12 sweets between 3 people, or 3 sweets between 12 people?"
+    },
+    {
+     "value": "18 litres",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    },
+    {
+     "value": "3 litres",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    }
+   ],
+   "walkScript": "Share the three litres equally among six children. Three divided by six is one half, or 0.5. Each child gets 0.5 litres. The trap flips the sharing or changes the operation.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-CALC-06",
+   "stem": {
+    "text": "Work out 6,003 - 2,548."
+   },
+   "key": "3455",
+   "options": [
+    {
+     "value": "3455",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4455",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    },
+    {
+     "value": "3005",
+     "isKey": false,
+     "tag": "maths-12-forgetting-to-exchange",
+     "tagChildHint": "If the top column does not have enough, you need to exchange from the next one."
+    },
+    {
+     "value": "3500",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    }
+   ],
+   "walkScript": "Line up the columns and subtract from the right. Borrow carefully all the way across the zeros. 6,003 minus 2,548 is 3,455. The trap takes each smaller digit from the larger.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-CALC-07",
+   "stem": {
+    "text": "A baker makes 5 trays of 24 muffins. She already had 18 muffins. She sells 96 muffins. How many muffins are left?"
+   },
+   "key": "42",
+   "options": [
+    {
+     "value": "42",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "24",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    },
+    {
+     "value": "22",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    },
+    {
+     "value": "38",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    }
+   ],
+   "walkScript": "First find the total muffins the baker now holds. Five trays of twenty-four plus eighteen makes 138. Take away the ninety-six sold to leave 42. The trap skips a number or stops partway.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-CALC-08",
+   "stem": {
+    "text": "A theatre has 3,150 seats. For a show, 16 rows of 120 seats are booked online. Another 275 seats are sold at the door. How many seats are still empty?"
+   },
+   "key": "955",
+   "options": [
+    {
+     "value": "955",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "1230",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    },
+    {
+     "value": "2195",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "1045",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    }
+   ],
+   "walkScript": "First work out how many seats were sold. Sixteen rows of 120 plus 275 makes 2,195. Take that from the 3,150 seats to leave 955. The trap forgets a number or stops before the end.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-FDP-01",
+   "stem": {
+    "text": "Which is the bigger fraction, 4/5 or 4/9?"
+   },
+   "key": "4/5",
+   "options": [
+    {
+     "value": "4/5",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4/9",
+     "isKey": false,
+     "tag": "maths-21-larger-denominator-means-larger-fraction",
+     "tagChildHint": "The bottom number tells you how many slices the cake is cut into. If you cut it into more slices, what happens to the size of each slice?"
+    },
+    {
+     "value": "They are equal",
+     "isKey": false,
+     "tag": "maths-74-comparing-fractions-incorrectly",
+     "tagChildHint": "The top numbers match, so look at the bottoms. Smaller bottoms make bigger pieces."
+    },
+    {
+     "value": "Cannot tell",
+     "isKey": false,
+     "tag": "maths-101-unlike-denominators-cannot-be-compared",
+     "tagChildHint": "Any two fractions can be compared. Draw each one and see which covers more."
+    }
+   ],
+   "walkScript": "Give both fractions the same bottom number first. That makes 4/5 into 36/45 and 4/9 into 20/45. So 4/5 is the bigger share. One trap thinks a bigger bottom means a bigger piece.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-FDP-02",
+   "stem": {
+    "text": "What is 2/3 of 18?"
+   },
+   "key": "12",
+   "options": [
+    {
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "27",
+     "isKey": false,
+     "tag": "maths-24-inverted-fraction-of-an-amount",
+     "tagChildHint": "Check which number is on top. Turning it over changes the fraction."
+    },
+    {
+     "value": "36",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagChildHint": "A fraction is two numbers working together. Use both."
+    }
+   ],
+   "walkScript": "Find one third of 18 first. Share 18 into three, giving 6 each. Two thirds means two of those parts, so 12. Some traps stop at one part or flip the fraction.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-FDP-03",
+   "stem": {
+    "text": "In Bag A, 1/3 of the marbles are red. In Bag B, the marbles are red and blue in the ratio 1 : 3. Which bag has the greater fraction of red marbles?"
+   },
+   "key": "Bag A",
+   "options": [
+    {
+     "value": "Bag A",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Bag B",
+     "isKey": false,
+     "tag": "maths-21-larger-denominator-means-larger-fraction",
+     "tagChildHint": "The bottom number tells you how many slices the cake is cut into. If you cut it into more slices, what happens to the size of each slice?"
+    },
+    {
+     "value": "They are equal",
+     "isKey": false,
+     "tag": "maths-52-ratio-to-fraction-confusion",
+     "tagChildHint": "A fraction is part of the whole. First, add the ratio parts to find the total."
+    },
+    {
+     "value": "Cannot tell",
+     "isKey": false,
+     "tag": "maths-101-unlike-denominators-cannot-be-compared",
+     "tagChildHint": "Any two fractions can be compared. Draw each one and see which covers more."
+    }
+   ],
+   "walkScript": "Bag B splits into 1 red for every 3 blue. That means 1 red in every 4 marbles, so 1/4. Bag A holds 1/3, which is more than 1/4. A trap reads the ratio as the fraction itself.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-FDP-04",
+   "stem": {
+    "text": "What is 1/5 written as a decimal?"
+   },
+   "key": "0.2",
+   "options": [
+    {
+     "value": "0.2",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "0.5",
+     "isKey": false,
+     "tag": "maths-25-confusing-thirds-and-tenths",
+     "tagChildHint": "0.3 means three-tenths (3/10). Does one-third equal three-tenths?"
+    },
+    {
+     "value": "0.1",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagChildHint": "A fraction is two numbers working together. Use both."
+    },
+    {
+     "value": "0.15",
+     "isKey": false,
+     "tag": "maths-28-fractions-as-two-separate-numbers",
+     "tagChildHint": "A fraction is a single number. The line in the middle just means \"divide\"."
+    }
+   ],
+   "walkScript": "One fifth means one whole shared into five. Ten tenths shared into five gives two tenths each. So 1/5 is 0.2. A trap copies a digit from the fraction instead.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-FDP-05",
+   "stem": {
+    "text": "There are 48 sweets in a jar. 25% of them are eaten. How many sweets are left?"
+   },
+   "key": "36",
+   "options": [
+    {
+     "value": "36",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "24",
+     "isKey": false,
+     "tag": "maths-78-percentage-fraction-confusion",
+     "tagChildHint": "50% is a half. 25% is exactly half of that, which makes it one quarter!"
+    },
+    {
+     "value": "23",
+     "isKey": false,
+     "tag": "maths-77-treating-a-percentage-as-money",
+     "tagChildHint": "Percent means \"out of 100\". The percent is a share of the amount, not a number to take away from it!"
+    },
+    {
+     "value": "12",
+     "isKey": false,
+     "tag": "maths-81-forgetting-to-subtract-the-discount",
+     "tagChildHint": "You found the discount, well done! Now subtract it from the starting price to finish."
+    }
+   ],
+   "walkScript": "First find 25% of 48, which is a quarter. A quarter of 48 is 12 sweets eaten. Take 12 from 48 to leave 36. A trap stops at the eaten amount, or halves instead.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-FDP-06",
+   "stem": {
+    "text": "A bottle holds 6 litres of water. Each glass holds 2/3 of a litre. How many glasses can be filled?"
+   },
+   "key": "9",
+   "options": [
+    {
+     "value": "9",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-108-multiplied-instead-of-dividing-by-a-fraction",
+     "tagChildHint": "Ask how many fit inside. That is a sharing question, not a times."
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "maths-79-dividing-by-a-fraction-error",
+     "tagChildHint": "Each bag or glass holds only part of one kilogram or litre. So do not count one bag or glass for each kilogram or litre."
+    },
+    {
+     "value": "2",
+     "isKey": false,
+     "tag": "maths-75-incomplete-fraction-of-an-amount",
+     "tagChildHint": "A fraction is two numbers working together. Use both."
+    }
+   ],
+   "walkScript": "You are asking how many 2/3 litres fit in 6. Flip the two thirds and multiply: 6 times 3/2. That fills 9 glasses. A trap multiplies by the fraction, making it smaller.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-FDP-07",
+   "stem": {
+    "text": "A jug is 1/3 full of juice. Then another 1/4 of a jug is poured in. What fraction of the jug is now full?"
+   },
+   "key": "7/12",
+   "options": [
+    {
+     "value": "7/12",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "2/7",
+     "isKey": false,
+     "tag": "maths-22-adding-numerators-and-denominators",
+     "tagChildHint": "You can only add fractions when the bottom numbers are exactly the same. Find a common denominator first."
+    },
+    {
+     "value": "3/4",
+     "isKey": false,
+     "tag": "maths-23-additive-equivalent-fractions",
+     "tagChildHint": "Whatever you multiply the top by, you need to multiply the bottom by too."
+    },
+    {
+     "value": "1/3",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    }
+   ],
+   "walkScript": "Give both fractions the same bottom number, twelfths. That turns 1/3 into 4/12 and 1/4 into 3/12. Add the tops to get 7/12. A trap adds tops and bottoms straight across.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-FDP-08",
+   "stem": {
+    "text": "A coat costs £64. In a sale it is reduced by 25%. What is the sale price?"
+   },
+   "key": "£48",
+   "options": [
+    {
+     "value": "£48",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£39",
+     "isKey": false,
+     "tag": "maths-77-treating-a-percentage-as-money",
+     "tagChildHint": "Percent means \"out of 100\". The percent is a share of the amount, not a number to take away from it!"
+    },
+    {
+     "value": "£16",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "£32",
+     "isKey": false,
+     "tag": "maths-78-percentage-fraction-confusion",
+     "tagChildHint": "50% is a half. 25% is exactly half of that, which makes it one quarter!"
+    }
+   ],
+   "walkScript": "A quarter off means find one quarter of sixty-four pounds. Take that discount away from the sixty-four. The sale price is £48. The trap halves it, adds the percent, or stops.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-GEOM-01",
+   "stem": {
+    "text": "A rectangle is 18 cm long and 9 cm wide. What is its perimeter?"
+   },
+   "key": "54 cm",
+   "options": [
+    {
+     "value": "54 cm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "45 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "tagChildHint": "Walk all the way round the shape. Count every side once."
+    },
+    {
+     "value": "162 cm",
+     "isKey": false,
+     "tag": "maths-39-perimeter-vs-area-multiplying",
+     "tagChildHint": "To find the perimeter, imagine walking around the very edge. Add up the whole journey."
+    },
+    {
+     "value": "84 cm",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again."
+    }
+   ],
+   "walkScript": "Perimeter is the distance all the way round. Add a long side and a short side. Then double that total to reach 54 cm. One trap swaps in the area instead.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-GEOM-02",
+   "stem": {
+    "text": "Two angles sit together on a straight line. One angle is 137°. What is the size of the other angle?"
+   },
+   "key": "43°",
+   "options": [
+    {
+     "value": "43°",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "223°",
+     "isKey": false,
+     "tag": "maths-89-wrong-angle-total",
+     "tagChildHint": "First ask what the angles make: a straight line, a triangle or a full turn. A line and a triangle both make 180°, and a full turn makes 360°."
+    },
+    {
+     "value": "57°",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    },
+    {
+     "value": "50°",
+     "isKey": false,
+     "tag": "maths-12-forgetting-to-exchange",
+     "tagChildHint": "If the top column does not have enough, you need to exchange from the next one."
+    }
+   ],
+   "walkScript": "Angles on a straight line always add to 180. Take the 137 away from 180. The angle left is 43 degrees. One trap uses the full-turn total.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-GEOM-03",
+   "stem": {
+    "text": "On a grid, a counter is at point (5, 2). It is moved 6 squares right and 4 squares up. What are the new coordinates of the counter?"
+   },
+   "key": "(11, 6)",
+   "options": [
+    {
+     "value": "(11, 6)",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "(6, 11)",
+     "isKey": false,
+     "tag": "maths-46-reversed-coordinates",
+     "tagChildHint": "Go along the corridor (x) before you go up the stairs (y)."
+    },
+    {
+     "value": "(10, 5)",
+     "isKey": false,
+     "tag": "maths-47-translation-by-gap",
+     "tagChildHint": "Do not count the point you start on. Each jump to the next grid line counts as one square."
+    },
+    {
+     "value": "(-1, -2)",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    }
+   ],
+   "walkScript": "Read along the corridor, then up the stairs. Six right takes 5 to 11. Four up takes 2 to 6. The counter lands at (11, 6); one trap slides the other way.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-GEOM-04",
+   "stem": {
+    "text": "A rectangle has an area of 48 cm² and a length of 8 cm. First find its width, then work out its perimeter."
+   },
+   "key": "28 cm",
+   "options": [
+    {
+     "value": "28 cm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "96 cm",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    },
+    {
+     "value": "22 cm",
+     "isKey": false,
+     "tag": "maths-88-incomplete-perimeter",
+     "tagChildHint": "Walk all the way round the shape. Count every side once."
+    },
+    {
+     "value": "6 cm",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    }
+   ],
+   "walkScript": "Area is length times width, so width is 48 shared by 8, giving 6 cm. Now add 8 and 6, then double for the perimeter. That makes 28 cm. One trap stops at the width. Another adds only three sides.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-GEOM-05",
+   "stem": {
+    "text": "An L-shape is made from a rectangle 12 cm by 8 cm. A corner 5 cm by 4 cm is cut out. What is the area of the L-shape?"
+   },
+   "key": "76 cm²",
+   "options": [
+    {
+     "value": "76 cm²",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "96 cm²",
+     "isKey": false,
+     "tag": "maths-90-composite-shape-area-slip",
+     "tagChildHint": "Find the area of the whole block first, then subtract the piece that was cut away."
+    },
+    {
+     "value": "40 cm²",
+     "isKey": false,
+     "tag": "maths-38-perimeter-vs-area-adding",
+     "tagChildHint": "Perimeter is the fence around the outside (add the sides). Area is the grass inside (multiply the length by the width)."
+    },
+    {
+     "value": "116 cm²",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    }
+   ],
+   "walkScript": "Find the whole block first: 12 times 8 is 96. The cut-out corner is 5 times 4, which is 20. Take the cut-out away to leave 76 cm². One trap forgets the cut-out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-GEOM-06",
+   "stem": {
+    "text": "A triangle rests on a straight line. One angle of the triangle sits next to an angle of 140° on that line. Another angle of the triangle is 30°. What is the third angle of the triangle?"
+   },
+   "key": "110°",
+   "options": [
+    {
+     "value": "110°",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "40°",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "290°",
+     "isKey": false,
+     "tag": "maths-89-wrong-angle-total",
+     "tagChildHint": "First ask what the angles make: a straight line, a triangle or a full turn. A line and a triangle both make 180°, and a full turn makes 360°."
+    },
+    {
+     "value": "10°",
+     "isKey": false,
+     "tag": "maths-112-outside-angle-used-inside-the-triangle",
+     "tagChildHint": "Check that an angle is inside the triangle before you use it. Angles on a straight line add up to 180°."
+    }
+   ],
+   "walkScript": "The straight line gives the inside angle: 180 take 140 is 40. A triangle's angles add to 180. Take away 40 and 30 to leave 110 degrees. One trap stops before the last step.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-MEAS-01",
+   "stem": {
+    "text": "Ravi has £8. He buys a book for £3.40. How much change does he get?"
+   },
+   "key": "£4.60",
+   "options": [
+    {
+     "value": "£4.60",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£5.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "tagChildHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly."
+    },
+    {
+     "value": "£11.40",
+     "isKey": false,
+     "tag": "maths-84-adding-instead-of-finding-the-difference",
+     "tagChildHint": "Words like \"change\" or \"left\" usually mean subtraction. Take the amount away instead of adding."
+    },
+    {
+     "value": "£4.00",
+     "isKey": false,
+     "tag": "maths-113-lost-the-bridge-to-the-pound",
+     "tagChildHint": "Count on to the next pound, then on to the money given. Add both jumps to find the change."
+    }
+   ],
+   "walkScript": "Change means you line the amounts up and subtract. Write £8 as £8.00 so the pence match. Take £3.40 away to leave £4.60. A trap adds the prices or drops the pence.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-MEAS-02",
+   "stem": {
+    "text": "A bag of flour weighs 4000 g. What is its mass in kilograms?"
+   },
+   "key": "4 kg",
+   "options": [
+    {
+     "value": "4 kg",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4,000,000 kg",
+     "isKey": false,
+     "tag": "maths-36-multiplying-to-convert-to-a-larger-unit",
+     "tagChildHint": "A metre is much larger than a centimetre, so you will need fewer of them. If you are going to a larger unit, you need to divide."
+    },
+    {
+     "value": "40 kg",
+     "isKey": false,
+     "tag": "maths-37-metric-prefix-confusion",
+     "tagChildHint": "\"Kilo\" always means one thousand. There are 1,000 grams in a kilogram."
+    },
+    {
+     "value": "400 kg",
+     "isKey": false,
+     "tag": "maths-68-wrong-power-of-ten-scaling",
+     "tagChildHint": "One hundred has two zeros. Make sure you divide by 100, not a different number."
+    }
+   ],
+   "walkScript": "A kilogram is much heavier than a gram. There are 1,000 grams in every kilogram. So share 4,000 by 1,000 to get 4 kg. A trap multiplies, or divides by a smaller number.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-MEAS-03",
+   "stem": {
+    "text": "Anya buys a ruler for £1.70 and a pen for £2.60. What is the total cost?"
+   },
+   "key": "£4.30",
+   "options": [
+    {
+     "value": "£4.30",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£13.30",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again."
+    },
+    {
+     "value": "£3.30",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    },
+    {
+     "value": "£5.00",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    }
+   ],
+   "walkScript": "Add the two prices, pounds and pence together. Seventy pence plus sixty pence makes £1.30. That carries to give £4.30 in total. A trap loses the carried pound, or counts it as ten pounds.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-MEAS-04",
+   "stem": {
+    "text": "A blue rope is 74 cm long. A red rope is 29 cm long. How much longer is the blue rope?"
+   },
+   "key": "45 cm",
+   "options": [
+    {
+     "value": "45 cm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "103 cm",
+     "isKey": false,
+     "tag": "maths-84-adding-instead-of-finding-the-difference",
+     "tagChildHint": "Words like \"change\" or \"left\" usually mean subtraction. Take the amount away instead of adding."
+    },
+    {
+     "value": "55 cm",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    },
+    {
+     "value": "65 cm",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place."
+    }
+   ],
+   "walkScript": "How much longer means you find the difference. Take 29 cm away from 74 cm. That leaves 45 cm. A trap adds the two lengths instead.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-MEAS-05",
+   "stem": {
+    "text": "A bus leaves at 2:45 pm. The journey takes 40 minutes. What time does it arrive?"
+   },
+   "key": "3:25 pm",
+   "options": [
+    {
+     "value": "3:25 pm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "2:85 pm",
+     "isKey": false,
+     "tag": "maths-32-base-100-time",
+     "tagChildHint": "There are only 60 minutes in an hour. Once you hit 60, you need to roll over into the next hour."
+    },
+    {
+     "value": "2:05 pm",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    },
+    {
+     "value": "3:40 pm",
+     "isKey": false,
+     "tag": "maths-99-rounded-without-compensating",
+     "tagChildHint": "Rounding helps you check an answer. Work the real numbers out too."
+    }
+   ],
+   "walkScript": "First count the minutes up to the next hour. From 2:45, fifteen minutes reaches 3:00. Twenty-five minutes are left, so 3:25 pm. A trap lets the minutes pass sixty.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-MEAS-06",
+   "stem": {
+    "text": "One parcel weighs 375 g. Another parcel weighs 246 g. What is their total mass?"
+   },
+   "key": "621 g",
+   "options": [
+    {
+     "value": "621 g",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "421 g",
+     "isKey": false,
+     "tag": "maths-98-digit-dropped-in-column-work",
+     "tagChildHint": "Line the digits up in their columns. Every digit needs a place."
+    },
+    {
+     "value": "521 g",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    },
+    {
+     "value": "631 g",
+     "isKey": false,
+     "tag": "maths-13-adding-the-exchange-twice",
+     "tagChildHint": "Cross out your carried number once you add it. This stops you from counting it again."
+    }
+   ],
+   "walkScript": "Line the digits up in their columns and add. Five plus six is eleven, so carry the ten. Keep going to reach 621 g. A trap drops a digit or a carried ten.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-MEAS-07",
+   "stem": {
+    "text": "Leo buys 3 pens at £1.15 each. He pays with a £5 note. How much change does he get?"
+   },
+   "key": "£1.55",
+   "options": [
+    {
+     "value": "£1.55",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£3.45",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "£2.70",
+     "isKey": false,
+     "tag": "maths-85-miscount-or-rounding-in-measures",
+     "tagChildHint": "Count the groups or steps again before you work it out. Use the exact number, not one more or one fewer."
+    },
+    {
+     "value": "£2.00",
+     "isKey": false,
+     "tag": "maths-83-money-place-value-slip",
+     "tagChildHint": "Always line up the decimal points. Add place-holder zeros so the columns match perfectly."
+    }
+   ],
+   "walkScript": "First find the cost of three pens. Three times £1.15 is £3.45 spent. Take that from £5 to leave £1.55. A trap stops at the total spent.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-NPV-01",
+   "stem": {
+    "text": "In the number 8,473, what is the value of the digit 4?"
+   },
+   "key": "400",
+   "options": [
+    {
+     "value": "400",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "473",
+     "isKey": false,
+     "tag": "maths-114-read-from-the-digit-to-the-end",
+     "tagChildHint": "Keep that digit in its column and change all the other digits to zeros. The digits after it are not part of its value."
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!"
+    },
+    {
+     "value": "4000",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    }
+   ],
+   "walkScript": "Find where the 4 sits. It stands in the hundreds column. So its value is four hundreds, which is 400. The trap reads a neighbouring column or its face value.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-NPV-02",
+   "stem": {
+    "text": "What number is 100 more than 5,960?"
+   },
+   "key": "6060",
+   "options": [
+    {
+     "value": "6060",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "5970",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "6960",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "5060",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    }
+   ],
+   "walkScript": "First find the hundreds column. Add one hundred to the nine hundreds. That makes ten hundreds, so carry into the thousands to reach 6,060. The trap adds into a neighbouring column or drops the carry.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-NPV-03",
+   "stem": {
+    "text": "What number is 1,000 more than 9,500?"
+   },
+   "key": "10500",
+   "options": [
+    {
+     "value": "10500",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9600",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "19500",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "500",
+     "isKey": false,
+     "tag": "maths-69-dropped-calculation-carry",
+     "tagChildHint": "Write your carried numbers clearly. Then add them to the next column."
+    }
+   ],
+   "walkScript": "Look at the thousands column first. Add one thousand to the nine thousands. Ten thousands form, so carry into the next column to reach 10,500. The trap adds into a neighbouring column or loses the carry.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-NPV-04",
+   "stem": {
+    "text": "Round 2,673 to the nearest 100."
+   },
+   "key": "2700",
+   "options": [
+    {
+     "value": "2700",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "2670",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    },
+    {
+     "value": "3000",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    },
+    {
+     "value": "2600",
+     "isKey": false,
+     "tag": "maths-09-rounding-misdirection",
+     "tagChildHint": "Look at the next digit along. If it is 5 or more, round up."
+    }
+   ],
+   "walkScript": "Rounding to the nearest hundred means checking the tens digit. Here it is seven, so round up. 2,673 becomes 2,700. The trap rounds to a different place or chops the end off.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-NPV-05",
+   "stem": {
+    "text": "In the number 7.482, what is the value of the digit 8?"
+   },
+   "key": "0.08",
+   "options": [
+    {
+     "value": "0.08",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "maths-62-reading-a-digit-at-face-value",
+     "tagChildHint": "Look at where the digit sits. Its position changes its actual value!"
+    },
+    {
+     "value": "0.8",
+     "isKey": false,
+     "tag": "maths-61-reading-the-wrong-place-value-column",
+     "tagChildHint": "Check the columns carefully. Name every column, counting out from the ones. Which column does that digit actually sit in?"
+    },
+    {
+     "value": "80",
+     "isKey": false,
+     "tag": "maths-07-decimals-as-two-separate-whole-numbers",
+     "tagChildHint": "The decimal point separates wholes from parts. Read each digit after the point in its own column, not as one whole number."
+    }
+   ],
+   "walkScript": "Find where the 8 sits. It stands in the hundredths column. So its value is eight hundredths, which is 0.08. The trap reads a neighbouring column or the plain digit.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-NPV-06",
+   "stem": {
+    "text": "The temperature is 6°C. It falls by 10°C. What is the new temperature?"
+   },
+   "key": "−4°C",
+   "options": [
+    {
+     "value": "−4°C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4°C",
+     "isKey": false,
+     "tag": "maths-66-negative-number-miscount",
+     "tagChildHint": "Count down past zero. The numbers keep going on the other side."
+    },
+    {
+     "value": "16°C",
+     "isKey": false,
+     "tag": "maths-72-wrong-operation-chosen",
+     "tagChildHint": "Before you work it out, decide what each step needs: add, take away, multiply or divide. Then check that your answer has grown or shrunk the way it should."
+    },
+    {
+     "value": "−10°C",
+     "isKey": false,
+     "tag": "maths-71-forgetting-part-of-a-multi-step-problem",
+     "tagChildHint": "List every number the question gives you. Check you have used each one."
+    }
+   ],
+   "walkScript": "Start at six and count downwards. Cross zero into the minus numbers. Ten steps down from six lands on minus four. The traps keep it positive, add instead of taking away, or forget to start from six.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-NPV-07",
+   "stem": {
+    "text": "Round 4,750 to the nearest 100."
+   },
+   "key": "4800",
+   "options": [
+    {
+     "value": "4800",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4700",
+     "isKey": false,
+     "tag": "maths-10-rounding-exact-halves",
+     "tagChildHint": "Exactly halfway always rounds up. If it ends in 5, go up to the next number."
+    },
+    {
+     "value": "4750",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    },
+    {
+     "value": "5000",
+     "isKey": false,
+     "tag": "maths-65-incorrect-rounding-place",
+     "tagChildHint": "Check which place the question asks for. Then look at the digit after it."
+    }
+   ],
+   "walkScript": "This number sits exactly halfway between two hundreds. The rule says round a halfway number up. So 4,750 becomes 4,800. The trap rounds the half down or picks another place.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-RP-01",
+   "stem": {
+    "text": "4 pens cost 60p. How much do 6 pens cost at the same price?"
+   },
+   "key": "£0.90",
+   "options": [
+    {
+     "value": "£0.90",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "£3.60",
+     "isKey": false,
+     "tag": "maths-92-unitary-proportion-slip",
+     "tagChildHint": "Find the cost of just one first. Then multiply that."
+    },
+    {
+     "value": "£1.20",
+     "isKey": false,
+     "tag": "maths-102-scaled-by-the-difference",
+     "tagChildHint": "Multiply by how many you need now. Not by how many more."
+    },
+    {
+     "value": "£0.60",
+     "isKey": false,
+     "tag": "maths-103-scaled-by-the-original-count",
+     "tagChildHint": "You found one share. Now count how many you need."
+    }
+   ],
+   "walkScript": "Find the cost of one pen first. Share 60p by 4 to get 15p each. Six pens are 15p times 6, which is 90p. One trap scales by the extra count.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-RP-02",
+   "stem": {
+    "text": "One shop sells 5 pens for 100p. Another shop sells 4 pens for 60p. How much cheaper is one pen at the second shop than at the first?"
+   },
+   "key": "5p",
+   "options": [
+    {
+     "value": "5p",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "40p",
+     "isKey": false,
+     "tag": "maths-93-comparing-prices-ignoring-quantity",
+     "tagChildHint": "The packs hold different amounts. Find the price of one first."
+    },
+    {
+     "value": "13p",
+     "isKey": false,
+     "tag": "maths-105-divided-by-the-other-quantity",
+     "tagChildHint": "Match each price to its own pack. Keep the pairs together."
+    },
+    {
+     "value": "15p",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    }
+   ],
+   "walkScript": "Put both shops into the same form: one pen. The first shop is 20p each, the second is 15p. Take 15 from 20 to save 5p. One trap compares the packs, not the pens.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-STATS-01",
+   "stem": {
+    "text": "A table shows badges won. Red team won 10, Blue team 9, Green team 14 and Yellow team 8. How many more did Green and Red win together than Blue and Yellow together?"
+   },
+   "key": "7",
+   "options": [
+    {
+     "value": "7",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "15",
+     "isKey": false,
+     "tag": "maths-94-incomplete-statistical-total",
+     "tagChildHint": "Double-check the chart. Have you added together every single row or bar you need?"
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-95-reading-the-wrong-statistical-quantity",
+     "tagChildHint": "Look at the axis labels. Are you counting the right things?"
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "maths-11-commutative-subtraction",
+     "tagChildHint": "Always take the bottom digit from the top. If the top is smaller, exchange."
+    }
+   ],
+   "walkScript": "Add each group before you compare. Green and Red make 24; Blue and Yellow make 17. Take 17 from 24 to leave 7. One trap leaves a team out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "MC05-STATS-02",
+   "stem": {
+    "text": "In five spelling tests, Omar scored 6, 9, 7, 10 and 8. What is his mean (average) score?"
+   },
+   "key": "8",
+   "options": [
+    {
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "40",
+     "isKey": false,
+     "tag": "maths-proc-01-stopped-at-the-first-answer",
+     "tagChildHint": "You found part of it. Now read the question again and finish."
+    },
+    {
+     "value": "10",
+     "isKey": false,
+     "tag": "maths-96-mean-calculation-slip",
+     "tagChildHint": "Count how many numbers you added. Divide by that."
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "maths-104-gave-a-different-average",
+     "tagChildHint": "Mean means add them up, then share. Check which one is asked."
+    }
+   ],
+   "walkScript": "The mean has two steps: total, then share. Add the five scores to make 40. Share 40 between the 5 tests. The mean is 8; one trap stops before sharing.",
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

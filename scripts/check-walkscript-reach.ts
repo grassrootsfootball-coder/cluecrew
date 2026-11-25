@@ -24,6 +24,8 @@ import { readdirSync, statSync, unlinkSync, writeFileSync } from 'node:fs';
 import { readFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { WALK_APPROVED_ITEM_IDS } from '../packages/core/src/index';
+import { walkApprovalOf } from '../packages/core/src/walk-approval';
+import { createHash } from 'node:crypto';
 import { importClosure } from './lib/import-closure';
 import { prisma } from '../packages/db/src/index';
 import { requirePopulation } from './lib/population';
@@ -272,9 +274,15 @@ async function main() {
     await prisma.$disconnect();
     process.exit(1);
   }
+  // The count is what the door would SERVE, computed by the door's own function (R41 — never a re-derivation),
+  // over LIVE rows. It used to print the declared list's length, which stopped being the served count when
+  // approvals moved onto the row (R1067) and went on reading "10" while over a thousand served (R591).
+  const live = carrying.filter((i) => i.status === 'LIVE' && typeof ((i.explanation ?? {}) as Record<string, unknown>).walkScript === 'string');
+  const serving = live.filter((i) => { const ex = (i.explanation ?? {}) as Record<string, unknown>;
+    return walkApprovalOf(i.id, ex, createHash('sha256').update(ex.walkScript as string, 'utf8').digest('hex')).serves; }).length;
   console.log(
-    `\nwalkScript IS now reachable, by ${Object.keys(DECLARED_APP_WALK_READERS).length} declared door, and that door checks the approval set before it reads. ` +
-      `${WALK_APPROVED_ITEM_IDS.length} script(s) are approved to serve. No undeclared app path reads the field; ` +
+    `\nwalkScript IS now reachable, by ${Object.keys(DECLARED_APP_WALK_READERS).length} declared door, and that door checks the approval before it reads. ` +
+      `${serving} of ${live.length} LIVE script(s) would serve (walkApprovalOf: row approval bound to the text, or the declared list of ${WALK_APPROVED_ITEM_IDS.length}). No undeclared app path reads the field; ` +
       'the shared-package readers all screen it rather than render it, and the control proves the scan can see the token where it IS rendered.',
   );
   await prisma.$disconnect();

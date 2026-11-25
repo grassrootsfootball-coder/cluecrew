@@ -4,7 +4,8 @@
  * Reads `content/agent-review/walk/<case>/{packet,drafts?,review}.json`. A row lands only if:
  *   · the reviewer APPROVED it (a `draft` verdict needs a draft; an `existing` verdict lands the stored text);
  *   · the database still holds what the reviewer read — stem, options and the stored script (R982);
- *   · the child-facing gate passes on the row AS IT WILL BE (`checkItemChildFacing`).
+ *   · the child-facing gate passes on the row AS IT WILL BE (`checkItemChildFacing`);
+ *   · on a reading-comprehension row, every quotation is on the screen and on the line it names (`checkWalkQuotes`).
  * It writes the script (if new) and the approval ON THE ROW — `walkScriptApprovedBy` (the machine
  * reviewer, never a person — R94), `walkScriptAuthority` (the review file and its digest) and
  * `walkScriptApprovedSha256` (the digest of the exact text read, so an edit withholds it again) — then
@@ -22,6 +23,7 @@ import { checkItemChildFacing, isBlocking } from '../../packages/core/src/index'
 import { canonicalOrderHash } from '../lib/pin-projection';
 import { loadClearances } from '../lib/clearances';
 import { exportContentSnapshot } from '../content-snapshot';
+import { checkWalkQuotes } from './walk-quote-check';
 
 const CASE = process.argv.find((a) => a.startsWith('--case='))?.slice(7);
 const APPLY = process.argv.includes('--apply');
@@ -31,6 +33,9 @@ const AGENT = 'rev-agent-01';
 const RECORDED_BY = 'human:david@eliteprojectgroup.co.uk';
 const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 const val = (c: unknown) => { const x = (c as { value?: unknown })?.value; return Array.isArray(x) ? x.join(', ') : String(x); };
+/** Reading-comprehension rows quote a passage: every quotation must be on the screen, on the line it names (walk-quote-check). */
+const quoteFaults = (qt: string | null, script: string, stem: unknown, options: Array<{ content: unknown }>) =>
+  qt?.startsWith('en-comp-') ? checkWalkQuotes(script, stem, options.map((o) => val(o.content))).faults.map((q) => `quote: '${q.quote}' ${q.why}`) : [];
 
 type PRow = { itemId: string; stem: unknown; options: Array<{ value: string; isKey: boolean }>; walkScript: string | null };
 
@@ -43,11 +48,12 @@ async function main() {
   if (PRECHECK) {
     const clear0 = loadClearances(); let bad = 0;
     for (const [itemId, script] of drafts) {
-      const r = await prisma.item.findUnique({ where: { id: itemId }, select: { stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true }, orderBy: { id: 'asc' } } } });
+      const r = await prisma.item.findUnique({ where: { id: itemId }, select: { questionTypeId: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true }, orderBy: { id: 'asc' } } } });
       if (!r) { console.log(`  ✗ ${itemId}: no such row`); bad++; continue; }
       const next = { ...(r.explanation as object), walkScript: script, walkScriptApprovedBy: `reviewer:${AGENT}`, walkScriptAuthority: 'precheck', walkScriptApprovedSha256: sha(script) };
-      const f = checkItemChildFacing({ id: itemId, stem: r.stem, explanation: next, options: r.options, clearedAppropriatenessTokens: clear0.get(itemId) } as never).filter(isBlocking);
-      if (f.length) { bad++; console.log(`  ✗ ${itemId}: ${f.map((x) => `${x.rule}: ${String(x.detail).slice(0, 160)}`).join(' | ')}`); }
+      const f = [...checkItemChildFacing({ id: itemId, stem: r.stem, explanation: next, options: r.options, clearedAppropriatenessTokens: clear0.get(itemId) } as never).filter(isBlocking).map((x) => `${x.rule}: ${String(x.detail).slice(0, 160)}`),
+        ...quoteFaults(r.questionTypeId, script, r.stem, r.options)];
+      if (f.length) { bad++; console.log(`  ✗ ${itemId}: ${f.join(' | ')}`); }
     }
     console.log(`${CASE} — PRECHECK: ${drafts.size} draft(s), ${drafts.size - bad} pass the gate, ${bad} fail`);
     return;
@@ -65,7 +71,7 @@ async function main() {
     if (!p) { held.push({ itemId: v.itemId, why: 'not in the packet' }); continue; }
     const script = v.source === 'draft' ? drafts.get(v.itemId) : p.walkScript;
     if (!script) { held.push({ itemId: v.itemId, why: `approved as ${v.source} but no ${v.source} script exists` }); continue; }
-    const r = await prisma.item.findUnique({ where: { id: v.itemId }, select: { status: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true }, orderBy: { id: 'asc' } } } });
+    const r = await prisma.item.findUnique({ where: { id: v.itemId }, select: { status: true, questionTypeId: true, stem: true, explanation: true, options: { select: { content: true, isCorrect: true, misconceptionId: true }, orderBy: { id: 'asc' } } } });
     const ex = (r?.explanation ?? {}) as Record<string, unknown>;
     const stored = typeof ex.walkScript === 'string' ? ex.walkScript : null;
     const same = !!r && r.status === 'LIVE' && JSON.stringify(r.stem) === JSON.stringify(p.stem) && stored === p.walkScript
@@ -74,8 +80,9 @@ async function main() {
     if (ex.walkScriptApprovedSha256 === sha(script) && ex.walkScriptApprovedBy) { held.push({ itemId: v.itemId, why: 'already approved for this exact text' }); continue; }
     const next = { ...ex, walkScript: script, walkScriptApprovedBy: `reviewer:${AGENT}`, walkScriptAuthority: authority, walkScriptApprovedSha256: sha(script),
       walkScriptStatus: 'APPROVED — agent review (R1067)' };
-    const faults = checkItemChildFacing({ id: v.itemId, stem: r!.stem, explanation: next, options: r!.options, clearedAppropriatenessTokens: clear.get(v.itemId) } as never).filter(isBlocking);
-    if (faults.length) { held.push({ itemId: v.itemId, why: `gate: ${faults.map((f) => `${f.rule}: ${String(f.detail).slice(0, 120)}`).join(' | ')}` }); continue; }
+    const faults = [...checkItemChildFacing({ id: v.itemId, stem: r!.stem, explanation: next, options: r!.options, clearedAppropriatenessTokens: clear.get(v.itemId) } as never).filter(isBlocking).map((f) => `${f.rule}: ${String(f.detail).slice(0, 120)}`),
+      ...quoteFaults(r!.questionTypeId, script, r!.stem, r!.options)];
+    if (faults.length) { held.push({ itemId: v.itemId, why: `gate: ${faults.join(' | ')}` }); continue; }
     landed.push(v.itemId);
     if (!APPLY) continue;
     await prisma.$transaction(async (tx) => {

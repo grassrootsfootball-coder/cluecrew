@@ -1,0 +1,106 @@
+{
+ "case": "case-maths-01-p1",
+ "round": 2,
+ "rows": [
+  {
+   "itemId": "MC01-CALC-08",
+   "currentScript": "Take the filled seats from the total seats. Line up the columns and borrow carefully across the zeros. 8006 minus 3478 is 4528. The classic slip takes each smaller digit from the larger, or adds instead.",
+   "whyRewrite": "Two faults. The method is never worked on these numbers: it says 'borrow carefully across the zeros' then announces '8006 minus 3478 is 4528' with no column shown. And 'The classic slip takes each smaller digit from the larger, or adds instead' describes no option on screen: those slips give 5472 and 11484, while the real distractors are 4522, 4500 and 4008."
+  },
+  {
+   "itemId": "MC01-GEOM-01",
+   "currentScript": "Perimeter is the distance all the way round. A rectangle has two long sides and two short sides. Add one long and one short, then double it. That gives 22 cm. The trap answer swaps perimeter for area.",
+   "whyRewrite": "Doesn't use this question's numbers: 'Add one long and one short, then double it. That gives 22 cm.' never shows 8 + 3 = 11 and 11 doubled = 22. The maths addendum asks for the method on this question's numbers."
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "currentScript": "Change means the totals must line up. Put £5 as £5.00. Take the £3.50 away, pounds and pence together. That leaves £1.50.",
+   "whyRewrite": "Opening claim is false and confusing: 'Change means the totals must line up.' This question has no totals. What lines up is the pounds and pence (£5.00 over £3.50). The working that follows is correct (£5.00 - £3.50 = £1.50)."
+  },
+  {
+   "itemId": "MC02-CALC-02",
+   "currentScript": "Line up the tens and ones under each other. In the ones, borrow because 2 is under 7. Work each column to reach 435. A common slip takes the smaller digit from the larger.",
+   "whyRewrite": "False position claim: 'In the ones, borrow because 2 is under 7.' In 582 - 147 the 2 sits ON TOP of the 7. Also 'Line up the tens and ones' ignores the hundreds, and the tens and hundreds columns are never worked ('Work each column to reach 435'). 582 - 147 = 435 is correct."
+  },
+  {
+   "itemId": "MC02-CALC-05",
+   "currentScript": "Share 4,872 into four equal groups, column by column. Carry each leftover to the next digit along. The answer is 1,218. A slip drops the leftovers or loses a whole digit.",
+   "whyRewrite": "No working on the numbers: 'Carry each leftover to the next digit along. The answer is 1,218.' never shows a step (4÷4=1, 8÷4=2, 7÷4=1 r3, 32÷4=8). The answer 1218 is correct."
+  },
+  {
+   "itemId": "MC02-CALC-06",
+   "currentScript": "Set the numbers in columns and add from the right. Carry a ten whenever a column passes nine. The total is 6,131. Watch for a dropped carry or a missing digit.",
+   "whyRewrite": "No working on the numbers: 'Carry a ten whenever a column passes nine. The total is 6,131.' never shows a column (8+3=11, carry 1; 5+7+1=13, carry 1; 4+6+1=11, carry 1; 3+2+1=6). The answer 6131 is correct."
+  },
+  {
+   "itemId": "MC02-CALC-08",
+   "currentScript": "Work out the total eggs first: twelve thirties make 360. Take off the 48 that break, leaving 312. Share 312 into boxes of six to get 52. A slip forgets a step or rounds the total.",
+   "whyRewrite": "Describes a trap no option shows: 'A slip forgets a step or rounds the total.' Rounding the total gives none of 60, 68 or 312. 68 is (360+48)÷6, a wrong-operation slip the script leaves out. The working 12×30=360, 360-48=312, 312÷6=52 is correct."
+  },
+  {
+   "itemId": "MC02-FDP-01",
+   "currentScript": "Common form first: give both the same bottom number. Then 2/5 is bigger than 2/9. One trap thinks a bigger bottom means a bigger fraction. Another claims different bottoms cannot be compared.",
+   "whyRewrite": "Says 'give both the same bottom number' but never does it: 'Then 2/5 is bigger than 2/9' just announces the answer. Needs, for example, 2/5 = 18/45 and 2/9 = 10/45. The key 2/5 is correct."
+  },
+  {
+   "itemId": "MC02-FDP-03",
+   "currentScript": "Percentages first become parts. One fifth of 60 is 12, so two fifths is 24. One trap finds only 10% and stops. Another takes 40 away from 60.",
+   "whyRewrite": "Missing the key link: 'Percentages first become parts. One fifth of 60 is 12, so two fifths is 24.' It never says that 40% is two fifths, so the jump to fifths is unexplained. The arithmetic (60÷5=12, ×2=24) and both traps (10% gives 6; 60-40 gives 20) are correct."
+  },
+  {
+   "itemId": "MC02-FDP-06",
+   "currentScript": "Name the bottoms first, then make them match. 4/5 is bigger than 4/7. One trap thinks a bigger bottom wins. Another claims different bottoms cannot be compared.",
+   "whyRewrite": "Says 'make them match' but never does it: '4/5 is bigger than 4/7' just announces the answer. Needs, for example, 4/5 = 28/35 and 4/7 = 20/35. The key 4/5 is correct."
+  },
+  {
+   "itemId": "MC02-GEOM-01",
+   "currentScript": "Perimeter means the distance all the way round. A rectangle has two long sides and two short sides. Add one long and one short, then double: 28 cm. One trap gives the area, another leaves a side out.",
+   "whyRewrite": "Doesn't use this question's numbers: 'Add one long and one short, then double: 28 cm.' never shows 9 + 5 = 14 and 14 doubled = 28. The traps (area 45; a side left out, 23 or 14) are correctly described."
+  },
+  {
+   "itemId": "MC02-MEAS-05",
+   "currentScript": "Count on in whole hours and minutes. From 7:50 to 9:20 is 1 hour 30 minutes. One trap treats an hour as 100 minutes. Another rounds the start time and forgets to adjust.",
+   "whyRewrite": "Says 'Count on' but never counts on: 'From 7:50 to 9:20 is 1 hour 30 minutes' just announces the answer. Needs, for example, 7:50 to 8:50 is 1 hour, then 8:50 to 9:20 is 30 minutes. The key and both traps (base-100 gives 1 h 70 min; rounding 7:50 to 8:00 gives 1 h 20 min) are correct."
+  },
+  {
+   "itemId": "MC02-MEAS-07",
+   "currentScript": "Add every item first, then find the change. The shopping costs £4.90, leaving £5.10. One trap leaves an item out. Another stops at the total spent.",
+   "whyRewrite": "Describes a trap no option shows: 'One trap leaves an item out.' Leaving out the juice gives £7.40, leaving out the apples gives £7.70, and counting one apple gives £7.05. None of these is on screen (the options are £4.90, £7.10, £5.75). The working 4×65p=£2.60, +£2.30=£4.90, £10-£4.90=£5.10 is correct but not shown step by step."
+  },
+  {
+   "itemId": "MC02-NPV-07",
+   "currentScript": "Give every decimal the same number of places first. Then 0.60 beats 0.55, 0.40 and 0.049. So 0.6 is the largest. The trap counts the digits after the point as whole numbers.",
+   "whyRewrite": "Doesn't follow its own method: 'Give every decimal the same number of places first. Then 0.60 beats 0.55, 0.40 and 0.049.' 0.049 has three places, so the padded forms should be 0.600, 0.550, 0.400 and 0.049. The key 0.6 is correct."
+  },
+  {
+   "itemId": "MC02-RP-01",
+   "currentScript": "Buy the relationship first: the pasta for one person. Share 240 g by 3 to get 80 g each. Five people need 80 g times 5, which is 400 g. A trap adds the extra people or scales by adding.",
+   "whyRewrite": "First sentence makes no sense: 'Buy the relationship first: the pasta for one person.' ('Buy' should be something like 'Find'). The working 240÷3=80, 80×5=400 is correct."
+  },
+  {
+   "itemId": "MC03-CALC-01",
+   "currentScript": "Line up the columns and add from the right. Six plus seven makes 13, so carry the ten. Keep going carefully to reach 643. The trap rounds too soon or loses a digit.",
+   "whyRewrite": "Describes a trap no option shows: 'The trap rounds too soon or loses a digit.' Rounding gives none of 543, 69 or 443. 543 is a dropped carry and 69 is 356-287, a wrong operation. 356+287=643 is correct."
+  },
+  {
+   "itemId": "MC03-CALC-02",
+   "currentScript": "Set the tens and ones under each other. Borrow a ten when the top digit is smaller. Work through to get 307. The classic slip takes each smaller digit from the larger.",
+   "whyRewrite": "No working on the numbers: 'Borrow a ten when the top digit is smaller. Work through to get 307.' never shows a column (13-6=7; 7-7=0; 4-1=3). Also 'Set the tens and ones under each other' leaves out the hundreds. The key 307 and the 313 trap are correct."
+  },
+  {
+   "itemId": "MC03-CALC-08",
+   "currentScript": "Find the total money taken before anything else. 320 tickets at £15 make £4,800. Take the £1,200 of costs to leave £3,600. The trap adds the costs or loses a digit.",
+   "whyRewrite": "Describes a trap wrongly: 'The trap adds the costs or loses a digit.' Adding the costs gives £6,000, which is not an option. £4,800 forgets to take the costs off at all. 320×15=4800 and 4800-1200=3600 are correct."
+  },
+  {
+   "itemId": "MC03-FDP-03",
+   "currentScript": "25% means one quarter. Find a quarter of 44 by sharing into four. That gives £11. The catch takes 25 off, halves instead, or rounds the amount first.",
+   "whyRewrite": "Describes a trap no option shows: 'or rounds the amount first.' No option comes from rounding 44. £1,100 comes from never dividing by 100, which the script leaves out. 44÷4=11 is correct."
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "currentScript": "Change means the totals must line up. Write £8 as £8.00, then take £5.60 away. That leaves £2.40. One trap drops the pence.",
+   "whyRewrite": "Opening claim is false and confusing: 'Change means the totals must line up.' This question has no totals. What lines up is the pounds and pence (£8.00 over £5.60). £8.00 - £5.60 = £2.40 is correct."
+  }
+ ]
+}

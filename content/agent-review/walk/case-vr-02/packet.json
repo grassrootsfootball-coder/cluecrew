@@ -3,26 +3,7 @@
  "title": "Two Don't Belong",
  "questionType": "vr-02-two-odd-ones-out",
  "free": false,
- "houseFormExemplars": [
-  {
-   "itemId": "gen-vr-10-word-connections-08",
-   "stem": {
-    "pairA": [
-     "king",
-     "crown"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "knight"
-   },
-   "key": "helmet",
-   "options": [
-    "helmet",
-    "castle",
-    "sword"
-   ],
-   "walkScript": "Start with king and crown. A king wears a crown on his head. In the same way, a knight wears a helmet. Castle and sword go with knights, not head."
-  }
- ],
+ "houseFormExemplars": [],
  "rows": [
   {
    "itemId": "bank-vr-02-two-odd-ones-out-01",
@@ -911,35 +892,35 @@
    "stem": {
     "words": [
      "hen",
-     "cat",
+     "cow",
      "snake",
-     "dog",
+     "lion",
      "frog"
     ],
     "prompt": "Three of these words go together. Which two are the odd ones out?"
    },
-   "key": "cat, dog",
+   "key": "[\"cow\", \"lion\"]",
    "options": [
     {
-     "value": "cat, dog",
+     "value": "[\"cow\", \"lion\"]",
      "isKey": true,
      "tag": null,
      "tagChildHint": null
     },
     {
-     "value": "cat, hen",
+     "value": "[\"cow\", \"frog\"]",
      "isKey": false,
      "tag": "vr02-partial-group",
      "tagChildHint": "Name the group first. Both odd ones sit outside it."
     },
     {
-     "value": "dog, snake",
+     "value": "[\"hen\", \"lion\"]",
      "isKey": false,
      "tag": "vr02-partial-group",
      "tagChildHint": "Name the group first. Both odd ones sit outside it."
     },
     {
-     "value": "snake, frog",
+     "value": "[\"hen\", \"frog\"]",
      "isKey": false,
      "tag": "vr02-answered-the-opposite",
      "tagChildHint": "Those two do belong together. The question asks for the two that do not."
@@ -987,8 +968,8 @@
      "tagChildHint": "Those two do belong together. The question asks for the two that do not."
     }
    ],
-   "walkScript": null,
-   "walkScriptApprovedBy": null
+   "walkScript": "Look at soft, rough and smooth. All three describe texture, like how rough or smooth a surface is. The two left over are hot and cold, which tell how warm something is. Every other choice includes soft, rough or smooth.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "bank-vr-02-two-odd-ones-out-24",
@@ -996,34 +977,34 @@
     "words": [
      "jump",
      "ball",
-     "kick",
+     "swim",
      "net",
      "run"
     ],
     "prompt": "Three of these words go together. Which two are the odd ones out?"
    },
-   "key": "ball, net",
+   "key": "[\"ball\", \"net\"]",
    "options": [
     {
-     "value": "ball, net",
+     "value": "[\"ball\", \"net\"]",
      "isKey": true,
      "tag": null,
      "tagChildHint": null
     },
     {
-     "value": "ball, jump",
+     "value": "[\"ball\", \"jump\"]",
      "isKey": false,
      "tag": "vr02-partial-group",
      "tagChildHint": "Name the group first. Both odd ones sit outside it."
     },
     {
-     "value": "net, kick",
+     "value": "[\"swim\", \"net\"]",
      "isKey": false,
      "tag": "vr02-partial-group",
      "tagChildHint": "Name the group first. Both odd ones sit outside it."
     },
     {
-     "value": "jump, run",
+     "value": "[\"jump\", \"run\"]",
      "isKey": false,
      "tag": "vr02-answered-the-opposite",
      "tagChildHint": "Those two do belong together. The question asks for the two that do not."

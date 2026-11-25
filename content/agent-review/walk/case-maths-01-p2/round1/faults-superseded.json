@@ -1,0 +1,13 @@
+{
+ "case": "case-maths-01-p2",
+ "faults": [
+  {
+   "itemId": "MC04-GEOM-03",
+   "reviewerReason": "Working right (65 + 48 = 113, 180 - 113 = 67) but house notation requires degrees with ° and the script writes '180 degrees' and '67 degrees'. The question's own options also write 'degrees' in words, so the options need the ° form too (question notation fault)."
+  },
+  {
+   "itemId": "MC04-GEOM-06",
+   "reviewerReason": "Working right (180 - 50 = 130, 130 / 2 = 65) but house notation requires degrees with ° and the script writes '180 degrees', '50 degree' and '65 degrees'. The stem and options also write 'degrees' in words (question notation fault)."
+  }
+ ]
+}

@@ -1,0 +1,1331 @@
+{
+ "caseId": "case-en-06",
+ "part": "case-en-06",
+ "title": "The Ashline Detective Register",
+ "questionType": "en-spag-cloze",
+ "free": false,
+ "houseFormExemplars": [],
+ "passages": {
+  "cloze-eng003-a-eco-club": {
+   "sceneTitle": "The corridor bins",
+   "preamble": "school eco-club, Year 5",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "Maya had never volunteered for anything before, so nobody expected her to run the eco-club.",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "The idea arrived on a wet Tuesday. She walked past the bins behind the kitchen and noticed that somebody ___(1)___ the paper recycling straight into the general waste. By lunchtime she had spent ___(2)___ hour drawing a plan on the back of her maths book.",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "“You cannot fix the whole school,” said Dev, “___(3)___ the bins have been like that since Year 3.”",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "“I am not fixing the whole school,” Maya ___(4)___. “I am fixing one corridor.”",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "She began with a count. Every lunchtime she stood beside the blue bin and wrote down what people threw away. Crisp packets. A shoe. Two library books, which she returned ___(5)___ the shelf.",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "On Friday she showed her list to Mr Achebe. He read it twice and stopped smiling.",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "“Those are library books. ___(6)___ not rubbish,” he said quietly.",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "“If we painted a picture on every lid,” Maya said, “people ___(7)___ exactly where things go.”",
+     "label": ""
+    },
+    {
+     "n": 9,
+     "text": "Mr Achebe leaned back in his chair. “They might,” he agreed. “Shall we find out?”",
+     "label": ""
+    },
+    {
+     "n": 10,
+     "text": "Three weeks later the row of new labels ___(8)___ brighter than anything else in the corridor. Dev had joined the club, although he still refused to give up his apples.",
+     "label": "10"
+    }
+   ]
+  },
+  "cloze-eng003-b-sports-day": {
+   "sceneTitle": "The last leg",
+   "preamble": "school sports day, Year 5",
+   "numberedLines": [
+    {
+     "n": 1,
+     "text": "Sports day almost did not happen. The field had flooded on Thursday, ___(1)___ the caretaker spent Friday morning sweeping water off the running track.",
+     "label": ""
+    },
+    {
+     "n": 2,
+     "text": "Ade was the ___(2)___ runner in Year 5, and everybody knew it. What nobody knew was that he had been dreading the relay all week.",
+     "label": ""
+    },
+    {
+     "n": 3,
+     "text": "“You are on the last leg, ___(3)___?” said Priya, tying her laces.",
+     "label": ""
+    },
+    {
+     "n": 4,
+     "text": "“Someone has to be,” Ade said.",
+     "label": ""
+    },
+    {
+     "n": 5,
+     "text": "Priya was the girl ___(4)___ never worried about anything. She had already won the long jump, even though she had landed badly and grazed her knee.",
+     "label": "5"
+    },
+    {
+     "n": 6,
+     "text": "The ___(5)___ crowd made it hard to hear the whistle. Ade took the baton, felt it slip, caught it again and ran. By the final bend he ___(6)___ the boy in the yellow bib.",
+     "label": ""
+    },
+    {
+     "n": 7,
+     "text": "“___(7)___ going to do it!” shouted Priya.",
+     "label": ""
+    },
+    {
+     "n": 8,
+     "text": "He did not do it. He came second by half a step, and Mrs Lawson wrote his time on a board beside the finish line. Ade looked at ___(8)___ board for a long time. It was not the win he had wanted, but it was still the best race he had ever run.",
+     "label": ""
+    }
+   ]
+  }
+ },
+ "rows": [
+  {
+   "itemId": "ENG-003-A-CZ-A1",
+   "stem": {
+    "text": "Choose the words that fit best.  — She walked past the bins behind the kitchen and noticed that somebody ___ the paper recycling straight into the general waste.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "She walked past the bins behind the kitchen and noticed that somebody ___ the paper recycling straight into the general waste.",
+      "gapIndex": 1,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-a-eco-club"
+     }
+    ],
+    "gapIndex": 1,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "had tipped",
+   "options": [
+    {
+     "value": "tipped",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    },
+    {
+     "value": "had tipped",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "has tipped",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    },
+    {
+     "value": "tips",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    }
+   ],
+   "walkScript": "Look at the verb before the gap: “noticed”. Of two past acts, the earlier takes “had”. The tipping came first, so “had tipped” fits. The other choices shift the time.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-A2",
+   "stem": {
+    "text": "Choose the words that fit best.  — By lunchtime she had spent ___ hour drawing a plan on the back of her maths book.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "By lunchtime she had spent ___ hour drawing a plan on the back of her maths book.",
+      "gapIndex": 2,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-a-eco-club"
+     }
+    ],
+    "gapIndex": 2,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "an",
+   "options": [
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "en-a-an-by-spelling",
+     "tagChildHint": "Listen to the sound that starts the next word."
+    },
+    {
+     "value": "an",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "no word is needed",
+     "isKey": false,
+     "tag": "en-article-definiteness",
+     "tagChildHint": "Has the text named it already? That changes which little word fits."
+    },
+    {
+     "value": "the",
+     "isKey": false,
+     "tag": "en-article-avoids-the-sound-choice",
+     "tagChildHint": "This gap wants a or an. Hear the next word in your head. Which sound starts it?"
+    }
+   ],
+   "walkScript": "Turn to “hour”, after the gap. Its h is silent, so a vowel sound comes first. That sound takes “an”, so “an hour” fits. The others leave “a hour” or “spent hour”.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-A3",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “You cannot fix the whole school,” said Dev, “___ the bins have been like that since Year 3.”",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "“You cannot fix the whole school,” said Dev, “___ the bins have been like that since Year 3.”",
+      "gapIndex": 3,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-a-eco-club"
+     }
+    ],
+    "gapIndex": 3,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "because",
+   "options": [
+    {
+     "value": "because",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "although",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "tagChildHint": "Is the second idea a reason, a surprise, or just what happened next?"
+    },
+    {
+     "value": "unless",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "tagChildHint": "Is the second idea a reason, a surprise, or just what happened next?"
+    },
+    {
+     "value": "whereas",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "tagChildHint": "Is the second idea a reason, a surprise, or just what happened next?"
+    }
+   ],
+   "walkScript": "The half after the gap holds Dev’s reason. It explains “You cannot fix the whole school”. A reason word joins them, so “because” fits. The others clash the halves, or add a condition.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-A4",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “I am not fixing the whole school,” Maya ___. “I am fixing one corridor.” Dev shrugged.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "“I am not fixing the whole school,” Maya ___. “I am fixing one corridor.” Dev shrugged.",
+      "gapIndex": 4,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-a-eco-club"
+     }
+    ],
+    "gapIndex": 4,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "replied",
+   "options": [
+    {
+     "value": "replies",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    },
+    {
+     "value": "replied",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "has replied",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    },
+    {
+     "value": "is replying",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    }
+   ],
+   "walkScript": "Go straight to “said Dev”, above the gap. That is simple past, like “walked” and “stood”. The gap keeps step, so “replied” fits. The others move the talk into today.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-A5",
+   "stem": {
+    "text": "Choose the words that fit best.  — Crisp packets. A shoe. Two library books, which she returned ___ the shelf.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "Crisp packets. A shoe. Two library books, which she returned ___ the shelf.",
+      "gapIndex": 5,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-a-eco-club"
+     }
+    ],
+    "gapIndex": 5,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "to",
+   "options": [
+    {
+     "value": "at",
+     "isKey": false,
+     "tag": "en-preposition-collocation",
+     "tagChildHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
+    },
+    {
+     "value": "on",
+     "isKey": false,
+     "tag": "en-preposition-collocation",
+     "tagChildHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
+    },
+    {
+     "value": "to",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "for",
+     "isKey": false,
+     "tag": "en-preposition-collocation",
+     "tagChildHint": "Say the whole phrase in your head. Which little word does this verb usually take?"
+    }
+   ],
+   "walkScript": "Look at the verb before the gap: “returned”. Some verbs keep one small word beside them: “return” keeps “to”. So “returned to the shelf” fits. The others belong beside other verbs.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-A6",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “Those are library books. ___ not rubbish,” he said quietly.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "“Those are library books. ___ not rubbish,” he said quietly.",
+      "gapIndex": 6,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-a-eco-club"
+     }
+    ],
+    "gapIndex": 6,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "They’re",
+   "options": [
+    {
+     "value": "There",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    },
+    {
+     "value": "Their",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    },
+    {
+     "value": "They’re",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Theirs",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    }
+   ],
+   "walkScript": "Start at “not rubbish”, just after the gap. Only one choice stretches into “they are”. They are not rubbish, so “They’re” fits. “Their” and “theirs” show owning, “there” points at a place.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-A7",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “If we painted a picture on every lid,” Maya said, “people ___ exactly where things go.”",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "“If we painted a picture on every lid,” Maya said, “people ___ exactly where things go.”",
+      "gapIndex": 7,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-a-eco-club"
+     }
+    ],
+    "gapIndex": 7,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "would know",
+   "options": [
+    {
+     "value": "will know",
+     "isKey": false,
+     "tag": "en-modal-conditional-form",
+     "tagChildHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past."
+    },
+    {
+     "value": "would know",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "would have known",
+     "isKey": false,
+     "tag": "en-modal-conditional-form",
+     "tagChildHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past."
+    },
+    {
+     "value": "would be knowing",
+     "isKey": false,
+     "tag": "en-modal-conditional-form",
+     "tagChildHint": "An imagined if takes 'would'. A real if takes 'will'. In an imagined if, a past word like 'painted' without 'had' means now or later. 'Would have' is for imagining the past."
+    }
+   ],
+   "walkScript": "Turn to the half before the gap. “If we painted” shows no lid is painted. An if like that takes “would”, so “would know” fits. The others make it real, or look back.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-A8",
+   "stem": {
+    "text": "Choose the words that fit best.  — Three weeks later the row of new labels ___ brighter than anything else in the corridor. Dev had joined the club, although he still refused to give up his apples.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "Three weeks later the row of new labels ___ brighter than anything else in the corridor. Dev had joined the club, although he still refused to give up his apples.",
+      "gapIndex": 8,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-a-eco-club"
+     }
+    ],
+    "gapIndex": 8,
+    "passageRef": "cloze-eng003-a-eco-club"
+   },
+   "key": "was",
+   "options": [
+    {
+     "value": "were",
+     "isKey": false,
+     "tag": "en-subject-verb-agreement-by-proximity",
+     "tagChildHint": "Ignore the of-part. Match the verb to what is left."
+    },
+    {
+     "value": "was",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "are",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    },
+    {
+     "value": "is",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    }
+   ],
+   "walkScript": "Look at “the row of new labels”, before the gap. One row is brighter, and the story is past. The past form for one thing is “was”. The others follow “labels”, or drop the past.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B1",
+   "stem": {
+    "text": "Choose the words that fit best.  — The field had flooded on Thursday, ___ the caretaker spent Friday morning sweeping water off the running track.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "The field had flooded on Thursday, ___ the caretaker spent Friday morning sweeping water off the running track.",
+      "gapIndex": 1,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-b-sports-day"
+     }
+    ],
+    "gapIndex": 1,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "so",
+   "options": [
+    {
+     "value": "so",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "but",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "tagChildHint": "Is the second idea a reason, a surprise, or just what happened next?"
+    },
+    {
+     "value": "although",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "tagChildHint": "Is the second idea a reason, a surprise, or just what happened next?"
+    },
+    {
+     "value": "unless",
+     "isKey": false,
+     "tag": "en-conjunction-logic",
+     "tagChildHint": "Is the second idea a reason, a surprise, or just what happened next?"
+    }
+   ],
+   "walkScript": "Look either side of the gap. The flood came first, and the sweeping followed. A result word links them, so “so” fits. The others make it a surprise, or a condition.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B2",
+   "stem": {
+    "text": "Choose the words that fit best.  — Ade was the ___ runner in Year 5, and everybody knew it.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "Ade was the ___ runner in Year 5, and everybody knew it.",
+      "gapIndex": 2,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-b-sports-day"
+     }
+    ],
+    "gapIndex": 2,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "fastest",
+   "options": [
+    {
+     "value": "fast",
+     "isKey": false,
+     "tag": "en-comparative-superlative-form",
+     "tagChildHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job."
+    },
+    {
+     "value": "faster",
+     "isKey": false,
+     "tag": "en-comparative-superlative-form",
+     "tagChildHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job."
+    },
+    {
+     "value": "fastest",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "most fastest",
+     "isKey": false,
+     "tag": "en-comparative-superlative-form",
+     "tagChildHint": "Comparing two, or more than two? Then check the ending and the word before it are not both doing the job."
+    }
+   ],
+   "walkScript": "“Runner in Year 5” follows the gap. Year 5 is more than two people. The top of a big group takes -est, so “fastest” fits. The others mark the top twice, or not at all.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B3",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “You are on the last leg, ___?” said Priya, tying her laces.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "“You are on the last leg, ___?” said Priya, tying her laces.",
+      "gapIndex": 3,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-b-sports-day"
+     }
+    ],
+    "gapIndex": 3,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "aren’t you",
+   "options": [
+    {
+     "value": "are you",
+     "isKey": false,
+     "tag": "en-question-tag-polarity",
+     "tagChildHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did."
+    },
+    {
+     "value": "aren’t you",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "isn’t it",
+     "isKey": false,
+     "tag": "en-question-tag-polarity",
+     "tagChildHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did."
+    },
+    {
+     "value": "don’t you",
+     "isKey": false,
+     "tag": "en-question-tag-polarity",
+     "tagChildHint": "A tag flips the sentence. A positive sentence takes a negative tag. If there is no helper verb, use do, does or did."
+    }
+   ],
+   "walkScript": "Start at “You are on the last leg”. A check-question flips that, keeping the same helper and person. That gives “aren’t you”. The others echo the line, or change person or helper.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B4",
+   "stem": {
+    "text": "Choose the words that fit best.  — Priya was the girl ___ never worried about anything.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "Priya was the girl ___ never worried about anything.",
+      "gapIndex": 4,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-b-sports-day"
+     }
+    ],
+    "gapIndex": 4,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "who",
+   "options": [
+    {
+     "value": "which",
+     "isKey": false,
+     "tag": "en-relative-pronoun-choice",
+     "tagChildHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone."
+    },
+    {
+     "value": "whose",
+     "isKey": false,
+     "tag": "en-relative-pronoun-choice",
+     "tagChildHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone."
+    },
+    {
+     "value": "who",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "whom",
+     "isKey": false,
+     "tag": "en-relative-pronoun-choice",
+     "tagChildHint": "Ask what the joining word stands for — a person, a thing, or something belonging to someone."
+    }
+   ],
+   "walkScript": "Read either side of the gap. The joining word stands for “the girl”, who does the worrying. A person doing the action takes “who”. The line offers no thing, nothing owned, nothing done to her.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B5",
+   "stem": {
+    "text": "Choose the words that fit best.  — The ___ crowd made it hard to hear the whistle.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "The ___ crowd made it hard to hear the whistle.",
+      "gapIndex": 5,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-b-sports-day"
+     }
+    ],
+    "gapIndex": 5,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "cheering",
+   "options": [
+    {
+     "value": "cheer",
+     "isKey": false,
+     "tag": "en-word-class-by-ending",
+     "tagChildHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+    },
+    {
+     "value": "cheered",
+     "isKey": false,
+     "tag": "en-word-class-by-ending",
+     "tagChildHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+    },
+    {
+     "value": "cheering",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "cheers",
+     "isKey": false,
+     "tag": "en-word-class-by-ending",
+     "tagChildHint": "Ask what job the word does in this sentence. Is it describing, or is it the action? If it describes, is the thing doing the action or having it done to it?"
+    }
+   ],
+   "walkScript": "Look after the gap, at “crowd”. The gap tells us what the crowd was like. The -ing form does that job: the cheering crowd. The others have the crowd doing, or being cheered.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B6",
+   "stem": {
+    "text": "Choose the words that fit best.  — Ade took the baton, felt it slip, caught it again and ran. By the final bend he ___ the boy in the yellow bib.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "Ade took the baton, felt it slip, caught it again and ran. By the final bend he ___ the boy in the yellow bib.",
+      "gapIndex": 6,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-b-sports-day"
+     }
+    ],
+    "gapIndex": 6,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "had almost caught",
+   "options": [
+    {
+     "value": "almost catches",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    },
+    {
+     "value": "has almost caught",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    },
+    {
+     "value": "had almost caught",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "was almost catching",
+     "isKey": false,
+     "tag": "en-tense-sequence",
+     "tagChildHint": "Did it happen before the story-moment? Then you usually need 'had' and the verb. If not, keep to the same tense as the story around it."
+    }
+   ],
+   "walkScript": "Go straight to “By the final bend”. That sets a point in the past. Looking back from there takes “had”, so “had almost caught” fits. The others land in today, or stay open.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B7",
+   "stem": {
+    "text": "Choose the words that fit best.  —  “___ going to do it!” shouted Priya.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "“___ going to do it!” shouted Priya.",
+      "gapIndex": 7,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-b-sports-day"
+     }
+    ],
+    "gapIndex": 7,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "You’re",
+   "options": [
+    {
+     "value": "Your",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    },
+    {
+     "value": "You’re",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Yours",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    },
+    {
+     "value": "Youre",
+     "isKey": false,
+     "tag": "en-contraction-apostrophe",
+     "tagChildHint": "Two words squeezed into one leave letters out. The apostrophe stands where the letters were."
+    }
+   ],
+   "walkScript": "Look at “going to do it”, after the gap. Stretch the gap into “you are” and it fits. The short form is “You’re”, and the apostrophe replaces the a. “Your” and “yours” show owning.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-CZ-B8",
+   "stem": {
+    "text": "Choose the words that fit best.  — Mrs Lawson wrote his time on a board beside the finish line. Ade looked at ___ board for a long time.",
+    "quotes": [
+     {
+      "why": "the cloze vehicle's own sentence, verbatim. It is the passage the child reads, so the sentence cap must not measure it as our wording.",
+      "rule": "R23",
+      "text": "Mrs Lawson wrote his time on a board beside the finish line. Ade looked at ___ board for a long time.",
+      "gapIndex": 8,
+      "exemptFrom": [
+       "banList",
+       "sentenceCap",
+       "vocabularyCeiling",
+       "longWordCeiling"
+      ],
+      "passageRef": "cloze-eng003-b-sports-day"
+     }
+    ],
+    "gapIndex": 8,
+    "passageRef": "cloze-eng003-b-sports-day"
+   },
+   "key": "the",
+   "options": [
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "en-article-definiteness",
+     "tagChildHint": "Has the text named it already? That changes which little word fits."
+    },
+    {
+     "value": "an",
+     "isKey": false,
+     "tag": "en-a-an-by-spelling",
+     "tagChildHint": "Listen to the sound that starts the next word."
+    },
+    {
+     "value": "the",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "no word is needed",
+     "isKey": false,
+     "tag": "en-article-definiteness",
+     "tagChildHint": "Has the text named it already? That changes which little word fits."
+    }
+   ],
+   "walkScript": "Turn to the sentence before the gap. Mrs Lawson wrote his time on “a board”. A board we have met takes “the”. The others start a new board, or leave none.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-SP-01",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "the twins left there lunch boxes,",
+   "options": [
+    {
+     "value": "Beside the quiet library door,",
+     "isKey": false,
+     "tag": "en-spelling-form-lookalike",
+     "tagChildHint": "Two words can look almost the same. Read the middle letters slowly, not the shape."
+    },
+    {
+     "value": "the twins left there lunch boxes,",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "then walked past the office",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    },
+    {
+     "value": "and hurried to the netball court.",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "tagChildHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    }
+   ],
+   "walkScript": "Go straight to the second part. “There” means a place, but the boxes belong to the twins. So “their” is needed, and the second part has the mistake. “Quiet”, “past” and “netball court” hold.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-SP-02",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "after giving an excellant answer.",
+   "options": [
+    {
+     "value": "With a confident smile,",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "tagChildHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+    },
+    {
+     "value": "Ravi thanked the assistant",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "tagChildHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+    },
+    {
+     "value": "and slipped back to his seat",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "tagChildHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+    },
+    {
+     "value": "after giving an excellant answer.",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "tagChildHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+    }
+   ],
+   "walkScript": "Look at the fourth part, at “excellant”. We write “excellence” with -ence, and -ence goes with -ent. So an e goes where the a is, and the fourth part has the mistake. The three earlier parts hold.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-SP-03",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "On Wenesday the whole school",
+   "options": [
+    {
+     "value": "On Wenesday the whole school",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "gathered in the school hall,",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    },
+    {
+     "value": "listened to a talk about knights,",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "tagChildHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+    },
+    {
+     "value": "and wrote a short list of questions.",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "tagChildHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "tagChildHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+    }
+   ],
+   "walkScript": "Start at the first part, at the day name. Say it slowly: Wed-nes-day. That middle d is missing from “Wenesday”. “Knights”, “wrote” and “hall” hold.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-SP-04",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "because of the wet whether,",
+   "options": [
+    {
+     "value": "The netball match was cancelled",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "tagChildHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+    },
+    {
+     "value": "because of the wet whether,",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "so Mrs Dean pinned a new date",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "tagChildHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+    },
+    {
+     "value": "on the notice board.",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    }
+   ],
+   "walkScript": "Turn to the word before the comma, after “because of”. “Whether” means if. Rain and sun are “weather”, with -ea. “Cancelled”, “pinned” and “board” hold.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-SP-05",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "at the begining of term,",
+   "options": [
+    {
+     "value": "Toby was allowed to borrow",
+     "isKey": false,
+     "tag": "en-homophone-by-sound",
+     "tagChildHint": "Sound will not help with sound-alike words. Work out the meaning, then spell it from that."
+    },
+    {
+     "value": "the good scissors",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "tagChildHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+    },
+    {
+     "value": "at the begining of term,",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "and he stopped to thank the office staff.",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "tagChildHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "tagChildHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+    }
+   ],
+   "walkScript": "Read the third part again, at “begining”. “Begin” ends in a short vowel and one n. Adding -ing doubles that n: beginning. So the third part has the mistake. The other three parts hold.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-SP-06",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "correctionOf": [
+     "Dictionary"
+    ],
+    "segmentsInOptions": true
+   },
+   "key": "showed us the new dictionery",
+   "options": [
+    {
+     "value": "The librarian explained the difference",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "tagChildHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+    },
+    {
+     "value": "between the science and history shelves,",
+     "isKey": false,
+     "tag": "en-silent-letter-dropped",
+     "tagChildHint": "A letter can be there without being heard. Spell it out, do not sound it out."
+    },
+    {
+     "value": "showed us the new dictionery",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "and gave everyone a temporary pass.",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "tagChildHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-unstressed-suffix-vowel",
+     "tagChildHint": "Many words ending -ant or -ent have a partner ending -ance or -ence. The partner almost always keeps the same vowel, like assistant and assistance. For -ary, -ery or -ory, a family word may help, like librarian for library."
+    }
+   ],
+   "walkScript": "The third part holds “dictionery”. “Dictionary” ends -ary, in the same way as “library”. Here an e sits where the a belongs, so the third part has the mistake. The other three parts hold.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-SP-07",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "specimens": [
+     "practise",
+     "practice"
+    ],
+    "segmentsInOptions": true
+   },
+   "key": "No mistake",
+   "options": [
+    {
+     "value": "Their coats were already hanging",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "tagChildHint": "Check every part in turn. No mistake is a real answer, not a way out."
+    },
+    {
+     "value": "by the door, so Miss Bell allowed them",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "tagChildHint": "Check every part in turn. No mistake is a real answer, not a way out."
+    },
+    {
+     "value": "to practise the quiet piece",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "tagChildHint": "Check every part in turn. No mistake is a real answer, not a way out."
+    },
+    {
+     "value": "separately in the corridor.",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "tagChildHint": "Check every part in turn. No mistake is a real answer, not a way out."
+    },
+    {
+     "value": "No mistake",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    }
+   ],
+   "walkScript": "Start at the third part, at “practise”. The spelling with an s is the doing word. “Their” shows owning, and “piece” means a bit of music. “Allowed”, “quiet” and “separately” hold, so nothing needs changing.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-SP-08",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "Jonah was dissapointed with his score,",
+   "options": [
+    {
+     "value": "Jonah was dissapointed with his score,",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "but he grinned when Mr Ellis",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "tagChildHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+    },
+    {
+     "value": "pinned the team photograph",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "tagChildHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+    },
+    {
+     "value": "next to the register.",
+     "isKey": false,
+     "tag": "en-unstressed-medial-vowel",
+     "tagChildHint": "A quiet middle vowel is still a letter. Say the word in parts and choose it."
+    },
+    {
+     "value": "No mistake",
+     "isKey": false,
+     "tag": "en-double-consonant-boundary",
+     "tagChildHint": "Say the root word first, then add the beginning or ending. Check which letter really doubles."
+    }
+   ],
+   "walkScript": "The first part holds “dissapointed”. Build it from dis plus appoint plus -ed: one s, two p letters. Here the s doubles instead. “Grinned”, “pinned” and “register” hold.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "ENG-003-A-SP-09",
+   "stem": {
+    "text": "Read the sentence. One part may have a spelling mistake. Which part is it? If every part is right, choose No mistake.",
+    "segmentsInOptions": true
+   },
+   "key": "No mistake",
+   "options": [
+    {
+     "value": "Every Wednesday the whole choir",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "tagChildHint": "Check every part in turn. No mistake is a real answer, not a way out."
+    },
+    {
+     "value": "rehearsed separately,",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "tagChildHint": "Check every part in turn. No mistake is a real answer, not a way out."
+    },
+    {
+     "value": "but the two groups definitely",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "tagChildHint": "Check every part in turn. No mistake is a real answer, not a way out."
+    },
+    {
+     "value": "sounded better in the hall together.",
+     "isKey": false,
+     "tag": "en-n-option-avoidance",
+     "tagChildHint": "Check every part in turn. No mistake is a real answer, not a way out."
+    },
+    {
+     "value": "No mistake",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    }
+   ],
+   "walkScript": "Go straight to the third part, at “definitely”. It is “de” plus “finite”, so the middle letter is an i. “Wednesday” and “choir” keep their odd letters. “Separately” keeps the a of “separate”, and “hall” is the room. Every part holds, so nothing needs changing.",
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

@@ -3,116 +3,7 @@
  "title": "The Missing Link",
  "questionType": "vr-10-word-connections",
  "free": false,
- "houseFormExemplars": [
-  {
-   "itemId": "gen-vr-10-word-connections-02",
-   "stem": {
-    "pairA": [
-     "minute",
-     "hour"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "hour"
-   },
-   "key": "day",
-   "options": [
-    "day",
-    "clock",
-    "week"
-   ],
-   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-04",
-   "stem": {
-    "pairA": [
-     "captain",
-     "ship"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "pilot"
-   },
-   "key": "plane",
-   "options": [
-    "plane",
-    "airport",
-    "wing"
-   ],
-   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-05",
-   "stem": {
-    "pairA": [
-     "bee",
-     "honey"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "cow"
-   },
-   "key": "milk",
-   "options": [
-    "milk",
-    "farm",
-    "grass"
-   ],
-   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-06",
-   "stem": {
-    "pairA": [
-     "sheep",
-     "lamb"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "horse"
-   },
-   "key": "foal",
-   "options": [
-    "foal",
-    "stable",
-    "hay"
-   ],
-   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-07",
-   "stem": {
-    "pairA": [
-     "spider",
-     "web"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "bird"
-   },
-   "key": "nest",
-   "options": [
-    "nest",
-    "egg",
-    "branch"
-   ],
-   "walkScript": "Look at spider and web. A spider builds a web to live in. A bird builds a nest to live in. Egg and branch sit by the home, not it."
-  },
-  {
-   "itemId": "gen-vr-10-word-connections-08",
-   "stem": {
-    "pairA": [
-     "king",
-     "crown"
-    ],
-    "prompt": "Find the connection in the first pair, then complete the second.",
-    "stemWord": "knight"
-   },
-   "key": "helmet",
-   "options": [
-    "helmet",
-    "castle",
-    "sword"
-   ],
-   "walkScript": "Start with king and crown. A king wears a crown on his head. In the same way, a knight wears a helmet. Castle and sword go with knights, not head."
-  }
- ],
+ "houseFormExemplars": [],
  "rows": [
   {
    "itemId": "gen-vr-10-word-connections-01",
@@ -179,8 +70,8 @@
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     }
    ],
-   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size.",
-   "walkScriptApprovedBy": "reviewer:rev-0001"
+   "walkScript": "Start with minute and hour. Sixty minutes make one hour, the next unit up. Twenty-four hours make one day, the next unit up again. A week is two steps up, and a clock is not a unit of time.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-10-word-connections-03",
@@ -247,8 +138,8 @@
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     }
    ],
-   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing.",
-   "walkScriptApprovedBy": "reviewer:rev-0001"
+   "walkScript": "Start with captain and ship. A captain is in charge of a ship. A pilot is in charge of a plane, so plane fits. A wing is only part of a plane. An airport is where planes land, not what a pilot flies.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-10-word-connections-05",
@@ -281,8 +172,8 @@
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     }
    ],
-   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food.",
-   "walkScriptApprovedBy": "reviewer:rev-0001"
+   "walkScript": "Start with bee and honey. A bee makes honey. A cow makes milk, so milk fits. Grass is what a cow eats, not what it makes. A farm is where a cow lives.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-10-word-connections-06",
@@ -315,8 +206,8 @@
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     }
    ],
-   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young.",
-   "walkScriptApprovedBy": "reviewer:rev-0001"
+   "walkScript": "Start with sheep and lamb. A lamb is the baby of a sheep. A foal is the baby of a horse, so foal fits. A stable is where a horse lives, and hay is what it eats.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-10-word-connections-07",
@@ -349,8 +240,8 @@
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     }
    ],
-   "walkScript": "Look at spider and web. A spider builds a web to live in. A bird builds a nest to live in. Egg and branch sit by the home, not it.",
-   "walkScriptApprovedBy": "reviewer:rev-0001"
+   "walkScript": "Start with spider and web. A spider builds a web to live in. A bird builds a nest to live in, so nest fits. An egg is laid in the nest, and a branch holds it up. Neither is the home a bird builds.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-10-word-connections-08",
@@ -377,14 +268,14 @@
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     },
     {
-     "value": "sword",
+     "value": "battle",
      "isKey": false,
      "tag": "vr03-same-topic",
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     }
    ],
-   "walkScript": "Start with king and crown. A king wears a crown on his head. In the same way, a knight wears a helmet. Castle and sword go with knights, not head.",
-   "walkScriptApprovedBy": "reviewer:rev-0001"
+   "walkScript": null,
+   "walkScriptApprovedBy": null
   },
   {
    "itemId": "gen-vr-10-word-connections-09",
@@ -451,8 +342,8 @@
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     }
    ],
-   "walkScript": "Read foot and shoe first. A shoe covers the foot warmly. A hat sits on the head. Hair and neck sit by the head, covering nothing.",
-   "walkScriptApprovedBy": "reviewer:rev-0001"
+   "walkScript": "Start with foot and shoe. A shoe is worn on a foot. A hat is worn on a head, so hat fits. Hair grows on a head, so it is not worn. A neck is a body part below the head.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-10-word-connections-11",
@@ -587,8 +478,8 @@
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     }
    ],
-   "walkScript": "Start with kitten and cat. A kitten is a young cat. In the same way, a puppy grows into a dog. Bone and kennel go with dogs, not grown up.",
-   "walkScriptApprovedBy": "reviewer:rev-0001"
+   "walkScript": "Start with kitten and cat. A kitten is a young cat. A puppy is a young dog, so dog fits. A bone is what a dog chews, and a kennel is where it sleeps. Neither is the grown animal.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-10-word-connections-15",
@@ -655,8 +546,8 @@
      "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
     }
    ],
-   "walkScript": "Read bird and nest first. A bird lives in a nest, its home. A bee lives in a hive, its home. Honey and sting come from bees, not homes.",
-   "walkScriptApprovedBy": "reviewer:rev-0001"
+   "walkScript": "Start with bird and nest. A bird lives in a nest. A bee lives in a hive, so hive fits. Honey is what bees make, and a sting is part of a bee. Neither is the home a bee lives in.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
   },
   {
    "itemId": "gen-vr-10-word-connections-17",

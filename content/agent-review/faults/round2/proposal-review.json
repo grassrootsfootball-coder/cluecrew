@@ -1,0 +1,33 @@
+{
+  "door": "faults",
+  "reviewer": "rev-agent-01",
+  "round": 2,
+  "changes": [
+    {
+      "ref": "rebuild:bank-vr-02-two-odd-ones-out-22",
+      "verdict": "ATTEST",
+      "reason": "The round-1 faults are fixed. The kept-animal and legs readings no longer reach any option: lion has legs, so legs give no 3+2 split. Each wrong pair, once removed, leaves three words with no group: hen, snake, lion; cow, snake, frog; cow, snake, lion. Removing the key pair leaves the egg-layers hen, snake, frog. Two groupings exist that no option offers. One is wild animals (snake, lion, frog), leaving hen and cow. The other is four legs (cow, lion, frog), leaving hen and snake. Neither [hen, cow] nor [hen, snake] is an option, so exactly one option is correct, and the egg-layer/mammal split is the strongest reading. The tags fit: two are partial-group, and [hen, frog] is answered-the-opposite. Every execution is true of the row, and no banned words appear."
+    },
+    {
+      "ref": "rebuild:bank-vr-02-two-odd-ones-out-24",
+      "verdict": "ATTEST",
+      "reason": "Swim replaces hop. The word lengths now split jump, ball, swim (4 letters) against net, run (3), and no option is the pair net, run. On 'ball, swim, net' as pool or beach things: this is not a group. Swim is an action while ball and net are objects, the two objects already form the key pair, and no single rule takes in all three. A 'water' link reaches only swim and net. So [jump, run] is not a defensible answer, and it stays answered-the-opposite. Each wrong pair, once removed, leaves three words with no group: swim, net, run; ball, jump, run; ball, swim, net. Removing the key pair leaves the movement verbs jump, swim, run. The tags and executions are true, including the 'perhaps thinking of water' pull on [swim, net]. No banned words appear."
+    },
+    {
+      "ref": "rebuild:bank-vr-04-closest-meaning-06",
+      "verdict": "ATTEST",
+      "reason": "The caller ruled that the duplicate with gen-vr-04-closest-meaning-06 is the intended bank/gen pairing. Otherwise the row is clean. FAIR is retired. Happy is the only synonym and is not rarer than glad (both tier 1). Sad is the opposite, and smile and party are associated words. None is correct in glad's other sense, 'willing'. The tags and executions are true, no banned words appear, and the stale walk-through is cleared as expected."
+    },
+    {
+      "ref": "rebuild:gen-vr-21-same-meaning-25",
+      "verdict": "REFUSE",
+      "reason": "Word class gives the answer away. SHY, timid and bold are adjectives, but blush and smile are verbs or nouns: you cannot be 'very blush' or 'very smile'. A child testing for the same word class drops both straight away, leaving only timid against its plain opposite, bold. Earlier vr-21 reviews required every option to share the card's class (the 'scared' row: all adjectives, so none can be dropped by word class), and this row fails that test. Everything else is sound. Timid (vault tier 2) is rarer than shy, SHY is not used elsewhere in vr-21, and no distractor is a near-synonym of another. Fix: replace blush and smile with adjectives that go with shy without meaning it, for example lonely and polite. Avoid quiet, which is a near-synonym of shy."
+    }
+  ],
+  "rows": [
+    { "itemId": "bank-vr-02-two-odd-ones-out-22", "verdict": "SIGN", "reason": "Checked: [cow, lion] is the only correct option. Removing any wrong pair leaves no group. The wild-animal and four-leg readings reach no option. Tags and executions are true." },
+    { "itemId": "bank-vr-02-two-odd-ones-out-24", "verdict": "SIGN", "reason": "Checked: [ball, net] is the only correct option. 'Ball, swim, net' is not a group. The length split matches no option. Tags and executions are true." },
+    { "itemId": "bank-vr-04-closest-meaning-06", "verdict": "SIGN", "reason": "Checked: happy is the only synonym and is not rarer than glad. No distractor is correct in the 'willing' sense. The GLAD duplicate is the bank/gen pairing the caller ruled intended." },
+    { "itemId": "gen-vr-21-same-meaning-25", "verdict": "HOLD", "reason": "Blush and smile are not adjectives, so a child can rule them out by word class, leaving timid against the opposite bold. Use adjective distractors (for example lonely, polite)." }
+  ]
+}

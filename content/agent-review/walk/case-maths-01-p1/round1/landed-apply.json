@@ -1,0 +1,156 @@
+{
+ "landed": [
+  "MC01-CALC-02",
+  "MC01-CALC-07",
+  "MC01-FDP-01",
+  "MC01-FDP-02",
+  "MC01-FDP-03",
+  "MC01-FDP-04",
+  "MC01-FDP-07",
+  "MC01-FDP-08",
+  "MC01-GEOM-02",
+  "MC01-GEOM-04",
+  "MC01-GEOM-05",
+  "MC01-GEOM-06",
+  "MC01-MEAS-02",
+  "MC01-MEAS-05",
+  "MC01-NPV-01",
+  "MC01-NPV-02",
+  "MC01-NPV-03",
+  "MC01-NPV-04",
+  "MC01-NPV-07",
+  "MC01-STATS-01",
+  "MC01-STATS-03",
+  "MC01-STATS-04",
+  "MC02-CALC-01",
+  "MC02-CALC-03",
+  "MC02-CALC-04",
+  "MC02-CALC-07",
+  "MC02-FDP-02",
+  "MC02-FDP-04",
+  "MC02-FDP-05",
+  "MC02-FDP-07",
+  "MC02-FDP-08",
+  "MC02-GEOM-02",
+  "MC02-GEOM-03",
+  "MC02-GEOM-04",
+  "MC02-GEOM-05",
+  "MC02-GEOM-06",
+  "MC02-MEAS-01",
+  "MC02-MEAS-02",
+  "MC02-MEAS-03",
+  "MC02-MEAS-04",
+  "MC02-MEAS-06",
+  "MC02-NPV-01",
+  "MC02-NPV-02",
+  "MC02-NPV-04",
+  "MC02-NPV-06",
+  "MC02-RP-02",
+  "MC02-STATS-01",
+  "MC02-STATS-02",
+  "MC03-CALC-03",
+  "MC03-CALC-04",
+  "MC03-CALC-05",
+  "MC03-CALC-06",
+  "MC03-CALC-07",
+  "MC03-FDP-01",
+  "MC03-FDP-02",
+  "MC03-FDP-04",
+  "MC03-FDP-06",
+  "MC03-FDP-07",
+  "MC03-FDP-08",
+  "MC03-GEOM-01",
+  "MC03-GEOM-02",
+  "MC03-GEOM-03",
+  "MC03-GEOM-04",
+  "MC03-GEOM-05",
+  "MC03-GEOM-06",
+  "MC03-MEAS-02",
+  "MC03-MEAS-03",
+  "MC03-MEAS-04",
+  "MC03-MEAS-05",
+  "MC03-MEAS-06"
+ ],
+ "held": [
+  {
+   "itemId": "MC01-CALC-08",
+   "why": "REFUSED: Two faults. The method is never worked on these numbers: it says 'borrow carefully across the zeros' then announces '8006 minus 3478 is 4528' with no column shown. And 'The classic slip takes each smaller digit from the larger, or adds instead' describes no option on screen: those slips give 5472 and 11484, while the real distractors are 4522, 4500 and 4008."
+  },
+  {
+   "itemId": "MC01-GEOM-01",
+   "why": "REFUSED: Doesn't use this question's numbers: 'Add one long and one short, then double it. That gives 22 cm.' never shows 8 + 3 = 11 and 11 doubled = 22. The maths addendum asks for the method on this question's numbers."
+  },
+  {
+   "itemId": "MC01-MEAS-01",
+   "why": "REFUSED: Opening claim is false and confusing: 'Change means the totals must line up.' This question has no totals. What lines up is the pounds and pence (£5.00 over £3.50). The working that follows is correct (£5.00 - £3.50 = £1.50)."
+  },
+  {
+   "itemId": "MC02-CALC-02",
+   "why": "REFUSED: False position claim: 'In the ones, borrow because 2 is under 7.' In 582 - 147 the 2 sits ON TOP of the 7. Also 'Line up the tens and ones' ignores the hundreds, and the tens and hundreds columns are never worked ('Work each column to reach 435'). 582 - 147 = 435 is correct."
+  },
+  {
+   "itemId": "MC02-CALC-05",
+   "why": "REFUSED: No working on the numbers: 'Carry each leftover to the next digit along. The answer is 1,218.' never shows a step (4÷4=1, 8÷4=2, 7÷4=1 r3, 32÷4=8). The answer 1218 is correct."
+  },
+  {
+   "itemId": "MC02-CALC-06",
+   "why": "REFUSED: No working on the numbers: 'Carry a ten whenever a column passes nine. The total is 6,131.' never shows a column (8+3=11, carry 1; 5+7+1=13, carry 1; 4+6+1=11, carry 1; 3+2+1=6). The answer 6131 is correct."
+  },
+  {
+   "itemId": "MC02-CALC-08",
+   "why": "REFUSED: Describes a trap no option shows: 'A slip forgets a step or rounds the total.' Rounding the total gives none of 60, 68 or 312. 68 is (360+48)÷6, a wrong-operation slip the script leaves out. The working 12×30=360, 360-48=312, 312÷6=52 is correct."
+  },
+  {
+   "itemId": "MC02-FDP-01",
+   "why": "REFUSED: Says 'give both the same bottom number' but never does it: 'Then 2/5 is bigger than 2/9' just announces the answer. Needs, for example, 2/5 = 18/45 and 2/9 = 10/45. The key 2/5 is correct."
+  },
+  {
+   "itemId": "MC02-FDP-03",
+   "why": "REFUSED: Missing the key link: 'Percentages first become parts. One fifth of 60 is 12, so two fifths is 24.' It never says that 40% is two fifths, so the jump to fifths is unexplained. The arithmetic (60÷5=12, ×2=24) and both traps (10% gives 6; 60-40 gives 20) are correct."
+  },
+  {
+   "itemId": "MC02-FDP-06",
+   "why": "REFUSED: Says 'make them match' but never does it: '4/5 is bigger than 4/7' just announces the answer. Needs, for example, 4/5 = 28/35 and 4/7 = 20/35. The key 4/5 is correct."
+  },
+  {
+   "itemId": "MC02-GEOM-01",
+   "why": "REFUSED: Doesn't use this question's numbers: 'Add one long and one short, then double: 28 cm.' never shows 9 + 5 = 14 and 14 doubled = 28. The traps (area 45; a side left out, 23 or 14) are correctly described."
+  },
+  {
+   "itemId": "MC02-MEAS-05",
+   "why": "REFUSED: Says 'Count on' but never counts on: 'From 7:50 to 9:20 is 1 hour 30 minutes' just announces the answer. Needs, for example, 7:50 to 8:50 is 1 hour, then 8:50 to 9:20 is 30 minutes. The key and both traps (base-100 gives 1 h 70 min; rounding 7:50 to 8:00 gives 1 h 20 min) are correct."
+  },
+  {
+   "itemId": "MC02-MEAS-07",
+   "why": "REFUSED: Describes a trap no option shows: 'One trap leaves an item out.' Leaving out the juice gives £7.40, leaving out the apples gives £7.70, and counting one apple gives £7.05. None of these is on screen (the options are £4.90, £7.10, £5.75). The working 4×65p=£2.60, +£2.30=£4.90, £10-£4.90=£5.10 is correct but not shown step by step."
+  },
+  {
+   "itemId": "MC02-NPV-07",
+   "why": "REFUSED: Doesn't follow its own method: 'Give every decimal the same number of places first. Then 0.60 beats 0.55, 0.40 and 0.049.' 0.049 has three places, so the padded forms should be 0.600, 0.550, 0.400 and 0.049. The key 0.6 is correct."
+  },
+  {
+   "itemId": "MC02-RP-01",
+   "why": "REFUSED: First sentence makes no sense: 'Buy the relationship first: the pasta for one person.' ('Buy' should be something like 'Find'). The working 240÷3=80, 80×5=400 is correct."
+  },
+  {
+   "itemId": "MC03-CALC-01",
+   "why": "REFUSED: Describes a trap no option shows: 'The trap rounds too soon or loses a digit.' Rounding gives none of 543, 69 or 443. 543 is a dropped carry and 69 is 356-287, a wrong operation. 356+287=643 is correct."
+  },
+  {
+   "itemId": "MC03-CALC-02",
+   "why": "REFUSED: No working on the numbers: 'Borrow a ten when the top digit is smaller. Work through to get 307.' never shows a column (13-6=7; 7-7=0; 4-1=3). Also 'Set the tens and ones under each other' leaves out the hundreds. The key 307 and the 313 trap are correct."
+  },
+  {
+   "itemId": "MC03-CALC-08",
+   "why": "REFUSED: Describes a trap wrongly: 'The trap adds the costs or loses a digit.' Adding the costs gives £6,000, which is not an option. £4,800 forgets to take the costs off at all. 320×15=4800 and 4800-1200=3600 are correct."
+  },
+  {
+   "itemId": "MC03-FDP-03",
+   "why": "REFUSED: Describes a trap no option shows: 'or rounds the amount first.' No option comes from rounding 44. £1,100 comes from never dividing by 100, which the script leaves out. 44÷4=11 is correct."
+  },
+  {
+   "itemId": "MC03-MEAS-01",
+   "why": "REFUSED: Opening claim is false and confusing: 'Change means the totals must line up.' This question has no totals. What lines up is the pounds and pence (£8.00 over £5.60). £8.00 - £5.60 = £2.40 is correct."
+  }
+ ]
+}

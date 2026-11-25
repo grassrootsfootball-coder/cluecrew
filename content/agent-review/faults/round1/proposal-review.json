@@ -1,0 +1,62 @@
+{
+  "door": "faults",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:bank-vr-02-two-odd-ones-out-22",
+      "verdict": "REFUSE",
+      "reason": "The new word set adds a second answer. Hen, cow and frog have legs and snake and whale do not, so snake and whale are a defensible odd pair. That pair is an offered option, and its own execution says 'neither has legs'. Removing the wrong pair [snake, whale] leaves hen, cow and frog, which form a group, so the vr-02 check fails. The kept-animals fault is fixed (cat and dog are gone), but the rebuild creates a new one. Fix: replace whale with a legged mammal that is not a farm animal (for example fox). Then check the [cow, hen] farm reading again."
+    },
+    {
+      "ref": "rebuild:bank-vr-02-two-odd-ones-out-24",
+      "verdict": "REFUSE",
+      "reason": "The football fault is fixed: no group of ball, net and a kick-word remains. But swapping kick for hop adds a form grouping that matches an option. Hop, net and run are the only three-letter words, so jump and ball are the four-letter odd pair, and [ball, jump] is an offered option. Removing that wrong pair leaves hop, net, run, which share a feature, so the vr-02 check fails. The house treats look-alike grouping as a misconception (vr02-surface-link), but here it gives a consistent full answer that sits among the options. Fix: use a four-letter movement verb (skip or swim). Lengths would then be jump, ball, skip/swim (4) against net, run (3), and no option matches that pair."
+    },
+    {
+      "ref": "rebuild:bank-vr-04-closest-meaning-06",
+      "verdict": "REFUSE",
+      "reason": "The check set for this row fails. GLAD is already a LIVE vr-04 card at gen-vr-04-closest-meaning-06 (key pleased; overjoyed, relieved, lucky), found by a read-only DB query. Everything else is clean. FAIR is retired. Happy (tier 1) is commoner than or equal to glad (tier 1) and is not rarer. Sad, smile and party are each wrong, and none is correct in glad's other sense (willing). The tags and executions are true of the row, no banned words appear, and the walk-through clears as expected. Note for the ruling: in this case every other vr-04 headword appears exactly twice (bank-NN and gen-NN share a headword), and vr04.ts names GLAD as FAIR's replacement at T1. So the duplicate may be the intended pairing. If the caller rules it intended, this change can be attested as it stands."
+    },
+    {
+      "ref": "rebuild:gen-vr-04-closest-meaning-09",
+      "verdict": "ATTEST",
+      "reason": "The banned key (quick) and option (hurried) are gone. RAPID keeps its card. The key fast is commoner than rapid (tier 2), which is the right direction for vr-04, and it is the only synonym. Slow is the opposite. Early is a timing word, tagged wrong-shade as the same word is on gen-vr-04-02 swift. Race is an event that goes with speed. Rapid's noun sense (river rapids) makes none of them correct. The executions are true of the row, and the banned-word scan is clean."
+    },
+    {
+      "ref": "rebuild:gen-vr-12-compound-words-11",
+      "verdict": "ATTEST",
+      "reason": "Fry is gone and pot (unsuitable second sense) is replaced. Only pancake is a word. Panoven, ovenpan, panlid and lidpan are not words in either order. Oven and lid each belong with a pan in meaning, which is what vr12-meaning-not-word describes. The executions are accurate, and the stale walk-through is cleared."
+    },
+    {
+      "ref": "rebuild:gen-vr-10-word-connections-08",
+      "verdict": "ATTEST",
+      "reason": "Sword is replaced by battle. A knight neither wears a battle nor is known by one, so helmet (worn on the head, as a crown is) is the only option that completes king:crown. Castle stays a same-topic distractor whose link is a place, not something worn. Both vr03-same-topic executions are true. The stale walk-through and its approval marker are cleared."
+    },
+    {
+      "ref": "rebuild:gen-vr-21-same-meaning-06",
+      "verdict": "ATTEST",
+      "reason": "Hurry (banned) is replaced by race. Begin, win and race contain no near-synonym pair. The key becomes complete, the only option that swaps with finish ('complete the task'). The vault has no card for complete (finish is tier 1), so the vr-21 rarer-key check cannot be measured from the vault. Judged by register, complete is the Latinate, less everyday word, like construct, assist and select elsewhere in the bank, so it runs the vr-21 way. Win and race are real goes-together words for finish, and the executions are true. No banned words."
+    },
+    {
+      "ref": "rebuild:gen-vr-21-same-meaning-21",
+      "verdict": "ATTEST",
+      "reason": "The banned card (quick) and option (easy) are gone. The new card is FAST with the key swift, which is rarer than fast (swift is a tier-1 card, fast has none, and swift is less common in use). Slow is the opposite. Asleep (fast asleep) and loud are goes-together words and are not near-synonyms of each other. No distractor is correct in another sense of fast (firmly fixed, not eating, deeply). No banned words."
+    },
+    {
+      "ref": "rebuild:gen-vr-21-same-meaning-25",
+      "verdict": "REFUSE",
+      "reason": "This duplicates an existing LIVE row. gen-vr-21-same-meaning-10 is already BRAVE, key courageous, with kind and loyal as distractors, which is the same card, key and two of three distractors. The banned words (simple, easy) are gone and the content would otherwise be sound: courageous is rarer than brave, cowardly is the opposite, and kind and loyal are not synonyms of each other. But the same case would serve the same question twice. Fix: rebuild on a card word not yet used in vr-21."
+    }
+  ],
+  "rows": [
+    { "itemId": "bank-vr-02-two-odd-ones-out-22", "verdict": "HOLD", "reason": "Second defensible answer: hen, cow and frog have legs, and snake and whale do not. [snake, whale] is an offered option." },
+    { "itemId": "bank-vr-02-two-odd-ones-out-24", "verdict": "HOLD", "reason": "Hop, net and run are the only three-letter words, which makes [ball, jump] (an offered option) a consistent form-based answer. Swap hop for skip or swim." },
+    { "itemId": "bank-vr-04-closest-meaning-06", "verdict": "HOLD", "reason": "GLAD is already a LIVE vr-04 card (gen-vr-04-closest-meaning-06), so the stated check fails. Otherwise clean. It may be the intended bank/gen pairing, which the caller should rule on." },
+    { "itemId": "gen-vr-04-closest-meaning-09", "verdict": "SIGN", "reason": "Checked: there is one key (fast), commoner than rapid. Slow, early and race are each wrong in every sense of rapid. The tags fit and there are no banned words." },
+    { "itemId": "gen-vr-12-compound-words-11", "verdict": "SIGN", "reason": "Checked: only pancake is a word. Oven and lid make no word in either order. The tags fit and the walk-through is cleared." },
+    { "itemId": "gen-vr-10-word-connections-08", "verdict": "SIGN", "reason": "Checked: only helmet is worn on the head, matching king:crown. Castle and battle change the link. The walk-through is cleared." },
+    { "itemId": "gen-vr-21-same-meaning-06", "verdict": "SIGN", "reason": "Checked: complete is the only synonym of finish, and the less everyday word. Begin, win and race are wrong and are not near-synonyms. No banned words." },
+    { "itemId": "gen-vr-21-same-meaning-21", "verdict": "SIGN", "reason": "Checked: swift is the only synonym and is rarer than fast. Slow, asleep and loud are wrong in every sense of fast and are not near-synonyms. No banned words." },
+    { "itemId": "gen-vr-21-same-meaning-25", "verdict": "HOLD", "reason": "This duplicates LIVE gen-vr-21-same-meaning-10 (BRAVE, key courageous, with kind and loyal). Rebuild on an unused card word." }
+  ]
+}

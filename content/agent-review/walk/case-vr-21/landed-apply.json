@@ -1,40 +1,8 @@
 {
  "landed": [
-  "gen-vr-21-same-meaning-01",
-  "gen-vr-21-same-meaning-02",
-  "gen-vr-21-same-meaning-03",
-  "gen-vr-21-same-meaning-04",
-  "gen-vr-21-same-meaning-05",
-  "gen-vr-21-same-meaning-07",
-  "gen-vr-21-same-meaning-08",
-  "gen-vr-21-same-meaning-09",
-  "gen-vr-21-same-meaning-10",
-  "gen-vr-21-same-meaning-11",
-  "gen-vr-21-same-meaning-12",
-  "gen-vr-21-same-meaning-13",
-  "gen-vr-21-same-meaning-14",
-  "gen-vr-21-same-meaning-15",
-  "gen-vr-21-same-meaning-16",
-  "gen-vr-21-same-meaning-17",
-  "gen-vr-21-same-meaning-18",
-  "gen-vr-21-same-meaning-19",
-  "gen-vr-21-same-meaning-20",
-  "gen-vr-21-same-meaning-22",
-  "gen-vr-21-same-meaning-23",
-  "gen-vr-21-same-meaning-24"
+  "gen-vr-21-same-meaning-06",
+  "gen-vr-21-same-meaning-21",
+  "gen-vr-21-same-meaning-25"
  ],
- "held": [
-  {
-   "itemId": "gen-vr-21-same-meaning-06",
-   "why": "REFUSED: Cannot name its own distractor: 'Win and the last option go with finishing' stands in for 'hurry', which is on the house ban (no-urgency stance, banned-vocabulary.json). 'The last option' is a screen-position claim the script cannot guarantee, and hurry does not 'go with finishing'. Fault is in the question: replace the distractor 'hurry' with an unbanned word, then redraft."
-  },
-  {
-   "itemId": "gen-vr-21-same-meaning-21",
-   "why": "REFUSED: Cannot name the card word or one distractor: 'Start with the word on the card' stands in for 'quick', and 'Quiet and the other option' stands in for 'easy'. Both are banned in child-facing text ('quick' on the no-urgency ban; 'easy' in the house form). The script shows 'Rapid means fast' but never shows rapid swaps for the card word, so it does not show the key works. Fault is in the question: the card word and a distractor are house-banned words; replace both, then redraft."
-  },
-  {
-   "itemId": "gen-vr-21-same-meaning-25",
-   "why": "REFUSED: Cannot name its own key or card word: 'Start with the word on the card' stands for 'simple' and 'The option left means the same as the card word' stands for 'easy', both banned in the house form. A script that cannot say its key does not show the key works. Fault is in the question: the card word and the key are house-banned words; this item cannot carry a compliant walk-through and needs a new pair."
-  }
- ]
+ "held": []
 }

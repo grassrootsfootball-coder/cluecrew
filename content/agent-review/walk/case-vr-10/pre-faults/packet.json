@@ -1,0 +1,968 @@
+{
+ "caseId": "case-vr-10",
+ "title": "The Missing Link",
+ "questionType": "vr-10-word-connections",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-07",
+   "stem": {
+    "pairA": [
+     "spider",
+     "web"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "bird"
+   },
+   "key": "nest",
+   "options": [
+    "nest",
+    "egg",
+    "branch"
+   ],
+   "walkScript": "Look at spider and web. A spider builds a web to live in. A bird builds a nest to live in. Egg and branch sit by the home, not it."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-08",
+   "stem": {
+    "pairA": [
+     "king",
+     "crown"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "knight"
+   },
+   "key": "helmet",
+   "options": [
+    "helmet",
+    "castle",
+    "sword"
+   ],
+   "walkScript": "Start with king and crown. A king wears a crown on his head. In the same way, a knight wears a helmet. Castle and sword go with knights, not head."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    {
+     "value": "warm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "holiday",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "August",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    {
+     "value": "day",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "clock",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "week",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size.",
+   "walkScriptApprovedBy": "reviewer:rev-0001"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    {
+     "value": "flower",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "garden",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "stem",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    {
+     "value": "plane",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "airport",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "wing",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing.",
+   "walkScriptApprovedBy": "reviewer:rev-0001"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    {
+     "value": "milk",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "farm",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "grass",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food.",
+   "walkScriptApprovedBy": "reviewer:rev-0001"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    {
+     "value": "foal",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "stable",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "hay",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young.",
+   "walkScriptApprovedBy": "reviewer:rev-0001"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-07",
+   "stem": {
+    "pairA": [
+     "spider",
+     "web"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "bird"
+   },
+   "key": "nest",
+   "options": [
+    {
+     "value": "nest",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "egg",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "branch",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Look at spider and web. A spider builds a web to live in. A bird builds a nest to live in. Egg and branch sit by the home, not it.",
+   "walkScriptApprovedBy": "reviewer:rev-0001"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-08",
+   "stem": {
+    "pairA": [
+     "king",
+     "crown"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "knight"
+   },
+   "key": "helmet",
+   "options": [
+    {
+     "value": "helmet",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "castle",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "sword",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Start with king and crown. A king wears a crown on his head. In the same way, a knight wears a helmet. Castle and sword go with knights, not head.",
+   "walkScriptApprovedBy": "reviewer:rev-0001"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-09",
+   "stem": {
+    "pairA": [
+     "baker",
+     "bread"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "potter"
+   },
+   "key": "vase",
+   "options": [
+    {
+     "value": "vase",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "oven",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "clay",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Begin with baker and bread. A baker makes bread as their work. A potter makes vases as their work, so vase is the answer. Oven and clay help the making, but neither is the thing made.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-10",
+   "stem": {
+    "pairA": [
+     "foot",
+     "shoe"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "head"
+   },
+   "key": "hat",
+   "options": [
+    {
+     "value": "hat",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "hair",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "neck",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Read foot and shoe first. A shoe covers the foot warmly. A hat sits on the head. Hair and neck sit by the head, covering nothing.",
+   "walkScriptApprovedBy": "reviewer:rev-0001"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-11",
+   "stem": {
+    "pairA": [
+     "puddle",
+     "small"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "lake"
+   },
+   "key": "large",
+   "options": [
+    {
+     "value": "large",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "water",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "little",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Take the pair puddle and small. A puddle is small, so small tells its size. A lake is large, so large is the answer. Water is what fills a lake, not its size. Little fits a puddle, not a lake.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-12",
+   "stem": {
+    "pairA": [
+     "whisper",
+     "quiet"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "shout"
+   },
+   "key": "loud",
+   "options": [
+    {
+     "value": "loud",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "voice",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "mouth",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "First read whisper and quiet. A whisper is quiet; quiet tells its sound. A shout is loud, so loud fits. Voice and mouth go with speaking, not the sound.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-13",
+   "stem": {
+    "pairA": [
+     "seed",
+     "plant"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "egg"
+   },
+   "key": "chick",
+   "options": [
+    {
+     "value": "chick",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "shell",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "nestbox",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Look at seed and plant. A seed grows into a plant. An egg grows into a chick. Shell and nestbox go with eggs, not the grown one.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-14",
+   "stem": {
+    "pairA": [
+     "kitten",
+     "cat"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "puppy"
+   },
+   "key": "dog",
+   "options": [
+    {
+     "value": "dog",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "bone",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "kennel",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Start with kitten and cat. A kitten is a young cat. In the same way, a puppy grows into a dog. Bone and kennel go with dogs, not grown up.",
+   "walkScriptApprovedBy": "reviewer:rev-0001"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-15",
+   "stem": {
+    "pairA": [
+     "hand",
+     "glove"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "foot"
+   },
+   "key": "sock",
+   "options": [
+    {
+     "value": "sock",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "leg",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "lace",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Begin with hand and glove. A glove goes over the hand. A sock is what slips over the foot. Leg and lace sit near the foot, covering nothing.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-16",
+   "stem": {
+    "pairA": [
+     "bird",
+     "nest"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "bee"
+   },
+   "key": "hive",
+   "options": [
+    {
+     "value": "hive",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "honey",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "sting",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Read bird and nest first. A bird lives in a nest, its home. A bee lives in a hive, its home. Honey and sting come from bees, not homes.",
+   "walkScriptApprovedBy": "reviewer:rev-0001"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-17",
+   "stem": {
+    "pairA": [
+     "day",
+     "sun"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "night"
+   },
+   "key": "moon",
+   "options": [
+    {
+     "value": "moon",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "owl",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "sleep",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Take the pair day and sun. The sun gives light by day. The moon gives light at night, so moon is the answer. An owl and sleep both go with night, but neither gives light.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-18",
+   "stem": {
+    "pairA": [
+     "eye",
+     "see"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "ear"
+   },
+   "key": "hear",
+   "options": [
+    {
+     "value": "hear",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "sound",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "head",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "First read eye and see. The eye's job is to see. The ear's job is to hear, so hear fits. Sound and head go with ears, not the job.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-19",
+   "stem": {
+    "pairA": [
+     "pen",
+     "write"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "knife"
+   },
+   "key": "cut",
+   "options": [
+    {
+     "value": "cut",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "fork",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "sharp",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Look at pen and write. A pen is for writing. You use a knife to cut, so cut fits. Fork and sharp go with knives, not the job.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-20",
+   "stem": {
+    "pairA": [
+     "fish",
+     "swim"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "bird"
+   },
+   "key": "fly",
+   "options": [
+    {
+     "value": "fly",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "wing",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "sky",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Start with fish and swim. A fish moves about by swimming. A bird moves about by flying, so fly fits. Wing and sky go with birds, not the moving.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-21",
+   "stem": {
+    "pairA": [
+     "car",
+     "road"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "train"
+   },
+   "key": "track",
+   "options": [
+    {
+     "value": "track",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "station",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "ticket",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Begin with car and road. A car runs along a road, its path. Likewise a train runs along a track. Station and ticket go with trains, not paths.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-22",
+   "stem": {
+    "pairA": [
+     "teacher",
+     "school"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "doctor"
+   },
+   "key": "hospital",
+   "options": [
+    {
+     "value": "hospital",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "medicine",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "nurse",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Read teacher and school first. A teacher works inside a school. A doctor works inside a hospital, so hospital fits. Medicine and nurse go with doctors, not the place.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-23",
+   "stem": {
+    "pairA": [
+     "rain",
+     "wet"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "sun"
+   },
+   "key": "dry",
+   "options": [
+    {
+     "value": "dry",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "wet",
+     "isKey": false,
+     "tag": "vr10-first-pair-word-returned",
+     "tagChildHint": "That word is already in the first pair. The second pair needs its own answer."
+    },
+    {
+     "value": "yellow",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Take the pair rain and wet. Rain leaves things wet. The sun leaves things dry, so dry is the answer. Wet belongs to the first pair, and yellow is only the colour of the sun.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-24",
+   "stem": {
+    "pairA": [
+     "caterpillar",
+     "butterfly"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "tadpole"
+   },
+   "key": "frog",
+   "options": [
+    {
+     "value": "frog",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "pond",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "jump",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Start with caterpillar and butterfly. The caterpillar turns into the butterfly. In the same way, a tadpole turns into a frog. Pond and jump go with frogs, not the change.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-25",
+   "stem": {
+    "pairA": [
+     "book",
+     "read"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "song"
+   },
+   "key": "sing",
+   "options": [
+    {
+     "value": "sing",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "music",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "note",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Look at book and read. You read a book; reading is its use. You sing a song, so sing fits. Music and note go with songs, not the doing.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  }
+ ]
+}

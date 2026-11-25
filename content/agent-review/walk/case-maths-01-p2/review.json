@@ -1,0 +1,96 @@
+{
+ "case": "case-maths-01-p2",
+ "reviewer": "rev-agent-01",
+ "rows": [
+  {
+   "itemId": "MC04-CALC-03",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "48 x 6: 8 x 6 = 48 (write 8, carry 4), 4 x 6 = 24 + 4 = 28, so 288 correct; the dropped-carry claim is gone and 328 (carry added twice, 24 + 4 + 4 = 32) is on screen and described truly; the 24 + carried 4 step is now shown."
+  },
+  {
+   "itemId": "MC04-CALC-06",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "4,002 - 1,375: exchanging to 3 thousands, 9 hundreds, 9 tens, 12 ones gives 7, 2, 6, 2 = 2627 correct; the working across the zeros is now shown; 2600 (4,000 - 1,400) is on screen and tagged rounding, described truly."
+  },
+  {
+   "itemId": "MC04-FDP-07",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "3/8 of 32 = 12, 32 - 12 = 20, 20 / 4 = 5 correct and now reached on these numbers; 8 (a quarter of all 32) is on screen and described truly."
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "3/5 of 40 = 24, 40 - 24 = 16, 16 / 4 = 4, 16 - 4 = 12 correct; 'fractions' as a verb is gone; 6 (16 - a quarter of 40 = 16 - 10) is on screen and described truly."
+  },
+  {
+   "itemId": "MC04-MEAS-01",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "£7.00 - £2.80 by counting on (20p to £3.00, £4 to £7.00) = £4.20 correct; every amount now on £; £9.80 (adding) is on screen and described truly."
+  },
+  {
+   "itemId": "MC04-MEAS-04",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "£10 - £6.05 by counting on (95p to £7.00, £3 to £10.00) = £3.95 correct; every amount now on £; £16.05 (adding) is on screen and described truly."
+  },
+  {
+   "itemId": "MC04-MEAS-06",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "£2.45 + £1.30 = £3.75, £5 - £3.75 = £1.25 (25p to £4.00, £1 to £5.00) correct; all amounts on £; £8.75 (£3.75 + £5) is on screen and described truly."
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "465 + 218: 5 + 8 = 13 (carry 1), 6 + 1 + 1 = 8, 4 + 2 = 6, so 683 correct; the 'rounds the numbers' claim is gone; 673 (carry forgotten) is on screen and described truly."
+  },
+  {
+   "itemId": "MC05-CALC-03",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "57 x 4: 7 x 4 = 28 (carry 2), 5 x 4 = 20 + 2 = 22, so 228 correct; the dropped-carry claim is gone; 248 (carry added twice) is on screen and described truly."
+  },
+  {
+   "itemId": "MC05-FDP-08",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "25% = one quarter, a quarter of £64 = £16, £64 - £16 = £48 correct; £ notation throughout, the £16 discount is now stated; £16 (stopped) and £39 (£25 taken off) are on screen and described truly, the 'adds the percent' error is gone."
+  },
+  {
+   "itemId": "MC05-GEOM-02",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "180° - 137° = 43° (180 - 130 = 50, 50 - 7 = 43) correct; screen shows ° and the script now uses °; 223° (360° - 137°) is on screen and described truly."
+  },
+  {
+   "itemId": "MC05-GEOM-06",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "180° - 140° = 40°, 180° - 40° - 30° = 110° correct; screen shows ° and the script now uses °; 40° (stopping after the first step) is on screen and described truly."
+  },
+  {
+   "itemId": "MC05-MEAS-06",
+   "source": "draft",
+   "verdict": "APPROVE",
+   "reason": "375 + 246: 5 + 6 = 11 (carry 1), 7 + 4 + 1 = 12 (carry 1), 3 + 2 + 1 = 6, so 621 g correct; both carries now shown; 521 g (last carried 1 forgotten, 3 + 2 = 5) is on screen and described truly."
+  },
+  {
+   "itemId": "MC04-GEOM-03",
+   "source": "existing",
+   "verdict": "APPROVE",
+   "reason": "65 + 48 = 113, 180 - 113 = 67 degrees correct; the stem and options write 'degrees' in words, so the script's 'degrees' is consistent under the ruling; 247 degrees (360 - 113) and 115 degrees (180 - 65, leaving 48 out) are on screen and match 'uses 360 or leaves an angle out'; form within limits."
+  },
+  {
+   "itemId": "MC04-GEOM-06",
+   "source": "existing",
+   "verdict": "APPROVE",
+   "reason": "180 - 50 = 130, 130 / 2 = 65 degrees correct; the stem and options write 'degrees' in words, so the script's 'degrees' is consistent under the ruling; 130 degrees (stopped before sharing) is on screen and described truly; form within limits."
+  }
+ ]
+}

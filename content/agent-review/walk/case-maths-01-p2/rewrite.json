@@ -1,0 +1,71 @@
+{
+ "case": "case-maths-01-p2",
+ "round": 2,
+ "rows": [
+  {
+   "itemId": "MC04-CALC-03",
+   "currentScript": "Multiply the ones first, then the tens. Eight sixes make forty-eight, so write eight and carry four. The tens give twenty-eight, so the answer is 288. The trap drops the carry or writes both products.",
+   "whyRewrite": "Arithmetic right (48 x 6 = 288) but 'The trap drops the carry' describes no option: a dropped carry gives 248, which is not offered (648 misplaces the carry, 328 adds it twice). Also 'The tens give twenty-eight' hides the step 24 + carried 4."
+  },
+  {
+   "itemId": "MC04-CALC-06",
+   "currentScript": "Line up the columns and subtract from the right. Borrow carefully all the way across the zeros. 4,002 minus 1,375 is 2,627. The trap takes each smaller digit from the larger.",
+   "whyRewrite": "Key right (4,002 - 1,375 = 2,627) but 'The trap takes each smaller digit from the larger' describes no option: that slip gives 3,373; the tagged option 2007 is not produced by it. The working across the zeros is also only announced."
+  },
+  {
+   "itemId": "MC04-FDP-07",
+   "currentScript": "Find the dark ones first: three eighths of the box. Take those away to see how many are left. A quarter of the rest are white, giving 5. The trap uses the whole box or stops early.",
+   "whyRewrite": "Key right (3/8 of 32 = 12, 32 - 12 = 20, 20 / 4 = 5) but the script never states 12 or 20, so 'giving 5' is announced rather than reached on this question's numbers."
+  },
+  {
+   "itemId": "MC04-FDP-08",
+   "currentScript": "Take away Monday's share: 3/5 of 40 is 24, leaving 16. Now Tuesday uses a quarter of those 16, which is 4. So 12 litres are left. The trap fractions the first total.",
+   "whyRewrite": "Arithmetic right (24 used, 16 left, 4 used, 12 left) but 'The trap fractions the first total' uses 'fractions' as a verb, which a 9-11-year-old will not read easily; say what the trap does (takes a quarter of 40)."
+  },
+  {
+   "itemId": "MC04-MEAS-01",
+   "currentScript": "Change means lining the amounts up and taking away. Write £7 as 7.00 first. Take 2.80 away to leave 4.20. The trap drops the pence or adds instead.",
+   "whyRewrite": "Working right (£7.00 - £2.80 = £4.20) but money is not on £: '7.00', 'Take 2.80 away to leave 4.20' are bare amounts; house notation requires £7.00, £2.80, £4.20."
+  },
+  {
+   "itemId": "MC04-MEAS-04",
+   "currentScript": "Change means taking the cost from the note. Write the price as 6.05 with the middle zero. Take it from 10 to leave 3.95. The trap drops a zero or adds.",
+   "whyRewrite": "Working right (£10 - £6.05 = £3.95) but money is not on £: 'as 6.05', 'Take it from 10 to leave 3.95'; house notation requires £6.05, £10, £3.95."
+  },
+  {
+   "itemId": "MC04-MEAS-06",
+   "currentScript": "Add the two prices first: 2.45 plus 1.30 is 3.75. Take that total from £5. The change is 1.25. The trap adds the note or drops pence.",
+   "whyRewrite": "Working right (£2.45 + £1.30 = £3.75, £5 - £3.75 = £1.25) but '2.45 plus 1.30 is 3.75' and 'The change is 1.25' are not on £; house notation requires the £ sign."
+  },
+  {
+   "itemId": "MC05-CALC-01",
+   "currentScript": "Line up the columns and add from the right. Five plus eight makes thirteen, so carry the ten. Keep going to reach 683. The trap drops a carry or rounds the numbers.",
+   "whyRewrite": "Arithmetic right (465 + 218 = 683) but 'The trap ... rounds the numbers' describes no option: 673 drops the carry, 283 drops a digit, 247 subtracts; none is a rounding answer."
+  },
+  {
+   "itemId": "MC05-CALC-03",
+   "currentScript": "Multiply the ones first, then the tens. Seven fours make twenty-eight, so write eight and carry two. The tens give twenty-two, so the answer is 228. The trap drops the carry or writes both products.",
+   "whyRewrite": "Arithmetic right (57 x 4 = 228) but 'The trap drops the carry' describes no option: a dropped carry gives 208, not offered (408 misplaces the carry, 248 adds it twice)."
+  },
+  {
+   "itemId": "MC05-FDP-08",
+   "currentScript": "A quarter off means find one quarter of sixty-four pounds. Take that discount away from the sixty-four. The sale price is £48. The trap halves it, adds the percent, or stops.",
+   "whyRewrite": "Key right (64 / 4 = 16, 64 - 16 = 48) but 'sixty-four pounds' breaks house notation (money on £), the £16 discount is never stated, and 'adds the percent' is wrong: £39 = £64 - 25, which takes 25 off as pounds, it does not add."
+  },
+  {
+   "itemId": "MC05-GEOM-02",
+   "currentScript": "Angles on a straight line always add to 180. Take the 137 away from 180. The angle left is 43 degrees. One trap uses the full-turn total.",
+   "whyRewrite": "Working right (180 - 137 = 43) but the script writes '43 degrees' where the screen shows 43°; house notation requires degrees with °."
+  },
+  {
+   "itemId": "MC05-GEOM-06",
+   "currentScript": "The straight line gives the inside angle: 180 take 140 is 40. A triangle's angles add to 180. Take away 40 and 30 to leave 110 degrees. One trap stops before the last step.",
+   "whyRewrite": "Working right (180 - 140 = 40, 180 - 40 - 30 = 110) but the script writes '110 degrees' where the screen shows 110°; house notation requires degrees with °."
+  },
+  {
+   "itemId": "MC05-MEAS-06",
+   "currentScript": "Line the digits up in their columns and add. Five plus six is eleven, so carry the ten. Keep going to reach 621 g. A trap drops a digit or a carried ten.",
+   "whyRewrite": "Key right (375 + 246 = 621) but the script shows only the ones carry and skips the second carry (7 + 4 + 1 = 12 tens); and the 521 trap drops a carried hundred, not 'a carried ten'."
+  }
+ ]
+}

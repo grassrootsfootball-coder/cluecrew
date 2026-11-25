@@ -1,0 +1,375 @@
+{
+  "door": "faults",
+  "proposer": "agent",
+  "rebuilds": [
+    {
+      "itemId": "bank-vr-02-two-odd-ones-out-22",
+      "why": "Fault: hen, cat, dog read as kept animals and left snake, frog as a second odd pair. Cat and dog are replaced by cow and whale, so the only three sharing a rule are the egg-layers hen, snake, frog; no other three of the five form a group.",
+      "stem": {
+        "words": [
+          "hen",
+          "cow",
+          "snake",
+          "whale",
+          "frog"
+        ],
+        "prompt": "Three of these words go together. Which two are the odd ones out?"
+      },
+      "options": [
+        {
+          "optionId": "cmscb15cz00cytmzvjh2gokya",
+          "value": "[\"cow\", \"whale\"]",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmscb15cz00cztmzv61egwuja",
+          "value": "[\"cow\", \"hen\"]",
+          "isKey": false,
+          "tag": "vr02-partial-group",
+          "execution": "The child spots that cow does not lay eggs and stops there. Hen is paired with it because both live on a farm, but hen belongs to the egg-laying three."
+        },
+        {
+          "optionId": "cmscb15cz00d0tmzvutkucgqn",
+          "value": "[\"snake\", \"whale\"]",
+          "isKey": false,
+          "tag": "vr02-partial-group",
+          "execution": "The child picks out whale as one odd word and pairs it with snake, perhaps because neither has legs. Snake lays eggs, so it sits inside the group and cow is left out of the answer."
+        },
+        {
+          "optionId": "cmscb15cz00d1tmzvnqgkmbk5",
+          "value": "[\"snake\", \"frog\"]",
+          "isKey": false,
+          "tag": "vr02-answered-the-opposite",
+          "execution": "The child notices that snake and frog both lay eggs and offers them. That is the rule of the group, so these two belong; the child has answered which words go together instead of which two do not."
+        }
+      ]
+    },
+    {
+      "itemId": "bank-vr-02-two-odd-ones-out-24",
+      "why": "Fault: ball, kick, net made a football group and left jump, run as a second odd pair. Kick is replaced by hop, so the only three sharing a rule are the ways of moving on your legs (jump, hop, run) and no football reading remains.",
+      "stem": {
+        "words": [
+          "jump",
+          "ball",
+          "hop",
+          "net",
+          "run"
+        ],
+        "prompt": "Three of these words go together. Which two are the odd ones out?"
+      },
+      "options": [
+        {
+          "optionId": "cmscb15d400d8tmzvsku8d1iw",
+          "value": "[\"ball\", \"net\"]",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmscb15d400d9tmzvbyirzief",
+          "value": "[\"ball\", \"jump\"]",
+          "isKey": false,
+          "tag": "vr02-partial-group",
+          "execution": "The child sees that ball is a thing rather than an action and stops there. Jump is added as its partner, but jump is one of the three movement words, so net is left out of the answer."
+        },
+        {
+          "optionId": "cmscb15d400datmzv617rqa9a",
+          "value": "[\"hop\", \"net\"]",
+          "isKey": false,
+          "tag": "vr02-partial-group",
+          "execution": "The child finds net as one odd word but pairs it with hop. Hop is a way of moving on your legs like jump and run, so it belongs to the group of three."
+        },
+        {
+          "optionId": "cmscb15d400dbtmzvkw569cl0",
+          "value": "[\"jump\", \"run\"]",
+          "isKey": false,
+          "tag": "vr02-answered-the-opposite",
+          "execution": "The child notices that jump and run are both ways of moving and offers them. Those two follow the group's own rule, so the child has answered which words belong instead of which two are odd."
+        }
+      ]
+    },
+    {
+      "itemId": "bank-vr-04-closest-meaning-06",
+      "why": "Fault: FAIR is retired as a bare card (three senses, no safe key). Replaced by GLAD, the card vr04.ts names as FAIR's replacement at T1; key happy is commoner than glad, and no distractor is correct in glad's other sense (willing).",
+      "explanationPatch": {
+        "walkScript": null,
+        "walkScriptStatus": null
+      },
+      "stem": {
+        "words": [
+          "glad"
+        ],
+        "prompt": "Which word is closest in meaning to the word on the card?"
+      },
+      "options": [
+        {
+          "optionId": "cmscb156e000qtmzvmd5911oj",
+          "value": "happy",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "cmscb156e000rtmzvsgs62ho0",
+          "value": "sad",
+          "isKey": false,
+          "tag": "vr04-opposite-pull",
+          "execution": "The child finds the area of feelings but lands on the opposite one. Sad points away from glad, so the meaning has been flipped."
+        },
+        {
+          "optionId": "cmscb156e000stmzvd611h359",
+          "value": "smile",
+          "isKey": false,
+          "tag": "vr04-associated-not-same",
+          "execution": "A glad person often smiles, so the two words turn up together. Smile names something a person does, not the feeling itself, and the child has taken goes-together for means-the-same."
+        },
+        {
+          "optionId": "cmscb156e000ttmzvyon0p20b",
+          "value": "party",
+          "isKey": false,
+          "tag": "vr04-associated-not-same",
+          "execution": "A party is a place where people feel glad, so the child links the two. Party names an event, not a feeling, so it does not share the meaning of glad."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-04-closest-meaning-09",
+      "why": "Fault: key quick and option hurried are house-banned. Card RAPID is kept; the key becomes fast (commoner than rapid) and hurried becomes early, a timing word that shares the area without the meaning.",
+      "stem": {
+        "words": [
+          "rapid"
+        ],
+        "prompt": "Which word is closest in meaning to the word on the card?"
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-04-closest-meaning-09-opt1",
+          "value": "fast",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-04-closest-meaning-09-opt2",
+          "value": "slow",
+          "isKey": false,
+          "tag": "vr04-opposite-pull",
+          "execution": "The child finds the area of speed but reverses it. Slow means taking a long time, the opposite of rapid."
+        },
+        {
+          "optionId": "gen-vr-04-closest-meaning-09-opt3",
+          "value": "early",
+          "isKey": false,
+          "tag": "vr04-wrong-shade",
+          "execution": "The child hears something to do with time and picks early. Early is about when something happens, not how fast it moves, so the meaning has tilted away from speed."
+        },
+        {
+          "optionId": "gen-vr-04-closest-meaning-09-opt4",
+          "value": "race",
+          "isKey": false,
+          "tag": "vr04-associated-not-same",
+          "execution": "A race is where things move at a rapid pace, so the two words go together. Race names an event, not a speed, and the child has taken goes-together for means-the-same."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-12-compound-words-11",
+      "why": "Fault: fry with pan makes panfry/frypan, a second answer. Fry is replaced by lid, which belongs with a pan in meaning but makes no word in either order (panlid, lidpan). The precheck also held the existing option pot (an unsuitable second sense), so it is replaced by oven (panoven, ovenpan are not words).",
+      "explanationPatch": {
+        "walkScript": null,
+        "walkScriptStatus": null
+      },
+      "stem": {
+        "words": [
+          "pan"
+        ],
+        "prompt": "Which word joins with \"pan\" to make one new word?"
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-12-compound-words-11-opt1",
+          "value": "cake",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-12-compound-words-11-opt2",
+          "value": "oven",
+          "isKey": false,
+          "tag": "vr12-meaning-not-word",
+          "execution": "A pan goes in or on the oven, so the child feels the two words belong. Put together they give panoven or ovenpan, and neither is a real word."
+        },
+        {
+          "optionId": "gen-vr-12-compound-words-11-opt3",
+          "value": "lid",
+          "isKey": false,
+          "tag": "vr12-meaning-not-word",
+          "execution": "A pan often has a lid, so the child picks the word that goes with it in meaning. Joined up it gives panlid or lidpan, which is not a word anyone has seen written."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-10-word-connections-08",
+      "why": "Fault: sword was defensible if the link is the thing a knight is known by. Sword is replaced by battle, which a knight neither wears nor is marked by, so only helmet (worn on the head, as a crown is) completes the pair. The stored walk-through named sword, so it is cleared with its approval marker for the walk door to redraft.",
+      "explanationPatch": {
+        "walkScript": null,
+        "walkScriptStatus": null,
+        "walkScriptApprovedBy": null
+      },
+      "stem": {
+        "pairA": [
+          "king",
+          "crown"
+        ],
+        "prompt": "Find the connection in the first pair, then complete the second.",
+        "stemWord": "knight"
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-10-word-connections-08-opt1",
+          "value": "helmet",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-10-word-connections-08-opt2",
+          "value": "castle",
+          "isKey": false,
+          "tag": "vr03-same-topic",
+          "execution": "The first pair shows what a king wears on his head. The child stays in the knight's world and picks castle, a place a knight belongs, so the link has changed from something worn to somewhere lived."
+        },
+        {
+          "optionId": "gen-vr-10-word-connections-08-opt3",
+          "value": "battle",
+          "isKey": false,
+          "tag": "vr03-same-topic",
+          "execution": "The child picks a word from the same story world, since knights ride into battle. A battle is an event, not something worn on the head, so the link from the first pair has been dropped."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-06",
+      "why": "Fault: hurry is house-banned. It is replaced by race, a goes-together verb. The key end was commoner than finish, against R323 for vr-21, so the key becomes complete (rarer than finish); executions rewritten to name it.",
+      "stem": {
+        "words": [
+          "finish"
+        ],
+        "prompt": "Which word means the SAME as the word on the card?"
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-21-same-meaning-06-opt1",
+          "value": "complete",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-06-opt2",
+          "value": "begin",
+          "isKey": false,
+          "tag": "vr21-opposite-pull",
+          "execution": "The child finds the area of starting and stopping but reverses it. Begin is the opposite of finish, so the meaning has been flipped."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-06-opt3",
+          "value": "win",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "Finish and win go together in a race, so the child links them. Winning means coming first, not bringing something to an end, so the two words do not swap in a sentence."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-06-opt4",
+          "value": "race",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "People finish a race, so the child picks the word that goes with finish. Race means to move against others, not to end something, so it cannot stand in for finish."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-21",
+      "why": "Fault: card quick and option easy are house-banned. New card FAST with key swift (rarer than fast); slow stays as the opposite, and the goes-together options are asleep (fast asleep) and loud, neither a synonym of the other.",
+      "stem": {
+        "words": [
+          "fast"
+        ],
+        "prompt": "Which word means the SAME as the word on the card?"
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-21-same-meaning-21-opt1",
+          "value": "swift",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-21-opt2",
+          "value": "slow",
+          "isKey": false,
+          "tag": "vr21-opposite-pull",
+          "execution": "The child finds the area of speed but reverses it. Slow is the opposite of fast, so the meaning has been flipped."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-21-opt3",
+          "value": "asleep",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "Fast asleep is a common phrase, so the child links the two words. Asleep is about sleeping, not speed, so it cannot swap with fast in a sentence about a runner."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-21-opt4",
+          "value": "loud",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "Fast and loud often go together for cars or music, so the child picks loud. Loud is about sound, not speed, so the two words do not share a meaning."
+        }
+      ]
+    },
+    {
+      "itemId": "gen-vr-21-same-meaning-25",
+      "why": "Fault: card simple and key easy are house-banned. New card BRAVE with key courageous (rarer than brave); cowardly is the opposite, and kind and loyal are praise words that keep company with brave without sharing its meaning.",
+      "stem": {
+        "words": [
+          "brave"
+        ],
+        "prompt": "Which word means the SAME as the word on the card?"
+      },
+      "options": [
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt1",
+          "value": "courageous",
+          "isKey": true,
+          "tag": null,
+          "execution": null
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt2",
+          "value": "cowardly",
+          "isKey": false,
+          "tag": "vr21-opposite-pull",
+          "execution": "The child finds the area of courage but reverses it. Cowardly means lacking courage, the opposite of brave."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt3",
+          "value": "kind",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "Brave and kind are often said together about a hero in a story, so the child links them. Kind means caring for others, not facing danger, so it cannot swap with brave."
+        },
+        {
+          "optionId": "gen-vr-21-same-meaning-25-opt4",
+          "value": "loyal",
+          "isKey": false,
+          "tag": "vr21-associated-not-same",
+          "execution": "Loyal is another word of praise that turns up beside brave, so the child picks it. Loyal means sticking by someone, not being unafraid, so the two words do not mean the same."
+        }
+      ]
+    }
+  ]
+}
