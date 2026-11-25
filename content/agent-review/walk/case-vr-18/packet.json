@@ -1,0 +1,868 @@
+{
+ "caseId": "case-vr-18",
+ "title": "The Middle Number",
+ "questionType": "vr-18-related-numbers",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-18-related-numbers-01",
+   "stem": {
+    "sum": "(2 [5] 3)    (4 [?] 2)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "6",
+   "options": [
+    {
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-02",
+   "stem": {
+    "sum": "(6 [14] 8)    (10 [?] 6)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "16",
+   "options": [
+    {
+     "value": "16",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "60",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "18",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-03",
+   "stem": {
+    "sum": "(4 [20] 5)    (6 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "24",
+   "options": [
+    {
+     "value": "24",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "10",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "30",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-04",
+   "stem": {
+    "sum": "(10 [120] 12)    (14 [?] 10)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "140",
+   "options": [
+    {
+     "value": "140",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "24",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "168",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-05",
+   "stem": {
+    "sum": "(6 [13] 7)    (8 [?] 6)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "14",
+   "options": [
+    {
+     "value": "14",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "48",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "12",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-06",
+   "stem": {
+    "sum": "(14 [20] 6)    (8 [?] 14)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "22",
+   "options": [
+    {
+     "value": "22",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "112",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "28",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-07",
+   "stem": {
+    "sum": "(2 [8] 4)    (5 [?] 8)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "40",
+   "options": [
+    {
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-08",
+   "stem": {
+    "sum": "(6 [60] 10)    (12 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "48",
+   "options": [
+    {
+     "value": "48",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "16",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "24",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-09",
+   "stem": {
+    "sum": "(4 [10] 6)    (7 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "11",
+   "options": [
+    {
+     "value": "11",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "28",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-10",
+   "stem": {
+    "sum": "(10 [24] 14)    (16 [?] 9)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "25",
+   "options": [
+    {
+     "value": "25",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "144",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "19",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-11",
+   "stem": {
+    "sum": "(6 [18] 3)    (4 [?] 5)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "20",
+   "options": [
+    {
+     "value": "20",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "30",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-12",
+   "stem": {
+    "sum": "(14 [112] 8)    (10 [?] 12)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "120",
+   "options": [
+    {
+     "value": "120",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "22",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "80",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-13",
+   "stem": {
+    "sum": "(2 [7] 5)    (6 [?] 7)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "13",
+   "options": [
+    {
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "42",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-14",
+   "stem": {
+    "sum": "(6 [18] 12)    (14 [?] 16)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "30",
+   "options": [
+    {
+     "value": "30",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "224",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "26",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-15",
+   "stem": {
+    "sum": "(4 [28] 7)    (8 [?] 2)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "16",
+   "options": [
+    {
+     "value": "16",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "10",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "56",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-16",
+   "stem": {
+    "sum": "(10 [60] 6)    (8 [?] 5)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "40",
+   "options": [
+    {
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "50",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-17",
+   "stem": {
+    "sum": "(6 [10] 4)    (7 [?] 2)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "9",
+   "options": [
+    {
+     "value": "9",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "14",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-18",
+   "stem": {
+    "sum": "(14 [24] 10)    (12 [?] 9)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "21",
+   "options": [
+    {
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "108",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "23",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-19",
+   "stem": {
+    "sum": "(2 [12] 6)    (7 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "28",
+   "options": [
+    {
+     "value": "28",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "42",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-20",
+   "stem": {
+    "sum": "(6 [84] 14)    (16 [?] 13)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "208",
+   "options": [
+    {
+     "value": "208",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "29",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "224",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-21",
+   "stem": {
+    "sum": "(4 [7] 3)    (5 [?] 7)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "12",
+   "options": [
+    {
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "35",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-22",
+   "stem": {
+    "sum": "(10 [18] 8)    (9 [?] 4)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "13",
+   "options": [
+    {
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "36",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "17",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-23",
+   "stem": {
+    "sum": "(6 [30] 5)    (7 [?] 3)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "21",
+   "options": [
+    {
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "10",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "18",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-24",
+   "stem": {
+    "sum": "(14 [168] 12)    (13 [?] 8)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "104",
+   "options": [
+    {
+     "value": "104",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "21",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "112",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-18-related-numbers-25",
+   "stem": {
+    "sum": "(2 [9] 7)    (8 [?] 5)",
+    "prompt": "The middle number is made from the outer numbers in the same way each time. What replaces the question mark?"
+   },
+   "key": "13",
+   "options": [
+    {
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "40",
+     "isKey": false,
+     "tag": "vr18-rule-swap",
+     "tagChildHint": "Test your rule on the first group before using it on the second."
+    },
+    {
+     "value": "15",
+     "isKey": false,
+     "tag": "vr18-partial-rule",
+     "tagChildHint": "The middle number is made from both outside numbers. How do they combine?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

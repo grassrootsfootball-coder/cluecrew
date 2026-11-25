@@ -1,0 +1,868 @@
+{
+ "caseId": "case-vr-20",
+ "title": "The Smudged Page",
+ "questionType": "vr-20-complete-the-word",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-20-complete-the-word-01",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "T_GER"
+   },
+   "key": "I",
+   "options": [
+    {
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-02",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "DAN_ER"
+   },
+   "key": "C",
+   "options": [
+    {
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-03",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "_EVEN"
+   },
+   "key": "S",
+   "options": [
+    {
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-04",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "MUS_LE"
+   },
+   "key": "C",
+   "options": [
+    {
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-05",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "P_RPLE"
+   },
+   "key": "U",
+   "options": [
+    {
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-06",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "SI_VER"
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-07",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "_AMEL"
+   },
+   "key": "C",
+   "options": [
+    {
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-08",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "FEN_E"
+   },
+   "key": "C",
+   "options": [
+    {
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-09",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "CR_STAL"
+   },
+   "key": "Y",
+   "options": [
+    {
+     "value": "Y",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "I",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-10",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "SP_DER"
+   },
+   "key": "I",
+   "options": [
+    {
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-11",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "CAS_LE"
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-12",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "_IRAFFE"
+   },
+   "key": "G",
+   "options": [
+    {
+     "value": "G",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-13",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "HOR_E"
+   },
+   "key": "S",
+   "options": [
+    {
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-14",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "PO_KET"
+   },
+   "key": "C",
+   "options": [
+    {
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-15",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "BI_YCLE"
+   },
+   "key": "C",
+   "options": [
+    {
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-16",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "_ANGAROO"
+   },
+   "key": "K",
+   "options": [
+    {
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-17",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "S_ATE"
+   },
+   "key": "K",
+   "options": [
+    {
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-18",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "CI_CUS"
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-19",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "TI_KET"
+   },
+   "key": "C",
+   "options": [
+    {
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-20",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "BRID_E"
+   },
+   "key": "G",
+   "options": [
+    {
+     "value": "G",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-21",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "L_NTERN"
+   },
+   "key": "A",
+   "options": [
+    {
+     "value": "A",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-22",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "MOU_E"
+   },
+   "key": "S",
+   "options": [
+    {
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-23",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "TUN_EL"
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-24",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "EN_INE"
+   },
+   "key": "G",
+   "options": [
+    {
+     "value": "G",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-20-complete-the-word-25",
+   "stem": {
+    "prompt": "Which letter completes the word?",
+    "wordWithGap": "P_LOT"
+   },
+   "key": "I",
+   "options": [
+    {
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr20-common-letter",
+     "tagChildHint": "Try your letter in the gap and read the whole word."
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr20-sound-alike",
+     "tagChildHint": "Spell the finished word letter by letter. Is that how it is really written?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

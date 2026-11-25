@@ -1,0 +1,1078 @@
+{
+ "caseId": "case-vr-02",
+ "title": "Two Don't Belong",
+ "questionType": "vr-02-two-odd-ones-out",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-08",
+   "stem": {
+    "pairA": [
+     "king",
+     "crown"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "knight"
+   },
+   "key": "helmet",
+   "options": [
+    "helmet",
+    "castle",
+    "sword"
+   ],
+   "walkScript": "Start with king and crown. A king wears a crown on his head. In the same way, a knight wears a helmet. Castle and sword go with knights, not head."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-01",
+   "stem": {
+    "words": [
+     "apple",
+     "van",
+     "pear",
+     "bus",
+     "plum"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "van, bus",
+   "options": [
+    {
+     "value": "van, bus",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "van, apple",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "bus, pear",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "pear, plum",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": "Look at apple, pear and plum. All three are fruit. The two left over are van and bus, which carry people. Every other choice includes apple, pear or plum.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-02",
+   "stem": {
+    "words": [
+     "red",
+     "bear",
+     "blue",
+     "wolf",
+     "green"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "bear, wolf",
+   "options": [
+    {
+     "value": "bear, wolf",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "bear, red",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "wolf, green",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "bear, blue",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at red, blue and green. All three are colours. The two left over are bear and wolf, both animals. Every other choice includes red, blue or green.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-03",
+   "stem": {
+    "words": [
+     "hand",
+     "chair",
+     "knee",
+     "couch",
+     "chin"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "chair, couch",
+   "options": [
+    {
+     "value": "chair, couch",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "chair, hand",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "couch, knee",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "chair, chin",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at hand, knee and chin. All three are parts of the body. The two left over are chair and couch, both seats. Every other choice includes hand, knee or chin.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-04",
+   "stem": {
+    "words": [
+     "rain",
+     "hammer",
+     "snow",
+     "spade",
+     "wind"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "hammer, spade",
+   "options": [
+    {
+     "value": "hammer, spade",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "hammer, rain",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "spade, wind",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "snow, spade",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at rain, snow and wind. All three are kinds of weather. The two left over are hammer and spade, both tools. Every other choice includes rain, snow or wind.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-05",
+   "stem": {
+    "words": [
+     "hat",
+     "bread",
+     "coat",
+     "soup",
+     "sock"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "bread, soup",
+   "options": [
+    {
+     "value": "bread, soup",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "bread, hat",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "soup, coat",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "sock, soup",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at hat, coat and sock. All three are clothes. The two left over are bread and soup, both food. Every other choice includes hat, coat or sock.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-06",
+   "stem": {
+    "words": [
+     "bird",
+     "seal",
+     "bee",
+     "crab",
+     "wasp"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "seal, crab",
+   "options": [
+    {
+     "value": "seal, crab",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "seal, bird",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "crab, wasp",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "bird, bee",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": "Look at bird, bee and wasp. All three can fly. The two left over are seal and crab, which cannot fly. Every other choice includes bird, bee or wasp.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-07",
+   "stem": {
+    "words": [
+     "oven",
+     "ice",
+     "fire",
+     "snow",
+     "stove"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "ice, snow",
+   "options": [
+    {
+     "value": "ice, snow",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ice, oven",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "snow, fire",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "snow, stove",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at oven, fire and stove. All three are hot. The two left over are ice and snow, both cold. Every other choice includes oven, fire or stove.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-08",
+   "stem": {
+    "words": [
+     "saw",
+     "ball",
+     "drill",
+     "doll",
+     "spanner"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "ball, doll",
+   "options": [
+    {
+     "value": "ball, doll",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ball, saw",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "doll, spanner",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "drill, doll",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at saw, drill and spanner. All three are tools. The two left over are ball and doll, both toys. Every other choice includes saw, drill or spanner.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-09",
+   "stem": {
+    "words": [
+     "tree",
+     "rock",
+     "grass",
+     "brick",
+     "rose"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "rock, brick",
+   "options": [
+    {
+     "value": "rock, brick",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "rock, tree",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "brick, grass",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "rock, rose",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at tree, grass and rose. All three are plants that grow. The two left over are rock and brick, which never grow. Every other choice includes tree, grass or rose.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-10",
+   "stem": {
+    "words": [
+     "eel",
+     "goat",
+     "fish",
+     "sheep",
+     "shark"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "goat, sheep",
+   "options": [
+    {
+     "value": "goat, sheep",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "goat, eel",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "sheep, fish",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "sheep, shark",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at eel, fish and shark. All three live in water. The two left over are goat and sheep, both farm animals. Every other choice includes eel, fish or shark.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-11",
+   "stem": {
+    "words": [
+     "flute",
+     "straw",
+     "trumpet",
+     "balloon",
+     "recorder"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "straw, balloon",
+   "options": [
+    {
+     "value": "straw, balloon",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "straw, flute",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "balloon, recorder",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "trumpet, balloon",
+     "isKey": false,
+     "tag": "vr02-real-link-wrong-rule",
+     "tagChildHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+    }
+   ],
+   "walkScript": "Look at flute, trumpet and recorder. All three are musical instruments. The two left over are straw and balloon. Every other choice includes flute, trumpet or recorder.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-12",
+   "stem": {
+    "words": [
+     "knife",
+     "pin",
+     "scissors",
+     "thorn",
+     "saw"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "pin, thorn",
+   "options": [
+    {
+     "value": "pin, thorn",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "pin, knife",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "thorn, scissors",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "knife, thorn",
+     "isKey": false,
+     "tag": "vr02-real-link-wrong-rule",
+     "tagChildHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+    }
+   ],
+   "walkScript": "Look at knife, scissors and saw. All three are tools that cut. The two left over are pin and thorn, which prick. Every other choice includes knife, scissors or saw.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-13",
+   "stem": {
+    "words": [
+     "lamp",
+     "mirror",
+     "torch",
+     "ring",
+     "candle"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "mirror, ring",
+   "options": [
+    {
+     "value": "mirror, ring",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "mirror, lamp",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "ring, torch",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "candle, mirror",
+     "isKey": false,
+     "tag": "vr02-real-link-wrong-rule",
+     "tagChildHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+    }
+   ],
+   "walkScript": "Look at lamp, torch and candle. All three give light. The two left over are mirror and ring. Every other choice includes lamp, torch or candle.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-14",
+   "stem": {
+    "words": [
+     "milk",
+     "paint",
+     "juice",
+     "glue",
+     "tea"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "paint, glue",
+   "options": [
+    {
+     "value": "paint, glue",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "paint, milk",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "glue, juice",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "juice, paint",
+     "isKey": false,
+     "tag": "vr02-real-link-wrong-rule",
+     "tagChildHint": "Those two do go together, but not by the group's rule. Find what the three share first."
+    }
+   ],
+   "walkScript": "Look at milk, juice and tea. All three are drinks. The two left over are paint and glue. Every other choice includes milk, juice or tea.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-15",
+   "stem": {
+    "words": [
+     "robin",
+     "bee",
+     "duck",
+     "bat",
+     "crow"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "bee, bat",
+   "options": [
+    {
+     "value": "bee, bat",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "bee, robin",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "bat, duck",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "duck, crow",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": "Look at robin, duck and crow. All three are birds. The two left over are bee and bat, which fly but are not birds. Every other choice includes robin, duck or crow.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-16",
+   "stem": {
+    "words": [
+     "happy",
+     "tired",
+     "angry",
+     "hungry",
+     "afraid"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "tired, hungry",
+   "options": [
+    {
+     "value": "tired, hungry",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "tired, happy",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "hungry, angry",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "happy, hungry",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at happy, angry and afraid. All three are moods. The two left over are tired and hungry, which the body feels. Every other choice includes happy, angry or afraid.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-17",
+   "stem": {
+    "words": [
+     "square",
+     "circle",
+     "triangle",
+     "oval",
+     "star"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "circle, oval",
+   "options": [
+    {
+     "value": "circle, oval",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "circle, square",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "oval, triangle",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "triangle, star",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": "Look at square, triangle and star. All three have straight sides and corners. The two left over are circle and oval, which curve all round. Every other choice includes square, triangle or star.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-18",
+   "stem": {
+    "words": [
+     "cow",
+     "deer",
+     "pig",
+     "wolf",
+     "hen"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "deer, wolf",
+   "options": [
+    {
+     "value": "deer, wolf",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "deer, cow",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "wolf, pig",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "cow, hen",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": "Look at cow, pig and hen. All three live on a farm. The two left over are deer and wolf, both wild. Every other choice includes cow, pig or hen.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-19",
+   "stem": {
+    "words": [
+     "clock",
+     "mirror",
+     "ruler",
+     "cup",
+     "scales"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "mirror, cup",
+   "options": [
+    {
+     "value": "mirror, cup",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "mirror, clock",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "cup, ruler",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "cup, clock",
+     "isKey": false,
+     "tag": "vr02-surface-link",
+     "tagChildHint": "Name the group of three first. Both odd ones must sit outside it, however alike two words look or sound."
+    }
+   ],
+   "walkScript": "Look at clock, ruler and scales. All three measure something. The two left over are mirror and cup. Every other choice includes clock, ruler or scales.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-20",
+   "stem": {
+    "words": [
+     "walk",
+     "clap",
+     "run",
+     "throw",
+     "jump"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "clap, throw",
+   "options": [
+    {
+     "value": "clap, throw",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "clap, walk",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "throw, run",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "walk, jump",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": "Look at walk, run and jump. All three use the legs. The two left over are clap and throw, which use the hands. Every other choice includes walk, run or jump.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-21",
+   "stem": {
+    "words": [
+     "rock",
+     "brick",
+     "sand",
+     "plastic",
+     "wood"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "brick, plastic",
+   "options": [
+    {
+     "value": "brick, plastic",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "brick, rock",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "plastic, sand",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "rock, wood",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": "Look at rock, sand and wood. All three come from nature. The two left over are brick and plastic, which people make. Every other choice includes rock, sand or wood.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-22",
+   "stem": {
+    "words": [
+     "hen",
+     "cat",
+     "snake",
+     "dog",
+     "frog"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "cat, dog",
+   "options": [
+    {
+     "value": "cat, dog",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "cat, hen",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "dog, snake",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "snake, frog",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-23",
+   "stem": {
+    "words": [
+     "soft",
+     "hot",
+     "rough",
+     "cold",
+     "smooth"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "hot, cold",
+   "options": [
+    {
+     "value": "hot, cold",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "hot, soft",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "cold, rough",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "soft, smooth",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-24",
+   "stem": {
+    "words": [
+     "jump",
+     "ball",
+     "kick",
+     "net",
+     "run"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "ball, net",
+   "options": [
+    {
+     "value": "ball, net",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ball, jump",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "net, kick",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "jump, run",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-02-two-odd-ones-out-25",
+   "stem": {
+    "words": [
+     "whale",
+     "shark",
+     "dolphin",
+     "tuna",
+     "seal"
+    ],
+    "prompt": "Three of these words go together. Which two are the odd ones out?"
+   },
+   "key": "shark, tuna",
+   "options": [
+    {
+     "value": "shark, tuna",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "shark, whale",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "tuna, dolphin",
+     "isKey": false,
+     "tag": "vr02-partial-group",
+     "tagChildHint": "Name the group first. Both odd ones sit outside it."
+    },
+    {
+     "value": "whale, dolphin",
+     "isKey": false,
+     "tag": "vr02-answered-the-opposite",
+     "tagChildHint": "Those two do belong together. The question asks for the two that do not."
+    }
+   ],
+   "walkScript": "Look at whale, dolphin and seal. All three are mammals that breathe air. The two left over are shark and tuna, both fish. Every other choice includes whale, dolphin or seal.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  }
+ ]
+}

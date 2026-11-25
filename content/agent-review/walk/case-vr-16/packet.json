@@ -1,0 +1,978 @@
+{
+ "caseId": "case-vr-16",
+ "title": "The Mirror File",
+ "questionType": "vr-16-opposite-meaning",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-08",
+   "stem": {
+    "pairA": [
+     "king",
+     "crown"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "knight"
+   },
+   "key": "helmet",
+   "options": [
+    "helmet",
+    "castle",
+    "sword"
+   ],
+   "walkScript": "Start with king and crown. A king wears a crown on his head. In the same way, a knight wears a helmet. Castle and sword go with knights, not head."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-16-opposite-meaning-01",
+   "stem": {
+    "words": [
+     "hot"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "cold",
+   "options": [
+    {
+     "value": "cold",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "warm",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    },
+    {
+     "value": "spicy",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "wet",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-02",
+   "stem": {
+    "words": [
+     "high"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "low",
+   "options": [
+    {
+     "value": "low",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "tall",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "steep",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "towering",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-03",
+   "stem": {
+    "words": [
+     "early"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "late",
+   "options": [
+    {
+     "value": "late",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "soon",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "initial",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "first",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says early. Early means before the expected time. Late means after it, so late is the opposite. Soon, initial and first all sit close to early.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-04",
+   "stem": {
+    "words": [
+     "empty"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "full",
+   "options": [
+    {
+     "value": "full",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "hollow",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "blank",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "heavy",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    }
+   ],
+   "walkScript": "The card says empty. Empty means nothing is inside. Full means there is no room left, so full is the opposite. Hollow and blank are close to empty. Heavy is about weight.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-05",
+   "stem": {
+    "words": [
+     "light"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "heavy",
+   "options": [
+    {
+     "value": "heavy",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "bright",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "pale",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "soft",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says light. Heavy is the opposite of light, as with a light bag and a heavy bag. Bright and pale match other meanings of light. Soft can mean much the same as light.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-06",
+   "stem": {
+    "words": [
+     "buy"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "sell",
+   "options": [
+    {
+     "value": "sell",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "spend",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "purchase",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "give",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    }
+   ],
+   "walkScript": "The card says buy. When you buy something, you pay for it. When you sell it, someone pays you. So sell is the opposite. Spend and purchase go with buying, and give involves no payment.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-07",
+   "stem": {
+    "words": [
+     "above"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "below",
+   "options": [
+    {
+     "value": "below",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "over",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "beside",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    },
+    {
+     "value": "upstairs",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says above. Above means higher than something. Below means lower than it, so below is the opposite. Over and upstairs are close to above. Beside means next to.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-08",
+   "stem": {
+    "words": [
+     "push"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "pull",
+   "options": [
+    {
+     "value": "pull",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "shove",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "press",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "nudge",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says push. A push moves something away from you. A pull moves it towards you, so pull is the opposite. Shove, press and nudge are all kinds of push.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-09",
+   "stem": {
+    "words": [
+     "appear"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "vanish",
+   "options": [
+    {
+     "value": "vanish",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "arrive",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "emerge",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "seem",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says appear. To appear is to come into sight. To vanish is to go out of sight, so vanish is the opposite. Arrive and emerge are close to appear. Seem matches another meaning of appear.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-10",
+   "stem": {
+    "words": [
+     "noisy"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "silent",
+   "options": [
+    {
+     "value": "silent",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "rowdy",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "deafening",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says noisy. Noisy means making lots of sound. Silent means making no sound at all, so silent is the opposite. Loud, rowdy and deafening all mean much the same as noisy.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-11",
+   "stem": {
+    "words": [
+     "smooth"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "rough",
+   "options": [
+    {
+     "value": "rough",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "flat",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "silky",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "even",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says smooth. A smooth surface has no bumps. A rough surface is bumpy, so rough is the opposite. Flat, silky and even are all close to smooth.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-12",
+   "stem": {
+    "words": [
+     "brave"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "timid",
+   "options": [
+    {
+     "value": "timid",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "bold",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "lazy",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    },
+    {
+     "value": "daring",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says brave. A brave person faces danger. A timid person shies away from it, so timid is the opposite. Bold and daring mean much the same as brave. Lazy is about work, not fear.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-13",
+   "stem": {
+    "words": [
+     "wide"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "narrow",
+   "options": [
+    {
+     "value": "narrow",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "broad",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "short",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    },
+    {
+     "value": "baggy",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says wide. Wide means a long way from side to side. Narrow means a short way across, so narrow is the opposite. Broad and baggy are close to wide. Short is the opposite of long.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-14",
+   "stem": {
+    "words": [
+     "deep"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "shallow",
+   "options": [
+    {
+     "value": "shallow",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "wide",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    },
+    {
+     "value": "dark",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "bottomless",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says deep. Deep water goes a long way down. Shallow water does not, so shallow is the opposite. Bottomless is close to deep, and dark often goes with it. Wide is about side to side.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-15",
+   "stem": {
+    "words": [
+     "begin"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "finish",
+   "options": [
+    {
+     "value": "finish",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "start",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "wait",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    },
+    {
+     "value": "open",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says begin. To begin is to start something. To finish is to bring it to an end, so finish is the opposite. Start and open are close to begin. Wait means holding off for now.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-16",
+   "stem": {
+    "words": [
+     "remember"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "forget",
+   "options": [
+    {
+     "value": "forget",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "recall",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "recollect",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "misplace",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    }
+   ],
+   "walkScript": "The card says remember. To remember is to keep something in your mind. To forget is to lose it from your mind. So forget is the opposite. Recall and recollect mean the same as remember, and misplace means losing a thing.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-17",
+   "stem": {
+    "words": [
+     "sharp"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "blunt",
+   "options": [
+    {
+     "value": "blunt",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "pointed",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "spiky",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "keen",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says sharp. A sharp knife cuts well. A blunt knife does not, so blunt is the opposite. Pointed, spiky and keen are all close to sharp.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-18",
+   "stem": {
+    "words": [
+     "tame"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "wild",
+   "options": [
+    {
+     "value": "wild",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "gentle",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "trained",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "dull",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says tame. A tame animal is used to people. A wild animal lives free, away from people. So wild is the opposite. Gentle and trained are close to tame, and dull matches another meaning.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-19",
+   "stem": {
+    "words": [
+     "victory"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "defeat",
+   "options": [
+    {
+     "value": "defeat",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "triumph",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "win",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "draw",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    }
+   ],
+   "walkScript": "The card says victory. A victory means winning. A defeat means losing, so defeat is the opposite. Triumph and win mean much the same as victory. A draw is neither winning nor losing.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-20",
+   "stem": {
+    "words": [
+     "ancient"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "modern",
+   "options": [
+    {
+     "value": "modern",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "old",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "antique",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "shiny",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    }
+   ],
+   "walkScript": "The card says ancient. Ancient means from a very long time ago. Modern means from the present day, so modern is the opposite. Old and antique are close to ancient. Shiny is about how something looks.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-21",
+   "stem": {
+    "words": [
+     "arrive"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "depart",
+   "options": [
+    {
+     "value": "depart",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "reach",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "travel",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    },
+    {
+     "value": "come",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says arrive. To arrive is to get to a place. To depart is to leave it, so depart is the opposite. Reach and come are close to arrive. Travel is the journey in between.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-22",
+   "stem": {
+    "words": [
+     "expand"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "shrink",
+   "options": [
+    {
+     "value": "shrink",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "stretch",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "bend",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    },
+    {
+     "value": "grow",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says expand. To expand is to get bigger. To shrink is to get smaller, so shrink is the opposite. Stretch and grow are close to expand. Bend changes shape, not size.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-23",
+   "stem": {
+    "words": [
+     "rise"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "fall",
+   "options": [
+    {
+     "value": "fall",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "climb",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "soar",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "lift",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says rise. To rise is to go up. To fall is to come down, so fall is the opposite. Climb, soar and lift all mean going up too.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-24",
+   "stem": {
+    "words": [
+     "joy"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "sorrow",
+   "options": [
+    {
+     "value": "sorrow",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "delight",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "happiness",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "anger",
+     "isKey": false,
+     "tag": "vr16-loose-opposite",
+     "tagChildHint": "A true opposite flips the meaning exactly, like open and shut."
+    }
+   ],
+   "walkScript": "The card says joy. Joy is a feeling of great happiness. Sorrow is a feeling of great sadness, so sorrow is the opposite. Delight and happiness mean much the same as joy. Anger is a different feeling.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-16-opposite-meaning-25",
+   "stem": {
+    "words": [
+     "accept"
+    ],
+    "prompt": "Which word means the OPPOSITE of the word on the card?"
+   },
+   "key": "refuse",
+   "options": [
+    {
+     "value": "refuse",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "receive",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "take",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    },
+    {
+     "value": "agree",
+     "isKey": false,
+     "tag": "vr16-synonym-pull",
+     "tagChildHint": "You found a twin. Now find the reverse."
+    }
+   ],
+   "walkScript": "The card says accept. To accept is to say yes to something. To refuse is to say no, so refuse is the opposite. Receive, take and agree are all close to accept.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  }
+ ]
+}

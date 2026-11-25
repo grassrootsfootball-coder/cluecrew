@@ -1,0 +1,893 @@
+{
+ "caseId": "case-vr-08",
+ "title": "The Case of the Wandering Letter",
+ "questionType": "vr-08-move-letter",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-08-move-letter-01",
+   "stem": {
+    "word1": "HEART",
+    "word2": "OLD",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-02",
+   "stem": {
+    "word1": "STICK",
+    "word2": "EACH",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-03",
+   "stem": {
+    "word1": "DRAWN",
+    "word2": "DANCE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-04",
+   "stem": {
+    "word1": "TABLE",
+    "word2": "OWN",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-05",
+   "stem": {
+    "word1": "SPEND",
+    "word2": "SOON",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-06",
+   "stem": {
+    "word1": "THANK",
+    "word2": "SAME",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "H",
+   "options": [
+    {
+     "value": "H",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-07",
+   "stem": {
+    "word1": "LADY",
+    "word2": "PART",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "Y",
+   "options": [
+    {
+     "value": "Y",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-08",
+   "stem": {
+    "word1": "FOUND",
+    "word2": "SIT",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "U",
+   "options": [
+    {
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-09",
+   "stem": {
+    "word1": "BLACK",
+    "word2": "OLD",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "B",
+   "options": [
+    {
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-10",
+   "stem": {
+    "word1": "PLANE",
+    "word2": "HUG",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "E",
+   "options": [
+    {
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-11",
+   "stem": {
+    "word1": "LIKED",
+    "word2": "MONEY",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "K",
+   "options": [
+    {
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-12",
+   "stem": {
+    "word1": "CUBE",
+    "word2": "ONE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "B",
+   "options": [
+    {
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-13",
+   "stem": {
+    "word1": "PLATE",
+    "word2": "ART",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-14",
+   "stem": {
+    "word1": "RANGE",
+    "word2": "PACE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "E",
+   "options": [
+    {
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-15",
+   "stem": {
+    "word1": "BREAD",
+    "word2": "LOW",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "B",
+   "options": [
+    {
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-16",
+   "stem": {
+    "word1": "PLANET",
+    "word2": "SEA",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-17",
+   "stem": {
+    "word1": "SHOUT",
+    "word2": "COLD",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "U",
+   "options": [
+    {
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-18",
+   "stem": {
+    "word1": "HEARD",
+    "word2": "ROUND",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "A",
+   "options": [
+    {
+     "value": "A",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-19",
+   "stem": {
+    "word1": "MEANT",
+    "word2": "BAD",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-20",
+   "stem": {
+    "word1": "MINCE",
+    "word2": "KIT",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-21",
+   "stem": {
+    "word1": "BRUSH",
+    "word2": "RING",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "B",
+   "options": [
+    {
+     "value": "B",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-22",
+   "stem": {
+    "word1": "SLIDE",
+    "word2": "FOOD",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-23",
+   "stem": {
+    "word1": "LEARN",
+    "word2": "TIP",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-24",
+   "stem": {
+    "word1": "WITCH",
+    "word2": "HAIR",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "C",
+   "options": [
+    {
+     "value": "C",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-08-move-letter-25",
+   "stem": {
+    "word1": "PLACE",
+    "word2": "AGE",
+    "prompt": "Move one letter from the first word to the second so both make new words."
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-move-letter-first-word-invalid",
+     "tagChildHint": "Take the letter out and read what is left. Is that first word a real word?"
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-move-letter-second-word-invalid",
+     "tagChildHint": "Pop the letter into the second word, trying each spot in turn. Does any spot make a real word?"
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

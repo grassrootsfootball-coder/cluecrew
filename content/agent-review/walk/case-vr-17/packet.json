@@ -1,0 +1,1018 @@
+{
+ "caseId": "case-vr-17",
+ "title": "The Balanced Scales",
+ "questionType": "vr-17-complete-the-sum",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-17-complete-the-sum-01",
+   "stem": {
+    "sum": "? + 3 = 9",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "6",
+   "options": [
+    {
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-02",
+   "stem": {
+    "sum": "7 + ? = 11",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "2",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-03",
+   "stem": {
+    "sum": "8 + 5 − ? = 9",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-04",
+   "stem": {
+    "sum": "9 + ? − 5 = 10",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "6",
+   "options": [
+    {
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "10",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-05",
+   "stem": {
+    "sum": "? + 7 = 17",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "10",
+   "options": [
+    {
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "17",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-06",
+   "stem": {
+    "sum": "11 + ? = 19",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "8",
+   "options": [
+    {
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "10",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "19",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-07",
+   "stem": {
+    "sum": "12 + 3 − ? = 11",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "15",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-08",
+   "stem": {
+    "sum": "13 + ? − 5 = 12",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-09",
+   "stem": {
+    "sum": "? + 5 = 19",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "14",
+   "options": [
+    {
+     "value": "14",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "12",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "19",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-10",
+   "stem": {
+    "sum": "15 + ? = 21",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "6",
+   "options": [
+    {
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "21",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "4",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-11",
+   "stem": {
+    "sum": "16 + 7 − ? = 19",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "19",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-12",
+   "stem": {
+    "sum": "17 + ? − 5 = 20",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "8",
+   "options": [
+    {
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-13",
+   "stem": {
+    "sum": "? + 3 = 21",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "18",
+   "options": [
+    {
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "21",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "16",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-14",
+   "stem": {
+    "sum": "19 + ? = 23",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "2",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "23",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-15",
+   "stem": {
+    "sum": "20 + 5 − ? = 21",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "25",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "2",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-16",
+   "stem": {
+    "sum": "21 + ? − 5 = 22",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "6",
+   "options": [
+    {
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "22",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-17",
+   "stem": {
+    "sum": "? + 7 = 29",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "22",
+   "options": [
+    {
+     "value": "22",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "24",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "29",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "21",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-18",
+   "stem": {
+    "sum": "23 + ? = 31",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "8",
+   "options": [
+    {
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "31",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-19",
+   "stem": {
+    "sum": "24 + 3 − ? = 23",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "23",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "5",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-20",
+   "stem": {
+    "sum": "25 + ? − 5 = 24",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-21",
+   "stem": {
+    "sum": "? + 5 = 31",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "26",
+   "options": [
+    {
+     "value": "26",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "25",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "31",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "24",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-22",
+   "stem": {
+    "sum": "27 + ? = 33",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "6",
+   "options": [
+    {
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "33",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-23",
+   "stem": {
+    "sum": "28 + 7 − ? = 31",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "4",
+   "options": [
+    {
+     "value": "4",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "2",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "35",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "3",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-24",
+   "stem": {
+    "sum": "29 + ? − 5 = 32",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "8",
+   "options": [
+    {
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "32",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-17-complete-the-sum-25",
+   "stem": {
+    "sum": "? + 3 = 33",
+    "prompt": "What number makes the sum correct?"
+   },
+   "key": "30",
+   "options": [
+    {
+     "value": "30",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "28",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    },
+    {
+     "value": "33",
+     "isKey": false,
+     "tag": "vr17-one-side-only",
+     "tagChildHint": "Work out both sides. The answer makes them balance like scales."
+    },
+    {
+     "value": "29",
+     "isKey": false,
+     "tag": "vr17-arith-slip",
+     "tagChildHint": "Your plan is right. Recount the last step slowly."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

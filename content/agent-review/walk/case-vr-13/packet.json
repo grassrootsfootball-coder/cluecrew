@@ -1,0 +1,943 @@
+{
+ "caseId": "case-vr-13",
+ "title": "The Word Builder",
+ "questionType": "vr-13-make-a-word",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-13-make-a-word-01",
+   "stem": {
+    "words": [
+     "STEAM",
+     "ARCH"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: STEAM ( ? ) ARCH"
+   },
+   "key": "STAR",
+   "options": [
+    {
+     "value": "STAR",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "EMAR",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "HEAR",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-02",
+   "stem": {
+    "words": [
+     "SHADOW",
+     "OPEN"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SHADOW ( ? ) OPEN"
+   },
+   "key": "SHOP",
+   "options": [
+    {
+     "value": "SHOP",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ADOP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "HOOP",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-03",
+   "stem": {
+    "words": [
+     "GRASS",
+     "INK"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: GRASS ( ? ) INK"
+   },
+   "key": "GRIN",
+   "options": [
+    {
+     "value": "GRIN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ASIN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "SKIN",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-04",
+   "stem": {
+    "words": [
+     "FLUTE",
+     "ATOM"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: FLUTE ( ? ) ATOM"
+   },
+   "key": "FLAT",
+   "options": [
+    {
+     "value": "FLAT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "FLOM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "FLEA",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-05",
+   "stem": {
+    "words": [
+     "CHEESE",
+     "INSECT"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CHEESE ( ? ) INSECT"
+   },
+   "key": "CHIN",
+   "options": [
+    {
+     "value": "CHIN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ESIN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "THIN",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-06",
+   "stem": {
+    "words": [
+     "DRESS",
+     "UMBRELLA"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: DRESS ( ? ) UMBRELLA"
+   },
+   "key": "DRUM",
+   "options": [
+    {
+     "value": "DRUM",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "DREL",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "DRAB",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-07",
+   "stem": {
+    "words": [
+     "PLATE",
+     "UMPIRE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: PLATE ( ? ) UMPIRE"
+   },
+   "key": "PLUM",
+   "options": [
+    {
+     "value": "PLUM",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "PLIR",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "PLEA",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-08",
+   "stem": {
+    "words": [
+     "CLOUD",
+     "APPLE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CLOUD ( ? ) APPLE"
+   },
+   "key": "CLAP",
+   "options": [
+    {
+     "value": "CLAP",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "CLEL",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "CLUE",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-09",
+   "stem": {
+    "words": [
+     "TRAIN",
+     "OTTER"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: TRAIN ( ? ) OTTER"
+   },
+   "key": "TROT",
+   "options": [
+    {
+     "value": "TROT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "INOT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "RIOT",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-10",
+   "stem": {
+    "words": [
+     "SNAKE",
+     "APRON"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SNAKE ( ? ) APRON"
+   },
+   "key": "SNAP",
+   "options": [
+    {
+     "value": "SNAP",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "AKAP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "SOAP",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-11",
+   "stem": {
+    "words": [
+     "SWITCH",
+     "IMAGE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SWITCH ( ? ) IMAGE"
+   },
+   "key": "SWIM",
+   "options": [
+    {
+     "value": "SWIM",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ITIM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "WHIM",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-12",
+   "stem": {
+    "words": [
+     "CROWN",
+     "ABOUT"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CROWN ( ? ) ABOUT"
+   },
+   "key": "CRAB",
+   "options": [
+    {
+     "value": "CRAB",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "CRUT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "CROW",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-13",
+   "stem": {
+    "words": [
+     "SPADE",
+     "INCH"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SPADE ( ? ) INCH"
+   },
+   "key": "SPIN",
+   "options": [
+    {
+     "value": "SPIN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "EDIN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "PAIN",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-14",
+   "stem": {
+    "words": [
+     "GROUND",
+     "ABLE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: GROUND ( ? ) ABLE"
+   },
+   "key": "GRAB",
+   "options": [
+    {
+     "value": "GRAB",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "GREL",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "GRUB",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-15",
+   "stem": {
+    "words": [
+     "SLEEP",
+     "UGLY"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SLEEP ( ? ) UGLY"
+   },
+   "key": "SLUG",
+   "options": [
+    {
+     "value": "SLUG",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "LEUG",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "PLUG",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-16",
+   "stem": {
+    "words": [
+     "PRAWN",
+     "AMBER"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: PRAWN ( ? ) AMBER"
+   },
+   "key": "PRAM",
+   "options": [
+    {
+     "value": "PRAM",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "AWAM",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "BEAM",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-17",
+   "stem": {
+    "words": [
+     "MOTHER",
+     "ONION"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: MOTHER ( ? ) ONION"
+   },
+   "key": "MOON",
+   "options": [
+    {
+     "value": "MOON",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "OTON",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "IRON",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-18",
+   "stem": {
+    "words": [
+     "DRAGON",
+     "OPPOSITE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: DRAGON ( ? ) OPPOSITE"
+   },
+   "key": "DROP",
+   "options": [
+    {
+     "value": "DROP",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "DRIT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "DRAG",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-19",
+   "stem": {
+    "words": [
+     "CHERRY",
+     "ATTIC"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: CHERRY ( ? ) ATTIC"
+   },
+   "key": "CHAT",
+   "options": [
+    {
+     "value": "CHAT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ERAT",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "HEAT",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-20",
+   "stem": {
+    "words": [
+     "WHEAT",
+     "ENGINE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: WHEAT ( ? ) ENGINE"
+   },
+   "key": "WHEN",
+   "options": [
+    {
+     "value": "WHEN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "HEEN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "THEN",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-21",
+   "stem": {
+    "words": [
+     "SHORE",
+     "UTTER"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SHORE ( ? ) UTTER"
+   },
+   "key": "SHUT",
+   "options": [
+    {
+     "value": "SHUT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "SHEO",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "SHOT",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-22",
+   "stem": {
+    "words": [
+     "TRUCK",
+     "APPLE"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: TRUCK ( ? ) APPLE"
+   },
+   "key": "TRAP",
+   "options": [
+    {
+     "value": "TRAP",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "UCAP",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "REAP",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-23",
+   "stem": {
+    "words": [
+     "FLOWER",
+     "AGAIN"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: FLOWER ( ? ) AGAIN"
+   },
+   "key": "FLAG",
+   "options": [
+    {
+     "value": "FLAG",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "FLIN",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "FLEW",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-24",
+   "stem": {
+    "words": [
+     "SLIDE",
+     "AMBER"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: SLIDE ( ? ) AMBER"
+   },
+   "key": "SLAM",
+   "options": [
+    {
+     "value": "SLAM",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "SLER",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "SLAB",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-13-make-a-word-25",
+   "stem": {
+    "words": [
+     "BOTTLE",
+     "ATTIC"
+    ],
+    "prompt": "The middle word uses the first two letters of each outer word: BEACH (BEAR) ARROW. Build the middle word for: BOTTLE ( ? ) ATTIC"
+   },
+   "key": "BOAT",
+   "options": [
+    {
+     "value": "BOAT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "BOIC",
+     "isKey": false,
+     "tag": "vr13-not-a-word",
+     "tagChildHint": "Say your finished word out loud. Is it one you know?"
+    },
+    {
+     "value": "BOLT",
+     "isKey": false,
+     "tag": "vr13-wrong-pieces",
+     "tagChildHint": "Look at where the example word takes its letters from. Copy those exact positions."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

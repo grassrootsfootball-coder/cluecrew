@@ -1,0 +1,1018 @@
+{
+ "caseId": "case-vr-19",
+ "title": "The Digit Code",
+ "questionType": "vr-19-word-number-codes",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-19-word-number-codes-01",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "1"
+    },
+    "prompt": "Using the code, what is the code for PIPS?"
+   },
+   "key": "6769",
+   "options": [
+    {
+     "value": "6769",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9676",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "6779",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-02",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "2"
+    },
+    "prompt": "Using the code, what is the code for SAPS?"
+   },
+   "key": "9469",
+   "options": [
+    {
+     "value": "9469",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9649",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "9460",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-03",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "3"
+    },
+    "prompt": "Using the code, what is the code for SITS?"
+   },
+   "key": "9739",
+   "options": [
+    {
+     "value": "9739",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9379",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "9730",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-04",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "1"
+    },
+    "prompt": "Using the code, what is the code for ASPS?"
+   },
+   "key": "4969",
+   "options": [
+    {
+     "value": "4969",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9694",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "4960",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-05",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "2"
+    },
+    "prompt": "Using the code, what is the code for APPS?"
+   },
+   "key": "4669",
+   "options": [
+    {
+     "value": "4669",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9664",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "4679",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-06",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "3"
+    },
+    "prompt": "Using the code, what is the code for PAPA?"
+   },
+   "key": "6464",
+   "options": [
+    {
+     "value": "6464",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4646",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "6474",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-07",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "1"
+    },
+    "prompt": "Using the code, what is the code for PASTA?"
+   },
+   "key": "64914",
+   "options": [
+    {
+     "value": "64914",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "41946",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "64915",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-08",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "2"
+    },
+    "prompt": "Using the code, what is the code for TAPAS?"
+   },
+   "key": "24649",
+   "options": [
+    {
+     "value": "24649",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "94642",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "24659",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-09",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "3"
+    },
+    "prompt": "Using the code, what is the code for PAPAS?"
+   },
+   "key": "64649",
+   "options": [
+    {
+     "value": "64649",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "94646",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "64749",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-10",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "1"
+    },
+    "prompt": "Using the code, what is the code for SPITS?"
+   },
+   "key": "96719",
+   "options": [
+    {
+     "value": "96719",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "91769",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "96710",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-11",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "2"
+    },
+    "prompt": "Using the code, what is the code for PIPS?"
+   },
+   "key": "6769",
+   "options": [
+    {
+     "value": "6769",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9676",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "6779",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-12",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "3"
+    },
+    "prompt": "Using the code, what is the code for SAPS?"
+   },
+   "key": "9469",
+   "options": [
+    {
+     "value": "9469",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9649",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "9460",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-13",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "1"
+    },
+    "prompt": "Using the code, what is the code for SITS?"
+   },
+   "key": "9719",
+   "options": [
+    {
+     "value": "9719",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9179",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "9710",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-14",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "2"
+    },
+    "prompt": "Using the code, what is the code for ASPS?"
+   },
+   "key": "4969",
+   "options": [
+    {
+     "value": "4969",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9694",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "4960",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-15",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "3"
+    },
+    "prompt": "Using the code, what is the code for APPS?"
+   },
+   "key": "4669",
+   "options": [
+    {
+     "value": "4669",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9664",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "4679",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-16",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "1"
+    },
+    "prompt": "Using the code, what is the code for PAPA?"
+   },
+   "key": "6464",
+   "options": [
+    {
+     "value": "6464",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "4646",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "6474",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-17",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "2"
+    },
+    "prompt": "Using the code, what is the code for PASTA?"
+   },
+   "key": "64924",
+   "options": [
+    {
+     "value": "64924",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "42946",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "64925",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-18",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "3"
+    },
+    "prompt": "Using the code, what is the code for TAPAS?"
+   },
+   "key": "34649",
+   "options": [
+    {
+     "value": "34649",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "94643",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "34659",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-19",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "1"
+    },
+    "prompt": "Using the code, what is the code for PAPAS?"
+   },
+   "key": "64649",
+   "options": [
+    {
+     "value": "64649",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "94646",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "64749",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-20",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "2"
+    },
+    "prompt": "Using the code, what is the code for SPITS?"
+   },
+   "key": "96729",
+   "options": [
+    {
+     "value": "96729",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "92769",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "96720",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-21",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "3"
+    },
+    "prompt": "Using the code, what is the code for PIPS?"
+   },
+   "key": "6769",
+   "options": [
+    {
+     "value": "6769",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9676",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "6779",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-22",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "1"
+    },
+    "prompt": "Using the code, what is the code for SAPS?"
+   },
+   "key": "9469",
+   "options": [
+    {
+     "value": "9469",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9649",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "9460",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-23",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "2"
+    },
+    "prompt": "Using the code, what is the code for SITS?"
+   },
+   "key": "9729",
+   "options": [
+    {
+     "value": "9729",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9279",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "9720",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-24",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "3"
+    },
+    "prompt": "Using the code, what is the code for ASPS?"
+   },
+   "key": "4969",
+   "options": [
+    {
+     "value": "4969",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9694",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "4960",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-19-word-number-codes-25",
+   "stem": {
+    "code": {
+     "A": "4",
+     "I": "7",
+     "P": "6",
+     "S": "9",
+     "T": "1"
+    },
+    "prompt": "Using the code, what is the code for APPS?"
+   },
+   "key": "4669",
+   "options": [
+    {
+     "value": "4669",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9664",
+     "isKey": false,
+     "tag": "vr19-letter-order",
+     "tagChildHint": "Line the code up under the word, letter by letter, left to right."
+    },
+    {
+     "value": "4679",
+     "isKey": false,
+     "tag": "vr19-shared-letter-miss",
+     "tagChildHint": "Twin letters wear twin numbers. Find the letters that repeat first."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

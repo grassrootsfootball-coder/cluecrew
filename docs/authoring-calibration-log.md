@@ -30856,6 +30856,8 @@ approval, an AttributionEvent and a fresh signature, and re-exports the snapshot
 **WHAT THE READING FOUND IN SCRIPTS NOBODY HAD READ.** vr-03's 25 stored scripts belonged to other
 questions (scrambled); 11 of vr-07's quoted sums not on the screen; all 25 of vr-11's either ran past five
 sentences or named a "wrong option" absent from the choices; vr-01 stated its own rule backwards ("close
-both words") on 6; vr-12-11 has a second answer (fry → panfry) — a QUESTION fault, held. The free-case
-first pass: 182 of 365 approved; the rest are in a rewrite round. **Agreement between two agents measures
+both words") on 6; vr-12-11 has a second answer (fry → panfry) — a QUESTION fault, held. Outcome the same day: **608 of 617 LIVE VR walk-throughs now serve** — every one read and
+approved by the reviewing agent, most after one or two rewrite rounds; all 608 pass the gate and a tampered-text canary is
+withheld. The 9 that do not are QUESTION faults no script can fix (`content/agent-review/walk/QUESTION-FAULTS.md`): four with
+a second defensible answer, four whose key or options are words the house bans in text to a child, one awaiting R1045/R1047. **Agreement between two agents measures
 agreement, not what a person would sign** — the reviewer here is a machine, recorded as one.

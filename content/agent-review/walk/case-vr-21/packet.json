@@ -1,0 +1,1068 @@
+{
+ "caseId": "case-vr-21",
+ "title": "The Matching Pair",
+ "questionType": "vr-21-same-meaning",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-21-same-meaning-01",
+   "stem": {
+    "words": [
+     "broad"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "wide",
+   "options": [
+    {
+     "value": "wide",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "narrow",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "long",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "tall",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-02",
+   "stem": {
+    "words": [
+     "moist"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "damp",
+   "options": [
+    {
+     "value": "damp",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "dry",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "warm",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "soft",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-03",
+   "stem": {
+    "words": [
+     "foolish"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "silly",
+   "options": [
+    {
+     "value": "silly",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "sensible",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "young",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "brave",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-04",
+   "stem": {
+    "words": [
+     "leap"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "jump",
+   "options": [
+    {
+     "value": "jump",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "dance",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "run",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "land",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-05",
+   "stem": {
+    "words": [
+     "grab"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "seize",
+   "options": [
+    {
+     "value": "seize",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "release",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "pull",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "go",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-06",
+   "stem": {
+    "words": [
+     "finish"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "end",
+   "options": [
+    {
+     "value": "end",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "begin",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "win",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "hurry",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-07",
+   "stem": {
+    "words": [
+     "build"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "construct",
+   "options": [
+    {
+     "value": "construct",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "demolish",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "hammer",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "plan",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-08",
+   "stem": {
+    "words": [
+     "old"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "elderly",
+   "options": [
+    {
+     "value": "elderly",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "young",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "good",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "wise",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-09",
+   "stem": {
+    "words": [
+     "rich"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "wealthy",
+   "options": [
+    {
+     "value": "wealthy",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "famous",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "powerful",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "penniless",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-10",
+   "stem": {
+    "words": [
+     "brave"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "courageous",
+   "options": [
+    {
+     "value": "courageous",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "timid",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "loyal",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "kind",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-11",
+   "stem": {
+    "words": [
+     "tired"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "weary",
+   "options": [
+    {
+     "value": "weary",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "lively",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "hungry",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "grumpy",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-12",
+   "stem": {
+    "words": [
+     "happy"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "glad",
+   "options": [
+    {
+     "value": "glad",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "gloomy",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "healthy",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "friendly",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-13",
+   "stem": {
+    "words": [
+     "help"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "assist",
+   "options": [
+    {
+     "value": "assist",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "hinder",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "thank",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "share",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-14",
+   "stem": {
+    "words": [
+     "choose"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "select",
+   "options": [
+    {
+     "value": "select",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "refuse",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "buy",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "answer",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-15",
+   "stem": {
+    "words": [
+     "odd"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "strange",
+   "options": [
+    {
+     "value": "strange",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ordinary",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "even",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "puzzled",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-16",
+   "stem": {
+    "words": [
+     "gift"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "present",
+   "options": [
+    {
+     "value": "present",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "birthday",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "ribbon",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "card",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-17",
+   "stem": {
+    "words": [
+     "speak"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "talk",
+   "options": [
+    {
+     "value": "talk",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "shout",
+     "isKey": false,
+     "tag": "vr21-too-strong",
+     "tagChildHint": "Nearly! Match the size of the meaning too. Huge is more than big."
+    },
+    {
+     "value": "listen",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "write",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-18",
+   "stem": {
+    "words": [
+     "begin"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "start",
+   "options": [
+    {
+     "value": "start",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "finish",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "race",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "count",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-19",
+   "stem": {
+    "words": [
+     "shut"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "close",
+   "options": [
+    {
+     "value": "close",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "open",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "slam",
+     "isKey": false,
+     "tag": "vr21-too-strong",
+     "tagChildHint": "Nearly! Match the size of the meaning too. Huge is more than big."
+    },
+    {
+     "value": "sleep",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-20",
+   "stem": {
+    "words": [
+     "big"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "large",
+   "options": [
+    {
+     "value": "large",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "small",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "heavy",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-21",
+   "stem": {
+    "words": [
+     "quick"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "rapid",
+   "options": [
+    {
+     "value": "rapid",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "easy",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "quiet",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-22",
+   "stem": {
+    "words": [
+     "scared"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "fearful",
+   "options": [
+    {
+     "value": "fearful",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "bold",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "dark",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "alone",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-23",
+   "stem": {
+    "words": [
+     "angry"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "cross",
+   "options": [
+    {
+     "value": "cross",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "calm",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "red",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-24",
+   "stem": {
+    "words": [
+     "silent"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "quiet",
+   "options": [
+    {
+     "value": "quiet",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "noisy",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "dark",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "empty",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-21-same-meaning-25",
+   "stem": {
+    "words": [
+     "simple"
+    ],
+    "prompt": "Which word means the SAME as the word on the card?"
+   },
+   "key": "easy",
+   "options": [
+    {
+     "value": "easy",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "tricky",
+     "isKey": false,
+     "tag": "vr21-opposite-pull",
+     "tagChildHint": "The card wants a word that means the SAME. Check you have not picked its opposite."
+    },
+    {
+     "value": "short",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    },
+    {
+     "value": "fun",
+     "isKey": false,
+     "tag": "vr21-associated-not-same",
+     "tagChildHint": "Could you swap one word for the other in a sentence? Twins can swap."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

@@ -1,0 +1,868 @@
+{
+ "caseId": "case-vr-05",
+ "title": "The Stowaway",
+ "questionType": "vr-05-hidden-word",
+ "free": false,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-05-hidden-word-01",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Ned ate my last plum."
+   },
+   "key": "date",
+   "options": [
+    {
+     "value": "date",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "lost",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "plum",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “Ned” and the start of “ate” spell “date”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-02",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "She played her oboe in the band."
+   },
+   "key": "hero",
+   "options": [
+    {
+     "value": "hero",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ship",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "play",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-03",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Your best option was clear."
+   },
+   "key": "stop",
+   "options": [
+    {
+     "value": "stop",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "wasp",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "best",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “best” and the start of “option” spell “stop”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-04",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The crab and the gull raced."
+   },
+   "key": "band",
+   "options": [
+    {
+     "value": "band",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "crag",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "race",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-05",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The flamingo needed a safe nest."
+   },
+   "key": "gone",
+   "options": [
+    {
+     "value": "gone",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "lame",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "nest",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “flamingo” and the start of “needed” spell “gone”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-06",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Her lesson goes well today."
+   },
+   "key": "song",
+   "options": [
+    {
+     "value": "song",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "tell",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "less",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-07",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "I warmed my hands on a white mug of tea."
+   },
+   "key": "item",
+   "options": [
+    {
+     "value": "item",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "kite",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "hand",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “white” and the start of “mug” spell “item”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-08",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Their aid helped the team."
+   },
+   "key": "raid",
+   "options": [
+    {
+     "value": "raid",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "beam",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "help",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “Their” and the start of “aid” spell “raid”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-09",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "A strong wind made our back door slam behind us."
+   },
+   "key": "lamb",
+   "options": [
+    {
+     "value": "lamb",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "pack",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "door",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “slam” and the start of “behind” spell “lamb”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-10",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Both Emma and Jo came."
+   },
+   "key": "them",
+   "options": [
+    {
+     "value": "them",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "name",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "both",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-11",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The bus and the car waited."
+   },
+   "key": "sand",
+   "options": [
+    {
+     "value": "sand",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "busy",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "wait",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-12",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Ralph and Gran had a big dish of hot chips."
+   },
+   "key": "hand",
+   "options": [
+    {
+     "value": "hand",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "wish",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "chip",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The last letter of “Ralph” and the whole word “and” spell “hand”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-13",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Max sees that my sofa is far more comfy."
+   },
+   "key": "farm",
+   "options": [
+    {
+     "value": "farm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "seas",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "soft",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “far” and the start of “more” spell “farm”. The other two have letters that are nearly there, but one letter is different.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-14",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The intro sent shivers down my spine."
+   },
+   "key": "rose",
+   "options": [
+    {
+     "value": "rose",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "went",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "hive",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “intro” and the start of “sent” spell “rose”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-15",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The kitten tumbles over our rug."
+   },
+   "key": "tent",
+   "options": [
+    {
+     "value": "tent",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "kite",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "over",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “kitten” and the start of “tumbles” spell “tent”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-16",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "A rope around the box snapped."
+   },
+   "key": "pear",
+   "options": [
+    {
+     "value": "pear",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "soap",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "snap",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-17",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The pumpkin dropped to the floor."
+   },
+   "key": "kind",
+   "options": [
+    {
+     "value": "kind",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "skin",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "pump",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “pumpkin” and the start of “dropped” spell “kind”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-18",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The demo thrilled everyone."
+   },
+   "key": "moth",
+   "options": [
+    {
+     "value": "moth",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "hill",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "ever",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-19",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Mix our ingredients slowly."
+   },
+   "key": "ring",
+   "options": [
+    {
+     "value": "ring",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "four",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "slow",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-20",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "We watch insects climb the wall."
+   },
+   "key": "chin",
+   "options": [
+    {
+     "value": "chin",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "itch",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "limb",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-21",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Our puppy stayed close to my sofa, still wagging her tail."
+   },
+   "key": "fast",
+   "options": [
+    {
+     "value": "fast",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "tall",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "stay",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “sofa” and the start of “still” spell “fast”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-22",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The lamp landed with a bump."
+   },
+   "key": "plan",
+   "options": [
+    {
+     "value": "plan",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "wish",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "land",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-23",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Deliver your post today."
+   },
+   "key": "very",
+   "options": [
+    {
+     "value": "very",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "most",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "live",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “Deliver” and the start of “your” spell “very”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-24",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "The piano seemed loud."
+   },
+   "key": "nose",
+   "options": [
+    {
+     "value": "nose",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "load",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "seem",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-05-hidden-word-25",
+   "stem": {
+    "prompt": "A four-letter word is hiding at the join between two words. Find it.",
+    "sentence": "Our vicar emptied his bin."
+   },
+   "key": "care",
+   "options": [
+    {
+     "value": "care",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "vice",
+     "isKey": false,
+     "tag": "vr05-almost-letters",
+     "tagChildHint": "Find the exact letters in order. Every letter must be there, touching."
+    },
+    {
+     "value": "tied",
+     "isKey": false,
+     "tag": "vr05-single-word-only",
+     "tagChildHint": "The hidden word loves to hide across two words. Check where they meet."
+    }
+   ],
+   "walkScript": "Look where each word meets the next one. The end of “vicar” and the start of “emptied” spell “care”. Of the other two, one sits inside one word. The other is only nearly there.",
+   "walkScriptApprovedBy": null
+  }
+ ]
+}
