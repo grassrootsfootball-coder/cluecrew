@@ -1,0 +1,1143 @@
+{
+ "caseId": "case-vr-09",
+ "title": "The Alphabet Trail",
+ "questionType": "vr-09-letter-series",
+ "free": true,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-09-letter-series-01",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "C",
+     "E",
+     "G",
+     "I"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 2,
+     "answer": 10
+    }
+   },
+   "key": "K",
+   "options": [
+    {
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter C to the letter E. You go up 2 letters each time. Count 2 on from the letter I to reach the letter K. The letter M takes the step twice. The letter L is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-02",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "J",
+     "L",
+     "N",
+     "P"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 9,
+     "answer": 17
+    }
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter J to the letter L. You go up 2 letters each time. Count 2 on from the letter P to reach the letter R. The letter T takes the step twice. The letter Q is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-03",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "G",
+     "J",
+     "M"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 3,
+     "answer": 15
+    }
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter D to the letter G. You go up 3 letters each time. Count 3 on from the letter M to reach the letter P. The letter A runs backwards. The letter Q is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-04",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "H",
+     "K",
+     "N"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 4,
+     "answer": 16
+    }
+   },
+   "key": "Q",
+   "options": [
+    {
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "B",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter E to the letter H. You go up 3 letters each time. Count 3 on from the letter N to reach the letter Q. The letter B runs backwards. The letter P is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-05",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "I",
+     "K",
+     "M",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 8,
+     "answer": 16
+    }
+   },
+   "key": "Q",
+   "options": [
+    {
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter I to the letter K. You go up 2 letters each time. Count 2 on from the letter O to reach the letter Q. The letter S takes the step twice. The letter R is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-06",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "P",
+     "R",
+     "T",
+     "V"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 15,
+     "answer": 23
+    }
+   },
+   "key": "X",
+   "options": [
+    {
+     "value": "X",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Z",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter P to the letter R. You go up 2 letters each time. Count 2 on from the letter V to reach the letter X. The letter Z takes the step twice. The letter W is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-07",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "I",
+     "L",
+     "O"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 5,
+     "answer": 17
+    }
+   },
+   "key": "R",
+   "options": [
+    {
+     "value": "R",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "C",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter F to the letter I. You go up 3 letters each time. Count 3 on from the letter O to reach the letter R. The letter C runs backwards. The letter S is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-08",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "I",
+     "L",
+     "O",
+     "R"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 8,
+     "answer": 20
+    }
+   },
+   "key": "U",
+   "options": [
+    {
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "F",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter I to the letter L. You go up 3 letters each time. Count 3 on from the letter R to reach the letter U. The letter F runs backwards. The letter T is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-09",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "O",
+     "Q",
+     "S",
+     "U"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 14,
+     "answer": 22
+    }
+   },
+   "key": "W",
+   "options": [
+    {
+     "value": "W",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "X",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter O to the letter Q. You go up 2 letters each time. Count 2 on from the letter U to reach the letter W. The letter Y takes the step twice. The letter X is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-10",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "D",
+     "F",
+     "H",
+     "J"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 3,
+     "answer": 11
+    }
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter D to the letter F. You go up 2 letters each time. Count 2 on from the letter J to reach the letter L. The letter N takes the step twice. The letter K is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-11",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "H",
+     "K",
+     "N",
+     "Q"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 7,
+     "answer": 19
+    }
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "E",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter H to the letter K. You go up 3 letters each time. Count 3 on from the letter Q to reach the letter T. The letter E runs backwards. The letter U is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-12",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "G",
+     "J",
+     "M",
+     "P"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 6,
+     "answer": 18
+    }
+   },
+   "key": "S",
+   "options": [
+    {
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "D",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter G to the letter J. You go up 3 letters each time. Count 3 on from the letter P to reach the letter S. The letter D runs backwards. The letter R is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-13",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "G",
+     "I",
+     "K"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 4,
+     "answer": 12
+    }
+   },
+   "key": "M",
+   "options": [
+    {
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "N",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter E to the letter G. You go up 2 letters each time. Count 2 on from the letter K to reach the letter M. The letter O takes the step twice. The letter N is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-14",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "F",
+     "H",
+     "J",
+     "L"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 5,
+     "answer": 13
+    }
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter F to the letter H. You go up 2 letters each time. Count 2 on from the letter L to reach the letter N. The letter P takes the step twice. The letter M is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-15",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "J",
+     "M",
+     "P",
+     "S"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 9,
+     "answer": 21
+    }
+   },
+   "key": "V",
+   "options": [
+    {
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "G",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter J to the letter M. You go up 3 letters each time. Count 3 on from the letter S to reach the letter V. The letter G runs backwards. The letter W is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-16",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "K",
+     "N",
+     "Q",
+     "T"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 10,
+     "answer": 22
+    }
+   },
+   "key": "W",
+   "options": [
+    {
+     "value": "W",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter K to the letter N. You go up 3 letters each time. Count 3 on from the letter T to reach the letter W. The letter H runs backwards. The letter V is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-17",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "G",
+     "I",
+     "K",
+     "M"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 6,
+     "answer": 14
+    }
+   },
+   "key": "O",
+   "options": [
+    {
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter G to the letter I. You go up 2 letters each time. Count 2 on from the letter M to reach the letter O. The letter Q takes the step twice. The letter P is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-18",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "L",
+     "N",
+     "P",
+     "R"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 11,
+     "answer": 19
+    }
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter L to the letter N. You go up 2 letters each time. Count 2 on from the letter R to reach the letter T. The letter V takes the step twice. The letter S is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-19",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "L",
+     "O",
+     "R",
+     "U"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 11,
+     "answer": 23
+    }
+   },
+   "key": "X",
+   "options": [
+    {
+     "value": "X",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "I",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter L to the letter O. You go up 3 letters each time. Count 3 on from the letter U to reach the letter X. The letter I runs backwards. The letter Y is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-20",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "M",
+     "P",
+     "S",
+     "V"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 12,
+     "answer": 24
+    }
+   },
+   "key": "Y",
+   "options": [
+    {
+     "value": "Y",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "X",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter M to the letter P. You go up 3 letters each time. Count 3 on from the letter V to reach the letter Y. The letter J runs backwards. The letter X is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-21",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "K",
+     "M",
+     "O",
+     "Q"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 10,
+     "answer": 18
+    }
+   },
+   "key": "S",
+   "options": [
+    {
+     "value": "S",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter K to the letter M. You go up 2 letters each time. Count 2 on from the letter Q to reach the letter S. The letter U takes the step twice. The letter T is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-22",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "H",
+     "J",
+     "L",
+     "N"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 7,
+     "answer": 15
+    }
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter H to the letter J. You go up 2 letters each time. Count 2 on from the letter N to reach the letter P. The letter R takes the step twice. The letter O is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-23",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "E",
+     "I",
+     "M",
+     "Q"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 4,
+     "first": 4,
+     "answer": 20
+    }
+   },
+   "key": "U",
+   "options": [
+    {
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "A",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter E to the letter I. You go up 4 letters each time. Count 4 on from the letter Q to reach the letter U. The letter A runs backwards. The letter V is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-24",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "N",
+     "Q",
+     "T",
+     "W"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 3,
+     "first": 13,
+     "answer": 25
+    }
+   },
+   "key": "Z",
+   "options": [
+    {
+     "value": "Z",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr-letter-series-direction",
+     "tagChildHint": "Which way is the series moving through the alphabet? Check the first two letters."
+    },
+    {
+     "value": "Y",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter N to the letter Q. You go up 3 letters each time. Count 3 on from the letter W to reach the letter Z. The letter K runs backwards. The letter Y is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-09-letter-series-25",
+   "stem": {
+    "prompt": "Which letter comes next?",
+    "series": [
+     "M",
+     "O",
+     "Q",
+     "S"
+    ],
+    "operands": {
+     "kind": "letter-series",
+     "step": 2,
+     "first": 12,
+     "answer": 20
+    }
+   },
+   "key": "U",
+   "options": [
+    {
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr-letter-series-step-repeat",
+     "tagChildHint": "One jump at a time! Count the step from the last letter just once."
+    },
+    {
+     "value": "V",
+     "isKey": false,
+     "tag": "vr-letter-series-off-by-one",
+     "tagChildHint": "Count along the alphabet again. Land one letter at a time."
+    }
+   ],
+   "walkScript": "Notice the space from the letter M to the letter O. You go up 2 letters each time. Count 2 on from the letter S to reach the letter U. The letter W takes the step twice. The letter V is one letter out.",
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

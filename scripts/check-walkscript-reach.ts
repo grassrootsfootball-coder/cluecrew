@@ -211,7 +211,7 @@ async function main() {
    */
   const DECLARED_APP_WALK_READERS: Record<string, string> = {
     'apps/web/app/api/crew/[childId]/walk/[itemId]/route.ts':
-      'the Walk content door. Checks walkScriptMayServe BEFORE reading the row, so an unapproved script never leaves the server.',
+      'the Walk content door. Reads the row, then calls walkApprovalOf (row-carried approval bound to the script digest, R1067, which includes the declared walkScriptMayServe list) before any script leaves the server.',
   };
 
   const childHits = readersOf('walkScript', child.files);
@@ -224,8 +224,8 @@ async function main() {
       faults.push(`DECLARED WALK READER MISSING: ${file} is declared but is not in the child closure.`);
       continue;
     }
-    if (!readFileSync(src, 'utf8').includes('walkScriptMayServe')) {
-      faults.push(`UNGATED WALK READER: ${file} reads walkScript without calling walkScriptMayServe. Unapproved text would reach a child.`);
+    if (!readFileSync(src, 'utf8').includes('walkApprovalOf')) {
+      faults.push(`UNGATED WALK READER: ${file} reads walkScript without calling walkApprovalOf. Unapproved text would reach a child.`);
     }
   }
   const pkgWalkFiles = [...new Set(childHits.filter((h) => !isApp(h.file)).map((h) => h.file))];

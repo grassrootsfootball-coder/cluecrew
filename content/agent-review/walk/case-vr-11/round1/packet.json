@@ -1,0 +1,1245 @@
+{
+ "caseId": "case-vr-11",
+ "title": "The Counting Culprit",
+ "questionType": "vr-11-number-series",
+ "free": true,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-11-number-series-01",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     2,
+     4,
+     6,
+     8
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 2,
+     "first": 2,
+     "answer": 10
+    }
+   },
+   "key": "10",
+   "options": [
+    {
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "12",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "14",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Look at 2 and 4. The gap holds at 2 each step. Add 2 again for 10. Now 9 sits under, 11 sits over, and 12 doubles the jump.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-02",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     6,
+     9,
+     12,
+     15
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 3,
+     "first": 6,
+     "answer": 18
+    }
+   },
+   "key": "18",
+   "options": [
+    {
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "17",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "21",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "27",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Notice the space from 6 to 9. You go up 3 each time. Count 3 on from 15 to reach 18. The number 21 takes the step twice. The number 17 is one short. The number 27 adds the last two numbers together.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-03",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     10,
+     14,
+     20,
+     28
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 28,
+     "step": 4,
+     "first": 10,
+     "answer": 38,
+     "prevStep": 8
+    }
+   },
+   "key": "38",
+   "options": [
+    {
+     "value": "38",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "36",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "39",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 10, 14, 20 and 28. They are 4, 6 and 8. Each gap grows by 2. Add the next gap of 10 to 28 to reach 38. The number 36 repeats the gap of 8. The number 39 is one too many.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-04",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     14,
+     19,
+     27,
+     38
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 38,
+     "step": 5,
+     "first": 14,
+     "answer": 52,
+     "prevStep": 11
+    }
+   },
+   "key": "52",
+   "options": [
+    {
+     "value": "52",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "49",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 14, 19, 27 and 38. They are 5, 8 and 11. Each gap grows by 3. Add the next gap of 14 to 38 to reach 52. The number 49 repeats the gap of 11. The number 51 is one short.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-05",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     6,
+     12,
+     18,
+     24
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 6,
+     "first": 6,
+     "answer": 30
+    }
+   },
+   "key": "30",
+   "options": [
+    {
+     "value": "30",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "31",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "36",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "42",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Begin with 6 and 12. Every jump is a steady 6. One more 6 makes 30. Both 29 and 31 miss by a count; 36 climbs twice over.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-06",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     10,
+     12,
+     14,
+     16
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 2,
+     "first": 10,
+     "answer": 18
+    }
+   },
+   "key": "18",
+   "options": [
+    {
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "17",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "30",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Notice the space from 10 to 12. You go up 2 each time. Count 2 on from 16 to reach 18. The number 20 takes the step twice. The number 17 is one short. The number 30 adds the last two numbers together.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-07",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     14,
+     17,
+     22,
+     29
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 29,
+     "step": 3,
+     "first": 14,
+     "answer": 38,
+     "prevStep": 7
+    }
+   },
+   "key": "38",
+   "options": [
+    {
+     "value": "38",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "36",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "37",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 14, 17, 22 and 29. They are 3, 5 and 7. Each gap grows by 2. Add the next gap of 9 to 29 to reach 38. The number 36 repeats the gap of 7. The number 37 is one short.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-08",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     18,
+     22,
+     29,
+     39
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 39,
+     "step": 4,
+     "first": 18,
+     "answer": 52,
+     "prevStep": 10
+    }
+   },
+   "key": "52",
+   "options": [
+    {
+     "value": "52",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "49",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "53",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 18, 22, 29 and 39. They are 4, 7 and 10. Each gap grows by 3. Add the next gap of 13 to 39 to reach 52. The number 49 repeats the gap of 10. The number 53 is one too many.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-09",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     10,
+     15,
+     20,
+     25
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 5,
+     "first": 10,
+     "answer": 30
+    }
+   },
+   "key": "30",
+   "options": [
+    {
+     "value": "30",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "31",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "35",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "45",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Point to 10 and 15. The row rises by 5 each step. One more 5 reaches 30. Here 29 falls short and 31 tips over; 35 adds two steps.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-10",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     5,
+     11,
+     17,
+     23
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 6,
+     "first": 5,
+     "answer": 29
+    }
+   },
+   "key": "29",
+   "options": [
+    {
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "35",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Notice the space from 5 to 11. You go up 6 each time. Count 6 on from 23 to reach 29. The number 35 takes the step twice. The number 28 is one short. The number 40 adds the last two numbers together.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-11",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     9,
+     11,
+     15,
+     21
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 21,
+     "step": 2,
+     "first": 9,
+     "answer": 29,
+     "prevStep": 6
+    }
+   },
+   "key": "29",
+   "options": [
+    {
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "27",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 9, 11, 15 and 21. They are 2, 4 and 6. Each gap grows by 2. Add the next gap of 8 to 21 to reach 29. The number 27 repeats the gap of 6. The number 28 is one short.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-12",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     13,
+     16,
+     22,
+     31
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 31,
+     "step": 3,
+     "first": 13,
+     "answer": 43,
+     "prevStep": 9
+    }
+   },
+   "key": "43",
+   "options": [
+    {
+     "value": "43",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "42",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 13, 16, 22 and 31. They are 3, 6 and 9. Each gap grows by 3. Add the next gap of 12 to 31 to reach 43. The number 40 repeats the gap of 9. The number 42 is one short.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-13",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     5,
+     9,
+     13,
+     17
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 4,
+     "first": 5,
+     "answer": 21
+    }
+   },
+   "key": "21",
+   "options": [
+    {
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "22",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "25",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "30",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Notice the space from 5 to 9. You go up 4 each time. Count 4 on from 17 to reach 21. The number 25 takes the step twice. The number 22 is one too many. The number 30 adds the last two numbers together.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-14",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     9,
+     14,
+     19,
+     24
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 5,
+     "first": 9,
+     "answer": 29
+    }
+   },
+   "key": "29",
+   "options": [
+    {
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "34",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "43",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Notice the space from 9 to 14. You go up 5 each time. Count 5 on from 24 to reach 29. The number 34 takes the step twice. The number 28 is one short. The number 43 adds the last two numbers together.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-15",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     13,
+     19,
+     27,
+     37
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 37,
+     "step": 6,
+     "first": 13,
+     "answer": 49,
+     "prevStep": 10
+    }
+   },
+   "key": "49",
+   "options": [
+    {
+     "value": "49",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "47",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "50",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 13, 19, 27 and 37. They are 6, 8 and 10. Each gap grows by 2. Add the next gap of 12 to 37 to reach 49. The number 47 repeats the gap of 10. The number 50 is one too many.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-16",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     17,
+     19,
+     24,
+     32
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 32,
+     "step": 2,
+     "first": 17,
+     "answer": 43,
+     "prevStep": 8
+    }
+   },
+   "key": "43",
+   "options": [
+    {
+     "value": "43",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "40",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "44",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 17, 19, 24 and 32. They are 2, 5 and 8. Each gap grows by 3. Add the next gap of 11 to 32 to reach 43. The number 40 repeats the gap of 8. The number 44 is one too many.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-17",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     9,
+     12,
+     15,
+     18
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 3,
+     "first": 9,
+     "answer": 21
+    }
+   },
+   "key": "21",
+   "options": [
+    {
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "22",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "24",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "33",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Start at 9 and 12. Each gap is 3 along the row. Add 3 to 18 for 21. Watch 20 and 22 drift either way; 24 adds a step.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-18",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     13,
+     17,
+     21,
+     25
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 4,
+     "first": 13,
+     "answer": 29
+    }
+   },
+   "key": "29",
+   "options": [
+    {
+     "value": "29",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "28",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "33",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "46",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Notice the space from 13 to 17. You go up 4 each time. Count 4 on from 25 to reach 29. The number 33 takes the step twice. The number 28 is one short. The number 46 adds the last two numbers together.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-19",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     8,
+     13,
+     20,
+     29
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 29,
+     "step": 5,
+     "first": 8,
+     "answer": 40,
+     "prevStep": 9
+    }
+   },
+   "key": "40",
+   "options": [
+    {
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "38",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "41",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 8, 13, 20 and 29. They are 5, 7 and 9. Each gap grows by 2. Add the next gap of 11 to 29 to reach 40. The number 38 repeats the gap of 9. The number 41 is one too many.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-20",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     12,
+     18,
+     27,
+     39
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 39,
+     "step": 6,
+     "first": 12,
+     "answer": 54,
+     "prevStep": 12
+    }
+   },
+   "key": "54",
+   "options": [
+    {
+     "value": "54",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "55",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 12, 18, 27 and 39. They are 6, 9 and 12. Each gap grows by 3. Add the next gap of 15 to 39 to reach 54. The number 51 repeats the gap of 12. The number 55 is one too many.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-21",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     4,
+     6,
+     8,
+     10
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 2,
+     "first": 4,
+     "answer": 12
+    }
+   },
+   "key": "12",
+   "options": [
+    {
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "14",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "18",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "See 4 then 6. The numbers step up by 2 each time. One last 2 lands on 12. Both 11 and 13 slip a place; 14 climbs two steps.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-22",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     8,
+     11,
+     14,
+     17
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 3,
+     "first": 8,
+     "answer": 20
+    }
+   },
+   "key": "20",
+   "options": [
+    {
+     "value": "20",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "19",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "23",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "31",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Notice the space from 8 to 11. You go up 3 each time. Count 3 on from 17 to reach 20. The number 23 takes the step twice. The number 19 is one short. The number 31 adds the last two numbers together.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-23",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     12,
+     16,
+     22,
+     30
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 30,
+     "step": 4,
+     "first": 12,
+     "answer": 40,
+     "prevStep": 8
+    }
+   },
+   "key": "40",
+   "options": [
+    {
+     "value": "40",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "38",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "39",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 12, 16, 22 and 30. They are 4, 6 and 8. Each gap grows by 2. Add the next gap of 10 to 30 to reach 40. The number 38 repeats the gap of 8. The number 39 is one short.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-24",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     16,
+     21,
+     29,
+     40
+    ],
+    "operands": {
+     "kind": "number-series",
+     "last": 40,
+     "step": 5,
+     "first": 16,
+     "answer": 54,
+     "prevStep": 11
+    }
+   },
+   "key": "54",
+   "options": [
+    {
+     "value": "54",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "51",
+     "isKey": false,
+     "tag": "vr-series-step-carryover",
+     "tagChildHint": "Look at the jumps between the numbers. Do the jumps stay the same, or do they grow?"
+    },
+    {
+     "value": "53",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    }
+   ],
+   "walkScript": "Notice the gaps between 16, 21, 29 and 40. They are 5, 8 and 11. Each gap grows by 3. Add the next gap of 14 to 40 to reach 54. The number 51 repeats the gap of 11. The number 53 is one short.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-11-number-series-25",
+   "stem": {
+    "prompt": "What number comes next in the series?",
+    "series": [
+     8,
+     14,
+     20,
+     26
+    ],
+    "operands": {
+     "kind": "number-series",
+     "step": 6,
+     "first": 8,
+     "answer": 32
+    }
+   },
+   "key": "32",
+   "options": [
+    {
+     "value": "32",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "33",
+     "isKey": false,
+     "tag": "vr-series-off-by-one",
+     "tagChildHint": "Your rule looks right — count the last jump one more time, nice and slowly."
+    },
+    {
+     "value": "38",
+     "isKey": false,
+     "tag": "vr-series-step-applied-twice",
+     "tagChildHint": "Take one jump from the last number, not two. Check the gaps first."
+    },
+    {
+     "value": "46",
+     "isKey": false,
+     "tag": "vr-series-sum-of-last-two",
+     "tagChildHint": "Look at the gap between each pair. The gap is what tells you the next number."
+    }
+   ],
+   "walkScript": "Read 8 and 14 first. A firm 6 sits in every gap. Add 6 to 26 for 32. Then 31 dips under and 33 pushes over; 38 jumps double.",
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

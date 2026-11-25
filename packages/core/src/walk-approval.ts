@@ -45,6 +45,45 @@ export const WALK_APPROVAL_STATE = {
   firstScopeWhenOpened: 'case-en-01 (en-comp-retrieval), 10 scripts',
 } as const;
 
+/**
+ * **APPROVAL CARRIED ON THE ROW, BOUND TO THE TEXT (R1067, 2026-11-25).** The declared list above was
+ * the only door, and it held ten English ids: 1,075 stored scripts (617 VR, 379 English, 179 Maths)
+ * reached no child because a hand-kept list cannot grow at the rate scripts are read. Under R1031 a
+ * separate agent reviews and signs as `rev-agent-01`, so a reading is recorded ON THE ROW:
+ *
+ *   · `walkScriptApprovedBy` — a REVIEWER id, one of `WALK_APPROVERS` (a name, never a flag — R94);
+ *   · `walkScriptAuthority` — where the reading is recorded (the review file and its digest);
+ *   · `walkScriptApprovedSha256` — the sha256 of the EXACT script that was read.
+ *
+ * **THE DIGEST IS THE POINT.** An approval that outlives an edit to its script serves unread text
+ * under a reader's name. The caller passes the digest of the script as it stands now; any change to
+ * the words withholds the script until it is read again. All three must be present — a bare name is
+ * an assertion and a bare citation is unattributed (the same rule as `chooseHint`).
+ */
+export const WALK_APPROVERS: readonly string[] = ['reviewer:rev-0001', 'reviewer:rev-agent-01'];
+
+export type WalkApproval =
+  | { serves: true; via: 'declared list' | 'row approval'; approvedBy: string }
+  | { serves: false; why: 'no row approval' | 'approver is not a known reviewer' | 'no authority recorded' | 'script changed since it was approved' };
+
+export function walkApprovalOf(
+  itemId: string,
+  explanation: Record<string, unknown> | null | undefined,
+  currentScriptSha256: string | null,
+): WalkApproval {
+  if (WALK_APPROVED_ITEM_IDS.includes(itemId)) return { serves: true, via: 'declared list', approvedBy: WALK_APPROVAL_STATE.approvedBy };
+  const e = explanation ?? {};
+  const by = typeof e.walkScriptApprovedBy === 'string' ? e.walkScriptApprovedBy.trim() : '';
+  if (!by) return { serves: false, why: 'no row approval' };
+  if (!WALK_APPROVERS.includes(by)) return { serves: false, why: 'approver is not a known reviewer' };
+  const authority = typeof e.walkScriptAuthority === 'string' ? e.walkScriptAuthority.trim() : '';
+  if (!authority) return { serves: false, why: 'no authority recorded' };
+  const sha = typeof e.walkScriptApprovedSha256 === 'string' ? e.walkScriptApprovedSha256.trim() : '';
+  if (!sha || !currentScriptSha256 || sha !== currentScriptSha256) return { serves: false, why: 'script changed since it was approved' };
+  return { serves: true, via: 'row approval', approvedBy: by };
+}
+
+/** The declared list alone — kept for callers that hold no row. A row-carried approval needs `walkApprovalOf`. */
 export function walkScriptMayServe(itemId: string): boolean {
   return WALK_APPROVED_ITEM_IDS.includes(itemId);
 }
@@ -84,9 +123,11 @@ export function walkScriptReachability(input: {
   isPublished: boolean;
   /** Whether any Case row names this item's question type. Read from Case, never inferred. */
   hasCaseDoor: boolean;
+  /** The row-carried approval from `walkApprovalOf`, when the caller holds the row. Absent: the declared list alone. */
+  approved?: boolean;
 }): WalkReachability {
   if (!input.hasScript) return 'NO_SCRIPT';
   if (!input.isPublished) return 'NOT_PUBLISHED';
   if (!input.hasCaseDoor) return 'NO_DOOR';
-  return walkScriptMayServe(input.itemId) ? 'REACHABLE' : 'AWAITING_REVIEWER_READ';
+  return (input.approved ?? walkScriptMayServe(input.itemId)) ? 'REACHABLE' : 'AWAITING_REVIEWER_READ';
 }

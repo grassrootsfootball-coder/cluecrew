@@ -1,0 +1,918 @@
+{
+ "caseId": "case-vr-12",
+ "title": "The Joining Job",
+ "questionType": "vr-12-compound-words",
+ "free": true,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-12-compound-words-01",
+   "stem": {
+    "words": [
+     "sun"
+    ],
+    "prompt": "Which word joins with \"sun\" to make one new word?"
+   },
+   "key": "flower",
+   "options": [
+    {
+     "value": "flower",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "cloud",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "grass",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Look at the word “sun” sitting by itself. Add “flower” on the end to make sunflower. Cloud and grass sound sensible, but neither makes a real word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-02",
+   "stem": {
+    "words": [
+     "rain"
+    ],
+    "prompt": "Which word joins with \"rain\" to make one new word?"
+   },
+   "key": "bow",
+   "options": [
+    {
+     "value": "bow",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "umbrella",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "sky",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Start with the base word “rain”. Join “bow” to it and rainbow appears. Sky and umbrella feel close, but neither joins into one word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-03",
+   "stem": {
+    "words": [
+     "tooth"
+    ],
+    "prompt": "Which word joins with \"tooth\" to make one new word?"
+   },
+   "key": "brush",
+   "options": [
+    {
+     "value": "brush",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "dentist",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "mouth",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Here the first part is “tooth”. Put “brush” after it to build toothbrush. Mouth and dentist sound linked, yet neither makes one joined word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-04",
+   "stem": {
+    "words": [
+     "cup"
+    ],
+    "prompt": "Which word joins with \"cup\" to make one new word?"
+   },
+   "key": "board",
+   "options": [
+    {
+     "value": "board",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "plate",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "spoon",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "The card gives you “cup” to build on. Bring in “board” and you get cupboard. Plate and spoon seem to fit, though no word forms there.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-05",
+   "stem": {
+    "words": [
+     "butter"
+    ],
+    "prompt": "Which word joins with \"butter\" to make one new word?"
+   },
+   "key": "fly",
+   "options": [
+    {
+     "value": "fly",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "bread",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "yellow",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "You have “butter” waiting for a partner. Add “fly” and the word becomes butterfly. You say butterfly all the time. Bread and yellow match the idea, but they stay two words.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-06",
+   "stem": {
+    "words": [
+     "grand"
+    ],
+    "prompt": "Which word joins with \"grand\" to make one new word?"
+   },
+   "key": "mother",
+   "options": [
+    {
+     "value": "mother",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "house",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "old",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Begin with the single word “grand”. Stick “mother” on and you build grandmother. House and old sound close, yet each stays a made-up word.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-07",
+   "stem": {
+    "words": [
+     "news"
+    ],
+    "prompt": "Which word joins with \"news\" to make one new word?"
+   },
+   "key": "paper",
+   "options": [
+    {
+     "value": "paper",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "story",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "radio",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "The first piece here is “news”. Slot “paper” on to give newspaper. Newspaper is a word you know. Story and radio fit the topic, but you get no real word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-08",
+   "stem": {
+    "words": [
+     "skate"
+    ],
+    "prompt": "Which word joins with \"skate\" to make one new word?"
+   },
+   "key": "board",
+   "options": [
+    {
+     "value": "board",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "wheel",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "ice",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Look at the word “skate” at the start. Add “board” on the end to make skateboard. Wheel and ice feel right, yet neither joins into one word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-09",
+   "stem": {
+    "words": [
+     "snow"
+    ],
+    "prompt": "Which word joins with \"snow\" to make one new word?"
+   },
+   "key": "man",
+   "options": [
+    {
+     "value": "man",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "cold",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "winter",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Your base word is “snow”. Join “man” to it and you make snowman. Everyone can picture a snowman. Cold and winter seem to fit, but they do not join up.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-10",
+   "stem": {
+    "words": [
+     "star"
+    ],
+    "prompt": "Which word joins with \"star\" to make one new word?"
+   },
+   "key": "fish",
+   "options": [
+    {
+     "value": "fish",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "night",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "planet",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Begin at the word “star”. Add “fish” and you get starfish. Night and planet fit the sky, but neither joins up into a word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-11",
+   "stem": {
+    "words": [
+     "pan"
+    ],
+    "prompt": "Which word joins with \"pan\" to make one new word?"
+   },
+   "key": "cake",
+   "options": [
+    {
+     "value": "cake",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "pot",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "fry",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Begin with the base word “pan”. Add “cake” to make pancake. Pot sounds sensible, but it never joins into one word.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-12",
+   "stem": {
+    "words": [
+     "hand"
+    ],
+    "prompt": "Which word joins with \"hand\" to make one new word?"
+   },
+   "key": "bag",
+   "options": [
+    {
+     "value": "bag",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "finger",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "glove",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Point to the word “hand”. Add “bag” and the word becomes handbag. Handbag is a word you know. Finger and glove match the idea, though no word forms there.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-13",
+   "stem": {
+    "words": [
+     "light"
+    ],
+    "prompt": "Which word joins with \"light\" to make one new word?"
+   },
+   "key": "house",
+   "options": [
+    {
+     "value": "house",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "shadow",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "bright",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Your first part reads “light”. Stick “house” on and you build lighthouse. Bright and shadow seem near, yet neither forms one word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-14",
+   "stem": {
+    "words": [
+     "foot"
+    ],
+    "prompt": "Which word joins with \"foot\" to make one new word?"
+   },
+   "key": "path",
+   "options": [
+    {
+     "value": "path",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "toe",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "ankle",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Start at the word “foot”. Slot “path” on to give footpath. Toe and ankle sit close by, but neither joins into a real word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-15",
+   "stem": {
+    "words": [
+     "bed"
+    ],
+    "prompt": "Which word joins with \"bed\" to make one new word?"
+   },
+   "key": "room",
+   "options": [
+    {
+     "value": "room",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "sleep",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "pillow",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "The base word is “bed”. Add “room” on the end to make bedroom. Bedroom is a real place. Sleep and pillow fit the idea, but you get no real word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-16",
+   "stem": {
+    "words": [
+     "play"
+    ],
+    "prompt": "Which word joins with \"play\" to make one new word?"
+   },
+   "key": "ground",
+   "options": [
+    {
+     "value": "ground",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "toy",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "fun",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Look at “play” at the front. Join “ground” to make playground. Fun and toy feel right, yet neither builds one joined word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-17",
+   "stem": {
+    "words": [
+     "day"
+    ],
+    "prompt": "Which word joins with \"day\" to make one new word?"
+   },
+   "key": "dream",
+   "options": [
+    {
+     "value": "dream",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "night",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "hour",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "See the word “day” on its own. Put “dream” after it to build daydream. Night and hour go with days, but neither makes one word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-18",
+   "stem": {
+    "words": [
+     "moon"
+    ],
+    "prompt": "Which word joins with \"moon\" to make one new word?"
+   },
+   "key": "light",
+   "options": [
+    {
+     "value": "light",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "star",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "round",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Your base word here is “moon”. Bring in “light” and you get moonlight. Star and round seem to fit, yet neither makes a real word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-19",
+   "stem": {
+    "words": [
+     "sea"
+    ],
+    "prompt": "Which word joins with \"sea\" to make one new word?"
+   },
+   "key": "weed",
+   "options": [
+    {
+     "value": "weed",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "sand",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "wave",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "The first part reads “sea”. Add “weed” and the word becomes seaweed. Seaweed is a real plant. Sand and wave fit the idea, but they never join up.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-20",
+   "stem": {
+    "words": [
+     "fire"
+    ],
+    "prompt": "Which word joins with \"fire\" to make one new word?"
+   },
+   "key": "work",
+   "options": [
+    {
+     "value": "work",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "flame",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "hot",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Look at the word “fire” first. Stick “work” on and you build firework. Everyone knows the word firework. Flame and hot match the idea, though no word forms there.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-21",
+   "stem": {
+    "words": [
+     "water"
+    ],
+    "prompt": "Which word joins with \"water\" to make one new word?"
+   },
+   "key": "fall",
+   "options": [
+    {
+     "value": "fall",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "river",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "wet",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Begin at the word “water”. Slot “fall” on to give waterfall. River and wet seem to fit, but they stay two words.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-22",
+   "stem": {
+    "words": [
+     "air"
+    ],
+    "prompt": "Which word joins with \"air\" to make one new word?"
+   },
+   "key": "port",
+   "options": [
+    {
+     "value": "port",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "breeze",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "wind",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Here the base word is “air”. Add “port” to make airport. Wind and breeze feel close, yet neither joins into a single word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-23",
+   "stem": {
+    "words": [
+     "farm"
+    ],
+    "prompt": "Which word joins with \"farm\" to make one new word?"
+   },
+   "key": "yard",
+   "options": [
+    {
+     "value": "yard",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "field",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "barn",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "Look at “farm” at the start. Join “yard” to it and you make farmyard. Farmyard is a real place. Field and barn sound close, yet each stays a made-up word.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-24",
+   "stem": {
+    "words": [
+     "book"
+    ],
+    "prompt": "Which word joins with \"book\" to make one new word?"
+   },
+   "key": "case",
+   "options": [
+    {
+     "value": "case",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "page",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "chapter",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "The start word here is “book”. Put “case” after it to build bookcase. Page and chapter belong to books, but neither joins up.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-12-compound-words-25",
+   "stem": {
+    "words": [
+     "arm"
+    ],
+    "prompt": "Which word joins with \"arm\" to make one new word?"
+   },
+   "key": "chair",
+   "options": [
+    {
+     "value": "chair",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "elbow",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    },
+    {
+     "value": "sit",
+     "isKey": false,
+     "tag": "vr12-meaning-not-word",
+     "tagChildHint": "The two halves must make one real word you have seen written."
+    }
+   ],
+   "walkScript": "See the word “arm” standing alone. Bring in “chair” and you get armchair. Elbow and sit feel right, yet neither joins into one word.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  }
+ ]
+}

@@ -7,12 +7,15 @@
  * more useful property — that only APPROVED scripts leave the server.
  *
  * **APPROVAL IS CHECKED HERE, AT THE DOOR, NOT IN THE COMPONENT.** A client-side gate is a
- * suggestion. Today `WALK_APPROVED_ITEM_IDS` is empty by design, so this route serves nothing and
- * says why in a field a person can read — never an empty array that a caller would render as "no
- * content authored" (R98: unknown is not absent).
+ * suggestion. Since R1067 the approval travels ON THE ROW (`walkApprovalOf`): a reviewer id, the
+ * place the reading is recorded, and the digest of the exact script read. The row is read to answer
+ * that, but the script itself leaves the server only after `walkApprovalOf` (and so the declared
+ * `walkScriptMayServe` list it includes) has passed. A withheld script says why in a field a person
+ * can read — never an empty array that a caller would render as "no content authored" (R98).
  */
+import { createHash } from 'node:crypto';
 import { NextResponse } from 'next/server';
-import { WALK_APPROVAL_STATE, walkScriptMayServe } from '@cluecrew/core';
+import { walkApprovalOf, walkScriptMayServe } from '@cluecrew/core';
 import { prisma } from '@cluecrew/db';
 
 /**
@@ -29,28 +32,26 @@ export async function GET(
 ) {
   const { itemId } = await params;
 
-  if (!walkScriptMayServe(itemId)) {
-    return NextResponse.json({
-      itemId,
-      sentences: [],
-      withheld: WALK_APPROVAL_STATE.approvedCount === 0
-        ? `NO SCRIPT HAS BEEN READ BY A REVIEWER YET. ${WALK_APPROVAL_STATE.reasonWhenEmpty}`
-        : 'This item\'s walk script is not in the approved set.',
-    });
-  }
-
   const item = await prisma.item.findUnique({ where: { id: itemId }, select: { explanation: true, status: true } });
   if (!item) return NextResponse.json({ error: 'no such item' }, { status: 404 });
   if (item.status !== 'LIVE') {
     return NextResponse.json({ itemId, sentences: [], withheld: `item status is ${item.status}, not LIVE` });
   }
 
-  const script = ((item.explanation ?? {}) as Record<string, unknown>).walkScript;
+  const explanation = (item.explanation ?? {}) as Record<string, unknown>;
+  const script = explanation.walkScript;
+  const digest = typeof script === 'string' ? createHash('sha256').update(script, 'utf8').digest('hex') : null;
+  const approval = walkApprovalOf(itemId, explanation, digest);
+  if (!approval.serves) {
+    return NextResponse.json({ itemId, sentences: [], withheld: `Not read by a reviewer: ${approval.why}.` });
+  }
+
   if (typeof script !== 'string' || script.trim() === '') {
     // Approved but empty is a CONTRADICTION, not a quiet no-content case: something approved a
-    // script that is not there. Say so rather than returning a clean empty.
+    // script that is not there. Say so rather than returning a clean empty. (Only the declared list
+    // can reach here — a row approval is bound to a digest of a non-empty script.)
     return NextResponse.json(
-      { error: `item ${itemId} is in the approved walk set but carries no walkScript` },
+      { error: `item ${itemId} is in the approved walk set but carries no walkScript (declared list: ${walkScriptMayServe(itemId)})` },
       { status: 500 },
     );
   }

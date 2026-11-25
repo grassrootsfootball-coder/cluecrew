@@ -249,6 +249,9 @@ export const FIELD_DISPOSITIONS: Record<string, FieldDisposition> = {
   'explanation.passageReadingContext.NOT_A_READING_AGE': 'staff',
   // A quotation declaration's own reason, the sibling of its `rule` and `passageRef` (her 156th). ---
   'explanation.quotes[].why': 'staff',
+  // --- STAFF, 2026-11-25 (R1067): the walk-through approval carried on the row — who read it, where
+  // the reading is recorded, and the digest of the exact text read. Records, never rendered. ---
+  'explanation.walkScriptAuthority': 'staff', 'explanation.walkScriptApprovedSha256': 'staff',
 };
 
 /**

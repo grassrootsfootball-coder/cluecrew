@@ -1,0 +1,60 @@
+{
+ "case": "case-vr-07",
+ "rows": [
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-01",
+   "currentScript": "Find P, Q and R in the code. They are 2, 3 and 4, which add to 9. 10 or 8 swaps a number; a dropped step gives 7.",
+   "whyRewrite": "Script quotes values not on the screen: \"They are 2, 3 and 4, which add to 9.\" The code is P = 2, Q = 5, R = 4 and the key is 3; \"10 or 8\" are not options (options are 3, 6, 11, 7) and the key is never reached."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-04",
+   "currentScript": "Read the sum P + Q \u2212 R. 5, 6 and 4 make 11, then 4 off gives 7. Flip the minus to plus for 15; 8 or 6 shift a value.",
+   "whyRewrite": "Script is for a different question: \"Read the sum P + Q \u2212 R.\" The sum on screen is P + Q + R \u2212 S with 14, 11, 16, 8; \"5, 6 and 4 make 11, then 4 off gives 7\" is false and the key 33 never appears; 15, 8, 6 are not options."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-05",
+   "currentScript": "The sum needs P, Q and R. They stand for 2, 7 and 5, adding up to 14. A value up or down gives 15 or 13; 12 drops a step.",
+   "whyRewrite": "Wrong values: \"They stand for 2, 7 and 5, adding up to 14.\" The code is P = 7, Q = 6, R = 3 and the key is 10; it also treats the sum as all-plus, and \"15 or 13 ... 12\" do not match the options (10, 9, 16, 13)."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-11",
+   "currentScript": "Take P, Q and R here. They are 4, 3 and 5, so 7 take 5 leaves 2. Add R instead and 12 shows up; 3 or 1 slip a value.",
+   "whyRewrite": "Script is for a different question: \"They are 4, 3 and 5, so 7 take 5 leaves 2.\" The code is P = 6, Q = 9, R = 14, S = 11 and the key is 18; S is never mentioned; 12, 3, 1 are not options."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-12",
+   "currentScript": "The sum asks for P, Q and R. 5, 4 and 6 give 9 take 6, landing on 3. Adding R instead makes 15; 4 or 2 nudge a value.",
+   "whyRewrite": "Script is for a different question: \"5, 4 and 6 give 9 take 6, landing on 3.\" The code is P = 8, Q = 13, R = 16, S = 6 and the key is 31; 15, 4, 2 are not options."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-17",
+   "currentScript": "Check the code for P, Q and R. P is 2, Q is 4, R is 5, making 11. The 12 and 10 slip a value; 9 leaves a step out.",
+   "whyRewrite": "Wrong values: \"P is 2, Q is 4, R is 5, making 11.\" The code is Q = 7, R = 4 and the key is 5; it also adds R instead of subtracting it, and \"The 12 and 10\" misdescribes options (12 is not an option)."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-18",
+   "currentScript": "Start with the sum P + Q + R. It uses 3, 5 and 6, which total 14. 15 or 13 shift a value; a missed step gives 12.",
+   "whyRewrite": "Wrong sum and values: \"Start with the sum P + Q + R. It uses 3, 5 and 6, which total 14.\" The sum is P + Q + R \u2212 S with 5, 10, 6, 9 and the key is 12; it then calls 12 (the key) \"a missed step\"."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-19",
+   "currentScript": "Point to P, Q and R here. They are 4, 6 and 4, so 4 off 10 gives 6. Turn the minus to plus for 14; 7 or 5 shift a value.",
+   "whyRewrite": "Script is for a different question: \"They are 4, 6 and 4, so 4 off 10 gives 6.\" The code is P = 10, Q = 12, R = 13, S = 11 and the key is 24; 14, 7, 5 are not options."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-20",
+   "currentScript": "You need P, Q and R here. They stand for 5, 7 and 5, so 12 take 5 leaves 7. A plus instead makes 17; 8 or 6 slip a value.",
+   "whyRewrite": "Script is for a different question: \"They stand for 5, 7 and 5, so 12 take 5 leaves 7.\" The code is P = 16, Q = 15, R = 18, S = 6 and the key is 43; 17, 8, 6 are not options."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-21",
+   "currentScript": "Three letters build this sum. P, Q and R are 2, 3 and 6, which come to 11. The 12 and 10 nudge a value; 9 misses a step.",
+   "whyRewrite": "Wrong values: \"P, Q and R are 2, 3 and 6, which come to 11.\" The code is Q = 7, R = 3 and the key is 6; it adds R instead of subtracting it, and \"The 12 and 10\" misdescribes options (10 is not an option)."
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-25",
+   "currentScript": "The sum asks for P, Q and R. Those are 2, 7 and 4, which total 13. A value up or down gives 14 or 12; 11 misses a step.",
+   "whyRewrite": "Wrong values: \"Those are 2, 7 and 4, which total 13.\" The code is P = 7, Q = 2, R = 3 and the key is 6; it adds R instead of subtracting it, and \"14 ... 11\" are not options (6, 1, 12, 9)."
+  }
+ ]
+}

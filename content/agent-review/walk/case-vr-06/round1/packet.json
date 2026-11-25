@@ -1,0 +1,1318 @@
+{
+ "caseId": "case-vr-06",
+ "title": "The Gap in the Report",
+ "questionType": "vr-06-missing-word",
+ "free": true,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "bank-vr-06-missing-word-01",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Please do not SH___ so loudly, or you will wake the baby."
+   },
+   "key": "OUT",
+   "options": [
+    {
+     "value": "OUT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ARE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "OWN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “are” makes “share” and “own” makes “shown”, but neither makes sense here. “out” makes “shout”, and shouting would wake the baby.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-02",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Grandad has a long white B___D on his chin."
+   },
+   "key": "EAR",
+   "options": [
+    {
+     "value": "EAR",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "OAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ELO",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“elo” is not a word, so it cannot be the answer. “oar” makes “board”, but nobody has a board on their chin. “ear” makes “beard”, the hair that grows on a chin.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-03",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We dug a small hole in the soil to PL___ the seeds."
+   },
+   "key": "ANT",
+   "options": [
+    {
+     "value": "ANT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ATE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "OST",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“ost” is not a word, so it cannot be the answer. “ate” makes “plate”, which is not what you do with seeds. “ant” makes “plant”, which is what you do with seeds.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-04",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The garden wall was built from big blocks of hard grey S___E."
+   },
+   "key": "TON",
+   "options": [
+    {
+     "value": "TON",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "HAD",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "HAM",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “had” makes “shade” and “ham” makes “shame”, but neither makes sense here. “ton” makes “stone”, which is hard and grey.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-05",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Throw me the ball and I will try to ___CH it."
+   },
+   "key": "CAT",
+   "options": [
+    {
+     "value": "CAT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "HAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "LOR",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“lor” is not a word, so it cannot be the answer. “hat” makes “hatch”, but a ball does not hatch. “cat” makes “catch”, and you catch a ball.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-06",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We had fish and C___S for tea on Friday."
+   },
+   "key": "HIP",
+   "options": [
+    {
+     "value": "HIP",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ROW",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "LIP",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “row” makes “crows” and “lip” makes “clips”, but neither makes sense here. “hip” makes “chips”, which go with fish for tea.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-07",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The lorry lost control and began to CR___ through the wooden fence."
+   },
+   "key": "ASH",
+   "options": [
+    {
+     "value": "ASH",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "OWN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "OLT",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“olt” is not a word, so it cannot be the answer. “own” makes “crown”, which a lorry cannot do to a fence. “ash” makes “crash”, which is what a lorry out of control does.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-08",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Bees make sweet H___Y inside their hive."
+   },
+   "key": "ONE",
+   "options": [
+    {
+     "value": "ONE",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "AND",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "AIR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “and” makes “handy” and “air” makes “hairy”, but neither makes sense here. “one” makes “honey”, which is what bees make.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-09",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Mum lit a ___DLE on top of my birthday cake."
+   },
+   "key": "CAN",
+   "options": [
+    {
+     "value": "CAN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "MID",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "PLO",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“plo” is not a word, so it cannot be the answer. “mid” makes “middle”, but you cannot light a middle. “can” makes “candle”, and you light a candle on a cake.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-10",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Dad used a ___MER to bang the nail into the wood."
+   },
+   "key": "HAM",
+   "options": [
+    {
+     "value": "HAM",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "SUM",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ROM",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“rom” is not a word, so it cannot be the answer. “sum” makes “summer”, which is not a tool. “ham” makes “hammer”, a tool for banging in nails.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-11",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "In ___TER the pond froze and snow fell on the hills."
+   },
+   "key": "WIN",
+   "options": [
+    {
+     "value": "WIN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "BIT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "HOT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “bit” makes “bitter” and “hot” makes “hotter”, but neither makes sense here. “win” makes “winter”, the cold time of year.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-12",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Mum bought a soft new CAR___ for the living room floor."
+   },
+   "key": "PET",
+   "options": [
+    {
+     "value": "PET",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ROT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "VOS",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“vos” is not a word, so it cannot be the answer. “rot” makes “carrot”, which does not cover a floor. “pet” makes “carpet”, which covers a floor.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-13",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We walked among the tall trees deep in the dark ___EST."
+   },
+   "key": "FOR",
+   "options": [
+    {
+     "value": "FOR",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "LOW",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "GRU",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“gru” is not a word, so it cannot be the answer. “low” makes “lowest”, which is not a place. “for” makes “forest”, a place full of trees.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-14",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Dad climbed up the ___DER to fix a tile on the roof."
+   },
+   "key": "LAD",
+   "options": [
+    {
+     "value": "LAD",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "WON",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "BLU",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“blu” is not a word, so it cannot be the answer. “won” makes “wonder”, which you cannot climb. “lad” makes “ladder”, which you climb to reach a roof.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-15",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "On holiday we stayed in a big ___EL by the sea."
+   },
+   "key": "HOT",
+   "options": [
+    {
+     "value": "HOT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "TOW",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "PAN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “tow” makes “towel” and “pan” makes “panel”, but neither makes sense here. “hot” makes “hotel”, a place to stay on holiday.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-16",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I cut my ___GER on a sharp knife, so Mum found a plaster."
+   },
+   "key": "FIN",
+   "options": [
+    {
+     "value": "FIN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "BIG",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "GLU",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“glu” is not a word, so it cannot be the answer. “big” makes “bigger”, which is not a part of you. “fin” makes “finger”, a part of your hand.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-17",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We went to the ___SIDE and built sandcastles on the beach."
+   },
+   "key": "SEA",
+   "options": [
+    {
+     "value": "SEA",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "BED",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "WOR",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“wor” is not a word, so it cannot be the answer. “bed” makes “bedside”, which has no beach. “sea” makes “seaside”, which is where the beach is.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-18",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "A tiny pink ___LET slept beside its mother in the straw."
+   },
+   "key": "PIG",
+   "options": [
+    {
+     "value": "PIG",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "OUT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "SNU",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“snu” is not a word, so it cannot be the answer. “out” makes “outlet”, which cannot sleep. “pig” makes “piglet”, a baby pig.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-19",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We took turns to go down the big S___E in the park."
+   },
+   "key": "LID",
+   "options": [
+    {
+     "value": "LID",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "PIN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "CAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “pin” makes “spine” and “car” makes “scare”, but neither makes sense here. “lid” makes “slide”, which you go down in a park.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-20",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Cows, pigs and sheep live on the F___ down the lane."
+   },
+   "key": "ARM",
+   "options": [
+    {
+     "value": "ARM",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "OUR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ACE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “our” makes “four” and “ace” makes “face”, but neither makes sense here. “arm” makes “farm”, which is where cows and pigs live.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-21",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The chef will COM___E the eggs and the flour to make a smooth cake mix."
+   },
+   "key": "BIN",
+   "options": [
+    {
+     "value": "BIN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "PET",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "BUL",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“bul” is not a word, so it cannot be the answer. “pet” makes “compete”, but eggs and flour cannot race. “bin” makes “combine”, which means mix them together.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-22",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I watched the wheel S___ round and round very fast."
+   },
+   "key": "PIN",
+   "options": [
+    {
+     "value": "PIN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "NOW",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "LOM",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“lom” is not a word, so it cannot be the answer. “now” makes “snow”, but a wheel cannot snow. “pin” makes “spin”, which means turn round and round.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-23",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Our cat had a tiny black ___TEN with white paws."
+   },
+   "key": "KIT",
+   "options": [
+    {
+     "value": "KIT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "BIT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ROT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “bit” makes “bitten” and “rot” makes “rotten”, but neither makes sense here. “kit” makes “kitten”, a baby cat.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-24",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We shut the garden G___ so the dog could not get out."
+   },
+   "key": "ATE",
+   "options": [
+    {
+     "value": "ATE",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "OAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ULB",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“ulb” is not a word, so it cannot be the answer. “oat” makes “goat”, which is an animal, not something you shut. “ate” makes “gate”, which keeps the dog in.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-25",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We put up our ___T in the field and zipped the door shut."
+   },
+   "key": "TEN",
+   "options": [
+    {
+     "value": "TEN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "CAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "MUF",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“muf” is not a word, so it cannot be the answer. “car” makes “cart”, which you do not put up or zip. “ten” makes “tent”, which you put up and sleep in.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-26",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I ate my cereal from a big blue B___."
+   },
+   "key": "OWL",
+   "options": [
+    {
+     "value": "OWL",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "EAR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ORP",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“orp” is not a word, so it cannot be the answer. “ear” makes “bear”, which you do not eat from. “owl” makes “bowl”, a dish for cereal.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-27",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "It was very cold, so I put on my thick winter C___."
+   },
+   "key": "OAT",
+   "options": [
+    {
+     "value": "OAT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ART",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ARE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “art” makes “cart” and “are” makes “care”, but neither makes sense here. “oat” makes “coat”, which keeps you warm.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-28",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Please sit on the CH___ by the window and wait."
+   },
+   "key": "AIR",
+   "options": [
+    {
+     "value": "AIR",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "EAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ILL",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “eat” makes “cheat” and “ill” makes “chill”, but neither makes sense here. “air” makes “chair”, something you sit on.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-29",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I wrote a ___TER to Granny and posted it in the red box."
+   },
+   "key": "LET",
+   "options": [
+    {
+     "value": "LET",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "MAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "PLI",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“pli” is not a word, so it cannot be the answer. “mat” makes “matter”, which you cannot post. “let” makes “letter”, which you write and post.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-30",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Our coach will ___CH us how to swim this term."
+   },
+   "key": "TEA",
+   "options": [
+    {
+     "value": "TEA",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "PIN",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "GLA",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“gla” is not a word, so it cannot be the answer. “pin” makes “pinch”, which is not how you learn to swim. “tea” makes “teach”, which means help us learn.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-31",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "We walked into T___ to buy some new shoes."
+   },
+   "key": "OWN",
+   "options": [
+    {
+     "value": "OWN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "OUR",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "RUL",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“rul” is not a word, so it cannot be the answer. “our” makes “tour”, which you cannot walk into to buy shoes. “own” makes “town”, which is where the shops are.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-32",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I will SP___ my pocket money on sweets at the shop."
+   },
+   "key": "END",
+   "options": [
+    {
+     "value": "END",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ICE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ATH",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“ath” is not a word, so it cannot be the answer. “ice” makes “spice”, which makes no sense with money. “end” makes “spend”, which means use it to buy things.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-33",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Please press the red ___TON to make the machine start."
+   },
+   "key": "BUT",
+   "options": [
+    {
+     "value": "BUT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "COT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "GLO",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“glo” is not a word, so it cannot be the answer. “cot” makes “cotton”, which you cannot press to start a machine. “but” makes “button”, something you press.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-34",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The bus will S___ outside the school gates at three o'clock."
+   },
+   "key": "TOP",
+   "options": [
+    {
+     "value": "TOP",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "HOP",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "HUT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “hop” makes “shop” and “hut” makes “shut”, but neither makes sense here. “top” makes “stop”, which a bus does to let people on.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-35",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "At the end of the show we all stood up to C___."
+   },
+   "key": "LAP",
+   "options": [
+    {
+     "value": "LAP",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "HOP",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "LUP",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“lup” is not a word, so it cannot be the answer. “hop” makes “chop”, which people do not do after a show. “lap” makes “clap”, which people do when a show ends.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-36",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "A shiny black ___TLE crawled slowly across the leaf."
+   },
+   "key": "BEE",
+   "options": [
+    {
+     "value": "BEE",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "CAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "RAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “cat” makes “cattle” and “rat” makes “rattle”, but neither makes sense here. “bee” makes “beetle”, a small insect.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-37",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Please put the clean plates back in the ___BOARD."
+   },
+   "key": "CUP",
+   "options": [
+    {
+     "value": "CUP",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "KEY",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "FLO",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“flo” is not a word, so it cannot be the answer. “key” makes “keyboard”, which is not where plates go. “cup” makes “cupboard”, which is where plates are kept.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-38",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "Dad flipped a thin, flat ___CAKE high into the air."
+   },
+   "key": "PAN",
+   "options": [
+    {
+     "value": "PAN",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "CUP",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ROP",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“rop” is not a word, so it cannot be the answer. “cup” makes “cupcake”, which is not thin and flat. “pan” makes “pancake”, which is thin and flat.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-39",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "The butcher sells fresh M___ and sausages in his shop."
+   },
+   "key": "EAT",
+   "options": [
+    {
+     "value": "EAT",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ATE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "OAT",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    }
+   ],
+   "walkScript": "All three are little words, so read the sentence. “ate” makes “mate” and “oat” makes “moat”, but neither makes sense here. “eat” makes “meat”, which is what a butcher sells.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "bank-vr-06-missing-word-40",
+   "stem": {
+    "prompt": "Three letters are missing from the word in capitals. Together they spell a word. Which three?",
+    "sentence": "I drank my milkshake through a bendy ST___."
+   },
+   "key": "RAW",
+   "options": [
+    {
+     "value": "RAW",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "AGE",
+     "isKey": false,
+     "tag": "vr06-ignores-sentence",
+     "tagChildHint": "Read the whole sentence with your word in it. Does it make sense?"
+    },
+    {
+     "value": "ULK",
+     "isKey": false,
+     "tag": "vr06-fits-gap-not-word",
+     "tagChildHint": "The missing three letters make a little word all by themselves."
+    }
+   ],
+   "walkScript": "“ulk” is not a word, so it cannot be the answer. “age” makes “stage”, which you cannot drink through. “raw” makes “straw”, a thin tube for drinking.",
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

@@ -1,0 +1,893 @@
+{
+ "caseId": "case-vr-01",
+ "title": "The Extra Guest",
+ "questionType": "vr-01-insert-letter",
+ "free": true,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-01-insert-letter-01",
+   "stem": {
+    "word1": "plan(?)",
+    "word2": "(?)ail",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "e",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "Start with plan_. The right letter ends it and opens the next. A t gives plant and tail. The others finish just one side, or neither.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-02",
+   "stem": {
+    "word1": "crus(?)",
+    "word2": "(?)ent",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "h",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "Look at the first word, crus_. One letter must end it and begin the next. Slot in t for crust and tent. Each other letter completes one word alone, or none.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-03",
+   "stem": {
+    "word1": "stam(?)",
+    "word2": "(?)ond",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "p",
+   "options": [
+    {
+     "value": "p",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "The left word reads stam_. You need a letter to close both words. Put p there for stamp and pond. The rest reach only one word, or miss both.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-04",
+   "stem": {
+    "word1": "drin(?)",
+    "word2": "(?)ite",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "k",
+   "options": [
+    {
+     "value": "k",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "Here is drin_, its last letter gone. A single letter finishes this word and the next. With k you read drink and kite. Every other choice lands one word only, or nothing.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-05",
+   "stem": {
+    "word1": "brea(?)",
+    "word2": "(?)ing",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "d",
+   "options": [
+    {
+     "value": "d",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "The gap sits at the end of brea_. The same letter ends one word, starts the other. d makes bread and ding. The other letters catch one part, or not any.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-06",
+   "stem": {
+    "word1": "clam(?)",
+    "word2": "(?)ost",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "p",
+   "options": [
+    {
+     "value": "p",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "s",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "c",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "See where clam_ stops short. It must end the first and open the second. Drop in p for clamp and post. Those left finish a single side, or none.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-07",
+   "stem": {
+    "word1": "toas(?)",
+    "word2": "(?)rack",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "Word one shows toas_. One letter closes this side and opens that side. Add t and you get toast and track. A different letter fills one gap, or neither.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-08",
+   "stem": {
+    "word1": "crow(?)",
+    "word2": "(?)est",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "n",
+   "options": [
+    {
+     "value": "n",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "d",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "Look at crow_ on the left. The right letter ends it and opens the next. A n builds crown and nest. The others finish just one side, or neither.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-09",
+   "stem": {
+    "word1": "spoo(?)",
+    "word2": "(?)oise",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "n",
+   "options": [
+    {
+     "value": "n",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "f",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "p",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "Start with spoo_. One letter must end it and begin the next. A n gives spoon and noise. Each other letter completes one word alone, or none.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-10",
+   "stem": {
+    "word1": "chal(?)",
+    "word2": "(?)ing",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "k",
+   "options": [
+    {
+     "value": "k",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "Look at the first word, chal_. You need a letter to close both words. Slot in k for chalk and king. The rest reach only one word, or miss both.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-11",
+   "stem": {
+    "word1": "stoo(?)",
+    "word2": "(?)ift",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "l",
+   "options": [
+    {
+     "value": "l",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "d",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "g",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "The left word reads stoo_. A single letter finishes this word and the next. Put l there for stool and lift. Every other choice lands one word only, or nothing.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-12",
+   "stem": {
+    "word1": "bloo(?)",
+    "word2": "(?)oor",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "d",
+   "options": [
+    {
+     "value": "d",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "Here is bloo_, its last letter gone. The same letter ends one word, starts the other. With d you read blood and door. The other letters catch one part, or not any.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-13",
+   "stem": {
+    "word1": "clea(?)",
+    "word2": "(?)ose",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "n",
+   "options": [
+    {
+     "value": "n",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "d",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "The gap sits at the end of clea_. It must end the first and open the second. n makes clean and nose. Those left finish a single side, or none.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-14",
+   "stem": {
+    "word1": "shar(?)",
+    "word2": "(?)ond",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "p",
+   "options": [
+    {
+     "value": "p",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "d",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "See where shar_ stops short. One letter closes this side and opens that side. Drop in p for sharp and pond. A different letter fills one gap, or neither.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-15",
+   "stem": {
+    "word1": "ligh(?)",
+    "word2": "(?)rain",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "Word one shows ligh_. The right letter ends it and opens the next. Add t and you get light and train. The others finish just one side, or neither.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-16",
+   "stem": {
+    "word1": "smar(?)",
+    "word2": "(?)able",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "c",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "Look at smar_ on the left. One letter must end it and begin the next. A t closes it and opens table. Each other letter finishes one side alone, or none.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-17",
+   "stem": {
+    "word1": "gree(?)",
+    "word2": "(?)oise",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "n",
+   "options": [
+    {
+     "value": "n",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "d",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "p",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "Start with gree_. You need a letter to close both words. A n gives green and noise. The rest reach only one word, or miss both.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-18",
+   "stem": {
+    "word1": "floa(?)",
+    "word2": "(?)iger",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "Look at the first word, floa_. A single letter finishes this word and the next. Slot in t for float and tiger. Every other choice lands one word only, or nothing.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-19",
+   "stem": {
+    "word1": "spor(?)",
+    "word2": "(?)rick",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "e",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "The left word reads spor_. The same letter ends one word, starts the other. Put t there for sport and trick. The other letters catch one part, or not any.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-20",
+   "stem": {
+    "word1": "clou(?)",
+    "word2": "(?)ance",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "d",
+   "options": [
+    {
+     "value": "d",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "t",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "l",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "Here is clou_, its last letter gone. It must end the first and open the second. With d you read cloud and dance. Those left finish a single side, or none.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-21",
+   "stem": {
+    "word1": "pain(?)",
+    "word2": "(?)ent",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "The gap sits at the end of pain_. One letter closes this side and opens that side. t makes paint and tent. A different letter fills one gap, or neither.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-22",
+   "stem": {
+    "word1": "forecas(?)",
+    "word2": "(?)ower",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "b",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "See where forecas_ stops short. The right letter ends it and opens the next. Drop in t for forecast and tower. The others finish just one side, or neither.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-23",
+   "stem": {
+    "word1": "swee(?)",
+    "word2": "(?)ime",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "p",
+     "isKey": false,
+     "tag": "vr01-first-word-only",
+     "tagChildHint": "Your letter has to finish both words. Try it in each gap."
+    },
+    {
+     "value": "d",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    }
+   ],
+   "walkScript": "Word one shows swee_. One letter must end it and begin the next. Add t and you get sweet and time. Each other letter completes one word alone, or none.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-24",
+   "stem": {
+    "word1": "grou(?)",
+    "word2": "(?)ip",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "p",
+   "options": [
+    {
+     "value": "p",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "d",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "Look at grou_ on the left. You need a letter to close both words. A p builds group and pip. The rest reach only one word, or miss both.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-01-insert-letter-25",
+   "stem": {
+    "word1": "frui(?)",
+    "word2": "(?)ea",
+    "prompt": "One letter finishes the first word and starts the second. Which letter?"
+   },
+   "key": "t",
+   "options": [
+    {
+     "value": "t",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "p",
+     "isKey": false,
+     "tag": "vr01-second-word-only",
+     "tagChildHint": "Check the first word too. Your letter must finish it as well."
+    },
+    {
+     "value": "a",
+     "isKey": false,
+     "tag": "vr01-completes-neither",
+     "tagChildHint": "Say both finished words out loud. Are they both real?"
+    }
+   ],
+   "walkScript": "Start with frui_. A single letter finishes this word and the next. A t gives fruit and tea. Every other choice lands one word only, or nothing.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  }
+ ]
+}

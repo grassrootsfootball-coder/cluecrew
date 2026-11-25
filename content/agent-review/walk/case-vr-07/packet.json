@@ -1,0 +1,1404 @@
+{
+ "caseId": "case-vr-07",
+ "title": "The Price of Letters",
+ "questionType": "vr-07-letters-for-numbers",
+ "free": true,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-01",
+   "stem": {
+    "sum": "P + Q − R",
+    "code": {
+     "P": "2",
+     "Q": "5",
+     "R": "4"
+    },
+    "prompt": "If P = 2, Q = 5, R = 4, what is P + Q − R?",
+    "operands": {
+     "expr": "P + Q − R",
+     "kind": "code",
+     "values": {
+      "P": 2,
+      "Q": 5,
+      "R": 4
+     }
+    }
+   },
+   "key": "3",
+   "options": [
+    {
+     "value": "3",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "6",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Find P, Q and R in the code. They are 2, 3 and 4, which add to 9. 10 or 8 swaps a number; a dropped step gives 7.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-02",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "8",
+     "Q": "9",
+     "R": "4",
+     "S": "11"
+    },
+    "prompt": "If P = 8, Q = 9, R = 4, S = 11, what is P + Q + R − S?",
+    "operands": {
+     "expr": "P + Q + R − S",
+     "kind": "code",
+     "values": {
+      "P": 8,
+      "Q": 9,
+      "R": 4,
+      "S": 11
+     }
+    }
+   },
+   "key": "10",
+   "options": [
+    {
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "5",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "32",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "21",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 8 + 9 + 4 − 11, which makes 10. 5 uses R's number for Q. 32 adds every number. 21 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-03",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "11",
+     "Q": "5",
+     "R": "4",
+     "S": "7"
+    },
+    "prompt": "If P = 11, Q = 5, R = 4, S = 7, what is P + Q + R − S?",
+    "operands": {
+     "expr": "P + Q + R − S",
+     "kind": "code",
+     "values": {
+      "P": 11,
+      "Q": 5,
+      "R": 4,
+      "S": 7
+     }
+    }
+   },
+   "key": "13",
+   "options": [
+    {
+     "value": "13",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "19",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 11 + 5 + 4 − 7, which makes 13. 19 uses P's number for Q. 27 adds every number. 20 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-04",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "14",
+     "Q": "11",
+     "R": "16",
+     "S": "8"
+    },
+    "prompt": "If P = 14, Q = 11, R = 16, S = 8, what is P + Q + R − S?",
+    "operands": {
+     "expr": "P + Q + R − S",
+     "kind": "code",
+     "values": {
+      "P": 14,
+      "Q": 11,
+      "R": 16,
+      "S": 8
+     }
+    }
+   },
+   "key": "33",
+   "options": [
+    {
+     "value": "33",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "30",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "49",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "41",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Read the sum P + Q − R. 5, 6 and 4 make 11, then 4 off gives 7. Flip the minus to plus for 15; 8 or 6 shift a value.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-05",
+   "stem": {
+    "sum": "P + Q − R",
+    "code": {
+     "P": "7",
+     "Q": "6",
+     "R": "3"
+    },
+    "prompt": "If P = 7, Q = 6, R = 3, what is P + Q − R?",
+    "operands": {
+     "expr": "P + Q − R",
+     "kind": "code",
+     "values": {
+      "P": 7,
+      "Q": 6,
+      "R": 3
+     }
+    }
+   },
+   "key": "10",
+   "options": [
+    {
+     "value": "10",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "16",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "The sum needs P, Q and R. They stand for 2, 7 and 5, adding up to 14. A value up or down gives 15 or 13; 12 drops a step.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-06",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "5",
+     "Q": "6",
+     "R": "8",
+     "S": "9"
+    },
+    "prompt": "If P = 5, Q = 6, R = 8, S = 9, what is P + Q − R + S?",
+    "operands": {
+     "expr": "P + Q − R + S",
+     "kind": "code",
+     "values": {
+      "P": 5,
+      "Q": 6,
+      "R": 8,
+      "S": 9
+     }
+    }
+   },
+   "key": "12",
+   "options": [
+    {
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "28",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "3",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 5 + 6 − 8 + 9, which makes 12. 11 uses P's number for Q. 28 adds every number. 3 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-07",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "12",
+     "Q": "8",
+     "R": "11",
+     "S": "6"
+    },
+    "prompt": "If P = 12, Q = 8, R = 11, S = 6, what is P + Q − R + S?",
+    "operands": {
+     "expr": "P + Q − R + S",
+     "kind": "code",
+     "values": {
+      "P": 12,
+      "Q": 8,
+      "R": 11,
+      "S": 6
+     }
+    }
+   },
+   "key": "15",
+   "options": [
+    {
+     "value": "15",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "19",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "37",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 12 + 8 − 11 + 6, which makes 15. 19 uses P's number for Q. 37 adds every number. 9 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-08",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "18",
+     "Q": "7",
+     "R": "5",
+     "S": "12"
+    },
+    "prompt": "If P = 18, Q = 7, R = 5, S = 12, what is P + Q − R + S?",
+    "operands": {
+     "expr": "P + Q − R + S",
+     "kind": "code",
+     "values": {
+      "P": 18,
+      "Q": 7,
+      "R": 5,
+      "S": 12
+     }
+    }
+   },
+   "key": "32",
+   "options": [
+    {
+     "value": "32",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "21",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "42",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 18 + 7 − 5 + 12, which makes 32. 21 uses Q's number for P. 42 adds every number. 20 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-09",
+   "stem": {
+    "sum": "P + Q − R",
+    "code": {
+     "P": "2",
+     "Q": "3",
+     "R": "4"
+    },
+    "prompt": "If P = 2, Q = 3, R = 4, what is P + Q − R?",
+    "operands": {
+     "expr": "P + Q − R",
+     "kind": "code",
+     "values": {
+      "P": 2,
+      "Q": 3,
+      "R": 4
+     }
+    }
+   },
+   "key": "1",
+   "options": [
+    {
+     "value": "1",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "0",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "5",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q and R first. Then work out 2 + 3 − 4, which makes 1. 0 uses P's number for Q. 9 adds every number. 5 leaves R out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-10",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "11",
+     "Q": "3",
+     "R": "6",
+     "S": "4"
+    },
+    "prompt": "If P = 11, Q = 3, R = 6, S = 4, what is P + Q + R − S?",
+    "operands": {
+     "expr": "P + Q + R − S",
+     "kind": "code",
+     "values": {
+      "P": 11,
+      "Q": 3,
+      "R": 6,
+      "S": 4
+     }
+    }
+   },
+   "key": "16",
+   "options": [
+    {
+     "value": "16",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "8",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "20",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 11 + 3 + 6 − 4, which makes 16. 8 uses Q's number for P. 13 uses Q's number for R. 20 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-11",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "6",
+     "Q": "9",
+     "R": "14",
+     "S": "11"
+    },
+    "prompt": "If P = 6, Q = 9, R = 14, S = 11, what is P + Q + R − S?",
+    "operands": {
+     "expr": "P + Q + R − S",
+     "kind": "code",
+     "values": {
+      "P": 6,
+      "Q": 9,
+      "R": 14,
+      "S": 11
+     }
+    }
+   },
+   "key": "18",
+   "options": [
+    {
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "21",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "40",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "29",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Take P, Q and R here. They are 4, 3 and 5, so 7 take 5 leaves 2. Add R instead and 12 shows up; 3 or 1 slip a value.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-12",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "8",
+     "Q": "13",
+     "R": "16",
+     "S": "6"
+    },
+    "prompt": "If P = 8, Q = 13, R = 16, S = 6, what is P + Q + R − S?",
+    "operands": {
+     "expr": "P + Q + R − S",
+     "kind": "code",
+     "values": {
+      "P": 8,
+      "Q": 13,
+      "R": 16,
+      "S": 6
+     }
+    }
+   },
+   "key": "31",
+   "options": [
+    {
+     "value": "31",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "36",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "43",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "37",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "The sum asks for P, Q and R. 5, 4 and 6 give 9 take 6, landing on 3. Adding R instead makes 15; 4 or 2 nudge a value.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-13",
+   "stem": {
+    "sum": "P + Q − R",
+    "code": {
+     "P": "7",
+     "Q": "4",
+     "R": "3"
+    },
+    "prompt": "If P = 7, Q = 4, R = 3, what is P + Q − R?",
+    "operands": {
+     "expr": "P + Q − R",
+     "kind": "code",
+     "values": {
+      "P": 7,
+      "Q": 4,
+      "R": 3
+     }
+    }
+   },
+   "key": "8",
+   "options": [
+    {
+     "value": "8",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "5",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "14",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    }
+   ],
+   "walkScript": "Look up P, Q and R first. Then work out 7 + 4 − 3, which makes 8. 5 uses Q's number for P. 11 uses P's number for Q. 14 adds every number.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-14",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "8",
+     "Q": "4",
+     "R": "6",
+     "S": "9"
+    },
+    "prompt": "If P = 8, Q = 4, R = 6, S = 9, what is P + Q − R + S?",
+    "operands": {
+     "expr": "P + Q − R + S",
+     "kind": "code",
+     "values": {
+      "P": 8,
+      "Q": 4,
+      "R": 6,
+      "S": 9
+     }
+    }
+   },
+   "key": "15",
+   "options": [
+    {
+     "value": "15",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "12",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 8 + 4 − 6 + 9, which makes 15. 11 uses Q's number for P. 12 uses S's number for R. 27 adds every number.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-15",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "7",
+     "Q": "12",
+     "R": "10",
+     "S": "13"
+    },
+    "prompt": "If P = 7, Q = 12, R = 10, S = 13, what is P + Q − R + S?",
+    "operands": {
+     "expr": "P + Q − R + S",
+     "kind": "code",
+     "values": {
+      "P": 7,
+      "Q": 12,
+      "R": 10,
+      "S": 13
+     }
+    }
+   },
+   "key": "22",
+   "options": [
+    {
+     "value": "22",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "17",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "42",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 7 + 12 − 10 + 13, which makes 22. 17 uses P's number for Q. 42 adds every number. 9 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-16",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "5",
+     "Q": "12",
+     "R": "10",
+     "S": "11"
+    },
+    "prompt": "If P = 5, Q = 12, R = 10, S = 11, what is P + Q − R + S?",
+    "operands": {
+     "expr": "P + Q − R + S",
+     "kind": "code",
+     "values": {
+      "P": 5,
+      "Q": 12,
+      "R": 10,
+      "S": 11
+     }
+    }
+   },
+   "key": "18",
+   "options": [
+    {
+     "value": "18",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "16",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "38",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "7",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 5 + 12 − 10 + 11, which makes 18. 16 uses R's number for Q. 38 adds every number. 7 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-17",
+   "stem": {
+    "sum": "P + Q − R",
+    "code": {
+     "P": "2",
+     "Q": "7",
+     "R": "4"
+    },
+    "prompt": "If P = 2, Q = 7, R = 4, what is P + Q − R?",
+    "operands": {
+     "expr": "P + Q − R",
+     "kind": "code",
+     "values": {
+      "P": 2,
+      "Q": 7,
+      "R": 4
+     }
+    }
+   },
+   "key": "5",
+   "options": [
+    {
+     "value": "5",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "10",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "13",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Check the code for P, Q and R. P is 2, Q is 4, R is 5, making 11. The 12 and 10 slip a value; 9 leaves a step out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-18",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "5",
+     "Q": "10",
+     "R": "6",
+     "S": "9"
+    },
+    "prompt": "If P = 5, Q = 10, R = 6, S = 9, what is P + Q + R − S?",
+    "operands": {
+     "expr": "P + Q + R − S",
+     "kind": "code",
+     "values": {
+      "P": 5,
+      "Q": 10,
+      "R": 6,
+      "S": 9
+     }
+    }
+   },
+   "key": "12",
+   "options": [
+    {
+     "value": "12",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "17",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "30",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "21",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Start with the sum P + Q + R. It uses 3, 5 and 6, which total 14. 15 or 13 shift a value; a missed step gives 12.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-19",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "10",
+     "Q": "12",
+     "R": "13",
+     "S": "11"
+    },
+    "prompt": "If P = 10, Q = 12, R = 13, S = 11, what is P + Q + R − S?",
+    "operands": {
+     "expr": "P + Q + R − S",
+     "kind": "code",
+     "values": {
+      "P": 10,
+      "Q": 12,
+      "R": 13,
+      "S": 11
+     }
+    }
+   },
+   "key": "24",
+   "options": [
+    {
+     "value": "24",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "26",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "46",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "35",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Point to P, Q and R here. They are 4, 6 and 4, so 4 off 10 gives 6. Turn the minus to plus for 14; 7 or 5 shift a value.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-20",
+   "stem": {
+    "sum": "P + Q + R − S",
+    "code": {
+     "P": "16",
+     "Q": "15",
+     "R": "18",
+     "S": "6"
+    },
+    "prompt": "If P = 16, Q = 15, R = 18, S = 6, what is P + Q + R − S?",
+    "operands": {
+     "expr": "P + Q + R − S",
+     "kind": "code",
+     "values": {
+      "P": 16,
+      "Q": 15,
+      "R": 18,
+      "S": 6
+     }
+    }
+   },
+   "key": "43",
+   "options": [
+    {
+     "value": "43",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "42",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "55",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "49",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "You need P, Q and R here. They stand for 5, 7 and 5, so 12 take 5 leaves 7. A plus instead makes 17; 8 or 6 slip a value.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-21",
+   "stem": {
+    "sum": "P + Q − R",
+    "code": {
+     "P": "2",
+     "Q": "7",
+     "R": "3"
+    },
+    "prompt": "If P = 2, Q = 7, R = 3, what is P + Q − R?",
+    "operands": {
+     "expr": "P + Q − R",
+     "kind": "code",
+     "values": {
+      "P": 2,
+      "Q": 7,
+      "R": 3
+     }
+    }
+   },
+   "key": "6",
+   "options": [
+    {
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "12",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Three letters build this sum. P, Q and R are 2, 3 and 6, which come to 11. The 12 and 10 nudge a value; 9 misses a step.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-22",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "11",
+     "Q": "4",
+     "R": "3",
+     "S": "9"
+    },
+    "prompt": "If P = 11, Q = 4, R = 3, S = 9, what is P + Q − R + S?",
+    "operands": {
+     "expr": "P + Q − R + S",
+     "kind": "code",
+     "values": {
+      "P": 11,
+      "Q": 4,
+      "R": 3,
+      "S": 9
+     }
+    }
+   },
+   "key": "21",
+   "options": [
+    {
+     "value": "21",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "14",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "12",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 11 + 4 − 3 + 9, which makes 21. 14 uses Q's number for P. 27 adds every number. 12 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-23",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "13",
+     "Q": "5",
+     "R": "9",
+     "S": "10"
+    },
+    "prompt": "If P = 13, Q = 5, R = 9, S = 10, what is P + Q − R + S?",
+    "operands": {
+     "expr": "P + Q − R + S",
+     "kind": "code",
+     "values": {
+      "P": 13,
+      "Q": 5,
+      "R": 9,
+      "S": 10
+     }
+    }
+   },
+   "key": "19",
+   "options": [
+    {
+     "value": "19",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "11",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "27",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "37",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 13 + 5 − 9 + 10, which makes 19. 11 uses Q's number for P. 27 uses P's number for Q. 37 adds every number.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-24",
+   "stem": {
+    "sum": "P + Q − R + S",
+    "code": {
+     "P": "13",
+     "Q": "14",
+     "R": "5",
+     "S": "12"
+    },
+    "prompt": "If P = 13, Q = 14, R = 5, S = 12, what is P + Q − R + S?",
+    "operands": {
+     "expr": "P + Q − R + S",
+     "kind": "code",
+     "values": {
+      "P": 13,
+      "Q": 14,
+      "R": 5,
+      "S": 12
+     }
+    }
+   },
+   "key": "34",
+   "options": [
+    {
+     "value": "34",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "33",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "44",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "22",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "Look up P, Q, R and S first. Then work out 13 + 14 − 5 + 12, which makes 34. 33 uses P's number for Q. 44 adds every number. 22 leaves S out.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-07-letters-for-numbers-25",
+   "stem": {
+    "sum": "P + Q − R",
+    "code": {
+     "P": "7",
+     "Q": "2",
+     "R": "3"
+    },
+    "prompt": "If P = 7, Q = 2, R = 3, what is P + Q − R?",
+    "operands": {
+     "expr": "P + Q − R",
+     "kind": "code",
+     "values": {
+      "P": 7,
+      "Q": 2,
+      "R": 3
+     }
+    }
+   },
+   "key": "6",
+   "options": [
+    {
+     "value": "6",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "1",
+     "isKey": false,
+     "tag": "vr07-value-slip",
+     "tagChildHint": "Write each letter’s number above it before you add."
+    },
+    {
+     "value": "12",
+     "isKey": false,
+     "tag": "vr07-operation-slip",
+     "tagChildHint": "Look at the signs first. Is it plus, minus or times?"
+    },
+    {
+     "value": "9",
+     "isKey": false,
+     "tag": "vr07-term-dropped",
+     "tagChildHint": "Check you have used every letter. Count them as you go."
+    }
+   ],
+   "walkScript": "The sum asks for P, Q and R. Those are 2, 7 and 4, which total 13. A value up or down gives 14 or 12; 11 misses a step.",
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

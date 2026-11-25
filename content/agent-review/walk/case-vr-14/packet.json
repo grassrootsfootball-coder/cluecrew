@@ -1,0 +1,1118 @@
+{
+ "caseId": "case-vr-14",
+ "title": "The Same Jump",
+ "questionType": "vr-14-letter-connections",
+ "free": true,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-14-letter-connections-01",
+   "stem": {
+    "pairA": [
+     "A",
+     "C"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 8,
+     "answer": 10
+    },
+    "stemWord": "I"
+   },
+   "key": "K",
+   "options": [
+    {
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "G",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter I moves 2 on to the letter K. The letter G goes the other way. The letter L is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-02",
+   "stem": {
+    "pairA": [
+     "D",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 13,
+     "answer": 16
+    },
+    "stemWord": "N"
+   },
+   "key": "Q",
+   "options": [
+    {
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, D and G. That pair goes 3 on, so the letter N moves 3 on to the letter Q. The letter K goes the other way. The letter P is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-03",
+   "stem": {
+    "pairA": [
+     "K",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -4,
+     "first": 18,
+     "answer": 14
+    },
+    "stemWord": "S"
+   },
+   "key": "O",
+   "options": [
+    {
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "W",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, K and G. That pair goes 4 back, so the letter S moves 4 back to the letter O. The letter W goes the other way. The letter P is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-04",
+   "stem": {
+    "pairA": [
+     "C",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -2,
+     "first": 12,
+     "answer": 10
+    },
+    "stemWord": "M"
+   },
+   "key": "K",
+   "options": [
+    {
+     "value": "K",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, C and A. That pair goes 2 back, so the letter M moves 2 back to the letter K. The letter O goes the other way. The letter J is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-05",
+   "stem": {
+    "pairA": [
+     "D",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 17,
+     "answer": 20
+    },
+    "stemWord": "R"
+   },
+   "key": "U",
+   "options": [
+    {
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "V",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, D and G. That pair goes 3 on, so the letter R moves 3 on to the letter U. The letter O goes the other way. The letter V is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-06",
+   "stem": {
+    "pairA": [
+     "G",
+     "K"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 11,
+     "answer": 15
+    },
+    "stemWord": "L"
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, G and K. That pair goes 4 on, so the letter L moves 4 on to the letter P. The letter H goes the other way. The letter O is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-07",
+   "stem": {
+    "pairA": [
+     "C",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -2,
+     "first": 16,
+     "answer": 14
+    },
+    "stemWord": "Q"
+   },
+   "key": "O",
+   "options": [
+    {
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, C and A. That pair goes 2 back, so the letter Q moves 2 back to the letter O. The letter S goes the other way. The letter P is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-08",
+   "stem": {
+    "pairA": [
+     "D",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -3,
+     "first": 16,
+     "answer": 13
+    },
+    "stemWord": "Q"
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, D and A. That pair goes 3 back, so the letter Q moves 3 back to the letter N. The letter T goes the other way. The letter M is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-09",
+   "stem": {
+    "pairA": [
+     "G",
+     "K"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 15,
+     "answer": 19
+    },
+    "stemWord": "P"
+   },
+   "key": "T",
+   "options": [
+    {
+     "value": "T",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, G and K. That pair goes 4 on, so the letter P moves 4 on to the letter T. The letter L goes the other way. The letter U is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-10",
+   "stem": {
+    "pairA": [
+     "A",
+     "C"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 9,
+     "answer": 11
+    },
+    "stemWord": "J"
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "H",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "K",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter J moves 2 on to the letter L. The letter H goes the other way. The letter K is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-11",
+   "stem": {
+    "pairA": [
+     "G",
+     "D"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -3,
+     "first": 14,
+     "answer": 11
+    },
+    "stemWord": "O"
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, G and D. That pair goes 3 back, so the letter O moves 3 back to the letter L. The letter R goes the other way. The letter M is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-12",
+   "stem": {
+    "pairA": [
+     "K",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -4,
+     "first": 8,
+     "answer": 4
+    },
+    "stemWord": "I"
+   },
+   "key": "E",
+   "options": [
+    {
+     "value": "E",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "D",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, K and G. That pair goes 4 back, so the letter I moves 4 back to the letter E. The letter M goes the other way. The letter D is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-13",
+   "stem": {
+    "pairA": [
+     "A",
+     "C"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 13,
+     "answer": 15
+    },
+    "stemWord": "N"
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter N moves 2 on to the letter P. The letter L goes the other way. The letter Q is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-14",
+   "stem": {
+    "pairA": [
+     "D",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 18,
+     "answer": 21
+    },
+    "stemWord": "S"
+   },
+   "key": "V",
+   "options": [
+    {
+     "value": "V",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "U",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, D and G. That pair goes 3 on, so the letter S moves 3 on to the letter V. The letter P goes the other way. The letter U is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-15",
+   "stem": {
+    "pairA": [
+     "K",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -4,
+     "first": 12,
+     "answer": 8
+    },
+    "stemWord": "M"
+   },
+   "key": "I",
+   "options": [
+    {
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, K and G. That pair goes 4 back, so the letter M moves 4 back to the letter I. The letter Q goes the other way. The letter J is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-16",
+   "stem": {
+    "pairA": [
+     "C",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -2,
+     "first": 17,
+     "answer": 15
+    },
+    "stemWord": "R"
+   },
+   "key": "P",
+   "options": [
+    {
+     "value": "P",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, C and A. That pair goes 2 back, so the letter R moves 2 back to the letter P. The letter T goes the other way. The letter O is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-17",
+   "stem": {
+    "pairA": [
+     "D",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 3,
+     "first": 11,
+     "answer": 14
+    },
+    "stemWord": "L"
+   },
+   "key": "O",
+   "options": [
+    {
+     "value": "O",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "I",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, D and G. That pair goes 3 on, so the letter L moves 3 on to the letter O. The letter I goes the other way. The letter P is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-18",
+   "stem": {
+    "pairA": [
+     "G",
+     "K"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 16,
+     "answer": 20
+    },
+    "stemWord": "Q"
+   },
+   "key": "U",
+   "options": [
+    {
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "T",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, G and K. That pair goes 4 on, so the letter Q moves 4 on to the letter U. The letter M goes the other way. The letter T is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-19",
+   "stem": {
+    "pairA": [
+     "C",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -2,
+     "first": 10,
+     "answer": 8
+    },
+    "stemWord": "K"
+   },
+   "key": "I",
+   "options": [
+    {
+     "value": "I",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "J",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, C and A. That pair goes 2 back, so the letter K moves 2 back to the letter I. The letter M goes the other way. The letter J is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-20",
+   "stem": {
+    "pairA": [
+     "G",
+     "D"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -3,
+     "first": 15,
+     "answer": 12
+    },
+    "stemWord": "P"
+   },
+   "key": "M",
+   "options": [
+    {
+     "value": "M",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "S",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "L",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, G and D. That pair goes 3 back, so the letter P moves 3 back to the letter M. The letter S goes the other way. The letter L is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-21",
+   "stem": {
+    "pairA": [
+     "G",
+     "K"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 4,
+     "first": 9,
+     "answer": 13
+    },
+    "stemWord": "J"
+   },
+   "key": "N",
+   "options": [
+    {
+     "value": "N",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "F",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "O",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, G and K. That pair goes 4 on, so the letter J moves 4 on to the letter N. The letter F goes the other way. The letter O is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-22",
+   "stem": {
+    "pairA": [
+     "A",
+     "C"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 14,
+     "answer": 16
+    },
+    "stemWord": "O"
+   },
+   "key": "Q",
+   "options": [
+    {
+     "value": "Q",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "P",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter O moves 2 on to the letter Q. The letter M goes the other way. The letter P is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-23",
+   "stem": {
+    "pairA": [
+     "D",
+     "A"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -3,
+     "first": 14,
+     "answer": 11
+    },
+    "stemWord": "O"
+   },
+   "key": "L",
+   "options": [
+    {
+     "value": "L",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "M",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, D and A. That pair goes 3 back, so the letter O moves 3 back to the letter L. The letter R goes the other way. The letter M is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-24",
+   "stem": {
+    "pairA": [
+     "K",
+     "G"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": -4,
+     "first": 13,
+     "answer": 9
+    },
+    "stemWord": "N"
+   },
+   "key": "J",
+   "options": [
+    {
+     "value": "J",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "R",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "I",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, K and G. That pair goes 4 back, so the letter N moves 4 back to the letter J. The letter R goes the other way. The letter I is one letter out.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-14-letter-connections-25",
+   "stem": {
+    "pairA": [
+     "A",
+     "C"
+    ],
+    "prompt": "The second pair follows the same rule as the first. Which letter completes it?",
+    "operands": {
+     "kind": "letter-analogy",
+     "step": 2,
+     "first": 18,
+     "answer": 20
+    },
+    "stemWord": "S"
+   },
+   "key": "U",
+   "options": [
+    {
+     "value": "U",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Q",
+     "isKey": false,
+     "tag": "vr14-step-direction",
+     "tagChildHint": "Check which way the first pair moves along the alphabet. Go the same way from the new letter."
+    },
+    {
+     "value": "V",
+     "isKey": false,
+     "tag": "vr14-step-size",
+     "tagChildHint": "Count each hop along the alphabet. Then make the same number of hops from the new letter."
+    }
+   ],
+   "walkScript": "Start with the first pair, A and C. That pair goes 2 on, so the letter S moves 2 on to the letter U. The letter Q goes the other way. The letter V is one letter out.",
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

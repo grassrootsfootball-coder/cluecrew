@@ -1,0 +1,1716 @@
+{
+ "caseId": "case-vr-03",
+ "title": "The Bridge Builder",
+ "questionType": "vr-03-related-words",
+ "free": true,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-03-related-words-01",
+   "stem": {
+    "pairA": [
+     "tree",
+     "leaf"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "flower"
+   },
+   "key": "petal",
+   "options": [
+    {
+     "value": "petal",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "garden",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round."
+    },
+    {
+     "value": "vase",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Look at kitten and cat. This pair runs from young animal to grown animal. A grown-up puppy is a dog. Bone and kennel fit dogs, not the grown form.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-03",
+   "stem": {
+    "pairA": [
+     "book",
+     "page"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "house"
+   },
+   "key": "room",
+   "options": [
+    {
+     "value": "room",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "street",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round."
+    },
+    {
+     "value": "neighbour",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Take bird and nest. A bird makes its home in a nest. A bee makes its home in a hive. Honey and sting sit near bees but drop the link.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-05",
+   "stem": {
+    "pairA": [
+     "kitten",
+     "cat"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "puppy"
+   },
+   "key": "dog",
+   "options": [
+    {
+     "value": "dog",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "paw",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "whiskers",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": "Read eye and see. We use an eye to see. We use an ear to hear, so hear. Hear is the match; sound and head miss the link.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    {
+     "value": "foal",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "saddle",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    },
+    {
+     "value": "hoof",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    }
+   ],
+   "walkScript": "Look at pen and write. We use a pen to write. We use a knife to cut, so cut. Fork and sharp fit knives, not the action.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-07",
+   "stem": {
+    "pairA": [
+     "caterpillar",
+     "butterfly"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "tadpole"
+   },
+   "key": "frog",
+   "options": [
+    {
+     "value": "frog",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "tail",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "cocoon",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": "Picture fish and swim. A fish moves through water by swimming. A bird moves through air by flying, so fly. Only fly keeps the link; wing and sky just belong to birds.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-08",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    {
+     "value": "flower",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "garden",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    },
+    {
+     "value": "gardener",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": "Notice car and road. A car runs along the road under it. The path under a train is its track. Station and ticket sit near trains but drop the link.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-09",
+   "stem": {
+    "pairA": [
+     "seed",
+     "plant"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "egg"
+   },
+   "key": "chick",
+   "options": [
+    {
+     "value": "chick",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "shell",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "nest",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    }
+   ],
+   "walkScript": "Start with teacher and school. A teacher does their work inside a school. A doctor does their work inside a hospital. Neither medicine nor nurse is the doctor's workplace.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-10",
+   "stem": {
+    "pairA": [
+     "baker",
+     "bread"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "potter"
+   },
+   "key": "jug",
+   "options": [
+    {
+     "value": "jug",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "oven",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "handle",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    }
+   ],
+   "walkScript": "Start with baker and bread. A baker makes bread as their work. A potter makes jugs, so jug is the answer. An oven is where bread bakes, and a handle is only part of a jug.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-11",
+   "stem": {
+    "pairA": [
+     "rabbit",
+     "burrow"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "bee"
+   },
+   "key": "hive",
+   "options": [
+    {
+     "value": "hive",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "sting",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "honey",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    }
+   ],
+   "walkScript": "Read the first pair. The first one grows into the second. A tadpole grows into a frog too. Pond and jump fit frogs, not the change.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-12",
+   "stem": {
+    "pairA": [
+     "spider",
+     "web"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "bird"
+   },
+   "key": "nest",
+   "options": [
+    {
+     "value": "nest",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "silk",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "feather",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    }
+   ],
+   "walkScript": "Begin with book and read. You read the words of a book. You sing the words of a song, so sing. Only sing keeps the link; music and note just belong to songs.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-13",
+   "stem": {
+    "pairA": [
+     "car",
+     "road"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "train"
+   },
+   "key": "track",
+   "options": [
+    {
+     "value": "track",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "carriage",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "station",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    }
+   ],
+   "walkScript": "Look at winter and cold. Winter is the season that feels cold. Summer is the season that feels warm. Holiday and august sit near summer but drop the link.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-14",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    {
+     "value": "plane",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "anchor",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "wing",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    }
+   ],
+   "walkScript": "Line up minute and hour. An hour is the step up from a minute. A day is the step up from an hour. Neither clock nor week is one step up.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-15",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    {
+     "value": "milk",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "horn",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "grass",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    }
+   ],
+   "walkScript": "Take leaf and tree. A leaf grows as part of a tree. A petal is part of a flower. Flower is the match; garden and stem miss the link.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-16",
+   "stem": {
+    "pairA": [
+     "foot",
+     "shoe"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "head"
+   },
+   "key": "hat",
+   "options": [
+    {
+     "value": "hat",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "pillow",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    },
+    {
+     "value": "hair",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    }
+   ],
+   "walkScript": "Picture captain and ship. A captain steers the ship along. A pilot steers the plane along. Airport and wing fit planes, not the steered thing.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-17",
+   "stem": {
+    "pairA": [
+     "hand",
+     "glove"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "foot"
+   },
+   "key": "sock",
+   "options": [
+    {
+     "value": "sock",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "toe",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "floor",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    }
+   ],
+   "walkScript": "Start with bee and honey. A bee gives us the honey we eat. The drink a cow gives us is milk. Only milk keeps the link; farm and grass just belong to cows.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-18",
+   "stem": {
+    "pairA": [
+     "teacher",
+     "school"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "doctor"
+   },
+   "key": "hospital",
+   "options": [
+    {
+     "value": "hospital",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "pupil",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "medicine",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    }
+   ],
+   "walkScript": "Look at sheep and lamb. A lamb is the baby of a sheep. The baby of a horse is a foal. Stable and hay sit near horses but drop the link.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-19",
+   "stem": {
+    "pairA": [
+     "day",
+     "sun"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "night"
+   },
+   "key": "moon",
+   "options": [
+    {
+     "value": "moon",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "owl",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    },
+    {
+     "value": "morning",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": "Notice spider and web. A spider builds a web to live in. A bird builds a nest to live in. Neither egg nor branch is the thing built.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-20",
+   "stem": {
+    "pairA": [
+     "fish",
+     "swim"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "bird"
+   },
+   "key": "fly",
+   "options": [
+    {
+     "value": "fly",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "float",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "sing",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    }
+   ],
+   "walkScript": "Point to king and crown. A king wears a crown on top. A helmet sits on a knight's head. Helmet is the match; castle and sword miss the link.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-21",
+   "stem": {
+    "pairA": [
+     "eye",
+     "see"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "ear"
+   },
+   "key": "hear",
+   "options": [
+    {
+     "value": "hear",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "whisper",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    },
+    {
+     "value": "look",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": "Take baker and bread. A baker makes bread to sell. A potter makes a pot to sell. Oven and clay fit pottery, not the made thing.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-22",
+   "stem": {
+    "pairA": [
+     "pen",
+     "write"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "knife"
+   },
+   "key": "cut",
+   "options": [
+    {
+     "value": "cut",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "draw",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "spread",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    }
+   ],
+   "walkScript": "Begin with foot and shoe. A shoe goes on a foot. A hat goes on a head. Only hat keeps the link; hair and neck just belong to heads.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-23",
+   "stem": {
+    "pairA": [
+     "book",
+     "read"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "song"
+   },
+   "key": "sing",
+   "options": [
+    {
+     "value": "sing",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "record",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    },
+    {
+     "value": "write",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": "Look at puddle and small. A puddle is a small bit of water. A lake is a large bit of water. Water and deep sit near lakes but drop the link.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-24",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    {
+     "value": "warm",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "frosty",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "long",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    }
+   ],
+   "walkScript": "Read whisper and quiet. A whisper is a very quiet sound. A shout is a very loud sound. Neither voice nor mouth is how loud it is.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-25",
+   "stem": {
+    "pairA": [
+     "whisper",
+     "quiet"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "shout"
+   },
+   "key": "loud",
+   "options": [
+    {
+     "value": "loud",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "angry",
+     "isKey": false,
+     "tag": "vr03-wrong-link",
+     "tagChildHint": "Make the first pair into a sentence. Then try your answer in the same sentence."
+    },
+    {
+     "value": "soft",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": "Picture seed and plant. A seed grows up into a plant. An egg grows up into a chick. Chick is the match; shell and nestbox miss the link.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-26",
+   "stem": {
+    "pairA": [
+     "clock",
+     "time"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "thermometer"
+   },
+   "key": "temperature",
+   "options": [
+    {
+     "value": "temperature",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "doctor",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "hour",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-27",
+   "stem": {
+    "pairA": [
+     "author",
+     "novel"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "composer"
+   },
+   "key": "symphony",
+   "options": [
+    {
+     "value": "symphony",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "piano",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "note",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-28",
+   "stem": {
+    "pairA": [
+     "shepherd",
+     "sheep"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "cowboy"
+   },
+   "key": "cattle",
+   "options": [
+    {
+     "value": "cattle",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "horns",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "wool",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-29",
+   "stem": {
+    "pairA": [
+     "library",
+     "books"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "gallery"
+   },
+   "key": "paintings",
+   "options": [
+    {
+     "value": "paintings",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "brush",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "frame",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-30",
+   "stem": {
+    "pairA": [
+     "drought",
+     "rain"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "famine"
+   },
+   "key": "food",
+   "options": [
+    {
+     "value": "food",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "hunger",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "cloud",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-31",
+   "stem": {
+    "pairA": [
+     "captain",
+     "crew"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "conductor"
+   },
+   "key": "orchestra",
+   "options": [
+    {
+     "value": "orchestra",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ship",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "violin",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-32",
+   "stem": {
+    "pairA": [
+     "recipe",
+     "meal"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "blueprint"
+   },
+   "key": "building",
+   "options": [
+    {
+     "value": "building",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "brick",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "kitchen",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-33",
+   "stem": {
+    "pairA": [
+     "chapter",
+     "novel"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "scene"
+   },
+   "key": "play",
+   "options": [
+    {
+     "value": "play",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "ticket",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "line",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-34",
+   "stem": {
+    "pairA": [
+     "warm",
+     "scorching"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "damp"
+   },
+   "key": "soaked",
+   "options": [
+    {
+     "value": "soaked",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "wet",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "tagChildHint": "You found the right link. Now check how big the change is."
+    },
+    {
+     "value": "sunny",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-35",
+   "stem": {
+    "pairA": [
+     "breeze",
+     "gale"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "shower"
+   },
+   "key": "downpour",
+   "options": [
+    {
+     "value": "downpour",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "kite",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "drizzle",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-36",
+   "stem": {
+    "pairA": [
+     "whisper",
+     "shout"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "glance"
+   },
+   "key": "stare",
+   "options": [
+    {
+     "value": "stare",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "look",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "tagChildHint": "You found the right link. Now check how big the change is."
+    },
+    {
+     "value": "loud",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-37",
+   "stem": {
+    "pairA": [
+     "whisper",
+     "scream"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "whimper"
+   },
+   "key": "wail",
+   "options": [
+    {
+     "value": "wail",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "cry",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "tagChildHint": "You found the right link. Now check how big the change is."
+    },
+    {
+     "value": "tears",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-38",
+   "stem": {
+    "pairA": [
+     "annoyed",
+     "furious"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "pleased"
+   },
+   "key": "delighted",
+   "options": [
+    {
+     "value": "delighted",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "angry",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "happy",
+     "isKey": false,
+     "tag": "vr03-wrong-degree",
+     "tagChildHint": "You found the right link. Now check how big the change is."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-39",
+   "stem": {
+    "pairA": [
+     "wheat",
+     "flour"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "grape"
+   },
+   "key": "juice",
+   "options": [
+    {
+     "value": "juice",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "bread",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "vine",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-40",
+   "stem": {
+    "pairA": [
+     "sculptor",
+     "marble"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "potter"
+   },
+   "key": "clay",
+   "options": [
+    {
+     "value": "clay",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "vase",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "statue",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-41",
+   "stem": {
+    "pairA": [
+     "herd",
+     "cattle"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "flock"
+   },
+   "key": "sheep",
+   "options": [
+    {
+     "value": "sheep",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "cow",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "wool",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-42",
+   "stem": {
+    "pairA": [
+     "novel",
+     "chapter"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "poem"
+   },
+   "key": "verse",
+   "options": [
+    {
+     "value": "verse",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "book",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round."
+    },
+    {
+     "value": "author",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-43",
+   "stem": {
+    "pairA": [
+     "dictionary",
+     "word"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "atlas"
+   },
+   "key": "map",
+   "options": [
+    {
+     "value": "map",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "library",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round."
+    },
+    {
+     "value": "geography",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-44",
+   "stem": {
+    "pairA": [
+     "cowardice",
+     "bravery"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "cruelty"
+   },
+   "key": "kindness",
+   "options": [
+    {
+     "value": "kindness",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "violence",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "fear",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-45",
+   "stem": {
+    "pairA": [
+     "witness",
+     "trial"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "referee"
+   },
+   "key": "match",
+   "options": [
+    {
+     "value": "match",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "judge",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "goal",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-46",
+   "stem": {
+    "pairA": [
+     "drop",
+     "ocean"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "grain"
+   },
+   "key": "desert",
+   "options": [
+    {
+     "value": "desert",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "camel",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    },
+    {
+     "value": "wave",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-47",
+   "stem": {
+    "pairA": [
+     "sketch",
+     "painting"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "draft"
+   },
+   "key": "essay",
+   "options": [
+    {
+     "value": "essay",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "outline",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round."
+    },
+    {
+     "value": "pen",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-48",
+   "stem": {
+    "pairA": [
+     "forget",
+     "remember"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "doubt"
+   },
+   "key": "believe",
+   "options": [
+    {
+     "value": "believe",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "memory",
+     "isKey": false,
+     "tag": "vr03-example-anchor",
+     "tagChildHint": "The first pair only shows the rule. Now use that rule on the new word."
+    },
+    {
+     "value": "worry",
+     "isKey": false,
+     "tag": "vr03-same-topic",
+     "tagChildHint": "Say the first pair as a sentence. Then use that exact sentence for the second."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-03-related-words-49",
+   "stem": {
+    "pairA": [
+     "apprentice",
+     "master"
+    ],
+    "prompt": "The first pair go together in a certain way. Complete the second pair the same way.",
+    "stemWord": "sapling"
+   },
+   "key": "oak",
+   "options": [
+    {
+     "value": "oak",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "branch",
+     "isKey": false,
+     "tag": "vr03-part-for-kind",
+     "tagChildHint": "A part is not the same as a whole. Check what the first pair gave you."
+    },
+    {
+     "value": "acorn",
+     "isKey": false,
+     "tag": "vr03-reversed-relation",
+     "tagChildHint": "Check which way round the first pair goes. Keep your answer the same way round."
+    }
+   ],
+   "walkScript": null,
+   "walkScriptApprovedBy": null
+  }
+ ]
+}

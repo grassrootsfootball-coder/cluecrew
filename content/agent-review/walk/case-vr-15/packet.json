@@ -1,0 +1,968 @@
+{
+ "caseId": "case-vr-15",
+ "title": "The Locked Room",
+ "questionType": "vr-15-reading-information",
+ "free": true,
+ "houseFormExemplars": [
+  {
+   "itemId": "gen-vr-10-word-connections-01",
+   "stem": {
+    "pairA": [
+     "winter",
+     "cold"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "summer"
+   },
+   "key": "warm",
+   "options": [
+    "warm",
+    "holiday",
+    "August"
+   ],
+   "walkScript": "Look at winter and cold. Winter is a season; cold is how it feels. Summer is a season too, so warm fits. Holiday and August share summer, not the feeling."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-02",
+   "stem": {
+    "pairA": [
+     "minute",
+     "hour"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "hour"
+   },
+   "key": "day",
+   "options": [
+    "day",
+    "clock",
+    "week"
+   ],
+   "walkScript": "Start with minute and hour. Many minutes make one hour, a bigger unit. So hours make one day, bigger again. Clock and week miss that step in size."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-03",
+   "stem": {
+    "pairA": [
+     "leaf",
+     "tree"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "petal"
+   },
+   "key": "flower",
+   "options": [
+    "flower",
+    "garden",
+    "stem"
+   ],
+   "walkScript": "Begin with leaf and tree. A leaf is part of the tree. In the same way, a petal is part of a flower. Garden and stem are not the whole flower."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-04",
+   "stem": {
+    "pairA": [
+     "captain",
+     "ship"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "pilot"
+   },
+   "key": "plane",
+   "options": [
+    "plane",
+    "airport",
+    "wing"
+   ],
+   "walkScript": "Read captain and ship first. A captain steers the ship he leads. So a pilot steers a plane, and plane fits. Airport and wing sit by planes, steering nothing."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-05",
+   "stem": {
+    "pairA": [
+     "bee",
+     "honey"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "cow"
+   },
+   "key": "milk",
+   "options": [
+    "milk",
+    "farm",
+    "grass"
+   ],
+   "walkScript": "Take the pair bee and honey. A bee gives honey to eat. Milk is what a cow gives. Farm and grass go with cows, not food."
+  },
+  {
+   "itemId": "gen-vr-10-word-connections-06",
+   "stem": {
+    "pairA": [
+     "sheep",
+     "lamb"
+    ],
+    "prompt": "Find the connection in the first pair, then complete the second.",
+    "stemWord": "horse"
+   },
+   "key": "foal",
+   "options": [
+    "foal",
+    "stable",
+    "hay"
+   ],
+   "walkScript": "First read sheep and lamb. A lamb is the baby of a sheep. Likewise a foal is the baby of a horse. Stable and hay go with horses, not young."
+  }
+ ],
+ "rows": [
+  {
+   "itemId": "gen-vr-15-reading-information-01",
+   "stem": {
+    "clues": [
+     "Amy is taller than Dev.",
+     "Dev is taller than Grace."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the tallest?"
+   },
+   "key": "Amy",
+   "options": [
+    {
+     "value": "Amy",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Dev",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Grace",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Start with the first clue. Amy stands over Dev, and Dev then stands over Grace. That puts Amy right at the top. The others sit lower down the line.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-02",
+   "stem": {
+    "clues": [
+     "Ben is older than Ella.",
+     "Ella is older than Hari."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the youngest?"
+   },
+   "key": "Hari",
+   "options": [
+    {
+     "value": "Hari",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Ella",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Ben",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    }
+   ],
+   "walkScript": "Look at the first clue. Ben is older than Ella, who is older than Hari. So Hari lands as the youngest. Ben and Ella both sit above him.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-03",
+   "stem": {
+    "clues": [
+     "Finn is faster than Isla.",
+     "Cara is faster than Finn."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the fastest?"
+   },
+   "key": "Cara",
+   "options": [
+    {
+     "value": "Cara",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Finn",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Isla",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Begin where the two clues meet. Cara beats Finn, and Finn beats Isla for speed. Cara comes out fastest of all. The other two trail in behind her.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-04",
+   "stem": {
+    "clues": [
+     "Grace is taller than Jack.",
+     "Dev is taller than Grace."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the shortest?"
+   },
+   "key": "Jack",
+   "options": [
+    {
+     "value": "Jack",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Grace",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Dev",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Read the first clue first. Grace stands over Jack, but Dev stands over Grace. That leaves Jack down at the bottom. Dev and Grace both stand taller than him.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-05",
+   "stem": {
+    "clues": [
+     "Ella is older than Hari.",
+     "Hari is older than Amy."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the oldest?"
+   },
+   "key": "Ella",
+   "options": [
+    {
+     "value": "Ella",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Hari",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Amy",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Take the two clues together. Ella is older than Hari, and Hari older than Amy. Ella tops the whole line as oldest. Everyone else lands below her.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-06",
+   "stem": {
+    "clues": [
+     "Finn is faster than Isla.",
+     "Isla is faster than Ben."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the slowest?"
+   },
+   "key": "Ben",
+   "options": [
+    {
+     "value": "Ben",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Isla",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Finn",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    }
+   ],
+   "walkScript": "Line up the two clues. Finn outruns Isla, and Isla in turn outruns Ben. That drops Ben right to the back. Flip a clue and you slide to the front.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-07",
+   "stem": {
+    "clues": [
+     "Jack is taller than Cara.",
+     "Grace is taller than Jack."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the tallest?"
+   },
+   "key": "Grace",
+   "options": [
+    {
+     "value": "Grace",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Jack",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Cara",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Look at clue one first. Jack stands over Cara, but Grace stands over Jack. Grace reaches the very top spot. The others stay lower down the whole line.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-08",
+   "stem": {
+    "clues": [
+     "Amy is older than Dev.",
+     "Hari is older than Amy."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the youngest?"
+   },
+   "key": "Dev",
+   "options": [
+    {
+     "value": "Dev",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Amy",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Hari",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Start at the first clue. Amy is older than Dev, and Hari older than Amy. So Dev sits youngest of all. Both the others come in above him.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-09",
+   "stem": {
+    "clues": [
+     "Isla is faster than Ben.",
+     "Ben is faster than Ella."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the fastest?"
+   },
+   "key": "Isla",
+   "options": [
+    {
+     "value": "Isla",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Ben",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Ella",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Begin with the top clue. Isla beats Ben, and Ben in turn beats Ella. Isla finishes fastest of the three. The other two finish in behind her.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-10",
+   "stem": {
+    "clues": [
+     "Jack is taller than Cara.",
+     "Cara is taller than Finn."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the shortest?"
+   },
+   "key": "Finn",
+   "options": [
+    {
+     "value": "Finn",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Cara",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Jack",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    }
+   ],
+   "walkScript": "Read the clues side by side. Jack tops Cara, and Cara in turn tops Finn. That puts Finn at the bottom. Jack and Cara both rise taller.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-11",
+   "stem": {
+    "clues": [
+     "Dev is older than Grace.",
+     "Amy is older than Dev."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the oldest?"
+   },
+   "key": "Amy",
+   "options": [
+    {
+     "value": "Amy",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Dev",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Grace",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Join the two clues up. Dev is older than Grace, and Amy older than Dev. Amy comes out the oldest. The rest fall below her in age.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-12",
+   "stem": {
+    "clues": [
+     "Ella is faster than Hari.",
+     "Ben is faster than Ella."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the slowest?"
+   },
+   "key": "Hari",
+   "options": [
+    {
+     "value": "Hari",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Ella",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Ben",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Look where the clues link. Ella outruns Hari, but Ben in turn outruns Ella. That leaves Hari far at the back. Ahead of him run Ben and Ella.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-13",
+   "stem": {
+    "clues": [
+     "Cara is taller than Finn.",
+     "Finn is taller than Isla."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the tallest?"
+   },
+   "key": "Cara",
+   "options": [
+    {
+     "value": "Cara",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Finn",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Isla",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Chain the two clues together. Cara stands over Finn, and Finn stands over Isla. Cara tops the whole line. The others sit under her in the line.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-14",
+   "stem": {
+    "clues": [
+     "Dev is older than Grace.",
+     "Grace is older than Jack."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the youngest?"
+   },
+   "key": "Jack",
+   "options": [
+    {
+     "value": "Jack",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Grace",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Dev",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    }
+   ],
+   "walkScript": "Look at both clues now. Dev is older than Grace, and Grace older than Jack. Jack sits youngest of all. The other two both come above him.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-15",
+   "stem": {
+    "clues": [
+     "Hari is faster than Amy.",
+     "Ella is faster than Hari."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the fastest?"
+   },
+   "key": "Ella",
+   "options": [
+    {
+     "value": "Ella",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Hari",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Amy",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Begin with the linked clues. Hari beats Amy, but Ella beats Hari for speed. Ella runs fastest of all. Turn a clue around and you land at the back.",
+   "walkScriptApprovedBy": null
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-16",
+   "stem": {
+    "clues": [
+     "Isla is taller than Ben.",
+     "Finn is taller than Isla."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the shortest?"
+   },
+   "key": "Ben",
+   "options": [
+    {
+     "value": "Ben",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Isla",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Finn",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Set the two clues in order. Isla stands over Ben, but Finn stands over Isla. Ben ends up the shortest. Finn and Isla both stand taller than him.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-17",
+   "stem": {
+    "clues": [
+     "Grace is older than Jack.",
+     "Jack is older than Cara."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the oldest?"
+   },
+   "key": "Grace",
+   "options": [
+    {
+     "value": "Grace",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Jack",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Cara",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Take clue one to start. Grace is older than Jack, and Jack older than Cara. Grace tops them all as oldest. Everyone else falls below her in age.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-18",
+   "stem": {
+    "clues": [
+     "Hari is faster than Amy.",
+     "Amy is faster than Dev."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the slowest?"
+   },
+   "key": "Dev",
+   "options": [
+    {
+     "value": "Dev",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Amy",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Hari",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    }
+   ],
+   "walkScript": "Look at the two clues. Hari outruns Amy, and Amy in turn outruns Dev. That drops Dev to the very back. Hari and Amy both run ahead of him.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-19",
+   "stem": {
+    "clues": [
+     "Ben is taller than Ella.",
+     "Isla is taller than Ben."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the tallest?"
+   },
+   "key": "Isla",
+   "options": [
+    {
+     "value": "Isla",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Ben",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Ella",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Put the two clues together. Ben stands over Ella, but Isla stands over Ben. Isla reaches the very top. The others stay under her down the line.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-20",
+   "stem": {
+    "clues": [
+     "Cara is older than Finn.",
+     "Jack is older than Cara."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the youngest?"
+   },
+   "key": "Finn",
+   "options": [
+    {
+     "value": "Finn",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Cara",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Jack",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Read the linked clues first. Cara is older than Finn, but Jack older than Cara. So Finn lands the youngest. Both the others come in above him.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-21",
+   "stem": {
+    "clues": [
+     "Amy is faster than Dev.",
+     "Dev is faster than Grace."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the fastest?"
+   },
+   "key": "Amy",
+   "options": [
+    {
+     "value": "Amy",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Dev",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Grace",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Start with the top clue. Amy beats Dev, and Dev beats Grace for speed. Amy comes in fastest of them all. Everyone else comes in behind her now.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-22",
+   "stem": {
+    "clues": [
+     "Ben is taller than Ella.",
+     "Ella is taller than Hari."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the shortest?"
+   },
+   "key": "Hari",
+   "options": [
+    {
+     "value": "Hari",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Ella",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Ben",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    }
+   ],
+   "walkScript": "Look at clue one again. Ben stands over Ella, and Ella stands over Hari. Hari sits at the bottom. Ben and Ella both stand taller than him.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-23",
+   "stem": {
+    "clues": [
+     "Finn is older than Isla.",
+     "Cara is older than Finn."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the oldest?"
+   },
+   "key": "Cara",
+   "options": [
+    {
+     "value": "Cara",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Finn",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Isla",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Begin with the first clue. Finn is older than Isla, but Cara older than Finn. Cara comes out the oldest. The rest come below her in age.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-24",
+   "stem": {
+    "clues": [
+     "Grace is faster than Jack.",
+     "Dev is faster than Grace."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the slowest?"
+   },
+   "key": "Jack",
+   "options": [
+    {
+     "value": "Jack",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Grace",
+     "isKey": false,
+     "tag": "vr15-first-mention",
+     "tagChildHint": "Use every clue to put them in order before you answer."
+    },
+    {
+     "value": "Dev",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Set both clues in a row. Grace outruns Jack, but Dev in turn outruns Grace. Jack trails in as slowest. Ahead of him finish the other two.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  },
+  {
+   "itemId": "gen-vr-15-reading-information-25",
+   "stem": {
+    "clues": [
+     "Ella is taller than Hari.",
+     "Hari is taller than Amy."
+    ],
+    "prompt": "Read the clues, then answer.",
+    "question": "Who is the tallest?"
+   },
+   "key": "Ella",
+   "options": [
+    {
+     "value": "Ella",
+     "isKey": true,
+     "tag": null,
+     "tagChildHint": null
+    },
+    {
+     "value": "Hari",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    },
+    {
+     "value": "Amy",
+     "isKey": false,
+     "tag": "vr15-clue-flip",
+     "tagChildHint": "Careful with the direction words: taller, older, faster. Who beats whom?"
+    }
+   ],
+   "walkScript": "Look at the joined clues. Ella stands over Hari, and Hari stands over Amy. Ella tops the line as tallest. The others sit below her in the line.",
+   "walkScriptApprovedBy": "reviewer:rev-agent-01"
+  }
+ ]
+}

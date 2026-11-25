@@ -30832,3 +30832,30 @@ file and 1 vault entry.
   (`dpl_9aeUytahEguriexK7Cnim9tRHwQT`, Ready). `https://cluecrew-staging.vercel.app/api/health` now
   returns `{"ok":true,"db":{"connected":true}}`, its first healthy reading since August, and `/`,
   `/login`, `/signup`, `/crew` and `/admin` all respond 200. PRELAUNCH stays on.
+
+## R1067 — Walk-throughs serve on a row-carried approval bound to the text; VR walk-throughs drafted and read (David: "yes, do the walkthroughs first", 2026-11-25)
+
+**THE DOOR HELD TEN IDS.** `WALK_APPROVED_ITEM_IDS` — a hand-kept list, Annie's August read of ten
+English scripts — was the only way a walk-through reached a child. 1,075 stored scripts (617 VR, 379
+English, 179 Maths) sat behind it, so "with walk" in every status table since has counted STORED, not
+SERVED. A list cannot grow at the rate scripts are read, and under R1031 a separate agent reads them.
+
+**SO THE APPROVAL TRAVELS ON THE ROW, BOUND TO THE WORDS.** `walkApprovalOf` (core) serves a script when
+the row carries `walkScriptApprovedBy` (one of `WALK_APPROVERS`: `reviewer:rev-0001`,
+`reviewer:rev-agent-01` — a name, R94), `walkScriptAuthority` (the review file and its digest) and
+`walkScriptApprovedSha256` — the digest of the EXACT script read. The route computes the digest of the
+script as it stands, so **any edit withholds the script until it is read again**; a canary over the 164
+first landings confirms a one-character change is withheld. The declared list still serves its ten.
+`check:walkscript-reach` now requires the door to call `walkApprovalOf`.
+
+**THE DOOR.** `scripts/agent-review/land-walks.ts` (with `export-walk-packets.ts`, `WALK-DRAFTER.md`,
+`WALK-REVIEWER.md`): a drafting agent writes, a SEPARATE reviewing agent approves row by row, the door
+refuses a row the DB has moved on, runs `checkItemChildFacing` on the row as it will be, records the
+approval, an AttributionEvent and a fresh signature, and re-exports the snapshot.
+
+**WHAT THE READING FOUND IN SCRIPTS NOBODY HAD READ.** vr-03's 25 stored scripts belonged to other
+questions (scrambled); 11 of vr-07's quoted sums not on the screen; all 25 of vr-11's either ran past five
+sentences or named a "wrong option" absent from the choices; vr-01 stated its own rule backwards ("close
+both words") on 6; vr-12-11 has a second answer (fry → panfry) — a QUESTION fault, held. The free-case
+first pass: 182 of 365 approved; the rest are in a rewrite round. **Agreement between two agents measures
+agreement, not what a person would sign** — the reviewer here is a machine, recorded as one.
