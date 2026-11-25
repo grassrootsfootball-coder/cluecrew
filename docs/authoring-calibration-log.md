@@ -31001,3 +31001,18 @@ Maths 179/179, English 379/379. Preview `cluecrew-staging-lk5hvcuvl` (GitHub tie
   check prints the DRAFT list first and the missing-card list after it; I read the first and attributed the exit to it.
   **A failing gate with two causes reads as one if you stop at the first** — the R599 shape. The fix is authoring two
   cards through the vault door; publishing them changes the warm-up, so it waits for David.
+
+## R1073 — vault cards for "fast" and "shy" authored and published; check:headword-tiers passes (David: "yes, write the fast and shy cards, then push and deploy", 2026-11-25)
+
+- **Door V5** (`land-vault-cards.ts --publish-new`, `content/agent-review/vault/{packet,cards-V5,review-V5}.json`; round 1
+  kept as `review-V5.r1.json`). `export-vault-packet` found exactly two missing headwords — fast and shy — each on one LIVE
+  item. Both tier 1 against the 133 LIVE exemplars (fast beside quick/swift/brisk; shy beside scared/calm, one below
+  timid). shy: one sense. fast: two — speed (A, likelierKnown) and going without food (B, verb), chosen over "stuck
+  fast / fast asleep" because those live in fixed phrases and "firmly/deeply" would make "asleep" contestable on the LIVE
+  item. A new two-sense seed for the vocabulary-in-context family (71 → 72), which publishing the card was ruled to permit.
+- **Round 1 refused fast on one sentence:** "eating nothing from sunrise to sunset" is wrong about Ramadan — the fast
+  begins at first light and excludes drink. Corrected to "Many Muslims fast during Ramadan, eating and drinking nothing
+  from first light until sunset." The definition ("to go without eating for a while") was kept on review: it is the part
+  every fast shares, and adding drink would make it false of fasts that allow water.
+- Guard audit: no VOCAB_BANK headword moves. Gates (dev): headword-tiers **0** (first green since this session began),
+  db-content, serving-path, line-refs, option-positions, verify:solutions, authority-shape all pass; snapshot matches.

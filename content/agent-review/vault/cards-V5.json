@@ -1,0 +1,36 @@
+{
+  "batch": "V5",
+  "drafter": "agent:drafter",
+  "cards": [
+    {
+      "headword": "fast",
+      "tier": 1,
+      "wordClass": "adjective",
+      "definitionChild": "moving or doing things very quickly",
+      "sentence": "Leo is so fast that nobody can catch him in a game of tag.",
+      "twoMeanings": true,
+      "senseB": {
+        "definition": "to go without eating for a while",
+        "sentence": "Many Muslims fast during Ramadan, eating and drinking nothing from first light until sunset.",
+        "wordClass": "verb"
+      },
+      "likelierKnown": "A",
+      "likelierKnownNote": "Children say 'fast' for speed every day, while the not-eating sense is one they meet in RE lessons and hear about rather than use.",
+      "imagePrompt": "A boy running quickly across a playground while the other children chase after him in a game of tag.",
+      "why": "gen-vr-21-same-meaning-21 keys 'swift', so sense A is speed, an adjective; swift is a true synonym. No distractor becomes correct under either sense: slow is the opposite of A and unrelated to B; loud is unrelated to both; asleep only sits next to fast in the phrase 'fast asleep', where fast means 'deeply' and is not itself asleep, and it does not mean going without food. Sense B (going without food) is a separate meaning, not a figurative stretch, and UK children of 9-11 meet it through Ramadan in RE and in reading. I considered 'stuck fast' (firmly fixed) and set it aside: children meet it almost only in that fixed phrase. Tier 1 alongside quick, swift and brisk (all tier 1 exemplars)."
+    },
+    {
+      "headword": "shy",
+      "tier": 1,
+      "wordClass": "adjective",
+      "definitionChild": "nervous and quiet around people you do not know well",
+      "sentence": "Ella felt shy on her first day at the new school and spoke very quietly.",
+      "twoMeanings": false,
+      "senseB": null,
+      "likelierKnown": null,
+      "likelierKnownNote": null,
+      "imagePrompt": "A girl on her first day at a new school, standing close to the classroom door and speaking very quietly to a smiling teacher.",
+      "why": "gen-vr-21-same-meaning-25 keys 'timid', so sense A is nervous around people, an adjective; timid (tier 2 exemplar, 'easily frightened and slow to speak up') is a true synonym. No distractor becomes correct: bold is its opposite, polite describes manners not nerves, and lonely means wanting company, which the definition and sentence do not suggest (Ella is among people, not alone). One sense only: the other uses (a horse that shies, a coconut shy, 'two shy of ten') are rare in what a 9-11-year-old reads, so they do not earn a second sense. Tier 1 alongside scared, curious and calm, below timid at tier 2, because shy is the everyday word timid is a harder synonym for."
+    }
+  ]
+}
