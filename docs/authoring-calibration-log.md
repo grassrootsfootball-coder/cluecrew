@@ -30984,3 +30984,20 @@ the same four tiered-but-DRAFT vault words as before. Walk-throughs serving on p
 Maths 179/179, English 379/379. Preview `cluecrew-staging-lk5hvcuvl` (GitHub ties it to `fc17a6c`) promoted; production
 `cluecrew-staging-311qqmftn`, Ready; `/api/health` `{"ok":true,"db":{"connected":true}}`; `/`, `/login`, `/signup`,
 `/crew`, `/admin` 200. PRELAUNCH unchanged.
+
+## R1072 — hollow and bold published; bold's likelierKnown ruled A (David: "publish the hollow and bold vault entries"; on bold: "A: brave", 2026-11-25)
+
+- **Why they were DRAFT.** Not a publication job alone, as R1069/R1071 said: both were HELD by review V1 for text faults
+  still open — hollow's senseB definition ended on a full stop (its tier hold was settled by R1050); bold's senseB sentence
+  used "bold" as a noun under an adjective wordClass, and its likelierKnown needed a ruling. **David ruled A (the brave
+  sense)**, which keeps it consistent with both LIVE items on it (keys "brave", "daring"); no composition change.
+- **Door V4** (`land-vault-redrafts.ts`, `content/agent-review/vault/{redraft-V4-packet,cards-V4,review-V4}.json`): each card
+  changed in exactly the held field; tier, twoMeanings and likelierKnown copied; `gateCard` passes; attested by
+  `rev-agent-01`, who checked all four LIVE items on the two headwords stay single-answer under both senses. Guard audit:
+  2 bank headwords move DRAFT → LIVE, 0 guard outcomes change. Warm-up positions: bold 68, hollow 76 of 179.
+- **`check:headword-tiers` still exits 1 — and did in R1069 and R1071 for a second reason those entries did not
+  record.** Two headwords on LIVE items have NO vault card: `gen-vr-21-same-meaning-21` "fast" and
+  `gen-vr-21-same-meaning-25` "shy", both introduced by this session's rebuild of the faulty VR questions (R1067). The
+  check prints the DRAFT list first and the missing-card list after it; I read the first and attributed the exit to it.
+  **A failing gate with two causes reads as one if you stop at the first** — the R599 shape. The fix is authoring two
+  cards through the vault door; publishing them changes the warm-up, so it waits for David.

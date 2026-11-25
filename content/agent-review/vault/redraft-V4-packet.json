@@ -1,0 +1,48 @@
+{
+ "batch": "V4",
+ "ruling": "David, 2026-11-25: \"publish the hollow and bold vault entries\"; bold likelierKnown ruled A (brave).",
+ "cards": [
+  {
+   "fixed": {
+    "headword": "bold",
+    "tier": 2,
+    "twoMeanings": true,
+    "likelierKnown": "A"
+   },
+   "current": {
+    "wordClass": "adjective",
+    "definitionChild": "willing to do what others would find frightening",
+    "sentence": "Kwame was bold enough to put his hand up and tell the visiting author that the ending had not worked for him.",
+    "senseB": {
+     "definition": "printed in thick dark letters so it stands out on the page",
+     "sentence": "Put your headings in bold so a reader can find each section without hunting for it.",
+     "wordClass": "adjective"
+    },
+    "likelierKnownNote": "Children hear the brave sense in speech; the printing sense comes later, usually from a keyboard.",
+    "imagePrompt": "A boy with his hand raised in a school hall while a visiting speaker turns towards him."
+   },
+   "reviewerHold": "Outstanding from review V1 (rev-agent-01): the senseB sentence \"Put your headings in bold so a reader can find each section without hunting for it.\" uses bold as a NOUN while senseB.wordClass is adjective. Fix the sentence so bold is an adjective (the reviewer suggested \"The title was printed in bold letters at the top of the page.\"). The reviewer's other point, likelierKnown, is now RULED by David (2026-11-25): A, the brave sense, stays. Do not touch tier, twoMeanings or likelierKnown."
+  },
+  {
+   "fixed": {
+    "headword": "hollow",
+    "tier": 2,
+    "twoMeanings": true,
+    "likelierKnown": "A"
+   },
+   "current": {
+    "wordClass": "adjective",
+    "definitionChild": "having nothing inside, like a tube or a shell",
+    "sentence": "The owl lived in a hollow tree.",
+    "senseB": {
+     "definition": "a dip or small valley in the ground.",
+     "sentence": "The sheep had crowded into a hollow below the ridge where the wind could not reach them.",
+     "wordClass": "noun"
+    },
+    "likelierKnownNote": "Empty-inside comes first; the dip in the ground is met in reading rather than in speech.",
+    "imagePrompt": "A hand knocking on plaster beside a chimney breast."
+   },
+   "reviewerHold": "Outstanding from review V1 (rev-agent-01): the senseB definition \"a dip or small valley in the ground.\" ends on a full stop, against the store's lowercase-no-full-stop house style. Fix only that. Already resolved and NOT to be touched: the tier (moved 1 -> 2, ratified 2026-08-02, applied R1050); likelierKnown A, which the reviewer judged right."
+  }
+ ]
+}

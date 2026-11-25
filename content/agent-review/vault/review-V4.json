@@ -1,0 +1,16 @@
+{
+  "batch": "V4",
+  "reviewer": "rev-agent-01",
+  "cards": [
+    {
+      "headword": "bold",
+      "verdict": "ATTEST",
+      "reason": "I diffed every field against the packet's current and fixed values. Exactly one field moved: senseB.sentence. tier 2, twoMeanings true and likelierKnown A are copied exactly; likelierKnown A is David's ruling (2026-11-25), and I have not reopened it. The visible stored fields in the Word row match the packet's current values. (1) Hold fixed. 'The title was printed in bold letters at the top of the page.' uses bold attributively before 'letters', so it is an adjective and matches senseB.wordClass. 'printed' rules out the brave sense, and the sentence matches the senseB definition (thick dark letters). It is one sentence that ends on a full stop, every word is plainer than the headword, and a child can follow it. (2) Unchanged text re-read. The sense A sentence (Kwame) is one followable sentence that uses bold unambiguously in the brave sense. The definition is plain and true and does not use the headword. (3) LIVE items, read from the DB. bank-vr-04-closest-meaning-15 has key brave and distractors timid, dare and hero. gen-vr-04-closest-meaning-15 has key daring and distractors reckless, stubborn and famous. Both keys are synonyms of sense A. Under sense A, timid is the opposite, dare is a verb or noun, hero is an associated word, reckless is the wrong strength, stubborn is the wrong shade and famous is unrelated. Under sense B (thick, dark print), none of the six distractors is correct. (4) gate-vault-cards: 2 screened, 2 pass. I would put this card in front of a child."
+    },
+    {
+      "headword": "hollow",
+      "verdict": "ATTEST",
+      "reason": "I diffed every field against the packet's current and fixed values. Exactly one field moved: senseB.definition lost its final full stop and is now 'a dip or small valley in the ground', in lowercase house style with the wording unchanged. tier 2, twoMeanings true and likelierKnown A are copied exactly; the Word row already holds tier 2 and likelierKnown A. (1) Hold fixed. That was the only outstanding fault. (2) Unchanged text re-read. 'The owl lived in a hollow tree.' uses sense A (an adjective) unambiguously. The senseB sentence uses hollow as a noun ('a hollow below the ridge'), which matches wordClass noun. It is one sentence with no word harder than the headword, though 'ridge' is close. Both definitions are plain and true and do not use the headword. (3) LIVE items, read from the DB. bank-vr-04-closest-meaning-07 has key empty and distractors solid, log and drum. gen-vr-04-closest-meaning-07 has key empty and distractors solid, light and wooden. empty is a true synonym of sense A. No distractor means empty-inside, and none means a dip in the ground, so none becomes correct under either sense. (4) gate-vault-cards: 2 screened, 2 pass. Minor note, not a fault: the unchanged imagePrompt (knocking on a hollow-sounding wall) shows sense A but not the owl in the sentence. An illustrator could match it to the sentence later; it is not child-facing text. I would put this card in front of a child."
+    }
+  ]
+}

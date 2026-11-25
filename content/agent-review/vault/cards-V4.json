@@ -1,0 +1,40 @@
+{
+  "batch": "V4",
+  "drafter": "agent:drafter",
+  "cards": [
+    {
+      "headword": "bold",
+      "tier": 2,
+      "wordClass": "adjective",
+      "definitionChild": "willing to do what others would find frightening",
+      "sentence": "Kwame was bold enough to put his hand up and tell the visiting author that the ending had not worked for him.",
+      "twoMeanings": true,
+      "senseB": {
+        "definition": "printed in thick dark letters so it stands out on the page",
+        "sentence": "The title was printed in bold letters at the top of the page.",
+        "wordClass": "adjective"
+      },
+      "likelierKnown": "A",
+      "likelierKnownNote": "Children hear the brave sense in speech; the printing sense comes later, usually from a keyboard.",
+      "imagePrompt": "A boy with his hand raised in a school hall while a visiting speaker turns towards him.",
+      "why": "Changed only the senseB sentence, as the hold asks. The old one used bold as a noun ('in bold') while senseB.wordClass is adjective. I took the reviewer's sentence, where bold describes 'letters' and so is an adjective; it is one sentence, every word is plain, and the thick dark letters match the senseB definition. Tier 2, twoMeanings true and likelierKnown A (ruled by David, 2026-11-25) are copied unchanged, as is every other field."
+    },
+    {
+      "headword": "hollow",
+      "tier": 2,
+      "wordClass": "adjective",
+      "definitionChild": "having nothing inside, like a tube or a shell",
+      "sentence": "The owl lived in a hollow tree.",
+      "twoMeanings": true,
+      "senseB": {
+        "definition": "a dip or small valley in the ground",
+        "sentence": "The sheep had crowded into a hollow below the ridge where the wind could not reach them.",
+        "wordClass": "noun"
+      },
+      "likelierKnown": "A",
+      "likelierKnownNote": "Empty-inside comes first; the dip in the ground is met in reading rather than in speech.",
+      "imagePrompt": "A hand knocking on plaster beside a chimney breast.",
+      "why": "Changed only the senseB definition, as the hold asks: removed its final full stop so it follows the house style of the LIVE exemplars (lowercase, no full stop). The wording is otherwise identical. Tier 2, twoMeanings true and likelierKnown A are copied unchanged, as is every other field."
+    }
+  ]
+}
