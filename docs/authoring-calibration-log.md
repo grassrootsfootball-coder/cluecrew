@@ -30921,3 +30921,26 @@ serving script passes the child-facing gate; every English reading script passes
 shrugged." where its passage line does not. **Every approval here is a machine reviewer's, recorded as
 one (R94); agreement between two agents is agreement, not what a person would sign.** Production
 holds none of this until David says yes to a deploy and a content load.
+
+## R1069 — production loaded with the R1067/R1068 content and promoted to `aa14f14` (David: "yes, deploy and load the content", 2026-11-25)
+
+- **Before:** production at migration `20261123120000_superseded_outside_field` (no newer migration exists,
+  so none was run), 1,227 items, the R1066 load. Its 4 accounts are the August `@cluecrew.test` ones; no
+  Attempt, Session, CaseFile or WordVaultEntry rows, so nothing a family made pointed at content.
+- **Backup first:** all 38 public tables to `\copy` TSV at `~/ClueCrew-backups/prod-20261125/` with the
+  migration list; row counts matched exact counts.
+- **Cleared** the 14 snapshot tables in one transaction that disabled this repo's own write-log triggers
+  (else the deletes log themselves into `ContentWriteLog` and the restore refuses a non-empty table),
+  re-enabled them, and raised unless all 14 were empty, 4 accounts and 2 children remained, and no
+  trigger was left disabled. It committed.
+- **Loaded:** `content-snapshot.ts restore` — 51,205 rows, digest `3dd2828a6915a53d`; `check` faithful
+  table by table, and the committed snapshot matches dev.
+- **Gates against production:** serving-path, db-content (1,661 serving rows pass), verify:solutions,
+  authority-shape, option-positions, line-refs pass; headword-tiers exits 1 on the same four tiered-but-
+  DRAFT vault words as dev (hollow, bold — a publication job), output identical to dev bar an SSL notice.
+  Walk-throughs that serve on production, counted by `walkApprovalOf`: VR 617/617, Maths 179/179,
+  English 376/379 — the same as dev.
+- **Deployed:** preview `cluecrew-staging-36f4swbwr` (GitHub ties it to `aa14f14`) promoted; Vercel rebuilt
+  it as production `cluecrew-staging-a26md5a62`, Ready. `/api/health` returns
+  `{"ok":true,"db":{"connected":true}}`; `/`, `/login`, `/signup`, `/crew`, `/admin` respond 200.
+  PRELAUNCH unchanged.
