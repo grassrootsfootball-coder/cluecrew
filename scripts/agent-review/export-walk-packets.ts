@@ -42,7 +42,11 @@ async function main() {
       // English rows cite a passage by line; the passage travels with the rows that cite it, VERBATIM (R25).
       const refs = [...new Set(part.map((r) => (r.stem as { passageRef?: string }).passageRef).filter((x): x is string => typeof x === 'string'))];
       const passages = Object.fromEntries(refs.map((ref) => { const f = pjoin(PASSAGES, `${ref}.json`); if (!existsSync(f)) throw new Error(`${ref}: passage file missing`);
-        const j = JSON.parse(readFileSync(f, 'utf8')) as Record<string, unknown>; return [ref, { sceneTitle: j.sceneTitle, preamble: j.preamble, numberedLines: j.numberedLines }]; }));
+        const j = JSON.parse(readFileSync(f, 'utf8')) as Record<string, unknown>; return [ref, { sceneTitle: j.sceneTitle, numberedLines: j.numberedLines,
+        // The child is sent the title and the numbered lines only (orchestrator.ts, the passage the Crew screen
+        // gets). The preamble travels for context and says so in its NAME, never one field over (R203/R204):
+        // a drafter told it was on screen quoted it, and nothing a child can see held those words.
+        preambleNotShownToChild: j.preamble }]; }));
       const name = SPLIT > 1 ? `${caseId}-p${p + 1}` : caseId;
       const packet = { caseId: c.id, part: name, title: c.title, questionType: c.questionTypeId, free: c.freeTier, houseFormExemplars: exemplars, passages, rows: part };
       mkdirSync(pjoin(OUT, name), { recursive: true });

@@ -1,0 +1,28 @@
+{
+  "door": "faults-en",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-008-RC-07",
+      "verdict": "ATTEST",
+      "reason": "Carried from round 1. The round-2 proposal for this row is byte-identical to round1/proposals.json (key-sorted JSON diff of the whole rebuild entry, including why, stem, explanationPatch and all four options: no difference), so the round-1 attestation stands unchanged: unsupported key replaced by 'the upset and muddle of arriving late at night', a true sense of 'agitation' on line 48 given the preamble's late, tired arrival and line 49's door 'mistaken for a cupboard's'; only option C's value changed; A/B/D values, tags and executions intact and still true (A another sense, nothing stirred; B the other conjunct 'half darkness'; D Mother's excitement at line 46, the next morning); walkScript cleared as stated. Precheck --from-live passes."
+    },
+    {
+      "ref": "rebuild:ENG-022-GK-10",
+      "verdict": "ATTEST",
+      "reason": "Diffed against round1/proposals.json with 'why' excluded: exactly three fields changed, all on the round-1 faults, nothing else (stem, ids, order, values, key, A/D tags and executions, explanationPatch identical). (1) Option C's execution now 'True at line 42, and it is what the speaker does one line earlier.': no gender; line 42 is the stacking 'by the fence', and 42 is one line before 43. (2) Option B retagged en-vocab-neighbouring-sense, and the library entry fits on this row: 'changing from one shape to another' is a genuine sense of shift, it is neither the commonest sense (moving/changing position, which is the key's sense) nor the one line 43 fixes; and the entry's condition holds, because 'shifting OUT OF there' is a phrase of movement from a place, so a shape-change reading cannot parse ('changing shape out of there' makes no sense) and line 44 'Somebody has to keep the goal' confirms the speaker stays put: the text fixes the sense decisively, so B is wrong rather than a defensible second answer. (3) B's execution 'A real sense of the word, but nothing changes shape at line 43. The speaker is staying in goal, not turning into something else.' is true of the row: nothing on line 43 changes shape, and staying in goal is what lines 43-44 say; it no longer calls line 43 a sentence about change. Key 'Moving away from a place.' remains correct and gender-free. Precheck --from-live passes."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-008-RC-07",
+      "verdict": "SIGN",
+      "reason": "Carried from round 1 (proposal unchanged): read the whole row against lines 46-49 and the preamble; answerable; C the only correct option under every reading (A wrong sense, B the other conjunct, D wrong time); no length/form/echo pattern singles out the key; all words suitable for a 9-11-year-old in Britain. Precheck --from-live: passes every gate."
+    },
+    {
+      "itemId": "ENG-022-GK-10",
+      "verdict": "SIGN",
+      "reason": "Read the row as it will be against lines 40-44 of stream-c-01: answerable from lines 42-44; A 'Moving away from a place.' is correct ('I'm not shifting out of there', line 44 keep the goal) and the only correct option: B is a shape sense the phrase 'out of there' rules out; C is line 42's stacking, a different act; D is the noun 'shift' (a work turn), not what the verb means here. No gender is given to the speaker anywhere on the row (key and all executions). No pattern gives the key away: none of the options echoes the stem; the key is the shortest (4 words against 6, 6, 6), a weak cue and not a reliable one. 'Moving', 'shape', 'stacking', 'fence', 'turn at a job' all known to a 9-11-year-old in Britain. Precheck --from-live: passes every gate."
+    }
+  ]
+}

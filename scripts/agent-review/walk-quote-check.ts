@@ -53,10 +53,22 @@ export function namedLines(sentence: string): number[] {
 
 export type QuoteFault = { sentence: string; quote: string; why: string };
 
-export function checkWalkQuotes(script: string, stem: unknown, options: string[]): { quotes: number; faults: QuoteFault[] } {
-  const st = (stem ?? {}) as { text?: string; passageRef?: string };
+/**
+ * `passageOnly` (reading comprehension): a quotation must be PASSAGE words. In a reading walk-through quote marks
+ * tell the child "these words are in the passage" — `check:line-refs` holds every serving script to that, and this
+ * check used to accept option text as well, so two scripts quoting their own KEY passed here and failed there
+ * (the two checks disagreed; the stricter reading is the true one).
+ */
+export function checkWalkQuotes(script: string, stem: unknown, options: string[], opts: { passageOnly?: boolean } = {}): { quotes: number; faults: QuoteFault[] } {
+  const st = (stem ?? {}) as { text?: string; passageRef?: string; quotes?: unknown };
   const lines = st.passageRef ? passageLines(st.passageRef) : [];
-  const screen = fold([st.text ?? '', ...options, ...lines.map((l) => l.text)].join(' \n '));
+  // The question's OWN quoted words (its headword, its quoted phrase): naming them — "So 'agitation' means…" — is
+  // naming what was asked, not citing a line, so they are exempt from the line binding (never from being in the
+  // passage). Only an EXACT match: a fragment of a quoted phrase ('Smartly' out of 'sculled smartly across…') is
+  // still a citation, and two such were mis-cited and hidden by the older, looser exemption.
+  const stemQuoted = new Set([...quotedSpans(st.text ?? ''), ...(Array.isArray(st.quotes) ? st.quotes.filter((x): x is string => typeof x === 'string') : [])].map(fold));
+  const offPassage = opts.passageOnly ? [] : [st.text ?? '', ...options];
+  const screen = fold([...offPassage, ...lines.map((l) => l.text)].join(' \n '));
   const sentences = script.split(/(?<=[.!?])\s+/);
   let quotes = 0; const faults: QuoteFault[] = [];
   // A line a sentence names stays named for the sentences after it until another is named: "Turn to line 18.
@@ -67,10 +79,10 @@ export function checkWalkQuotes(script: string, stem: unknown, options: string[]
     for (const q of quotedSpans(s)) {
       quotes++;
       for (const frag of q.split(/…|\.\.\./).map(fold).filter(Boolean)) {
-        if (!screen.includes(frag)) { faults.push({ sentence: s, quote: q, why: 'not on the screen word for word' }); break; }
-        if (named.length && lines.length) {
+        if (!screen.includes(frag)) { faults.push({ sentence: s, quote: q, why: opts.passageOnly ? 'not in the passage word for word' : 'not on the screen word for word' }); break; }
+        if (named.length && lines.length && !stemQuoted.has(fold(q))) {
           const span = fold(lines.filter((l) => named.includes(l.n)).map((l) => l.text).join(' '));
-          const inStemOrOption = fold([st.text ?? '', ...options].join(' \n ')).includes(frag);
+          const inStemOrOption = offPassage.length > 0 && fold(offPassage.join(' \n ')).includes(frag);
           if (!span.includes(frag) && !inStemOrOption) { faults.push({ sentence: s, quote: q, why: `not on line(s) ${named.join(', ')}` }); break; }
         }
       }

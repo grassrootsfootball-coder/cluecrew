@@ -1,6 +1,6 @@
 # Questions held from walk-throughs because the QUESTION is faulty (2026-11-25, R1067)
 
-## English — OPEN (no walk-through serves; the item needs a ruling or a rebuild)
+## English — RESOLVED 2026-11-25 (R1070): both keys reworded through the review door, re-signed, LIVE, walk-throughs serving
 
 - `ENG-022-GK-10` — key "Moving himself away from a place": the poem's narrator is "I" and is never given a
   gender. The key assumes one. (rev-agent-01, en-03 vocabulary pass.)
@@ -8,7 +8,7 @@
   48–49 give only "the agitation and half darkness"; the preamble has the family arriving late, "tired and
   hungry". The key needs rewording to something the text supports. (rev-agent-01, en-03 round 2.)
 
-## English — held after seven rounds, the QUESTION is sound (a script problem, not a question fault)
+## English — RESOLVED 2026-11-25 (R1070): LP-08's round-8 script, from the round-7 reviewer's own fix, approved and serving
 
 - `ENG-007-LP-08` — every round fixed the last refusal and broke something else; the full history is in
   `case-en-02-p1/round1..7/` and `rewrite.json` (`history`). The round-7 reviewer's last fix is concrete: keep

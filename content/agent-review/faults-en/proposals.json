@@ -1,0 +1,98 @@
+{
+ "door": "faults-en",
+ "proposer": "agent",
+ "rebuilds": [
+  {
+   "itemId": "ENG-008-RC-07",
+   "why": "Fault: the key \"being worried and in a hurry\" was not supported by the passage. \"Agitation\" at line 48 is the upset, unsettled state of the family's arrival: the preamble says they \"arrived late at night, tired and hungry\" with \"no servants\", and line 49 shows the muddle it caused (a door \"mistaken for a cupboard's\"). Key reworded to \"the upset and muddle of arriving late at night\", which stays distinct from A (a liquid stirred), B (the half darkness, the other cause on line 48) and D (excitement the next morning, line 46). Stem, distractors, tags and executions unchanged. The stored walk-through was never approved and is cleared.",
+   "explanationPatch": {
+    "walkScript": null,
+    "walkScriptStatus": null
+   },
+   "stem": {
+    "text": "Look at lines 48 and 49. What does 'agitation' on line 48 mean there?",
+    "quotes": [
+     "agitation"
+    ],
+    "passageRef": "stream-a-02-railway-children",
+    "orderAnchor": 48
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4vb00dytmbvjcq3hdwu",
+     "value": "the stirring or shaking of a liquid",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "A real sense of the word, and nothing in this room is being stirred."
+    },
+    {
+     "optionId": "cmsw2f4vb00dztmbvs9zgfumb",
+     "value": "the half darkness of the house that night",
+     "isKey": false,
+     "tag": "en-coordination-wrong-conjunct",
+     "execution": "Line 48 lists darkness beside this word, so the two are separate causes."
+    },
+    {
+     "optionId": "cmsw2f4vb00e0tmbvo5s2zkgs",
+     "value": "the upset and muddle of arriving late at night",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4vb00e1tmbvkog79w1v",
+     "value": "the excitement of finding a forgotten room",
+     "isKey": false,
+     "tag": "en-wrong-scope-retrieval",
+     "execution": "Mother's excitement over the forgotten room comes at line 46, the next morning. Lines 48 and 49 tie this word to the night before, when the door was mistaken for a cupboard's."
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-10",
+   "why": "Fault: the key \"Moving himself away from a place.\" gave the poem's narrator (\"I\") a gender the poem never states. Key reworded to \"Moving away from a place.\" — the same meaning of \"shifting\" at line 43 (\"I'm not shifting out of there\": the speaker will not move away from the goal), with no gender. Stem, distractors, tags and executions unchanged. The stored walk-through was never approved and is cleared; a new one goes through the walk door. Round 2 (rev-agent-01): option C's execution no longer says \"he\"; option B is retagged en-vocab-neighbouring-sense (shape-changing is a real but less common sense the line rules out; the commonest sense, moving, is the key) and its execution no longer calls line 43 a sentence about change.",
+   "explanationPatch": {
+    "walkScript": null,
+    "walkScriptStatus": null
+   },
+   "stem": {
+    "text": "Look at lines 40 to 44. What does \"shifting\" on line 43 mean here?",
+    "quotes": [
+     "shifting"
+    ],
+    "passageRef": "stream-c-01",
+    "orderAnchor": 40
+   },
+   "options": [
+    {
+     "optionId": "cmsw2f4z8010ytmbvwv2a6kmx",
+     "value": "Moving away from a place.",
+     "isKey": true,
+     "tag": null,
+     "execution": null
+    },
+    {
+     "optionId": "cmsw2f4z8010ztmbvrc6s5wou",
+     "value": "Changing from one shape to another.",
+     "isKey": false,
+     "tag": "en-vocab-neighbouring-sense",
+     "execution": "A real sense of the word, but nothing changes shape at line 43. The speaker is staying in goal, not turning into something else."
+    },
+    {
+     "optionId": "cmsw2f4z80110tmbv8nwmpskk",
+     "value": "Stacking things up by a fence.",
+     "isKey": false,
+     "tag": "en-within-span-wrong-element",
+     "execution": "True at line 42, and it is what the speaker does one line earlier."
+    },
+    {
+     "optionId": "cmsw2f4z80111tmbvkgdymwn4",
+     "value": "Working a turn at a job.",
+     "isKey": false,
+     "tag": "en-vocab-built-from-parts",
+     "execution": "Built from the shift a child meets as a noun."
+    }
+   ]
+  }
+ ]
+}

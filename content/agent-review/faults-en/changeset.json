@@ -1,0 +1,65 @@
+{
+ "door": "faults-en",
+ "ruling": "R1023",
+ "rows": [
+  {
+   "itemId": "ENG-008-RC-07",
+   "passageRef": "stream-a-02-railway-children",
+   "hold": {
+    "reason": "not a held row: faults-en",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Carried from round 1 (proposal unchanged): read the whole row against lines 46-49 and the preamble; answerable; C the only correct option under every reading (A wrong sense, B the other conjunct, D wrong time); no length/form/echo pattern singles out the key; all words suitable for a 9-11-year-old in Britain. Precheck --from-live: passes every gate.",
+   "landedAt": "2026-11-25T20:02:11.839Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Read line 48 and line 49 together as one sentence. Something made a door look like a cupboard door. Two causes are given: the light, and this word. This word names how the family felt.",
+     "after": null
+    },
+    {
+     "field": "option C (cmsw2f4vb00e0tmbvo5s2zkgs).value",
+     "before": "being worried and in a hurry",
+     "after": "the upset and muddle of arriving late at night"
+    }
+   ]
+  },
+  {
+   "itemId": "ENG-022-GK-10",
+   "passageRef": "stream-c-01",
+   "hold": {
+    "reason": "not a held row: faults-en",
+    "faultField": "execution"
+   },
+   "reviewerNote": "Read the row as it will be against lines 40-44 of stream-c-01: answerable from lines 42-44; A 'Moving away from a place.' is correct ('I'm not shifting out of there', line 44 keep the goal) and the only correct option: B is a shape sense the phrase 'out of there' rules out; C is line 42's stacking, a different act; D is the noun 'shift' (a work turn), not what the verb means here. No gender is given to the speaker anywhere on the row (key and all executions). No pattern gives the key away: none of the options echoes the stem; the key is the shortest (4 words against 6, 6, 6), a weak cue and not a reliable one. 'Moving', 'shape', 'stacking', 'fence', 'turn at a job' all known to a 9-11-year-old in Britain. Precheck --from-live: passes every gate.",
+   "landedAt": "2026-11-25T20:02:11.839Z",
+   "changes": [
+    {
+     "field": "explanation.walkScript",
+     "before": "Line 42 has him stack the jumpers for tomorrow. Line 43 says he is not shifting out of there. Line 44 says somebody has to keep the goal.",
+     "after": null
+    },
+    {
+     "field": "option A (cmsw2f4z8010ytmbvwv2a6kmx).value",
+     "before": "Moving himself away from a place.",
+     "after": "Moving away from a place."
+    },
+    {
+     "field": "option B (cmsw2f4z8010ztmbvrc6s5wou).tag",
+     "before": "en-vocab-dominant-sense",
+     "after": "en-vocab-neighbouring-sense"
+    },
+    {
+     "field": "option B (cmsw2f4z8010ztmbvrc6s5wou).execution",
+     "before": "A common sense of the word and it fits a sentence about change.",
+     "after": "A real sense of the word, but nothing changes shape at line 43. The speaker is staying in goal, not turning into something else."
+    },
+    {
+     "field": "option C (cmsw2f4z80110tmbv8nwmpskk).execution",
+     "before": "True at line 42, and it is what he does one line earlier.",
+     "after": "True at line 42, and it is what the speaker does one line earlier."
+    }
+   ]
+  }
+ ]
+}

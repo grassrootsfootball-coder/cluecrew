@@ -35,7 +35,7 @@ const sha = (s: string) => createHash('sha256').update(s, 'utf8').digest('hex');
 const val = (c: unknown) => { const x = (c as { value?: unknown })?.value; return Array.isArray(x) ? x.join(', ') : String(x); };
 /** Reading-comprehension rows quote a passage: every quotation must be on the screen, on the line it names (walk-quote-check). */
 const quoteFaults = (qt: string | null, script: string, stem: unknown, options: Array<{ content: unknown }>) =>
-  qt?.startsWith('en-comp-') ? checkWalkQuotes(script, stem, options.map((o) => val(o.content))).faults.map((q) => `quote: '${q.quote}' ${q.why}`) : [];
+  qt?.startsWith('en-comp-') ? checkWalkQuotes(script, stem, options.map((o) => val(o.content)), { passageOnly: true }).faults.map((q) => `quote: '${q.quote}' ${q.why}`) : [];
 
 type PRow = { itemId: string; stem: unknown; options: Array<{ value: string; isKey: boolean }>; walkScript: string | null };
 

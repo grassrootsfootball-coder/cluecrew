@@ -10,7 +10,9 @@ Read `WALK-REVIEWER.md` first; everything there applies. These packets differ fr
   line, word for word (case and punctuation may differ only as the passage shows). A script that walks a
   child to the key must not simply state the key's words before pointing to the evidence (that coaches —
   R572); it shows WHERE in the passage to look and HOW the line answers the question. A script must not
-  claim the passage says something it does not.
+  claim the passage says something it does not. **The child sees the passage's title (`sceneTitle`) and its
+  numbered lines, nothing else** (`apps/web/lib/crew/orchestrator.ts`): `preambleNotShownToChild` is context for
+  you, never evidence a script may cite or rely on.
 - **English SPaG** (punctuation / spelling / cloze): check every grammar and spelling claim is correct
   British English.
 - **Maths:** redo every calculation. House notation is a gate: money on £ (£1.50), degrees with °, areas

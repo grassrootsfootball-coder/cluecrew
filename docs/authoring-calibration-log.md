@@ -30944,3 +30944,31 @@ holds none of this until David says yes to a deploy and a content load.
   it as production `cluecrew-staging-a26md5a62`, Ready. `/api/health` returns
   `{"ok":true,"db":{"connected":true}}`; `/`, `/login`, `/signup`, `/crew`, `/admin` respond 200.
   PRELAUNCH unchanged.
+
+## R1070 — the two faulty English questions fixed through the review door, LP-08 finished; 1,175 of 1,175 LIVE walk-throughs serve (David: "fix the two faulty English questions and finish LP-08", 2026-11-25)
+
+- **The keys.** `ENG-022-GK-10` ("shifting", line 43): "Moving himself away from a place." → "Moving away from a place." —
+  the poem's "I" has no gender. `ENG-008-RC-07` ("agitation", line 48): "being worried and in a hurry", which nothing on
+  screen supports → "the upset and muddle of arriving late at night". Door `content/agent-review/faults-en/`
+  (`land-proposals --from-live`, re-signed by `rev-agent-01`, then `publish-door --door=en-03 --ready`, live 63 → 65).
+  The reviewer held GK-10 once more for faults ONE FIELD OVER from the one named: option C's execution still said "he",
+  and option B was tagged the commonest sense when shape-changing is a neighbouring one. **Fix the fault on the row, not
+  only in the field it was reported in.**
+- **What the child sees is the title and the numbered lines — never the preamble.** I told a drafter the preamble was on
+  screen; it is not (`orchestrator.ts` sends `sceneTitle` and `numberedLines` only). The quote check, which already
+  refused preamble words, was right and my brief was wrong. The packet field is now `preambleNotShownToChild` — the
+  qualifier in the NAME (R203/R204) — and `WALK-REVIEWER-EN-MATHS.md` says so. 0 of 343 serving reading scripts cited it.
+  RC-07's key was then re-checked against the screen alone (title, line 4, lines 48–49, lines 53–54) and holds.
+- **Two quotation checks disagreed, and the stricter was true.** `walk-quote-check` accepted option text inside quote
+  marks; `check:line-refs` holds that quote marks in a reading script mean PASSAGE words. GK-10 and RC-07 quoted their
+  own keys, passed the first and failed the second. The quote check is now passage-only on reading rows. Against a
+  baseline taken before the change (R149), the diff was six rows: the two key-quotes; two headwords ('agitation',
+  'shifting') — the question's OWN quoted word, which names what was asked rather than citing a line, now exempt from line
+  binding by EXACT match only; and two older approved scripts the looser stem exemption had been hiding —
+  `ENG-001-WIW-19` ('Smartly' under line 59; it is on 63) and `ENG-002-pp-20` (a phrase cited to 66 that runs onto 67).
+  All four real ones fixed and re-approved (`walk/case-en-quote-fixes/`).
+- **LP-08.** Round 8, written from the round-7 reviewer's stated fix, approved. Eight rounds on one row; the history is in
+  `walk/case-en-02-p1/round1..7`.
+- **Outcome (dev):** VR 617/617, Maths 179/179, English 379/379 walk-throughs serve; `check:line-refs`, `check:db-content`
+  and `check:serving-path` pass; the snapshot matches the database. Every approval is `rev-agent-01`'s (R94). Production
+  holds the R1069 load until David says yes to another.

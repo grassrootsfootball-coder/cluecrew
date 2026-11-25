@@ -1,0 +1,28 @@
+{
+  "door": "faults-en",
+  "reviewer": "rev-agent-01",
+  "changes": [
+    {
+      "ref": "rebuild:ENG-008-RC-07",
+      "verdict": "ATTEST",
+      "reason": "Checked against the passage and preamble. Fault fixed: the unsupported key 'being worried and in a hurry' is gone. New key 'the upset and muddle of arriving late at night' is a true sense of 'agitation' (disturbance, flustered commotion) as used on line 48: the preamble has the family arriving 'late at night, tired and hungry' with no servants, and line 49 places the agitation 'the night before', when the door was 'mistaken for a cupboard's'. Diffed against packet: stem identical, option ids and order identical, only option C's value changed; A/B/D values, tags and executions byte-identical; walkScript cleared as stated. Distractors still wrong and their tags/executions still true: A (stirring a liquid) is a genuine other sense with nothing stirred on lines 48-49 (en-vocab-neighbouring-sense); B is the other conjunct of 'agitation and half darkness' on line 48 (en-coordination-wrong-conjunct); D is Mother's excitement at line 46 ('it's magic!'), the next morning, not the night before (en-wrong-scope-retrieval). The key does not echo the stem and its length (9 words) sits with its siblings (7, 8, 7); no distractor becomes more attractive."
+    },
+    {
+      "ref": "rebuild:ENG-022-GK-10",
+      "verdict": "REFUSE",
+      "reason": "The key wording itself is right: 'Moving away from a place.' is what 'shifting' means in line 43 ('I'm not shifting out of there': the speaker will not move out of the goal), it carries no gender, and the diff shows only option A's value changed. But the named fault is that the row gives the speaker ('I') a gender the poem never states, and the row as it will be still does: option C's unchanged execution reads 'True at line 42, and it is what he does one line earlier.' The poem never says 'he' of the speaker (the only 'he' near is line 19, about another player). Check (4) fails on that execution, so the fault is fixed on the key and left standing one field over. Also untrue of the row: option B's execution 'it fits a sentence about change' — line 43 is not a sentence about change — and its tag en-vocab-dominant-sense names the word's commonest everyday sense, which for 'shifting' is moving (the key's sense), not 'changing from one shape to another'; that option is another genuine sense ruled out by context, i.e. en-vocab-neighbouring-sense. Rebuild should also reword C's execution without a pronoun (e.g. 'True at line 42, and it is what the speaker does one line earlier.') and fix B's tag and execution."
+    }
+  ],
+  "rows": [
+    {
+      "itemId": "ENG-008-RC-07",
+      "verdict": "SIGN",
+      "reason": "Read the whole row as it will be against lines 46-49 and the preamble: answerable from what is on it; C is the only correct option under every reading (A wrong sense, B the other conjunct, D wrong time); no length/form/echo pattern singles out the key; all words ('agitation', 'upset', 'muddle', 'stirring') suitable for a 9-11-year-old in Britain. Note: the door's --precheck currently fails this row on 'status LIVE', a door condition, not a content fault; this signature is on the content."
+    },
+    {
+      "itemId": "ENG-022-GK-10",
+      "verdict": "HOLD",
+      "reason": "Key and distractor values are sound (A correct and only correct; B, C, D wrong on line 43), but the row still assigns the speaker a gender in option C's execution ('what he does one line earlier'), the very fault this rebuild was for; option B carries en-vocab-dominant-sense where 'changing from one shape to another' is not the commonest sense of 'shifting', and its execution 'it fits a sentence about change' is untrue of line 43. Hold until C's execution is de-gendered and B's tag and execution are corrected."
+    }
+  ]
+}
