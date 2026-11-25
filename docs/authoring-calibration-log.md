@@ -30972,3 +30972,15 @@ holds none of this until David says yes to a deploy and a content load.
 - **Outcome (dev):** VR 617/617, Maths 179/179, English 379/379 walk-throughs serve; `check:line-refs`, `check:db-content`
   and `check:serving-path` pass; the snapshot matches the database. Every approval is `rev-agent-01`'s (R94). Production
   holds the R1069 load until David says yes to another.
+
+## R1071 — production loaded with the R1070 content and promoted to `fc17a6c` (David: "yes, push, deploy and load the content", 2026-11-25)
+
+Same procedure as R1069. Production unchanged since then (4 `@cluecrew.test` accounts, 2 children, no activity rows,
+migration current). Backup: 38 of 38 tables to `~/ClueCrew-backups/prod-20261125b/`. Cleared the 14 snapshot tables in
+the self-checking transaction (committed: all empty, accounts and children kept, triggers re-enabled). Restored
+51,244 rows, digest `28a4d7e87a24c5bf`, faithful table by table and current with dev. Gates against production:
+serving-path, db-content, verify:solutions, authority-shape, option-positions, line-refs pass; headword-tiers exits 1 on
+the same four tiered-but-DRAFT vault words as before. Walk-throughs serving on production by `walkApprovalOf`: VR 617/617,
+Maths 179/179, English 379/379. Preview `cluecrew-staging-lk5hvcuvl` (GitHub ties it to `fc17a6c`) promoted; production
+`cluecrew-staging-311qqmftn`, Ready; `/api/health` `{"ok":true,"db":{"connected":true}}`; `/`, `/login`, `/signup`,
+`/crew`, `/admin` 200. PRELAUNCH unchanged.
