@@ -31069,3 +31069,27 @@ before launch, parents are not on LinkedIn). Adapt-later: web-guidance skill for
   and `CRON_SECRET`, as expected for local dev. `.env.local` holds a `VERCEL_OIDC_TOKEN`, written by `vercel link` on
   2026-11-23. That is a short-lived token and probably expired, but it sits in the repo root and not the scratchpad,
   so whether to delete it is David's call.
+
+## R1076 — the maths sampler's budget raised and its failure message made factual (David: "push it. fix Maths question sampler", 2026-11-26)
+
+- **The fault (found in R1075).** `generateSample` allowed `count * 40` attempts. The gate refuses about 93% of M-column
+  T4 draws and about 96% of T5 draws, because too few distractors survive the floor. So a run asking for 4 items
+  sometimes got only 3, and the sampler threw *"family defect, not a seed accident"*: a budget shortfall worded as a
+  content fault.
+- **The fix.** `SAMPLE_ATTEMPTS_PER_ITEM = 400`. The error now states what happened: the number of attempts, how many
+  draws the gate passed, how many of those were duplicates, and the top refusal reasons. It calls the failure a family
+  defect only when the gate let nothing through. The M-column families are NOT changed. Their high refusal rate is a
+  property of their distractor sets; every item they emit was already correct, and changing a family is a change to
+  signed content.
+- **Baseline before the edit (R149).** I hashed `generateSample` output for every family, every tier, counts 1/4/30
+  and 156 seeds, including the sheets' signing seed 20260807. That is 19,737 cases, captured before and after:
+  **19,676 previously-successful outputs byte-identical, 0 changed; all 61 previously-throwing cases (M-column T4 ×11,
+  T5 ×50) now succeed; 0 still throw.** The signing seed never threw, so every signed sample sheet regenerates
+  unchanged. The loop stops once `count` is reached, so a larger bound can only extend a run that would have thrown,
+  and the diff confirms it.
+- **Tests.** Every family-tier gets a property that the sampler yields a full sheet for any seed (60 runs each, with
+  R1075's counterexample seed pinned). Two unit tests cover the message: a family the gate refuses entirely is named a
+  family defect; a family with one distinct item reports duplicates, not a defect. **The first draft of the property
+  did not go red with the old budget restored.** It drew the family-tier at random across 300 runs and rarely reached
+  the two failing tiers. Under R1075's own new rule it was not finished. Rewritten per family-tier, it goes red with the
+  budget at 40 (M-column T5) and green at 400: core 900/900.

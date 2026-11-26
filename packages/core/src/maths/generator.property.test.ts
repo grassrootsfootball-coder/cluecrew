@@ -15,7 +15,7 @@ import fc from 'fast-check';
 import { describe, expect, it } from 'vitest';
 import { answersEqual, evalArithmetic } from './executors';
 import { MATHS_FAMILIES } from './families';
-import { assembleItem, familyTiers, GateError, generateSample, makeRng, type GenMathsItem, type Tier } from './generator';
+import { assembleItem, familyTiers, GateError, generateSample, makeRng, type GenMathsItem, type MathsFamily, type Tier } from './generator';
 import { checkMathsNotation } from './notation';
 
 const RUNS = 25;
@@ -26,7 +26,9 @@ const DRAWS_PER_SEED = 30;
  * GateError); what must hold for every seed is that nothing it RETURNS is wrong. The first version
  * asserted `generateSample` never gives up, and it does: M-column T4/T5 refuse ~95% of draws (too
  * few distractors survive), so 160 attempts sometimes yield 3 of 4. That is a sampler-budget
- * finding recorded in R1075, not an item fault; no runtime path calls the sampler.
+ * finding recorded in R1075, not an item fault; no runtime path calls the sampler. R1076 raised the
+ * budget (output-preserving: 19,676 of 19,676 previously-successful samples byte-identical), and the
+ * sampler property below now holds as well.
  */
 function draws(family: (typeof MATHS_FAMILIES)[number], tier: Tier, seed: number): GenMathsItem[] {
   const r = makeRng(seed);
@@ -85,6 +87,43 @@ describe('maths generators: properties over drawn seeds', () => {
       });
     }
   }
+
+  // PER FAMILY-TIER, with the seed R1075 found pinned as an example. The first version drew the
+  // family-tier at random over 300 runs and did NOT go red with the old budget restored: the two
+  // tiers that fail were reached too rarely. A check never seen to fail is not finished (R1075).
+  const SAMPLER_COUNTEREXAMPLES: Record<string, number[]> = { 'M-column|5': [1647096] };
+  for (const family of MATHS_FAMILIES) {
+    for (const tier of familyTiers(family) as Tier[]) {
+      it(`${family.id} T${tier}: the sampler never gives up — any seed yields a full sheet`, () => {
+        const examples = (SAMPLER_COUNTEREXAMPLES[`${family.id}|${tier}`] ?? []).map((s) => [s] as [number]);
+        fc.assert(
+          fc.property(fc.integer({ min: 1, max: 2_000_000 }), (seed) => {
+            expect(generateSample(family, tier, 4, seed)).toHaveLength(4);
+          }),
+          { numRuns: 60, examples },
+        );
+      });
+    }
+  }
+
+  it('when the sampler does fall short, it reports what happened and blames the family only if nothing passed', () => {
+    const base = MATHS_FAMILIES.find((f) => familyTiers(f).includes(1) && !f.collapsed)!;
+    // Every draw has a distractor equal to the key, so the gate refuses all of them.
+    const refusesAll: MathsFamily = {
+      ...base,
+      id: 'TEST-refuses-all',
+      recomputeParams: undefined,
+      draft: (tier, r) => {
+        const d = base.draft(tier, r);
+        return { ...d, distractors: d.distractors.map((x) => ({ ...x, entry: -1, value: d.keyValue })) };
+      },
+    };
+    expect(() => generateSample(refusesAll, 1, 2, 1)).toThrow(/after \d+ attempts — the gate let no draw through: .*family defect.*Refused: \d+×/);
+    // One distinct item exists at most: the gate passes draws, but they are duplicates — not a family defect.
+    let first: ReturnType<MathsFamily['draft']> | undefined;
+    const oneItem: MathsFamily = { ...base, id: 'TEST-one-item', draft: (tier, r) => (first ??= base.draft(tier, r)) };
+    expect(() => generateSample(oneItem, 1, 3, 1)).toThrow(/produced 1\/3 .*passed \d+ draw\(s\), \d+ of them duplicates/);
+  });
 
   it('a seed reproduces its sample exactly, for any family, tier and seed', () => {
     const cases = MATHS_FAMILIES.flatMap((f) => familyTiers(f).map((t) => ({ f, t })));

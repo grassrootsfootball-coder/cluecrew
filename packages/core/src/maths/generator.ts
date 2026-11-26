@@ -297,29 +297,57 @@ export function assembleItem(family: MathsFamily, tier: Tier, r: () => number): 
  * Generate `count` distinct, gated items for one tier. A GateError on a seed (a
  * collision, or an operand set an executor can't run) is retried with the next seed,
  * not surfaced — the invariant is upheld by reseeding. Stems are de-duplicated so a
- * sheet never shows the same numbers twice. Throws only if the family cannot produce
- * `count` clean items within a bounded number of attempts (a real family defect).
+ * sheet never shows the same numbers twice.
+ *
+ * THE BUDGET (R1076). It was `count * 40` attempts, and M-column T4/T5 have the gate refuse
+ * ~93-96% of draws (too few distractors survive the floor), so 160 attempts for 4 items sometimes
+ * yielded 3 — found by the first property test (R1075) — and the error called that a "family
+ * defect". It is now `count * 400`. Output is unchanged for every seed that already succeeded:
+ * the loop stops when `count` is reached, so a larger bound only extends runs that would have
+ * thrown. When it still falls short, the error reports what happened (attempts, how many the gate
+ * refused and why, duplicates) instead of naming a cause, and calls it a family defect only when
+ * the gate let NOTHING through.
  */
+export const SAMPLE_ATTEMPTS_PER_ITEM = 400;
+
 export function generateSample(family: MathsFamily, tier: Tier, count: number, seed = 1): GenMathsItem[] {
   const out: GenMathsItem[] = [];
   const seen = new Set<string>();
+  const refused = new Map<string, number>();
+  let attempts = 0;
+  let duplicates = 0;
+  let passed = 0;
   const r = makeRng(seed * 100003 + tier * 31 + 7);
-  for (let attempt = 0; attempt < count * 40 && out.length < count; attempt += 1) {
+  for (; attempts < count * SAMPLE_ATTEMPTS_PER_ITEM && out.length < count; attempts += 1) {
     let item: GenMathsItem;
     try {
       item = assembleItem(family, tier, r);
     } catch (e) {
-      if (e instanceof GateError) continue;
+      if (e instanceof GateError) {
+        const why = e.message.replace(`${family.id} T${tier}: `, '').replace(/\d+(\.\d+)?/g, '#').replace(/\(.*\)/, '(…)');
+        refused.set(why, (refused.get(why) ?? 0) + 1);
+        continue;
+      }
       throw e;
     }
+    passed += 1;
     // Dedup on stem AND option values — a "pick the greatest" family shares one stem
     // but varies the options, so the stem alone would collapse the whole sheet.
     const key = `${item.stem}|${item.options.map((o) => o.value).sort().join(',')}`;
-    if (seen.has(key)) continue;
+    if (seen.has(key)) {
+      duplicates += 1;
+      continue;
+    }
     seen.add(key);
     out.push(item);
   }
-  if (out.length < count) throw new GateError(`${family.id} T${tier}: produced ${out.length}/${count} clean items — family defect, not a seed accident`);
+  if (out.length < count) {
+    const reasons = [...refused].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([w, n]) => `${n}× ${w}`).join('; ');
+    const verdict = passed === 0
+      ? 'the gate let no draw through: the family cannot emit at this tier (a family defect)'
+      : `the gate passed ${passed} draw(s), ${duplicates} of them duplicates: too few distinct items for this budget`;
+    throw new GateError(`${family.id} T${tier}: produced ${out.length}/${count} after ${attempts} attempts — ${verdict}. Refused: ${reasons || 'none'}`);
+  }
   return out;
 }
 
