@@ -208,6 +208,8 @@
     "snapshot:restore": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/content-snapshot.ts restore",
     "check:snapshot": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/content-snapshot.ts check",
     "check:derived-writes": "tsx scripts/check-derived-writes.ts",
+    "check:raw-sql": "tsx scripts/check-raw-sql.ts",
+    "check:model-spend": "tsx scripts/check-model-spend.ts",
     "check:e2e-fixtures": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/check-e2e-fixtures.ts",
     "verify:fingerprints": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/verify-family-fingerprints.ts",
     "pin:signatures": "pnpm --filter @cluecrew/db exec dotenv -e ../../.env -- tsx ../../scripts/pin-family-signatures.ts",

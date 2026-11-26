@@ -315,6 +315,12 @@ jobs:
       - name: Derived-write guard (computed values classify before writing)
         run: pnpm check:derived-writes
 
+      - name: Raw SQL guard (shipped code runs parameterised SQL only)
+        run: pnpm check:raw-sql
+
+      - name: Model-spend guard (no undeclared, uncapped model-provider calls)
+        run: pnpm check:model-spend
+
       # ROOT SCRIPTS WERE NEVER TYPECHECKED -- `pnpm -r` visits workspace PACKAGES and scripts/ is
       # in none of them, so ~90 files that write to the database sat outside every type check.
       # Three wrong call signatures had shipped clean, one of them inside check:outside-writes.

@@ -402,6 +402,24 @@ here has no register entry. A ruling goes to the register FIRST; it comes here o
   no code consults produces output identical to the absence of a ruling. `pnpm check:decision-visible`
   reports READ vs UNREAD across the decision-bearing keys in the store. UNREAD is correct for
   provenance and is the fault for anything a person treats as deciding something.
+- **A NEW GATE SHIPS WITH ITS PLANTED-FAULT PROOF** (David, 2026-11-26 — R1075). A mistake made
+  twice becomes a check, not a paragraph — in this order of preference: a type, a gate or lint, a
+  property test, a hook, and a written rule only when none of those can carry it. A check is not
+  finished until the commit that adds it records it going RED on a planted fault and green again on
+  restore. A check never seen to fail is R60's blind run with a fresh coat of paint. Where it can,
+  the check also carries its canary IN CODE (planted positives run before the scan, as in
+  `check:raw-sql` and `check:model-spend`), so a pattern that stops matching aborts rather than
+  passes.
+- **NEVER TEST WHETHER A CRON, WEBHOOK OR WORKFLOW CAN BE TRIGGERED BY TRIGGERING IT** (David,
+  2026-11-26 — R1075). Read its configuration and its auth instead. Triggering one is a production
+  write and needs David's yes like any other.
+- **MARKETING SPEAKS TO PARENTS, NEVER TO CHILDREN; NO AD RUNS UNATTENDED** (David, 2026-11-26 —
+  R1075). Every ad, post and public page goes through `docs/marketing-claims-audit.md` (L1/L2/L3/L5/
+  L6) before it is published, and is targeted at parents only (S1). No ad campaign starts without a
+  person's approval AND a spend cap set at the platform; no agent launches or raises spend. No
+  generated image or video shows a child. Shipped code calls no model provider unless it is declared
+  with its sign-in, per-user cap and ruling (`pnpm check:model-spend`), and runs parameterised SQL
+  only (`pnpm check:raw-sql`).
 - Content decisions (items, chapters, misconceptions) go through the CMS
   review pipeline; nothing skips the reviewer.
 - **PILOT CONTENT UNDER ACTIVE REVIEW HAS ONE WRITE PATH: `scripts/lib/pilot-review.ts`, NEVER A

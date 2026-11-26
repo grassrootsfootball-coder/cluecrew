@@ -31027,3 +31027,45 @@ serving: VR 617/617, Maths 179/179, English 379/379. Preview `cluecrew-staging-j
 `de419a5`) promoted; the production domain resolves to `dpl_92GRWN6YoEpU3SwV2JXLwC4yPVnv` (`cluecrew-staging-85yj05ydy`),
 Ready; `/api/health` `{"ok":true,"db":{"connected":true}}`; `/`, `/login`, `/signup`, `/crew`, `/admin` 200. PRELAUNCH
 unchanged.
+
+## R1075 — two outside digests assessed; three house rules, two shipped-code guards, the first property tests (David: "go with your recommendations", 2026-11-26)
+
+Two digests reached this session from a peer session (marketing/SEO/security, then practices from another
+project). Assessed against the manifesto and this register; David accepted the recommendations. Claude Ship /
+Approvals was ruled out by David separately (per-run usage credits): no `.claude/approvals.yml`, nothing switched on.
+Skipped for now: the video tools, brand-video generation and the LinkedIn system (no source footage, nothing needed
+before launch, parents are not on LinkedIn). Adapt-later: web-guidance skill for the launch-page pass.
+
+- **House rules (CLAUDE.md):** a new gate ships with its planted-fault proof, in a stated order of preference (type →
+  gate/lint → property test → hook → written rule); never test a cron/webhook/workflow by triggering it; marketing to
+  parents only, every public claim through `docs/marketing-claims-audit.md`, no ad without a person's approval AND a
+  platform spend cap, no generated image or video of a child.
+- **`check:raw-sql`** — shipped code (apps/, packages/) runs only tagged-template raw SQL. Measured before: 351 files,
+  2 raw call sites, both parameterised; the three `$queryRawUnsafe` callers are local scripts on fixed SQL and stay out
+  of scope. **`check:model-spend`** — no shipped file imports a model SDK, calls a provider URL or depends on a provider
+  package unless declared with its sign-in, per-user cap and ruling (0 declared, 0 found). Both carry planted positives
+  run before the scan (an in-code canary), and both were proven against a planted file in `apps/web/lib/`: red (exit
+  1, naming the file), removed, green. Wired into CI after `check:derived-writes`.
+- **Property tests** (`fast-check` 4.10.2, pinned; core dev-dependency): `maths/generator.property.test.ts` — for any
+  drawn seed, every item `assembleItem` lets out has one key equal to `item.key`, a solution that recomputes through
+  the engine's own `evalArithmetic`/`answersEqual`, distinct distractors none equal to the key and at least the
+  family's floor, house notation, and operands inside the family's own `numberRanges`; a seed reproduces its sample;
+  a tier that emits nothing fails rather than passing vacuously. `difficulty.property.test.ts` — the monotonicity and
+  1..5 band each difficulty function's own doc comment states. Proof: clamping removed from `bandTier` and the
+  key-collision refusal disabled in `assembleItem` → 21 tests red (2 difficulty, 19 family-tiers); restored → 856/856.
+  The firewalled-corpus property the digest also suggested is NOT written: it needs the corpus location settled first.
+- **Finding, not fixed:** the first property asserted that `generateSample` never gives up, and it does. M-column T4 and
+  T5 refuse ~93% and ~96% of draws (too few distractors survive the floor); M-stats T4 ~81%. 160 attempts for 4 items
+  then sometimes yields 3, and the sampler reports *"family defect, not a seed accident"* — a budget shortfall worded as
+  a content fault. No item it emitted was wrong, and no runtime path calls it (only `export-maths-sample-sheets.ts` and
+  `lib/param-sweep.ts`). The test was moved to the gate's property, which is the one that matters; the rejection rate
+  and the message are David's to rule on, since raising the budget touches the signed sample-sheet pipeline.
+- **Credential sweep (one-off, read-only).** Every file under the repo was read in Python, because the installed grep
+  skips `.env*` files. That was 3,771 files, including dotfiles and `.env*`, and excluding `node_modules`, `.git`,
+  build output and `.claude/worktrees`. It printed variable names and lengths, never values. The full git history was
+  swept as well (821 commits, all refs). **Tracked: no real secret.** The two hits are placeholders: `AUTH_SECRET` in
+  `.env.example` ("change-me…") and in `ci.yml` ("ci-only…"). History has the one placeholder only, and no provider
+  key, private key, remote database URL or JWT, ever. **Untracked, gitignored by `.env*`:** `.env` holds `AUTH_SECRET`
+  and `CRON_SECRET`, as expected for local dev. `.env.local` holds a `VERCEL_OIDC_TOKEN`, written by `vercel link` on
+  2026-11-23. That is a short-lived token and probably expired, but it sits in the repo root and not the scratchpad,
+  so whether to delete it is David's call.
